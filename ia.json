@@ -1,0 +1,882 @@
+{
+  "$comment": "Derived from the real route table in src/App.jsx and the 195-URL sitemap in src/data/routes.json, with each template's section order read from its own component source. Section descriptions are grounded in the five CLONE_SPEC measurement documents at the project root. Hand-edit this file only; IA.md and matrix.csv are generated.",
+  "meta": {
+    "source": "https://www.evergreen.so/ \u2014 pixel-accurate React/Vite/Tailwind replica at this project root",
+    "mirror": "Measured from the live original; app source is the authority for section order",
+    "status": "measured-from-source",
+    "productionApproved": false,
+    "totalRoutes": 195,
+    "totalTemplates": 22,
+    "generatedBy": "ia-builder skill",
+    "notes": [
+      "Two <Route> patterns in src/App.jsx deliberately render a placeholder and are NOT templates here: '/employee-recognition/:slug' (verified in CLONE_SPEC_CONTENT_B \u00a70 as not existing on the real site \u2014 the hub's only children are /for and /glossary, which are themselves collection indexes) and the '*' catch-all. Neither appears in the sitemap. Do not build pages for them.",
+      "template.detail-* are four distinct page shapes sharing one implementation (src/templates/TDetail.jsx); their block sequences genuinely differ, so they are four templates rather than one with a varying description.",
+      "Long-form prose on article, glossary, message, case-study and legal pages is deliberate placeholder sized to measured block heights. Titles, slugs, headings, labels and images are real."
+    ]
+  },
+  "categories": {
+    "CHROME": "Global furniture rendered once in the app shell and present on every route.",
+    "STRUCTURE": "Structural rhythm devices that separate content sections rather than carrying content.",
+    "HERO": "The page-opening block: eyebrow, headline, lede and any immediate call to action.",
+    "NARRATIVE": "Explanatory product or mission content \u2014 the blocks that make the page's argument.",
+    "PROOF": "Social proof: testimonials, customer logos, ratings and published outcomes.",
+    "CONTENT": "Long-form editorial body copy and the structured sub-blocks that appear inside it.",
+    "COLLECTION": "Listing grids and cross-sell groups that route the reader to other pages.",
+    "CONVERSION": "Forms, pricing, scheduling and closing calls to action."
+  },
+  "sections": {
+    "chrome.announcement-banner": {
+      "category": "CHROME",
+      "description": "Full-bleed black bar above the navigation carrying a single promotional sentence and one inline link.",
+      "scope": "Per-route, not global: the homepage and every blog article, 54 routes in all. Absent on every other route, where the navigation sits flush to the top of the page.",
+      "implementedBy": "src/components/AnnouncementBanner.jsx"
+    },
+    "chrome.navbar": {
+      "category": "CHROME",
+      "description": "Primary navigation: wordmark, six links, a demo call to action, and a hamburger that opens the mobile menu overlay. Static position, never sticky, no backdrop blur.",
+      "scope": "Every route.",
+      "implementedBy": "src/components/Nav.jsx"
+    },
+    "chrome.footer": {
+      "category": "CHROME",
+      "description": "Four-column footer: wordmark and social chips, three link columns, a newsletter capture field, and a legal row.",
+      "scope": "Every route.",
+      "implementedBy": "src/components/Footer.jsx"
+    },
+    "chrome.trial-modal": {
+      "category": "CHROME",
+      "description": "Full-screen overlay panel offering the two platform install paths, opened by any trial button and dismissible by Escape.",
+      "scope": "Mounted on every route; opened on demand rather than rendered inline.",
+      "implementedBy": "src/components/TrialModal.jsx"
+    },
+    "structure.leaf-divider": {
+      "category": "STRUCTURE",
+      "description": "Decorative band of drifting leaf art over a flat colour bar closed by a 2px rule. The band colour follows the section immediately above it rather than being fixed.",
+      "scope": "Every template except the blog index and the legal pages, which have no divider at all.",
+      "implementedBy": "src/components/LeafDivider.jsx"
+    },
+    "hero.homepage": {
+      "category": "HERO",
+      "description": "The marketing hero: three-part headline with floating avatar pills, sub-paragraph, trial button, product screenshot on a scroll-driven track, platform install links and headline proof figures.",
+      "scope": "The homepage only.",
+      "implementedBy": "src/components/Hero.jsx"
+    },
+    "hero.page-heading": {
+      "category": "HERO",
+      "description": "Shared centred page opener: headline plus a single supporting paragraph, with no call to action of its own.",
+      "scope": "The four conversion and index pages that share it: case studies, contact, schedule a demo and referral.",
+      "implementedBy": "src/components/HeroHeading.jsx"
+    },
+    "hero.collection": {
+      "category": "HERO",
+      "description": "Collection opener: eyebrow badge pill linking to the parent hub, headline and lede.",
+      "scope": "All four collection index pages and all 102 collection detail pages.",
+      "implementedBy": "src/templates/blocks.jsx > Hero"
+    },
+    "hero.article": {
+      "category": "HERO",
+      "description": "Article opener: eyebrow badge, article headline and a published-date line.",
+      "scope": "Every blog article.",
+      "implementedBy": "src/pages/BlogPost.jsx"
+    },
+    "hero.comparison": {
+      "category": "HERO",
+      "description": "Comparison opener: eyebrow badge, comparison headline, subtitle and an introductory paragraph.",
+      "scope": "Every alternatives comparison page.",
+      "implementedBy": "src/pages/AlternativePage.jsx"
+    },
+    "hero.pricing": {
+      "category": "HERO",
+      "description": "Pricing opener: headline, lede, the price card with its two framed avatars, and the trial call to action with its reassurance line.",
+      "scope": "The pricing page only.",
+      "implementedBy": "src/pages/Pricing.jsx"
+    },
+    "hero.esg": {
+      "category": "HERO",
+      "description": "ESG opener: headline and lede above the Environmental pillar's own content and photograph.",
+      "scope": "The ESG page only.",
+      "implementedBy": "src/pages/Esg.jsx"
+    },
+    "hero.our-purpose": {
+      "category": "HERO",
+      "description": "Purpose opener: headline and lede flanked by a static leaf wreath that deliberately never animates.",
+      "scope": "The our-purpose page only.",
+      "implementedBy": "src/pages/OurPurpose.jsx"
+    },
+    "hero.pillar": {
+      "category": "HERO",
+      "description": "Pillar guide opener: headline and lede with no eyebrow badge, unlike every other collection page.",
+      "scope": "The employee-recognition pillar guide only.",
+      "implementedBy": "src/pages/EmployeeRecognitionHub.jsx"
+    },
+    "hero.blog-index": {
+      "category": "HERO",
+      "description": "Blog index opener: a single large headline with no lede, badge or call to action.",
+      "scope": "The blog index only.",
+      "implementedBy": "src/pages/BlogIndex.jsx"
+    },
+    "hero.alternatives-index": {
+      "category": "HERO",
+      "description": "Alternatives index opener: eyebrow badge, headline and an introductory paragraph.",
+      "scope": "The alternatives index only.",
+      "implementedBy": "src/pages/AlternativesIndex.jsx"
+    },
+    "hero.case-study": {
+      "category": "HERO",
+      "description": "Case study opener: customer headline and subtitle beside a pull quote and the customer's portrait.",
+      "scope": "Every customer success story.",
+      "implementedBy": "src/pages/CaseStudyPage.jsx"
+    },
+    "hero.partner": {
+      "category": "HERO",
+      "description": "Partner opener: the partner's logo above the homepage headline treatment, with the partner offer sentence in place of the standard sub-paragraph.",
+      "scope": "Every partner landing page.",
+      "implementedBy": "src/pages/PartnerPage.jsx"
+    },
+    "hero.ebook": {
+      "category": "HERO",
+      "description": "Lead-magnet opener: a bold-weight display headline and a multi-line lede ending in a small indented benefit list.",
+      "scope": "The ebook landing page only.",
+      "implementedBy": "src/pages/EbookPage.jsx"
+    },
+    "hero.legal": {
+      "category": "HERO",
+      "description": "Legal document opener: document title and a centred last-updated line.",
+      "scope": "Both legal pages.",
+      "implementedBy": "src/pages/LegalPage.jsx"
+    },
+    "narrative.seeds": {
+      "category": "NARRATIVE",
+      "description": "Two-column feature block pairing a product screenshot and its tagged-value badge with a headline and leaf-marked benefit list.",
+      "scope": "The homepage only.",
+      "implementedBy": "src/components/SeedsSection.jsx"
+    },
+    "narrative.report-csr": {
+      "category": "NARRATIVE",
+      "description": "Paired two-column blocks covering engagement reporting and CSR commitments, each a visual beside a headline and leaf-marked list.",
+      "scope": "The homepage only.",
+      "implementedBy": "src/components/ReportCsrSection.jsx"
+    },
+    "narrative.esg-pillar": {
+      "category": "NARRATIVE",
+      "description": "An ESG pillar block: tick badge, headline, body copy and the pillar's supporting visual. Repeats once per pillar with different content.",
+      "scope": "The ESG page, three times over for Environmental, Social and Governance.",
+      "implementedBy": "src/pages/Esg.jsx"
+    },
+    "narrative.sdg-goals": {
+      "category": "NARRATIVE",
+      "description": "Four-up column row presenting UN Sustainable Development Goal categories, each an icon above a label and caption.",
+      "scope": "Shared byte-identically by the ESG and our-purpose pages.",
+      "implementedBy": "src/components/SdgSection.jsx"
+    },
+    "narrative.goals-2027": {
+      "category": "NARRATIVE",
+      "description": "Full-bleed leaf-green band carrying three serif stat columns against a 2027 commitment headline.",
+      "scope": "The our-purpose page only.",
+      "implementedBy": "src/pages/OurPurpose.jsx"
+    },
+    "narrative.icon-feature-row": {
+      "category": "NARRATIVE",
+      "description": "Three-up row of percentage-width columns, each an icon above a serif sub-heading and a short paragraph.",
+      "scope": "The pricing and our-purpose pages.",
+      "implementedBy": "src/components/IconFeatureColumn.jsx"
+    },
+    "narrative.partner-feature": {
+      "category": "NARRATIVE",
+      "description": "Partner-page feature block: centred display heading and copy above a two-column visual row. A rearrangement of the homepage's feature assets, not a reuse of them.",
+      "scope": "Every partner landing page, twice per page.",
+      "implementedBy": "src/pages/PartnerPage.jsx"
+    },
+    "proof.testimonials": {
+      "category": "PROOF",
+      "description": "Paired testimonial cards, each a framed customer portrait above a quote, attribution and company logo, with static decorative leaves behind.",
+      "scope": "The homepage, pricing, referral and partner pages.",
+      "implementedBy": "src/components/Testimonials.jsx"
+    },
+    "proof.logo-strip": {
+      "category": "PROOF",
+      "description": "Single row of six customer logos at individually measured widths. No greyscale, no opacity shift, no marquee.",
+      "scope": "The homepage, pricing, referral and partner pages.",
+      "implementedBy": "src/components/LogoStrip.jsx"
+    },
+    "proof.g2-rating": {
+      "category": "PROOF",
+      "description": "Review-platform logo above five stars and a rating sentence.",
+      "scope": "The homepage, pricing, contact, schedule-a-demo, referral, ebook and partner pages.",
+      "implementedBy": "src/components/G2Block.jsx"
+    },
+    "proof.stat-row": {
+      "category": "PROOF",
+      "description": "Row of four outlined stat pills carrying headline figures with footnote references.",
+      "scope": "The homepage, the pillar guide and the partner pages.",
+      "implementedBy": "src/components/StatRow.jsx"
+    },
+    "proof.case-study-grid": {
+      "category": "PROOF",
+      "description": "Grid of customer story cards, each a logo, outcome blurb and link through to the full story.",
+      "scope": "The case-studies index only.",
+      "implementedBy": "src/components/CaseStudyCard.jsx"
+    },
+    "proof.case-study-meta": {
+      "category": "PROOF",
+      "description": "Narrow outlined card listing six labelled facts about the customer \u2014 industry, size, location and similar.",
+      "scope": "Every customer success story.",
+      "implementedBy": "src/components/CaseStudyMetaCard.jsx"
+    },
+    "proof.case-study-teasers": {
+      "category": "PROOF",
+      "description": "Row of teaser cards linking to the other customer stories, each carrying the customer's logo.",
+      "scope": "Every customer success story.",
+      "implementedBy": "src/components/CaseStudyTeaserCard.jsx"
+    },
+    "content.prose-body": {
+      "category": "CONTENT",
+      "description": "The shared long-form prose container and its element type scale \u2014 headings, paragraphs, lists, blockquotes and figures.",
+      "scope": "Both legal pages, every case study, the pillar guide, every blog article and every comparison page.",
+      "implementedBy": "src/components/RichText.jsx"
+    },
+    "content.prose-left": {
+      "category": "CONTENT",
+      "description": "Left-aligned bare paragraph column used for short intros and asides, outside the rich-text container.",
+      "scope": "Glossary detail pages, and company-value pages that carry an absence note.",
+      "implementedBy": "src/templates/blocks.jsx > ProseLeft"
+    },
+    "content.section-heading": {
+      "category": "CONTENT",
+      "description": "Centred display heading that opens a block within a longer page.",
+      "scope": "Every collection index and detail page, plus the comparison and alternatives-index pages.",
+      "implementedBy": "src/templates/blocks.jsx > SectionHeading"
+    },
+    "content.leaf-bullets": {
+      "category": "CONTENT",
+      "description": "Leaf-marked bullet list of short statements.",
+      "scope": "Collection detail pages and comparison pages.",
+      "implementedBy": "src/components/blocks/LeafBulletList.jsx"
+    },
+    "content.leaf-definition-list": {
+      "category": "CONTENT",
+      "description": "Leaf-marked definition list pairing a bold term with a short explanatory paragraph.",
+      "scope": "Company-value, team-guide and comparison pages, plus the pillar guide.",
+      "implementedBy": "src/components/blocks/LeafDl.jsx"
+    },
+    "content.faq": {
+      "category": "CONTENT",
+      "description": "Question-and-answer definition list. Always fully open \u2014 not an accordion, with no disclosure behaviour at all.",
+      "scope": "Every collection detail page, the comparison pages and the pillar guide.",
+      "implementedBy": "src/components/blocks/FaqDl.jsx"
+    },
+    "content.message-grid": {
+      "category": "CONTENT",
+      "description": "Grid of example recognition-message cards, each a message body, category badge and usage note, over static decorative leaves.",
+      "scope": "Message-set, company-value and team-guide detail pages.",
+      "implementedBy": "src/components/MessageCard.jsx"
+    },
+    "content.sources": {
+      "category": "CONTENT",
+      "description": "Numbered list of external citations, rendered inert because the clone carries no off-domain links.",
+      "scope": "Every alternatives comparison page.",
+      "implementedBy": "src/components/SourcesList.jsx"
+    },
+    "collection.card-grid": {
+      "category": "COLLECTION",
+      "description": "Flex-wrap grid of white outlined link cards, each a serif title, optional description and a bold call-to-action label keyed to the link target.",
+      "scope": "Every collection index and detail page, the alternatives index and the pillar guide.",
+      "implementedBy": "src/components/LinkCard.jsx"
+    },
+    "collection.blog-rows": {
+      "category": "COLLECTION",
+      "description": "Single column of full-width split rows, each pairing a cover image against a copy panel. Row height is image-driven, so the pitch stays constant regardless of title length.",
+      "scope": "The blog index only.",
+      "implementedBy": "src/components/BlogCard.jsx"
+    },
+    "collection.related-articles": {
+      "category": "COLLECTION",
+      "description": "Pair of related-article cards carrying decorative leaves and an underlined call to action. Distinct from the standard link card.",
+      "scope": "Every blog article.",
+      "implementedBy": "src/components/RelatedCard.jsx"
+    },
+    "collection.comparison-glance": {
+      "category": "COLLECTION",
+      "description": "At-a-glance definition list summarising a competitor's pricing, best-fit audience and website.",
+      "scope": "Every alternatives comparison page.",
+      "implementedBy": "src/components/blocks/LeafDl.jsx"
+    },
+    "conversion.final-cta": {
+      "category": "CONVERSION",
+      "description": "Closing block: three reassurance columns above a display headline, trial button, no-credit-card line and the two platform install links.",
+      "scope": "Most templates. Absent from the blog index, the legal pages, the referral page and the pillar guide, which closes with a lead-magnet form instead.",
+      "implementedBy": "src/components/CtaSection.jsx"
+    },
+    "conversion.contact-form": {
+      "category": "CONVERSION",
+      "description": "Name, email, company and message fields in a white outlined card, with a full idle/pending/done/error state machine and a honeypot.",
+      "scope": "The contact page only.",
+      "implementedBy": "src/components/form/ContactForm.jsx"
+    },
+    "conversion.referral-form": {
+      "category": "CONVERSION",
+      "description": "Six required referrer and referee fields plus an optional greeting, in a white outlined card with the shared form state machine.",
+      "scope": "The referral page only.",
+      "implementedBy": "src/components/form/ReferralForm.jsx"
+    },
+    "conversion.lead-magnet-form": {
+      "category": "CONVERSION",
+      "description": "Name, email and company capture with a download action, used to gate a downloadable guide.",
+      "scope": "The ebook page, the pillar guide's closing block, and every blog article.",
+      "implementedBy": "src/components/blocks/LeadMagnetForm.jsx"
+    },
+    "conversion.scheduler": {
+      "category": "CONVERSION",
+      "description": "Static stand-in for the original's third-party booking widget, matched to its measured box. Deliberately loads no external script.",
+      "scope": "The schedule-a-demo page and every partner landing page.",
+      "implementedBy": "src/components/SchedulerPlaceholder.jsx"
+    },
+    "conversion.earnings-tiers": {
+      "category": "CONVERSION",
+      "description": "Row of outlined pills showing referral reward tiers, collapsing to a two-column grid on narrow viewports.",
+      "scope": "The referral page only.",
+      "implementedBy": "src/components/EarningsTiers.jsx"
+    },
+    "conversion.partner-cta-panel": {
+      "category": "CONVERSION",
+      "description": "Black full-width panel with a cream headline and button, promoting a partner product. The only block on the site using fixed pixel padding and non-standard corner radii.",
+      "scope": "Every blog article.",
+      "implementedBy": "src/components/ArkettaCtaPanel.jsx"
+    }
+  },
+  "templates": [
+    {
+      "id": "template.home",
+      "name": "Homepage",
+      "routeCount": 1,
+      "routes": [
+        "/"
+      ],
+      "routePattern": null,
+      "chrome": "full+banner",
+      "implementedBy": "src/pages/Home.jsx",
+      "sections": [
+        "chrome.announcement-banner",
+        "chrome.navbar",
+        "hero.homepage",
+        "proof.stat-row",
+        "proof.testimonials",
+        "proof.logo-strip",
+        "proof.g2-rating",
+        "structure.leaf-divider",
+        "narrative.seeds",
+        "narrative.report-csr",
+        "conversion.final-cta",
+        "chrome.footer",
+        "chrome.trial-modal"
+      ]
+    },
+    {
+      "id": "template.pricing",
+      "name": "Pricing",
+      "routeCount": 1,
+      "routes": [
+        "/pricing"
+      ],
+      "routePattern": null,
+      "chrome": "full",
+      "implementedBy": "src/pages/Pricing.jsx",
+      "sections": [
+        "chrome.navbar",
+        "hero.pricing",
+        "narrative.icon-feature-row",
+        "structure.leaf-divider",
+        "proof.testimonials",
+        "proof.logo-strip",
+        "proof.g2-rating",
+        "chrome.footer",
+        "chrome.trial-modal"
+      ]
+    },
+    {
+      "id": "template.esg",
+      "name": "ESG",
+      "routeCount": 1,
+      "routes": [
+        "/esg"
+      ],
+      "routePattern": null,
+      "chrome": "full",
+      "implementedBy": "src/pages/Esg.jsx",
+      "sections": [
+        "chrome.navbar",
+        "hero.esg",
+        "narrative.esg-pillar",
+        "structure.leaf-divider",
+        "narrative.sdg-goals",
+        "conversion.final-cta",
+        "chrome.footer",
+        "chrome.trial-modal"
+      ]
+    },
+    {
+      "id": "template.our-purpose",
+      "name": "Our purpose",
+      "routeCount": 1,
+      "routes": [
+        "/our-purpose"
+      ],
+      "routePattern": null,
+      "chrome": "full",
+      "implementedBy": "src/pages/OurPurpose.jsx",
+      "sections": [
+        "chrome.navbar",
+        "hero.our-purpose",
+        "narrative.goals-2027",
+        "narrative.icon-feature-row",
+        "structure.leaf-divider",
+        "narrative.sdg-goals",
+        "conversion.final-cta",
+        "chrome.footer",
+        "chrome.trial-modal"
+      ]
+    },
+    {
+      "id": "template.case-study-index",
+      "name": "Case studies index",
+      "routeCount": 1,
+      "routes": [
+        "/case-studies"
+      ],
+      "routePattern": null,
+      "chrome": "full",
+      "implementedBy": "src/pages/CaseStudies.jsx",
+      "sections": [
+        "chrome.navbar",
+        "hero.page-heading",
+        "proof.case-study-grid",
+        "structure.leaf-divider",
+        "conversion.final-cta",
+        "chrome.footer",
+        "chrome.trial-modal"
+      ]
+    },
+    {
+      "id": "template.case-study",
+      "name": "Customer success story",
+      "routeCount": 4,
+      "routes": [
+        "/customer-success-stories/kent-white",
+        "/customer-success-stories/nitro-games",
+        "/customer-success-stories/worklete",
+        "/customer-success-stories/wunderdog"
+      ],
+      "routePattern": null,
+      "chrome": "full",
+      "implementedBy": "src/pages/CaseStudyPage.jsx",
+      "sections": [
+        "chrome.navbar",
+        "hero.case-study",
+        "proof.case-study-meta",
+        "content.prose-body",
+        "proof.case-study-teasers",
+        "structure.leaf-divider",
+        "conversion.final-cta",
+        "chrome.footer",
+        "chrome.trial-modal"
+      ]
+    },
+    {
+      "id": "template.contact",
+      "name": "Contact",
+      "routeCount": 1,
+      "routes": [
+        "/contact"
+      ],
+      "routePattern": null,
+      "chrome": "full",
+      "implementedBy": "src/pages/Contact.jsx",
+      "sections": [
+        "chrome.navbar",
+        "hero.page-heading",
+        "conversion.contact-form",
+        "proof.g2-rating",
+        "structure.leaf-divider",
+        "conversion.final-cta",
+        "chrome.footer",
+        "chrome.trial-modal"
+      ]
+    },
+    {
+      "id": "template.schedule-demo",
+      "name": "Schedule a demo",
+      "routeCount": 1,
+      "routes": [
+        "/schedule-a-demo"
+      ],
+      "routePattern": null,
+      "chrome": "full",
+      "implementedBy": "src/pages/ScheduleADemo.jsx",
+      "sections": [
+        "chrome.navbar",
+        "hero.page-heading",
+        "conversion.scheduler",
+        "proof.g2-rating",
+        "structure.leaf-divider",
+        "conversion.final-cta",
+        "chrome.footer",
+        "chrome.trial-modal"
+      ]
+    },
+    {
+      "id": "template.referral",
+      "name": "Referral",
+      "routeCount": 1,
+      "routes": [
+        "/referral"
+      ],
+      "routePattern": null,
+      "chrome": "full",
+      "implementedBy": "src/pages/Referral.jsx",
+      "note": "The only full-chrome marketing template with no closing call-to-action block.",
+      "sections": [
+        "chrome.navbar",
+        "hero.page-heading",
+        "conversion.referral-form",
+        "conversion.earnings-tiers",
+        "structure.leaf-divider",
+        "proof.testimonials",
+        "proof.logo-strip",
+        "proof.g2-rating",
+        "chrome.footer",
+        "chrome.trial-modal"
+      ]
+    },
+    {
+      "id": "template.legal",
+      "name": "Legal document",
+      "routeCount": 2,
+      "routes": [
+        "/privacy-policy",
+        "/terms-of-service"
+      ],
+      "routePattern": null,
+      "chrome": "full",
+      "implementedBy": "src/pages/LegalPage.jsx",
+      "note": "Single section: no divider, no closing CTA and no decorative leaves anywhere.",
+      "sections": [
+        "chrome.navbar",
+        "hero.legal",
+        "content.prose-body",
+        "chrome.footer",
+        "chrome.trial-modal"
+      ]
+    },
+    {
+      "id": "template.ebook",
+      "name": "Lead-magnet landing",
+      "routeCount": 1,
+      "routes": [
+        "/ebook/practical-guide-to-employee-recognition"
+      ],
+      "routePattern": null,
+      "chrome": "full",
+      "implementedBy": "src/pages/EbookPage.jsx",
+      "sections": [
+        "chrome.navbar",
+        "hero.ebook",
+        "conversion.lead-magnet-form",
+        "proof.g2-rating",
+        "structure.leaf-divider",
+        "conversion.final-cta",
+        "chrome.footer",
+        "chrome.trial-modal"
+      ]
+    },
+    {
+      "id": "template.partner",
+      "name": "Partner landing",
+      "routeCount": 3,
+      "routes": [
+        "/partners/50pros",
+        "/partners/product-hunt",
+        "/partners/the-people-people-group"
+      ],
+      "routePattern": null,
+      "chrome": "full",
+      "implementedBy": "src/pages/PartnerPage.jsx",
+      "sections": [
+        "chrome.navbar",
+        "hero.partner",
+        "conversion.scheduler",
+        "proof.stat-row",
+        "structure.leaf-divider",
+        "narrative.partner-feature",
+        "proof.testimonials",
+        "proof.logo-strip",
+        "proof.g2-rating",
+        "conversion.final-cta",
+        "chrome.footer",
+        "chrome.trial-modal"
+      ]
+    },
+    {
+      "id": "template.blog-index",
+      "name": "Blog index",
+      "routeCount": 1,
+      "routes": [
+        "/blog"
+      ],
+      "routePattern": null,
+      "chrome": "full",
+      "implementedBy": "src/pages/BlogIndex.jsx",
+      "note": "No divider and no closing CTA \u2014 the only index template with neither.",
+      "sections": [
+        "chrome.navbar",
+        "hero.blog-index",
+        "collection.blog-rows",
+        "chrome.footer",
+        "chrome.trial-modal"
+      ]
+    },
+    {
+      "id": "template.blog-post",
+      "name": "Blog article",
+      "routeCount": 53,
+      "routes": [
+        "/blog/10-templates-notes-to-thank-your-team-for-great-work",
+        "/blog/12-ways-to-celebrate-earth-day",
+        "/blog/15-creative-ways-to-give-shoutout-to-coworkers"
+      ],
+      "routesTruncated": true,
+      "routePattern": "/blog/{slug}",
+      "chrome": "full+banner",
+      "implementedBy": "src/pages/BlogPost.jsx",
+      "sections": [
+        "chrome.announcement-banner",
+        "chrome.navbar",
+        "hero.article",
+        "content.prose-body",
+        "conversion.partner-cta-panel",
+        "content.section-heading",
+        "collection.card-grid",
+        "collection.related-articles",
+        "structure.leaf-divider",
+        "conversion.lead-magnet-form",
+        "chrome.footer",
+        "chrome.trial-modal"
+      ]
+    },
+    {
+      "id": "template.alternatives-index",
+      "name": "Alternatives index",
+      "routeCount": 1,
+      "routes": [
+        "/alternatives"
+      ],
+      "routePattern": null,
+      "chrome": "full",
+      "implementedBy": "src/pages/AlternativesIndex.jsx",
+      "sections": [
+        "chrome.navbar",
+        "hero.alternatives-index",
+        "collection.card-grid",
+        "content.section-heading",
+        "structure.leaf-divider",
+        "conversion.final-cta",
+        "chrome.footer",
+        "chrome.trial-modal"
+      ]
+    },
+    {
+      "id": "template.alternative-comparison",
+      "name": "Competitor comparison",
+      "routeCount": 15,
+      "routes": [
+        "/alternatives/achievers",
+        "/alternatives/assembly",
+        "/alternatives/awardco"
+      ],
+      "routesTruncated": true,
+      "routePattern": "/alternatives/{slug}",
+      "chrome": "full",
+      "implementedBy": "src/pages/AlternativePage.jsx",
+      "sections": [
+        "chrome.navbar",
+        "hero.comparison",
+        "content.section-heading",
+        "collection.comparison-glance",
+        "content.prose-body",
+        "content.leaf-bullets",
+        "content.leaf-definition-list",
+        "content.faq",
+        "content.sources",
+        "collection.card-grid",
+        "structure.leaf-divider",
+        "conversion.final-cta",
+        "chrome.footer",
+        "chrome.trial-modal"
+      ]
+    },
+    {
+      "id": "template.collection-index",
+      "name": "Collection index",
+      "routeCount": 4,
+      "routes": [
+        "/company-values",
+        "/employee-recognition-messages",
+        "/employee-recognition/for",
+        "/employee-recognition/glossary"
+      ],
+      "routePattern": null,
+      "chrome": "full",
+      "implementedBy": "src/templates/TIndex.jsx",
+      "note": "One component tree serving all four collection indexes; only the headline, lede, card array and cross-sell group differ.",
+      "sections": [
+        "chrome.navbar",
+        "hero.collection",
+        "collection.card-grid",
+        "content.section-heading",
+        "structure.leaf-divider",
+        "conversion.final-cta",
+        "chrome.footer",
+        "chrome.trial-modal"
+      ]
+    },
+    {
+      "id": "template.pillar",
+      "name": "Pillar guide",
+      "routeCount": 1,
+      "routes": [
+        "/employee-recognition"
+      ],
+      "routePattern": null,
+      "chrome": "full",
+      "implementedBy": "src/pages/EmployeeRecognitionHub.jsx",
+      "note": "The only template that replaces the shared closing CTA with a lead-magnet form.",
+      "sections": [
+        "chrome.navbar",
+        "hero.pillar",
+        "content.prose-body",
+        "proof.stat-row",
+        "content.leaf-definition-list",
+        "collection.card-grid",
+        "content.faq",
+        "structure.leaf-divider",
+        "conversion.lead-magnet-form",
+        "chrome.footer",
+        "chrome.trial-modal"
+      ]
+    },
+    {
+      "id": "template.detail-glossary",
+      "name": "Glossary term",
+      "routeCount": 30,
+      "routes": [
+        "/employee-recognition/glossary/appreciation-vs-recognition",
+        "/employee-recognition/glossary/culture-of-recognition",
+        "/employee-recognition/glossary/employee-appreciation-day"
+      ],
+      "routesTruncated": true,
+      "routePattern": "/employee-recognition/glossary/{slug}",
+      "chrome": "full",
+      "implementedBy": "src/templates/TDetail.jsx",
+      "sections": [
+        "chrome.navbar",
+        "hero.collection",
+        "content.prose-left",
+        "content.prose-body",
+        "content.section-heading",
+        "content.leaf-bullets",
+        "content.faq",
+        "collection.card-grid",
+        "structure.leaf-divider",
+        "conversion.final-cta",
+        "chrome.footer",
+        "chrome.trial-modal"
+      ]
+    },
+    {
+      "id": "template.detail-team-guide",
+      "name": "Team guide",
+      "routeCount": 12,
+      "routes": [
+        "/employee-recognition/for/agencies",
+        "/employee-recognition/for/customer-support-teams",
+        "/employee-recognition/for/education"
+      ],
+      "routesTruncated": true,
+      "routePattern": "/employee-recognition/for/{slug}",
+      "chrome": "full",
+      "implementedBy": "src/templates/TDetail.jsx",
+      "sections": [
+        "chrome.navbar",
+        "hero.collection",
+        "content.prose-body",
+        "content.section-heading",
+        "content.leaf-definition-list",
+        "content.leaf-bullets",
+        "content.message-grid",
+        "content.faq",
+        "collection.card-grid",
+        "structure.leaf-divider",
+        "conversion.final-cta",
+        "chrome.footer",
+        "chrome.trial-modal"
+      ]
+    },
+    {
+      "id": "template.detail-message-set",
+      "name": "Recognition message set",
+      "routeCount": 35,
+      "routes": [
+        "/employee-recognition-messages/attention-to-detail",
+        "/employee-recognition-messages/behind-the-scenes-work",
+        "/employee-recognition-messages/covering-for-a-colleague"
+      ],
+      "routesTruncated": true,
+      "routePattern": "/employee-recognition-messages/{slug}",
+      "chrome": "full",
+      "implementedBy": "src/templates/TDetail.jsx",
+      "sections": [
+        "chrome.navbar",
+        "hero.collection",
+        "content.prose-body",
+        "content.section-heading",
+        "content.message-grid",
+        "content.leaf-bullets",
+        "content.faq",
+        "collection.card-grid",
+        "structure.leaf-divider",
+        "conversion.final-cta",
+        "chrome.footer",
+        "chrome.trial-modal"
+      ]
+    },
+    {
+      "id": "template.detail-company-value",
+      "name": "Company value",
+      "routeCount": 25,
+      "routes": [
+        "/company-values/accountability",
+        "/company-values/adaptability",
+        "/company-values/candour"
+      ],
+      "routesTruncated": true,
+      "routePattern": "/company-values/{slug}",
+      "chrome": "full",
+      "implementedBy": "src/templates/TDetail.jsx",
+      "sections": [
+        "chrome.navbar",
+        "hero.collection",
+        "content.prose-body",
+        "content.section-heading",
+        "content.leaf-definition-list",
+        "content.message-grid",
+        "content.prose-left",
+        "content.leaf-bullets",
+        "content.faq",
+        "collection.card-grid",
+        "structure.leaf-divider",
+        "conversion.final-cta",
+        "chrome.footer",
+        "chrome.trial-modal"
+      ]
+    }
+  ]
+}

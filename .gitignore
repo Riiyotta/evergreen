@@ -2,3 +2,7 @@ node_modules
 dist
 .DS_Store
 .playwright-mcp/
+
+# Build artifact — regenerated fresh after validation, never committed
+# alongside the live folder it is built from.
+design-repo.zip
