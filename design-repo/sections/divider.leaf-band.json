@@ -1,0 +1,59 @@
+{
+  "$id": "sections.divider.leaf-band",
+  "layer": "sections",
+  "motionFieldSet": [
+    "pattern",
+    "trigger",
+    "durationMs",
+    "easing",
+    "delayMs",
+    "staggerMs",
+    "leafSet",
+    "leafCount",
+    "scrollProgressRange",
+    "reducedMotionFallback",
+    "implementationStatus"
+  ],
+  "motionIsClosed": true,
+  "category": "structure",
+  "purpose": "Separate two sections with a decorative full-bleed band and a hard 2px rule.",
+  "composes": [
+    "components/block.leaf-divider"
+  ],
+  "content": {
+    "band": {
+      "enum": [
+        "bg-cream",
+        "bg-cream-dark",
+        "bg-leaf"
+      ]
+    },
+    "additionalProperties": false
+  },
+  "geometry": "161.98px total @1280 (15em band + 2px rule)",
+  "constraints": {
+    "maxPerPage": 4,
+    "maxPerPageBasis": "/esg carries four, the most of any route.",
+    "noConsecutive": true,
+    "RULE": "The `band` value MUST equal the surface of the section IMMEDIATELY ABOVE. That is a per-instance decision, not a default."
+  },
+  "motion": {
+    "pattern": "leaf-drift",
+    "trigger": "whileInView",
+    "durationMs": 1500,
+    "easing": "cubic-bezier(0.455, 0.03, 0.515, 0.955)",
+    "delayMs": 0,
+    "staggerMs": 0,
+    "leafSet": "DIVIDER_LEAVES",
+    "leafCount": 12,
+    "reducedMotionFallback": "leaves-held-at-rotate-only-transform",
+    "implementationStatus": "specified-not-yet-animated"
+  },
+  "responsive": {
+    "all": "the 120em band is mx-auto and at <=1280 spans the full viewport; <main>'s overflow-hidden is what stops it creating page scroll"
+  },
+  "assetRole": "brand.leaf-art",
+  "measuredFrom": "src/components/LeafDivider.jsx:28-53",
+  "implementedBy": "src/components/LeafDivider.jsx",
+  "motionClosureScope": "CLOSED for PageSpec emission: a generated node's `motion` object may contain ONLY the fields in motionFieldSet, enforced by schema/pagespec.schema.json (additionalProperties:false) and the MOTION_OBJECT_IS_CLOSED rule. The keys in motionDocumentationFields below are contract-level documentation carried by THIS file for human and retrieval use; they are NOT settable on a PageSpec node."
+}

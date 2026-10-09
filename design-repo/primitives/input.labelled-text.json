@@ -1,0 +1,23 @@
+{
+  "$id": "primitives.input.labelled-text",
+  "layer": "primitives",
+  "purpose": "Labelled text / email / textarea control on /contact and /referral.",
+  "tokens": {
+    "radius": "radius.control",
+    "border": "border.formControl",
+    "placeholder": "form.placeholder"
+  },
+  "geometry": "h-[3em] (input) / h-[3.54em] (textarea), px-[0.9em], text-[1.75em]. EM-CASCADE: mb/px/h all resolve against the element's OWN 1.75em (18.667px @1280), not the root — the spacing classes must stay on the same element as text-[1.75em]. Measured input 444.02x55.98, textarea 444.02x66.08.",
+  "states": {
+    "hover": null,
+    "active": null,
+    "focus": "UA default only — 0 `focus:` classes, computed box-shadow none",
+    "disabled": null,
+    "transition": null,
+    "boxShadow": "none",
+    "note": "No interactive state exists. A generator must not add one."
+  },
+  "validation": "NATIVE HTML ONLY: required, type=email, maxlength 256 (5000 on textarea). No custom validation, no inline per-field error, no aria-invalid, no aria-describedby.",
+  "measuredFrom": "src/components/form/LabelledField.jsx:19-58",
+  "labelColourNote": "The <label> is #333333, not #000000: a <label> is not matched by `.marketing-root p { color:#000 }`."
+}

@@ -1,0 +1,328 @@
+{
+  "pageSpecVersion": "1.0.0",
+  "route": "/blog/recognition-that-travels-with-the-work",
+  "template": "T-ARTICLE",
+  "title": "Recognition that travels with the work",
+  "evidenceLevel": "measured-sampled",
+  "nodes": [
+    {
+      "section": "chrome.announcement-banner",
+      "required": true,
+      "repeatable": false,
+      "content": {
+        "message": "Tired of managing too many workplace apps?",
+        "linkLabel": "See our solution."
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "delayMs": 0,
+        "staggerMs": 0,
+        "reducedMotionFallback": "none-required-static",
+        "implementationStatus": "static-by-design"
+      }
+    },
+    {
+      "section": "chrome.nav",
+      "required": true,
+      "repeatable": false,
+      "content": {
+        "desktopLinks": [
+          "Home",
+          "ESG",
+          "Pricing",
+          "Customers",
+          "Resources",
+          "Purpose",
+          "Login"
+        ],
+        "overlayLinks": [
+          "Home",
+          "ESG",
+          "Pricing",
+          "Customers",
+          "Resources",
+          "Blog",
+          "Purpose",
+          "Book Demo",
+          "Login"
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "delayMs": 0,
+        "staggerMs": 0,
+        "reducedMotionFallback": "none-required-static",
+        "implementationStatus": "static-by-design"
+      }
+    },
+    {
+      "section": "hero.page-head",
+      "required": true,
+      "repeatable": false,
+      "variant": "badge+h1+date",
+      "content": {
+        "badgeLabel": "Blog",
+        "h1": "Recognition that travels with the work",
+        "lede": "How teams keep appreciation close to the moment it is earned."
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "delayMs": 0,
+        "staggerMs": 0,
+        "reducedMotionFallback": "none-required-static",
+        "implementationStatus": "static-by-design"
+      }
+    },
+    {
+      "section": "content.rich-text",
+      "required": true,
+      "repeatable": false,
+      "variant": "grouped",
+      "content": {
+        "shape": "grouped",
+        "groupedSections": [
+          {
+            "heading": "Why timing matters",
+            "paragraphs": [
+              "Placeholder body copy sized to the measured block height.",
+              "Replace per record in src/data/blogPosts.js."
+            ]
+          },
+          {
+            "heading": "What to measure",
+            "paragraphs": [
+              "Placeholder body copy sized to the measured block height."
+            ]
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "delayMs": 0,
+        "staggerMs": 0,
+        "reducedMotionFallback": "none-required-static",
+        "implementationStatus": "static-by-design"
+      }
+    },
+    {
+      "section": "conversion.arketta-cross-promo",
+      "required": true,
+      "repeatable": false,
+      "content": {
+        "heading": "One place for your workplace apps",
+        "bodyLines": [
+          "Fewer tools.",
+          "Less admin.",
+          "",
+          "Happier teams.",
+          "Clearer reporting.",
+          "",
+          "Start in minutes."
+        ],
+        "ctaLabel": "Take a look"
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "delayMs": 0,
+        "staggerMs": 0,
+        "reducedMotionFallback": "none-required-static",
+        "implementationStatus": "static-by-design"
+      }
+    },
+    {
+      "section": "content.section-heading",
+      "required": false,
+      "repeatable": false,
+      "variant": "guide-cluster",
+      "content": {
+        "heading": "Keep reading"
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "delayMs": 0,
+        "staggerMs": 0,
+        "reducedMotionFallback": "none-required-static",
+        "implementationStatus": "static-by-design"
+      }
+    },
+    {
+      "section": "listing.link-card-grid",
+      "required": false,
+      "repeatable": false,
+      "variant": "guide-cluster-h3",
+      "content": {
+        "items": [
+          {
+            "title": "Company values",
+            "href": "/company-values",
+            "ctaLabel": "See the values"
+          },
+          {
+            "title": "Recognition messages",
+            "href": "/employee-recognition-messages",
+            "ctaLabel": "Browse the occasions"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "delayMs": 0,
+        "staggerMs": 0,
+        "reducedMotionFallback": "none-required-static",
+        "implementationStatus": "static-by-design"
+      }
+    },
+    {
+      "section": "listing.more-articles",
+      "required": true,
+      "repeatable": false,
+      "content": {
+        "heading": "More articles",
+        "cards": [
+          {
+            "title": "Building a recognition habit",
+            "href": "/blog/building-a-recognition-habit",
+            "ctaLabel": "Read blog"
+          },
+          {
+            "title": "Measuring engagement honestly",
+            "href": "/blog/measuring-engagement-honestly",
+            "ctaLabel": "Read blog"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "leaf-drift",
+        "trigger": "whileInView",
+        "durationMs": 1300,
+        "easing": "cubic-bezier(0.455, 0.03, 0.515, 0.955)",
+        "delayMs": 0,
+        "staggerMs": 0,
+        "leafSet": "CARD_LEAVES",
+        "leafCount": 6,
+        "reducedMotionFallback": "leaves-held-at-rotate-only-transform",
+        "implementationStatus": "specified-not-yet-animated"
+      }
+    },
+    {
+      "section": "divider.leaf-band",
+      "required": true,
+      "repeatable": false,
+      "variant": "bg-cream",
+      "content": {
+        "band": "bg-cream"
+      },
+      "motion": {
+        "pattern": "leaf-drift",
+        "trigger": "whileInView",
+        "durationMs": 1500,
+        "easing": "cubic-bezier(0.455, 0.03, 0.515, 0.955)",
+        "delayMs": 0,
+        "staggerMs": 0,
+        "leafSet": "DIVIDER_LEAVES",
+        "leafCount": 12,
+        "reducedMotionFallback": "leaves-held-at-rotate-only-transform",
+        "implementationStatus": "specified-not-yet-animated"
+      }
+    },
+    {
+      "section": "conversion.lead-magnet-cta",
+      "required": true,
+      "repeatable": false,
+      "content": {
+        "heading": "Get the practical guide",
+        "paragraph": "A short guide to running recognition without adding admin."
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "delayMs": 0,
+        "staggerMs": 0,
+        "reducedMotionFallback": "none-required-static",
+        "implementationStatus": "static-by-design"
+      }
+    },
+    {
+      "section": "chrome.footer",
+      "required": true,
+      "repeatable": false,
+      "content": {
+        "columns": [
+          {
+            "heading": "Product",
+            "links": [
+              "ESG",
+              "Pricing",
+              "Customers",
+              "Blog",
+              "Schedule a demo"
+            ]
+          },
+          {
+            "heading": "Company",
+            "links": [
+              "Our purpose",
+              "Help Center",
+              "Referral Program",
+              "Contact us"
+            ]
+          },
+          {
+            "heading": "Resources",
+            "links": [
+              "Employee recognition guide",
+              "Recognition messages",
+              "Company values",
+              "Recognition glossary",
+              "Recognition for teams",
+              "Alternatives"
+            ]
+          }
+        ],
+        "socials": [
+          "LinkedIn",
+          "X",
+          "Email"
+        ],
+        "legalLine": "Terms of Service \u00b7 Privacy Policy"
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "delayMs": 0,
+        "staggerMs": 0,
+        "reducedMotionFallback": "none-required-static",
+        "implementationStatus": "static-by-design"
+      }
+    },
+    {
+      "section": "chrome.trial-modal",
+      "required": true,
+      "repeatable": false,
+      "note": "Rendered once by Layout on every route, outside the section flow.",
+      "content": {
+        "platforms": [
+          "Slack",
+          "Teams"
+        ]
+      },
+      "motion": {
+        "pattern": "overlay-slide",
+        "trigger": "userToggle",
+        "durationMs": 1000,
+        "easing": "cubic-bezier(0.455, 0.03, 0.515, 0.955)",
+        "delayMs": 0,
+        "staggerMs": 0,
+        "reducedMotionFallback": "duration collapses to 0.01ms; the panel hides at 0vh",
+        "implementationStatus": "css-keyframe-fallback-implemented"
+      }
+    }
+  ]
+}

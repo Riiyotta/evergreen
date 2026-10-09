@@ -1,0 +1,16 @@
+{
+  "$id": "primitives.input.honeypot",
+  "layer": "primitives",
+  "purpose": "Spam honeypot. The ONLY spam control on the site — no consent box, no reCAPTCHA.",
+  "geometry": "absolute -left-[9999px] size-px opacity-0, tabIndex -1, aria-hidden, autoComplete off",
+  "measuredFrom": "src/components/form/Honeypot.jsx:3-13",
+  "states": {
+    "hover": null,
+    "active": null,
+    "focus": null,
+    "disabled": null,
+    "transition": null,
+    "boxShadow": "none",
+    "note": "No interactive state exists. A generator must not add one."
+  }
+}

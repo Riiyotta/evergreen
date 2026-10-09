@@ -1,0 +1,73 @@
+{
+  "$id": "sections.conversion.lead-magnet-cta",
+  "layer": "sections",
+  "motionFieldSet": [
+    "pattern",
+    "trigger",
+    "durationMs",
+    "easing",
+    "delayMs",
+    "staggerMs",
+    "leafSet",
+    "leafCount",
+    "scrollProgressRange",
+    "reducedMotionFallback",
+    "implementationStatus"
+  ],
+  "motionIsClosed": true,
+  "category": "conversion",
+  "purpose": "The alternative page close: a gated-PDF download form instead of the trial CTA.",
+  "composes": [
+    "components/form.lead-magnet"
+  ],
+  "content": {
+    "heading": {
+      "maxWords": 10,
+      "copyPolicy": "measured-budget"
+    },
+    "paragraph": {
+      "maxWords": 41,
+      "copyPolicy": "measured-budget"
+    },
+    "additionalProperties": false
+  },
+  "maxWordsBasis": "word-counted from the shipped strings; CONTENT_A recorded the geometry and the ~44-word count, never the text.",
+  "geometry": "section height 1010.95 @1280; bg cream-dark; pt-[18em] pb-[5em]; heading 6.125em/1.4; paragraph `max-w-[59ch]` (699.22-699.47px)",
+  "constraints": {
+    "onePerPage": true,
+    "mustBeLast": true,
+    "mustPrecedeFooter": true,
+    "exclusiveWith": [
+      "conversion.reassurance-cta"
+    ],
+    "allowedTemplates": [
+      "T-ARTICLE",
+      "T-PILLAR"
+    ],
+    "note": "These are the ONLY two templates that replace the shared final CTA. No 3-icon row, no TrialButton, no platform links, no small print."
+  },
+  "motion": {
+    "pattern": "none",
+    "trigger": "none",
+    "delayMs": 0,
+    "staggerMs": 0,
+    "reducedMotionFallback": "none-required-static",
+    "implementationStatus": "static-by-design",
+    "note": "Nothing in this section animates."
+  },
+  "responsive": {
+    "max-wf-mini": "heading drops to 5.1em; the heading wrapper is w-auto"
+  },
+  "chRule": "`max-w-[59ch]` is a DISTINCT container width from the 49ch used almost everywhere else. Keep it in ch.",
+  "copyPolicy": "The heading and paragraph are PLACEHOLDER copy sized to the recorded geometry. CLONE_SPEC_CONTENT_A \u00a72.7 recorded ~44 words in 2 paragraphs separated by <br><br> with the second sentence in <strong>, not the text.",
+  "wrapNote": "On T-PILLAR this heading wraps to 3 lines at 1280 (measured h 182.91) and is a fragile wrap under the Gloock substitute. Its wrapper is `w-auto`, NOT the shared CTA's `w-[51em]`.",
+  "measuredFrom": "src/pages/BlogPost.jsx:145-176",
+  "implementedBy": [
+    "src/pages/BlogPost.jsx",
+    "src/pages/EmployeeRecognitionHub.jsx"
+  ],
+  "motionClosureScope": "CLOSED for PageSpec emission: a generated node's `motion` object may contain ONLY the fields in motionFieldSet, enforced by schema/pagespec.schema.json (additionalProperties:false) and the MOTION_OBJECT_IS_CLOSED rule. The keys in motionDocumentationFields below are contract-level documentation carried by THIS file for human and retrieval use; they are NOT settable on a PageSpec node.",
+  "motionDocumentationFields": [
+    "note"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "$id": "components.card.form-shell",
+  "layer": "components",
+  "purpose": "The white card that wraps a form or the scheduler on /contact, /referral, /schedule-a-demo.",
+  "tokens": {
+    "surface": "surface.card",
+    "border": "border.default",
+    "radius": "radius.card"
+  },
+  "geometry": "min-h-[25em] (266.667px)",
+  "variants": {
+    "contact": "wrapper w-[50em] 533.33; card 533.33x672.77",
+    "referral": "wrapper w-[50em] 533.33; card 533.33x1053.48",
+    "demo": "wrapper w-[50.4013em] 537.61; card 537.61x676.66"
+  },
+  "states": "No hover, no active, no focus, no transition, no box-shadow.",
+  "measuredFrom": "src/components/FormCard.jsx:1-46",
+  "leaves": "3 CARD_LEAVES positioned relative to the WRAPPER, not the white card (card is z-[100])"
+}

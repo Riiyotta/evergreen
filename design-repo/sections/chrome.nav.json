@@ -1,0 +1,71 @@
+{
+  "$id": "sections.chrome.nav",
+  "layer": "sections",
+  "motionFieldSet": [
+    "pattern",
+    "trigger",
+    "durationMs",
+    "easing",
+    "delayMs",
+    "staggerMs",
+    "leafSet",
+    "leafCount",
+    "scrollProgressRange",
+    "reducedMotionFallback",
+    "implementationStatus"
+  ],
+  "motionIsClosed": true,
+  "category": "chrome",
+  "purpose": "Primary site navigation plus the demo CTA and a mobile overlay menu.",
+  "content": {
+    "desktopLinks": {
+      "count": 7,
+      "copyPolicy": "verbatim-locked"
+    },
+    "overlayLinks": {
+      "count": 9,
+      "copyPolicy": "verbatim-locked"
+    },
+    "additionalProperties": false
+  },
+  "linkListDelta": "The overlay list is a DIFFERENT list from the desktop one: it adds Blog and renames the demo link to 'Book Demo'. Do not merge them.",
+  "geometry": "height 77px @1280; position: relative; z-index 999999998",
+  "constraints": {
+    "onePerPage": true,
+    "mustBeFirst": true,
+    "note": "mustBeFirst unless chrome.announcement-banner is present, in which case it is second."
+  },
+  "motion": {
+    "pattern": "none",
+    "trigger": "none",
+    "delayMs": 0,
+    "staggerMs": 0,
+    "reducedMotionFallback": "none-required-static",
+    "implementationStatus": "static-by-design",
+    "note": "The nav itself never animates.",
+    "overlayMotion": "components/overlay.slide owns the open/close motion",
+    "hamburgerMotion": "bar transform, cubic-bezier(0.4,0,0.2,1)"
+  },
+  "responsive": {
+    "max-wf-tablet": "desktop link row is replaced by the hamburger + overlay.slide menu; logo widens to 17em"
+  },
+  "states": "Text links get an instant hover:underline. The CTA has NO hover.",
+  "measuredFrom": "src/components/Nav.jsx:1-30",
+  "implementedBy": "src/components/Nav.jsx",
+  "renderedBy": "src/layout/Layout.jsx (once, on every route)",
+  "negatives": [
+    "NOT sticky",
+    "NOT fixed",
+    "no backdrop blur",
+    "no scroll-state change",
+    "no shadow",
+    "no border",
+    "it simply scrolls away"
+  ],
+  "motionClosureScope": "CLOSED for PageSpec emission: a generated node's `motion` object may contain ONLY the fields in motionFieldSet, enforced by schema/pagespec.schema.json (additionalProperties:false) and the MOTION_OBJECT_IS_CLOSED rule. The keys in motionDocumentationFields below are contract-level documentation carried by THIS file for human and retrieval use; they are NOT settable on a PageSpec node.",
+  "motionDocumentationFields": [
+    "hamburgerMotion",
+    "note",
+    "overlayMotion"
+  ]
+}

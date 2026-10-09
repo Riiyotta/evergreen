@@ -1,0 +1,57 @@
+{
+  "$id": "sections.content.prose-left",
+  "layer": "sections",
+  "motionFieldSet": [
+    "pattern",
+    "trigger",
+    "durationMs",
+    "easing",
+    "delayMs",
+    "staggerMs",
+    "leafSet",
+    "leafCount",
+    "scrollProgressRange",
+    "reducedMotionFallback",
+    "implementationStatus"
+  ],
+  "motionIsClosed": true,
+  "category": "content",
+  "purpose": "A bare left-aligned paragraph column, outside the rich-text container.",
+  "composes": [
+    "components/block.prose-left"
+  ],
+  "content": {
+    "paragraphs": {
+      "minItems": 1,
+      "maxItems": 1
+    },
+    "paragraph": {
+      "maxWords": 62,
+      "copyPolicy": "measured-budget"
+    },
+    "additionalProperties": false
+  },
+  "constraints": {
+    "maxPerPage": 2,
+    "variantKeyed": true,
+    "maxPerPageBasis": "T-DETAIL-VALUES can emit two (intro + the optional 'What its absence looks like' block)."
+  },
+  "motion": {
+    "pattern": "none",
+    "trigger": "none",
+    "delayMs": 0,
+    "staggerMs": 0,
+    "reducedMotionFallback": "none-required-static",
+    "implementationStatus": "static-by-design",
+    "note": "Nothing in this section animates."
+  },
+  "responsive": {
+    "max-wf-mini": "max-w-full"
+  },
+  "measuredFrom": "src/templates/blocks.jsx:52-64",
+  "implementedBy": "src/templates/blocks.jsx (ProseLeft)",
+  "motionClosureScope": "CLOSED for PageSpec emission: a generated node's `motion` object may contain ONLY the fields in motionFieldSet, enforced by schema/pagespec.schema.json (additionalProperties:false) and the MOTION_OBJECT_IS_CLOSED rule. The keys in motionDocumentationFields below are contract-level documentation carried by THIS file for human and retrieval use; they are NOT settable on a PageSpec node.",
+  "motionDocumentationFields": [
+    "note"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "$id": "components.block.hero-heading",
+  "layer": "components",
+  "purpose": "The plain centred h1 block on /case-studies, /contact, /schedule-a-demo and /referral.",
+  "geometry": "block y 45, h 206.13; h1 y 153, w 1151.98, h 97.33 (65.333 / 600 / 97.3466 / #000) — one line on all four",
+  "content": {
+    "heading": {
+      "maxWords": 7,
+      "copyPolicy": "verbatim-locked"
+    }
+  },
+  "maxWordsBasis": "longest of the four real headings ('Pick a time for a free demo')",
+  "states": "No hover, no active, no focus, no transition, no box-shadow.",
+  "measuredFrom": "src/components/HeroHeading.jsx:1-16",
+  "negatives": [
+    "no avatar pills",
+    "no eyebrow badge",
+    "no floating decoration"
+  ],
+  "chRule": "`max-w-[49ch]` must stay in ch; it computes to 1981.52px in the 65.33px display face, so it only bites below ~480px."
+}

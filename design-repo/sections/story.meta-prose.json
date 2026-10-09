@@ -1,0 +1,58 @@
+{
+  "$id": "sections.story.meta-prose",
+  "layer": "sections",
+  "motionFieldSet": [
+    "pattern",
+    "trigger",
+    "durationMs",
+    "easing",
+    "delayMs",
+    "staggerMs",
+    "leafSet",
+    "leafCount",
+    "scrollProgressRange",
+    "reducedMotionFallback",
+    "implementationStatus"
+  ],
+  "motionIsClosed": true,
+  "category": "story",
+  "purpose": "A case study's fact card beside its narrative.",
+  "composes": [
+    "components/card.case-study-meta",
+    "components/block.rich-text"
+  ],
+  "content": {
+    "additionalProperties": false
+  },
+  "geometry": "its own `relative bg-cream` section, y 906.72 h 2619 @1280; row `mt-[15em] mb-[4.2em]` \u2014 NOT the standard `my-[4.2em]`; meta column w-[26%]; prose column w-[60%] (691.22px)",
+  "constraints": {
+    "onePerPage": true,
+    "allowedTemplates": [
+      "T-STORY"
+    ]
+  },
+  "motion": {
+    "pattern": "leaf-drift",
+    "trigger": "whileInView",
+    "durationMs": 1300,
+    "easing": "cubic-bezier(0.455, 0.03, 0.515, 0.955)",
+    "delayMs": 0,
+    "staggerMs": 0,
+    "leafSet": "CARD_LEAVES",
+    "leafCount": 3,
+    "reducedMotionFallback": "leaves-held-at-rotate-only-transform",
+    "implementationStatus": "specified-not-yet-animated"
+  },
+  "responsive": {
+    "max-wf-tablet": "flex-col; the prose column becomes w-full with mt-[4em]",
+    "max-wf-mini": "row margins drop to mt-[13.5em] mb-[3.5em]"
+  },
+  "assetRoles": [
+    "third-party.trademark",
+    "editorial.hero-image"
+  ],
+  "quirk": "The 60% column (691.22px) is NARROWER than the prose container's 829.65px max-width, so the column wins. This is the ONLY place in content set B that renders blockquote / figure / figcaption.",
+  "measuredFrom": "src/pages/CaseStudyPage.jsx:91-105",
+  "implementedBy": "src/pages/CaseStudyPage.jsx",
+  "motionClosureScope": "CLOSED for PageSpec emission: a generated node's `motion` object may contain ONLY the fields in motionFieldSet, enforced by schema/pagespec.schema.json (additionalProperties:false) and the MOTION_OBJECT_IS_CLOSED rule. The keys in motionDocumentationFields below are contract-level documentation carried by THIS file for human and retrieval use; they are NOT settable on a PageSpec node."
+}

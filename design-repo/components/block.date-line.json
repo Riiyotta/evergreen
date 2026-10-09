@@ -1,0 +1,20 @@
+{
+  "$id": "components.block.date-line",
+  "layer": "components",
+  "purpose": "The publication date on a blog article.",
+  "geometry": "wrapper my-[5em] (53.3333px); height 17.06px; <time> at 1em of the root engine",
+  "format": {
+    "display": "D Month YYYY (en-GB)",
+    "datetime": "YYYY-MM-DD"
+  },
+  "states": "No hover, no active, no focus, no transition, no box-shadow.",
+  "measuredFrom": "src/components/DateLine.jsx:3-13",
+  "criticalNote": "The smallest type on the whole site (10.6667px @1280) and the ONLY text that inherits .marketing-root's #333 instead of #000. It carries no size class at all. Deliberate; keep it.",
+  "negatives": [
+    "no author",
+    "no avatar",
+    "no read time",
+    "no share row",
+    "no tag list"
+  ]
+}

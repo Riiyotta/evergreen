@@ -1,0 +1,65 @@
+{
+  "$id": "sections.form.referral-card",
+  "layer": "sections",
+  "motionFieldSet": [
+    "pattern",
+    "trigger",
+    "durationMs",
+    "easing",
+    "delayMs",
+    "staggerMs",
+    "leafSet",
+    "leafCount",
+    "scrollProgressRange",
+    "reducedMotionFallback",
+    "implementationStatus"
+  ],
+  "motionIsClosed": true,
+  "category": "form",
+  "purpose": "Let a visitor refer an organisation, with the commercial terms above and below it.",
+  "composes": [
+    "components/card.form-shell",
+    "components/form.referral"
+  ],
+  "content": {
+    "introParagraph": {
+      "maxWords": 38,
+      "copyPolicy": "verbatim-locked"
+    },
+    "footnote": {
+      "maxWords": 19,
+      "copyPolicy": "verbatim-locked"
+    },
+    "additionalProperties": false
+  },
+  "geometry": "section y 45 h 1633.73 @1280; both paragraphs `max-w-[60ch]`, each with a real trailing <br>",
+  "constraints": {
+    "onePerPage": true,
+    "allowedTemplates": [
+      "T-REFERRAL"
+    ]
+  },
+  "motion": {
+    "pattern": "leaf-drift",
+    "trigger": "whileInView",
+    "durationMs": 1300,
+    "easing": "cubic-bezier(0.455, 0.03, 0.515, 0.955)",
+    "delayMs": 0,
+    "staggerMs": 0,
+    "leafSet": "CARD_LEAVES",
+    "leafCount": 3,
+    "reducedMotionFallback": "leaves-held-at-rotate-only-transform",
+    "implementationStatus": "specified-not-yet-animated"
+  },
+  "responsive": {
+    "max-wf-phone": "the card wrapper becomes flex-col"
+  },
+  "container": "ZERO-GUTTER: mx-auto -mt-[3em] w-full max-w-[1920px] px-0 max-wf-tablet:px-0",
+  "verbatimQuirks": [
+    "'become customer' (missing 'a') is the ORIGINAL'S grammatical slip, reproduced verbatim"
+  ],
+  "quirk": "<main> on /referral contains ZERO <a> elements.",
+  "measuredFrom": "src/pages/Referral.jsx:37-70",
+  "implementedBy": "src/pages/Referral.jsx",
+  "motionClosureScope": "CLOSED for PageSpec emission: a generated node's `motion` object may contain ONLY the fields in motionFieldSet, enforced by schema/pagespec.schema.json (additionalProperties:false) and the MOTION_OBJECT_IS_CLOSED rule. The keys in motionDocumentationFields below are contract-level documentation carried by THIS file for human and retrieval use; they are NOT settable on a PageSpec node."
+}

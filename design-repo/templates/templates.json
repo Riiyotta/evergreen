@@ -1,0 +1,1837 @@
+{
+  "$id": "templates",
+  "version": "1.0.0",
+  "status": "design-review-pending",
+  "description": "One entry per distinct PAGE SHAPE, not per route. Every `nodes` entry is a STRUCTURED OBJECT ({section, required, repeatable, variant?}), never a bare string, so `required` and `repeatable` are machine-enforceable rather than conventions a human has to remember.",
+  "nodeObjectShape": {
+    "section": "a sections/*.json id",
+    "required": "bool",
+    "repeatable": "bool",
+    "variant": "optional string; present wherever the same section appears more than once on one page with different content rules"
+  },
+  "chromeNote": "chrome.nav, chrome.footer and chrome.trial-modal are rendered ONCE by src/layout/Layout.jsx and are shared by every route; chrome.announcement-banner is rendered there too but gated per-route. They are listed as nodes on every template because a PageSpec describes a whole rendered page, but a page component must never re-declare them.",
+  "templateCount": 22,
+  "routeCount": 195,
+  "unmappedSections": [],
+  "unmappedSectionsNote": "Sections with no positional node in any template. These are not gaps: they are sections composed INSIDE another section rather than appearing as a page-level node. Each one's own contract records where.",
+  "templates": {
+    "T-HOME": {
+      "name": "Homepage",
+      "pageShape": "hero + 2 feature rows + final CTA, banded by two dividers",
+      "routeCount": 1,
+      "evidenceLevel": "measured",
+      "evidenceSources": [
+        "CLONE_SPEC.md §1 (section map)",
+        "_reference/Evergreen _ Give recognition and plant trees.html"
+      ],
+      "measuredFrom": "src/pages/Home.jsx:8-48",
+      "implementedBy": "src/pages/Home.jsx",
+      "documentHeight1280": 7189,
+      "nodes": [
+        {
+          "section": "chrome.announcement-banner",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.nav",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.home",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "divider.leaf-band",
+          "required": true,
+          "repeatable": false,
+          "variant": "bg-cream"
+        },
+        {
+          "section": "feature.seeds",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "feature.report-csr",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "divider.leaf-band",
+          "required": true,
+          "repeatable": false,
+          "variant": "bg-cream"
+        },
+        {
+          "section": "conversion.reassurance-cta",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.trial-modal",
+          "required": true,
+          "repeatable": false,
+          "note": "Rendered once by Layout on every route, outside the section flow."
+        }
+      ]
+    },
+    "T-PRICING": {
+      "name": "Pricing",
+      "pageShape": "single flat price + reassurance trio, then a social-proof close",
+      "routeCount": 1,
+      "evidenceLevel": "measured",
+      "evidenceSources": [
+        "CLONE_SPEC_CORE_A.md Part 1"
+      ],
+      "measuredFrom": "src/pages/Pricing.jsx:11-33",
+      "implementedBy": "src/pages/Pricing.jsx",
+      "documentHeight1280": 3115,
+      "nodes": [
+        {
+          "section": "chrome.nav",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "pricing.single-plan",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "divider.leaf-band",
+          "required": true,
+          "repeatable": false,
+          "variant": "bg-cream"
+        },
+        {
+          "section": "proof.testimonial-wall",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.trial-modal",
+          "required": true,
+          "repeatable": false,
+          "note": "Rendered once by Layout on every route, outside the section flow."
+        }
+      ],
+      "noBanner": true,
+      "noFinalCta": true,
+      "noHeroSection": true,
+      "note": "TWO structural facts about this template that were found by running the compatibility checks rather than by reading a spec: (1) it is HERO-LESS — sections/pricing.single-plan carries the page's own h1 inline, so there is no hero-category node, which is why compatibility/graph.json's ONE_HERO_PER_PAGE rule carries T-PRICING as a named exception; (2) it has NO final CTA — the page ends on sections/proof.testimonial-wall, exactly like T-REFERRAL. There is NO tier grid, NO monthly/annual toggle, NO FAQ and NO comparison table."
+    },
+    "T-ESG": {
+      "name": "ESG",
+      "pageShape": "three ESG pillars as split-visual rows, then the UN SDG block, then the shared CTA",
+      "routeCount": 1,
+      "evidenceLevel": "measured",
+      "evidenceSources": [
+        "CLONE_SPEC_CORE_A.md Part 2"
+      ],
+      "measuredFrom": "src/pages/Esg.jsx:8-29",
+      "implementedBy": "src/pages/Esg.jsx",
+      "documentHeight1280": 7043,
+      "nodes": [
+        {
+          "section": "chrome.nav",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.esg-environmental",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "divider.leaf-band",
+          "required": true,
+          "repeatable": false,
+          "variant": "bg-cream"
+        },
+        {
+          "section": "feature.split-visual",
+          "required": true,
+          "repeatable": true,
+          "variant": "esg-social"
+        },
+        {
+          "section": "divider.leaf-band",
+          "required": true,
+          "repeatable": false,
+          "variant": "bg-cream-dark"
+        },
+        {
+          "section": "feature.split-visual",
+          "required": true,
+          "repeatable": true,
+          "variant": "esg-governance"
+        },
+        {
+          "section": "divider.leaf-band",
+          "required": true,
+          "repeatable": false,
+          "variant": "bg-cream"
+        },
+        {
+          "section": "proof.sdg-goals",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "divider.leaf-band",
+          "required": true,
+          "repeatable": false,
+          "variant": "bg-cream-dark"
+        },
+        {
+          "section": "conversion.reassurance-cta",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.trial-modal",
+          "required": true,
+          "repeatable": false,
+          "note": "Rendered once by Layout on every route, outside the section flow."
+        }
+      ],
+      "noBanner": true,
+      "note": "Carries FOUR divider bands — the most of any route — and that is what sets divider.leaf-band's maxPerPage of 4."
+    },
+    "T-PURPOSE": {
+      "name": "Our Purpose",
+      "pageShape": "short mission hero, a full-bleed leaf goals band, the UN SDG block, the shared CTA",
+      "routeCount": 1,
+      "evidenceLevel": "measured",
+      "evidenceSources": [
+        "CLONE_SPEC_CORE_A.md Part 3"
+      ],
+      "measuredFrom": "src/pages/OurPurpose.jsx:7-27",
+      "implementedBy": "src/pages/OurPurpose.jsx",
+      "documentHeight1280": 3838,
+      "nodes": [
+        {
+          "section": "chrome.nav",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.purpose",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "proof.goals-band",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "divider.leaf-band",
+          "required": true,
+          "repeatable": false,
+          "variant": "bg-leaf"
+        },
+        {
+          "section": "proof.sdg-goals",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "divider.leaf-band",
+          "required": true,
+          "repeatable": false,
+          "variant": "bg-cream-dark"
+        },
+        {
+          "section": "conversion.reassurance-cta",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.trial-modal",
+          "required": true,
+          "repeatable": false,
+          "note": "Rendered once by Layout on every route, outside the section flow."
+        }
+      ],
+      "noBanner": true,
+      "note": "hero.purpose and proof.goals-band are two consecutive sections with NO divider between them. The -mt-[3em] overlap means there is no seam."
+    },
+    "T-CASE-STUDY-INDEX": {
+      "name": "Customer success stories index",
+      "pageShape": "centred h1 + intro + a 2-up case-study grid, then the shared CTA",
+      "routeCount": 1,
+      "evidenceLevel": "measured",
+      "evidenceSources": [
+        "CLONE_SPEC_CORE_B.md Part C"
+      ],
+      "measuredFrom": "src/pages/CaseStudies.jsx:7-12",
+      "implementedBy": "src/pages/CaseStudies.jsx",
+      "documentHeight1280": 3253,
+      "nodes": [
+        {
+          "section": "chrome.nav",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.centred-h1",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "listing.case-study-grid",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "divider.leaf-band",
+          "required": true,
+          "repeatable": false,
+          "variant": "bg-cream"
+        },
+        {
+          "section": "conversion.reassurance-cta",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.trial-modal",
+          "required": true,
+          "repeatable": false,
+          "note": "Rendered once by Layout on every route, outside the section flow."
+        }
+      ],
+      "noBanner": true
+    },
+    "T-CONTACT": {
+      "name": "Contact",
+      "pageShape": "centred h1 + intro, a white form card, a G2 close, then the shared CTA",
+      "routeCount": 1,
+      "evidenceLevel": "measured",
+      "evidenceSources": [
+        "CLONE_SPEC_CORE_B.md Part T"
+      ],
+      "measuredFrom": "src/pages/Contact.jsx:9-12",
+      "implementedBy": "src/pages/Contact.jsx",
+      "documentHeight1280": 3063,
+      "nodes": [
+        {
+          "section": "chrome.nav",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.centred-h1",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "form.contact-card",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "proof.g2-rating",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "divider.leaf-band",
+          "required": true,
+          "repeatable": false,
+          "variant": "bg-cream"
+        },
+        {
+          "section": "conversion.reassurance-cta",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.trial-modal",
+          "required": true,
+          "repeatable": false,
+          "note": "Rendered once by Layout on every route, outside the section flow."
+        }
+      ],
+      "noBanner": true,
+      "containerNote": "Section 1 uses the ZERO-GUTTER wrapper (px-0)."
+    },
+    "T-SCHEDULER": {
+      "name": "Schedule a demo",
+      "pageShape": "centred h1 + intro, a white card holding the static scheduler, a G2 close, the shared CTA",
+      "routeCount": 1,
+      "evidenceLevel": "measured",
+      "evidenceSources": [
+        "CLONE_SPEC_CORE_B.md Part D"
+      ],
+      "measuredFrom": "src/pages/ScheduleADemo.jsx:9-12",
+      "implementedBy": "src/pages/ScheduleADemo.jsx",
+      "documentHeight1280": 3130,
+      "nodes": [
+        {
+          "section": "chrome.nav",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.centred-h1",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "form.scheduler-card",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "proof.g2-rating",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "divider.leaf-band",
+          "required": true,
+          "repeatable": false,
+          "variant": "bg-cream"
+        },
+        {
+          "section": "conversion.reassurance-cta",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.trial-modal",
+          "required": true,
+          "repeatable": false,
+          "note": "Rendered once by Layout on every route, outside the section flow."
+        }
+      ],
+      "noBanner": true,
+      "containerNote": "Section 1 uses the STANDARD px-[6em] wrapper, unlike /contact and /referral."
+    },
+    "T-REFERRAL": {
+      "name": "Referral programme",
+      "pageShape": "centred h1 + form + footnote, an earnings-tier band, then a social-proof close. THE ONLY TEMPLATE WITH NO FINAL CTA.",
+      "routeCount": 1,
+      "evidenceLevel": "measured",
+      "evidenceSources": [
+        "CLONE_SPEC_CORE_B.md Part R"
+      ],
+      "measuredFrom": "src/pages/Referral.jsx:13-27",
+      "implementedBy": "src/pages/Referral.jsx",
+      "documentHeight1280": 4007,
+      "nodes": [
+        {
+          "section": "chrome.nav",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.centred-h1",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "form.referral-card",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "referral.earnings-tiers",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "divider.leaf-band",
+          "required": true,
+          "repeatable": false,
+          "variant": "bg-cream"
+        },
+        {
+          "section": "proof.testimonial-wall",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.trial-modal",
+          "required": true,
+          "repeatable": false,
+          "note": "Rendered once by Layout on every route, outside the section flow."
+        }
+      ],
+      "noBanner": true,
+      "noFinalCta": true,
+      "note": "There is NO 'Start feeling good about work' section and no 3-icon reassurance row here — the page ends on social proof. It is the only template that breaks that pattern. Sections A and B are two consecutive bg-cream sections flush with no divider. <main> on /referral contains ZERO <a> elements."
+    },
+    "T-LEGAL": {
+      "name": "Legal document",
+      "pageShape": "centred h1 + 'Last updated', then one left-aligned prose block. Nothing else.",
+      "routeCount": 2,
+      "evidenceLevel": "measured",
+      "evidenceSources": [
+        "CLONE_SPEC_CONTENT_B.md §2",
+        "_reference/recon-b/legal_privacy.json",
+        "_reference/recon-b/legal_terms.json"
+      ],
+      "measuredFrom": "src/pages/LegalPage.jsx:6-22",
+      "implementedBy": "src/pages/LegalPage.jsx",
+      "documentHeight1280": {
+        "/privacy-policy": 8200,
+        "/terms-of-service": 3687
+      },
+      "nodes": [
+        {
+          "section": "chrome.nav",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.legal-head",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.rich-text",
+          "required": true,
+          "repeatable": false,
+          "variant": "flat"
+        },
+        {
+          "section": "chrome.footer",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.trial-modal",
+          "required": true,
+          "repeatable": false,
+          "note": "Rendered once by Layout on every route, outside the section flow."
+        }
+      ],
+      "noBanner": true,
+      "noFinalCta": true,
+      "note": "ONE <section> only. NO divider band, NO final CTA, NO leaves anywhere in <main> — the only template in the content set with no decorative leaf layer and no shared CTA. NO table of contents, NO heading anchors, NO id attributes (the measured id count inside <main> is 0). The head is centred, the prose below is left-aligned; keep that contrast.",
+      "correction": "CLONE_SPEC_CONTENT_B §2.2 records 2 h2 on the privacy policy but names only one. The real body has 2 (recomputed from src/data/legalPages.js), and /terms-of-service has 9."
+    },
+    "T-EBOOK": {
+      "name": "Ebook lead magnet",
+      "pageShape": "h1 + a long multi-part lede, a download card, a G2 close, the shared CTA",
+      "routeCount": 1,
+      "evidenceLevel": "measured",
+      "evidenceSources": [
+        "CLONE_SPEC_CONTENT_B.md §7",
+        "_reference/recon-b/ebook.json"
+      ],
+      "measuredFrom": "src/pages/EbookPage.jsx:11-22",
+      "implementedBy": "src/pages/EbookPage.jsx",
+      "documentHeight1280": 3347,
+      "nodes": [
+        {
+          "section": "chrome.nav",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.ebook-lede",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "form.lead-magnet-card",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "proof.g2-rating",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "divider.leaf-band",
+          "required": true,
+          "repeatable": false,
+          "variant": "bg-cream"
+        },
+        {
+          "section": "conversion.reassurance-cta",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.trial-modal",
+          "required": true,
+          "repeatable": false,
+          "note": "Rendered once by Layout on every route, outside the section flow."
+        }
+      ],
+      "noBanner": true,
+      "containerNote": "The ONLY page in the content set that breaks the px-[6em] container contract: its wrapper is px-0, so blocks are full-bleed 1280px and rely on their own mx-auto + max-w."
+    },
+    "T-BLOG-INDEX": {
+      "name": "Blog index",
+      "pageShape": "h1, then 53 full-width split rows. No divider, no CTA.",
+      "routeCount": 1,
+      "evidenceLevel": "measured",
+      "evidenceSources": [
+        "CLONE_SPEC_CONTENT_A.md §1"
+      ],
+      "measuredFrom": "src/pages/BlogIndex.jsx:6-27",
+      "implementedBy": "src/pages/BlogIndex.jsx",
+      "documentHeight1280": 29100,
+      "nodes": [
+        {
+          "section": "chrome.nav",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.page-head",
+          "required": true,
+          "repeatable": false,
+          "variant": "h1-only"
+        },
+        {
+          "section": "listing.blog-rows",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.trial-modal",
+          "required": true,
+          "repeatable": false,
+          "note": "Rendered once by Layout on every route, outside the section flow."
+        }
+      ],
+      "noBanner": true,
+      "noFinalCta": true,
+      "note": "NO announcement banner, NO eyebrow badge, NO intro paragraph, NO divider band and NO final CTA. h1 -> rows -> footer. Its wrapper is the SECTION_WRAPPER with NO pb-[5em] — the only content template without it."
+    },
+    "T-ARTICLE": {
+      "name": "Blog article",
+      "pageShape": "badge + h1 + date, prose, a black cross-promo panel, an optional guide cluster, two related articles, then a lead-magnet close",
+      "routeCount": 53,
+      "evidenceLevel": "measured-sampled",
+      "evidenceNote": "3 of the 53 routes were measured (doc heights 9265 / 12518 / 6470). The other 50 inherit the same node sequence; rich-text height is the only real variable.",
+      "evidenceSources": [
+        "CLONE_SPEC_CONTENT_A.md §2"
+      ],
+      "measuredFrom": "src/pages/BlogPost.jsx:16-52",
+      "implementedBy": "src/pages/BlogPost.jsx",
+      "nodes": [
+        {
+          "section": "chrome.announcement-banner",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.nav",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.page-head",
+          "required": true,
+          "repeatable": false,
+          "variant": "badge+h1+date"
+        },
+        {
+          "section": "content.rich-text",
+          "required": true,
+          "repeatable": false,
+          "variant": "grouped"
+        },
+        {
+          "section": "conversion.arketta-cross-promo",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.section-heading",
+          "required": false,
+          "repeatable": false,
+          "variant": "guide-cluster"
+        },
+        {
+          "section": "listing.link-card-grid",
+          "required": false,
+          "repeatable": false,
+          "variant": "guide-cluster-h3"
+        },
+        {
+          "section": "listing.more-articles",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "divider.leaf-band",
+          "required": true,
+          "repeatable": false,
+          "variant": "bg-cream"
+        },
+        {
+          "section": "conversion.lead-magnet-cta",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.trial-modal",
+          "required": true,
+          "repeatable": false,
+          "note": "Rendered once by Layout on every route, outside the section flow."
+        }
+      ],
+      "bannerNote": "The ONLY content template that renders the announcement banner. It shifts every y-offset below it by 51.74px. `/blog` itself stays bannerless — the match is on the `/blog/` prefix.",
+      "optionalNodes": "The guide-cluster heading and grid are driven by `guideCluster` and are absent on the sampled product-update article. The cross-promo panel, the related articles and the lead-magnet close are always present.",
+      "negatives": [
+        "no hero image on the article itself",
+        "no author",
+        "no avatar",
+        "no read time",
+        "no share row",
+        "no tag list",
+        "no table of contents"
+      ]
+    },
+    "T-ALTERNATIVES-INDEX": {
+      "name": "Alternatives index",
+      "pageShape": "badge + h1 + intro, a 15-card grid, a trailing 2-card group, the shared CTA",
+      "routeCount": 1,
+      "evidenceLevel": "measured",
+      "evidenceSources": [
+        "CLONE_SPEC_CONTENT_A.md §3"
+      ],
+      "measuredFrom": "src/pages/AlternativesIndex.jsx:10-36",
+      "implementedBy": "src/pages/AlternativesIndex.jsx",
+      "documentHeight1280": 5774,
+      "nodes": [
+        {
+          "section": "chrome.nav",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.page-head",
+          "required": true,
+          "repeatable": false,
+          "variant": "badge+h1+lede"
+        },
+        {
+          "section": "listing.link-card-grid",
+          "required": true,
+          "repeatable": true,
+          "variant": "h2-listing"
+        },
+        {
+          "section": "content.section-heading",
+          "required": true,
+          "repeatable": true
+        },
+        {
+          "section": "listing.link-card-grid",
+          "required": true,
+          "repeatable": true,
+          "variant": "h2-listing"
+        },
+        {
+          "section": "divider.leaf-band",
+          "required": true,
+          "repeatable": false,
+          "variant": "bg-cream"
+        },
+        {
+          "section": "conversion.reassurance-cta",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.trial-modal",
+          "required": true,
+          "repeatable": false,
+          "note": "Rendered once by Layout on every route, outside the section flow."
+        }
+      ],
+      "noBanner": true,
+      "note": "Both grids use h2 card headings (a top-level listing). The grid cards carry NO leaf layer, unlike the blog rows and the article's related cards. 15 cards in one list, alphabetical by slug."
+    },
+    "T-COMPARISON": {
+      "name": "Competitor comparison",
+      "pageShape": "badge + h1 + subtitle, then nine heading-led content groups, then the shared CTA",
+      "routeCount": 15,
+      "evidenceLevel": "measured-sampled",
+      "evidenceNote": "2 of the 15 routes were measured (/alternatives/bonusly doc 9086, /alternatives/heytaco doc 9103). The other 13 inherit the same node sequence.",
+      "evidenceSources": [
+        "CLONE_SPEC_CONTENT_A.md §4"
+      ],
+      "measuredFrom": "src/pages/AlternativePage.jsx:21-65",
+      "implementedBy": "src/pages/AlternativePage.jsx",
+      "nodes": [
+        {
+          "section": "chrome.nav",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.page-head",
+          "required": true,
+          "repeatable": false,
+          "variant": "badge+h1+lede"
+        },
+        {
+          "section": "content.section-heading",
+          "required": true,
+          "repeatable": true
+        },
+        {
+          "section": "content.leaf-spec-list",
+          "required": true,
+          "repeatable": true,
+          "variant": "at-a-glance"
+        },
+        {
+          "section": "content.rich-text",
+          "required": true,
+          "repeatable": false,
+          "variant": "grouped"
+        },
+        {
+          "section": "content.section-heading",
+          "required": true,
+          "repeatable": true
+        },
+        {
+          "section": "content.leaf-bullets",
+          "required": true,
+          "repeatable": true,
+          "variant": "strengths"
+        },
+        {
+          "section": "content.section-heading",
+          "required": true,
+          "repeatable": true
+        },
+        {
+          "section": "content.leaf-bullets",
+          "required": true,
+          "repeatable": true,
+          "variant": "shortfalls"
+        },
+        {
+          "section": "content.section-heading",
+          "required": true,
+          "repeatable": true
+        },
+        {
+          "section": "content.leaf-spec-list",
+          "required": true,
+          "repeatable": true,
+          "variant": "differs"
+        },
+        {
+          "section": "content.section-heading",
+          "required": true,
+          "repeatable": true
+        },
+        {
+          "section": "content.prose-left",
+          "required": true,
+          "repeatable": true,
+          "variant": "verdict"
+        },
+        {
+          "section": "content.section-heading",
+          "required": true,
+          "repeatable": true
+        },
+        {
+          "section": "content.faq",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.section-heading",
+          "required": true,
+          "repeatable": true
+        },
+        {
+          "section": "content.sources",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.section-heading",
+          "required": true,
+          "repeatable": true
+        },
+        {
+          "section": "listing.link-card-grid",
+          "required": true,
+          "repeatable": true,
+          "variant": "h3-related"
+        },
+        {
+          "section": "content.section-heading",
+          "required": true,
+          "repeatable": true
+        },
+        {
+          "section": "listing.link-card-grid",
+          "required": true,
+          "repeatable": true,
+          "variant": "h3-related"
+        },
+        {
+          "section": "divider.leaf-band",
+          "required": true,
+          "repeatable": false,
+          "variant": "bg-cream"
+        },
+        {
+          "section": "conversion.reassurance-cta",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.trial-modal",
+          "required": true,
+          "repeatable": false,
+          "note": "Rendered once by Layout on every route, outside the section flow."
+        }
+      ],
+      "noBanner": true,
+      "negatives": [
+        "NO comparison <table> anywhere: no <table>/<th>/<td>, no tick/cross icons, no zebra striping, no row borders — two leaf spec lists and two leaf bullet lists play that role",
+        "NO competitor logos — do not invent any",
+        "no date element; the 'as read on {date}' lives inline inside the Pricing spec row"
+      ],
+      "correction": "Its FAQ is FOUR rows, not the three CLONE_SPEC_CONTENT_A §5.6/§9.3 records."
+    },
+    "T-COLLECTION-INDEX": {
+      "name": "SEO collection index",
+      "pageShape": "badge + h1 + lede, the whole collection as one flat grid, a cross-sell group, the shared CTA",
+      "routeCount": 4,
+      "evidenceLevel": "measured",
+      "evidenceNote": "All four routes were measured: _reference/recon-b/gloss_index.json, for_index.json, msg_index.json, values_index.json.",
+      "evidenceSources": [
+        "CLONE_SPEC_CONTENT_B.md §4.1",
+        "CLONE_SPEC_CONTENT_B.md §4.2"
+      ],
+      "measuredFrom": "src/templates/TIndex.jsx:9-19",
+      "implementedBy": "src/templates/TIndex.jsx",
+      "nodes": [
+        {
+          "section": "chrome.nav",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.page-head",
+          "required": true,
+          "repeatable": false,
+          "variant": "badge+h1+lede"
+        },
+        {
+          "section": "listing.link-card-grid",
+          "required": true,
+          "repeatable": true,
+          "variant": "h2-listing"
+        },
+        {
+          "section": "content.section-heading",
+          "required": true,
+          "repeatable": true
+        },
+        {
+          "section": "listing.link-card-grid",
+          "required": true,
+          "repeatable": true,
+          "variant": "h2-listing"
+        },
+        {
+          "section": "divider.leaf-band",
+          "required": true,
+          "repeatable": false,
+          "variant": "bg-cream"
+        },
+        {
+          "section": "conversion.reassurance-cta",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.trial-modal",
+          "required": true,
+          "repeatable": false,
+          "note": "Rendered once by Layout on every route, outside the section flow."
+        }
+      ],
+      "noBanner": true,
+      "groupingVerification": "The four routes are ONE page shape, verified by reading the real component rather than by trusting the grouping: src/templates/TIndex.jsx is a single component tree with no per-collection branching at all — only the badge, h1, lede, item array and cross-sell array differ, and all four are data. Item counts recomputed from the real data: glossary 30, messages 35, values 25, for 12.",
+      "negatives": [
+        "no A-Z nav",
+        "no search",
+        "no filter",
+        "no pagination"
+      ]
+    },
+    "T-PILLAR": {
+      "name": "Pillar hub",
+      "pageShape": "h1 + lede, then a 17-block composed body (prose, stats, card groups, a vocabulary list, a FAQ and an 8-group reading list), then a lead-magnet close",
+      "routeCount": 1,
+      "evidenceLevel": "measured",
+      "evidenceSources": [
+        "CLONE_SPEC_CONTENT_B.md §4.3",
+        "_reference/recon-b/er_hub.json"
+      ],
+      "measuredFrom": "src/pages/EmployeeRecognitionHub.jsx:12-31",
+      "implementedBy": "src/pages/EmployeeRecognitionHub.jsx",
+      "documentHeight1280": 25065,
+      "nodes": [
+        {
+          "section": "chrome.nav",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.page-head",
+          "required": true,
+          "repeatable": false,
+          "variant": "h1+lede"
+        },
+        {
+          "section": "content.rich-text",
+          "required": true,
+          "repeatable": true,
+          "variant": "flat"
+        },
+        {
+          "section": "proof.stat-pills",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "listing.link-card-grid",
+          "required": true,
+          "repeatable": true,
+          "variant": "h3-inline"
+        },
+        {
+          "section": "content.leaf-spec-list",
+          "required": true,
+          "repeatable": true,
+          "variant": "vocabulary"
+        },
+        {
+          "section": "content.section-heading",
+          "required": true,
+          "repeatable": true
+        },
+        {
+          "section": "content.faq",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.reading-list",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "divider.leaf-band",
+          "required": true,
+          "repeatable": false,
+          "variant": "bg-cream"
+        },
+        {
+          "section": "conversion.lead-magnet-cta",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.trial-modal",
+          "required": true,
+          "repeatable": false,
+          "note": "Rendered once by Layout on every route, outside the section flow."
+        }
+      ],
+      "noBanner": true,
+      "blockOrderBasis": "The real block array is recomputed from src/data/pillar.js and is, in order: prose, stats, prose, cards, prose, cards, prose, cards, prose, cards, prose, vocabulary, prose, heading, faq, heading, readingList — 17 blocks, 7 of them prose and 4 of them card groups. The node list above marks the repeating kinds `repeatable: true` rather than enumerating all 17 positions.",
+      "note": "T-PILLAR = T-DETAIL plus three things and minus one: PLUS the 4-stat pill row, PLUS inline card groups between prose blocks (in `div.my-[4em]`, margin-block 42.667px, NOT the standard 44.8px), PLUS the 8-group reading list; MINUS the shared final CTA, which it replaces with the lead-magnet form. The longest page on the site."
+    },
+    "T-DETAIL-GLOSSARY": {
+      "name": "Glossary term detail",
+      "pageShape": "badge + h1 + definition, an intro paragraph, prose, examples, a FAQ, then three card groups",
+      "routeCount": 30,
+      "evidenceLevel": "measured-sampled",
+      "evidenceNote": "2 of the 30 routes were measured: _reference/recon-b/gloss_er.json (/employee-recognition/glossary/employee-recognition) and gloss_kudos.json (/employee-recognition/glossary/kudos, docH 6927 @1280, also re-measured at 1440 / 768 / 390). The other 28 reuse the sampled routes' element counts and are INFERRED, not measured — see the residual-deviation note.",
+      "measuredFrom": "src/templates/TDetail.jsx:60-73",
+      "implementedBy": "src/templates/TDetail.jsx (SEQUENCES.glossary)",
+      "nodes": [
+        {
+          "section": "chrome.nav",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.page-head",
+          "required": true,
+          "repeatable": false,
+          "variant": "badge+h1+lede"
+        },
+        {
+          "section": "content.prose-left",
+          "required": true,
+          "repeatable": false,
+          "variant": "intro"
+        },
+        {
+          "section": "content.rich-text",
+          "required": true,
+          "repeatable": false,
+          "variant": "grouped"
+        },
+        {
+          "section": "content.section-heading",
+          "required": true,
+          "repeatable": true
+        },
+        {
+          "section": "content.leaf-bullets",
+          "required": true,
+          "repeatable": true,
+          "variant": "examples"
+        },
+        {
+          "section": "content.section-heading",
+          "required": true,
+          "repeatable": true
+        },
+        {
+          "section": "content.faq",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.section-heading",
+          "required": true,
+          "repeatable": true
+        },
+        {
+          "section": "listing.link-card-grid",
+          "required": true,
+          "repeatable": true,
+          "variant": "h3-related"
+        },
+        {
+          "section": "content.section-heading",
+          "required": true,
+          "repeatable": true
+        },
+        {
+          "section": "listing.link-card-grid",
+          "required": true,
+          "repeatable": true,
+          "variant": "h3-related"
+        },
+        {
+          "section": "content.section-heading",
+          "required": true,
+          "repeatable": true
+        },
+        {
+          "section": "listing.link-card-grid",
+          "required": true,
+          "repeatable": true,
+          "variant": "h3-related"
+        },
+        {
+          "section": "divider.leaf-band",
+          "required": true,
+          "repeatable": false,
+          "variant": "bg-cream"
+        },
+        {
+          "section": "conversion.reassurance-cta",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.trial-modal",
+          "required": true,
+          "repeatable": false,
+          "note": "Rendered once by Layout on every route, outside the section flow."
+        }
+      ],
+      "fixedHeadings": [
+        "What it looks like",
+        "Questions people ask",
+        "Related terms",
+        "In practice",
+        "Further reading"
+      ],
+      "routeCountNote": "Recomputed from src/data/routes.json.",
+      "evidenceSources": [
+        "CLONE_SPEC_CONTENT_B.md §3.10 (the per-collection block sequence contract)"
+      ],
+      "noBanner": true,
+      "splitRationale": "T-DETAIL was NOT kept as one template. src/templates/TDetail.jsx contains FOUR DIFFERENT fixed block sequences, one per collection, in a `SEQUENCES` object — verified by reading the real composer rather than by trusting the 'one template, 102 routes' grouping. Four distinct node sequences are four distinct page shapes, so they are four templates."
+    },
+    "T-DETAIL-MESSAGES": {
+      "name": "Recognition-messages occasion detail",
+      "pageShape": "badge + h1 + lede, prose, a counted message grid, what-lands bullets, a FAQ, then three card groups",
+      "routeCount": 35,
+      "evidenceLevel": "measured-sampled",
+      "evidenceNote": "2 of the 35 routes were measured: msg_promotion.json (/employee-recognition-messages/promotion, also re-measured at 1440 / 768 / 390) and msg_anniv.json (/employee-recognition-messages/work-anniversary, docH 9096 @1280). The other 33 are INFERRED from the sampled routes' element counts.",
+      "measuredFrom": "src/templates/TDetail.jsx:74-87",
+      "implementedBy": "src/templates/TDetail.jsx (SEQUENCES.messages)",
+      "nodes": [
+        {
+          "section": "chrome.nav",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.page-head",
+          "required": true,
+          "repeatable": false,
+          "variant": "badge+h1+lede"
+        },
+        {
+          "section": "content.rich-text",
+          "required": true,
+          "repeatable": false,
+          "variant": "grouped"
+        },
+        {
+          "section": "content.section-heading",
+          "required": true,
+          "repeatable": true
+        },
+        {
+          "section": "content.message-grid",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.section-heading",
+          "required": true,
+          "repeatable": true
+        },
+        {
+          "section": "content.leaf-bullets",
+          "required": true,
+          "repeatable": true,
+          "variant": "what-lands"
+        },
+        {
+          "section": "content.section-heading",
+          "required": true,
+          "repeatable": true
+        },
+        {
+          "section": "content.faq",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.section-heading",
+          "required": true,
+          "repeatable": true
+        },
+        {
+          "section": "listing.link-card-grid",
+          "required": true,
+          "repeatable": true,
+          "variant": "h3-related"
+        },
+        {
+          "section": "content.section-heading",
+          "required": true,
+          "repeatable": true
+        },
+        {
+          "section": "listing.link-card-grid",
+          "required": true,
+          "repeatable": true,
+          "variant": "h3-related"
+        },
+        {
+          "section": "content.section-heading",
+          "required": true,
+          "repeatable": true
+        },
+        {
+          "section": "listing.link-card-grid",
+          "required": true,
+          "repeatable": true,
+          "variant": "h3-related"
+        },
+        {
+          "section": "divider.leaf-band",
+          "required": true,
+          "repeatable": false,
+          "variant": "bg-cream"
+        },
+        {
+          "section": "conversion.reassurance-cta",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.trial-modal",
+          "required": true,
+          "repeatable": false,
+          "note": "Rendered once by Layout on every route, outside the section flow."
+        }
+      ],
+      "fixedHeadings": [
+        "{N} messages you can send",
+        "What makes one land",
+        "Questions people ask",
+        "The values behind it",
+        "Where it fits",
+        "Other occasions"
+      ],
+      "countedHeadingNote": "'{N} messages you can send' is one of only two COMPUTED headings in the system — N comes from the item's own message count.",
+      "routeCountNote": "Recomputed from src/data/routes.json.",
+      "evidenceSources": [
+        "CLONE_SPEC_CONTENT_B.md §3.10 (the per-collection block sequence contract)"
+      ],
+      "noBanner": true,
+      "splitRationale": "T-DETAIL was NOT kept as one template. src/templates/TDetail.jsx contains FOUR DIFFERENT fixed block sequences, one per collection, in a `SEQUENCES` object — verified by reading the real composer rather than by trusting the 'one template, 102 routes' grouping. Four distinct node sequences are four distinct page shapes, so they are four templates."
+    },
+    "T-DETAIL-VALUES": {
+      "name": "Company-value detail",
+      "pageShape": "badge + h1 + definition, prose, signal list, a counted message grid, an OPTIONAL absence paragraph, recognise-well bullets, a FAQ, then three card groups",
+      "routeCount": 25,
+      "evidenceLevel": "measured-sampled",
+      "evidenceNote": "2 of the 25 routes were measured: values_accountability.json and values_gratitude.json (/company-values/gratitude, docH 8873 @1280). The other 23 are INFERRED from the sampled routes' element counts.",
+      "measuredFrom": "src/templates/TDetail.jsx:88-108",
+      "implementedBy": "src/templates/TDetail.jsx (SEQUENCES.values)",
+      "nodes": [
+        {
+          "section": "chrome.nav",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.page-head",
+          "required": true,
+          "repeatable": false,
+          "variant": "badge+h1+lede"
+        },
+        {
+          "section": "content.rich-text",
+          "required": true,
+          "repeatable": false,
+          "variant": "grouped"
+        },
+        {
+          "section": "content.section-heading",
+          "required": true,
+          "repeatable": true
+        },
+        {
+          "section": "content.leaf-spec-list",
+          "required": true,
+          "repeatable": true,
+          "variant": "signals"
+        },
+        {
+          "section": "content.section-heading",
+          "required": true,
+          "repeatable": true
+        },
+        {
+          "section": "content.message-grid",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.section-heading",
+          "required": false,
+          "repeatable": true,
+          "variant": "absence"
+        },
+        {
+          "section": "content.prose-left",
+          "required": false,
+          "repeatable": true,
+          "variant": "absence"
+        },
+        {
+          "section": "content.section-heading",
+          "required": true,
+          "repeatable": true
+        },
+        {
+          "section": "content.leaf-bullets",
+          "required": true,
+          "repeatable": true,
+          "variant": "recognise-well"
+        },
+        {
+          "section": "content.section-heading",
+          "required": true,
+          "repeatable": true
+        },
+        {
+          "section": "content.faq",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.section-heading",
+          "required": true,
+          "repeatable": true
+        },
+        {
+          "section": "listing.link-card-grid",
+          "required": true,
+          "repeatable": true,
+          "variant": "h3-related"
+        },
+        {
+          "section": "content.section-heading",
+          "required": true,
+          "repeatable": true
+        },
+        {
+          "section": "listing.link-card-grid",
+          "required": true,
+          "repeatable": true,
+          "variant": "h3-related"
+        },
+        {
+          "section": "content.section-heading",
+          "required": true,
+          "repeatable": true
+        },
+        {
+          "section": "listing.link-card-grid",
+          "required": true,
+          "repeatable": true,
+          "variant": "h3-related"
+        },
+        {
+          "section": "divider.leaf-band",
+          "required": true,
+          "repeatable": false,
+          "variant": "bg-cream"
+        },
+        {
+          "section": "conversion.reassurance-cta",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.trial-modal",
+          "required": true,
+          "repeatable": false,
+          "note": "Rendered once by Layout on every route, outside the section flow."
+        }
+      ],
+      "fixedHeadings": [
+        "How you would know",
+        "{N} messages that name it",
+        "What its absence looks like (OPTIONAL)",
+        "Recognising it well",
+        "Questions people ask",
+        "Occasions where it shows up",
+        "Where it fits",
+        "Related values"
+      ],
+      "optionalNodes": "The 'What its absence looks like' heading + paragraph pair is the ONLY optional block in any T-DETAIL sequence; it is present only on instances whose data carries an `absence` field.",
+      "routeCountNote": "Recomputed from src/data/routes.json.",
+      "evidenceSources": [
+        "CLONE_SPEC_CONTENT_B.md §3.10 (the per-collection block sequence contract)"
+      ],
+      "noBanner": true,
+      "splitRationale": "T-DETAIL was NOT kept as one template. src/templates/TDetail.jsx contains FOUR DIFFERENT fixed block sequences, one per collection, in a `SEQUENCES` object — verified by reading the real composer rather than by trusting the 'one template, 102 routes' grouping. Four distinct node sequences are four distinct page shapes, so they are four templates."
+    },
+    "T-DETAIL-FOR": {
+      "name": "Recognition-for-team detail",
+      "pageShape": "badge + h1 + lede, prose, obstacles, what-works bullets, a counted message grid, a programme list, a FAQ, then three card groups",
+      "routeCount": 12,
+      "evidenceLevel": "measured-sampled",
+      "evidenceNote": "2 of the 12 routes were measured: for_healthcare.json and for_startups.json. The other 10 are INFERRED from the sampled routes' element counts.",
+      "measuredFrom": "src/templates/TDetail.jsx:109-123",
+      "implementedBy": "src/templates/TDetail.jsx (SEQUENCES.for)",
+      "nodes": [
+        {
+          "section": "chrome.nav",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.page-head",
+          "required": true,
+          "repeatable": false,
+          "variant": "badge+h1+lede"
+        },
+        {
+          "section": "content.rich-text",
+          "required": true,
+          "repeatable": false,
+          "variant": "grouped"
+        },
+        {
+          "section": "content.section-heading",
+          "required": true,
+          "repeatable": true
+        },
+        {
+          "section": "content.leaf-spec-list",
+          "required": true,
+          "repeatable": true,
+          "variant": "obstacles"
+        },
+        {
+          "section": "content.section-heading",
+          "required": true,
+          "repeatable": true
+        },
+        {
+          "section": "content.leaf-bullets",
+          "required": true,
+          "repeatable": true,
+          "variant": "what-works"
+        },
+        {
+          "section": "content.section-heading",
+          "required": true,
+          "repeatable": true
+        },
+        {
+          "section": "content.message-grid",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.section-heading",
+          "required": true,
+          "repeatable": true
+        },
+        {
+          "section": "content.leaf-spec-list",
+          "required": true,
+          "repeatable": true,
+          "variant": "programme"
+        },
+        {
+          "section": "content.section-heading",
+          "required": true,
+          "repeatable": true
+        },
+        {
+          "section": "content.faq",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.section-heading",
+          "required": true,
+          "repeatable": true
+        },
+        {
+          "section": "listing.link-card-grid",
+          "required": true,
+          "repeatable": true,
+          "variant": "h3-related"
+        },
+        {
+          "section": "content.section-heading",
+          "required": true,
+          "repeatable": true
+        },
+        {
+          "section": "listing.link-card-grid",
+          "required": true,
+          "repeatable": true,
+          "variant": "h3-related"
+        },
+        {
+          "section": "content.section-heading",
+          "required": true,
+          "repeatable": true
+        },
+        {
+          "section": "listing.link-card-grid",
+          "required": true,
+          "repeatable": true,
+          "variant": "h3-related"
+        },
+        {
+          "section": "divider.leaf-band",
+          "required": true,
+          "repeatable": false,
+          "variant": "bg-cream"
+        },
+        {
+          "section": "conversion.reassurance-cta",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.trial-modal",
+          "required": true,
+          "repeatable": false,
+          "note": "Rendered once by Layout on every route, outside the section flow."
+        }
+      ],
+      "fixedHeadings": [
+        "What gets in the way",
+        "What works",
+        "{N} messages written for this team",
+        "A program that fits",
+        "Questions people ask",
+        "Occasions and values that come up most",
+        "Further reading",
+        "Other teams"
+      ],
+      "routeCountNote": "Recomputed from src/data/routes.json.",
+      "evidenceSources": [
+        "CLONE_SPEC_CONTENT_B.md §3.10 (the per-collection block sequence contract)"
+      ],
+      "noBanner": true,
+      "splitRationale": "T-DETAIL was NOT kept as one template. src/templates/TDetail.jsx contains FOUR DIFFERENT fixed block sequences, one per collection, in a `SEQUENCES` object — verified by reading the real composer rather than by trusting the 'one template, 102 routes' grouping. Four distinct node sequences are four distinct page shapes, so they are four templates."
+    },
+    "T-STORY": {
+      "name": "Customer success story",
+      "pageShape": "FOUR separate cream sections — h1 + subtitle, a pull quote beside a hero image, a fact card beside the narrative, two sibling teasers — then the shared CTA",
+      "routeCount": 4,
+      "evidenceLevel": "measured",
+      "evidenceNote": "All four routes were measured: story_wunderdog.json (docH 5855, also re-measured at 1440 / 768 / 390), story_nitro.json (6318), story_kentwhite.json (5784), story_worklete.json (5343).",
+      "evidenceSources": [
+        "CLONE_SPEC_CONTENT_B.md §6.1",
+        "CLONE_SPEC_CONTENT_B.md §6.2",
+        "CLONE_SPEC_CONTENT_B.md §6.3"
+      ],
+      "measuredFrom": "src/pages/CaseStudyPage.jsx:11-23",
+      "implementedBy": "src/pages/CaseStudyPage.jsx",
+      "nodes": [
+        {
+          "section": "chrome.nav",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.page-head",
+          "required": true,
+          "repeatable": false,
+          "variant": "h1+subtitle"
+        },
+        {
+          "section": "story.hero-quote",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "story.meta-prose",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "listing.story-teasers",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "divider.leaf-band",
+          "required": true,
+          "repeatable": false,
+          "variant": "bg-cream"
+        },
+        {
+          "section": "conversion.reassurance-cta",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.trial-modal",
+          "required": true,
+          "repeatable": false,
+          "note": "Rendered once by Layout on every route, outside the section flow."
+        }
+      ],
+      "noBanner": true,
+      "note": "FOUR separate `<section class='relative bg-cream'>` elements, each with its own -mt-[3em] wrapper and NO pb-[5em] — unlike every other content template, which is one section with bottom padding. DO NOT MERGE THEM."
+    },
+    "T-PARTNER": {
+      "name": "Partner landing page",
+      "pageShape": "the homepage hero with a booking card instead of a screenshot, two split-visual feature rows, then the shared CTA with one extra small-print clause",
+      "routeCount": 3,
+      "evidenceLevel": "measured",
+      "evidenceNote": "All three routes were measured: partner_50pros.json (docH 7868), partner_ph.json (7868), partner_ppg.json (7893).",
+      "evidenceSources": [
+        "CLONE_SPEC_CONTENT_B.md §8"
+      ],
+      "measuredFrom": "src/pages/PartnerPage.jsx:15-49",
+      "implementedBy": "src/pages/PartnerPage.jsx",
+      "nodes": [
+        {
+          "section": "chrome.nav",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.partner",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "divider.leaf-band",
+          "required": true,
+          "repeatable": false,
+          "variant": "bg-cream-dark"
+        },
+        {
+          "section": "feature.split-visual",
+          "required": true,
+          "repeatable": true,
+          "variant": "partner-a"
+        },
+        {
+          "section": "divider.leaf-band",
+          "required": true,
+          "repeatable": false,
+          "variant": "bg-cream-dark"
+        },
+        {
+          "section": "feature.split-visual",
+          "required": true,
+          "repeatable": true,
+          "variant": "partner-b"
+        },
+        {
+          "section": "divider.leaf-band",
+          "required": true,
+          "repeatable": false,
+          "variant": "bg-cream"
+        },
+        {
+          "section": "conversion.reassurance-cta",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.trial-modal",
+          "required": true,
+          "repeatable": false,
+          "note": "Rendered once by Layout on every route, outside the section flow."
+        }
+      ],
+      "noBanner": true,
+      "reuseCorrection": "CLONE_SPEC_CONTENT_B §8 calls these two feature rows 'the homepage's sections E and F verbatim'. THE MEASUREMENT DISAGREES: _reference/recon-b/partner_50pros.json blocks 3-5 and 8-10 show a DIFFERENT arrangement of the same assets and copy — a centred display heading block, then a centred copy block, then a two-column `mt-[9.5em] flex items-stretch justify-center` visual row — not the homepage's heading-in-the-right-column layout. sections/feature.seeds and sections/feature.report-csr are NOT reused here; a local FeatureSection in PartnerPage.jsx implements it.",
+      "bandColourEvidenceGap": "EVIDENCE GAP, recorded rather than resolved. The FIRST divider band on this template is bg-cream-dark in the clone, but the section ABOVE it (hero.partner) is bg-cream — which contradicts the otherwise-universal 'band follows the section above' rule. The source's own justifying comment ('they follow a cream-dark section') is wrong about its own first band. The raw recon does NOT capture divider band fill (the divider <section> measures transparent and the band <div> is not in the `sections` tree), so the measurement cannot settle it either way. compatibility/graph.json therefore carries this as a NAMED, warn-severity exception rather than asserting a value."
+    }
+  }
+}

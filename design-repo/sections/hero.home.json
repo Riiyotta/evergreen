@@ -1,0 +1,127 @@
+{
+  "$id": "sections.hero.home",
+  "layer": "sections",
+  "motionFieldSet": [
+    "pattern",
+    "trigger",
+    "durationMs",
+    "easing",
+    "delayMs",
+    "staggerMs",
+    "leafSet",
+    "leafCount",
+    "scrollProgressRange",
+    "reducedMotionFallback",
+    "implementationStatus"
+  ],
+  "motionIsClosed": true,
+  "category": "hero",
+  "purpose": "Convert a cold visitor: the product promise, the trial CTA, the proof stack.",
+  "composes": [
+    "primitives/button.trial-cta",
+    "primitives/pill.avatar-frame",
+    "components/row.stat-pills",
+    "components/card.testimonial",
+    "components/row.logo-strip",
+    "components/block.g2-rating",
+    "components/row.platform-links",
+    "components/block.leaf-layer"
+  ],
+  "content": {
+    "h1": {
+      "maxWords": 12,
+      "copyPolicy": "verbatim-locked",
+      "wrapCritical": true
+    },
+    "lede": {
+      "maxWords": 28,
+      "copyPolicy": "verbatim-locked"
+    },
+    "treesHeading": {
+      "maxWords": 6,
+      "copyPolicy": "verbatim-locked"
+    },
+    "usersHeading": {
+      "maxWords": 5,
+      "copyPolicy": "verbatim-locked"
+    },
+    "displayHeading": {
+      "maxWords": 14,
+      "copyPolicy": "verbatim-locked",
+      "wrapCritical": true
+    },
+    "eyebrow": {
+      "maxWords": 16,
+      "copyPolicy": "verbatim-locked"
+    },
+    "additionalProperties": false
+  },
+  "maxWordsBasis": "word-counted directly from the real strings in src/components/Hero.jsx",
+  "blockCount": 13,
+  "geometry": "section height 3151px @1280; inner pt-[10.2em]; hero screenshot wrapper w-[81.25em]",
+  "constraints": {
+    "onePerPage": true,
+    "mustBeFirst": true,
+    "homeRouteOnly": true,
+    "allowedTemplates": [
+      "T-HOME"
+    ]
+  },
+  "motion": {
+    "pattern": "leaf-scroll-track",
+    "trigger": "scrollSpring",
+    "durationMs": 1500,
+    "easing": "cubic-bezier(0.455, 0.03, 0.515, 0.955)",
+    "delayMs": 0,
+    "staggerMs": 0,
+    "leafSet": "HERO_LEAVES",
+    "leafCount": 12,
+    "scrollProgressRange": {
+      "line1": [
+        0.35,
+        0.45
+      ],
+      "heart1": 0.4,
+      "line2": [
+        0.42,
+        0.52
+      ],
+      "heart2": 0.47,
+      "note": "Leaf per-leaf ranges live in src/lib/leaves.js `track.start`/`track.end`."
+    },
+    "reducedMotionFallback": "recognition lines forced to scaleX(1); hearts forced to opacity 1; leaves held at rotate-only transform",
+    "implementationStatus": "specified-not-yet-animated",
+    "composition": "4 marketing-drift-leaf + 8 marketing-scroll-leaf; plus 2 scaleX line draws and 2 opacity reveals",
+    "spring": {
+      "stiffness": 144,
+      "damping": 24,
+      "mass": 1
+    },
+    "scrollTrackElement": "the hero screenshot wrapper, exposed via a ref and data-scroll-track=\"hero\"",
+    "additionalStaticLeaves": "the 2 testimonial cards each carry 6 STATIC QUOTE_LEAVES \u2014 never animate them"
+  },
+  "responsive": {
+    "max-wf-tablet": "hero frame 80em; avatar pill 2 repositions; testimonial pair wraps",
+    "max-wf-phone": "avatar pill 1 becomes static above the h1, pill 2 is display:none; the whole hero-overlay layer rescales via text-[0.6em] on the track wrapper",
+    "max-wf-mini": "h1 drops to 3.9em; hero frame w-auto; screenshot wrapper 56em",
+    "note": "The overlay lines and hearts MUST stay children of the track wrapper \u2014 max-wf-phone:text-[0.6em] on that div is what rescales the whole layer."
+  },
+  "assetRoles": [
+    "product.screenshot",
+    "person.likeness",
+    "third-party.trademark",
+    "third-party.review-mark",
+    "third-party.platform-logo",
+    "brand.leaf-art"
+  ],
+  "measuredFrom": "src/components/Hero.jsx:10-29",
+  "implementedBy": "src/components/Hero.jsx",
+  "quirk": "The h1 contains two inline <span>s carrying mr-[2.25em] / ml-[2.25em] to clear the avatar pills. Keep them.",
+  "motionClosureScope": "CLOSED for PageSpec emission: a generated node's `motion` object may contain ONLY the fields in motionFieldSet, enforced by schema/pagespec.schema.json (additionalProperties:false) and the MOTION_OBJECT_IS_CLOSED rule. The keys in motionDocumentationFields below are contract-level documentation carried by THIS file for human and retrieval use; they are NOT settable on a PageSpec node.",
+  "motionDocumentationFields": [
+    "additionalStaticLeaves",
+    "composition",
+    "scrollTrackElement",
+    "spring"
+  ]
+}

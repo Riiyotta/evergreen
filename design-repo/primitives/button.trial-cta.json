@@ -1,0 +1,26 @@
+{
+  "$id": "primitives.button.trial-cta",
+  "layer": "primitives",
+  "purpose": "Open the trial modal. The site's single primary action.",
+  "tokens": {
+    "surface": "surface.inverse",
+    "text": "text.onInverse",
+    "radius": "radius.pillPrimary"
+  },
+  "geometry": "px-[2.2em] py-[1.2em]; label 1.875em / 1.54 / 600",
+  "states": {
+    "hover": null,
+    "active": null,
+    "focus": null,
+    "disabled": null,
+    "transition": null,
+    "boxShadow": "none",
+    "note": "No interactive state exists. A generator must not add one."
+  },
+  "measuredFrom": "src/components/TrialButton.jsx:8-20",
+  "label": {
+    "value": "Start 14 Day Trial",
+    "copyPolicy": "verbatim-locked",
+    "maxWords": 4
+  }
+}

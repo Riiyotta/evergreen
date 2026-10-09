@@ -1,0 +1,33 @@
+{
+  "$id": "components.card.blog-row",
+  "layer": "components",
+  "purpose": "One row of the /blog listing: image left, copy right.",
+  "tokens": {
+    "surface": "surface.card",
+    "border": "border.default",
+    "radius": "radius.card"
+  },
+  "geometry": "wrapper w-[95.2213em] (1015.69px), margin 53.3333px 0 101.3333px; card 1015.69x430.66 overflow-hidden; image column h-[40em] w-1/2 flex-1 -> 505.84x426.66 with a 2px right border; copy column w-1/2 p-[4em]",
+  "constantPitch": 531.98,
+  "content": {
+    "title": {
+      "maxWords": 13,
+      "copyPolicy": "verbatim-locked"
+    },
+    "excerpt": {
+      "maxWords": 25,
+      "copyPolicy": "measured-budget",
+      "lineBudget": "2-3 lines"
+    }
+  },
+  "maxWordsBasis": "recomputed over all 53 real blogPosts entries",
+  "excerptCorrection": "CLONE_SPEC_CONTENT_A §1.5 records card excerpts as '2–4 lines'. FOUR LINES BREAKS THE CONSTANT CARD HEIGHT: it pushes the copy past the 426.66px image column. Real excerpts are 2–3 lines and the pitch is a constant 531.98px.",
+  "states": "No hover, no active, no focus, no transition, no box-shadow. Measured transform:none and cursor:auto.",
+  "measuredFrom": "src/components/BlogCard.jsx:1-70",
+  "assetRole": "editorial.hero-image",
+  "negatives": [
+    "ONLY 'Keep reading' is a link — the image and the h2 are NOT wrapped in an anchor; do not make the whole card clickable",
+    "`--blog-card-tablet-width` is referenced by the original but never defined in its own stylesheet, so the <=991px card is plain w-full"
+  ],
+  "leaves": "3 CARD_LEAVES per row (159 across the 53 rows), initial state only"
+}

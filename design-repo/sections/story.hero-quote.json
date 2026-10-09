@@ -1,0 +1,71 @@
+{
+  "$id": "sections.story.hero-quote",
+  "layer": "sections",
+  "motionFieldSet": [
+    "pattern",
+    "trigger",
+    "durationMs",
+    "easing",
+    "delayMs",
+    "staggerMs",
+    "leafSet",
+    "leafCount",
+    "scrollProgressRange",
+    "reducedMotionFallback",
+    "implementationStatus"
+  ],
+  "motionIsClosed": true,
+  "category": "story",
+  "purpose": "A case study's pull quote with the speaker's portrait, beside the story's hero image.",
+  "composes": [
+    "primitives/avatar.circle"
+  ],
+  "content": {
+    "quote": {
+      "maxWords": 35,
+      "copyPolicy": "measured-budget"
+    },
+    "authorName": {
+      "maxWords": 3,
+      "copyPolicy": "verbatim-locked"
+    },
+    "authorRole": {
+      "maxWords": 4,
+      "copyPolicy": "verbatim-locked"
+    },
+    "additionalProperties": false
+  },
+  "maxWordsBasis": "recomputed over the four real CASE_STUDIES entries",
+  "geometry": "its own `relative bg-cream` section, y 340.08 h 438.64 @1280; quote column mx-auto w-[44em]; image column w-[60%]; row gap-[4em] justify-between",
+  "constraints": {
+    "onePerPage": true,
+    "allowedTemplates": [
+      "T-STORY"
+    ]
+  },
+  "motion": {
+    "pattern": "none",
+    "trigger": "none",
+    "delayMs": 0,
+    "staggerMs": 0,
+    "reducedMotionFallback": "none-required-static",
+    "implementationStatus": "static-by-design",
+    "note": "Nothing in this section animates."
+  },
+  "responsive": {
+    "max-wf-tablet": "flex-col, centred, gap-0; image column w-full with mt-[4em]",
+    "max-wf-mini": "quote column w-auto"
+  },
+  "assetRoles": [
+    "person.likeness",
+    "editorial.hero-image"
+  ],
+  "quirk": "The portrait's inner <img> is the ONLY `object-fit: cover` image in content set B. The name and role are TWO SEPARATE bold <p>, not one with a <br>.",
+  "complianceNote": "A real named person's photograph and a real attributed quote. Never fabricate either.",
+  "measuredFrom": "src/pages/CaseStudyPage.jsx:53-89",
+  "implementedBy": "src/pages/CaseStudyPage.jsx",
+  "motionClosureScope": "CLOSED for PageSpec emission: a generated node's `motion` object may contain ONLY the fields in motionFieldSet, enforced by schema/pagespec.schema.json (additionalProperties:false) and the MOTION_OBJECT_IS_CLOSED rule. The keys in motionDocumentationFields below are contract-level documentation carried by THIS file for human and retrieval use; they are NOT settable on a PageSpec node.",
+  "motionDocumentationFields": [
+    "note"
+  ]
+}

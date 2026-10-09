@@ -1,0 +1,37 @@
+{
+  "$id": "components.panel.arketta-cta",
+  "layer": "components",
+  "purpose": "The black cross-promo panel on every blog article.",
+  "tokens": {
+    "surface": "surface.inverse",
+    "text": "text.onInverse",
+    "radiusPanel": "arketta.radius.panel",
+    "radiusButton": "arketta.radius.button"
+  },
+  "geometry": "panel 1152.03x557.58, min-height 400px",
+  "content": {
+    "heading": {
+      "maxWords": 10,
+      "copyPolicy": "measured-budget"
+    },
+    "body": {
+      "lineBudget": 7,
+      "copyPolicy": "measured-budget"
+    },
+    "ctaLabel": {
+      "maxWords": 3,
+      "copyPolicy": "measured-budget"
+    }
+  },
+  "bodyLineCorrection": "CLONE_SPEC_CONTENT_A §5.2 describes 'six <br>-separated lines' but MEASURES the body div at 201.58px, which is exactly SEVEN 28.8px lines. The panel total (557.58 = 200 padding + 64 h2 + 15 gap + 201.58 body + 15 gap + 20 button margin + 42 button) only closes with SEVEN. Seven line boxes it is: three short groups of 2 / 2 / 1 lines with a blank line between them, which is how the reference capture reads.",
+  "deliberateSystemBreaks": [
+    "padding is FIXED PX (px-[140px] py-[100px]; 40px 20px at <=479px) — the only place in the system that is not em",
+    "radius is 8px on the panel and 4px on the button — the only 8px and 4px radii anywhere",
+    "gap-[15px] and mt-[20px] are fixed px too"
+  ],
+  "deliberateBreakRule": "CLONE_SPEC_CONTENT_A §5.2 flags all three. Reproduce them. DO NOT NORMALISE.",
+  "states": "No hover, no active, no focus, no transition, no box-shadow.",
+  "measuredFrom": "src/components/ArkettaCtaPanel.jsx:1-30",
+  "externalLink": "The real href is an off-domain arketta.app URL with target=_blank, so the anchor renders with NO href.",
+  "copyPolicy": "The body lines are PLACEHOLDER of the recorded length (~55 words). CONTENT_A never transcribed them."
+}

@@ -1,0 +1,56 @@
+{
+  "$id": "sections.listing.story-teasers",
+  "layer": "sections",
+  "motionFieldSet": [
+    "pattern",
+    "trigger",
+    "durationMs",
+    "easing",
+    "delayMs",
+    "staggerMs",
+    "leafSet",
+    "leafCount",
+    "scrollProgressRange",
+    "reducedMotionFallback",
+    "implementationStatus"
+  ],
+  "motionIsClosed": true,
+  "category": "listing",
+  "purpose": "Exactly two sibling case-study teasers at the foot of T-STORY.",
+  "composes": [
+    "components/card.case-study-teaser"
+  ],
+  "content": {
+    "cards": {
+      "count": 2
+    },
+    "additionalProperties": false
+  },
+  "geometry": "section y 3570.52 h 637.22 @1280; its own `relative bg-cream pt-[3em]` section; inner mt-[7em] mb-[-10em] w-[87em]",
+  "constraints": {
+    "onePerPage": true,
+    "allowedTemplates": [
+      "T-STORY"
+    ]
+  },
+  "motion": {
+    "pattern": "leaf-drift",
+    "trigger": "whileInView",
+    "durationMs": 1300,
+    "easing": "cubic-bezier(0.455, 0.03, 0.515, 0.955)",
+    "delayMs": 0,
+    "staggerMs": 0,
+    "leafSet": "CARD_LEAVES",
+    "leafCount": 6,
+    "reducedMotionFallback": "leaves-held-at-rotate-only-transform",
+    "implementationStatus": "specified-not-yet-animated"
+  },
+  "responsive": {
+    "max-wf-tablet": "flex-col, items centred"
+  },
+  "assetRole": "third-party.trademark",
+  "quirk": "`mb-[-10em]` pulls the divider band up under the cards.",
+  "measuredFrom": "src/pages/CaseStudyPage.jsx:107-123",
+  "implementedBy": "src/pages/CaseStudyPage.jsx",
+  "motionClosureScope": "CLOSED for PageSpec emission: a generated node's `motion` object may contain ONLY the fields in motionFieldSet, enforced by schema/pagespec.schema.json (additionalProperties:false) and the MOTION_OBJECT_IS_CLOSED rule. The keys in motionDocumentationFields below are contract-level documentation carried by THIS file for human and retrieval use; they are NOT settable on a PageSpec node."
+}

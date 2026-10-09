@@ -1,0 +1,25 @@
+{
+  "$id": "primitives.panel.form-error",
+  "layer": "primitives",
+  "purpose": "Error panel. The form STAYS MOUNTED (values preserved) and this is appended after it.",
+  "tokens": {
+    "border": "border.formError",
+    "radius": "radius.card"
+  },
+  "geometry": "mt-[1.4em] (root-relative here = 14.93px), p-[10px], role=alert",
+  "states": {
+    "hover": null,
+    "active": null,
+    "focus": null,
+    "disabled": null,
+    "transition": null,
+    "boxShadow": "none",
+    "note": "No interactive state exists. A generator must not add one."
+  },
+  "measuredFrom": "src/components/form/FormError.jsx:1-11",
+  "copy": {
+    "copyPolicy": "UNKNOWN — NOT MEASURED",
+    "evidenceGap": "The real error string is server-supplied (`res.reason` from a Next.js server action) and appears in NO client bundle, so it could not be measured. The string shipped in the clone ('Something went wrong. Please try again.') is a NEUTRAL STAND-IN of similar length, explicitly marked as such in-code. It is NOT the original's copy and must not be treated as verbatim. No maxWords budget is asserted for it."
+  },
+  "borderNote": "1px — the only 1px stroke in the system. Intentional. Do not normalise to 2px."
+}

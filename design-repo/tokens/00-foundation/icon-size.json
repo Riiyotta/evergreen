@@ -1,0 +1,62 @@
+{
+  "$id": "tokens.foundation.icon-size",
+  "layer": "00-foundation",
+  "sizes": {
+    "leaf-inline": {
+      "value": "1.26708em",
+      "usedBy": "seed line, bullet rows",
+      "measuredFrom": "src/components/SeedsSection.jsx:75"
+    },
+    "leaf-badge": {
+      "value": "0.9em",
+      "usedBy": "BadgeLink pill leaf",
+      "measuredFrom": "src/components/BadgeLink.jsx:23"
+    },
+    "leaf-art-regular": {
+      "value": "7.10621em x 12.308em",
+      "intrinsic": "116x199",
+      "measuredFrom": "src/lib/leaves.js:8"
+    },
+    "leaf-art-small": {
+      "value": "8.34021em x 14.7087em",
+      "intrinsic": "86x150",
+      "measuredFrom": "src/lib/leaves.js:9"
+    },
+    "leaf-art-spike": {
+      "value": "1.20175em x 7.32222em",
+      "intrinsic": "viewBox-only",
+      "measuredFrom": "src/lib/leaves.js:10"
+    },
+    "feature-icon": {
+      "value": "h-[3.24544em]",
+      "usedBy": "CtaSection reassurance trio, SDG goal columns",
+      "measuredFrom": "src/components/CtaSection.jsx:82"
+    },
+    "platform-logo": {
+      "value": "w-[3.47539em]",
+      "usedBy": "Slack / Teams / Mattermost rows",
+      "measuredFrom": "src/components/CtaSection.jsx:140"
+    },
+    "g2-logo": {
+      "value": "w-[6.03104em]",
+      "measuredFrom": "src/components/G2Block.jsx:14"
+    },
+    "g2-star": {
+      "value": "w-[3.03685em]",
+      "measuredFrom": "src/components/G2Block.jsx:25"
+    },
+    "tick": {
+      "value": "w-[2em]",
+      "measuredFrom": "src/components/TickBadge.jsx:12-17",
+      "knownArtefact": "The tick SVG is 209x150 intrinsic rendered at w-[2em] with the default object-fit: fill, so it paints 21.33 x 26.67 — DELIBERATELY squashed to a 0.8 aspect. Never add object-contain."
+    },
+    "hero-heart": {
+      "value": "h-[2.31476em] w-[2.64134em]",
+      "measuredFrom": "src/components/Hero.jsx:206"
+    },
+    "social-chip": {
+      "value": "size-[4em]",
+      "measuredFrom": "src/components/Footer.jsx:154"
+    }
+  }
+}

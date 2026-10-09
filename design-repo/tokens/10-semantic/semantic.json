@@ -1,0 +1,98 @@
+{
+  "$id": "tokens.semantic",
+  "layer": "10-semantic",
+  "resolutionOrder": [
+    "00-foundation",
+    "themes/<mode>",
+    "10-semantic",
+    "20-component",
+    "permitted local overrides (see tokens/llm/token-policy.json)",
+    "responsive overrides (max-wf-* only)"
+  ],
+  "tokens": {
+    "surface.page": {
+      "ref": "color.cream"
+    },
+    "surface.alt": {
+      "ref": "color.cream-dark"
+    },
+    "surface.accent": {
+      "ref": "color.leaf"
+    },
+    "surface.card": {
+      "ref": "color.white"
+    },
+    "surface.inverse": {
+      "ref": "color.black"
+    },
+    "surface.overlay": {
+      "ref": "color.white"
+    },
+    "surface.quote": {
+      "ref": "color.quote-leaf"
+    },
+    "text.primary": {
+      "ref": "color.text-strong"
+    },
+    "text.body": {
+      "ref": "color.text-body"
+    },
+    "text.onInverse": {
+      "ref": "color.white"
+    },
+    "text.outsideRoot": {
+      "ref": "color.text-default"
+    },
+    "border.default": {
+      "ref": "color.black",
+      "width": {
+        "ref": "border.widths.default"
+      }
+    },
+    "border.formControl": {
+      "ref": "color.black",
+      "width": {
+        "ref": "border.widths.form-control"
+      }
+    },
+    "border.formError": {
+      "ref": "color.black",
+      "width": {
+        "ref": "border.widths.form-error"
+      }
+    },
+    "radius.card": {
+      "ref": "radius.card"
+    },
+    "radius.control": {
+      "ref": "radius.input"
+    },
+    "radius.pillPrimary": {
+      "ref": "radius.pill-cta"
+    },
+    "radius.pillSecondary": {
+      "ref": "radius.pill-nav"
+    },
+    "radius.pillStat": {
+      "ref": "radius.pill-stat"
+    },
+    "radius.pillFull": {
+      "ref": "radius.full"
+    },
+    "motion.drift": {
+      "ref": "motion.easings.drift"
+    },
+    "motion.overlayClose": {
+      "ref": "motion.easings.overlay-close"
+    },
+    "motion.ui": {
+      "ref": "motion.easings.ui-default"
+    }
+  },
+  "deliberatelyAbsent": [
+    "surface.elevated (no shadows exist)",
+    "state.hover.* beyond the three enumerated utilities",
+    "state.focus.* (none exist)",
+    "colour.danger / success / warning (none exist; FormDone reuses surface.accent)"
+  ]
+}

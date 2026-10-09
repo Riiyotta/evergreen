@@ -1,0 +1,29 @@
+{
+  "$id": "primitives.panel.form-done",
+  "layer": "primitives",
+  "purpose": "Success panel. On success the whole <form> is UNMOUNTED and replaced by this.",
+  "tokens": {
+    "surface": "surface.accent",
+    "border": "border.default",
+    "radius": "radius.card"
+  },
+  "geometry": "p-[20px] (literal px), text-center, role=status",
+  "states": {
+    "hover": null,
+    "active": null,
+    "focus": null,
+    "disabled": null,
+    "transition": null,
+    "boxShadow": "none",
+    "note": "No interactive state exists. A generator must not add one."
+  },
+  "measuredFrom": "src/components/form/FormDone.jsx:1-13",
+  "copy": {
+    "copyPolicy": "verbatim-locked",
+    "allowed": [
+      "Thank you! We’ll be in touch",
+      "Thank you!"
+    ],
+    "maxWords": 6
+  }
+}

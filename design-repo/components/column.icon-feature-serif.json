@@ -1,0 +1,26 @@
+{
+  "$id": "components.column.icon-feature-serif",
+  "layer": "components",
+  "purpose": "Icon + serif sub-heading + body paragraph, in a 3-up row.",
+  "geometry": "w-[30%] (345.61px @1280); serif sub-heading 3.125em / 1.29 / 600 with max-w-[11ch]",
+  "content": {
+    "heading": {
+      "maxWords": 5,
+      "copyPolicy": "verbatim-locked"
+    },
+    "body": {
+      "maxWords": 21,
+      "copyPolicy": "verbatim-locked"
+    }
+  },
+  "maxWordsBasis": "counted from the real FEATURE_COLUMNS (/pricing) and GOALS_2027 (/our-purpose) arrays",
+  "states": "No hover, no active, no focus, no transition, no box-shadow.",
+  "measuredFrom": "src/components/IconFeatureColumn.jsx:1-24",
+  "assetRole": "brand.icon",
+  "chRule": "`max-w-[11ch]` MUST stay in `ch` — it is measured in the substitute serif's ch, so frame and text scale together.",
+  "sharedBy": [
+    "sections/pricing.single-plan",
+    "sections/proof.goals-band"
+  ],
+  "verifiedShared": "The class strings were verified identical before folding, so this is one component, not two copies."
+}

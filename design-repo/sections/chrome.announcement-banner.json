@@ -1,0 +1,68 @@
+{
+  "$id": "sections.chrome.announcement-banner",
+  "layer": "sections",
+  "motionFieldSet": [
+    "pattern",
+    "trigger",
+    "durationMs",
+    "easing",
+    "delayMs",
+    "staggerMs",
+    "leafSet",
+    "leafCount",
+    "scrollProgressRange",
+    "reducedMotionFallback",
+    "implementationStatus"
+  ],
+  "motionIsClosed": true,
+  "category": "chrome",
+  "purpose": "Carry one cross-promotional message above the nav, on the two routes that have it.",
+  "content": {
+    "message": {
+      "maxWords": 10,
+      "copyPolicy": "verbatim-locked",
+      "value": "Tired of managing too many workplace apps? See our solution."
+    },
+    "linkLabel": {
+      "maxWords": 3,
+      "copyPolicy": "verbatim-locked",
+      "value": "See our solution."
+    },
+    "additionalProperties": false
+  },
+  "geometry": "52px tall @1280; bg black; py-[10px] (literal px); copy 1.75em/1.7 white; text block max-w-[49ch] centred; max-w-[19.05em] at <=479px",
+  "constraints": {
+    "onePerPage": true,
+    "mustBeFirst": true,
+    "allowedTemplates": [
+      "T-HOME",
+      "T-ARTICLE"
+    ],
+    "RULE": "PER-ROUTE, NOT GLOBAL. It renders on `/` (exact) and on `/blog/:slug` (prefix). On every other route the nav starts at y=0 and all offsets sit 51.74px higher."
+  },
+  "motion": {
+    "pattern": "none",
+    "trigger": "none",
+    "delayMs": 0,
+    "staggerMs": 0,
+    "reducedMotionFallback": "none-required-static",
+    "implementationStatus": "static-by-design",
+    "note": "Nothing in this section animates."
+  },
+  "responsive": {
+    "max-wf-mini": "text block max-width drops to 19.05em"
+  },
+  "externalLinks": "The link is off-domain and renders with NO href.",
+  "measuredFrom": "src/components/AnnouncementBanner.jsx:1-21",
+  "implementedBy": "src/components/AnnouncementBanner.jsx",
+  "renderedBy": "src/layout/Layout.jsx (once, globally gated by BANNER_ROUTES + BANNER_PREFIXES)",
+  "negatives": [
+    "no dismiss control",
+    "no cookie",
+    "no hover change on the link"
+  ],
+  "motionClosureScope": "CLOSED for PageSpec emission: a generated node's `motion` object may contain ONLY the fields in motionFieldSet, enforced by schema/pagespec.schema.json (additionalProperties:false) and the MOTION_OBJECT_IS_CLOSED rule. The keys in motionDocumentationFields below are contract-level documentation carried by THIS file for human and retrieval use; they are NOT settable on a PageSpec node.",
+  "motionDocumentationFields": [
+    "note"
+  ]
+}

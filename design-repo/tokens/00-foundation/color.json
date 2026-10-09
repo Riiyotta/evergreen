@@ -1,0 +1,116 @@
+{
+  "$id": "tokens.foundation.color",
+  "layer": "00-foundation",
+  "description": "Every colour literal that renders anywhere in the clone. Derived by enumerating the real values, not by sampling a palette: the site-wide set is tailwind.config.js's `colors` block, and the only additional literals are the five scheduler-widget samples and the one form placeholder grey, both listed separately below.",
+  "rules": [
+    "ZERO gradients and ZERO box-shadows exist site-wide. Verified by grepping every .jsx/.js/.css under src/ for `gradient|shadow`: the only matches are comments asserting their absence.",
+    "Never introduce a colour that is not in this file."
+  ],
+  "siteWide": {
+    "cream": {
+      "value": "#fffff3",
+      "role": "page surface, light sections, testimonial card fill",
+      "measuredFrom": "tailwind.config.js:28"
+    },
+    "cream-dark": {
+      "value": "#edede2",
+      "role": "alternating section surface, footer social chips",
+      "measuredFrom": "tailwind.config.js:29"
+    },
+    "leaf": {
+      "value": "#beedc0",
+      "role": "pill / badge / avatar-frame fill",
+      "measuredFrom": "tailwind.config.js:30"
+    },
+    "black": {
+      "value": "#000000",
+      "role": "all borders, all rules, button fill, every heading",
+      "measuredFrom": "tailwind.config.js:31"
+    },
+    "white": {
+      "value": "#ffffff",
+      "role": "on-black text; overlay panels (mobile menu, trial modal); and as a real CONTENT surface on LinkCard, MessageCard, BlogCard, CaseStudyCard, FormCard and PriceCard",
+      "measuredFrom": "tailwind.config.js:32",
+      "note": "CLONE_SPEC's homepage rule 'white is overlay-only' holds for the homepage only. CORE_A §0/§8.2 and CONTENT_B §5.1 both record white as a content surface off the homepage."
+    },
+    "text-body": {
+      "value": "#333333",
+      "role": ".marketing-root inherited colour; <label>; <time> on blog articles",
+      "measuredFrom": "tailwind.config.js:35"
+    },
+    "text-strong": {
+      "value": "#000000",
+      "role": "every h1-h4 and every <p> inside .marketing-root; nav links",
+      "measuredFrom": "tailwind.config.js:36"
+    },
+    "text-default": {
+      "value": "#474747",
+      "role": "body element colour, visible only outside .marketing-root",
+      "measuredFrom": "tailwind.config.js:37"
+    },
+    "text-muted": {
+      "value": "#505363",
+      "role": "declared in the original's theme; UNUSED in the clone",
+      "measuredFrom": "tailwind.config.js:38",
+      "usage": "declared-unused"
+    },
+    "primary-green": {
+      "value": "#02a57e",
+      "role": "declared in the original's theme; UNUSED in the clone",
+      "measuredFrom": "tailwind.config.js:41",
+      "usage": "declared-unused"
+    },
+    "cool-1": {
+      "value": "#f8f3f0",
+      "role": "declared in the original's theme; UNUSED in the clone",
+      "measuredFrom": "tailwind.config.js:42",
+      "usage": "declared-unused"
+    },
+    "cool-2": {
+      "value": "#fde6da",
+      "role": "declared in the original's theme; UNUSED in the clone",
+      "measuredFrom": "tailwind.config.js:43",
+      "usage": "declared-unused"
+    },
+    "quote-leaf": {
+      "value": "#c3f2c5",
+      "role": ".marketing-rich-text blockquote fill (T-STORY only)",
+      "measuredFrom": "src/index.css:390-396",
+      "usage": "in-use-off-homepage"
+    }
+  },
+  "scopedExceptions": {
+    "description": "Literals that exist in exactly one component each. They are real measured values, but they are NOT site tokens and must never be promoted into the palette above or applied to another component.",
+    "form.placeholder-grey": {
+      "value": "#999999",
+      "scope": "LabelledField only (/contact, /referral)",
+      "measuredFrom": "src/components/form/LabelledField.jsx:15-21",
+      "note": "The footer newsletter input uses `placeholder:text-black/60` instead. Two different placeholder treatments, both measured."
+    },
+    "scheduler.text": {
+      "value": "#0b2f04",
+      "scope": "SchedulerPlaceholder only",
+      "measuredFrom": "src/components/SchedulerPlaceholder.jsx:21",
+      "provenance": "the original Calendly embed URL's `text_color` param"
+    },
+    "scheduler.accent": {
+      "value": "#34b11e",
+      "scope": "SchedulerPlaceholder only",
+      "measuredFrom": "src/components/SchedulerPlaceholder.jsx:22",
+      "provenance": "the original Calendly embed URL's `primary_color` param"
+    },
+    "scheduler.circle": {
+      "value": "#eff8ee",
+      "scope": "SchedulerPlaceholder only",
+      "measuredFrom": "src/components/SchedulerPlaceholder.jsx:23-27",
+      "provenance": "sampled from the reference capture",
+      "correction": "CLONE_SPEC_CORE_B §D-3 states #e8f7e4 for this circle and #1a7a1a for the month label. The capture reads #eff8ee and the same #0b2f04 as the heading. The spec values are wrong; the sampled ones are used."
+    },
+    "scheduler.grey": {
+      "value": "#4d4d4d",
+      "scope": "SchedulerPlaceholder only (weekday header, unavailable numerals)",
+      "measuredFrom": "src/components/SchedulerPlaceholder.jsx:25-28",
+      "provenance": "sampled neutral, no green cast"
+    }
+  }
+}

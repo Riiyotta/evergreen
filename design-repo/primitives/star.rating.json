@@ -1,0 +1,17 @@
+{
+  "$id": "primitives.star.rating",
+  "layer": "primitives",
+  "purpose": "One of exactly five G2 review stars.",
+  "geometry": "w-[3.03685em] mx-[1.14204em]; count is fixed at 5",
+  "states": {
+    "hover": null,
+    "active": null,
+    "focus": null,
+    "disabled": null,
+    "transition": null,
+    "boxShadow": "none",
+    "note": "No interactive state exists. A generator must not add one."
+  },
+  "measuredFrom": "src/components/G2Block.jsx:17-27",
+  "assetRole": "third-party.review-mark"
+}

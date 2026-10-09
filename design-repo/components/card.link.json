@@ -1,0 +1,43 @@
+{
+  "$id": "components.card.link",
+  "layer": "components",
+  "purpose": "The universal listing / related card. Links to one internal page.",
+  "composes": [
+    "primitives/link.inline"
+  ],
+  "tokens": {
+    "surface": "surface.card",
+    "border": "border.default",
+    "radius": "radius.card"
+  },
+  "geometry": "w-[42em] (447.98px @1280), p-[2.4em] (25.6px), z-[100]",
+  "typeRoles": [
+    "card.title",
+    "card.description",
+    "card.cta"
+  ],
+  "headingLevel": {
+    "h2": "top-level listing (the four collection indexes, /alternatives index)",
+    "h3": "any 'related / further reading' group, T-PILLAR card group, T-COMPARISON group"
+  },
+  "content": {
+    "title": {
+      "maxWords": 9,
+      "copyPolicy": "verbatim-locked"
+    },
+    "description": {
+      "maxWords": 44,
+      "copyPolicy": "measured-budget",
+      "required": false
+    },
+    "ctaLabel": {
+      "maxWords": 4,
+      "copyPolicy": "verbatim-locked"
+    }
+  },
+  "maxWordsBasis": "recomputed from the real data modules by iterating every INDEX_PAGES item and crossSell entry",
+  "ctaLabelRule": "ctaLabel is a template constant keyed off the LINK TARGET, not per-item data.",
+  "states": "No hover, no active, no focus, no transition, no box-shadow. The only affordance is the cursor.",
+  "measuredFrom": "src/components/LinkCard.jsx:16-61",
+  "leaves": "none"
+}

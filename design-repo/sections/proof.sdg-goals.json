@@ -1,0 +1,71 @@
+{
+  "$id": "sections.proof.sdg-goals",
+  "layer": "sections",
+  "motionFieldSet": [
+    "pattern",
+    "trigger",
+    "durationMs",
+    "easing",
+    "delayMs",
+    "staggerMs",
+    "leafSet",
+    "leafCount",
+    "scrollProgressRange",
+    "reducedMotionFallback",
+    "implementationStatus"
+  ],
+  "motionIsClosed": true,
+  "category": "proof",
+  "purpose": "Map the product onto four named UN Sustainable Development Goals.",
+  "composes": [
+    "components/column.sdg-goal"
+  ],
+  "content": {
+    "heading": {
+      "maxWords": 12,
+      "copyPolicy": "verbatim-locked",
+      "wrapCritical": true
+    },
+    "intro": {
+      "maxWords": 43,
+      "copyPolicy": "verbatim-locked"
+    },
+    "goals": {
+      "count": 4,
+      "copyPolicy": "verbatim-locked"
+    },
+    "additionalProperties": false
+  },
+  "maxWordsBasis": "word-counted from the real GOALS array and intro paragraph in SdgSection.jsx",
+  "geometry": "section height 1087.30 @1280; pt-[18em], NO bottom padding; heading frame w-[70.3em]; 4-up row mt-[5.5em] justify-between",
+  "constraints": {
+    "onePerPage": true,
+    "allowedTemplates": [
+      "T-ESG",
+      "T-PURPOSE"
+    ]
+  },
+  "motion": {
+    "pattern": "none",
+    "trigger": "none",
+    "delayMs": 0,
+    "staggerMs": 0,
+    "reducedMotionFallback": "none-required-static",
+    "implementationStatus": "static-by-design",
+    "note": "No leaves in this section \u2014 the dividers above and below own the leaf layers."
+  },
+  "responsive": {
+    "max-wf-phone": "columns become flex-col at w-[80%] with mb-[5em]",
+    "max-wf-mini": "columns w-[90%]"
+  },
+  "assetRole": "brand.icon",
+  "wrapWarning": "WRAP-CRITICAL: 3 lines, longest 742.19 of 749.86px \u2014 7.67px / 1.0% headroom, the tightest display h2 on the site. Changing the display serif reflows it and shifts every downstream y-offset on both routes.",
+  "sharedVerbatim": "CLONE_SPEC_CORE_A DOM-diffed /esg and /our-purpose and found these subtrees byte-identical, so one component renders its own <section> + wrapper for both.",
+  "externalLinks": "The 'See all UN goals' anchor is off-domain and renders with NO href.",
+  "measuredFrom": "src/components/SdgSection.jsx:56-112",
+  "implementedBy": "src/components/SdgSection.jsx",
+  "motionClosureScope": "CLOSED for PageSpec emission: a generated node's `motion` object may contain ONLY the fields in motionFieldSet, enforced by schema/pagespec.schema.json (additionalProperties:false) and the MOTION_OBJECT_IS_CLOSED rule. The keys in motionDocumentationFields below are contract-level documentation carried by THIS file for human and retrieval use; they are NOT settable on a PageSpec node.",
+  "motionDocumentationFields": [
+    "note"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "$id": "components.block.prose-left",
+  "layer": "components",
+  "purpose": "A bare left-aligned paragraph column, deliberately NOT the rich-text container.",
+  "geometry": "mx-auto w-[70.3em] text-left",
+  "whyNotRichText": "Its <p> has margin 0, so it does NOT get .marketing-rich-text's 1.6em bottom margin.",
+  "content": {
+    "paragraph": {
+      "maxWords": 62,
+      "copyPolicy": "measured-budget"
+    }
+  },
+  "maxWordsBasis": "longest real `verdict` across the 15 comparison routes, recomputed from data",
+  "states": "No hover, no active, no focus, no transition, no box-shadow.",
+  "measuredFrom": "src/templates/blocks.jsx:52-64"
+}

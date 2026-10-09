@@ -1,0 +1,17 @@
+{
+  "$id": "components.row.logo-strip",
+  "layer": "components",
+  "purpose": "The six-logo customer strip.",
+  "geometry": "mt-[7.7em] justify-between pl-[3em]; per-logo widths are INLINE em style attributes, not classes",
+  "count": {
+    "exact": 6
+  },
+  "states": "No hover, no active, no focus, no transition, no box-shadow. No greyscale, no opacity change, no marquee.",
+  "measuredFrom": "src/components/LogoStrip.jsx:8-26",
+  "assetRole": "third-party.trademark",
+  "slotVariants": {
+    "home / partner": "slot 5 is CoverWallet",
+    "pricing / referral": "slot 5 is Fraktio",
+    "note": "That is the ONLY difference between the two real strips."
+  }
+}

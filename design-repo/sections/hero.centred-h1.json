@@ -1,0 +1,74 @@
+{
+  "$id": "sections.hero.centred-h1",
+  "layer": "sections",
+  "motionFieldSet": [
+    "pattern",
+    "trigger",
+    "durationMs",
+    "easing",
+    "delayMs",
+    "staggerMs",
+    "leafSet",
+    "leafCount",
+    "scrollProgressRange",
+    "reducedMotionFallback",
+    "implementationStatus"
+  ],
+  "motionIsClosed": true,
+  "category": "hero",
+  "purpose": "A bare centred h1 head, with the page's intro paragraph as a separate following block.",
+  "composes": [
+    "components/block.hero-heading"
+  ],
+  "content": {
+    "h1": {
+      "maxWords": 7,
+      "copyPolicy": "verbatim-locked"
+    },
+    "intro": {
+      "maxWords": 38,
+      "copyPolicy": "verbatim-locked"
+    },
+    "additionalProperties": false
+  },
+  "maxWordsBasis": "word-counted from the four real headings and the four real intro paragraphs",
+  "geometry": "block y 45, h 206.13; h1 one line on all four routes; intro max-w-[59ch] or max-w-[60ch]",
+  "constraints": {
+    "onePerPage": true,
+    "mustBeFirst": true,
+    "allowedTemplates": [
+      "T-CASE-STUDY-INDEX",
+      "T-CONTACT",
+      "T-SCHEDULER",
+      "T-REFERRAL"
+    ]
+  },
+  "motion": {
+    "pattern": "none",
+    "trigger": "none",
+    "delayMs": 0,
+    "staggerMs": 0,
+    "reducedMotionFallback": "none-required-static",
+    "implementationStatus": "static-by-design",
+    "note": "Nothing in this section animates."
+  },
+  "responsive": {
+    "max-wf-tablet": "two-column rows stack; the 108em hero frame narrows to 80em",
+    "max-wf-phone": "flex rows become flex-col and centre; the hero frame becomes w-full",
+    "max-wf-mini": "block margins drop from 4.2em to 3.5em; display headings drop a step; hero top padding rises to 11.8em",
+    "note": "All three are MAX-width queries. The em engine is frozen at 8.25833px below 992px, so 768 and 390 differ only by these class overrides."
+  },
+  "containerVariants": {
+    "T-CASE-STUDY-INDEX": "standard wrapper: mx-auto -mt-[3em] w-full max-w-[1920px] px-[6em] max-wf-tablet:px-[6vw]",
+    "T-SCHEDULER": "standard wrapper: mx-auto -mt-[3em] w-full max-w-[1920px] px-[6em] max-wf-tablet:px-[6vw]",
+    "T-CONTACT": "ZERO-GUTTER wrapper: mx-auto -mt-[3em] w-full max-w-[1920px] px-0 max-wf-tablet:px-0",
+    "T-REFERRAL": "ZERO-GUTTER wrapper: mx-auto -mt-[3em] w-full max-w-[1920px] px-0 max-wf-tablet:px-0",
+    "why": "Leaving px-[6em] on the zero-gutter routes would make the h1 and intro 128px narrower and re-wrap them."
+  },
+  "measuredFrom": "src/components/HeroHeading.jsx:1-16",
+  "implementedBy": "src/components/HeroHeading.jsx",
+  "motionClosureScope": "CLOSED for PageSpec emission: a generated node's `motion` object may contain ONLY the fields in motionFieldSet, enforced by schema/pagespec.schema.json (additionalProperties:false) and the MOTION_OBJECT_IS_CLOSED rule. The keys in motionDocumentationFields below are contract-level documentation carried by THIS file for human and retrieval use; they are NOT settable on a PageSpec node.",
+  "motionDocumentationFields": [
+    "note"
+  ]
+}

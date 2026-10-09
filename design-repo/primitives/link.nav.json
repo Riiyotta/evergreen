@@ -1,0 +1,15 @@
+{
+  "$id": "primitives.link.nav",
+  "layer": "primitives",
+  "purpose": "Desktop / overlay nav link.",
+  "states": {
+    "hover": "underline, instant, no transition, gated to @media (hover: hover)",
+    "active": null,
+    "focus": null,
+    "disabled": null,
+    "transition": null,
+    "boxShadow": "none",
+    "note": "No interactive state exists. A generator must not add one."
+  },
+  "measuredFrom": "src/components/Nav.jsx:52-72"
+}

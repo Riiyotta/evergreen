@@ -1,0 +1,136 @@
+{
+  "$id": "tokens.foundation.motion",
+  "layer": "00-foundation",
+  "implementationStatus": "SPECIFIED, NOT YET ANIMATED",
+  "implementationNote": "Every leaf currently renders in its correct PRE-ANIMATION position with the right class name (`marketing-drift-leaf` / `marketing-scroll-leaf` / `marketing-responsive-leaf`), and the scroll-track wrapper is exposed via a React ref plus `data-scroll-track=\"hero\"`. Nothing animates yet. The configs below are decoded from the original and are the authority for what the motion WILL be — they are not a claim that it ships working.",
+  "easings": {
+    "drift": {
+      "value": "cubic-bezier(0.455, 0.03, 0.515, 0.955)",
+      "alias": "easeInOutQuad",
+      "usedBy": "every drift leaf; overlay open",
+      "measuredFrom": "tailwind.config.js:77"
+    },
+    "overlay-close": {
+      "value": "cubic-bezier(0.55, 0.085, 0.68, 0.53)",
+      "usedBy": "overlay close only",
+      "measuredFrom": "tailwind.config.js:78"
+    },
+    "ui-default": {
+      "value": "cubic-bezier(0.4, 0, 0.2, 1)",
+      "usedBy": "hamburger bars; the BadgeLink hover transition",
+      "measuredFrom": "tailwind.config.js:79"
+    }
+  },
+  "durations": {
+    "drift-default": {
+      "value": 1500,
+      "unit": "ms",
+      "measuredFrom": "src/lib/leaves.js:16"
+    },
+    "drift-card-a": {
+      "value": 1300,
+      "unit": "ms",
+      "measuredFrom": "src/lib/leaves.js:62"
+    },
+    "drift-card-c": {
+      "value": 1000,
+      "unit": "ms",
+      "measuredFrom": "src/lib/leaves.js:64"
+    },
+    "overlay-open": {
+      "value": 1000,
+      "unit": "ms",
+      "measuredFrom": "tailwind.config.js:84"
+    },
+    "overlay-close": {
+      "value": 500,
+      "unit": "ms",
+      "measuredFrom": "tailwind.config.js:85"
+    },
+    "hover-colors": {
+      "value": 150,
+      "unit": "ms",
+      "usedBy": "BadgeLink hover:bg-white only",
+      "measuredFrom": "src/components/BadgeLink.jsx:5-9"
+    }
+  },
+  "viewportTrigger": {
+    "whileInView": {
+      "once": true,
+      "amount": 0
+    },
+    "delay": 0,
+    "stagger": 0,
+    "measuredFrom": "src/lib/leaves.js:17-18",
+    "note": "NO delay and NO stagger anywhere. Card grids have no listing stagger."
+  },
+  "scrollSpring": {
+    "hook": "useScroll({ target: heroScrollTrackRef, offset: ['start end', 'end start'] })",
+    "spring": {
+      "stiffness": 144,
+      "damping": 24,
+      "mass": 1
+    },
+    "drives": "6 scroll leaves, 2 scaleX line draws, 2 opacity reveals",
+    "measuredFrom": "src/components/Hero.jsx:114-122",
+    "correction": "The 'drives 6 scroll leaves' figure is Hero.jsx's own comment. The real HERO_LEAVES table is 4 drift + 8 scroll-tracked, which is what the raw measurement shows too (_reference/recon-b/partner_50pros.json motion[2..13]). src/lib/leaves.js:22-23 says '6 drift / 6 scroll' and is WRONG about its own data: entries 0,1,6,7 carry `from` (drift) and entries 2,3,4,5,8,9,10,11 carry `track` (scroll)."
+  },
+  "leafSets": {
+    "HERO_LEAVES": {
+      "count": 12,
+      "drift": 4,
+      "scrollTracked": 8,
+      "measuredFrom": "src/lib/leaves.js:25-38"
+    },
+    "DIVIDER_LEAVES": {
+      "count": 12,
+      "drift": 12,
+      "scrollTracked": 0,
+      "pattern": "all `from: [0, -yEm]` vertical drop-in",
+      "measuredFrom": "src/lib/leaves.js:45-58"
+    },
+    "CARD_LEAVES": {
+      "count": 3,
+      "drift": 3,
+      "scrollTracked": 0,
+      "durations": [
+        1300,
+        1500,
+        1000
+      ],
+      "measuredFrom": "src/lib/leaves.js:61-65"
+    },
+    "QUOTE_LEAVES": {
+      "count": 6,
+      "drift": 0,
+      "scrollTracked": 0,
+      "static": true,
+      "measuredFrom": "src/lib/leaves.js:71-78",
+      "RULE": "STATIC BY DESIGN: initial === animate, no class, no transform delta. A contract must FORBID animating these."
+    },
+    "OUR_PURPOSE_WREATH": {
+      "count": 4,
+      "static": true,
+      "measuredFrom": "src/pages/OurPurpose.jsx:83-107",
+      "note": "2 desktop + 2 phone. Plain <img> with REAL alt text and no inline transform — unlike every other leaf on the site. Never add a drift class."
+    }
+  },
+  "reducedMotion": {
+    "handled": true,
+    "measuredFrom": "src/index.css:296-317",
+    "behaviour": "transition-duration and animation-duration forced to 0.01ms; recognition lines forced to scaleX(1); hero hearts forced to opacity 1; scroll and drift leaves forced to their rotate-only resting transform."
+  },
+  "absentPatterns": [
+    "no parallax",
+    "no marquee",
+    "no carousel",
+    "no autoplay",
+    "no scroll-progress bar",
+    "no sticky nav",
+    "no scroll-state nav change",
+    "no card-grid stagger",
+    "no prose reveal",
+    "no accordion",
+    "no smooth-scroll (html scroll-behavior is explicitly auto)"
+  ]
+}

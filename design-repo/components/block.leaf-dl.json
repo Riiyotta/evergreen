@@ -1,0 +1,20 @@
+{
+  "$id": "components.block.leaf-dl",
+  "layer": "components",
+  "purpose": "A definition list where each term carries a small leaf glyph. Used for spec lists and 'how you would know' signal lists.",
+  "geometry": "dl w-[70.3em]; row mb-[2.4em]; dt 2em / 1.5 / 700 with a w-[0.8em] leaf at mr-[0.45em]; dd mt-[0.3em] with a 1.75em / 1.7 p",
+  "content": {
+    "term": {
+      "maxWords": 2,
+      "copyPolicy": "verbatim-locked"
+    },
+    "definition": {
+      "maxWords": 36,
+      "copyPolicy": "measured-budget"
+    }
+  },
+  "maxWordsBasis": "recomputed over every glance/differs/signals/obstacles/program row in the real data",
+  "states": "No hover, no active, no focus, no transition, no box-shadow.",
+  "measuredFrom": "src/components/blocks/LeafDl.jsx:1-31",
+  "sharedNote": "CLONE_SPEC_CONTENT_A §5.4's `SpecList` and CONTENT_B §3.7's `LeafDl` are the SAME geometry, verified row by row, so one component serves both and no variant prop was needed."
+}

@@ -1,0 +1,21 @@
+{
+  "$id": "primitives.badge.value",
+  "layer": "primitives",
+  "purpose": "'Tagged Value: …' chip under a product screenshot.",
+  "tokens": {
+    "surface": "surface.accent",
+    "border": "border.default",
+    "radius": "radius.card"
+  },
+  "geometry": "px-[1.5em] py-[0.8em]; label 1.625em / 1.54 / 600; measured 189x48",
+  "states": {
+    "hover": null,
+    "active": null,
+    "focus": null,
+    "disabled": null,
+    "transition": null,
+    "boxShadow": "none",
+    "note": "No interactive state exists. A generator must not add one."
+  },
+  "measuredFrom": "src/components/SeedsSection.jsx:64-67"
+}

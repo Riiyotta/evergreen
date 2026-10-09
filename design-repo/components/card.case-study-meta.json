@@ -1,0 +1,25 @@
+{
+  "$id": "components.card.case-study-meta",
+  "layer": "components",
+  "purpose": "The fixed-label fact card in T-STORY's left column.",
+  "tokens": {
+    "surface": "surface.card",
+    "border": "border.default",
+    "radius": "radius.card"
+  },
+  "geometry": "column w-[26%] (299.52px); card 299.52x790.89; padding 45.007px 0 39.333px — ZERO horizontal padding, rows are centred by the flex column",
+  "fixedRowLabels": [
+    "Company",
+    "HQ Location",
+    "Employees",
+    "Industry",
+    "Trees Planted",
+    "Read more"
+  ],
+  "fixedRowLabelsNote": "Identical on all 4 instances. These are structure, not content.",
+  "states": "No hover, no active, no focus, no transition, no box-shadow.",
+  "measuredFrom": "src/components/CaseStudyMetaCard.jsx:1-65",
+  "assetRole": "third-party.trademark",
+  "externalLink": "The `Website` row is off-domain and renders with NO href (18px / 18px / 500 / #333333, underlined).",
+  "leaves": "3 CARD_LEAVES, initial state only"
+}

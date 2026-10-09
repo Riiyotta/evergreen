@@ -1,0 +1,59 @@
+{
+  "$id": "sections.form.scheduler-card",
+  "layer": "sections",
+  "motionFieldSet": [
+    "pattern",
+    "trigger",
+    "durationMs",
+    "easing",
+    "delayMs",
+    "staggerMs",
+    "leafSet",
+    "leafCount",
+    "scrollProgressRange",
+    "reducedMotionFallback",
+    "implementationStatus"
+  ],
+  "motionIsClosed": true,
+  "category": "form",
+  "purpose": "Offer a demo booking slot.",
+  "composes": [
+    "components/card.form-shell",
+    "components/block.scheduler-placeholder"
+  ],
+  "content": {
+    "introParagraph": {
+      "maxWords": 32,
+      "copyPolicy": "verbatim-locked"
+    },
+    "additionalProperties": false
+  },
+  "geometry": "section y 45 h 1438.19 @1280; intro `max-w-[60ch]` over 4 line boxes (the double <br> is what makes the 126.94px height); card p-[2em]",
+  "constraints": {
+    "onePerPage": true,
+    "allowedTemplates": [
+      "T-SCHEDULER"
+    ]
+  },
+  "motion": {
+    "pattern": "leaf-drift",
+    "trigger": "whileInView",
+    "durationMs": 1300,
+    "easing": "cubic-bezier(0.455, 0.03, 0.515, 0.955)",
+    "delayMs": 0,
+    "staggerMs": 0,
+    "leafSet": "CARD_LEAVES",
+    "leafCount": 3,
+    "reducedMotionFallback": "leaves-held-at-rotate-only-transform",
+    "implementationStatus": "specified-not-yet-animated"
+  },
+  "responsive": {
+    "max-wf-phone": "the card wrapper becomes flex-col"
+  },
+  "container": "standard wrapper: mx-auto -mt-[3em] w-full max-w-[1920px] px-[6em] max-wf-tablet:px-[6vw]",
+  "externalEmbedPolicy": "STATIC PLACEHOLDER. The original's Calendly iframe is not loaded; nothing fetches assets.calendly.com and nothing in the card is interactive.",
+  "externalLinks": "The mailto: address renders with NO href.",
+  "measuredFrom": "src/pages/ScheduleADemo.jsx:19-49",
+  "implementedBy": "src/pages/ScheduleADemo.jsx",
+  "motionClosureScope": "CLOSED for PageSpec emission: a generated node's `motion` object may contain ONLY the fields in motionFieldSet, enforced by schema/pagespec.schema.json (additionalProperties:false) and the MOTION_OBJECT_IS_CLOSED rule. The keys in motionDocumentationFields below are contract-level documentation carried by THIS file for human and retrieval use; they are NOT settable on a PageSpec node."
+}

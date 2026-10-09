@@ -1,0 +1,38 @@
+{
+  "$id": "tokens.llm.token-policy",
+  "version": "1.0.0",
+  "description": "What is machine-enforced versus what is convention a reviewer must uphold.",
+  "machineEnforced": {
+    "allowlistParity": "extraction/verify_all.py \u2014 fails on a phantom entry or an orphaned contract.",
+    "allowlistVersionParity": "extraction/verify_all.py \u2014 this file, the allowlist and registry.manifest.json must agree.",
+    "citationValidity": "extraction/verify_all.py \u2014 every measuredFrom path:line range resolves inside the real file.",
+    "manifestCounts": "extraction/verify_all.py \u2014 recomputed from the files on disk, never trusted as written.",
+    "pinnedAssetRolePolicies": "extraction/verify_all.py \u2014 compliance-critical roles are pinned to a specific policy value, not merely a member of the enum.",
+    "closedTemplateEnum": "schema/pagespec.schema.json",
+    "closedSectionEnum": "schema/pagespec.schema.json",
+    "closedMotionObject": "schema/pagespec.schema.json \u2014 additionalProperties false on motion.",
+    "reducedMotionFallbackRequired": "schema/pagespec.schema.json",
+    "nodesMatchDeclaredTemplate": "schema/semantic_validate.py \u2014 cross-references the declared template against its real node list.",
+    "maxWordsBudgets": "schema/semantic_validate.py \u2014 counted per instance, not just on the bundled example.",
+    "rhythmRules": "schema/semantic_validate.py, honouring each rule's severity in compatibility/graph.json."
+  },
+  "conventionOnly": {
+    "repositoryVersion": "Documentation-only, hand-maintained. Nothing checks it.",
+    "pageSpecVersion": "Documentation-only, hand-maintained. Nothing checks it.",
+    "copyPolicy": "Advisory. `verbatim-locked` marks copy measured from the real site; no script enforces that a generator honours it.",
+    "evidenceLevel": "Advisory. Records whether a template/section was measured or inferred."
+  },
+  "rawValueRestrictions": {
+    "note": "Category keys here match the real catalog keys in token-catalog.json.foundationCategories so a drift check can resolve them. Do not invent a convenient human label.",
+    "color": "No raw hex in a PageSpec. Reference a semantic token.",
+    "radius": "No raw px radius. Reference the radius scale.",
+    "spacing": "No raw px spacing. Reference the spacing scale or keep the source em value.",
+    "typography": "No raw font-size. Reference a type role.",
+    "elevation": "Nothing to set \u2014 elevation is zero site-wide.",
+    "motion": "Only the closed motionFieldSet, with evidence-grounded easings and durations."
+  },
+  "overrides": {
+    "perInstanceTokenOverrides": "NONE \u2014 and this is a real gap, recorded rather than invented.",
+    "rationale": "This PageSpec schema has no per-instance style or token-override field. Styling is owned entirely by the section and component contracts, not by a generated instance. There is therefore no PageSpec-level field to validate or mutate for token misuse, so adversarial coverage for this concern lives at the catalog/policy layer as a drift-injection test (scripts/prove_drift.sh) rather than as a PageSpec mutation. If a future schema version adds an override field, it needs its own closed enum and its own adversarial case."
+  }
+}

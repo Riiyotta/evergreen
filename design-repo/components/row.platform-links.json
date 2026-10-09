@@ -1,0 +1,21 @@
+{
+  "$id": "components.row.platform-links",
+  "layer": "components",
+  "purpose": "The 'add to Slack / Teams' install row.",
+  "geometry": "mx-[3.5em] per link on most routes; T-PARTNER uses gap-[4em] on the row instead",
+  "count": {
+    "home/cta/pricing": 2,
+    "partner": 3
+  },
+  "content": {
+    "label": {
+      "copyPolicy": "verbatim-locked",
+      "pattern": "add to <strong>{Platform}</strong>"
+    }
+  },
+  "states": "No hover, no active, no focus, no transition, no box-shadow.",
+  "measuredFrom": "src/components/CtaSection.jsx:130-149",
+  "externalLinks": "Both install links are app.evergreen.so / off-domain and render with NO href.",
+  "assetRole": "third-party.platform-logo",
+  "partnerDelta": "T-PARTNER adds a THIRD item, Mattermost, rendered as a <div> (not an <a>) with the label 'Coming soon' and no link at all."
+}

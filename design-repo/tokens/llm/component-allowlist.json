@@ -1,0 +1,1943 @@
+{
+  "$id": "tokens.llm.component-allowlist",
+  "version": "1.0.0",
+  "status": "design-review-pending",
+  "description": "The CLOSED set a generator may instantiate, and the only properties it may set on each. Anything absent from this file is forbidden. Every entry is derived from a real contract file on disk \u2014 extraction/verify_all.py enforces 1:1 parity in both directions, so a phantom entry or an orphaned contract fails the run.",
+  "parityContract": "Every id here has a matching contract file; every contract file under primitives/, components/ and sections/ has an entry here. Proven by scripts/prove_drift.sh.",
+  "counts": {
+    "primitives": 25,
+    "components": 39,
+    "sections": 46
+  },
+  "pageLevelInstantiable": [
+    "sections.chrome.announcement-banner",
+    "sections.chrome.footer",
+    "sections.chrome.nav",
+    "sections.chrome.trial-modal",
+    "sections.content.faq",
+    "sections.content.leaf-bullets",
+    "sections.content.leaf-spec-list",
+    "sections.content.message-grid",
+    "sections.content.prose-left",
+    "sections.content.reading-list",
+    "sections.content.rich-text",
+    "sections.content.section-heading",
+    "sections.content.sources",
+    "sections.conversion.arketta-cross-promo",
+    "sections.conversion.lead-magnet-cta",
+    "sections.conversion.reassurance-cta",
+    "sections.divider.leaf-band",
+    "sections.feature.report-csr",
+    "sections.feature.seeds",
+    "sections.feature.split-visual",
+    "sections.form.contact-card",
+    "sections.form.lead-magnet-card",
+    "sections.form.referral-card",
+    "sections.form.scheduler-card",
+    "sections.hero.centred-h1",
+    "sections.hero.ebook-lede",
+    "sections.hero.esg-environmental",
+    "sections.hero.home",
+    "sections.hero.legal-head",
+    "sections.hero.page-head",
+    "sections.hero.partner",
+    "sections.hero.purpose",
+    "sections.listing.blog-rows",
+    "sections.listing.case-study-grid",
+    "sections.listing.link-card-grid",
+    "sections.listing.more-articles",
+    "sections.listing.story-teasers",
+    "sections.pricing.single-plan",
+    "sections.proof.g2-rating",
+    "sections.proof.goals-band",
+    "sections.proof.sdg-goals",
+    "sections.proof.stat-pills",
+    "sections.proof.testimonial-wall",
+    "sections.referral.earnings-tiers",
+    "sections.story.hero-quote",
+    "sections.story.meta-prose"
+  ],
+  "notPageLevel": {
+    "description": "Primitives and components are composed INSIDE a section, never placed as a PageSpec node. A PageSpec references them only transitively via its section contract's `composes` list.",
+    "primitives": {
+      "primitives.avatar.circle": {
+        "contract": "primitives/avatar.circle.json"
+      },
+      "primitives.badge.eyebrow-link": {
+        "contract": "primitives/badge.eyebrow-link.json"
+      },
+      "primitives.badge.eyebrow-static": {
+        "contract": "primitives/badge.eyebrow-static.json"
+      },
+      "primitives.badge.tick": {
+        "contract": "primitives/badge.tick.json"
+      },
+      "primitives.badge.value": {
+        "contract": "primitives/badge.value.json"
+      },
+      "primitives.button.form-submit": {
+        "contract": "primitives/button.form-submit.json"
+      },
+      "primitives.button.lead-magnet-submit": {
+        "contract": "primitives/button.lead-magnet-submit.json"
+      },
+      "primitives.button.trial-cta": {
+        "contract": "primitives/button.trial-cta.json"
+      },
+      "primitives.icon.leaf-inline": {
+        "contract": "primitives/icon.leaf-inline.json"
+      },
+      "primitives.image.leaf-art": {
+        "contract": "primitives/image.leaf-art.json"
+      },
+      "primitives.input.honeypot": {
+        "contract": "primitives/input.honeypot.json"
+      },
+      "primitives.input.labelled-text": {
+        "contract": "primitives/input.labelled-text.json"
+      },
+      "primitives.input.lead-magnet": {
+        "contract": "primitives/input.lead-magnet.json"
+      },
+      "primitives.input.newsletter-email": {
+        "contract": "primitives/input.newsletter-email.json"
+      },
+      "primitives.link.footer": {
+        "contract": "primitives/link.footer.json"
+      },
+      "primitives.link.inert-external": {
+        "contract": "primitives/link.inert-external.json"
+      },
+      "primitives.link.inline": {
+        "contract": "primitives/link.inline.json"
+      },
+      "primitives.link.nav": {
+        "contract": "primitives/link.nav.json"
+      },
+      "primitives.logo.brand-mark": {
+        "contract": "primitives/logo.brand-mark.json"
+      },
+      "primitives.panel.form-done": {
+        "contract": "primitives/panel.form-done.json"
+      },
+      "primitives.panel.form-error": {
+        "contract": "primitives/panel.form-error.json"
+      },
+      "primitives.pill.avatar-frame": {
+        "contract": "primitives/pill.avatar-frame.json"
+      },
+      "primitives.pill.stat": {
+        "contract": "primitives/pill.stat.json"
+      },
+      "primitives.rule.divider-line": {
+        "contract": "primitives/rule.divider-line.json"
+      },
+      "primitives.star.rating": {
+        "contract": "primitives/star.rating.json"
+      }
+    },
+    "components": {
+      "components.block.content-heading": {
+        "contract": "components/block.content-heading.json"
+      },
+      "components.block.date-line": {
+        "contract": "components/block.date-line.json"
+      },
+      "components.block.faq-dl": {
+        "contract": "components/block.faq-dl.json"
+      },
+      "components.block.g2-rating": {
+        "contract": "components/block.g2-rating.json"
+      },
+      "components.block.hero-heading": {
+        "contract": "components/block.hero-heading.json"
+      },
+      "components.block.leaf-bullets": {
+        "contract": "components/block.leaf-bullets.json"
+      },
+      "components.block.leaf-divider": {
+        "contract": "components/block.leaf-divider.json"
+      },
+      "components.block.leaf-dl": {
+        "contract": "components/block.leaf-dl.json"
+      },
+      "components.block.leaf-layer": {
+        "contract": "components/block.leaf-layer.json"
+      },
+      "components.block.prose-left": {
+        "contract": "components/block.prose-left.json"
+      },
+      "components.block.rich-text": {
+        "contract": "components/block.rich-text.json"
+      },
+      "components.block.scheduler-placeholder": {
+        "contract": "components/block.scheduler-placeholder.json"
+      },
+      "components.block.sources-list": {
+        "contract": "components/block.sources-list.json"
+      },
+      "components.card.blog-row": {
+        "contract": "components/card.blog-row.json"
+      },
+      "components.card.calendly": {
+        "contract": "components/card.calendly.json"
+      },
+      "components.card.case-study": {
+        "contract": "components/card.case-study.json"
+      },
+      "components.card.case-study-meta": {
+        "contract": "components/card.case-study-meta.json"
+      },
+      "components.card.case-study-teaser": {
+        "contract": "components/card.case-study-teaser.json"
+      },
+      "components.card.form-shell": {
+        "contract": "components/card.form-shell.json"
+      },
+      "components.card.link": {
+        "contract": "components/card.link.json"
+      },
+      "components.card.message": {
+        "contract": "components/card.message.json"
+      },
+      "components.card.price": {
+        "contract": "components/card.price.json"
+      },
+      "components.card.related-article": {
+        "contract": "components/card.related-article.json"
+      },
+      "components.card.testimonial": {
+        "contract": "components/card.testimonial.json"
+      },
+      "components.column.icon-feature-serif": {
+        "contract": "components/column.icon-feature-serif.json"
+      },
+      "components.column.reassurance-icon": {
+        "contract": "components/column.reassurance-icon.json"
+      },
+      "components.column.sdg-goal": {
+        "contract": "components/column.sdg-goal.json"
+      },
+      "components.form.contact": {
+        "contract": "components/form.contact.json"
+      },
+      "components.form.lead-magnet": {
+        "contract": "components/form.lead-magnet.json"
+      },
+      "components.form.newsletter": {
+        "contract": "components/form.newsletter.json"
+      },
+      "components.form.referral": {
+        "contract": "components/form.referral.json"
+      },
+      "components.grid.link-card": {
+        "contract": "components/grid.link-card.json"
+      },
+      "components.grid.message": {
+        "contract": "components/grid.message.json"
+      },
+      "components.overlay.slide": {
+        "contract": "components/overlay.slide.json"
+      },
+      "components.panel.arketta-cta": {
+        "contract": "components/panel.arketta-cta.json"
+      },
+      "components.row.earnings-tiers": {
+        "contract": "components/row.earnings-tiers.json"
+      },
+      "components.row.logo-strip": {
+        "contract": "components/row.logo-strip.json"
+      },
+      "components.row.platform-links": {
+        "contract": "components/row.platform-links.json"
+      },
+      "components.row.stat-pills": {
+        "contract": "components/row.stat-pills.json"
+      }
+    }
+  },
+  "sections": {
+    "sections.chrome.announcement-banner": {
+      "contract": "sections/chrome.announcement-banner.json",
+      "nodeType": "chrome.announcement-banner",
+      "category": "chrome",
+      "settableContentProps": [
+        "linkLabel",
+        "message"
+      ],
+      "settableNodeProps": [
+        "section",
+        "required",
+        "repeatable",
+        "variant",
+        "content",
+        "motion"
+      ],
+      "motionFieldSet": [
+        "pattern",
+        "trigger",
+        "durationMs",
+        "easing",
+        "delayMs",
+        "staggerMs",
+        "leafSet",
+        "leafCount",
+        "scrollProgressRange",
+        "reducedMotionFallback",
+        "implementationStatus"
+      ],
+      "motionIsClosed": true,
+      "allowedTemplates": [
+        "T-HOME",
+        "T-ARTICLE"
+      ],
+      "assetRoles": []
+    },
+    "sections.chrome.footer": {
+      "contract": "sections/chrome.footer.json",
+      "nodeType": "chrome.footer",
+      "category": "chrome",
+      "settableContentProps": [
+        "columns",
+        "legalLine",
+        "socials"
+      ],
+      "settableNodeProps": [
+        "section",
+        "required",
+        "repeatable",
+        "variant",
+        "content",
+        "motion"
+      ],
+      "motionFieldSet": [
+        "pattern",
+        "trigger",
+        "durationMs",
+        "easing",
+        "delayMs",
+        "staggerMs",
+        "leafSet",
+        "leafCount",
+        "scrollProgressRange",
+        "reducedMotionFallback",
+        "implementationStatus"
+      ],
+      "motionIsClosed": true,
+      "allowedTemplates": "any",
+      "assetRoles": []
+    },
+    "sections.chrome.nav": {
+      "contract": "sections/chrome.nav.json",
+      "nodeType": "chrome.nav",
+      "category": "chrome",
+      "settableContentProps": [
+        "desktopLinks",
+        "overlayLinks"
+      ],
+      "settableNodeProps": [
+        "section",
+        "required",
+        "repeatable",
+        "variant",
+        "content",
+        "motion"
+      ],
+      "motionFieldSet": [
+        "pattern",
+        "trigger",
+        "durationMs",
+        "easing",
+        "delayMs",
+        "staggerMs",
+        "leafSet",
+        "leafCount",
+        "scrollProgressRange",
+        "reducedMotionFallback",
+        "implementationStatus"
+      ],
+      "motionIsClosed": true,
+      "allowedTemplates": "any",
+      "assetRoles": []
+    },
+    "sections.chrome.trial-modal": {
+      "contract": "sections/chrome.trial-modal.json",
+      "nodeType": "chrome.trial-modal",
+      "category": "chrome",
+      "settableContentProps": [
+        "platforms"
+      ],
+      "settableNodeProps": [
+        "section",
+        "required",
+        "repeatable",
+        "variant",
+        "content",
+        "motion"
+      ],
+      "motionFieldSet": [
+        "pattern",
+        "trigger",
+        "durationMs",
+        "easing",
+        "delayMs",
+        "staggerMs",
+        "leafSet",
+        "leafCount",
+        "scrollProgressRange",
+        "reducedMotionFallback",
+        "implementationStatus"
+      ],
+      "motionIsClosed": true,
+      "allowedTemplates": "any",
+      "assetRoles": []
+    },
+    "sections.content.faq": {
+      "contract": "sections/content.faq.json",
+      "nodeType": "content.faq",
+      "category": "content",
+      "settableContentProps": [
+        "answer",
+        "question",
+        "rows"
+      ],
+      "settableNodeProps": [
+        "section",
+        "required",
+        "repeatable",
+        "variant",
+        "content",
+        "motion"
+      ],
+      "motionFieldSet": [
+        "pattern",
+        "trigger",
+        "durationMs",
+        "easing",
+        "delayMs",
+        "staggerMs",
+        "leafSet",
+        "leafCount",
+        "scrollProgressRange",
+        "reducedMotionFallback",
+        "implementationStatus"
+      ],
+      "motionIsClosed": true,
+      "allowedTemplates": "any",
+      "assetRoles": []
+    },
+    "sections.content.leaf-bullets": {
+      "contract": "sections/content.leaf-bullets.json",
+      "nodeType": "content.leaf-bullets",
+      "category": "content",
+      "settableContentProps": [
+        "item",
+        "items"
+      ],
+      "settableNodeProps": [
+        "section",
+        "required",
+        "repeatable",
+        "variant",
+        "content",
+        "motion"
+      ],
+      "motionFieldSet": [
+        "pattern",
+        "trigger",
+        "durationMs",
+        "easing",
+        "delayMs",
+        "staggerMs",
+        "leafSet",
+        "leafCount",
+        "scrollProgressRange",
+        "reducedMotionFallback",
+        "implementationStatus"
+      ],
+      "motionIsClosed": true,
+      "allowedTemplates": "any",
+      "assetRoles": []
+    },
+    "sections.content.leaf-spec-list": {
+      "contract": "sections/content.leaf-spec-list.json",
+      "nodeType": "content.leaf-spec-list",
+      "category": "content",
+      "settableContentProps": [
+        "definition",
+        "rows",
+        "term"
+      ],
+      "settableNodeProps": [
+        "section",
+        "required",
+        "repeatable",
+        "variant",
+        "content",
+        "motion"
+      ],
+      "motionFieldSet": [
+        "pattern",
+        "trigger",
+        "durationMs",
+        "easing",
+        "delayMs",
+        "staggerMs",
+        "leafSet",
+        "leafCount",
+        "scrollProgressRange",
+        "reducedMotionFallback",
+        "implementationStatus"
+      ],
+      "motionIsClosed": true,
+      "allowedTemplates": "any",
+      "assetRoles": []
+    },
+    "sections.content.message-grid": {
+      "contract": "sections/content.message-grid.json",
+      "nodeType": "content.message-grid",
+      "category": "content",
+      "settableContentProps": [
+        "messages"
+      ],
+      "settableNodeProps": [
+        "section",
+        "required",
+        "repeatable",
+        "variant",
+        "content",
+        "motion"
+      ],
+      "motionFieldSet": [
+        "pattern",
+        "trigger",
+        "durationMs",
+        "easing",
+        "delayMs",
+        "staggerMs",
+        "leafSet",
+        "leafCount",
+        "scrollProgressRange",
+        "reducedMotionFallback",
+        "implementationStatus"
+      ],
+      "motionIsClosed": true,
+      "allowedTemplates": [
+        "T-DETAIL-MESSAGES",
+        "T-DETAIL-VALUES",
+        "T-DETAIL-FOR"
+      ],
+      "assetRoles": []
+    },
+    "sections.content.prose-left": {
+      "contract": "sections/content.prose-left.json",
+      "nodeType": "content.prose-left",
+      "category": "content",
+      "settableContentProps": [
+        "paragraph",
+        "paragraphs"
+      ],
+      "settableNodeProps": [
+        "section",
+        "required",
+        "repeatable",
+        "variant",
+        "content",
+        "motion"
+      ],
+      "motionFieldSet": [
+        "pattern",
+        "trigger",
+        "durationMs",
+        "easing",
+        "delayMs",
+        "staggerMs",
+        "leafSet",
+        "leafCount",
+        "scrollProgressRange",
+        "reducedMotionFallback",
+        "implementationStatus"
+      ],
+      "motionIsClosed": true,
+      "allowedTemplates": "any",
+      "assetRoles": []
+    },
+    "sections.content.reading-list": {
+      "contract": "sections/content.reading-list.json",
+      "nodeType": "content.reading-list",
+      "category": "content",
+      "settableContentProps": [
+        "groups",
+        "h3"
+      ],
+      "settableNodeProps": [
+        "section",
+        "required",
+        "repeatable",
+        "variant",
+        "content",
+        "motion"
+      ],
+      "motionFieldSet": [
+        "pattern",
+        "trigger",
+        "durationMs",
+        "easing",
+        "delayMs",
+        "staggerMs",
+        "leafSet",
+        "leafCount",
+        "scrollProgressRange",
+        "reducedMotionFallback",
+        "implementationStatus"
+      ],
+      "motionIsClosed": true,
+      "allowedTemplates": [
+        "T-PILLAR"
+      ],
+      "assetRoles": []
+    },
+    "sections.content.rich-text": {
+      "contract": "sections/content.rich-text.json",
+      "nodeType": "content.rich-text",
+      "category": "content",
+      "settableContentProps": [
+        "flatNodes",
+        "groupedSections",
+        "heading",
+        "paragraph",
+        "shape"
+      ],
+      "settableNodeProps": [
+        "section",
+        "required",
+        "repeatable",
+        "variant",
+        "content",
+        "motion"
+      ],
+      "motionFieldSet": [
+        "pattern",
+        "trigger",
+        "durationMs",
+        "easing",
+        "delayMs",
+        "staggerMs",
+        "leafSet",
+        "leafCount",
+        "scrollProgressRange",
+        "reducedMotionFallback",
+        "implementationStatus"
+      ],
+      "motionIsClosed": true,
+      "allowedTemplates": "any",
+      "assetRoles": []
+    },
+    "sections.content.section-heading": {
+      "contract": "sections/content.section-heading.json",
+      "nodeType": "content.section-heading",
+      "category": "content",
+      "settableContentProps": [
+        "heading"
+      ],
+      "settableNodeProps": [
+        "section",
+        "required",
+        "repeatable",
+        "variant",
+        "content",
+        "motion"
+      ],
+      "motionFieldSet": [
+        "pattern",
+        "trigger",
+        "durationMs",
+        "easing",
+        "delayMs",
+        "staggerMs",
+        "leafSet",
+        "leafCount",
+        "scrollProgressRange",
+        "reducedMotionFallback",
+        "implementationStatus"
+      ],
+      "motionIsClosed": true,
+      "allowedTemplates": "any",
+      "assetRoles": []
+    },
+    "sections.content.sources": {
+      "contract": "sections/content.sources.json",
+      "nodeType": "content.sources",
+      "category": "content",
+      "settableContentProps": [
+        "label",
+        "note",
+        "sources"
+      ],
+      "settableNodeProps": [
+        "section",
+        "required",
+        "repeatable",
+        "variant",
+        "content",
+        "motion"
+      ],
+      "motionFieldSet": [
+        "pattern",
+        "trigger",
+        "durationMs",
+        "easing",
+        "delayMs",
+        "staggerMs",
+        "leafSet",
+        "leafCount",
+        "scrollProgressRange",
+        "reducedMotionFallback",
+        "implementationStatus"
+      ],
+      "motionIsClosed": true,
+      "allowedTemplates": [
+        "T-COMPARISON"
+      ],
+      "assetRoles": []
+    },
+    "sections.conversion.arketta-cross-promo": {
+      "contract": "sections/conversion.arketta-cross-promo.json",
+      "nodeType": "conversion.arketta-cross-promo",
+      "category": "conversion",
+      "settableContentProps": [
+        "bodyLines",
+        "ctaLabel",
+        "heading"
+      ],
+      "settableNodeProps": [
+        "section",
+        "required",
+        "repeatable",
+        "variant",
+        "content",
+        "motion"
+      ],
+      "motionFieldSet": [
+        "pattern",
+        "trigger",
+        "durationMs",
+        "easing",
+        "delayMs",
+        "staggerMs",
+        "leafSet",
+        "leafCount",
+        "scrollProgressRange",
+        "reducedMotionFallback",
+        "implementationStatus"
+      ],
+      "motionIsClosed": true,
+      "allowedTemplates": [
+        "T-ARTICLE"
+      ],
+      "assetRoles": []
+    },
+    "sections.conversion.lead-magnet-cta": {
+      "contract": "sections/conversion.lead-magnet-cta.json",
+      "nodeType": "conversion.lead-magnet-cta",
+      "category": "conversion",
+      "settableContentProps": [
+        "heading",
+        "paragraph"
+      ],
+      "settableNodeProps": [
+        "section",
+        "required",
+        "repeatable",
+        "variant",
+        "content",
+        "motion"
+      ],
+      "motionFieldSet": [
+        "pattern",
+        "trigger",
+        "durationMs",
+        "easing",
+        "delayMs",
+        "staggerMs",
+        "leafSet",
+        "leafCount",
+        "scrollProgressRange",
+        "reducedMotionFallback",
+        "implementationStatus"
+      ],
+      "motionIsClosed": true,
+      "allowedTemplates": [
+        "T-ARTICLE",
+        "T-PILLAR"
+      ],
+      "assetRoles": []
+    },
+    "sections.conversion.reassurance-cta": {
+      "contract": "sections/conversion.reassurance-cta.json",
+      "nodeType": "conversion.reassurance-cta",
+      "category": "conversion",
+      "settableContentProps": [
+        "columns",
+        "heading",
+        "paragraph",
+        "smallPrint",
+        "smallPrintSuffix"
+      ],
+      "settableNodeProps": [
+        "section",
+        "required",
+        "repeatable",
+        "variant",
+        "content",
+        "motion"
+      ],
+      "motionFieldSet": [
+        "pattern",
+        "trigger",
+        "durationMs",
+        "easing",
+        "delayMs",
+        "staggerMs",
+        "leafSet",
+        "leafCount",
+        "scrollProgressRange",
+        "reducedMotionFallback",
+        "implementationStatus"
+      ],
+      "motionIsClosed": true,
+      "allowedTemplates": "any",
+      "assetRoles": [
+        "brand.icon",
+        "third-party.platform-logo"
+      ]
+    },
+    "sections.divider.leaf-band": {
+      "contract": "sections/divider.leaf-band.json",
+      "nodeType": "divider.leaf-band",
+      "category": "structure",
+      "settableContentProps": [
+        "band"
+      ],
+      "settableNodeProps": [
+        "section",
+        "required",
+        "repeatable",
+        "variant",
+        "content",
+        "motion"
+      ],
+      "motionFieldSet": [
+        "pattern",
+        "trigger",
+        "durationMs",
+        "easing",
+        "delayMs",
+        "staggerMs",
+        "leafSet",
+        "leafCount",
+        "scrollProgressRange",
+        "reducedMotionFallback",
+        "implementationStatus"
+      ],
+      "motionIsClosed": true,
+      "allowedTemplates": "any",
+      "assetRoles": []
+    },
+    "sections.feature.report-csr": {
+      "contract": "sections/feature.report-csr.json",
+      "nodeType": "feature.report-csr",
+      "category": "feature",
+      "settableContentProps": [
+        "row1Bullets",
+        "row1Heading",
+        "row2Heading",
+        "row2Paragraph"
+      ],
+      "settableNodeProps": [
+        "section",
+        "required",
+        "repeatable",
+        "variant",
+        "content",
+        "motion"
+      ],
+      "motionFieldSet": [
+        "pattern",
+        "trigger",
+        "durationMs",
+        "easing",
+        "delayMs",
+        "staggerMs",
+        "leafSet",
+        "leafCount",
+        "scrollProgressRange",
+        "reducedMotionFallback",
+        "implementationStatus"
+      ],
+      "motionIsClosed": true,
+      "allowedTemplates": [
+        "T-HOME"
+      ],
+      "assetRoles": [
+        "product.screenshot",
+        "product.badge",
+        "brand.leaf-art"
+      ]
+    },
+    "sections.feature.seeds": {
+      "contract": "sections/feature.seeds.json",
+      "nodeType": "feature.seeds",
+      "category": "feature",
+      "settableContentProps": [
+        "bullets",
+        "heading",
+        "seedLine",
+        "statCaption",
+        "statFigure",
+        "valueBadge"
+      ],
+      "settableNodeProps": [
+        "section",
+        "required",
+        "repeatable",
+        "variant",
+        "content",
+        "motion"
+      ],
+      "motionFieldSet": [
+        "pattern",
+        "trigger",
+        "durationMs",
+        "easing",
+        "delayMs",
+        "staggerMs",
+        "leafSet",
+        "leafCount",
+        "scrollProgressRange",
+        "reducedMotionFallback",
+        "implementationStatus"
+      ],
+      "motionIsClosed": true,
+      "allowedTemplates": [
+        "T-HOME"
+      ],
+      "assetRoles": [
+        "product.screenshot",
+        "brand.leaf-art"
+      ]
+    },
+    "sections.feature.split-visual": {
+      "contract": "sections/feature.split-visual.json",
+      "nodeType": "feature.split-visual",
+      "category": "feature",
+      "settableContentProps": [
+        "heading",
+        "paragraph",
+        "stats",
+        "tickLabel"
+      ],
+      "settableNodeProps": [
+        "section",
+        "required",
+        "repeatable",
+        "variant",
+        "content",
+        "motion"
+      ],
+      "motionFieldSet": [
+        "pattern",
+        "trigger",
+        "durationMs",
+        "easing",
+        "delayMs",
+        "staggerMs",
+        "leafSet",
+        "leafCount",
+        "scrollProgressRange",
+        "reducedMotionFallback",
+        "implementationStatus"
+      ],
+      "motionIsClosed": true,
+      "allowedTemplates": [
+        "T-ESG",
+        "T-PARTNER"
+      ],
+      "assetRoles": [
+        "product.screenshot",
+        "brand.icon",
+        "third-party.review-mark",
+        "brand.leaf-art"
+      ]
+    },
+    "sections.form.contact-card": {
+      "contract": "sections/form.contact-card.json",
+      "nodeType": "form.contact-card",
+      "category": "form",
+      "settableContentProps": [
+        "introParagraph"
+      ],
+      "settableNodeProps": [
+        "section",
+        "required",
+        "repeatable",
+        "variant",
+        "content",
+        "motion"
+      ],
+      "motionFieldSet": [
+        "pattern",
+        "trigger",
+        "durationMs",
+        "easing",
+        "delayMs",
+        "staggerMs",
+        "leafSet",
+        "leafCount",
+        "scrollProgressRange",
+        "reducedMotionFallback",
+        "implementationStatus"
+      ],
+      "motionIsClosed": true,
+      "allowedTemplates": [
+        "T-CONTACT"
+      ],
+      "assetRoles": []
+    },
+    "sections.form.lead-magnet-card": {
+      "contract": "sections/form.lead-magnet-card.json",
+      "nodeType": "form.lead-magnet-card",
+      "category": "form",
+      "settableContentProps": [],
+      "settableNodeProps": [
+        "section",
+        "required",
+        "repeatable",
+        "variant",
+        "content",
+        "motion"
+      ],
+      "motionFieldSet": [
+        "pattern",
+        "trigger",
+        "durationMs",
+        "easing",
+        "delayMs",
+        "staggerMs",
+        "leafSet",
+        "leafCount",
+        "scrollProgressRange",
+        "reducedMotionFallback",
+        "implementationStatus"
+      ],
+      "motionIsClosed": true,
+      "allowedTemplates": [
+        "T-EBOOK"
+      ],
+      "assetRoles": []
+    },
+    "sections.form.referral-card": {
+      "contract": "sections/form.referral-card.json",
+      "nodeType": "form.referral-card",
+      "category": "form",
+      "settableContentProps": [
+        "footnote",
+        "introParagraph"
+      ],
+      "settableNodeProps": [
+        "section",
+        "required",
+        "repeatable",
+        "variant",
+        "content",
+        "motion"
+      ],
+      "motionFieldSet": [
+        "pattern",
+        "trigger",
+        "durationMs",
+        "easing",
+        "delayMs",
+        "staggerMs",
+        "leafSet",
+        "leafCount",
+        "scrollProgressRange",
+        "reducedMotionFallback",
+        "implementationStatus"
+      ],
+      "motionIsClosed": true,
+      "allowedTemplates": [
+        "T-REFERRAL"
+      ],
+      "assetRoles": []
+    },
+    "sections.form.scheduler-card": {
+      "contract": "sections/form.scheduler-card.json",
+      "nodeType": "form.scheduler-card",
+      "category": "form",
+      "settableContentProps": [
+        "introParagraph"
+      ],
+      "settableNodeProps": [
+        "section",
+        "required",
+        "repeatable",
+        "variant",
+        "content",
+        "motion"
+      ],
+      "motionFieldSet": [
+        "pattern",
+        "trigger",
+        "durationMs",
+        "easing",
+        "delayMs",
+        "staggerMs",
+        "leafSet",
+        "leafCount",
+        "scrollProgressRange",
+        "reducedMotionFallback",
+        "implementationStatus"
+      ],
+      "motionIsClosed": true,
+      "allowedTemplates": [
+        "T-SCHEDULER"
+      ],
+      "assetRoles": []
+    },
+    "sections.hero.centred-h1": {
+      "contract": "sections/hero.centred-h1.json",
+      "nodeType": "hero.centred-h1",
+      "category": "hero",
+      "settableContentProps": [
+        "h1",
+        "intro"
+      ],
+      "settableNodeProps": [
+        "section",
+        "required",
+        "repeatable",
+        "variant",
+        "content",
+        "motion"
+      ],
+      "motionFieldSet": [
+        "pattern",
+        "trigger",
+        "durationMs",
+        "easing",
+        "delayMs",
+        "staggerMs",
+        "leafSet",
+        "leafCount",
+        "scrollProgressRange",
+        "reducedMotionFallback",
+        "implementationStatus"
+      ],
+      "motionIsClosed": true,
+      "allowedTemplates": [
+        "T-CASE-STUDY-INDEX",
+        "T-CONTACT",
+        "T-SCHEDULER",
+        "T-REFERRAL"
+      ],
+      "assetRoles": []
+    },
+    "sections.hero.ebook-lede": {
+      "contract": "sections/hero.ebook-lede.json",
+      "nodeType": "hero.ebook-lede",
+      "category": "hero",
+      "settableContentProps": [
+        "bullets",
+        "callToAction",
+        "closing",
+        "h1",
+        "ledeIntro"
+      ],
+      "settableNodeProps": [
+        "section",
+        "required",
+        "repeatable",
+        "variant",
+        "content",
+        "motion"
+      ],
+      "motionFieldSet": [
+        "pattern",
+        "trigger",
+        "durationMs",
+        "easing",
+        "delayMs",
+        "staggerMs",
+        "leafSet",
+        "leafCount",
+        "scrollProgressRange",
+        "reducedMotionFallback",
+        "implementationStatus"
+      ],
+      "motionIsClosed": true,
+      "allowedTemplates": [
+        "T-EBOOK"
+      ],
+      "assetRoles": []
+    },
+    "sections.hero.esg-environmental": {
+      "contract": "sections/hero.esg-environmental.json",
+      "nodeType": "hero.esg-environmental",
+      "category": "hero",
+      "settableContentProps": [
+        "displayHeading",
+        "h1",
+        "tickLabel",
+        "veritreeParagraph"
+      ],
+      "settableNodeProps": [
+        "section",
+        "required",
+        "repeatable",
+        "variant",
+        "content",
+        "motion"
+      ],
+      "motionFieldSet": [
+        "pattern",
+        "trigger",
+        "durationMs",
+        "easing",
+        "delayMs",
+        "staggerMs",
+        "leafSet",
+        "leafCount",
+        "scrollProgressRange",
+        "reducedMotionFallback",
+        "implementationStatus"
+      ],
+      "motionIsClosed": true,
+      "allowedTemplates": [
+        "T-ESG"
+      ],
+      "assetRoles": [
+        "brand.icon",
+        "editorial.stock-photo"
+      ]
+    },
+    "sections.hero.home": {
+      "contract": "sections/hero.home.json",
+      "nodeType": "hero.home",
+      "category": "hero",
+      "settableContentProps": [
+        "displayHeading",
+        "eyebrow",
+        "h1",
+        "lede",
+        "treesHeading",
+        "usersHeading"
+      ],
+      "settableNodeProps": [
+        "section",
+        "required",
+        "repeatable",
+        "variant",
+        "content",
+        "motion"
+      ],
+      "motionFieldSet": [
+        "pattern",
+        "trigger",
+        "durationMs",
+        "easing",
+        "delayMs",
+        "staggerMs",
+        "leafSet",
+        "leafCount",
+        "scrollProgressRange",
+        "reducedMotionFallback",
+        "implementationStatus"
+      ],
+      "motionIsClosed": true,
+      "allowedTemplates": [
+        "T-HOME"
+      ],
+      "assetRoles": [
+        "product.screenshot",
+        "person.likeness",
+        "third-party.trademark",
+        "third-party.review-mark",
+        "third-party.platform-logo",
+        "brand.leaf-art"
+      ]
+    },
+    "sections.hero.legal-head": {
+      "contract": "sections/hero.legal-head.json",
+      "nodeType": "hero.legal-head",
+      "category": "hero",
+      "settableContentProps": [
+        "h1",
+        "lastUpdated"
+      ],
+      "settableNodeProps": [
+        "section",
+        "required",
+        "repeatable",
+        "variant",
+        "content",
+        "motion"
+      ],
+      "motionFieldSet": [
+        "pattern",
+        "trigger",
+        "durationMs",
+        "easing",
+        "delayMs",
+        "staggerMs",
+        "leafSet",
+        "leafCount",
+        "scrollProgressRange",
+        "reducedMotionFallback",
+        "implementationStatus"
+      ],
+      "motionIsClosed": true,
+      "allowedTemplates": [
+        "T-LEGAL"
+      ],
+      "assetRoles": []
+    },
+    "sections.hero.page-head": {
+      "contract": "sections/hero.page-head.json",
+      "nodeType": "hero.page-head",
+      "category": "hero",
+      "settableContentProps": [
+        "badgeLabel",
+        "h1",
+        "lede"
+      ],
+      "settableNodeProps": [
+        "section",
+        "required",
+        "repeatable",
+        "variant",
+        "content",
+        "motion"
+      ],
+      "motionFieldSet": [
+        "pattern",
+        "trigger",
+        "durationMs",
+        "easing",
+        "delayMs",
+        "staggerMs",
+        "leafSet",
+        "leafCount",
+        "scrollProgressRange",
+        "reducedMotionFallback",
+        "implementationStatus"
+      ],
+      "motionIsClosed": true,
+      "allowedTemplates": [
+        "T-COLLECTION-INDEX",
+        "T-DETAIL-GLOSSARY",
+        "T-DETAIL-MESSAGES",
+        "T-DETAIL-VALUES",
+        "T-DETAIL-FOR",
+        "T-COMPARISON",
+        "T-ALTERNATIVES-INDEX",
+        "T-ARTICLE",
+        "T-PILLAR",
+        "T-BLOG-INDEX",
+        "T-STORY"
+      ],
+      "assetRoles": []
+    },
+    "sections.hero.partner": {
+      "contract": "sections/hero.partner.json",
+      "nodeType": "hero.partner",
+      "category": "hero",
+      "settableContentProps": [
+        "displayHeading",
+        "eyebrow",
+        "h1",
+        "ledeOfferSuffix",
+        "partnerLogoAlt",
+        "usersHeading"
+      ],
+      "settableNodeProps": [
+        "section",
+        "required",
+        "repeatable",
+        "variant",
+        "content",
+        "motion"
+      ],
+      "motionFieldSet": [
+        "pattern",
+        "trigger",
+        "durationMs",
+        "easing",
+        "delayMs",
+        "staggerMs",
+        "leafSet",
+        "leafCount",
+        "scrollProgressRange",
+        "reducedMotionFallback",
+        "implementationStatus"
+      ],
+      "motionIsClosed": true,
+      "allowedTemplates": [
+        "T-PARTNER"
+      ],
+      "assetRoles": [
+        "third-party.trademark",
+        "person.likeness",
+        "third-party.review-mark",
+        "third-party.platform-logo",
+        "brand.leaf-art"
+      ]
+    },
+    "sections.hero.purpose": {
+      "contract": "sections/hero.purpose.json",
+      "nodeType": "hero.purpose",
+      "category": "hero",
+      "settableContentProps": [
+        "h1",
+        "statement"
+      ],
+      "settableNodeProps": [
+        "section",
+        "required",
+        "repeatable",
+        "variant",
+        "content",
+        "motion"
+      ],
+      "motionFieldSet": [
+        "pattern",
+        "trigger",
+        "durationMs",
+        "easing",
+        "delayMs",
+        "staggerMs",
+        "leafSet",
+        "leafCount",
+        "scrollProgressRange",
+        "reducedMotionFallback",
+        "implementationStatus"
+      ],
+      "motionIsClosed": true,
+      "allowedTemplates": [
+        "T-PURPOSE"
+      ],
+      "assetRoles": []
+    },
+    "sections.listing.blog-rows": {
+      "contract": "sections/listing.blog-rows.json",
+      "nodeType": "listing.blog-rows",
+      "category": "listing",
+      "settableContentProps": [
+        "rows"
+      ],
+      "settableNodeProps": [
+        "section",
+        "required",
+        "repeatable",
+        "variant",
+        "content",
+        "motion"
+      ],
+      "motionFieldSet": [
+        "pattern",
+        "trigger",
+        "durationMs",
+        "easing",
+        "delayMs",
+        "staggerMs",
+        "leafSet",
+        "leafCount",
+        "scrollProgressRange",
+        "reducedMotionFallback",
+        "implementationStatus"
+      ],
+      "motionIsClosed": true,
+      "allowedTemplates": [
+        "T-BLOG-INDEX"
+      ],
+      "assetRoles": []
+    },
+    "sections.listing.case-study-grid": {
+      "contract": "sections/listing.case-study-grid.json",
+      "nodeType": "listing.case-study-grid",
+      "category": "listing",
+      "settableContentProps": [
+        "cards"
+      ],
+      "settableNodeProps": [
+        "section",
+        "required",
+        "repeatable",
+        "variant",
+        "content",
+        "motion"
+      ],
+      "motionFieldSet": [
+        "pattern",
+        "trigger",
+        "durationMs",
+        "easing",
+        "delayMs",
+        "staggerMs",
+        "leafSet",
+        "leafCount",
+        "scrollProgressRange",
+        "reducedMotionFallback",
+        "implementationStatus"
+      ],
+      "motionIsClosed": true,
+      "allowedTemplates": [
+        "T-CASE-STUDY-INDEX"
+      ],
+      "assetRoles": []
+    },
+    "sections.listing.link-card-grid": {
+      "contract": "sections/listing.link-card-grid.json",
+      "nodeType": "listing.link-card-grid",
+      "category": "listing",
+      "settableContentProps": [
+        "items"
+      ],
+      "settableNodeProps": [
+        "section",
+        "required",
+        "repeatable",
+        "variant",
+        "content",
+        "motion"
+      ],
+      "motionFieldSet": [
+        "pattern",
+        "trigger",
+        "durationMs",
+        "easing",
+        "delayMs",
+        "staggerMs",
+        "leafSet",
+        "leafCount",
+        "scrollProgressRange",
+        "reducedMotionFallback",
+        "implementationStatus"
+      ],
+      "motionIsClosed": true,
+      "allowedTemplates": "any",
+      "assetRoles": []
+    },
+    "sections.listing.more-articles": {
+      "contract": "sections/listing.more-articles.json",
+      "nodeType": "listing.more-articles",
+      "category": "listing",
+      "settableContentProps": [
+        "cards",
+        "heading"
+      ],
+      "settableNodeProps": [
+        "section",
+        "required",
+        "repeatable",
+        "variant",
+        "content",
+        "motion"
+      ],
+      "motionFieldSet": [
+        "pattern",
+        "trigger",
+        "durationMs",
+        "easing",
+        "delayMs",
+        "staggerMs",
+        "leafSet",
+        "leafCount",
+        "scrollProgressRange",
+        "reducedMotionFallback",
+        "implementationStatus"
+      ],
+      "motionIsClosed": true,
+      "allowedTemplates": [
+        "T-ARTICLE"
+      ],
+      "assetRoles": []
+    },
+    "sections.listing.story-teasers": {
+      "contract": "sections/listing.story-teasers.json",
+      "nodeType": "listing.story-teasers",
+      "category": "listing",
+      "settableContentProps": [
+        "cards"
+      ],
+      "settableNodeProps": [
+        "section",
+        "required",
+        "repeatable",
+        "variant",
+        "content",
+        "motion"
+      ],
+      "motionFieldSet": [
+        "pattern",
+        "trigger",
+        "durationMs",
+        "easing",
+        "delayMs",
+        "staggerMs",
+        "leafSet",
+        "leafCount",
+        "scrollProgressRange",
+        "reducedMotionFallback",
+        "implementationStatus"
+      ],
+      "motionIsClosed": true,
+      "allowedTemplates": [
+        "T-STORY"
+      ],
+      "assetRoles": []
+    },
+    "sections.pricing.single-plan": {
+      "contract": "sections/pricing.single-plan.json",
+      "nodeType": "pricing.single-plan",
+      "category": "pricing",
+      "settableContentProps": [
+        "h1",
+        "reassuranceColumns",
+        "smallPrint",
+        "subParagraph"
+      ],
+      "settableNodeProps": [
+        "section",
+        "required",
+        "repeatable",
+        "variant",
+        "content",
+        "motion"
+      ],
+      "motionFieldSet": [
+        "pattern",
+        "trigger",
+        "durationMs",
+        "easing",
+        "delayMs",
+        "staggerMs",
+        "leafSet",
+        "leafCount",
+        "scrollProgressRange",
+        "reducedMotionFallback",
+        "implementationStatus"
+      ],
+      "motionIsClosed": true,
+      "allowedTemplates": [
+        "T-PRICING"
+      ],
+      "assetRoles": [
+        "product.screenshot",
+        "brand.icon",
+        "third-party.platform-logo",
+        "brand.leaf-art"
+      ]
+    },
+    "sections.proof.g2-rating": {
+      "contract": "sections/proof.g2-rating.json",
+      "nodeType": "proof.g2-rating",
+      "category": "proof",
+      "settableContentProps": [
+        "caption"
+      ],
+      "settableNodeProps": [
+        "section",
+        "required",
+        "repeatable",
+        "variant",
+        "content",
+        "motion"
+      ],
+      "motionFieldSet": [
+        "pattern",
+        "trigger",
+        "durationMs",
+        "easing",
+        "delayMs",
+        "staggerMs",
+        "leafSet",
+        "leafCount",
+        "scrollProgressRange",
+        "reducedMotionFallback",
+        "implementationStatus"
+      ],
+      "motionIsClosed": true,
+      "allowedTemplates": [
+        "T-CONTACT",
+        "T-SCHEDULER",
+        "T-EBOOK"
+      ],
+      "assetRoles": []
+    },
+    "sections.proof.goals-band": {
+      "contract": "sections/proof.goals-band.json",
+      "nodeType": "proof.goals-band",
+      "category": "proof",
+      "settableContentProps": [
+        "goals",
+        "heading"
+      ],
+      "settableNodeProps": [
+        "section",
+        "required",
+        "repeatable",
+        "variant",
+        "content",
+        "motion"
+      ],
+      "motionFieldSet": [
+        "pattern",
+        "trigger",
+        "durationMs",
+        "easing",
+        "delayMs",
+        "staggerMs",
+        "leafSet",
+        "leafCount",
+        "scrollProgressRange",
+        "reducedMotionFallback",
+        "implementationStatus"
+      ],
+      "motionIsClosed": true,
+      "allowedTemplates": [
+        "T-PURPOSE"
+      ],
+      "assetRoles": []
+    },
+    "sections.proof.sdg-goals": {
+      "contract": "sections/proof.sdg-goals.json",
+      "nodeType": "proof.sdg-goals",
+      "category": "proof",
+      "settableContentProps": [
+        "goals",
+        "heading",
+        "intro"
+      ],
+      "settableNodeProps": [
+        "section",
+        "required",
+        "repeatable",
+        "variant",
+        "content",
+        "motion"
+      ],
+      "motionFieldSet": [
+        "pattern",
+        "trigger",
+        "durationMs",
+        "easing",
+        "delayMs",
+        "staggerMs",
+        "leafSet",
+        "leafCount",
+        "scrollProgressRange",
+        "reducedMotionFallback",
+        "implementationStatus"
+      ],
+      "motionIsClosed": true,
+      "allowedTemplates": [
+        "T-ESG",
+        "T-PURPOSE"
+      ],
+      "assetRoles": []
+    },
+    "sections.proof.stat-pills": {
+      "contract": "sections/proof.stat-pills.json",
+      "nodeType": "proof.stat-pills",
+      "category": "proof",
+      "settableContentProps": [
+        "stats"
+      ],
+      "settableNodeProps": [
+        "section",
+        "required",
+        "repeatable",
+        "variant",
+        "content",
+        "motion"
+      ],
+      "motionFieldSet": [
+        "pattern",
+        "trigger",
+        "durationMs",
+        "easing",
+        "delayMs",
+        "staggerMs",
+        "leafSet",
+        "leafCount",
+        "scrollProgressRange",
+        "reducedMotionFallback",
+        "implementationStatus"
+      ],
+      "motionIsClosed": true,
+      "allowedTemplates": [
+        "T-PILLAR"
+      ],
+      "assetRoles": []
+    },
+    "sections.proof.testimonial-wall": {
+      "contract": "sections/proof.testimonial-wall.json",
+      "nodeType": "proof.testimonial-wall",
+      "category": "proof",
+      "settableContentProps": [
+        "logos",
+        "testimonials"
+      ],
+      "settableNodeProps": [
+        "section",
+        "required",
+        "repeatable",
+        "variant",
+        "content",
+        "motion"
+      ],
+      "motionFieldSet": [
+        "pattern",
+        "trigger",
+        "durationMs",
+        "easing",
+        "delayMs",
+        "staggerMs",
+        "leafSet",
+        "leafCount",
+        "scrollProgressRange",
+        "reducedMotionFallback",
+        "implementationStatus"
+      ],
+      "motionIsClosed": true,
+      "allowedTemplates": [
+        "T-PRICING",
+        "T-REFERRAL"
+      ],
+      "assetRoles": [
+        "person.likeness",
+        "third-party.trademark",
+        "third-party.review-mark"
+      ]
+    },
+    "sections.referral.earnings-tiers": {
+      "contract": "sections/referral.earnings-tiers.json",
+      "nodeType": "referral.earnings-tiers",
+      "category": "pricing",
+      "settableContentProps": [
+        "heading",
+        "tiers"
+      ],
+      "settableNodeProps": [
+        "section",
+        "required",
+        "repeatable",
+        "variant",
+        "content",
+        "motion"
+      ],
+      "motionFieldSet": [
+        "pattern",
+        "trigger",
+        "durationMs",
+        "easing",
+        "delayMs",
+        "staggerMs",
+        "leafSet",
+        "leafCount",
+        "scrollProgressRange",
+        "reducedMotionFallback",
+        "implementationStatus"
+      ],
+      "motionIsClosed": true,
+      "allowedTemplates": [
+        "T-REFERRAL"
+      ],
+      "assetRoles": []
+    },
+    "sections.story.hero-quote": {
+      "contract": "sections/story.hero-quote.json",
+      "nodeType": "story.hero-quote",
+      "category": "story",
+      "settableContentProps": [
+        "authorName",
+        "authorRole",
+        "quote"
+      ],
+      "settableNodeProps": [
+        "section",
+        "required",
+        "repeatable",
+        "variant",
+        "content",
+        "motion"
+      ],
+      "motionFieldSet": [
+        "pattern",
+        "trigger",
+        "durationMs",
+        "easing",
+        "delayMs",
+        "staggerMs",
+        "leafSet",
+        "leafCount",
+        "scrollProgressRange",
+        "reducedMotionFallback",
+        "implementationStatus"
+      ],
+      "motionIsClosed": true,
+      "allowedTemplates": [
+        "T-STORY"
+      ],
+      "assetRoles": [
+        "person.likeness",
+        "editorial.hero-image"
+      ]
+    },
+    "sections.story.meta-prose": {
+      "contract": "sections/story.meta-prose.json",
+      "nodeType": "story.meta-prose",
+      "category": "story",
+      "settableContentProps": [],
+      "settableNodeProps": [
+        "section",
+        "required",
+        "repeatable",
+        "variant",
+        "content",
+        "motion"
+      ],
+      "motionFieldSet": [
+        "pattern",
+        "trigger",
+        "durationMs",
+        "easing",
+        "delayMs",
+        "staggerMs",
+        "leafSet",
+        "leafCount",
+        "scrollProgressRange",
+        "reducedMotionFallback",
+        "implementationStatus"
+      ],
+      "motionIsClosed": true,
+      "allowedTemplates": [
+        "T-STORY"
+      ],
+      "assetRoles": [
+        "third-party.trademark",
+        "editorial.hero-image"
+      ]
+    }
+  },
+  "forbidden": [
+    "Any section id not listed under `sections`.",
+    "Any content property not listed in that section's `settableContentProps`.",
+    "Any motion field not in that section's `motionFieldSet` \u2014 the motion object is closed.",
+    "Any assetRole not in assets/asset-roles.json's `generationPolicyEnum` scope.",
+    "Any hover, focus or active state. The site has exactly three hover utilities site-wide and no focus styling at all; inventing interactive state is a fidelity break.",
+    "Any gradient or box-shadow. Both are zero site-wide.",
+    "Any per-instance colour, radius or spacing literal \u2014 see tokens/llm/token-policy.json."
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "$id": "sections.listing.blog-rows",
+  "layer": "sections",
+  "motionFieldSet": [
+    "pattern",
+    "trigger",
+    "durationMs",
+    "easing",
+    "delayMs",
+    "staggerMs",
+    "leafSet",
+    "leafCount",
+    "scrollProgressRange",
+    "reducedMotionFallback",
+    "implementationStatus"
+  ],
+  "motionIsClosed": true,
+  "category": "listing",
+  "purpose": "The whole blog, as one vertical column of split image/copy rows.",
+  "composes": [
+    "components/card.blog-row"
+  ],
+  "content": {
+    "rows": {
+      "count": 53,
+      "countBasis": "recomputed: src/data/blogPosts.js exports 53 posts"
+    },
+    "additionalProperties": false
+  },
+  "geometry": "one vertical stack, pitch a constant 531.98px @1280; list height 28248.5px; the inner bare div shrink-wraps to the row width (1015.69px), which is what centres the column",
+  "constraints": {
+    "onePerPage": true,
+    "allowedTemplates": [
+      "T-BLOG-INDEX"
+    ]
+  },
+  "motion": {
+    "pattern": "none",
+    "trigger": "none",
+    "delayMs": 0,
+    "staggerMs": 0,
+    "leafSet": "CARD_LEAVES",
+    "leafCount": 159,
+    "reducedMotionFallback": "leaves-held-at-rotate-only-transform",
+    "implementationStatus": "specified-not-yet-animated",
+    "note": "53 x 3 = 159 CARD_LEAVES rendered in their initial pre-drift state. NO card stagger, NO entrance animation, NO scroll-linked motion."
+  },
+  "responsive": {
+    "all": "ONE column at EVERY viewport. It is not a grid."
+  },
+  "assetRole": "editorial.hero-image",
+  "negatives": [
+    "IT IS NOT A GRID",
+    "no pagination",
+    "no load-more",
+    "no filters",
+    "no tag chips",
+    "no search",
+    "no sort",
+    "all 53 posts render in one list"
+  ],
+  "measuredFrom": "src/pages/BlogIndex.jsx:6-27",
+  "implementedBy": "src/pages/BlogIndex.jsx",
+  "motionClosureScope": "CLOSED for PageSpec emission: a generated node's `motion` object may contain ONLY the fields in motionFieldSet, enforced by schema/pagespec.schema.json (additionalProperties:false) and the MOTION_OBJECT_IS_CLOSED rule. The keys in motionDocumentationFields below are contract-level documentation carried by THIS file for human and retrieval use; they are NOT settable on a PageSpec node.",
+  "motionDocumentationFields": [
+    "note"
+  ]
+}

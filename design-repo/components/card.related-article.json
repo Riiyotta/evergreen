@@ -1,0 +1,17 @@
+{
+  "$id": "components.card.related-article",
+  "layer": "components",
+  "purpose": "One of exactly two 'More articles' cards at the foot of a blog article.",
+  "tokens": {
+    "surface": "surface.card",
+    "border": "border.default",
+    "radius": "radius.card"
+  },
+  "geometry": "outer mt-[7.6em] w-[42em] h 334.20; card 447.98x304.20, px-[2em], mb 30px",
+  "count": {
+    "exact": 2
+  },
+  "states": "No hover, no active, no focus, no transition, no box-shadow.",
+  "measuredFrom": "src/components/RelatedCard.jsx:1-46",
+  "criticalNote": "This is NOT components/card.link: it carries 3 CARD_LEAVES, has no excerpt, centres its content on both axes, and its CTA line IS underlined (its anchor has no `no-underline`, unlike card.link's)."
+}

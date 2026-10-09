@@ -1,0 +1,50 @@
+{
+  "$id": "tokens.foundation.interaction",
+  "layer": "00-foundation",
+  "description": "The COMPLETE interactive-state inventory for the whole site. This is a closed list verified by `grep -rno 'hover:[a-z-]*' src/`.",
+  "hoverStates": [
+    {
+      "selector": "nav text links",
+      "utility": "hover:underline",
+      "transition": "none (instant)",
+      "measuredFrom": "src/components/Nav.jsx:67"
+    },
+    {
+      "selector": "footer links (3 columns + legal row)",
+      "utility": "hover:underline",
+      "transition": "none (instant)",
+      "measuredFrom": "src/components/Footer.jsx:178"
+    },
+    {
+      "selector": "BadgeLink eyebrow pill",
+      "utility": "hover:bg-white",
+      "transition": "transition-colors 150ms cubic-bezier(0.4,0,0.2,1)",
+      "measuredFrom": "src/components/BadgeLink.jsx:18"
+    }
+  ],
+  "hoverGate": {
+    "mechanism": "future.hoverOnlyWhenSupported",
+    "effect": "every hover: utility compiles inside @media (hover: hover), matching the v4 original",
+    "measuredFrom": "tailwind.config.js:13"
+  },
+  "RULES": [
+    "There is NO hover, active or focus state on ANY button, card, logo, image, pill, stat or form control anywhere on the site.",
+    "Computed `outline: none` and `box-shadow: none` on every form control. The only focus affordance is the UA default on native controls.",
+    "There is EXACTLY ONE transitioning element inside <main> on a content route: the BadgeLink eyebrow pill.",
+    "MessageCard's category badge is VISUALLY IDENTICAL to BadgeLink but has NO hover and NO transition. Same visual, different behaviour — never propagate BadgeLink's hover to it.",
+    "A GENERATOR MUST NOT INVENT A HOVER, ACTIVE OR FOCUS STATE. Adding one is a fidelity regression, not an improvement."
+  ],
+  "disabledStates": [
+    {
+      "selector": "SubmitButton",
+      "utility": "disabled:opacity-70",
+      "label": "'Please wait...' (three dots, not an ellipsis)",
+      "measuredFrom": "src/components/form/SubmitButton.jsx:6-15"
+    },
+    {
+      "selector": "lead-magnet submit",
+      "utility": "disabled:opacity-70",
+      "measuredFrom": "src/components/blocks/LeadMagnetForm.jsx:77-83"
+    }
+  ]
+}

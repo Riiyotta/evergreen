@@ -1,0 +1,28 @@
+{
+  "$id": "components.block.leaf-divider",
+  "layer": "components",
+  "purpose": "The full-bleed decorative band that separates two sections.",
+  "composes": [
+    "components/block.leaf-layer",
+    "primitives/rule.divider-line"
+  ],
+  "geometry": "band w-[120em] -mt-[3em], h-[15em] at z-[200]; 2px black rule at z-[201]; total 161.98px @1280",
+  "containerNote": "Does NOT use the standard max-w-[1920px] px-[6em] container — the 120em band is mx-auto directly inside the section, so at 1280 it spans the full viewport. Adding the gutter wrapper would push it into horizontal overflow.",
+  "bandColour": {
+    "values": [
+      "bg-cream",
+      "bg-cream-dark",
+      "bg-leaf"
+    ],
+    "RULE": "THE BAND COLOUR FOLLOWS THE SECTION ABOVE IT. It is not a fixed default; it is a per-instance decision set by the `band` prop. cream on the homepage, cream-dark after a dark section, bg-leaf after /our-purpose's Goals band."
+  },
+  "states": "No hover, no active, no focus, no transition, no box-shadow.",
+  "measuredFrom": "src/components/LeafDivider.jsx:28-53",
+  "accessibility": "the whole <section> is aria-hidden=\"true\"",
+  "leaves": {
+    "set": "DIVIDER_LEAVES",
+    "count": 12,
+    "all": "marketing-drift-leaf",
+    "pattern": "all `from: [0, -yEm]` vertical drop-in, 1500ms, no stagger"
+  }
+}

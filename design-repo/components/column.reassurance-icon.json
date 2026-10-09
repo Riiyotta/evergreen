@@ -1,0 +1,17 @@
+{
+  "$id": "components.column.reassurance-icon",
+  "layer": "components",
+  "purpose": "Icon + one sans body line, in the final-CTA 3-up reassurance row.",
+  "geometry": "asymmetric per-column widths 25em / 29em / 25em, with per-column phone/mini overrides",
+  "content": {
+    "text": {
+      "maxWords": 11,
+      "copyPolicy": "verbatim-locked"
+    }
+  },
+  "maxWordsBasis": "counted from the real PRICING_COLUMNS array",
+  "states": "No hover, no active, no focus, no transition, no box-shadow.",
+  "measuredFrom": "src/components/CtaSection.jsx:33-49",
+  "assetRole": "brand.icon",
+  "criticalNote": "NOT the same component as column.icon-feature-serif: this one is fixed-em width with a sans body and no serif sub-heading. The per-column mini overrides differ (col 1 mb-[4.6em], col 3 mb-[4.2em]) and are reproduced exactly rather than normalised."
+}

@@ -1,0 +1,59 @@
+{
+  "$id": "sections.listing.more-articles",
+  "layer": "sections",
+  "motionFieldSet": [
+    "pattern",
+    "trigger",
+    "durationMs",
+    "easing",
+    "delayMs",
+    "staggerMs",
+    "leafSet",
+    "leafCount",
+    "scrollProgressRange",
+    "reducedMotionFallback",
+    "implementationStatus"
+  ],
+  "motionIsClosed": true,
+  "category": "listing",
+  "purpose": "Exactly two related articles at the foot of a blog article.",
+  "composes": [
+    "components/card.related-article"
+  ],
+  "content": {
+    "heading": {
+      "maxWords": 8,
+      "copyPolicy": "verbatim-locked"
+    },
+    "cards": {
+      "count": 2
+    },
+    "additionalProperties": false
+  },
+  "geometry": "block y 7035.59 h 511.88 @1280; inner mt-[7em] flex-wrap justify-between; card row mt-[3em] items-stretch justify-around",
+  "constraints": {
+    "onePerPage": true,
+    "allowedTemplates": [
+      "T-ARTICLE"
+    ],
+    "note": "ALWAYS present on a blog article."
+  },
+  "motion": {
+    "pattern": "leaf-drift",
+    "trigger": "whileInView",
+    "durationMs": 1300,
+    "easing": "cubic-bezier(0.455, 0.03, 0.515, 0.955)",
+    "delayMs": 0,
+    "staggerMs": 0,
+    "leafSet": "CARD_LEAVES",
+    "leafCount": 6,
+    "reducedMotionFallback": "leaves-held-at-rotate-only-transform",
+    "implementationStatus": "specified-not-yet-animated"
+  },
+  "responsive": {
+    "max-wf-tablet": "the card row becomes flex-col and centres"
+  },
+  "measuredFrom": "src/pages/BlogPost.jsx:120-137",
+  "implementedBy": "src/pages/BlogPost.jsx",
+  "motionClosureScope": "CLOSED for PageSpec emission: a generated node's `motion` object may contain ONLY the fields in motionFieldSet, enforced by schema/pagespec.schema.json (additionalProperties:false) and the MOTION_OBJECT_IS_CLOSED rule. The keys in motionDocumentationFields below are contract-level documentation carried by THIS file for human and retrieval use; they are NOT settable on a PageSpec node."
+}

@@ -1,0 +1,58 @@
+{
+  "$id": "sections.form.contact-card",
+  "layer": "sections",
+  "motionFieldSet": [
+    "pattern",
+    "trigger",
+    "durationMs",
+    "easing",
+    "delayMs",
+    "staggerMs",
+    "leafSet",
+    "leafCount",
+    "scrollProgressRange",
+    "reducedMotionFallback",
+    "implementationStatus"
+  ],
+  "motionIsClosed": true,
+  "category": "form",
+  "purpose": "Let a visitor send a message, with the alternative contact routes above it.",
+  "composes": [
+    "components/card.form-shell",
+    "components/form.contact"
+  ],
+  "content": {
+    "introParagraph": {
+      "maxWords": 24,
+      "copyPolicy": "verbatim-locked"
+    },
+    "additionalProperties": false
+  },
+  "geometry": "section y 45 h 1370.83 @1280; intro `max-w-[60ch]` (711.08px) over 2 lines with a real trailing <br>",
+  "constraints": {
+    "onePerPage": true,
+    "allowedTemplates": [
+      "T-CONTACT"
+    ]
+  },
+  "motion": {
+    "pattern": "leaf-drift",
+    "trigger": "whileInView",
+    "durationMs": 1300,
+    "easing": "cubic-bezier(0.455, 0.03, 0.515, 0.955)",
+    "delayMs": 0,
+    "staggerMs": 0,
+    "leafSet": "CARD_LEAVES",
+    "leafCount": 3,
+    "reducedMotionFallback": "leaves-held-at-rotate-only-transform",
+    "implementationStatus": "specified-not-yet-animated"
+  },
+  "responsive": {
+    "max-wf-phone": "the card wrapper becomes flex-col"
+  },
+  "container": "ZERO-GUTTER: mx-auto -mt-[3em] w-full max-w-[1920px] px-0 max-wf-tablet:px-0",
+  "externalLinks": "The mailto: address and the Notion help-centre link render with NO href. The /schedule-a-demo link IS internal and stays live.",
+  "measuredFrom": "src/pages/Contact.jsx:25-59",
+  "implementedBy": "src/pages/Contact.jsx",
+  "motionClosureScope": "CLOSED for PageSpec emission: a generated node's `motion` object may contain ONLY the fields in motionFieldSet, enforced by schema/pagespec.schema.json (additionalProperties:false) and the MOTION_OBJECT_IS_CLOSED rule. The keys in motionDocumentationFields below are contract-level documentation carried by THIS file for human and retrieval use; they are NOT settable on a PageSpec node."
+}

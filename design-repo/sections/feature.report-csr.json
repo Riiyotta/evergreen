@@ -1,0 +1,77 @@
+{
+  "$id": "sections.feature.report-csr",
+  "layer": "sections",
+  "motionFieldSet": [
+    "pattern",
+    "trigger",
+    "durationMs",
+    "easing",
+    "delayMs",
+    "staggerMs",
+    "leafSet",
+    "leafCount",
+    "scrollProgressRange",
+    "reducedMotionFallback",
+    "implementationStatus"
+  ],
+  "motionIsClosed": true,
+  "category": "feature",
+  "purpose": "Two stacked rows: engagement/carbon reporting, then the CSR badge claim.",
+  "content": {
+    "row1Heading": {
+      "maxWords": 9,
+      "copyPolicy": "verbatim-locked"
+    },
+    "row1Bullets": {
+      "count": 4,
+      "maxWords": 16,
+      "copyPolicy": "verbatim-locked"
+    },
+    "row2Heading": {
+      "maxWords": 7,
+      "copyPolicy": "verbatim-locked"
+    },
+    "row2Paragraph": {
+      "maxWords": 21,
+      "copyPolicy": "verbatim-locked"
+    },
+    "additionalProperties": false
+  },
+  "maxWordsBasis": "word-counted from the real strings in ReportCsrSection.jsx",
+  "geometry": "left visual column w-[39.1132em]; right copy column ml-[9.91014em] w-[50em]",
+  "rowCount": 2,
+  "constraints": {
+    "onePerPage": true,
+    "allowedTemplates": [
+      "T-HOME"
+    ]
+  },
+  "motion": {
+    "pattern": "leaf-drift",
+    "trigger": "whileInView",
+    "durationMs": 1300,
+    "easing": "cubic-bezier(0.455, 0.03, 0.515, 0.955)",
+    "delayMs": 0,
+    "staggerMs": 0,
+    "leafSet": "CARD_LEAVES",
+    "leafCount": 3,
+    "reducedMotionFallback": "leaves-held-at-rotate-only-transform",
+    "implementationStatus": "specified-not-yet-animated"
+  },
+  "responsive": {
+    "max-wf-tablet": "column gap drops to 5.5em",
+    "max-wf-phone": "flex-col; visual column widens to 40em",
+    "max-wf-mini": "visual column 34em; copy column ml-0 w-auto"
+  },
+  "assetRoles": [
+    "product.screenshot",
+    "product.badge",
+    "brand.leaf-art"
+  ],
+  "quirk": "Row 2 appends `static z-[1]` \u2014 the original overrides the row's own positioning context there because that row carries no leaves. Keep it.",
+  "wrapNote": "The row-1 h2 is the heading the serif substitution was validated against: 284.1px / 4 lines before `size-adjust: 92.44%`, 213.1px / 3 lines after (target 213.09).",
+  "measuredFrom": "src/components/ReportCsrSection.jsx:40-127",
+  "implementedBy": "src/components/ReportCsrSection.jsx",
+  "reuseNote": "NOT reused by T-PARTNER \u2014 see sections/feature.seeds#reuseNote.",
+  "motionClosureScope": "CLOSED for PageSpec emission: a generated node's `motion` object may contain ONLY the fields in motionFieldSet, enforced by schema/pagespec.schema.json (additionalProperties:false) and the MOTION_OBJECT_IS_CLOSED rule. The keys in motionDocumentationFields below are contract-level documentation carried by THIS file for human and retrieval use; they are NOT settable on a PageSpec node."
+}

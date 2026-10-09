@@ -1,0 +1,17 @@
+{
+  "$id": "primitives.link.inert-external",
+  "layer": "primitives",
+  "purpose": "The site-wide pattern for an off-domain link: a real <a> with its label, classes and surrounding markup intact but NO href attribute.",
+  "states": {
+    "hover": null,
+    "active": null,
+    "focus": null,
+    "disabled": null,
+    "transition": null,
+    "boxShadow": "none",
+    "note": "No interactive state exists. A generator must not add one."
+  },
+  "measuredFrom": "src/components/SourcesList.jsx:12-27",
+  "buildConstraint": "'NO EXTERNAL REQUESTS' is a deliberate build constraint of this clone, not a bug. Every off-domain link renders without an href; every asset is local under /assets/. The original's Calendly iframe embeds are replaced by a static placeholder and nothing loads assets.calendly.com.",
+  "honestNote": "`grep -rn 'https\\?://' src/` is NOT empty, contrary to a build brief's claim: src/data/alternatives.js retains real competitor URLs as DATA in its `sources[]` rows (e.g. https://bonusly.com/pricing), and several component comments quote a real URL. The constraint holds at the RENDER layer only — SourcesList renders every source as an <a> with no href, so no off-domain request is ever issued."
+}

@@ -1,0 +1,145 @@
+{
+  "$id": "tokens.foundation.spacing",
+  "layer": "00-foundation",
+  "description": "Spacing is `em` of the .marketing-root engine throughout, with a small, enumerated set of deliberate fixed-px exceptions.",
+  "universalBlockRule": {
+    "classString": "my-[4.2em] text-center max-wf-mini:my-[3.5em]",
+    "resolvedAt1280": "margin-block 44.8px",
+    "appliesTo": "nearly every direct child of a section wrapper, on every route",
+    "measuredFrom": "src/lib/classes.js:1-4"
+  },
+  "sectionPaddingPairs": {
+    "standard-dark": {
+      "top": "18em",
+      "bottom": "5em",
+      "usedBy": "every shared final-CTA section and most cream-dark sections",
+      "measuredFrom": "src/pages/Home.jsx:41-44"
+    },
+    "social-proof": {
+      "top": "15em",
+      "bottom": "10em",
+      "usedBy": "/pricing section C and /referral section D ONLY",
+      "measuredFrom": "src/pages/Pricing.jsx:176-178"
+    },
+    "home-section-f": {
+      "top": "8em",
+      "bottom": "0",
+      "usedBy": "homepage section F only",
+      "measuredFrom": "src/pages/Home.jsx:31-34"
+    },
+    "content-page": {
+      "top": "0 (inner pt-[10.2em])",
+      "bottom": "5em",
+      "usedBy": "T-INDEX, T-DETAIL, T-PILLAR, T-ARTICLE, T-LEGAL, T-COMPARISON",
+      "measuredFrom": "src/templates/TIndex.jsx:25-27"
+    },
+    "sdg": {
+      "top": "18em",
+      "bottom": "0",
+      "usedBy": "SdgSection only",
+      "measuredFrom": "src/components/SdgSection.jsx:59"
+    },
+    "referral-tiers": {
+      "top": "0",
+      "bottom": "5em",
+      "usedBy": "/referral section B only",
+      "measuredFrom": "src/pages/Referral.jsx:74-75"
+    }
+  },
+  "heroTopPadding": {
+    "value": "10.2em",
+    "miniOverride": "11.8em",
+    "measuredFrom": "src/templates/blocks.jsx:25"
+  },
+  "namedColumnWidths": {
+    "34.4013em": "left visual column (SeedsSection, ESG rows, partner features, case-study card item)",
+    "39.1132em": "left visual column (ReportCsrSection rows)",
+    "50em": "right copy column; contact/referral form card wrapper",
+    "50.4013em": "demo/Calendly card wrapper",
+    "70.3em": "centred heading / prose / dl frame (749.86px @1280)",
+    "81.25em": "homepage hero screenshot + scroll-track wrapper",
+    "87em": "message grid and case-study grid wrapper (927.98px @1280)",
+    "95.2213em": "blog listing row (1015.69px @1280)",
+    "108em": "hero inner frame",
+    "120em": "leaf divider band",
+    "42em": "every card (447.98px @1280)",
+    "measuredFrom": "src/templates/blocks.jsx:27-29"
+  },
+  "fixedPxExceptions": {
+    "description": "The complete list of lengths that are literal px in the original and therefore do NOT scale with the em engine. Do not convert these to em.",
+    "items": [
+      {
+        "what": "/esg hero photo",
+        "value": "w-[800px] mt-[40px]",
+        "measuredFrom": "src/pages/Esg.jsx:110-121"
+      },
+      {
+        "what": "divider black rule",
+        "value": "h-[2px]",
+        "measuredFrom": "src/components/LeafDivider.jsx:51"
+      },
+      {
+        "what": "announcement banner padding",
+        "value": "py-[10px]",
+        "measuredFrom": "src/components/AnnouncementBanner.jsx:7"
+      },
+      {
+        "what": "ArkettaCtaPanel padding / gap / button margin",
+        "value": "px-[140px] py-[100px]; 40px 20px at <=479px; gap-[15px]; mt-[20px]",
+        "measuredFrom": "src/components/ArkettaCtaPanel.jsx:5-10"
+      },
+      {
+        "what": "FormDone padding",
+        "value": "p-[20px]",
+        "measuredFrom": "src/components/form/FormDone.jsx:7-10"
+      },
+      {
+        "what": "FormError padding",
+        "value": "p-[10px]",
+        "measuredFrom": "src/components/form/FormError.jsx:8"
+      },
+      {
+        "what": "lead-magnet form gap",
+        "value": "gap-[10px]",
+        "measuredFrom": "src/components/blocks/LeadMagnetForm.jsx:46-49"
+      },
+      {
+        "what": "richtext list margin/padding",
+        "value": "margin-bottom 10px, padding-left 40px",
+        "measuredFrom": "src/index.css:367-373"
+      },
+      {
+        "what": "richtext figure margin",
+        "value": "0 auto 10px",
+        "measuredFrom": "src/index.css:406-409"
+      },
+      {
+        "what": "Calendly widget box height",
+        "value": "630px fixed",
+        "measuredFrom": "src/components/CalendlyCard.jsx:5-8"
+      },
+      {
+        "what": "recognition line height",
+        "value": "h-[1.5px], h-px at <=991",
+        "measuredFrom": "src/components/Hero.jsx:198-201"
+      },
+      {
+        "what": "ContactForm bottom margin",
+        "value": "mb-[15px]",
+        "measuredFrom": "src/components/form/ContactForm.jsx:31"
+      }
+    ]
+  },
+  "chUnits": {
+    "description": "`ch` values MUST stay in `ch`. `49ch` resolves to 580.714px on an 18.667px <p> but 1981.52px on a 65.333px h1 — flattening either to px breaks the layout.",
+    "values": {
+      "49ch": "the default text-column cap (paragraphs, h1, banner copy)",
+      "59ch": "lead-magnet CTA paragraph; /case-studies sub-paragraph",
+      "60ch": "pricing / contact / demo / referral / ebook intro paragraphs",
+      "80ch": "lead-magnet form column (444.02px @1280 — root em, not paragraph em)",
+      "40ch": "/esg veritree paragraph",
+      "11ch": "IconFeatureColumn serif sub-heading"
+    },
+    "measuredFrom": "src/templates/blocks.jsx:27-29"
+  }
+}

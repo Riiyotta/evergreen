@@ -1,0 +1,31 @@
+{
+  "$id": "components.grid.link-card",
+  "layer": "components",
+  "purpose": "The universal flat card grid.",
+  "composes": [
+    "components/card.link"
+  ],
+  "geometry": "ul.flex w-full flex-wrap justify-center gap-[3em]; cards 42em; 2 columns at 1280, 1 below 768; rows stretch",
+  "responsive": {
+    "1280": "2 columns",
+    "<=767px": "1 column (wrapper becomes flex-col)",
+    "note": "Row pitch varies because align-items is stretch and card heights are content-driven."
+  },
+  "motion": {
+    "pattern": "none",
+    "reducedMotionFallback": "none required — nothing animates",
+    "RULE": "ZERO animation. No whileInView, no stagger, no per-card delay. Static from first paint."
+  },
+  "states": "No hover, no active, no focus, no transition, no box-shadow.",
+  "measuredFrom": "src/templates/blocks.jsx:85-101",
+  "negatives": [
+    "no pagination",
+    "no load-more",
+    "no filters",
+    "no tag chips",
+    "no search",
+    "no sort",
+    "no A-Z nav",
+    "no ordering control"
+  ]
+}

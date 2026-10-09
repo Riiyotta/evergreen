@@ -1,0 +1,21 @@
+{
+  "$id": "components.card.calendly",
+  "layer": "components",
+  "purpose": "T-PARTNER's hero card, standing where the homepage puts its product screenshot.",
+  "tokens": {
+    "surface": "surface.card",
+    "border": "border.default",
+    "radius": "radius.card"
+  },
+  "geometry": "wrapper 50.4013em (537.61px), margin-top 81.067px; card 537.61x676.66, p-[2em] (21.333px), min-h 266.67px; widget box 490.95x630px — the 630 is a LITERAL px height that does not scale with the em engine",
+  "states": "No hover, no active, no focus, no transition, no box-shadow.",
+  "measuredFrom": "src/components/CalendlyCard.jsx:1-46",
+  "externalEmbedPolicy": "The ORIGINAL embeds a live third-party Calendly iframe plus widget.js. This clone strips every external domain by design, so the interior is the static components/block.scheduler-placeholder — the same stand-in /schedule-a-demo already uses. Nothing loads assets.calendly.com and nothing is interactive.",
+  "leaves": {
+    "set": "HERO_LEAVES",
+    "count": 12,
+    "composition": "4 marketing-drift-leaf + 8 marketing-scroll-leaf marketing-responsive-leaf",
+    "correction": "CLONE_SPEC_CONTENT_B §5.5 says only the 8 scroll-tracked hero leaves are used and the 4 pure-drift ones are not. The RAW MEASUREMENT disagrees: _reference/recon-b/partner_50pros.json `motion[2..13]` shows all 12 present, 4 drift + 8 scroll. The measurement is followed. Raw recon beats spec prose."
+  },
+  "scrollTrack": "this wrapper carries data-scroll-track=\"hero\" — it replaces the homepage screenshot wrapper that useScroll measures"
+}

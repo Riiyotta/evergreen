@@ -1,0 +1,60 @@
+{
+  "$id": "sections.content.section-heading",
+  "layer": "sections",
+  "motionFieldSet": [
+    "pattern",
+    "trigger",
+    "durationMs",
+    "easing",
+    "delayMs",
+    "staggerMs",
+    "leafSet",
+    "leafCount",
+    "scrollProgressRange",
+    "reducedMotionFallback",
+    "implementationStatus"
+  ],
+  "motionIsClosed": true,
+  "category": "content",
+  "purpose": "A centred display-h2 that labels the group below it.",
+  "composes": [
+    "components/block.content-heading"
+  ],
+  "content": {
+    "heading": {
+      "maxWords": 8,
+      "copyPolicy": "verbatim-locked"
+    },
+    "additionalProperties": false
+  },
+  "maxWordsBasis": "longest real heading across the four T-DETAIL sequences, T-COMPARISON and T-PILLAR",
+  "geometry": "frame w-[70.3em]; 71.03px for one line, 142.06 for two",
+  "constraints": {
+    "maxPerPage": 12,
+    "maxPerPageBasis": "T-DETAIL-VALUES emits up to 8 headings; T-COMPARISON emits 9; T-PILLAR emits 12 counting its reading-list h3 labels. 12 is the real ceiling.",
+    "variantKeyed": true
+  },
+  "motion": {
+    "pattern": "none",
+    "trigger": "none",
+    "delayMs": 0,
+    "staggerMs": 0,
+    "reducedMotionFallback": "none-required-static",
+    "implementationStatus": "static-by-design",
+    "note": "Nothing in this section animates."
+  },
+  "responsive": {
+    "max-wf-phone": "frame w-auto",
+    "max-wf-mini": "mt-[3em], heading drops to 3.9em"
+  },
+  "criticalRule": "line-height 1.48. DIFFERENT ROLE from .marketing-rich-text h2 (1.2). DO NOT UNIFY THEM.",
+  "measuredFrom": "src/templates/blocks.jsx:38-50",
+  "implementedBy": [
+    "src/templates/blocks.jsx (SectionHeading)",
+    "src/components/ContentHeading.jsx"
+  ],
+  "motionClosureScope": "CLOSED for PageSpec emission: a generated node's `motion` object may contain ONLY the fields in motionFieldSet, enforced by schema/pagespec.schema.json (additionalProperties:false) and the MOTION_OBJECT_IS_CLOSED rule. The keys in motionDocumentationFields below are contract-level documentation carried by THIS file for human and retrieval use; they are NOT settable on a PageSpec node.",
+  "motionDocumentationFields": [
+    "note"
+  ]
+}

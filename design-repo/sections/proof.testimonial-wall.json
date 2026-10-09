@@ -1,0 +1,75 @@
+{
+  "$id": "sections.proof.testimonial-wall",
+  "layer": "sections",
+  "motionFieldSet": [
+    "pattern",
+    "trigger",
+    "durationMs",
+    "easing",
+    "delayMs",
+    "staggerMs",
+    "leafSet",
+    "leafCount",
+    "scrollProgressRange",
+    "reducedMotionFallback",
+    "implementationStatus"
+  ],
+  "motionIsClosed": true,
+  "category": "proof",
+  "purpose": "Two attributed customer quotes, a six-logo customer strip and the G2 rating.",
+  "composes": [
+    "components/card.testimonial",
+    "components/row.logo-strip",
+    "components/block.g2-rating"
+  ],
+  "content": {
+    "testimonials": {
+      "count": 2,
+      "copyPolicy": "verbatim-locked"
+    },
+    "logos": {
+      "count": 6,
+      "copyPolicy": "verbatim-locked"
+    },
+    "additionalProperties": false
+  },
+  "geometry": "section height 1180.84 @1280; padding pt-[15em] pb-[10em] \u2014 NOT the 18em/5em of every other dark section",
+  "constraints": {
+    "onePerPage": true,
+    "allowedTemplates": [
+      "T-PRICING",
+      "T-REFERRAL"
+    ]
+  },
+  "motion": {
+    "pattern": "none",
+    "trigger": "none",
+    "delayMs": 0,
+    "staggerMs": 0,
+    "leafSet": "QUOTE_LEAVES",
+    "leafCount": 12,
+    "reducedMotionFallback": "none-required-static",
+    "implementationStatus": "static-by-design",
+    "RULE": "QUOTE_LEAVES are STATIC BY DESIGN (initial === animate, no class). A contract MUST FORBID animating them."
+  },
+  "responsive": {
+    "max-wf-tablet": "the pair wraps; card 2 gains mt-[14.4em] mb-[5em]; the logo strip becomes a 56em flex-wrap row with no left padding",
+    "max-wf-mini": "cards scale down via text-[0.8em]; the strip centres"
+  },
+  "assetRoles": [
+    "person.likeness",
+    "third-party.trademark",
+    "third-party.review-mark"
+  ],
+  "complianceNote": "REAL quotes from REAL named people at REAL named companies, with their REAL photographs. A generator must never invent a testimonial or a person, and must never attach an existing portrait to a new quote.",
+  "measuredFrom": "src/pages/Pricing.jsx:174-182",
+  "implementedBy": [
+    "src/pages/Pricing.jsx",
+    "src/components/socialProofB.jsx"
+  ],
+  "dedupeNote": "src/components/socialProofB.jsx used to hold its own byte-identical copies of all three blocks, because the /referral and /pricing extractions ran in parallel. It is now a thin DATA ADAPTER over the shared components, keeping its export names.",
+  "motionClosureScope": "CLOSED for PageSpec emission: a generated node's `motion` object may contain ONLY the fields in motionFieldSet, enforced by schema/pagespec.schema.json (additionalProperties:false) and the MOTION_OBJECT_IS_CLOSED rule. The keys in motionDocumentationFields below are contract-level documentation carried by THIS file for human and retrieval use; they are NOT settable on a PageSpec node.",
+  "motionDocumentationFields": [
+    "RULE"
+  ]
+}

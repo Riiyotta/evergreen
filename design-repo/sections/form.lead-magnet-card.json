@@ -1,0 +1,52 @@
+{
+  "$id": "sections.form.lead-magnet-card",
+  "layer": "sections",
+  "motionFieldSet": [
+    "pattern",
+    "trigger",
+    "durationMs",
+    "easing",
+    "delayMs",
+    "staggerMs",
+    "leafSet",
+    "leafCount",
+    "scrollProgressRange",
+    "reducedMotionFallback",
+    "implementationStatus"
+  ],
+  "motionIsClosed": true,
+  "category": "form",
+  "purpose": "The T-EBOOK download card.",
+  "composes": [
+    "components/form.lead-magnet",
+    "components/block.leaf-layer"
+  ],
+  "content": {
+    "additionalProperties": false
+  },
+  "geometry": "wrapper w-[50em] (533.33px) mt-[7.6em]; card 533.33x351.98, padding 45.007/42.667/32, min-height 266.67px, bg white, z-[100]",
+  "constraints": {
+    "onePerPage": true,
+    "allowedTemplates": [
+      "T-EBOOK"
+    ]
+  },
+  "motion": {
+    "pattern": "leaf-drift",
+    "trigger": "whileInView",
+    "durationMs": 1300,
+    "easing": "cubic-bezier(0.455, 0.03, 0.515, 0.955)",
+    "delayMs": 0,
+    "staggerMs": 0,
+    "leafSet": "CARD_LEAVES",
+    "leafCount": 3,
+    "reducedMotionFallback": "leaves-held-at-rotate-only-transform",
+    "implementationStatus": "specified-not-yet-animated"
+  },
+  "responsive": {
+    "max-wf-mini": "wrapper w-[90%]; card px-[2em]"
+  },
+  "measuredFrom": "src/pages/EbookPage.jsx:70-81",
+  "implementedBy": "src/pages/EbookPage.jsx",
+  "motionClosureScope": "CLOSED for PageSpec emission: a generated node's `motion` object may contain ONLY the fields in motionFieldSet, enforced by schema/pagespec.schema.json (additionalProperties:false) and the MOTION_OBJECT_IS_CLOSED rule. The keys in motionDocumentationFields below are contract-level documentation carried by THIS file for human and retrieval use; they are NOT settable on a PageSpec node."
+}

@@ -1,0 +1,62 @@
+{
+  "$id": "sections.content.leaf-spec-list",
+  "layer": "sections",
+  "motionFieldSet": [
+    "pattern",
+    "trigger",
+    "durationMs",
+    "easing",
+    "delayMs",
+    "staggerMs",
+    "leafSet",
+    "leafCount",
+    "scrollProgressRange",
+    "reducedMotionFallback",
+    "implementationStatus"
+  ],
+  "motionIsClosed": true,
+  "category": "content",
+  "purpose": "A leaf-marked definition list: specs, signals, obstacles or a programme outline.",
+  "composes": [
+    "components/block.leaf-dl"
+  ],
+  "content": {
+    "rows": {
+      "minItems": 3,
+      "maxItems": 10,
+      "maxItemsBasis": "recomputed over every glance/differs/signals/obstacles/program/vocabulary list in the real data. 3 on T-COMPARISON's 'at a glance', 4 on its 'how Evergreen differs', and 10 on T-PILLAR's vocabulary block."
+    },
+    "term": {
+      "maxWords": 2,
+      "copyPolicy": "verbatim-locked"
+    },
+    "definition": {
+      "maxWords": 36,
+      "copyPolicy": "measured-budget"
+    },
+    "additionalProperties": false
+  },
+  "constraints": {
+    "maxPerPage": 3,
+    "variantKeyed": true,
+    "maxPerPageBasis": "T-DETAIL-FOR emits two; T-COMPARISON emits two; T-PILLAR's vocabulary block adds a third."
+  },
+  "motion": {
+    "pattern": "none",
+    "trigger": "none",
+    "delayMs": 0,
+    "staggerMs": 0,
+    "reducedMotionFallback": "none-required-static",
+    "implementationStatus": "static-by-design",
+    "note": "Nothing in this section animates."
+  },
+  "responsive": {
+    "all": "the w-[70.3em] frame narrows with the em engine; no structural change"
+  },
+  "measuredFrom": "src/components/blocks/LeafDl.jsx:1-31",
+  "implementedBy": "src/components/blocks/LeafDl.jsx",
+  "motionClosureScope": "CLOSED for PageSpec emission: a generated node's `motion` object may contain ONLY the fields in motionFieldSet, enforced by schema/pagespec.schema.json (additionalProperties:false) and the MOTION_OBJECT_IS_CLOSED rule. The keys in motionDocumentationFields below are contract-level documentation carried by THIS file for human and retrieval use; they are NOT settable on a PageSpec node.",
+  "motionDocumentationFields": [
+    "note"
+  ]
+}

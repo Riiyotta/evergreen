@@ -1,0 +1,88 @@
+{
+  "$id": "sections.pricing.single-plan",
+  "layer": "sections",
+  "motionFieldSet": [
+    "pattern",
+    "trigger",
+    "durationMs",
+    "easing",
+    "delayMs",
+    "staggerMs",
+    "leafSet",
+    "leafCount",
+    "scrollProgressRange",
+    "reducedMotionFallback",
+    "implementationStatus"
+  ],
+  "motionIsClosed": true,
+  "category": "pricing",
+  "purpose": "Present the one flat price, the trial CTA, the install links and three reassurance columns.",
+  "composes": [
+    "components/card.price",
+    "primitives/button.trial-cta",
+    "components/row.platform-links",
+    "components/column.icon-feature-serif"
+  ],
+  "content": {
+    "h1": {
+      "maxWords": 4,
+      "copyPolicy": "verbatim-locked",
+      "value": "Fair pricing, massive impact"
+    },
+    "subParagraph": {
+      "maxWords": 11,
+      "copyPolicy": "verbatim-locked"
+    },
+    "smallPrint": {
+      "maxWords": 26,
+      "copyPolicy": "verbatim-locked"
+    },
+    "reassuranceColumns": {
+      "count": 3,
+      "copyPolicy": "verbatim-locked"
+    },
+    "additionalProperties": false
+  },
+  "maxWordsBasis": "word-counted from the real strings and FEATURE_COLUMNS array in Pricing.jsx",
+  "geometry": "section y 44.61 h 1280.80 @1280; wrapper has NO py; 6 ordered blocks (h1 / sub-p / price card / trial+small print / platform links / 3 serif columns)",
+  "constraints": {
+    "onePerPage": true,
+    "mustBeFirst": true,
+    "allowedTemplates": [
+      "T-PRICING"
+    ]
+  },
+  "motion": {
+    "pattern": "leaf-drift",
+    "trigger": "whileInView",
+    "durationMs": 1300,
+    "easing": "cubic-bezier(0.455, 0.03, 0.515, 0.955)",
+    "delayMs": 0,
+    "staggerMs": 0,
+    "leafSet": "CARD_LEAVES",
+    "leafCount": 3,
+    "reducedMotionFallback": "leaves-held-at-rotate-only-transform",
+    "implementationStatus": "specified-not-yet-animated"
+  },
+  "responsive": {
+    "max-wf-phone": "the hero frame becomes w-full flex-col; the 3-up row stacks and centres",
+    "max-wf-mini": "h1 drops to 3.9em; platform links stack with mb-[2.2em]"
+  },
+  "assetRoles": [
+    "product.screenshot",
+    "brand.icon",
+    "third-party.platform-logo",
+    "brand.leaf-art"
+  ],
+  "negatives": [
+    "NO tier grid",
+    "NO monthly/annual toggle",
+    "NO FAQ",
+    "NO comparison table",
+    "a single flat price"
+  ],
+  "complianceNote": "$3.99 per active user per month is a real published price. Never alter it.",
+  "measuredFrom": "src/pages/Pricing.jsx:102-169",
+  "implementedBy": "src/pages/Pricing.jsx",
+  "motionClosureScope": "CLOSED for PageSpec emission: a generated node's `motion` object may contain ONLY the fields in motionFieldSet, enforced by schema/pagespec.schema.json (additionalProperties:false) and the MOTION_OBJECT_IS_CLOSED rule. The keys in motionDocumentationFields below are contract-level documentation carried by THIS file for human and retrieval use; they are NOT settable on a PageSpec node."
+}

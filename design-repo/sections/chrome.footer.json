@@ -1,0 +1,71 @@
+{
+  "$id": "sections.chrome.footer",
+  "layer": "sections",
+  "motionFieldSet": [
+    "pattern",
+    "trigger",
+    "durationMs",
+    "easing",
+    "delayMs",
+    "staggerMs",
+    "leafSet",
+    "leafCount",
+    "scrollProgressRange",
+    "reducedMotionFallback",
+    "implementationStatus"
+  ],
+  "motionIsClosed": true,
+  "category": "chrome",
+  "purpose": "Newsletter signup, social links, three link columns and the legal row.",
+  "composes": [
+    "components/form.newsletter",
+    "primitives/link.footer",
+    "primitives/logo.brand-mark"
+  ],
+  "content": {
+    "columns": {
+      "count": 3,
+      "linkCounts": [
+        5,
+        4,
+        6
+      ],
+      "copyPolicy": "verbatim-locked"
+    },
+    "socials": {
+      "count": 3,
+      "copyPolicy": "verbatim-locked"
+    },
+    "legalLine": {
+      "maxWords": 9,
+      "copyPolicy": "verbatim-locked",
+      "value": "\u00a9 Evergreen \u2022 Made with \ud83d\udc9a in Helsinki, Finland"
+    },
+    "additionalProperties": false
+  },
+  "geometry": "bg-cream; wrapper py-[5em] (53.33px) plus the load-bearing -3em top margin; measured ~511px tall",
+  "constraints": {
+    "onePerPage": true,
+    "mustBeLast": true
+  },
+  "motion": {
+    "pattern": "none",
+    "trigger": "none",
+    "delayMs": 0,
+    "staggerMs": 0,
+    "reducedMotionFallback": "none-required-static",
+    "implementationStatus": "static-by-design",
+    "note": "Nothing in this section animates."
+  },
+  "responsive": {
+    "max-wf-mini": "the legal row becomes flex-col-reverse and left-aligns; links gain mb-[1.1em]"
+  },
+  "measuredFrom": "src/components/Footer.jsx:1-40",
+  "implementedBy": "src/components/Footer.jsx",
+  "renderedBy": "src/layout/Layout.jsx (once, on every route; OUTSIDE <main>'s overflow clip)",
+  "correction": "Footer link spacing is 21.6px, not the 12.8px CLONE_SPEC \u00a75.13 records: the `mb-[1.2em]` resolves against the element's own text-[1.6875em] (18px @1280).",
+  "motionClosureScope": "CLOSED for PageSpec emission: a generated node's `motion` object may contain ONLY the fields in motionFieldSet, enforced by schema/pagespec.schema.json (additionalProperties:false) and the MOTION_OBJECT_IS_CLOSED rule. The keys in motionDocumentationFields below are contract-level documentation carried by THIS file for human and retrieval use; they are NOT settable on a PageSpec node.",
+  "motionDocumentationFields": [
+    "note"
+  ]
+}

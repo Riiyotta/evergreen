@@ -1,0 +1,14 @@
+{
+  "$id": "components.block.leaf-bullets",
+  "layer": "components",
+  "purpose": "An unordered list where each item carries a small leaf glyph.",
+  "content": {
+    "item": {
+      "maxWords": 21,
+      "copyPolicy": "measured-budget"
+    }
+  },
+  "maxWordsBasis": "recomputed over every strengths/shortfalls/works/recognise/land/examples item in the real data",
+  "states": "No hover, no active, no focus, no transition, no box-shadow.",
+  "measuredFrom": "src/components/blocks/LeafBulletList.jsx:1-25"
+}

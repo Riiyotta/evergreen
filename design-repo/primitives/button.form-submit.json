@@ -1,0 +1,29 @@
+{
+  "$id": "primitives.button.form-submit",
+  "layer": "primitives",
+  "purpose": "Submit the contact or referral form.",
+  "tokens": {
+    "surface": "surface.inverse",
+    "text": "text.onInverse",
+    "radius": "radius.pillSecondary"
+  },
+  "geometry": "px-[1.4em] py-[9px]; label 1.75em / 1.7 / 700; measured 154.33x49.73 / 199.58x49.73",
+  "states": {
+    "hover": null,
+    "active": null,
+    "focus": null,
+    "disabled": "opacity 0.70, label 'Please wait...' (three dots, not an ellipsis)",
+    "transition": null,
+    "boxShadow": "none",
+    "note": "No interactive state exists. A generator must not add one."
+  },
+  "measuredFrom": "src/components/form/SubmitButton.jsx:6-15",
+  "label": {
+    "copyPolicy": "verbatim-locked",
+    "allowed": [
+      "Contact us",
+      "Submit Referral"
+    ],
+    "maxWords": 2
+  }
+}

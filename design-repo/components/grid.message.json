@@ -1,0 +1,22 @@
+{
+  "$id": "components.grid.message",
+  "layer": "components",
+  "purpose": "The ready-to-send message grid.",
+  "composes": [
+    "components/card.message",
+    "components/block.leaf-layer"
+  ],
+  "geometry": "wrapper w-[87em] max-w-full (927.98px @1280); ul.flex flex-wrap justify-center gap-[3em]",
+  "leaves": {
+    "set": "QUOTE_LEAVES",
+    "count": 6,
+    "static": true,
+    "RULE": "STATIC — no marketing-drift-leaf class, initial === animate. NEVER animate these. Cards sit above them at z-[100]."
+  },
+  "motion": {
+    "pattern": "none",
+    "reducedMotionFallback": "none required — nothing animates"
+  },
+  "states": "No hover, no active, no focus, no transition, no box-shadow.",
+  "measuredFrom": "src/components/MessageCard.jsx:40-53"
+}

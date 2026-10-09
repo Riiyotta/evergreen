@@ -1,0 +1,85 @@
+{
+  "$id": "sections.feature.seeds",
+  "layer": "sections",
+  "motionFieldSet": [
+    "pattern",
+    "trigger",
+    "durationMs",
+    "easing",
+    "delayMs",
+    "staggerMs",
+    "leafSet",
+    "leafCount",
+    "scrollProgressRange",
+    "reducedMotionFallback",
+    "implementationStatus"
+  ],
+  "motionIsClosed": true,
+  "category": "feature",
+  "purpose": "Explain the seed mechanic: how recognition becomes a real planted tree.",
+  "content": {
+    "heading": {
+      "maxWords": 11,
+      "copyPolicy": "verbatim-locked"
+    },
+    "bullets": {
+      "count": 3,
+      "maxWords": 16,
+      "copyPolicy": "verbatim-locked"
+    },
+    "statFigure": {
+      "maxWords": 1,
+      "copyPolicy": "verbatim-locked",
+      "value": "x3.5"
+    },
+    "statCaption": {
+      "maxWords": 16,
+      "copyPolicy": "verbatim-locked"
+    },
+    "valueBadge": {
+      "maxWords": 3,
+      "copyPolicy": "verbatim-locked",
+      "value": "Tagged Value: Grit"
+    },
+    "seedLine": {
+      "maxWords": 4,
+      "copyPolicy": "verbatim-locked",
+      "value": "Sue earned 3 seeds"
+    },
+    "additionalProperties": false
+  },
+  "maxWordsBasis": "word-counted from the real BULLETS array and inline strings in SeedsSection.jsx",
+  "geometry": "left visual column w-[34.4013em]; right copy column ml-[9.91014em] w-[50em] text-left; heading->bullets gap 6.60743em; bullet row mb-[4em]",
+  "constraints": {
+    "onePerPage": true,
+    "allowedTemplates": [
+      "T-HOME"
+    ]
+  },
+  "motion": {
+    "pattern": "leaf-drift",
+    "trigger": "whileInView",
+    "durationMs": 1300,
+    "easing": "cubic-bezier(0.455, 0.03, 0.515, 0.955)",
+    "delayMs": 0,
+    "staggerMs": 0,
+    "leafSet": "CARD_LEAVES",
+    "leafCount": 3,
+    "reducedMotionFallback": "leaves-held-at-rotate-only-transform",
+    "implementationStatus": "specified-not-yet-animated"
+  },
+  "responsive": {
+    "max-wf-tablet": "column gap drops to 5.5em",
+    "max-wf-phone": "becomes flex-col, centred, copy column mx-auto mt-[5em]",
+    "max-wf-mini": "copy column ml-0 w-auto; headings centre; bullet rows become flex-col with a 2em leaf above the text"
+  },
+  "assetRoles": [
+    "product.screenshot",
+    "brand.leaf-art"
+  ],
+  "verbatimQuirk": "'Evergeen' in the stat caption is the ORIGINAL'S TYPO and is reproduced verbatim. DO NOT CORRECT IT.",
+  "measuredFrom": "src/components/SeedsSection.jsx:27-121",
+  "implementedBy": "src/components/SeedsSection.jsx",
+  "reuseNote": "NOT reused by T-PARTNER. CLONE_SPEC_CONTENT_B \u00a78 claims the partner feature sections are 'the homepage's sections E and F verbatim'; measurement shows a DIFFERENT arrangement of the same assets and copy, implemented by a local FeatureSection in PartnerPage.jsx. SeedsSection is NOT used there.",
+  "motionClosureScope": "CLOSED for PageSpec emission: a generated node's `motion` object may contain ONLY the fields in motionFieldSet, enforced by schema/pagespec.schema.json (additionalProperties:false) and the MOTION_OBJECT_IS_CLOSED rule. The keys in motionDocumentationFields below are contract-level documentation carried by THIS file for human and retrieval use; they are NOT settable on a PageSpec node."
+}

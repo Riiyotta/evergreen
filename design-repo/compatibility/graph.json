@@ -1,0 +1,380 @@
+{
+  "$id": "compatibility.graph",
+  "version": "1.0.0",
+  "status": "design-review-pending",
+  "description": "Rhythm, position, motion, state, unit and compliance rules that JSON Schema cannot express. Every rule carries an explicit severity. `error` fails a PageSpec; `warn` emits a non-fatal notice.",
+  "agreementContract": "EVERY RULE HERE IS ALSO IMPLEMENTED IN schema/semantic_validate.py. The two are two authoritative sources for one fact and MUST stay agreeing. When a factual claim is corrected anywhere in this repo, grep -rn for it across the WHOLE repo \u2014 including this file's rule prose and the validator's enforcement code \u2014 not just the section contract where it was first found wrong. extraction/verify_all.py checks that every rule id here appears in the validator and vice versa.",
+  "verificationNote": "Every rule in this file was checked against templates/templates.json's ACTUAL node sequences AT THE TIME IT WAS WRITTEN, per MASTER-GUIDE \u00a73.18 \u2014 not only at final verification. The build script that emits this file re-runs those assertions and refuses to write it if any rule contradicts the real templates.",
+  "severityCounts": {
+    "error": 23,
+    "warn": 5
+  },
+  "ruleCount": 28,
+  "rules": [
+    {
+      "id": "ONE_HERO_PER_PAGE",
+      "severity": "error",
+      "statement": "Exactly one node whose section category is `hero` may appear on a page, and it must be the first node inside <main> (i.e. immediately after chrome.nav, or after chrome.announcement-banner + chrome.nav where the banner is present).",
+      "rationale": "Verified against every one of the 22 real templates: each has exactly one hero-category node, always directly after chrome.nav.",
+      "exceptions": [
+        "T-PRICING"
+      ],
+      "exceptionNote": "T-PRICING IS A REAL HERO-LESS TEMPLATE and this exception was found by running the check, not by assumption. Its first node inside <main> is sections/pricing.single-plan, which carries the page's own h1 ('Fair pricing, massive impact') inline rather than delegating to a hero section. schema/semantic_validate.py carries the SAME exception set \u2014 the graph and the validator must not diverge here (MASTER-GUIDE \u00a73.8).",
+      "heroSections": [
+        "hero.centred-h1",
+        "hero.ebook-lede",
+        "hero.esg-environmental",
+        "hero.home",
+        "hero.legal-head",
+        "hero.page-head",
+        "hero.partner",
+        "hero.purpose"
+      ],
+      "heroExemptTemplates": [
+        "T-PRICING"
+      ],
+      "exceptionBasis": "T-PRICING is exempt because it has ZERO hero.* nodes \u2014 its opener is pricing.single-plan (constraints.mustBeFirst). The exemption is for a hero-LESS template, not a multi-hero one. Verified against templates/templates.json: every other template has exactly one hero.*."
+    },
+    {
+      "id": "BANNER_ROUTE_RESTRICTED",
+      "severity": "error",
+      "statement": "chrome.announcement-banner may appear only on templates T-HOME and T-ARTICLE, and only as the very first node.",
+      "rationale": "src/layout/Layout.jsx gates the banner on the exact pathname `/` plus the prefix `/blog/`. Those resolve to exactly T-HOME and T-ARTICLE. On every other route the nav starts at y=0 and all offsets sit 51.74px higher, so placing a banner elsewhere is a real geometry regression.",
+      "exceptions": [],
+      "allowedTemplates": [
+        "T-HOME",
+        "T-ARTICLE"
+      ],
+      "measuredFrom": "src/layout/Layout.jsx:22-30"
+    },
+    {
+      "id": "ONE_FINAL_CTA",
+      "severity": "error",
+      "statement": "A page may carry at most one node from the `conversion` close set {conversion.reassurance-cta, conversion.lead-magnet-cta}, and if present it must be the last node inside <main>, immediately before chrome.footer.",
+      "rationale": "18 of the 22 real templates carry a close: 16 end on conversion.reassurance-cta, and T-ARTICLE and T-PILLAR end on conversion.lead-magnet-cta instead. The two are mutually exclusive on every real template.",
+      "exceptions": [
+        "T-ARTICLE",
+        "T-BLOG-INDEX",
+        "T-LEGAL",
+        "T-PILLAR",
+        "T-PRICING",
+        "T-REFERRAL"
+      ],
+      "exceptionNote": "FOUR real templates have no close at all, and the T-PRICING case was found by running this check rather than by reading a spec: /pricing ends on sections/proof.testimonial-wall, exactly like /referral. T-BLOG-INDEX ends on listing.blog-rows and T-LEGAL ends on content.rich-text. All four are real, correct and measured \u2014 this rule must not reject them.",
+      "closeSet": [
+        "conversion.reassurance-cta",
+        "conversion.lead-magnet-cta"
+      ],
+      "exceptionBasis": "Derived by enumerating templates/templates.json for templates with no conversion.reassurance-cta node, not asserted by hand. T-ARTICLE and T-PILLAR were missing from this list on first draft: both close with conversion.lead-magnet-cta instead, which is what LEAD_MAGNET_CLOSE_RESTRICTED governs. A rule drafted from assumption rather than checked against the real node sequences would have rejected 54 real, correct routes."
+    },
+    {
+      "id": "LEAD_MAGNET_CLOSE_RESTRICTED",
+      "severity": "error",
+      "statement": "conversion.lead-magnet-cta may appear only on T-ARTICLE and T-PILLAR.",
+      "rationale": "Those are the only two templates in the real source that replace the shared final CTA with the gated-PDF form. Every other template that has a close uses conversion.reassurance-cta.",
+      "exceptions": [],
+      "allowedTemplates": [
+        "T-ARTICLE",
+        "T-PILLAR"
+      ]
+    },
+    {
+      "id": "CTA_MUST_FOLLOW_DIVIDER",
+      "severity": "error",
+      "statement": "A conversion close node must be immediately preceded by divider.leaf-band.",
+      "rationale": "Checked against all 18 real templates that carry a close: every one puts a divider band immediately before it. The divider band owns the last leaf layer, which is why the close section itself has no leaves.",
+      "exceptions": []
+    },
+    {
+      "id": "DIVIDER_BAND_FOLLOWS_SECTION_ABOVE",
+      "severity": "warn",
+      "statement": "A divider.leaf-band node's `variant` (its band fill) must equal the surface of the section immediately above it: bg-cream after a cream section, bg-cream-dark after a cream-dark section, bg-leaf after the bg-leaf goals band.",
+      "rationale": "The rule holds on every divider the recon measured. It is warn-severity, not error, for one reason: it has a real, unresolved counter-example (below) and the raw recon does not capture divider band fill, so a hard failure could reject correct content.",
+      "exceptions": [
+        "T-PARTNER divider #1"
+      ],
+      "exceptionNote": "T-PARTNER's FIRST divider is bg-cream-dark in the clone while the section above it (hero.partner) is bg-cream. The source's own justifying comment ('they follow a cream-dark section') is wrong about its own first band. The raw recon measures the divider <section> as transparent and does not include the band <div> in its `sections` tree, so the measurement cannot settle it. RECORDED AS AN OPEN EVIDENCE GAP rather than resolved by guessing a value.",
+      "severityRationale": "warn, because the one counter-example is unresolved evidence, not a known-good variant."
+    },
+    {
+      "id": "NO_CONSECUTIVE_DIVIDERS",
+      "severity": "error",
+      "statement": "Two divider.leaf-band nodes may not be adjacent.",
+      "rationale": "No real template has two adjacent dividers. A divider always separates two content sections.",
+      "exceptions": []
+    },
+    {
+      "id": "DIVIDER_BUDGET",
+      "severity": "warn",
+      "statement": "A page may carry at most 4 divider.leaf-band nodes.",
+      "rationale": "T-ESG carries four, the most of any real route. The ceiling is the real observed maximum, not a style preference.",
+      "exceptions": [],
+      "maxPerPage": 4
+    },
+    {
+      "id": "NO_ADJACENT_SAME_CATEGORY",
+      "severity": "warn",
+      "statement": "Two nodes of the same section category should not be adjacent.",
+      "rationale": "Content-category nodes legitimately chain on the content templates, so this is warn-severity with explicit named exceptions rather than an error.",
+      "exceptions": [
+        "category `content` \u2014 T-COMPARISON and all four T-DETAIL-* families chain content.section-heading directly onto a content block, by design",
+        "category `listing` \u2014 T-COLLECTION-INDEX and T-ALTERNATIVES-INDEX both put two listing grids on one page, separated only by a heading",
+        "category `story` \u2014 T-STORY puts story.hero-quote directly before story.meta-prose with no divider",
+        "category `proof` \u2014 T-PURPOSE puts hero.purpose directly before proof.goals-band with no divider, and T-ESG chains proof.sdg-goals after a divider",
+        "category `form` \u2014 T-CONTACT / T-SCHEDULER / T-EBOOK put a form card directly before proof.g2-rating",
+        "category `listing` \u2014 T-ARTICLE chains listing.link-card-grid (guide cluster) directly into listing.more-articles; measured, intentional, and reproduced in the clone"
+      ],
+      "exemptCategories": [
+        "content",
+        "listing",
+        "story",
+        "chrome"
+      ],
+      "exemptAdjacency": [
+        {
+          "template": "T-ARTICLE",
+          "category": "listing",
+          "basis": "listing.link-card-grid (guide cluster) chains directly into listing.more-articles; measured, intentional."
+        }
+      ],
+      "alwaysExemptCategories": [
+        "chrome",
+        "content"
+      ],
+      "machineReadableNote": "exemptAdjacency and alwaysExemptCategories are what schema/semantic_validate.py actually reads. The prose `exceptions` list must stay in agreement with them."
+    },
+    {
+      "id": "STRUCTURAL_RULES_KEY_ON_SECTION_AND_VARIANT",
+      "severity": "error",
+      "statement": "Any rule that counts or positions a section MUST key on the (section, variant) pair, never on the bare section id.",
+      "rationale": "Three real sections legitimately repeat on one page with different variants: feature.split-visual (esg-social / esg-governance on T-ESG; partner-a / partner-b on T-PARTNER), listing.link-card-grid (up to 10 instances with different heading levels and variants), and content.section-heading (up to 12). Keying on the bare id false-positives on every one of them.",
+      "exceptions": [],
+      "variantRepeatingSections": [
+        "feature.split-visual",
+        "listing.link-card-grid",
+        "content.section-heading",
+        "content.rich-text",
+        "content.leaf-spec-list",
+        "content.leaf-bullets",
+        "content.prose-left",
+        "divider.leaf-band"
+      ]
+    },
+    {
+      "id": "MOTION_REQUIRES_REDUCED_FALLBACK",
+      "severity": "error",
+      "statement": "Every node's `motion` object must declare `reducedMotionFallback`.",
+      "rationale": "src/index.css carries a real prefers-reduced-motion block, so every animated thing on the site already has a defined resting state. A node that omits the fallback is asserting motion with no accessible alternative.",
+      "exceptions": [],
+      "measuredFrom": "src/index.css:296-317"
+    },
+    {
+      "id": "MOTION_OBJECT_IS_CLOSED",
+      "severity": "error",
+      "statement": "A node's `motion` object may carry ONLY the evidence-grounded fields listed in schema/pagespec.schema.json#definitions.motion. additionalProperties is false.",
+      "rationale": "Leaving the motion object open lets a generated PageSpec smuggle in an invented field (an easing that does not exist, a stagger the site never uses) and still validate.",
+      "exceptions": [],
+      "rule": "A PageSpec node's `motion` object is closed to the 11 fields in the section contract's `motionFieldSet`. Enforced by additionalProperties:false in schema/pagespec.schema.json.",
+      "clarification": "Scope is PageSpec emission only. A section CONTRACT may additionally carry documentation keys (note, RULE, spring, composition, scrollTrackElement, additionalStaticLeaves, overlayMotion, hamburgerMotion, closeDurationMs, closeEasing, absent); those are listed per contract in motionDocumentationFields and are NOT settable by a generator. Before this was stated explicitly, 33 of 46 contracts declared motionIsClosed:true while carrying keys outside their own declared set \u2014 the closure was correct, the claim was not."
+    },
+    {
+      "id": "NO_INVENTED_MOTION_PATTERN",
+      "severity": "error",
+      "statement": "`motion.pattern` must be one of the six real patterns: none, leaf-drift, leaf-scroll-track, line-draw, opacity-reveal, overlay-slide.",
+      "rationale": "That is the complete inventory from src/lib/leaves.js, src/components/Hero.jsx and src/components/SlideOverlay.jsx. The original stylesheet also ships sd-fadeIn, sd-blurIn, sd-slideUp, sd-markerIn, enter, leave, exit, fade, pulse and bounce keyframes, but CLONE_SPEC \u00a77.7 confirms NONE are applied to any element \u2014 they are intentionally omitted.",
+      "exceptions": [],
+      "allowedPatterns": [
+        "none",
+        "leaf-drift",
+        "leaf-scroll-track",
+        "line-draw",
+        "opacity-reveal",
+        "overlay-slide"
+      ]
+    },
+    {
+      "id": "NO_STAGGER_NO_DELAY",
+      "severity": "error",
+      "statement": "`motion.staggerMs` and `motion.delayMs` must both be 0.",
+      "rationale": "src/lib/leaves.js declares no delay and no stagger anywhere, and every card grid is explicitly static from first paint. A generated stagger is a fidelity regression.",
+      "exceptions": [],
+      "measuredFrom": "src/lib/leaves.js:13-18"
+    },
+    {
+      "id": "QUOTE_LEAVES_MUST_NOT_ANIMATE",
+      "severity": "error",
+      "statement": "A node whose motion declares `leafSet: \"QUOTE_LEAVES\"` must declare `pattern: \"none\"`. The same applies to `leafSet: \"OUR_PURPOSE_WREATH\"`.",
+      "rationale": "Both sets are STATIC BY DESIGN: initial === animate, no marketing-drift-leaf class, no transform delta. Animating them is not a stylistic choice, it is wrong.",
+      "exceptions": [],
+      "measuredFrom": "src/lib/leaves.js:67-78",
+      "staticLeafSets": [
+        "QUOTE_LEAVES",
+        "OUR_PURPOSE_WREATH"
+      ]
+    },
+    {
+      "id": "CARD_GRIDS_ARE_STATIC",
+      "severity": "error",
+      "statement": "listing.link-card-grid, listing.blog-rows, content.message-grid and content.reading-list must declare `pattern: \"none\"` for the grid itself.",
+      "rationale": "CLONE_SPEC_CONTENT_B \u00a711 records ZERO animation on card grids and headings: no whileInView, no stagger, no per-card delay. Cards are static from first paint. (listing.blog-rows still carries 159 CARD_LEAVES in their initial state \u2014 that is a leaf layer, not a grid animation.)",
+      "exceptions": [],
+      "staticGridSections": [
+        "listing.link-card-grid",
+        "listing.blog-rows",
+        "content.message-grid",
+        "content.reading-list"
+      ]
+    },
+    {
+      "id": "SCROLL_TRACK_IS_HOME_AND_PARTNER_ONLY",
+      "severity": "warn",
+      "statement": "`motion.pattern: \"leaf-scroll-track\"` may appear only on sections/hero.home and sections/hero.partner.",
+      "rationale": "The scroll-spring track exists on exactly one element: the hero wrapper carrying data-scroll-track=\"hero\". On T-HOME that is the product screenshot wrapper; on T-PARTNER it is the Calendly card wrapper that replaces it. No other route has a scroll-linked element.",
+      "exceptions": [],
+      "allowedSections": [
+        "hero.home",
+        "hero.partner"
+      ]
+    },
+    {
+      "id": "NO_INVENTED_INTERACTIVE_STATE",
+      "severity": "error",
+      "statement": "A generated page must not introduce a hover, active or focus state on any button, card, logo, image, pill, stat or form control. The complete hover inventory for the whole site is exactly three utilities: `hover:underline` on nav links, `hover:underline` on footer links, and `hover:bg-white` on the BadgeLink eyebrow pill.",
+      "rationale": "Verified by `grep -rno 'hover:[a-z-]*' src/`. Computed `outline: none` and `box-shadow: none` on every form control. There is EXACTLY ONE transitioning element inside <main> on a content route (that badge).",
+      "exceptions": [],
+      "measuredFrom": "src/components/BadgeLink.jsx:5-9",
+      "note": "MessageCard's category badge is visually identical to BadgeLink but deliberately has NO hover and NO transition. Same visual, different behaviour \u2014 never propagate."
+    },
+    {
+      "id": "NO_GRADIENTS_NO_SHADOWS",
+      "severity": "error",
+      "statement": "A generated page must not introduce a gradient or a box-shadow.",
+      "rationale": "ZERO of each exist site-wide, verified by script across all routes. Depth is flat fill plus a 2px solid #000 stroke only. The single 1px exception is primitives/panel.form-error and the single 1.5px exception is primitives/input.labelled-text.",
+      "exceptions": []
+    },
+    {
+      "id": "NO_EXTERNAL_REQUESTS",
+      "severity": "error",
+      "statement": "Every off-domain link must render with NO href, and every asset reference must be a local path under /assets/.",
+      "rationale": "A deliberate build constraint. The original's Calendly iframe embeds are replaced by components/block.scheduler-placeholder and nothing loads assets.calendly.com. NOTE the honest qualification: `grep -rn 'https\\?://' src/` is NOT empty \u2014 src/data/alternatives.js retains real competitor URLs as DATA in its sources[] rows. The constraint holds at the RENDER layer, because components/block.sources-list emits every source as an <a> with no href.",
+      "exceptions": []
+    },
+    {
+      "id": "NO_PX_FOR_EM_LENGTHS",
+      "severity": "error",
+      "statement": "A generated page must not express, as px, any length that is `em` in the source, and must not convert a `ch` value to px.",
+      "rationale": "`.marketing-root { font-size: 0.833333vw }` (clamped to 16px at >=1920px, frozen at 8.25833px at <=991px) is the engine every length on the site is `em` off. `49ch` is 580.714px on an 18.667px <p> but 1981.52px on a 65.333px h1, so flattening it breaks the layout. The complete list of legitimate fixed-px lengths is tokens/00-foundation/spacing.json#fixedPxExceptions.",
+      "exceptions": [],
+      "measuredFrom": "src/index.css:200-219"
+    },
+    {
+      "id": "NO_INVENTED_TOKEN_VALUE",
+      "severity": "error",
+      "statement": "A generated page must not introduce a colour, radius, easing, duration or breakpoint that is not in tokens/.",
+      "rationale": "The token layer was built by enumerating every real literal in the source, not by sampling a palette. Anything outside it is invented.",
+      "exceptions": []
+    },
+    {
+      "id": "CLOSED_ASSET_ROLE",
+      "severity": "error",
+      "statement": "Every media-bearing field must declare an `assetRole` from the closed 13-value enum in assets/asset-roles.json. A bare `image` / `src` string is not acceptable.",
+      "rationale": "A bare string lets a generator invent arbitrary asset semantics; a closed enum is what makes the licensing policy enforceable.",
+      "exceptions": []
+    },
+    {
+      "id": "COMPLIANCE_CRITICAL_ROLES_ARE_PINNED",
+      "severity": "error",
+      "statement": "The seven compliance-critical asset roles must each be pinned to their exact generationPolicy value, not merely to a member of the enum.",
+      "rationale": "MASTER-GUIDE \u00a73.23 item 2: membership in a closed set is a weaker claim than 'this specific role is pinned to this specific value'. A role could be flipped to a different-but-still-valid value and a membership check would say nothing. extraction/verify_all.py asserts the pinned values and schema/tests/adversarial_test.py proves the check with a mutation to a different-but-valid enum value.",
+      "exceptions": [],
+      "pinned": {
+        "third-party.trademark": "must-not-reproduce-real-entity",
+        "third-party.platform-logo": "must-not-reproduce-real-entity",
+        "third-party.review-mark": "must-not-reproduce-real-entity",
+        "person.likeness": "must-not-reproduce-real-entity",
+        "brand.logo": "must-reuse-exact",
+        "product.screenshot": "must-reuse-exact",
+        "product.badge": "must-reuse-exact"
+      }
+    },
+    {
+      "id": "NO_FABRICATED_REAL_ENTITY",
+      "severity": "error",
+      "statement": "Generated output must never fabricate or reproduce a real company's logo, a real person's face, a real testimonial, a real product screenshot, a real badge figure, a real review rating or a real statistic. A slot needing any of those is left EMPTY and flagged for a human.",
+      "rationale": "The source is a real, live company's real marketing site, carrying real third-party trademarks, real named individuals' photographs and real attributed quotes. This is a compliance constraint, not a style preference.",
+      "exceptions": []
+    },
+    {
+      "id": "NODES_MUST_MATCH_DECLARED_TEMPLATE",
+      "severity": "error",
+      "statement": "A PageSpec's `nodes` array must be validated AGAINST ITS DECLARED `template` field: every `required: true` node of that template must be present in order, no node may appear that the template does not list, and a node may repeat only if the template marks it `repeatable: true`.",
+      "rationale": "MASTER-GUIDE \u00a73.3 names this the single most repeated bug class across the whole workspace: a validator that checks nodes[] in isolation lets a PageSpec contradict its own template and pass. schema/semantic_validate.py implements the cross-reference.",
+      "exceptions": []
+    },
+    {
+      "id": "NO_DEAD_ROUTE_TEMPLATE",
+      "severity": "error",
+      "statement": "No PageSpec may claim a route matching `/employee-recognition/:slug` (a single segment under the hub that is neither `for` nor `glossary`), and no template may be created for it.",
+      "rationale": "CLONE_SPEC_CONTENT_B \u00a70 VERIFIED that this collection does not exist on the real site \u2014 the hub's only children are /for and /glossary, both of which are index templates. The clone deliberately routes it to PagePending. Zero of the 195 real routes match it. Recreating it would invent a page shape the original does not have.",
+      "exceptions": [],
+      "measuredFrom": "src/App.jsx:66-68"
+    },
+    {
+      "id": "SHARED_CTA_IS_BYTE_IDENTICAL",
+      "severity": "warn",
+      "statement": "conversion.reassurance-cta's content must not be varied per page, with the single exception of `smallPrintSuffix` on T-PARTNER.",
+      "rationale": "CLONE_SPEC_CORE_A \u00a72.7 verified the section byte-identical across every template that uses it, by DOM diff over the last 103 nodes. The partner suffix is the only measured variation, and it takes the section from 1038.81px to 1064.86px because it wraps the small print to two lines.",
+      "exceptions": [
+        "T-PARTNER smallPrintSuffix"
+      ]
+    }
+  ],
+  "sectionCategories": {
+    "chrome.announcement-banner": "chrome",
+    "chrome.footer": "chrome",
+    "chrome.nav": "chrome",
+    "chrome.trial-modal": "chrome",
+    "content.faq": "content",
+    "content.leaf-bullets": "content",
+    "content.leaf-spec-list": "content",
+    "content.message-grid": "content",
+    "content.prose-left": "content",
+    "content.reading-list": "content",
+    "content.rich-text": "content",
+    "content.section-heading": "content",
+    "content.sources": "content",
+    "conversion.arketta-cross-promo": "conversion",
+    "conversion.lead-magnet-cta": "conversion",
+    "conversion.reassurance-cta": "conversion",
+    "divider.leaf-band": "structure",
+    "feature.report-csr": "feature",
+    "feature.seeds": "feature",
+    "feature.split-visual": "feature",
+    "form.contact-card": "form",
+    "form.lead-magnet-card": "form",
+    "form.referral-card": "form",
+    "form.scheduler-card": "form",
+    "hero.centred-h1": "hero",
+    "hero.ebook-lede": "hero",
+    "hero.esg-environmental": "hero",
+    "hero.home": "hero",
+    "hero.legal-head": "hero",
+    "hero.page-head": "hero",
+    "hero.partner": "hero",
+    "hero.purpose": "hero",
+    "listing.blog-rows": "listing",
+    "listing.case-study-grid": "listing",
+    "listing.link-card-grid": "listing",
+    "listing.more-articles": "listing",
+    "listing.story-teasers": "listing",
+    "pricing.single-plan": "pricing",
+    "proof.g2-rating": "proof",
+    "proof.goals-band": "proof",
+    "proof.sdg-goals": "proof",
+    "proof.stat-pills": "proof",
+    "proof.testimonial-wall": "proof",
+    "referral.earnings-tiers": "pricing",
+    "story.hero-quote": "story",
+    "story.meta-prose": "story"
+  }
+}

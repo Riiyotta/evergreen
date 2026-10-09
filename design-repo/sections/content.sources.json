@@ -1,0 +1,65 @@
+{
+  "$id": "sections.content.sources",
+  "layer": "sections",
+  "motionFieldSet": [
+    "pattern",
+    "trigger",
+    "durationMs",
+    "easing",
+    "delayMs",
+    "staggerMs",
+    "leafSet",
+    "leafCount",
+    "scrollProgressRange",
+    "reducedMotionFallback",
+    "implementationStatus"
+  ],
+  "motionIsClosed": true,
+  "category": "content",
+  "purpose": "List the external sources a comparison was read from, plus a correction invitation.",
+  "composes": [
+    "components/block.sources-list"
+  ],
+  "content": {
+    "sources": {
+      "minItems": 3,
+      "maxItems": 4
+    },
+    "label": {
+      "maxWords": 3,
+      "copyPolicy": "verbatim-locked"
+    },
+    "note": {
+      "maxWords": 10,
+      "copyPolicy": "verbatim-locked"
+    },
+    "additionalProperties": false
+  },
+  "geometry": "block y 6053.64 h 221.66 @1280",
+  "constraints": {
+    "onePerPage": true,
+    "allowedTemplates": [
+      "T-COMPARISON"
+    ]
+  },
+  "motion": {
+    "pattern": "none",
+    "trigger": "none",
+    "delayMs": 0,
+    "staggerMs": 0,
+    "reducedMotionFallback": "none-required-static",
+    "implementationStatus": "static-by-design",
+    "note": "Nothing in this section animates."
+  },
+  "responsive": {
+    "max-wf-mini": "max-w-full"
+  },
+  "externalLinks": "EVERY source anchor is off-domain and renders with NO href. The note's /contact link IS internal and stays live.",
+  "evidenceGap": "The pricing-read date is a SPEC GAP: CLONE_SPEC_CONTENT_A \u00a75.4 records the FORMAT ('Pricing' ends with '(as read on {D Month YYYY})') but no per-competitor date was ever captured, so one placeholder date is used for all 15 routes. Recorded, not invented away.",
+  "measuredFrom": "src/components/SourcesList.jsx:18-36",
+  "implementedBy": "src/components/SourcesList.jsx",
+  "motionClosureScope": "CLOSED for PageSpec emission: a generated node's `motion` object may contain ONLY the fields in motionFieldSet, enforced by schema/pagespec.schema.json (additionalProperties:false) and the MOTION_OBJECT_IS_CLOSED rule. The keys in motionDocumentationFields below are contract-level documentation carried by THIS file for human and retrieval use; they are NOT settable on a PageSpec node.",
+  "motionDocumentationFields": [
+    "note"
+  ]
+}

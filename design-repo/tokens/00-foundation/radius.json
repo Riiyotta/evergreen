@@ -1,0 +1,58 @@
+{
+  "$id": "tokens.foundation.radius",
+  "layer": "00-foundation",
+  "description": "Every border-radius literal in the clone, counted from source. Occurrence counts come from grepping src/ for `rounded-*`.",
+  "scale": {
+    "pill-cta": {
+      "value": "40.5px",
+      "occurrences": 4,
+      "usedBy": "TrialButton, trial-modal platform buttons",
+      "measuredFrom": "tailwind.config.js:56"
+    },
+    "pill-nav": {
+      "value": "30px",
+      "occurrences": 2,
+      "usedBy": "nav outline CTA, SubmitButton",
+      "measuredFrom": "tailwind.config.js:57"
+    },
+    "pill-stat": {
+      "value": "46px",
+      "occurrences": 7,
+      "usedBy": "4 stat pills, 2 hero avatar pills, referral tier pills",
+      "measuredFrom": "tailwind.config.js:58"
+    },
+    "card": {
+      "value": "10px",
+      "occurrences": 24,
+      "usedBy": "every card, value badge, tick badge, FormDone/FormError, blockquote",
+      "measuredFrom": "tailwind.config.js:59"
+    },
+    "input": {
+      "value": "7px",
+      "occurrences": 3,
+      "usedBy": "LabelledField, lead-magnet inputs, newsletter input left side",
+      "measuredFrom": "tailwind.config.js:60"
+    },
+    "full": {
+      "value": "9999px",
+      "occurrences": 10,
+      "usedBy": "eyebrow badge pill, message-card badge, avatar circles, footer social chips",
+      "measuredFrom": "src/components/BadgeLink.jsx:18"
+    },
+    "arketta-panel": {
+      "value": "8px",
+      "occurrences": 1,
+      "usedBy": "ArkettaCtaPanel panel only",
+      "measuredFrom": "src/components/ArkettaCtaPanel.jsx:7-8",
+      "scopeNote": "DELIBERATE system break, flagged by CLONE_SPEC_CONTENT_A §5.2. The only 8px radius anywhere. Do not reuse, do not normalise."
+    },
+    "arketta-button": {
+      "value": "4px",
+      "occurrences": 1,
+      "usedBy": "ArkettaCtaPanel CTA button only",
+      "measuredFrom": "src/components/ArkettaCtaPanel.jsx:7-8",
+      "scopeNote": "The only 4px radius anywhere. Same deliberate break."
+    }
+  },
+  "correctionNote": "A build brief listed the radius scale as 40.5 / 30 / 46 / 10 / 7 plus rounded-full. That list is INCOMPLETE: ArkettaCtaPanel's 8px panel and 4px button are real, cited, and present in the shipped source (`grep -o 'rounded-\\[...\\]' src/` returns both exactly once)."
+}

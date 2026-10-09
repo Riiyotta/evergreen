@@ -1,0 +1,63 @@
+{
+  "$id": "sections.hero.purpose",
+  "layer": "sections",
+  "motionFieldSet": [
+    "pattern",
+    "trigger",
+    "durationMs",
+    "easing",
+    "delayMs",
+    "staggerMs",
+    "leafSet",
+    "leafCount",
+    "scrollProgressRange",
+    "reducedMotionFallback",
+    "implementationStatus"
+  ],
+  "motionIsClosed": true,
+  "category": "hero",
+  "purpose": "The /our-purpose hero: a short mission statement flanked by two static leaf wreaths.",
+  "content": {
+    "h1": {
+      "value": "Our Purpose",
+      "copyPolicy": "verbatim-locked",
+      "maxWords": 2
+    },
+    "statement": {
+      "maxWords": 30,
+      "copyPolicy": "verbatim-locked"
+    },
+    "additionalProperties": false
+  },
+  "maxWordsBasis": "word-counted from the real paragraph in src/pages/OurPurpose.jsx",
+  "geometry": "section y 44.61 h 507.72 @1280; wrapper pb-[5em]; wreaths h-[14.7087em] w-[8.34021em], paragraph mx-[3em]",
+  "constraints": {
+    "onePerPage": true,
+    "mustBeFirst": true,
+    "allowedTemplates": [
+      "T-PURPOSE"
+    ]
+  },
+  "motion": {
+    "pattern": "none",
+    "trigger": "none",
+    "delayMs": 0,
+    "staggerMs": 0,
+    "leafSet": "OUR_PURPOSE_WREATH",
+    "leafCount": 4,
+    "reducedMotionFallback": "none-required-static",
+    "implementationStatus": "static-by-design",
+    "RULE": "OUR_PURPOSE_WREATH are STATIC BY DESIGN (initial === animate, no class). A contract MUST FORBID animating them."
+  },
+  "responsive": {
+    "max-wf-phone": "the desktop wreath pair is hidden and a SEPARATE phone-only leaf pair (w-[5em]) appears above the h1; the row becomes flex-col"
+  },
+  "assetRole": "brand.leaf-art",
+  "accessibilityException": "These four leaves are the ONLY leaves on the site with REAL alt text ('leaf wreath on left' / 'leaf wreath on right') rather than alt='' aria-hidden. They are plain <img> with no inline transform and no drift class. Never add one.",
+  "measuredFrom": "src/pages/OurPurpose.jsx:58-112",
+  "implementedBy": "src/pages/OurPurpose.jsx",
+  "motionClosureScope": "CLOSED for PageSpec emission: a generated node's `motion` object may contain ONLY the fields in motionFieldSet, enforced by schema/pagespec.schema.json (additionalProperties:false) and the MOTION_OBJECT_IS_CLOSED rule. The keys in motionDocumentationFields below are contract-level documentation carried by THIS file for human and retrieval use; they are NOT settable on a PageSpec node.",
+  "motionDocumentationFields": [
+    "RULE"
+  ]
+}

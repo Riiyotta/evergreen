@@ -1,0 +1,16 @@
+{
+  "$id": "primitives.link.inline",
+  "layer": "primitives",
+  "purpose": "Inline anchor inside running copy.",
+  "geometry": "font-family sans, weight 600, line-height 1, text-decoration underline, colour inherit",
+  "states": {
+    "hover": null,
+    "active": null,
+    "focus": null,
+    "disabled": null,
+    "transition": null,
+    "boxShadow": "none",
+    "note": "No interactive state exists. A generator must not add one."
+  },
+  "measuredFrom": "src/index.css:250-257"
+}

@@ -1,0 +1,19 @@
+{
+  "$id": "components.card.case-study-teaser",
+  "layer": "components",
+  "purpose": "One of exactly two 'other stories' cards at the foot of T-STORY.",
+  "tokens": {
+    "surface": "surface.card",
+    "border": "border.default",
+    "radius": "radius.card"
+  },
+  "geometry": "wrapper w-[34.4013em], card w-[42em] 447.98x475.09, padding 45.007/32/39.333, mb-[14em]",
+  "count": {
+    "exact": 2
+  },
+  "states": "No hover, no active, no focus, no transition, no box-shadow.",
+  "measuredFrom": "src/components/CaseStudyTeaserCard.jsx:1-46",
+  "assetRole": "third-party.trademark",
+  "knownArtefact": "Same deliberate wrapper overflow as card.case-study — it is what puts the two cards at x 232.53 / 712.51.",
+  "leaves": "3 CARD_LEAVES per card, initial state only"
+}

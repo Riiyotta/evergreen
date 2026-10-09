@@ -1,0 +1,17 @@
+{
+  "$id": "primitives.link.footer",
+  "layer": "primitives",
+  "purpose": "Footer column link and legal link.",
+  "geometry": "text-[1.6875em] font-medium, mb-[1.2em] = 21.6px @1280",
+  "states": {
+    "hover": "underline, instant, no transition",
+    "active": null,
+    "focus": null,
+    "disabled": null,
+    "transition": null,
+    "boxShadow": "none",
+    "note": "No interactive state exists. A generator must not add one."
+  },
+  "measuredFrom": "src/components/Footer.jsx:174-182",
+  "correction": "CLONE_SPEC §5.13 records this `mb-[1.2em]` as 12.8px. WRONG: the 1.2em resolves against the element's own text-[1.6875em] (18px @1280), so the real margin-bottom is 21.6px."
+}

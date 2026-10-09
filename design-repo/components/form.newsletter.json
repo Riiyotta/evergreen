@@ -1,0 +1,18 @@
+{
+  "$id": "components.form.newsletter",
+  "layer": "components",
+  "purpose": "The footer newsletter subscribe form.",
+  "composes": [
+    "primitives/input.newsletter-email"
+  ],
+  "geometry": "input rounded-l-[7px]; submit owns rounded-r-[10px]; 2px border",
+  "stateMachine": {
+    "idle": "the form is mounted and empty of state",
+    "pending": "submit is `disabled`, opacity 0.70, label 'Please wait...' (three dots)",
+    "done": "the whole <form> is UNMOUNTED and replaced by primitives/panel.form-done",
+    "error": "the form STAYS MOUNTED with its values preserved and primitives/panel.form-error is appended after it"
+  },
+  "submission": "STUBBED. The real target is a Next.js server action with NO public endpoint (`submitContactRequest` / `submitReferral`), so nothing is posted anywhere and the submission resolves locally. The observable state machine is faithful; only the transport is stubbed.",
+  "states": "No hover, no active, no focus, no transition, no box-shadow.",
+  "measuredFrom": "src/components/Footer.jsx:130-168"
+}

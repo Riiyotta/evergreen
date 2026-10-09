@@ -1,0 +1,17 @@
+{
+  "$id": "primitives.icon.leaf-inline",
+  "layer": "primitives",
+  "purpose": "Small leaf glyph marking a bullet row, a seed line or a card CTA.",
+  "geometry": "w-[1.26708em]; w-[2em] at <=479px on bullet rows",
+  "states": {
+    "hover": null,
+    "active": null,
+    "focus": null,
+    "disabled": null,
+    "transition": null,
+    "boxShadow": "none",
+    "note": "No interactive state exists. A generator must not add one."
+  },
+  "measuredFrom": "src/components/SeedsSection.jsx:70-78",
+  "assetRole": "brand.leaf-art"
+}

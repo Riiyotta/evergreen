@@ -1,0 +1,64 @@
+{
+  "$id": "sections.content.message-grid",
+  "layer": "sections",
+  "motionFieldSet": [
+    "pattern",
+    "trigger",
+    "durationMs",
+    "easing",
+    "delayMs",
+    "staggerMs",
+    "leafSet",
+    "leafCount",
+    "scrollProgressRange",
+    "reducedMotionFallback",
+    "implementationStatus"
+  ],
+  "motionIsClosed": true,
+  "category": "content",
+  "purpose": "A grid of ready-to-send recognition messages.",
+  "composes": [
+    "components/grid.message"
+  ],
+  "content": {
+    "messages": {
+      "minItems": 5,
+      "maxItems": 14,
+      "maxItemsBasis": "recomputed over all 102 detail routes; the largest real grid is 14 messages on a /employee-recognition-messages route"
+    },
+    "additionalProperties": false
+  },
+  "geometry": "wrapper w-[87em] max-w-full (927.98px @1280)",
+  "constraints": {
+    "onePerPage": true,
+    "allowedTemplates": [
+      "T-DETAIL-MESSAGES",
+      "T-DETAIL-VALUES",
+      "T-DETAIL-FOR"
+    ]
+  },
+  "motion": {
+    "pattern": "none",
+    "trigger": "none",
+    "delayMs": 0,
+    "staggerMs": 0,
+    "leafSet": "QUOTE_LEAVES",
+    "leafCount": 6,
+    "reducedMotionFallback": "none-required-static",
+    "implementationStatus": "static-by-design",
+    "RULE": "QUOTE_LEAVES are STATIC BY DESIGN (initial === animate, no class). A contract MUST FORBID animating them."
+  },
+  "responsive": {
+    "max-wf-phone": "the wrapper becomes flex-col",
+    "max-wf-mini": "cards max-w-full"
+  },
+  "negatives": [
+    "NO copy-to-clipboard control anywhere: zero <button>, zero navigator.clipboard, zero occurrences of 'copy'/'clipboard' across all 35 message routes"
+  ],
+  "measuredFrom": "src/components/MessageCard.jsx:40-53",
+  "implementedBy": "src/components/MessageCard.jsx (MessageGrid)",
+  "motionClosureScope": "CLOSED for PageSpec emission: a generated node's `motion` object may contain ONLY the fields in motionFieldSet, enforced by schema/pagespec.schema.json (additionalProperties:false) and the MOTION_OBJECT_IS_CLOSED rule. The keys in motionDocumentationFields below are contract-level documentation carried by THIS file for human and retrieval use; they are NOT settable on a PageSpec node.",
+  "motionDocumentationFields": [
+    "RULE"
+  ]
+}

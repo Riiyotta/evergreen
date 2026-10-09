@@ -1,0 +1,22 @@
+{
+  "$id": "primitives.badge.eyebrow-static",
+  "layer": "primitives",
+  "purpose": "Category label on a MessageCard.",
+  "tokens": {
+    "surface": "surface.accent",
+    "border": "border.default",
+    "radius": "radius.pillFull"
+  },
+  "geometry": "IDENTICAL class string to badge.eyebrow-link minus `transition-colors hover:bg-white`",
+  "states": {
+    "hover": null,
+    "active": null,
+    "focus": null,
+    "disabled": null,
+    "transition": null,
+    "boxShadow": "none",
+    "note": "No interactive state exists. A generator must not add one."
+  },
+  "measuredFrom": "src/components/MessageCard.jsx:25-29",
+  "criticalNote": "VISUALLY IDENTICAL to badge.eyebrow-link, BEHAVIOURALLY DIFFERENT: no hover, no transition. Two variants of one visual. Never reuse badge.eyebrow-link here and never propagate its hover."
+}

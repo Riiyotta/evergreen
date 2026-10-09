@@ -1,0 +1,47 @@
+{
+  "$id": "components.form.lead-magnet",
+  "layer": "components",
+  "purpose": "The gated-PDF download form. One component, three uses: T-EBOOK's card, T-PILLAR's final CTA, and a blog article's trailing CTA.",
+  "composes": [
+    "primitives/input.lead-magnet",
+    "primitives/input.honeypot",
+    "primitives/button.lead-magnet-submit",
+    "primitives/panel.form-done",
+    "primitives/panel.form-error"
+  ],
+  "fields": [
+    {
+      "name": "name",
+      "label": "Name"
+    },
+    {
+      "name": "email",
+      "label": "Email"
+    },
+    {
+      "name": "company",
+      "label": "Company"
+    },
+    {
+      "name": "sourcePath",
+      "type": "hidden",
+      "value": "the current pathname"
+    }
+  ],
+  "geometry": "column max-w-[80ch] = 444.02px — 80ch of the ROOT em (10.6667px), not of the paragraph em. Fields are flex children with align-items:stretch so they fill it and their own max-w-[49ch] never binds. gap-[10px] is a fixed 10px. Input height 3em resolves AFTER text-[1.75em] -> 55.98px.",
+  "stateMachine": {
+    "idle": "the form is mounted and empty of state",
+    "pending": "disabled, opacity 0.70, label 'Please wait...'; ~600ms",
+    "done": "the whole <form> is UNMOUNTED and replaced by primitives/panel.form-done",
+    "error": "the form STAYS MOUNTED with its values preserved and primitives/panel.form-error is appended after it"
+  },
+  "submission": "STUBBED. The real target is a Next.js server action with NO public endpoint (`submitContactRequest` / `submitReferral`), so nothing is posted anywhere and the submission resolves locally. The observable state machine is faithful; only the transport is stubbed.",
+  "errorCopyGap": "EVIDENCE GAP, recorded rather than invented: the real error string is server-supplied (`res.reason`) and appears in NO client bundle, so it could not be measured. The shipped string is a neutral stand-in, marked as such in-code. No maxWords budget is asserted for it.",
+  "states": "No hover, no active, no focus, no transition, no box-shadow.",
+  "measuredFrom": "src/components/blocks/LeadMagnetForm.jsx:17-99",
+  "negatives": [
+    "no consent checkbox",
+    "no reCAPTCHA",
+    "the honeypot is the only spam control"
+  ]
+}

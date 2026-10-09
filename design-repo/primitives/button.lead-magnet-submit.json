@@ -1,0 +1,26 @@
+{
+  "$id": "primitives.button.lead-magnet-submit",
+  "layer": "primitives",
+  "purpose": "Submit the gated-PDF lead-magnet form.",
+  "tokens": {
+    "surface": "surface.inverse",
+    "text": "text.onInverse",
+    "radius": "radius.card"
+  },
+  "geometry": "h-[3em] px-[1.4em]; label 1.75em / 1.7 / 700. Radius is 10px on ALL corners.",
+  "states": {
+    "hover": null,
+    "active": null,
+    "focus": null,
+    "disabled": "opacity 0.70, label 'Please wait...'",
+    "transition": null,
+    "boxShadow": "none",
+    "note": "No interactive state exists. A generator must not add one."
+  },
+  "measuredFrom": "src/components/blocks/LeadMagnetForm.jsx:77-83",
+  "label": {
+    "value": "Download",
+    "copyPolicy": "verbatim-locked",
+    "maxWords": 1
+  }
+}

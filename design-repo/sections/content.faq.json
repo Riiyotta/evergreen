@@ -1,0 +1,68 @@
+{
+  "$id": "sections.content.faq",
+  "layer": "sections",
+  "motionFieldSet": [
+    "pattern",
+    "trigger",
+    "durationMs",
+    "easing",
+    "delayMs",
+    "staggerMs",
+    "leafSet",
+    "leafCount",
+    "scrollProgressRange",
+    "reducedMotionFallback",
+    "implementationStatus"
+  ],
+  "motionIsClosed": true,
+  "category": "content",
+  "purpose": "A fully expanded question/answer list.",
+  "composes": [
+    "components/block.faq-dl"
+  ],
+  "content": {
+    "rows": {
+      "minItems": 3,
+      "maxItems": 9,
+      "maxItemsBasis": "recomputed from the real data: 3 on a glossary detail route, 4 on comparison / messages / values / for routes, and 9 on T-PILLAR (src/data/pillar.js faq block)."
+    },
+    "question": {
+      "maxWords": 7,
+      "copyPolicy": "verbatim-locked"
+    },
+    "answer": {
+      "maxWords": 70,
+      "copyPolicy": "measured-budget"
+    },
+    "additionalProperties": false
+  },
+  "rowCountCorrection": "On T-COMPARISON this is FOUR rows, not the three CLONE_SPEC_CONTENT_A \u00a75.6/\u00a79.3 records. Only four reconcile the measured 843.91px <dl>, and _reference/screenshots/alt-1280-faq-sources.png shows four questions.",
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "pattern": "none",
+    "trigger": "none",
+    "delayMs": 0,
+    "staggerMs": 0,
+    "reducedMotionFallback": "none-required-static",
+    "implementationStatus": "static-by-design",
+    "note": "Nothing in this section animates."
+  },
+  "responsive": {
+    "all": "no structural change"
+  },
+  "negatives": [
+    "NOT an accordion",
+    "no <details>/<summary>",
+    "no toggle",
+    "no aria-expanded",
+    "every answer visible from first paint"
+  ],
+  "measuredFrom": "src/components/blocks/FaqDl.jsx:1-26",
+  "implementedBy": "src/components/blocks/FaqDl.jsx",
+  "motionClosureScope": "CLOSED for PageSpec emission: a generated node's `motion` object may contain ONLY the fields in motionFieldSet, enforced by schema/pagespec.schema.json (additionalProperties:false) and the MOTION_OBJECT_IS_CLOSED rule. The keys in motionDocumentationFields below are contract-level documentation carried by THIS file for human and retrieval use; they are NOT settable on a PageSpec node.",
+  "motionDocumentationFields": [
+    "note"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "$id": "components.overlay.slide",
+  "layer": "components",
+  "purpose": "The shared full-viewport sliding overlay panel. Both overlays on the site are this component.",
+  "tokens": {
+    "surface": "surface.overlay"
+  },
+  "geometry": "fixed inset-0, bg-white (the only pure-white full-bleed surface)",
+  "usedBy": [
+    "chrome.nav mobile menu",
+    "chrome.trial-modal"
+  ],
+  "motion": {
+    "open": "translateY(-110vh) -> 0, 1000ms, cubic-bezier(0.455, 0.03, 0.515, 0.955)",
+    "close": "0 -> translateY(-110vh), 500ms, cubic-bezier(0.55, 0.085, 0.68, 0.53)",
+    "reducedMotionFallback": "both collapse to 0ms and the panel hides at 0vh"
+  },
+  "states": "No hover, no active, no focus, no transition, no box-shadow.",
+  "measuredFrom": "src/components/SlideOverlay.jsx:1-30"
+}

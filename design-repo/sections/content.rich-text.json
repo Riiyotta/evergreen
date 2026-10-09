@@ -1,0 +1,84 @@
+{
+  "$id": "sections.content.rich-text",
+  "layer": "sections",
+  "motionFieldSet": [
+    "pattern",
+    "trigger",
+    "durationMs",
+    "easing",
+    "delayMs",
+    "staggerMs",
+    "leafSet",
+    "leafCount",
+    "scrollProgressRange",
+    "reducedMotionFallback",
+    "implementationStatus"
+  ],
+  "motionIsClosed": true,
+  "category": "content",
+  "purpose": "A run of long-form prose in the one shared prose container.",
+  "composes": [
+    "components/block.rich-text"
+  ],
+  "content": {
+    "shape": {
+      "enum": [
+        "grouped",
+        "flat"
+      ],
+      "grouped": "an ordered list of {heading, paragraphs[]} \u2014 T-DETAIL-*, T-COMPARISON, T-ARTICLE",
+      "flat": "a flat ordered node list (p / h2 / h3 / ul / ol / blockquote / figure / pExternal) \u2014 T-LEGAL, T-STORY, T-PILLAR"
+    },
+    "groupedSections": {
+      "minItems": 1,
+      "maxItems": 4,
+      "maxItemsBasis": "recomputed: the longest real grouped body is 4 {heading, paragraphs[]} sections (glossary detail)"
+    },
+    "flatNodes": {
+      "minItems": 2,
+      "maxItems": 70,
+      "maxItemsBasis": "recomputed: 70 nodes on /privacy-policy, 31 on the longest T-PILLAR prose block, 25 on /terms-of-service"
+    },
+    "heading": {
+      "maxWords": 6,
+      "copyPolicy": "measured-budget"
+    },
+    "paragraph": {
+      "maxWords": 59,
+      "copyPolicy": "measured-budget"
+    },
+    "additionalProperties": false
+  },
+  "geometry": "container 829.653px @1280; p margin-bottom 1.6em",
+  "constraints": {
+    "maxPerPage": 7,
+    "maxPerPageBasis": "recomputed from src/data/pillar.js: T-PILLAR composes exactly 7 prose blocks between its other blocks (indices 0, 2, 4, 6, 8, 10, 12 of its 17-block array).",
+    "variantKeyed": true
+  },
+  "motion": {
+    "pattern": "none",
+    "trigger": "none",
+    "delayMs": 0,
+    "staggerMs": 0,
+    "reducedMotionFallback": "none-required-static",
+    "implementationStatus": "static-by-design",
+    "note": "NO prose reveal, no scroll-progress bar, no sticky table of contents."
+  },
+  "responsive": {
+    "1440": "933.36px",
+    "1280": "829.653px",
+    "768": "642.333px",
+    "390": "343.22px"
+  },
+  "copyPolicy": "LONG-FORM PROSE IS DELIBERATELY PLACEHOLDER, NOT THE ORIGINAL'S WRITING. See the repo README's 'What is real and what is placeholder' section. Headings, labels and titles ARE real; the running prose is generated to the original's measured block heights.",
+  "measuredFrom": "src/index.css:325-432",
+  "implementedBy": [
+    "src/components/RichText.jsx",
+    "src/components/RichTextBlocks.jsx",
+    "src/components/ProseBody.jsx"
+  ],
+  "motionClosureScope": "CLOSED for PageSpec emission: a generated node's `motion` object may contain ONLY the fields in motionFieldSet, enforced by schema/pagespec.schema.json (additionalProperties:false) and the MOTION_OBJECT_IS_CLOSED rule. The keys in motionDocumentationFields below are contract-level documentation carried by THIS file for human and retrieval use; they are NOT settable on a PageSpec node.",
+  "motionDocumentationFields": [
+    "note"
+  ]
+}

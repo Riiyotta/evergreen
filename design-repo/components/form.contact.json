@@ -1,0 +1,52 @@
+{
+  "$id": "components.form.contact",
+  "layer": "components",
+  "purpose": "The /contact form.",
+  "composes": [
+    "primitives/input.labelled-text",
+    "primitives/input.honeypot",
+    "primitives/button.form-submit",
+    "primitives/panel.form-done",
+    "primitives/panel.form-error"
+  ],
+  "fields": [
+    {
+      "label": "Name",
+      "name": "name",
+      "type": "text",
+      "placeholder": "Full Name"
+    },
+    {
+      "label": "Email",
+      "name": "email",
+      "type": "email",
+      "placeholder": "Email Address"
+    },
+    {
+      "label": "Company",
+      "name": "company",
+      "type": "text",
+      "placeholder": "Company"
+    },
+    {
+      "label": "Message",
+      "name": "message",
+      "control": "textarea",
+      "placeholder": "Example Text"
+    }
+  ],
+  "geometry": "form box measured 444.02x576.78; mb-[15px]",
+  "validation": "NATIVE HTML ONLY. No custom validation, no inline per-field error, no aria-invalid, no aria-describedby.",
+  "stateMachine": {
+    "idle": "the form is mounted and empty of state",
+    "pending": "submit is `disabled`, opacity 0.70, label 'Please wait...' (three dots)",
+    "done": "the whole <form> is UNMOUNTED and replaced by primitives/panel.form-done",
+    "error": "the form STAYS MOUNTED with its values preserved and primitives/panel.form-error is appended after it"
+  },
+  "submission": "STUBBED. The real target is a Next.js server action with NO public endpoint (`submitContactRequest` / `submitReferral`), so nothing is posted anywhere and the submission resolves locally. The observable state machine is faithful; only the transport is stubbed.",
+  "reactNote": "The original runs on React 19, where useTransition keeps isPending true across an awaited async callback. This project is React 18.3, where it does not, so `pending` is plain state. The observable state machine is identical.",
+  "errorCopyGap": "EVIDENCE GAP, recorded rather than invented: the real error string is server-supplied (`res.reason`) and appears in NO client bundle, so it could not be measured. The shipped string is a neutral stand-in, marked as such in-code. No maxWords budget is asserted for it.",
+  "states": "No hover, no active, no focus, no transition, no box-shadow.",
+  "measuredFrom": "src/components/form/ContactForm.jsx:8-42",
+  "errorReproduction": "The error branch is reachable for markup inspection by loading the page with ?formError=1."
+}

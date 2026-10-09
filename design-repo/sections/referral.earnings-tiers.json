@@ -1,0 +1,66 @@
+{
+  "$id": "sections.referral.earnings-tiers",
+  "layer": "sections",
+  "motionFieldSet": [
+    "pattern",
+    "trigger",
+    "durationMs",
+    "easing",
+    "delayMs",
+    "staggerMs",
+    "leafSet",
+    "leafCount",
+    "scrollProgressRange",
+    "reducedMotionFallback",
+    "implementationStatus"
+  ],
+  "motionIsClosed": true,
+  "category": "pricing",
+  "purpose": "Show the four referral earning bands.",
+  "composes": [
+    "components/row.earnings-tiers"
+  ],
+  "content": {
+    "heading": {
+      "maxWords": 13,
+      "copyPolicy": "verbatim-locked",
+      "wrapCritical": true
+    },
+    "tiers": {
+      "count": 4,
+      "copyPolicy": "verbatim-locked"
+    },
+    "additionalProperties": false
+  },
+  "geometry": "section y 1691 h 526.03 @1280; padding is `0 64px 53.3333px` \u2014 pb-[5em] ONLY, NO top padding; heading frame w-[70.3em] with mt-[7.4em]",
+  "constraints": {
+    "onePerPage": true,
+    "allowedTemplates": [
+      "T-REFERRAL"
+    ],
+    "mustFollow": "hero.centred-h1 + form.referral-card (two consecutive bg-cream sections flush, with NO divider between them)"
+  },
+  "motion": {
+    "pattern": "none",
+    "trigger": "none",
+    "delayMs": 0,
+    "staggerMs": 0,
+    "reducedMotionFallback": "none-required-static",
+    "implementationStatus": "static-by-design",
+    "note": "Nothing in this section animates."
+  },
+  "responsive": {
+    "max-wf-phone": "a 2-column CSS grid (grid-cols-2, gap-x-0, gap-y-[3em], items-start) with w-[16em] columns \u2014 a NEW responsive mode not used by the homepage stat row"
+  },
+  "wrapWarning": "FRAGILE WRAP: this h2 sits at exactly 2 line boxes (142.06px) inside a 749.86px frame with no slack, under the substituted serif.",
+  "headingBreakCorrection": "CLONE_SPEC_CORE_B \u00a7R-3 states the heading breaks after '\u2026amount of users'. The real render AND the reference capture both break after 'on the'. The spec is wrong.",
+  "measuredFrom": "src/pages/Referral.jsx:72-92",
+  "implementedBy": [
+    "src/pages/Referral.jsx",
+    "src/components/EarningsTiers.jsx"
+  ],
+  "motionClosureScope": "CLOSED for PageSpec emission: a generated node's `motion` object may contain ONLY the fields in motionFieldSet, enforced by schema/pagespec.schema.json (additionalProperties:false) and the MOTION_OBJECT_IS_CLOSED rule. The keys in motionDocumentationFields below are contract-level documentation carried by THIS file for human and retrieval use; they are NOT settable on a PageSpec node.",
+  "motionDocumentationFields": [
+    "note"
+  ]
+}

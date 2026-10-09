@@ -1,0 +1,23 @@
+{
+  "$id": "components.card.price",
+  "layer": "components",
+  "purpose": "The single flat price card on /pricing.",
+  "tokens": {
+    "surface": "surface.card",
+    "border": "border.default",
+    "radius": "radius.card"
+  },
+  "geometry": "measured 325.41px tall inside the block",
+  "states": "No hover, no active, no focus, no transition, no box-shadow.",
+  "measuredFrom": "src/components/PriceCard.jsx:1-46",
+  "assetRole": "product.screenshot",
+  "negatives": [
+    "no monthly/annual toggle",
+    "no tier variants",
+    "no comparison table",
+    "no FAQ",
+    "`<em>only` relies on a SYNTHESISED oblique of Rubik — the original ships no italic face; do not load a real Rubik Italic"
+  ],
+  "surfaceNote": "bg-white here is deliberate and is a real CONTENT surface, which breaks the homepage's 'white is overlay-only' rule. Do not substitute cream.",
+  "leaves": "3 CARD_LEAVES anchored to the OUTER frame at z 11/11/13, behind the z-100 card"
+}

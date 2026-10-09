@@ -1,0 +1,22 @@
+{
+  "$id": "themes.light",
+  "description": "The only theme. There is no dark mode: no prefers-color-scheme rule, no data-theme attribute and no second palette exist anywhere in the source.",
+  "mode": "light",
+  "resolves": {
+    "surface.page": "#fffff3",
+    "surface.alt": "#edede2",
+    "surface.accent": "#beedc0",
+    "surface.card": "#ffffff",
+    "surface.inverse": "#000000",
+    "surface.overlay": "#ffffff",
+    "surface.quote": "#c3f2c5",
+    "text.primary": "#000000",
+    "text.body": "#333333",
+    "text.onInverse": "#ffffff",
+    "text.outsideRoot": "#474747",
+    "border.default": "#000000",
+    "border.formControl": "#000000",
+    "border.formError": "#000000"
+  },
+  "schemaValidated": true
+}

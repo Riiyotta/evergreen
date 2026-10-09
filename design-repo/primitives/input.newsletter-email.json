@@ -1,0 +1,22 @@
+{
+  "$id": "primitives.input.newsletter-email",
+  "layer": "primitives",
+  "purpose": "Footer newsletter email field.",
+  "tokens": {
+    "radius": "radius.control",
+    "border": "border.default",
+    "placeholder": "newsletter.placeholder"
+  },
+  "geometry": "rounded-l-[7px] only; the submit owns rounded-r-[10px]",
+  "states": {
+    "hover": null,
+    "active": null,
+    "focus": null,
+    "disabled": null,
+    "transition": null,
+    "boxShadow": "none",
+    "note": "No interactive state exists. A generator must not add one."
+  },
+  "measuredFrom": "src/components/Footer.jsx:130-168",
+  "v3Note": "Tailwind v4 preflight resets text-input background to transparent; v3 does not. Re-declared in @layer base so the control does not paint white over cream-dark."
+}

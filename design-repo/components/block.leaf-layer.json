@@ -1,0 +1,17 @@
+{
+  "$id": "components.block.leaf-layer",
+  "layer": "components",
+  "purpose": "One leaf layer: an aria-hidden, pointer-events-none span of absolutely positioned leaf images.",
+  "composes": [
+    "primitives/image.leaf-art"
+  ],
+  "sets": [
+    "HERO_LEAVES (12)",
+    "DIVIDER_LEAVES (12)",
+    "CARD_LEAVES (3)",
+    "QUOTE_LEAVES (6, static)"
+  ],
+  "states": "No hover, no active, no focus, no transition, no box-shadow.",
+  "measuredFrom": "src/components/LeafLayer.jsx:7-28",
+  "rule": "A generator may choose WHICH enumerated set a section uses. It may NEVER invent a coordinate."
+}

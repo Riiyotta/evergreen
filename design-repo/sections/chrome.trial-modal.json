@@ -1,0 +1,64 @@
+{
+  "$id": "sections.chrome.trial-modal",
+  "layer": "sections",
+  "motionFieldSet": [
+    "pattern",
+    "trigger",
+    "durationMs",
+    "easing",
+    "delayMs",
+    "staggerMs",
+    "leafSet",
+    "leafCount",
+    "scrollProgressRange",
+    "reducedMotionFallback",
+    "implementationStatus"
+  ],
+  "motionIsClosed": true,
+  "category": "chrome",
+  "purpose": "The platform-choice overlay opened by every 'Start 14 Day Trial' button.",
+  "composes": [
+    "components/overlay.slide"
+  ],
+  "content": {
+    "platforms": {
+      "count": 3,
+      "values": [
+        "Slack",
+        "Teams",
+        "Webex"
+      ],
+      "copyPolicy": "verbatim-locked"
+    },
+    "additionalProperties": false
+  },
+  "geometry": "bg-white, z-[999999999]",
+  "constraints": {
+    "onePerPage": true,
+    "mustBeLast": false,
+    "note": "Rendered once by Layout on EVERY route, outside the section flow. It is not a positional node."
+  },
+  "motion": {
+    "pattern": "overlay-slide",
+    "trigger": "userToggle",
+    "durationMs": 1000,
+    "easing": "cubic-bezier(0.455, 0.03, 0.515, 0.955)",
+    "delayMs": 0,
+    "staggerMs": 0,
+    "closeDurationMs": 500,
+    "closeEasing": "cubic-bezier(0.55, 0.085, 0.68, 0.53)",
+    "reducedMotionFallback": "duration collapses to 0.01ms; the panel hides at 0vh",
+    "implementationStatus": "css-keyframe-fallback-implemented"
+  },
+  "responsive": {
+    "all": "full-viewport at every breakpoint"
+  },
+  "measuredFrom": "src/components/TrialModal.jsx:1-10",
+  "implementedBy": "src/components/TrialModal.jsx",
+  "assetRole": "third-party.platform-logo",
+  "motionClosureScope": "CLOSED for PageSpec emission: a generated node's `motion` object may contain ONLY the fields in motionFieldSet, enforced by schema/pagespec.schema.json (additionalProperties:false) and the MOTION_OBJECT_IS_CLOSED rule. The keys in motionDocumentationFields below are contract-level documentation carried by THIS file for human and retrieval use; they are NOT settable on a PageSpec node.",
+  "motionDocumentationFields": [
+    "closeDurationMs",
+    "closeEasing"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "$id": "primitives.badge.tick",
+  "layer": "primitives",
+  "purpose": "ESG pillar label with a leading tick glyph.",
+  "tokens": {
+    "surface": "surface.accent",
+    "border": "border.default",
+    "radius": "radius.card"
+  },
+  "geometry": "flex px-[1.5em] py-[0.8em]; height 47.73px; width shrink-to-fit (207.69 / 124.84 / 180.11 @1280)",
+  "states": {
+    "hover": null,
+    "active": null,
+    "focus": null,
+    "disabled": null,
+    "transition": null,
+    "boxShadow": "none",
+    "note": "No interactive state exists. A generator must not add one."
+  },
+  "measuredFrom": "src/components/TickBadge.jsx:1-24",
+  "assetRole": "brand.icon",
+  "knownArtefact": "The tick SVG is 209x150 intrinsic rendered at w-[2em] with the default object-fit: fill, so it paints 21.33x26.67 — deliberately squashed to a 0.8 aspect. This is the original's behaviour. NEVER add object-contain.",
+  "labels": {
+    "copyPolicy": "verbatim-locked",
+    "allowed": [
+      "ENVIRONMENTAL",
+      "SOCIAL",
+      "GOVERNANCE"
+    ],
+    "note": "Literally uppercase in the source — there is no text-transform rule."
+  }
+}

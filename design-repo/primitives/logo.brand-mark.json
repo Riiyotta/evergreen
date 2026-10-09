@@ -1,0 +1,17 @@
+{
+  "$id": "primitives.logo.brand-mark",
+  "layer": "primitives",
+  "purpose": "The Evergreen wordmark in the nav and the footer.",
+  "geometry": "w-[13.471em]; w-[17em] at <=991px",
+  "states": {
+    "hover": null,
+    "active": null,
+    "focus": null,
+    "disabled": null,
+    "transition": null,
+    "boxShadow": "none",
+    "note": "No interactive state exists. A generator must not add one."
+  },
+  "measuredFrom": "src/components/Nav.jsx:43-50",
+  "assetRole": "brand.logo"
+}

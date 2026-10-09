@@ -1,0 +1,59 @@
+{
+  "$id": "sections.proof.stat-pills",
+  "layer": "sections",
+  "motionFieldSet": [
+    "pattern",
+    "trigger",
+    "durationMs",
+    "easing",
+    "delayMs",
+    "staggerMs",
+    "leafSet",
+    "leafCount",
+    "scrollProgressRange",
+    "reducedMotionFallback",
+    "implementationStatus"
+  ],
+  "motionIsClosed": true,
+  "category": "proof",
+  "purpose": "Four third-party research statistics as leaf pills with footnotes.",
+  "composes": [
+    "components/row.stat-pills"
+  ],
+  "content": {
+    "stats": {
+      "count": 4,
+      "copyPolicy": "verbatim-locked"
+    },
+    "additionalProperties": false
+  },
+  "geometry": "block height 137.59px @1280; wrapped in a `my-[4em]` div on T-PILLAR (margin-block 42.667px, NOT the standard 44.8px `my-[4.2em]`)",
+  "constraints": {
+    "onePerPage": true,
+    "allowedTemplates": [
+      "T-PILLAR"
+    ],
+    "note": "A STANDALONE NODE only on T-PILLAR. On T-HOME and T-PARTNER the same components/row.stat-pills is composed INSIDE the hero section, so it is not a positional node there. Checked against the real node sequences in templates/templates.json at the time this constraint was written."
+  },
+  "motion": {
+    "pattern": "none",
+    "trigger": "none",
+    "delayMs": 0,
+    "staggerMs": 0,
+    "reducedMotionFallback": "none-required-static",
+    "implementationStatus": "static-by-design",
+    "note": "Nothing in this section animates."
+  },
+  "responsive": {
+    "max-wf-phone": "halves become full-width and stack; the second half gains mt-[7em]",
+    "max-wf-mini": "columns w-[16em] with mb-[4.6em]; second half mt-[3em]"
+  },
+  "externalLinks": "All four footnote <sup> links are off-domain and render with NO href.",
+  "complianceNote": "Real cited third-party research figures. NEVER invent or alter a statistic.",
+  "measuredFrom": "src/components/StatRow.jsx:51-68",
+  "implementedBy": "src/components/StatRow.jsx",
+  "motionClosureScope": "CLOSED for PageSpec emission: a generated node's `motion` object may contain ONLY the fields in motionFieldSet, enforced by schema/pagespec.schema.json (additionalProperties:false) and the MOTION_OBJECT_IS_CLOSED rule. The keys in motionDocumentationFields below are contract-level documentation carried by THIS file for human and retrieval use; they are NOT settable on a PageSpec node.",
+  "motionDocumentationFields": [
+    "note"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "$id": "components.card.message",
+  "layer": "components",
+  "purpose": "One ready-to-send recognition message with a category badge and a usage note.",
+  "composes": [
+    "primitives/badge.eyebrow-static"
+  ],
+  "tokens": {
+    "surface": "surface.card",
+    "border": "border.default",
+    "radius": "radius.card"
+  },
+  "geometry": "w-[42em] flex-col p-[2.4em] z-[100]; footer pinned by `mt-auto pt-[1.4em]`",
+  "content": {
+    "text": {
+      "maxWords": 40,
+      "copyPolicy": "measured-budget"
+    },
+    "category": {
+      "maxWords": 5,
+      "copyPolicy": "measured-budget"
+    },
+    "note": {
+      "maxWords": 16,
+      "copyPolicy": "measured-budget"
+    }
+  },
+  "maxWordsBasis": "recomputed by iterating every message on all 102 detail routes",
+  "states": "No hover, no active, no focus, no transition, no box-shadow.",
+  "measuredFrom": "src/components/MessageCard.jsx:19-35",
+  "negatives": [
+    "NO copy-to-clipboard control: zero <button>, zero navigator.clipboard and zero occurrences of 'copy'/'clipboard' across all 35 message routes"
+  ],
+  "criticalNote": "Its badge is visually identical to badge.eyebrow-link but has NO hover. Do not propagate."
+}

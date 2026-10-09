@@ -1,0 +1,438 @@
+{
+  "$id": "extraction.measured-values",
+  "description": "The citation trail for this design-repo. Every token, section contract, template node sequence and motion config was measured from one of the sources below rather than inferred. These paths are relative to the PARENT project directory and deliberately do NOT appear in registry.manifest.json's entryPoints \u2014 a standalone copy of design-repo/ will not contain them, and extraction/verify_all.py downgrades citation checking to a warning in that case rather than failing.",
+  "gracefulDegradation": "verify_all.py checks for a sibling `src/` directory. Present: every \"path:line[-line]\" citation is resolved against the real file and an out-of-range span fails the run. Absent: the check warns and is skipped. The repo therefore verifies clean both next to its source and on its own.",
+  "primarySources": {
+    "appSource": {
+      "path": "src/",
+      "role": "Authoritative for section ORDER, component composition and class strings. Where spec prose and the real component disagreed, the component won."
+    },
+    "measurementSpecs": {
+      "paths": [
+        "ASSET_MANIFEST.md",
+        "CLONE_SPEC.md",
+        "CLONE_SPEC_CONTENT_A.md",
+        "CLONE_SPEC_CONTENT_B.md",
+        "CLONE_SPEC_CORE_A.md",
+        "CLONE_SPEC_CORE_B.md"
+      ],
+      "role": "Authoritative for measured geometry, computed typography, colour tokens, asset inventory and decoded motion configs. Written from in-browser Playwright measurement of the live original (which is Next.js + Tailwind v4 + Framer Motion, so several values were read off its own compiled CSS and component source)."
+    },
+    "savedMirror": {
+      "path": "_reference/",
+      "role": "A saved copy of the original homepage plus per-route screenshots and raw measurement JSON (_reference/recon-b/*.json), used to settle disputes between spec prose and rendered reality."
+    },
+    "informationArchitecture": {
+      "paths": [
+        "ia.json",
+        "IA.md",
+        "matrix.csv"
+      ],
+      "role": "Independently-built route/template/section map for the same project. Converged on the same 22 templates and 195 routes from the same route table, derived separately. Section ids differ by naming convention between the two documents; the route and template counts agree.",
+      "note": "Added to the project AFTER this design-repo build began, so an earlier build note claiming no IA artifact existed is stale."
+    }
+  },
+  "correctionsAppliedDuringBuild": [
+    {
+      "claim": "Section contracts declared motionIsClosed:true with an 11-field motionFieldSet.",
+      "reality": "33 of 46 contracts carried motion keys outside their own declared set.",
+      "resolution": "The closure is correct for PageSpec emission; the CLAIM was imprecise. Added motionClosureScope and motionDocumentationFields to all 46 contracts, and updated compatibility/graph.json's MOTION_OBJECT_IS_CLOSED rule so the prose and the enforced code agree."
+    },
+    {
+      "claim": "compatibility/graph.json ONE_FINAL_CTA exempted 4 templates.",
+      "reality": "Enumerating templates.json showed 6 templates have no conversion.reassurance-cta: T-ARTICLE and T-PILLAR close with conversion.lead-magnet-cta instead.",
+      "resolution": "Exception list regenerated from the real node sequences. As drafted, the rule would have rejected 54 real, correct routes."
+    },
+    {
+      "claim": "ONE_HERO_PER_PAGE exempted T-PRICING, implying a multi-hero page.",
+      "reality": "T-PRICING has ZERO hero.* nodes \u2014 its opener is pricing.single-plan.",
+      "resolution": "exceptionBasis records that the exemption is for a hero-LESS template."
+    },
+    {
+      "claim": "NO_ADJACENT_SAME_CATEGORY carried prose-only exceptions.",
+      "reality": "T-ARTICLE legitimately chains two `listing` sections, and the validator could not read a prose exception.",
+      "resolution": "Added machine-readable exemptAdjacency / alwaysExemptCategories, which the validator actually reads, with the prose list kept in agreement."
+    },
+    {
+      "claim": "A naive repeatability check compared (section, variant) counts against 1.",
+      "reality": "T-HOME, T-ESG and T-PARTNER each declare divider.leaf-band twice as two separate non-repeatable positional nodes.",
+      "resolution": "The check now compares against the template's OWN declared count. As written it rejected 4 real templates while still catching a true duplicate."
+    }
+  ],
+  "knownEvidenceGaps": [
+    "Long-form prose on the article, glossary, message-set, company-value, case-study and legal templates is deliberate placeholder copy sized to measured block heights. Titles, slugs, headings, labels and images are real. Copy budgets come from the measured line counts, not from the placeholder text.",
+    "Recon sampled 4 of 102 collection detail routes. Unsampled routes reuse their sibling's element counts, so a few document heights run 8-13% short of the original. Per-block geometry is exact; total page length drifts. Each template carries its own evidenceLevel.",
+    "Server-side form error strings were never observable (the originals post to server actions with no public endpoint) and are marked as stand-ins in the form contracts.",
+    "The original's third-party scheduler iframe is cross-origin; its interior could not be measured. The clone ships a static placeholder matched to the measured box.",
+    "The display serif is a substitution: the original uses a Typekit-bound face that cannot be self-hosted. The clone self-hosts Gloock at size-adjust 92.44%, chosen by measuring ~50 open serifs against the original's real text-advance widths. Section geometry is exact; cap-height runs ~2.7% short, and two headings sit under 2% wrap headroom.",
+    "Motion is SPECIFIED, NOT YET ANIMATED in the app. Every leaf renders in its correct pre-animation position with the right class name and the scroll-track hook is exposed, but nothing animates yet. The configs here are decoded from the original, not observed running in the clone."
+  ],
+  "citedExternalPaths": {
+    "ASSET_MANIFEST.md": [
+      "assets/asset-roles.json"
+    ],
+    "src/App.jsx": [
+      "compatibility/graph.json",
+      "registry.manifest.json",
+      "templates/route-map.json"
+    ],
+    "src/components/AnnouncementBanner.jsx": [
+      "sections/chrome.announcement-banner.json",
+      "tokens/00-foundation/spacing.json"
+    ],
+    "src/components/ArkettaCtaPanel.jsx": [
+      "components/panel.arketta-cta.json",
+      "sections/conversion.arketta-cross-promo.json",
+      "tokens/00-foundation/radius.json",
+      "tokens/00-foundation/spacing.json",
+      "tokens/00-foundation/typography.json"
+    ],
+    "src/components/BadgeLink.jsx": [
+      "compatibility/graph.json",
+      "primitives/badge.eyebrow-link.json",
+      "tokens/00-foundation/icon-size.json",
+      "tokens/00-foundation/interaction.json",
+      "tokens/00-foundation/motion.json",
+      "tokens/00-foundation/radius.json",
+      "tokens/00-foundation/typography.json"
+    ],
+    "src/components/BlogCard.jsx": [
+      "components/card.blog-row.json"
+    ],
+    "src/components/CalendlyCard.jsx": [
+      "components/card.calendly.json",
+      "tokens/00-foundation/spacing.json"
+    ],
+    "src/components/CaseStudyCard.jsx": [
+      "components/card.case-study.json"
+    ],
+    "src/components/CaseStudyMetaCard.jsx": [
+      "components/card.case-study-meta.json"
+    ],
+    "src/components/CaseStudyTeaserCard.jsx": [
+      "components/card.case-study-teaser.json"
+    ],
+    "src/components/ContentHeading.jsx": [
+      "components/block.content-heading.json"
+    ],
+    "src/components/CtaSection.jsx": [
+      "components/column.reassurance-icon.json",
+      "components/row.platform-links.json",
+      "sections/conversion.reassurance-cta.json",
+      "tokens/00-foundation/icon-size.json",
+      "tokens/00-foundation/typography.json"
+    ],
+    "src/components/DateLine.jsx": [
+      "components/block.date-line.json",
+      "tokens/00-foundation/typography.json"
+    ],
+    "src/components/EarningsTiers.jsx": [
+      "components/row.earnings-tiers.json"
+    ],
+    "src/components/Footer.jsx": [
+      "components/form.newsletter.json",
+      "primitives/input.newsletter-email.json",
+      "primitives/link.footer.json",
+      "sections/chrome.footer.json",
+      "tokens/00-foundation/icon-size.json",
+      "tokens/00-foundation/interaction.json",
+      "tokens/00-foundation/typography.json"
+    ],
+    "src/components/FormCard.jsx": [
+      "components/card.form-shell.json"
+    ],
+    "src/components/G2Block.jsx": [
+      "components/block.g2-rating.json",
+      "primitives/star.rating.json",
+      "sections/proof.g2-rating.json",
+      "tokens/00-foundation/icon-size.json"
+    ],
+    "src/components/Hero.jsx": [
+      "primitives/pill.avatar-frame.json",
+      "sections/hero.home.json",
+      "tokens/00-foundation/elevation.json",
+      "tokens/00-foundation/icon-size.json",
+      "tokens/00-foundation/motion.json",
+      "tokens/00-foundation/spacing.json",
+      "tokens/00-foundation/typography.json"
+    ],
+    "src/components/HeroHeading.jsx": [
+      "components/block.hero-heading.json",
+      "sections/hero.centred-h1.json"
+    ],
+    "src/components/IconFeatureColumn.jsx": [
+      "components/column.icon-feature-serif.json",
+      "tokens/00-foundation/typography.json"
+    ],
+    "src/components/LeafDivider.jsx": [
+      "components/block.leaf-divider.json",
+      "primitives/rule.divider-line.json",
+      "sections/divider.leaf-band.json",
+      "tokens/00-foundation/elevation.json",
+      "tokens/00-foundation/spacing.json",
+      "tokens/30-layout/layout.json"
+    ],
+    "src/components/LeafLayer.jsx": [
+      "components/block.leaf-layer.json"
+    ],
+    "src/components/LinkCard.jsx": [
+      "components/card.link.json",
+      "tokens/00-foundation/elevation.json",
+      "tokens/00-foundation/typography.json"
+    ],
+    "src/components/LogoStrip.jsx": [
+      "components/row.logo-strip.json"
+    ],
+    "src/components/MessageCard.jsx": [
+      "components/card.message.json",
+      "components/grid.message.json",
+      "primitives/badge.eyebrow-static.json",
+      "sections/content.message-grid.json"
+    ],
+    "src/components/Nav.jsx": [
+      "primitives/link.nav.json",
+      "primitives/logo.brand-mark.json",
+      "sections/chrome.nav.json",
+      "tokens/00-foundation/interaction.json"
+    ],
+    "src/components/PriceCard.jsx": [
+      "components/card.price.json"
+    ],
+    "src/components/RelatedCard.jsx": [
+      "components/card.related-article.json"
+    ],
+    "src/components/ReportCsrSection.jsx": [
+      "sections/feature.report-csr.json"
+    ],
+    "src/components/RichText.jsx": [
+      "components/block.rich-text.json"
+    ],
+    "src/components/SchedulerPlaceholder.jsx": [
+      "components/block.scheduler-placeholder.json",
+      "tokens/00-foundation/color.json"
+    ],
+    "src/components/SdgSection.jsx": [
+      "components/column.sdg-goal.json",
+      "sections/proof.sdg-goals.json",
+      "tokens/00-foundation/spacing.json",
+      "tokens/00-foundation/typography.json"
+    ],
+    "src/components/SeedsSection.jsx": [
+      "primitives/badge.value.json",
+      "primitives/icon.leaf-inline.json",
+      "sections/feature.seeds.json",
+      "tokens/00-foundation/elevation.json",
+      "tokens/00-foundation/icon-size.json",
+      "tokens/00-foundation/typography.json"
+    ],
+    "src/components/SlideOverlay.jsx": [
+      "components/overlay.slide.json"
+    ],
+    "src/components/SourcesList.jsx": [
+      "components/block.sources-list.json",
+      "primitives/link.inert-external.json",
+      "sections/content.sources.json"
+    ],
+    "src/components/StatRow.jsx": [
+      "components/row.stat-pills.json",
+      "primitives/pill.stat.json",
+      "sections/proof.stat-pills.json"
+    ],
+    "src/components/Testimonials.jsx": [
+      "components/card.testimonial.json",
+      "primitives/avatar.circle.json",
+      "tokens/00-foundation/typography.json"
+    ],
+    "src/components/TickBadge.jsx": [
+      "primitives/badge.tick.json",
+      "tokens/00-foundation/icon-size.json"
+    ],
+    "src/components/TrialButton.jsx": [
+      "primitives/button.trial-cta.json",
+      "tokens/00-foundation/typography.json"
+    ],
+    "src/components/TrialModal.jsx": [
+      "sections/chrome.trial-modal.json"
+    ],
+    "src/components/blocks/FaqDl.jsx": [
+      "components/block.faq-dl.json",
+      "sections/content.faq.json"
+    ],
+    "src/components/blocks/LeadMagnetForm.jsx": [
+      "components/form.lead-magnet.json",
+      "primitives/button.lead-magnet-submit.json",
+      "primitives/input.lead-magnet.json",
+      "tokens/00-foundation/interaction.json",
+      "tokens/00-foundation/spacing.json"
+    ],
+    "src/components/blocks/LeafBulletList.jsx": [
+      "components/block.leaf-bullets.json",
+      "sections/content.leaf-bullets.json"
+    ],
+    "src/components/blocks/LeafDl.jsx": [
+      "components/block.leaf-dl.json",
+      "sections/content.leaf-spec-list.json"
+    ],
+    "src/components/form/ContactForm.jsx": [
+      "components/form.contact.json",
+      "tokens/00-foundation/spacing.json"
+    ],
+    "src/components/form/FormDone.jsx": [
+      "primitives/panel.form-done.json",
+      "tokens/00-foundation/spacing.json"
+    ],
+    "src/components/form/FormError.jsx": [
+      "primitives/panel.form-error.json",
+      "tokens/00-foundation/border.json",
+      "tokens/00-foundation/spacing.json"
+    ],
+    "src/components/form/Honeypot.jsx": [
+      "primitives/input.honeypot.json"
+    ],
+    "src/components/form/LabelledField.jsx": [
+      "primitives/input.labelled-text.json",
+      "tokens/00-foundation/border.json",
+      "tokens/00-foundation/color.json",
+      "tokens/00-foundation/typography.json"
+    ],
+    "src/components/form/ReferralForm.jsx": [
+      "components/form.referral.json"
+    ],
+    "src/components/form/SubmitButton.jsx": [
+      "primitives/button.form-submit.json",
+      "tokens/00-foundation/interaction.json",
+      "tokens/00-foundation/typography.json"
+    ],
+    "src/index.css": [
+      "compatibility/graph.json",
+      "primitives/link.inline.json",
+      "sections/content.rich-text.json",
+      "tokens/00-foundation/border.json",
+      "tokens/00-foundation/color.json",
+      "tokens/00-foundation/motion.json",
+      "tokens/00-foundation/spacing.json",
+      "tokens/00-foundation/typography.json",
+      "tokens/30-layout/layout.json"
+    ],
+    "src/layout/Layout.jsx": [
+      "compatibility/graph.json",
+      "tokens/30-layout/layout.json"
+    ],
+    "src/lib/classes.js": [
+      "tokens/00-foundation/spacing.json"
+    ],
+    "src/lib/leaves.js": [
+      "compatibility/graph.json",
+      "primitives/image.leaf-art.json",
+      "tokens/00-foundation/elevation.json",
+      "tokens/00-foundation/icon-size.json",
+      "tokens/00-foundation/motion.json"
+    ],
+    "src/pages/AlternativePage.jsx": [
+      "templates/templates.json"
+    ],
+    "src/pages/AlternativesIndex.jsx": [
+      "templates/templates.json"
+    ],
+    "src/pages/BlogIndex.jsx": [
+      "sections/listing.blog-rows.json",
+      "templates/templates.json"
+    ],
+    "src/pages/BlogPost.jsx": [
+      "sections/conversion.lead-magnet-cta.json",
+      "sections/listing.more-articles.json",
+      "templates/templates.json"
+    ],
+    "src/pages/CaseStudies.jsx": [
+      "sections/listing.case-study-grid.json",
+      "templates/templates.json"
+    ],
+    "src/pages/CaseStudyPage.jsx": [
+      "sections/listing.story-teasers.json",
+      "sections/story.hero-quote.json",
+      "sections/story.meta-prose.json",
+      "templates/templates.json"
+    ],
+    "src/pages/Contact.jsx": [
+      "sections/form.contact-card.json",
+      "templates/templates.json",
+      "tokens/30-layout/layout.json"
+    ],
+    "src/pages/EbookPage.jsx": [
+      "sections/form.lead-magnet-card.json",
+      "sections/hero.ebook-lede.json",
+      "templates/templates.json"
+    ],
+    "src/pages/EmployeeRecognitionHub.jsx": [
+      "sections/content.reading-list.json",
+      "templates/templates.json"
+    ],
+    "src/pages/Esg.jsx": [
+      "sections/feature.split-visual.json",
+      "sections/hero.esg-environmental.json",
+      "templates/templates.json",
+      "tokens/00-foundation/spacing.json"
+    ],
+    "src/pages/Home.jsx": [
+      "templates/templates.json",
+      "tokens/00-foundation/spacing.json"
+    ],
+    "src/pages/LegalPage.jsx": [
+      "sections/hero.legal-head.json",
+      "templates/templates.json"
+    ],
+    "src/pages/OurPurpose.jsx": [
+      "sections/hero.purpose.json",
+      "sections/proof.goals-band.json",
+      "templates/templates.json",
+      "tokens/00-foundation/motion.json"
+    ],
+    "src/pages/PartnerPage.jsx": [
+      "sections/hero.partner.json",
+      "templates/templates.json"
+    ],
+    "src/pages/Pricing.jsx": [
+      "sections/pricing.single-plan.json",
+      "sections/proof.testimonial-wall.json",
+      "templates/templates.json",
+      "tokens/00-foundation/spacing.json"
+    ],
+    "src/pages/Referral.jsx": [
+      "sections/form.referral-card.json",
+      "sections/referral.earnings-tiers.json",
+      "templates/templates.json",
+      "tokens/00-foundation/spacing.json"
+    ],
+    "src/pages/ScheduleADemo.jsx": [
+      "sections/form.scheduler-card.json",
+      "templates/templates.json"
+    ],
+    "src/templates/TDetail.jsx": [
+      "templates/templates.json"
+    ],
+    "src/templates/TIndex.jsx": [
+      "templates/templates.json",
+      "tokens/00-foundation/spacing.json"
+    ],
+    "src/templates/blocks.jsx": [
+      "components/block.prose-left.json",
+      "components/grid.link-card.json",
+      "sections/content.prose-left.json",
+      "sections/content.section-heading.json",
+      "sections/hero.page-head.json",
+      "sections/listing.link-card-grid.json",
+      "tokens/00-foundation/spacing.json",
+      "tokens/00-foundation/typography.json",
+      "tokens/30-layout/layout.json"
+    ],
+    "tailwind.config.js": [
+      "tokens/00-foundation/border.json",
+      "tokens/00-foundation/breakpoint.json",
+      "tokens/00-foundation/color.json",
+      "tokens/00-foundation/elevation.json",
+      "tokens/00-foundation/interaction.json",
+      "tokens/00-foundation/motion.json",
+      "tokens/00-foundation/radius.json"
+    ]
+  }
+}

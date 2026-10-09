@@ -1,0 +1,91 @@
+{
+  "$id": "sections.conversion.reassurance-cta",
+  "layer": "sections",
+  "motionFieldSet": [
+    "pattern",
+    "trigger",
+    "durationMs",
+    "easing",
+    "delayMs",
+    "staggerMs",
+    "leafSet",
+    "leafCount",
+    "scrollProgressRange",
+    "reducedMotionFallback",
+    "implementationStatus"
+  ],
+  "motionIsClosed": true,
+  "category": "conversion",
+  "purpose": "The shared final CTA: three reassurance columns, the display heading, the price line, the trial button and the install links.",
+  "composes": [
+    "components/column.reassurance-icon",
+    "primitives/button.trial-cta",
+    "components/row.platform-links"
+  ],
+  "content": {
+    "columns": {
+      "count": 3,
+      "maxWords": 11,
+      "copyPolicy": "verbatim-locked"
+    },
+    "heading": {
+      "value": "Start feeling good about work",
+      "copyPolicy": "verbatim-locked",
+      "maxWords": 5
+    },
+    "paragraph": {
+      "maxWords": 28,
+      "copyPolicy": "verbatim-locked"
+    },
+    "smallPrint": {
+      "maxWords": 8,
+      "copyPolicy": "verbatim-locked"
+    },
+    "smallPrintSuffix": {
+      "maxWords": 8,
+      "copyPolicy": "verbatim-locked",
+      "required": false
+    },
+    "additionalProperties": false
+  },
+  "maxWordsBasis": "word-counted from the real PRICING_COLUMNS array and inline strings in CtaSection.jsx",
+  "geometry": "section height 1038.81 @1280 (1064.86 with the partner suffix, which wraps the small print to 2 lines); bg cream-dark; pt-[18em] pb-[5em]; heading frame w-[51em] (544px)",
+  "blockCount": 5,
+  "constraints": {
+    "onePerPage": true,
+    "mustBeLast": true,
+    "mustPrecedeFooter": true,
+    "mustFollow": "divider.leaf-band",
+    "exclusiveWith": [
+      "conversion.lead-magnet-cta"
+    ],
+    "note": "Every template except T-REFERRAL, T-BLOG-INDEX, T-LEGAL, T-ARTICLE and T-PILLAR ends on this section."
+  },
+  "motion": {
+    "pattern": "none",
+    "trigger": "none",
+    "delayMs": 0,
+    "staggerMs": 0,
+    "reducedMotionFallback": "none-required-static",
+    "implementationStatus": "static-by-design",
+    "note": "No leaves in this section \u2014 the divider band above it owns the last leaf layer."
+  },
+  "responsive": {
+    "max-wf-mini": "the 3-up row becomes flex-col and centres; the heading drops to 5.1em; the platform links stack"
+  },
+  "assetRoles": [
+    "brand.icon",
+    "third-party.platform-logo"
+  ],
+  "sharedVerbatim": "CLONE_SPEC_CORE_A \u00a72.7: byte-identical in classes, text and geometry across /, /esg, /our-purpose, /case-studies, /contact, /schedule-a-demo, /ebook/:slug, /alternatives, /alternatives/:slug, the four collection indexes, all four T-DETAIL-* families, T-STORY and T-PARTNER. Verified by DOM diff over the last 103 nodes.",
+  "partnerDelta": "T-PARTNER appends ONE extra clause to the small print (e.g. 'Contact us for your 30% 50Pros discount'). That is the ONLY difference between the partner CTA and the shared one.",
+  "measuredFrom": "src/components/CtaSection.jsx:72-152",
+  "implementedBy": [
+    "src/components/CtaSection.jsx",
+    "src/components/ReassuranceCta.jsx"
+  ],
+  "motionClosureScope": "CLOSED for PageSpec emission: a generated node's `motion` object may contain ONLY the fields in motionFieldSet, enforced by schema/pagespec.schema.json (additionalProperties:false) and the MOTION_OBJECT_IS_CLOSED rule. The keys in motionDocumentationFields below are contract-level documentation carried by THIS file for human and retrieval use; they are NOT settable on a PageSpec node.",
+  "motionDocumentationFields": [
+    "note"
+  ]
+}

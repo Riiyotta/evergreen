@@ -1,0 +1,21 @@
+{
+  "$id": "primitives.input.lead-magnet",
+  "layer": "primitives",
+  "purpose": "Name / Email / Company control on the lead-magnet form.",
+  "tokens": {
+    "radius": "radius.control",
+    "border": "border.default",
+    "placeholder": "newsletter.placeholder"
+  },
+  "geometry": "h-[3em] max-w-[49ch] px-[0.9em] text-[1.75em]; 2px border (not 1.5px)",
+  "states": {
+    "hover": null,
+    "active": null,
+    "focus": null,
+    "disabled": null,
+    "transition": null,
+    "boxShadow": "none",
+    "note": "No interactive state exists. A generator must not add one."
+  },
+  "measuredFrom": "src/components/blocks/LeadMagnetForm.jsx:66-75"
+}

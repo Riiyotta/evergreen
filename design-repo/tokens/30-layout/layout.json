@@ -1,0 +1,102 @@
+{
+  "$id": "tokens.layout",
+  "layer": "30-layout",
+  "emEngine": {
+    "TITLE": "THE SINGLE MOST IMPORTANT RULE IN THE SYSTEM",
+    "selector": ".marketing-root",
+    "declaration": "font-size: 0.833333vw",
+    "clampUp": "font-size: 16px at min-width 1920px",
+    "freezeDown": "font-size: 8.25833px at max-width 991px",
+    "measuredFrom": "src/index.css:200-219",
+    "measuredRootPx": {
+      "1920": 16,
+      "1440": 12,
+      "1280": 10.6667,
+      "768": 8.25833,
+      "390": 8.25833
+    },
+    "independentConfirmation": "The `root` field of every file in _reference/recon-b/ reports the live original's own computed root font-size at the captured viewport: 10.6667px at 1280, 12px at 1440, 8.25833px at 768 and 390.",
+    "RULES": [
+      "EVERY length below .marketing-root is `em` off this font-size.",
+      "`em` is NEVER converted to px anywhere. A generator that emits px for a length that is em in the source has broken the whole system.",
+      "`ch` values stay in `ch` (see tokens/00-foundation/spacing.json#chUnits).",
+      "The enumerated fixed-px exceptions in spacing.json#fixedPxExceptions are the ONLY lengths that are legitimately px."
+    ],
+    "v3Translation": "The original is Tailwind v4, where these rules live in a real @layer base and always lose to utilities. v3 emits no native cascade layers, so (a) the rules are wrapped in @layer base and (b) the element part of each selector is wrapped in :where(...) to drop specificity to 0,1,0. Matched elements and declared values are otherwise verbatim."
+  },
+  "sectionWrapper": {
+    "classString": "mx-auto -mt-[3em] w-full max-w-[1920px] px-[6em] max-wf-tablet:px-[6vw]",
+    "measuredFrom": "src/layout/Layout.jsx:63-68",
+    "appliesTo": "every section wrapper on every page",
+    "loadBearing": "The -mt-[3em] (-32px @1280) overlap is LOAD-BEARING: it is what makes the divider bands and the background transitions line up. Removing it reflows every page."
+  },
+  "zeroGutterVariants": {
+    "classString": "mx-auto -mt-[3em] w-full max-w-[1920px] px-0 max-wf-tablet:px-0",
+    "usedBy": [
+      "/contact section A",
+      "/referral section A",
+      "/ebook/:slug section 1"
+    ],
+    "measuredFrom": "src/pages/Contact.jsx:20",
+    "why": "Content still looks gutter-ed because every child is mx-auto with its own max-width. Leaving px-[6em] on would make the h1 and intro paragraph 128px narrower and re-wrap them."
+  },
+  "mainElement": {
+    "classString": "relative w-full overflow-hidden",
+    "measuredFrom": "src/layout/Layout.jsx:50",
+    "loadBearing": "The overflow clip is load-bearing: the 120em divider bands and the leaf layers extend past the gutters and would otherwise create horizontal page scroll."
+  },
+  "proseContainer": {
+    "selector": ".marketing-rich-text",
+    "measuredFrom": "src/index.css:325-432",
+    "widthByViewport": {
+      "1440": 933.36,
+      "1280": 829.653,
+      "768": 642.333,
+      "390": 343.22
+    },
+    "fontSizeContext": "The container's own font-size is the ROOT em, not the paragraph size. That is why `figure`/`figcaption` resolve 1em to ~10.67px.",
+    "unstyledElements": {
+      "list": [
+        "hr",
+        "table",
+        "th",
+        "td",
+        "code",
+        "pre"
+      ],
+      "reason": "The original ships NO rules for these and none appear on any sampled page. Deliberately unstyled — inventing a table style would guarantee a mismatch. RichTextBlocks refuses table and hr."
+    }
+  },
+  "cardGrid": {
+    "classString": "flex w-full flex-wrap justify-center gap-[3em]",
+    "cardWidth": "42em (447.98px @1280)",
+    "columnsAt1280": 2,
+    "columnsBelow768": 1,
+    "rowBehaviour": "align-items: stretch, so measured row pitch varies with content",
+    "absentFeatures": [
+      "no pagination",
+      "no load-more",
+      "no filters",
+      "no tag chips",
+      "no search",
+      "no sort",
+      "no A-Z nav",
+      "no ordering control"
+    ],
+    "measuredFrom": "src/templates/blocks.jsx:85-101"
+  },
+  "dividerBand": {
+    "width": "120em",
+    "bandHeight": "15em",
+    "ruleHeight": "2px",
+    "totalAt1280": 161.98,
+    "containerNote": "The band does NOT use the standard max-w-[1920px] px-[6em] container; the 120em band is mx-auto directly inside the section, so at 1280 it spans the full viewport. Adding the gutter wrapper would push it into horizontal overflow.",
+    "bandColourRule": "THE BAND COLOUR FOLLOWS THE SECTION ABOVE IT, not a fixed value. cream / cream-dark / bg-leaf, set per instance via LeafDivider's `band` prop. This is a per-page decision, not a token default.",
+    "measuredFrom": "src/components/LeafDivider.jsx:28-53"
+  },
+  "bannerOffset": {
+    "rule": "The announcement banner is PER-ROUTE, not global. It renders on `/` and on `/blog/:slug` (prefix match) only. On every other route the nav starts at y=0 and all offsets sit 51.74px higher.",
+    "measuredFrom": "src/layout/Layout.jsx:22-30",
+    "bannerHeight": 51.74
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "$id": "sections.listing.case-study-grid",
+  "layer": "sections",
+  "motionFieldSet": [
+    "pattern",
+    "trigger",
+    "durationMs",
+    "easing",
+    "delayMs",
+    "staggerMs",
+    "leafSet",
+    "leafCount",
+    "scrollProgressRange",
+    "reducedMotionFallback",
+    "implementationStatus"
+  ],
+  "motionIsClosed": true,
+  "category": "listing",
+  "purpose": "The four customer success stories as a 2-up grid.",
+  "composes": [
+    "components/card.case-study"
+  ],
+  "content": {
+    "cards": {
+      "count": 4
+    },
+    "additionalProperties": false
+  },
+  "geometry": "inner w-[87em] (927.98px) flex-wrap justify-between; row-gap 14em; pb 14em; mb -10em; mt-[7em]; column-gap: normal",
+  "constraints": {
+    "onePerPage": true,
+    "allowedTemplates": [
+      "T-CASE-STUDY-INDEX"
+    ]
+  },
+  "motion": {
+    "pattern": "leaf-drift",
+    "trigger": "whileInView",
+    "durationMs": 1300,
+    "easing": "cubic-bezier(0.455, 0.03, 0.515, 0.955)",
+    "delayMs": 0,
+    "staggerMs": 0,
+    "leafSet": "CARD_LEAVES",
+    "leafCount": 12,
+    "reducedMotionFallback": "leaves-held-at-rotate-only-transform",
+    "implementationStatus": "specified-not-yet-animated"
+  },
+  "responsive": {
+    "max-wf-tablet": "w-auto flex-col, items centred"
+  },
+  "assetRole": "third-party.trademark",
+  "knownArtefact": "Each card overhangs its own flex item by 40.52px per side, deliberately. See components/card.case-study.",
+  "measuredFrom": "src/pages/CaseStudies.jsx:60-82",
+  "implementedBy": "src/pages/CaseStudies.jsx",
+  "motionClosureScope": "CLOSED for PageSpec emission: a generated node's `motion` object may contain ONLY the fields in motionFieldSet, enforced by schema/pagespec.schema.json (additionalProperties:false) and the MOTION_OBJECT_IS_CLOSED rule. The keys in motionDocumentationFields below are contract-level documentation carried by THIS file for human and retrieval use; they are NOT settable on a PageSpec node."
+}

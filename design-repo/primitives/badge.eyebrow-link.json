@@ -1,0 +1,20 @@
+{
+  "$id": "primitives.badge.eyebrow-link",
+  "layer": "primitives",
+  "purpose": "Linked eyebrow pill above an h1 or a card group.",
+  "tokens": {
+    "surface": "surface.accent",
+    "border": "border.default",
+    "radius": "radius.pillFull"
+  },
+  "geometry": "inline-flex gap-[0.5em] px-[1.1em] py-[0.35em]; label 1.4375em / lh 1 / 600; 63.73px tall; width content-driven",
+  "states": {
+    "hover": "bg-white, transition-colors 150ms cubic-bezier(0.4,0,0.2,1)",
+    "active": null,
+    "focus": null,
+    "boxShadow": "none",
+    "note": "THE ONLY ELEMENT ON THE SITE WITH A HOVER STATE OTHER THAN nav/footer link underlines, and the ONLY transitioning element inside <main> on a content route."
+  },
+  "measuredFrom": "src/components/BadgeLink.jsx:14-29",
+  "assetRole": "brand.leaf-art"
+}

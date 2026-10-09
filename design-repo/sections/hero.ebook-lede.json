@@ -1,0 +1,74 @@
+{
+  "$id": "sections.hero.ebook-lede",
+  "layer": "sections",
+  "motionFieldSet": [
+    "pattern",
+    "trigger",
+    "durationMs",
+    "easing",
+    "delayMs",
+    "staggerMs",
+    "leafSet",
+    "leafCount",
+    "scrollProgressRange",
+    "reducedMotionFallback",
+    "implementationStatus"
+  ],
+  "motionIsClosed": true,
+  "category": "hero",
+  "purpose": "The T-EBOOK head: a <strong> h1 and one very long multi-part lede paragraph.",
+  "content": {
+    "h1": {
+      "maxWords": 10,
+      "copyPolicy": "verbatim-locked"
+    },
+    "ledeIntro": {
+      "maxWords": 40,
+      "copyPolicy": "measured-budget"
+    },
+    "callToAction": {
+      "maxWords": 15,
+      "copyPolicy": "measured-budget"
+    },
+    "bullets": {
+      "count": 5,
+      "copyPolicy": "measured-budget"
+    },
+    "closing": {
+      "maxWords": 20,
+      "copyPolicy": "measured-budget"
+    },
+    "additionalProperties": false
+  },
+  "geometry": "hero y 44.61 h 303.45; lede y 392.86 h 571.22; lede is `max-w-[60ch]` (711.08px) carrying 9 <br>, a <strong>, and an <em><sub> 5-line list",
+  "constraints": {
+    "onePerPage": true,
+    "mustBeFirst": true,
+    "allowedTemplates": [
+      "T-EBOOK"
+    ]
+  },
+  "motion": {
+    "pattern": "none",
+    "trigger": "none",
+    "delayMs": 0,
+    "staggerMs": 0,
+    "reducedMotionFallback": "none-required-static",
+    "implementationStatus": "static-by-design",
+    "note": "Nothing in this section animates."
+  },
+  "responsive": {
+    "max-wf-tablet": "two-column rows stack; the 108em hero frame narrows to 80em",
+    "max-wf-phone": "flex rows become flex-col and centre; the hero frame becomes w-full",
+    "max-wf-mini": "block margins drop from 4.2em to 3.5em; display headings drop a step; hero top padding rises to 11.8em",
+    "note": "All three are MAX-width queries. The em engine is frozen at 8.25833px below 992px, so 768 and 390 differ only by these class overrides."
+  },
+  "container": "ZERO-GUTTER: mx-auto -mt-[3em] w-full max-w-[1920px] px-0 max-wf-tablet:px-0",
+  "quirk": "The <sub> list renders at 14px with line-height 0 (type role N20). That line-height 0 is MEASURED, not a mistake.",
+  "measuredFrom": "src/pages/EbookPage.jsx:11-22",
+  "implementedBy": "src/pages/EbookPage.jsx",
+  "motionClosureScope": "CLOSED for PageSpec emission: a generated node's `motion` object may contain ONLY the fields in motionFieldSet, enforced by schema/pagespec.schema.json (additionalProperties:false) and the MOTION_OBJECT_IS_CLOSED rule. The keys in motionDocumentationFields below are contract-level documentation carried by THIS file for human and retrieval use; they are NOT settable on a PageSpec node.",
+  "motionDocumentationFields": [
+    "note"
+  ]
+}

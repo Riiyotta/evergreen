@@ -1,0 +1,292 @@
+{
+  "$id": "tokens.foundation.typography",
+  "layer": "00-foundation",
+  "families": {
+    "sans": {
+      "stack": "'Rubik', 'Rubik Fallback', ui-sans-serif, system-ui, sans-serif",
+      "measuredFrom": "src/index.css:133",
+      "selfHosted": "/assets/rubik-latin.woff2, weights 400-700, font-display swap",
+      "licence": "Rubik — SIL OFL 1.1. Redistributable."
+    },
+    "headline": {
+      "stack": "'Gloock', 'ivypresto-headline', ui-serif, Georgia, serif",
+      "measuredFrom": "src/index.css:135",
+      "selfHosted": "/assets/gloock-latin.woff2, declared weight 600",
+      "substitution": {
+        "original": "ivypresto-headline 600 (Adobe Typekit)",
+        "reason": "The original face is kit-bound to evergreen.so and is NOT redistributable, so it cannot ship in this package.",
+        "substitute": "Gloock (SIL OFL)",
+        "metricCorrection": "size-adjust: 92.44%",
+        "verticalCorrection": "ascent-override 117.9%, descent-override 32.45%, line-gap-override 0%",
+        "measuredFrom": "src/index.css:100-131",
+        "selectionMethod": "~50 open serifs measured against the original's real text-advance widths for six real display strings at 600/100px. Gloock won on lowest advance-width spread (0.81%) and closest cap-height after size-adjust.",
+        "knownDeviation": "Section geometry is exact; display glyphs are ~2.7% shorter in cap-height and ~7.6% in x-height than the original.",
+        "WARNING": "TWO headings sit under 2% wrap headroom and will reflow if the serif is changed: /esg's UN SDG h2 (7.67px / 1.0% slack) and /esg's GOVERNANCE h2 (~7.8px / ~1.0%). Changing the display serif breaks those wraps and shifts every downstream y-offset on those pages."
+      }
+    },
+    "fallbackFace": {
+      "name": "Rubik Fallback",
+      "src": "local('Arial')",
+      "ascentOverride": "89.06%",
+      "descentOverride": "23.81%",
+      "lineGapOverride": "0%",
+      "sizeAdjust": "104.98%",
+      "measuredFrom": "src/index.css:27-34"
+    }
+  },
+  "emEngine": {
+    "note": "Font SIZES below are expressed in `em` of the .marketing-root font-size engine, which is itself viewport-derived. See tokens/30-layout/layout.json for the engine. Nothing here may be flattened to px.",
+    "rootPxByViewport": {
+      "1920": 16,
+      "1440": 12,
+      "1280": 10.6667,
+      "768": 8.25833,
+      "390": 8.25833
+    }
+  },
+  "baseElementScale": {
+    "description": "The `.marketing-root :where(el)` base layer, verbatim.",
+    "measuredFrom": "src/index.css:221-258",
+    "h1": {
+      "fontSize": "6.125em",
+      "lineHeight": 1.49,
+      "weight": 600,
+      "family": "headline",
+      "color": "black"
+    },
+    "h2": {
+      "fontSize": "2.5em",
+      "lineHeight": 1.4,
+      "weight": 700,
+      "family": "sans"
+    },
+    "h3": {
+      "fontSize": "2.19em",
+      "lineHeight": 1.4,
+      "weight": 700,
+      "family": "sans"
+    },
+    "h4": {
+      "fontSize": "1.88em",
+      "lineHeight": 1.4,
+      "weight": 700,
+      "family": "sans"
+    },
+    "p": {
+      "fontSize": "1.75em",
+      "lineHeight": 1.7,
+      "weight": 400,
+      "color": "text-strong"
+    },
+    "a": {
+      "family": "sans",
+      "weight": 600,
+      "lineHeight": 1,
+      "textDecoration": "underline",
+      "color": "inherit"
+    }
+  },
+  "roles": {
+    "display.h1": {
+      "fontSize": "6.125em",
+      "lineHeight": 1.49,
+      "weight": 600,
+      "family": "headline",
+      "miniOverride": "3.9em",
+      "measuredFrom": "src/index.css:227-233"
+    },
+    "display.h2": {
+      "fontSize": "4.5em",
+      "lineHeight": 1.48,
+      "weight": 600,
+      "family": "headline",
+      "miniOverride": "3.9em",
+      "measuredFrom": "src/templates/blocks.jsx:41-45",
+      "note": "The standalone display h2. DISTINCT from richtext.h2 below."
+    },
+    "display.h2-large": {
+      "fontSize": "6.125em",
+      "lineHeight": 1.4,
+      "weight": 600,
+      "family": "headline",
+      "miniOverride": "5.1em",
+      "measuredFrom": "src/components/CtaSection.jsx:98-100",
+      "note": "Final-CTA heading and the 'Goals By 2027' band heading."
+    },
+    "richtext.h2": {
+      "fontSize": "4.5em",
+      "lineHeight": 1.2,
+      "weight": 600,
+      "family": "headline",
+      "marginBottom": "0.8em",
+      "measuredFrom": "src/index.css:343-350",
+      "note": "ALSO 48px at 1280, but line-height 1.2, not 1.48. These are TWO SEPARATE ROLES. Do not unify them."
+    },
+    "richtext.h2.rich-text-h1": {
+      "fontSize": "6.125em",
+      "lineHeight": 1.49,
+      "marginBottom": "0.2em",
+      "measuredFrom": "src/index.css:351-355"
+    },
+    "richtext.h3": {
+      "fontSize": "2.5em",
+      "lineHeight": 1.54,
+      "weight": 700,
+      "family": "sans",
+      "marginBottom": "0.3em",
+      "measuredFrom": "src/index.css:356-362"
+    },
+    "richtext.h4": {
+      "fontSize": "1.88em",
+      "marginBottom": "0.4em",
+      "measuredFrom": "src/index.css:363-366"
+    },
+    "richtext.list": {
+      "fontSize": "1.75em",
+      "lineHeight": 1.7,
+      "marginBottom": "10px",
+      "paddingLeft": "40px",
+      "measuredFrom": "src/index.css:367-373",
+      "note": "margin-bottom and padding-left are FIXED px in the original, not em."
+    },
+    "richtext.blockquote": {
+      "fontSize": "2.3125em",
+      "lineHeight": 1.7,
+      "weight": 500,
+      "surface": "quote-leaf",
+      "radius": "10px",
+      "border": "2px solid black",
+      "measuredFrom": "src/index.css:390-397"
+    },
+    "richtext.figcaption": {
+      "fontSize": "1em",
+      "lineHeight": 1.6,
+      "align": "center",
+      "measuredFrom": "src/index.css:412-417",
+      "note": "1em of the CONTAINER (root em, 10.6667px @1280), not of the paragraph. Genuinely tiny. Correct."
+    },
+    "card.title": {
+      "fontSize": "3.5em",
+      "lineHeight": 1.4,
+      "weight": 600,
+      "family": "headline",
+      "measuredFrom": "src/components/LinkCard.jsx:26-28"
+    },
+    "card.description": {
+      "fontSize": "1.5625em",
+      "measuredFrom": "src/components/LinkCard.jsx:29"
+    },
+    "card.cta": {
+      "fontSize": "1.75em",
+      "weight": 600,
+      "measuredFrom": "src/components/LinkCard.jsx:30"
+    },
+    "proof.heading": {
+      "fontSize": "2.5em",
+      "lineHeight": 1.54,
+      "weight": 700,
+      "phoneOverride": "2.4em",
+      "measuredFrom": "src/components/Hero.jsx:32-33"
+    },
+    "proof.eyebrow": {
+      "fontSize": "2.5em",
+      "lineHeight": 1.54,
+      "weight": 600,
+      "measuredFrom": "src/components/Hero.jsx:294"
+    },
+    "badge.label": {
+      "fontSize": "1.4375em",
+      "lineHeight": 1,
+      "weight": 600,
+      "measuredFrom": "src/components/BadgeLink.jsx:18",
+      "note": "COMPOUNDS: 1.4375em inside the parent <p>'s 1.75em = 26.833px @1280."
+    },
+    "value-badge.label": {
+      "fontSize": "1.625em",
+      "lineHeight": 1.54,
+      "weight": 600,
+      "measuredFrom": "src/components/SeedsSection.jsx:66"
+    },
+    "small-print": {
+      "fontSize": "1.4375em",
+      "measuredFrom": "src/components/CtaSection.jsx:119"
+    },
+    "sdg.goal-label": {
+      "fontSize": "1.7em",
+      "lineHeight": 1.75,
+      "weight": 700,
+      "measuredFrom": "src/components/SdgSection.jsx:100"
+    },
+    "testimonial.quote": {
+      "fontSize": "2.3em",
+      "lineHeight": 1.54,
+      "weight": 600,
+      "measuredFrom": "src/components/Testimonials.jsx:39-41"
+    },
+    "testimonial.attribution": {
+      "fontSize": "1.9375em",
+      "lineHeight": 1.41,
+      "measuredFrom": "src/components/Testimonials.jsx:43"
+    },
+    "footer.link": {
+      "fontSize": "1.6875em",
+      "weight": 500,
+      "marginBottom": "1.2em",
+      "measuredFrom": "src/components/Footer.jsx:178",
+      "correction": "CLONE_SPEC §5.13 records this `mb-[1.2em]` as 12.8px. That is WRONG: the 1.2em resolves against the element's own `text-[1.6875em]` (= 18px @1280), so the real margin-bottom is 21.6px."
+    },
+    "footer.legal": {
+      "fontSize": "1.5em",
+      "weight": 400,
+      "measuredFrom": "src/components/Footer.jsx:197"
+    },
+    "date-line": {
+      "fontSize": "1em",
+      "lineHeight": 1.6,
+      "weight": 400,
+      "color": "text-body",
+      "measuredFrom": "src/components/DateLine.jsx:3-13",
+      "note": "The smallest type on the site (10.6667px @1280) and the ONLY text that keeps .marketing-root's #333 instead of #000."
+    },
+    "form.label": {
+      "fontSize": "1.75em",
+      "lineHeight": 1.7,
+      "weight": 700,
+      "color": "text-body",
+      "measuredFrom": "src/components/form/LabelledField.jsx:33-37"
+    },
+    "form.control": {
+      "fontSize": "1.75em",
+      "lineHeight": 1.7,
+      "measuredFrom": "src/components/form/LabelledField.jsx:19-21"
+    },
+    "form.submit": {
+      "fontSize": "1.75em",
+      "lineHeight": 1.7,
+      "weight": 700,
+      "measuredFrom": "src/components/form/SubmitButton.jsx:11"
+    },
+    "button.trial": {
+      "fontSize": "1.875em",
+      "lineHeight": 1.54,
+      "weight": 600,
+      "measuredFrom": "src/components/TrialButton.jsx:16"
+    },
+    "arketta.h2": {
+      "fontSize": "3em",
+      "lineHeight": 2,
+      "weight": 600,
+      "family": "headline",
+      "measuredFrom": "src/components/ArkettaCtaPanel.jsx:12"
+    },
+    "serif-subheading": {
+      "fontSize": "3.125em",
+      "lineHeight": 1.29,
+      "weight": 600,
+      "family": "headline",
+      "maxWidth": "11ch",
+      "measuredFrom": "src/components/IconFeatureColumn.jsx:3-13",
+      "note": "`max-w-[11ch]` must stay in `ch`."
+    }
+  }
+}

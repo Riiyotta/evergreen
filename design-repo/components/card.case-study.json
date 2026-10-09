@@ -1,0 +1,31 @@
+{
+  "$id": "components.card.case-study",
+  "layer": "components",
+  "purpose": "One /case-studies grid card: customer logo, trees stat, blurb, link.",
+  "tokens": {
+    "surface": "surface.card",
+    "border": "border.default",
+    "radius": "radius.card"
+  },
+  "geometry": "card w-[42em], 447.98x475.09 (row 1) / 447.98x446.77 (row 2); padding 45.0072/32/39.3333",
+  "content": {
+    "name": {
+      "maxWords": 3,
+      "copyPolicy": "verbatim-locked"
+    },
+    "stat": {
+      "maxWords": 1,
+      "copyPolicy": "verbatim-locked"
+    },
+    "blurb": {
+      "maxWords": 34,
+      "copyPolicy": "verbatim-locked"
+    }
+  },
+  "maxWordsBasis": "counted directly from the four real CARDS entries in src/pages/CaseStudies.jsx",
+  "states": "No hover, no active, no focus, no transition, no box-shadow.",
+  "measuredFrom": "src/components/CaseStudyCard.jsx:1-47",
+  "assetRole": "third-party.trademark",
+  "knownArtefact": "THE CARD IS DELIBERATELY WIDER THAN ITS OWN FLEX ITEM. The outer item is w-[34.4013em] (366.94px) and the white card inside is w-[42em] (447.98px), so with `items-center` the card overhangs 40.52px on EACH side. That overhang is what pulls the two columns closer than space-between on 927.98px would. DO NOT FIX IT.",
+  "leaves": "3 CARD_LEAVES positioned relative to the OUTER item, not the card"
+}

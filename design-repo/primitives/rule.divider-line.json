@@ -1,0 +1,16 @@
+{
+  "$id": "primitives.rule.divider-line",
+  "layer": "primitives",
+  "purpose": "The full-bleed 2px black rule under every divider band.",
+  "geometry": "h-[2px] bg-black z-[201], a full-bleed sibling BELOW the band (160px + 2px = 162px)",
+  "states": {
+    "hover": null,
+    "active": null,
+    "focus": null,
+    "disabled": null,
+    "transition": null,
+    "boxShadow": "none",
+    "note": "No interactive state exists. A generator must not add one."
+  },
+  "measuredFrom": "src/components/LeafDivider.jsx:51"
+}

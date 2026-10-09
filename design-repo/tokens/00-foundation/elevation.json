@@ -1,0 +1,57 @@
+{
+  "$id": "tokens.foundation.elevation",
+  "layer": "00-foundation",
+  "description": "There is no elevation system. The site has ZERO box-shadows and ZERO gradients. Depth is expressed only by flat fill plus a 2px solid #000 stroke, and by z-index stacking.",
+  "boxShadow": {
+    "value": "none",
+    "scope": "every element, every route",
+    "verification": "grep -rE 'gradient|shadow' src/ returns only comments asserting absence"
+  },
+  "zIndexStops": {
+    "nav": {
+      "value": 999999998,
+      "measuredFrom": "tailwind.config.js:90"
+    },
+    "overlay": {
+      "value": 999999,
+      "measuredFrom": "tailwind.config.js:91"
+    },
+    "trial-modal": {
+      "value": 999999999,
+      "measuredFrom": "tailwind.config.js:92"
+    },
+    "menu-button": {
+      "value": 2147483647,
+      "measuredFrom": "tailwind.config.js:93"
+    },
+    "divider-band": {
+      "value": 200,
+      "measuredFrom": "src/components/LeafDivider.jsx:49"
+    },
+    "divider-rule": {
+      "value": 201,
+      "measuredFrom": "src/components/LeafDivider.jsx:51"
+    },
+    "card-above-leaves": {
+      "value": 100,
+      "measuredFrom": "src/components/LinkCard.jsx:24"
+    },
+    "image-above-leaves": {
+      "value": 20,
+      "measuredFrom": "src/components/SeedsSection.jsx:61"
+    },
+    "recognition-line": {
+      "value": 201,
+      "measuredFrom": "src/components/Hero.jsx:200"
+    },
+    "hero-heart": {
+      "value": 202,
+      "measuredFrom": "src/components/Hero.jsx:206"
+    },
+    "leaf-default": {
+      "value": 1,
+      "measuredFrom": "src/lib/leaves.js:96"
+    }
+  },
+  "knownArtefact": "On T-STORY the G2 caption is partly painted over by the next section's z-[200] divider band. This is the ORIGINAL's behaviour and is correct; a contract must not 'fix' it."
+}

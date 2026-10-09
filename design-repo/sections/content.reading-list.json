@@ -1,0 +1,58 @@
+{
+  "$id": "sections.content.reading-list",
+  "layer": "sections",
+  "motionFieldSet": [
+    "pattern",
+    "trigger",
+    "durationMs",
+    "easing",
+    "delayMs",
+    "staggerMs",
+    "leafSet",
+    "leafCount",
+    "scrollProgressRange",
+    "reducedMotionFallback",
+    "implementationStatus"
+  ],
+  "motionIsClosed": true,
+  "category": "content",
+  "purpose": "The T-PILLAR reading list: 8 consecutive category groups, each an h3 label plus a card grid.",
+  "composes": [
+    "components/grid.link-card"
+  ],
+  "content": {
+    "groups": {
+      "count": 8
+    },
+    "h3": {
+      "maxWords": 6,
+      "copyPolicy": "verbatim-locked"
+    },
+    "additionalProperties": false
+  },
+  "geometry": "8 consecutive `div.mt-[4em]` groups, each an h3 (2.5em / 1.54 / 700, centred) plus a card grid",
+  "constraints": {
+    "onePerPage": true,
+    "allowedTemplates": [
+      "T-PILLAR"
+    ]
+  },
+  "motion": {
+    "pattern": "none",
+    "trigger": "none",
+    "delayMs": 0,
+    "staggerMs": 0,
+    "reducedMotionFallback": "none-required-static",
+    "implementationStatus": "static-by-design",
+    "RULE": "The card grids have ZERO animation and no stagger. Static from first paint."
+  },
+  "responsive": {
+    "max-wf-phone": "each grid becomes 1 column; the h3 drops to 2.4em"
+  },
+  "measuredFrom": "src/pages/EmployeeRecognitionHub.jsx:105-120",
+  "implementedBy": "src/pages/EmployeeRecognitionHub.jsx",
+  "motionClosureScope": "CLOSED for PageSpec emission: a generated node's `motion` object may contain ONLY the fields in motionFieldSet, enforced by schema/pagespec.schema.json (additionalProperties:false) and the MOTION_OBJECT_IS_CLOSED rule. The keys in motionDocumentationFields below are contract-level documentation carried by THIS file for human and retrieval use; they are NOT settable on a PageSpec node.",
+  "motionDocumentationFields": [
+    "RULE"
+  ]
+}

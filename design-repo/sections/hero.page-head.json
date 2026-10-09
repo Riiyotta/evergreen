@@ -1,0 +1,90 @@
+{
+  "$id": "sections.hero.page-head",
+  "layer": "sections",
+  "motionFieldSet": [
+    "pattern",
+    "trigger",
+    "durationMs",
+    "easing",
+    "delayMs",
+    "staggerMs",
+    "leafSet",
+    "leafCount",
+    "scrollProgressRange",
+    "reducedMotionFallback",
+    "implementationStatus"
+  ],
+  "motionIsClosed": true,
+  "category": "hero",
+  "purpose": "The shared content-page head: optional eyebrow badge, h1, optional lede.",
+  "composes": [
+    "primitives/badge.eyebrow-link"
+  ],
+  "variants": {
+    "badge+h1+lede": "T-COLLECTION-INDEX, all four T-DETAIL-*, T-COMPARISON, T-ALTERNATIVES-INDEX",
+    "badge+h1+date": "T-ARTICLE (components/block.date-line replaces the lede)",
+    "h1+lede": "T-PILLAR (no badge)",
+    "h1-only": "T-BLOG-INDEX (no badge, no lede)",
+    "h1+strong": "T-EBOOK (the h1 wraps its text in <strong>)",
+    "h1+lastUpdated": "T-LEGAL (components/block.date-line is NOT used; a plain centred <p>)",
+    "h1+subtitle": "T-STORY section 1 \u2014 the h1 is the company name and the subtitle sits in a `flex items-center justify-center` block with `mx-[3em]` rather than the usual `mx-auto max-w-[49ch]` lede block"
+  },
+  "content": {
+    "badgeLabel": {
+      "maxWords": 4,
+      "copyPolicy": "verbatim-locked",
+      "required": false
+    },
+    "h1": {
+      "maxWords": 13,
+      "copyPolicy": "verbatim-locked"
+    },
+    "lede": {
+      "maxWords": 44,
+      "copyPolicy": "measured-budget",
+      "required": false
+    },
+    "additionalProperties": false
+  },
+  "maxWordsBasis": "recomputed from the real data: the longest h1 is the 13-word longest blogPosts title; the longest lede is the 44-word longest glossary definition. Both independently derived by iterating the data modules, not copied from a spec.",
+  "geometry": "pt-[10.2em] (11.8em at <=479px); inner frame w-[108em]; h1 and lede both mx-auto max-w-[49ch] text-center",
+  "constraints": {
+    "onePerPage": true,
+    "mustBeFirst": true,
+    "allowedTemplates": [
+      "T-COLLECTION-INDEX",
+      "T-DETAIL-GLOSSARY",
+      "T-DETAIL-MESSAGES",
+      "T-DETAIL-VALUES",
+      "T-DETAIL-FOR",
+      "T-COMPARISON",
+      "T-ALTERNATIVES-INDEX",
+      "T-ARTICLE",
+      "T-PILLAR",
+      "T-BLOG-INDEX",
+      "T-STORY"
+    ]
+  },
+  "motion": {
+    "pattern": "none",
+    "trigger": "none",
+    "delayMs": 0,
+    "staggerMs": 0,
+    "reducedMotionFallback": "none-required-static",
+    "implementationStatus": "static-by-design",
+    "note": "The badge's hover:bg-white is a state, not motion."
+  },
+  "responsive": {
+    "max-wf-tablet": "two-column rows stack; the 108em hero frame narrows to 80em",
+    "max-wf-phone": "flex rows become flex-col and centre; the hero frame becomes w-full",
+    "max-wf-mini": "block margins drop from 4.2em to 3.5em; display headings drop a step; hero top padding rises to 11.8em",
+    "note": "All three are MAX-width queries. The em engine is frozen at 8.25833px below 992px, so 768 and 390 differ only by these class overrides."
+  },
+  "chRule": "`max-w-[49ch]` must stay in ch: 1981.52px on the 65.333px h1 (effectively unconstrained) but 580.714px on the 18.667px lede. Flattening either breaks the layout.",
+  "measuredFrom": "src/templates/blocks.jsx:20-33",
+  "implementedBy": "src/templates/blocks.jsx (Hero)",
+  "motionClosureScope": "CLOSED for PageSpec emission: a generated node's `motion` object may contain ONLY the fields in motionFieldSet, enforced by schema/pagespec.schema.json (additionalProperties:false) and the MOTION_OBJECT_IS_CLOSED rule. The keys in motionDocumentationFields below are contract-level documentation carried by THIS file for human and retrieval use; they are NOT settable on a PageSpec node.",
+  "motionDocumentationFields": [
+    "note"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "$id": "components.column.sdg-goal",
+  "layer": "components",
+  "purpose": "One UN Sustainable Development Goal column.",
+  "geometry": "w-[20%] (230.41px @1280) mx-[0.5em]; icon h-[3.24544em]",
+  "count": {
+    "exact": 4
+  },
+  "content": {
+    "goal": {
+      "maxWords": 2,
+      "copyPolicy": "verbatim-locked"
+    },
+    "title": {
+      "maxWords": 2,
+      "copyPolicy": "verbatim-locked"
+    },
+    "body": {
+      "maxWords": 24,
+      "copyPolicy": "verbatim-locked"
+    }
+  },
+  "maxWordsBasis": "counted from the real GOALS array",
+  "typeRole": "sdg.goal-label (1.7em / 1.75 / 700) for the GOAL n + TITLE pair",
+  "states": "No hover, no active, no focus, no transition, no box-shadow.",
+  "measuredFrom": "src/components/SdgSection.jsx:91-107",
+  "assetRole": "brand.icon"
+}

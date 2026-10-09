@@ -1,0 +1,22 @@
+{
+  "$id": "primitives.pill.stat",
+  "layer": "primitives",
+  "purpose": "Leaf-filled pill holding one statistic figure.",
+  "tokens": {
+    "surface": "surface.accent",
+    "border": "border.default",
+    "radius": "radius.pillStat"
+  },
+  "geometry": "h-[5.75094em] w-[11.2528em] (120x61.3 @1280); figure 2.5em / 1.54 / 700; column w-[25em]",
+  "states": {
+    "hover": null,
+    "active": null,
+    "focus": null,
+    "disabled": null,
+    "transition": null,
+    "boxShadow": "none",
+    "note": "No interactive state exists. A generator must not add one."
+  },
+  "measuredFrom": "src/components/StatRow.jsx:35-49",
+  "duplicationNote": "The same measured markup exists twice in the source: inline in Hero.jsx (STATS + StatPill, block 8) and in StatRow.jsx. Both are load-bearing; the source was not refactored. One primitive, two implementations."
+}

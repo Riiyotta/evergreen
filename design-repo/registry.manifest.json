@@ -1,0 +1,78 @@
+{
+  "$id": "registry.manifest",
+  "repositoryId": "evergreen-clone-design-repo",
+  "repositoryVersion": "1.0.0",
+  "pageSpecVersion": "1.0.0",
+  "allowlistVersion": "1.0.0",
+  "status": "design-review-pending",
+  "productionApproved": false,
+  "versionFieldNote": "allowlistVersion is MACHINE-CHECKED: extraction/verify_all.py fails the run if it drifts from tokens/llm/component-allowlist.json, token-policy.json or token-catalog.json. repositoryVersion and pageSpecVersion are DOCUMENTATION-ONLY, hand-maintained markers \u2014 nothing checks them automatically. Do not read them as an enforcement guarantee.",
+  "sourceProject": {
+    "describes": "A pixel-accurate React 18 + Vite 5 + Tailwind CSS v3 replica of https://www.evergreen.so/",
+    "frameworks": {
+      "react": "18.3.1",
+      "vite": "5.4.21",
+      "tailwindcss": "3.4.17",
+      "react-router-dom": "6.28.0",
+      "framer-motion": "12.43.0"
+    },
+    "frameworkVersionNote": "Read from the sibling project package.json at build time. A design-repo is a SNAPSHOT: if the app is later upgraded, nothing here re-checks itself against that drift. Re-diff these against the real package.json before trusting them.",
+    "pathNote": "Deliberately no filesystem path recorded \u2014 a path would not resolve in a standalone copy."
+  },
+  "sourceIsRealCompany": true,
+  "sourceNotice": "The source of this design-repo is https://www.evergreen.so/ \u2014 a REAL, LIVE marketing site belonging to a real company, carrying real third-party trademarks, real named individuals' photographs and real attributed testimonials. This package exists to document that site's design system for internal generation work. IT MUST NOT BE PUBLISHED, DEPLOYED OR HOSTED ANYWHERE. Nothing in it grants any licence to any third-party mark, photograph or editorial content.",
+  "defaultTheme": "light",
+  "schemaValidatedThemes": [
+    "light"
+  ],
+  "counts": {
+    "primitives": 25,
+    "components": 39,
+    "sections": 46,
+    "templates": 22,
+    "routes": 195,
+    "graphRules": 28,
+    "assetRoles": 13
+  },
+  "countsNote": "Recomputed from the files on disk by extraction/verify_all.py, which fails if any number here drifts. Never hand-bump these.",
+  "motionImplementationStatus": "SPECIFIED, NOT YET ANIMATED \u2014 see tokens/00-foundation/motion.json",
+  "deadRoutes": {
+    "note": "TWO <Route> patterns in src/App.jsx render PagePending and map to ZERO real routes. They MUST NOT be recreated and no template exists for them.",
+    "patterns": {
+      "/employee-recognition/:slug": "CLONE_SPEC_CONTENT_B \u00a70 VERIFIED that this does not exist as a collection on the real site. The hub's only children are `/for` and `/glossary`, which are themselves index templates. Building a template for it would invent a page shape the original does not have.",
+      "*": "the router wildcard"
+    },
+    "measuredFrom": "src/App.jsx:66-68",
+    "verification": "Zero of the 195 routes in src/data/routes.json match either pattern."
+  },
+  "entryPoints": {
+    "manifest": "registry.manifest.json",
+    "readme": "README.md",
+    "changelog": "CHANGELOG.md",
+    "pageSpecSchema": "schema/pagespec.schema.json",
+    "examplePageSpec": "schema/example.pagespec.json",
+    "semanticValidator": "schema/semantic_validate.py",
+    "adversarialTests": "schema/tests/adversarial_test.py",
+    "verifyAll": "extraction/verify_all.py",
+    "measuredValues": "extraction/measured-values.json",
+    "driftProof": "scripts/prove_drift.sh",
+    "templates": "templates/templates.json",
+    "routeMap": "templates/route-map.json",
+    "compatibilityGraph": "compatibility/graph.json",
+    "assetRoles": "assets/asset-roles.json",
+    "componentAllowlist": "tokens/llm/component-allowlist.json",
+    "tokenCatalog": "tokens/llm/token-catalog.json",
+    "tokenPolicy": "tokens/llm/token-policy.json",
+    "semanticTokens": "tokens/10-semantic/semantic.json",
+    "layoutTokens": "tokens/30-layout/layout.json",
+    "motionTokens": "tokens/00-foundation/motion.json",
+    "lightTheme": "tokens/themes/light.json"
+  },
+  "entryPointsNote": "Every entry point resolves INSIDE design-repo/. Build-time evidence that lives in the sibling project (CLONE_SPEC*.md, src/, _reference/) is cited in extraction/measured-values.json instead, which degrades to a warning when no sibling tree is present. An entry point is a promise about this package's own contents.",
+  "verification": {
+    "schemaValidation": "python3 -c \"from jsonschema import Draft7Validator; ...\" \u2014 see README",
+    "adversarialSuite": "python3 schema/tests/adversarial_test.py",
+    "repoChecks": "python3 extraction/verify_all.py",
+    "driftProof": "bash scripts/prove_drift.sh"
+  }
+}

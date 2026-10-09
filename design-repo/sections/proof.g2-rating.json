@@ -1,0 +1,61 @@
+{
+  "$id": "sections.proof.g2-rating",
+  "layer": "sections",
+  "motionFieldSet": [
+    "pattern",
+    "trigger",
+    "durationMs",
+    "easing",
+    "delayMs",
+    "staggerMs",
+    "leafSet",
+    "leafCount",
+    "scrollProgressRange",
+    "reducedMotionFallback",
+    "implementationStatus"
+  ],
+  "motionIsClosed": true,
+  "category": "proof",
+  "purpose": "A standalone G2 logo + stars + rating line, used as a trust close on form pages.",
+  "composes": [
+    "components/block.g2-rating"
+  ],
+  "content": {
+    "caption": {
+      "value": "4.8 / 5 on G2 Reviews",
+      "copyPolicy": "verbatim-locked",
+      "maxWords": 6
+    },
+    "additionalProperties": false
+  },
+  "geometry": "block height 183.16px @1280; mb-0",
+  "constraints": {
+    "onePerPage": true,
+    "allowedTemplates": [
+      "T-CONTACT",
+      "T-SCHEDULER",
+      "T-EBOOK"
+    ],
+    "note": "A STANDALONE NODE only on those three templates. On T-PRICING and T-REFERRAL the same block is composed INSIDE sections/proof.testimonial-wall, and on T-HOME inside sections/hero.home, so it is not a positional node there. Checked against the real node sequences in templates/templates.json at the time this was written."
+  },
+  "motion": {
+    "pattern": "none",
+    "trigger": "none",
+    "delayMs": 0,
+    "staggerMs": 0,
+    "reducedMotionFallback": "none-required-static",
+    "implementationStatus": "static-by-design",
+    "note": "Nothing in this section animates."
+  },
+  "responsive": {
+    "all": "centred flex column at every breakpoint; no change"
+  },
+  "assetRole": "third-party.review-mark",
+  "complianceNote": "A real third-party rating claim. Never fabricate a figure or a star count.",
+  "measuredFrom": "src/components/G2Block.jsx:5-35",
+  "implementedBy": "src/components/G2Block.jsx",
+  "motionClosureScope": "CLOSED for PageSpec emission: a generated node's `motion` object may contain ONLY the fields in motionFieldSet, enforced by schema/pagespec.schema.json (additionalProperties:false) and the MOTION_OBJECT_IS_CLOSED rule. The keys in motionDocumentationFields below are contract-level documentation carried by THIS file for human and retrieval use; they are NOT settable on a PageSpec node.",
+  "motionDocumentationFields": [
+    "note"
+  ]
+}

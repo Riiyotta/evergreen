@@ -1,0 +1,70 @@
+{
+  "$id": "sections.listing.link-card-grid",
+  "layer": "sections",
+  "motionFieldSet": [
+    "pattern",
+    "trigger",
+    "durationMs",
+    "easing",
+    "delayMs",
+    "staggerMs",
+    "leafSet",
+    "leafCount",
+    "scrollProgressRange",
+    "reducedMotionFallback",
+    "implementationStatus"
+  ],
+  "motionIsClosed": true,
+  "category": "listing",
+  "purpose": "One flat grid of internal link cards. The site's universal listing primitive.",
+  "composes": [
+    "components/grid.link-card"
+  ],
+  "content": {
+    "items": {
+      "minItems": 1,
+      "maxItems": 35,
+      "maxItemsBasis": "the largest real grid is the 35-item /employee-recognition-messages index, recomputed from data"
+    },
+    "additionalProperties": false
+  },
+  "headingLevel": {
+    "h2": "a top-level listing",
+    "h3": "a related / further-reading group"
+  },
+  "geometry": "ul.flex flex-wrap justify-center gap-[3em]; cards 42em; 2 columns at 1280",
+  "constraints": {
+    "maxPerPage": 10,
+    "maxPerPageBasis": "T-DETAIL-VALUES carries 3; T-PILLAR's reading list carries 8 plus 2 inline groups. 10 is the real observed ceiling.",
+    "variantKeyed": true,
+    "note": "This section legitimately repeats many times on one page. Every structural rule about it MUST key on (section, variant/headingLevel), never on the bare section id."
+  },
+  "motion": {
+    "pattern": "none",
+    "trigger": "none",
+    "delayMs": 0,
+    "staggerMs": 0,
+    "reducedMotionFallback": "none-required-static",
+    "implementationStatus": "static-by-design",
+    "RULE": "ZERO animation. No whileInView, no stagger, no per-card delay, no entrance. Cards are static from first paint. DO NOT ADD ANY."
+  },
+  "responsive": {
+    "1280": "2 columns",
+    "max-wf-phone": "1 column \u2014 the wrapper becomes flex-col"
+  },
+  "negatives": [
+    "no pagination",
+    "no load-more",
+    "no filters",
+    "no tag chips",
+    "no search",
+    "no sort",
+    "no A-Z nav"
+  ],
+  "measuredFrom": "src/templates/blocks.jsx:85-101",
+  "implementedBy": "src/templates/blocks.jsx (CardGrid)",
+  "motionClosureScope": "CLOSED for PageSpec emission: a generated node's `motion` object may contain ONLY the fields in motionFieldSet, enforced by schema/pagespec.schema.json (additionalProperties:false) and the MOTION_OBJECT_IS_CLOSED rule. The keys in motionDocumentationFields below are contract-level documentation carried by THIS file for human and retrieval use; they are NOT settable on a PageSpec node.",
+  "motionDocumentationFields": [
+    "RULE"
+  ]
+}

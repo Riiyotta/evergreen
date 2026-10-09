@@ -1,0 +1,62 @@
+{
+  "$id": "sections.hero.legal-head",
+  "layer": "sections",
+  "motionFieldSet": [
+    "pattern",
+    "trigger",
+    "durationMs",
+    "easing",
+    "delayMs",
+    "staggerMs",
+    "leafSet",
+    "leafCount",
+    "scrollProgressRange",
+    "reducedMotionFallback",
+    "implementationStatus"
+  ],
+  "motionIsClosed": true,
+  "category": "hero",
+  "purpose": "The T-LEGAL head: a centred h1 and a plain 'Last updated' line.",
+  "content": {
+    "h1": {
+      "maxWords": 3,
+      "copyPolicy": "verbatim-locked"
+    },
+    "lastUpdated": {
+      "maxWords": 5,
+      "copyPolicy": "verbatim-locked"
+    },
+    "additionalProperties": false
+  },
+  "geometry": "h1 y 153.41 h 97.33; 'Last updated' y 282.72 inside a `my-[3em]` div",
+  "constraints": {
+    "onePerPage": true,
+    "mustBeFirst": true,
+    "allowedTemplates": [
+      "T-LEGAL"
+    ]
+  },
+  "motion": {
+    "pattern": "none",
+    "trigger": "none",
+    "delayMs": 0,
+    "staggerMs": 0,
+    "reducedMotionFallback": "none-required-static",
+    "implementationStatus": "static-by-design",
+    "note": "Nothing in this section animates."
+  },
+  "responsive": {
+    "max-wf-tablet": "two-column rows stack; the 108em hero frame narrows to 80em",
+    "max-wf-phone": "flex rows become flex-col and centre; the hero frame becomes w-full",
+    "max-wf-mini": "block margins drop from 4.2em to 3.5em; display headings drop a step; hero top padding rises to 11.8em",
+    "note": "All three are MAX-width queries. The em engine is frozen at 8.25833px below 992px, so 768 and 390 differ only by these class overrides."
+  },
+  "quirk": "Plain text, NOT a <time> element, and no date attribute.",
+  "contrastNote": "The head is CENTRED while the prose block below it is LEFT-ALIGNED. That contrast is the measured behaviour, not an oversight.",
+  "measuredFrom": "src/pages/LegalPage.jsx:31-42",
+  "implementedBy": "src/pages/LegalPage.jsx",
+  "motionClosureScope": "CLOSED for PageSpec emission: a generated node's `motion` object may contain ONLY the fields in motionFieldSet, enforced by schema/pagespec.schema.json (additionalProperties:false) and the MOTION_OBJECT_IS_CLOSED rule. The keys in motionDocumentationFields below are contract-level documentation carried by THIS file for human and retrieval use; they are NOT settable on a PageSpec node.",
+  "motionDocumentationFields": [
+    "note"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "$id": "primitives.avatar.circle",
+  "layer": "primitives",
+  "purpose": "Circular portrait frame on a testimonial card or a case-study pull quote.",
+  "tokens": {
+    "surface": "surface.accent",
+    "border": "border.default",
+    "radius": "radius.pillFull"
+  },
+  "geometry": "size-[11.7918em] (125.77px), overflow-hidden",
+  "states": {
+    "hover": null,
+    "active": null,
+    "focus": null,
+    "disabled": null,
+    "transition": null,
+    "boxShadow": "none",
+    "note": "No interactive state exists. A generator must not add one."
+  },
+  "measuredFrom": "src/components/Testimonials.jsx:29-38",
+  "assetRole": "person.likeness",
+  "variantNote": "/pricing and /referral card 1 carries a static `ml-[1.4em] h-[90%] scale-[1.2]` crop. That off-centre crop is intentional, measured, and NOT a bug. T-STORY's portrait is the only `object-fit: cover` image in content set B."
+}

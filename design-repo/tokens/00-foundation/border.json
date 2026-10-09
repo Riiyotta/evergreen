@@ -1,0 +1,34 @@
+{
+  "$id": "tokens.foundation.border",
+  "layer": "00-foundation",
+  "description": "The clone has exactly three stroke widths. There are no others.",
+  "widths": {
+    "default": {
+      "value": "2px",
+      "style": "solid",
+      "color": "black",
+      "scope": "every card, badge, pill, avatar frame, divider rule, newsletter input",
+      "measuredFrom": "tailwind.config.js:63-67"
+    },
+    "form-control": {
+      "value": "1.5px",
+      "style": "solid",
+      "color": "black",
+      "scope": "LabelledField input and textarea ONLY (/contact, /referral)",
+      "measuredFrom": "src/components/form/LabelledField.jsx:19-21",
+      "note": "A build brief described 1px FormError as 'the single exception' to 2px. There are TWO exceptions: this 1.5px control border is the other."
+    },
+    "form-error": {
+      "value": "1px",
+      "style": "solid",
+      "color": "black",
+      "scope": "FormError panel ONLY",
+      "measuredFrom": "src/components/form/FormError.jsx:3-8"
+    }
+  },
+  "defaultBorderColorReset": {
+    "value": "currentColor",
+    "reason": "Tailwind v4 preflight (which the original uses) defaults border-color to currentColor; v3 defaults to #e5e7eb. Re-declared in @layer base so zero-width borders compute the same as the original's.",
+    "measuredFrom": "src/index.css:148-178"
+  }
+}

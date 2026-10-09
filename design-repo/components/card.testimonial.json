@@ -1,0 +1,50 @@
+{
+  "$id": "components.card.testimonial",
+  "layer": "components",
+  "purpose": "One quote card with a circular portrait above it and a customer logo below it.",
+  "composes": [
+    "primitives/avatar.circle"
+  ],
+  "tokens": {
+    "surface": "surface.page",
+    "border": "border.default",
+    "radius": "radius.card"
+  },
+  "geometry": "w-[39.1109em] mx-[9.25em]; px-[1.4em] pt-[6em] pb-[3em]; row mt-[14.7433em]",
+  "count": {
+    "exact": 2,
+    "note": "Always a pair. No single and no third card exists anywhere."
+  },
+  "content": {
+    "quote": {
+      "maxWords": 20,
+      "copyPolicy": "verbatim-locked"
+    },
+    "name": {
+      "maxWords": 3,
+      "copyPolicy": "verbatim-locked"
+    },
+    "role": {
+      "maxWords": 5,
+      "copyPolicy": "verbatim-locked"
+    }
+  },
+  "maxWordsBasis": "counted from the four real TESTIMONIALS entries (Hero.jsx and socialProofB.jsx)",
+  "states": "No hover, no active, no focus, no transition, no box-shadow.",
+  "measuredFrom": "src/components/Testimonials.jsx:17-66",
+  "assetRoles": [
+    "person.likeness",
+    "third-party.trademark"
+  ],
+  "logoWidthVariants": {
+    "home": "w-[7.96em] (85px)",
+    "pricing/referral": "w-[19.4941em] (207.92px)"
+  },
+  "leaves": {
+    "set": "QUOTE_LEAVES",
+    "count": 6,
+    "static": true,
+    "RULE": "STATIC BY DESIGN — initial === animate, no class, no transform delta. NEVER animate these."
+  },
+  "complianceNote": "These are REAL quotes from REAL named people at REAL named companies. A generator must never invent a testimonial, a name, a job title or an employer, and must never attach an existing portrait to a new quote."
+}

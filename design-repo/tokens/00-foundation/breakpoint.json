@@ -1,0 +1,28 @@
+{
+  "$id": "tokens.foundation.breakpoint",
+  "layer": "00-foundation",
+  "description": "Webflow-flavoured MAX-WIDTH breakpoints, registered under the original's own names so every transcribed class string ports 1:1. These are NOT Tailwind's default min-width screens; both sets are available because they are added via `extend`.",
+  "direction": "max-width",
+  "screens": {
+    "max-wf-tablet": {
+      "max": "991.98px",
+      "measuredFrom": "tailwind.config.js:22"
+    },
+    "max-wf-phone": {
+      "max": "767.98px",
+      "measuredFrom": "tailwind.config.js:23"
+    },
+    "max-wf-mini": {
+      "max": "479.98px",
+      "measuredFrom": "tailwind.config.js:24"
+    }
+  },
+  "measuredViewports": [
+    1920,
+    1440,
+    1280,
+    768,
+    390
+  ],
+  "note": "The em engine freezes at 8.25833px for every viewport <=991px, so 768 and 390 share a root font-size and differ only by the max-wf-phone / max-wf-mini class overrides."
+}

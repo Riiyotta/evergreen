@@ -1,0 +1,15 @@
+{
+  "$id": "components.block.scheduler-placeholder",
+  "layer": "components",
+  "purpose": "A STATIC, non-interactive stand-in for the original's live Calendly embed.",
+  "tokens": {
+    "text": "scheduler.text",
+    "accent": "scheduler.accent",
+    "circle": "scheduler.circle",
+    "grey": "scheduler.grey"
+  },
+  "states": "No hover, no active, no focus, no transition, no box-shadow. Nothing is clickable. Nothing fetches.",
+  "measuredFrom": "src/components/SchedulerPlaceholder.jsx:1-40",
+  "buildConstraint": "Reused by BOTH /schedule-a-demo and components/card.calendly. Nothing loads assets.calendly.com.",
+  "evidenceNote": "Two of its five colours are SAMPLED FROM A CAPTURE, not specced: CLONE_SPEC_CORE_B §D-3 states #e8f7e4 for the date circle and #1a7a1a for the month label, but the capture reads #eff8ee and the same #0b2f04 as the heading. The spec values are wrong and the sampled ones are used. The greys sample neutral with no green cast."
+}

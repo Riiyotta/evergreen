@@ -1,0 +1,23 @@
+{
+  "$id": "components.block.sources-list",
+  "layer": "components",
+  "purpose": "The inert source list plus a centred correction note on a comparison page.",
+  "composes": [
+    "primitives/link.inert-external"
+  ],
+  "geometry": "frame w-[70.3em] text-left; ul.list-none 749.86x158.91; li.mb-[1em]; then a centred text-[1.4375em] note",
+  "content": {
+    "label": {
+      "maxWords": 3,
+      "copyPolicy": "verbatim-locked"
+    }
+  },
+  "states": "No hover, no active, no focus, no transition, no box-shadow.",
+  "measuredFrom": "src/components/SourcesList.jsx:18-36",
+  "externalLinks": "EVERY source href is off-domain, so every anchor renders with NO href. The note's /contact link IS internal and stays live.",
+  "negatives": [
+    "no hover",
+    "no external-link icon",
+    "no rel or target attributes in the original"
+  ]
+}

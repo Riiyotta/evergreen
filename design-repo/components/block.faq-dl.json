@@ -1,0 +1,31 @@
+{
+  "$id": "components.block.faq-dl",
+  "layer": "components",
+  "purpose": "A fully expanded question/answer definition list.",
+  "content": {
+    "question": {
+      "maxWords": 7,
+      "copyPolicy": "verbatim-locked"
+    },
+    "answer": {
+      "maxWords": 70,
+      "copyPolicy": "measured-budget"
+    }
+  },
+  "maxWordsBasis": "recomputed over every faq row on all 15 comparison routes and all 102 detail routes",
+  "rowCounts": {
+    "comparison": 4,
+    "glossary-detail": 3,
+    "messages/values/for-detail": 4
+  },
+  "rowCountCorrection": "CLONE_SPEC_CONTENT_A §5.6/§9.3 records the comparison FAQ as 3 rows. IT IS 4. Only four rows reconcile §4.1's measured 843.91px <dl> against §5.6's own per-row heights (174.39 + 183.72 + 215.45 + ~174 + 3x32 margin = 843.6), and _reference/screenshots/alt-1280-faq-sources.png shows four questions. Built with four.",
+  "states": "No hover, no active, no focus, no transition, no box-shadow.",
+  "measuredFrom": "src/components/blocks/FaqDl.jsx:1-26",
+  "negatives": [
+    "NOT an accordion",
+    "no <details>/<summary>",
+    "no toggle",
+    "no aria-expanded",
+    "every answer is visible from first paint"
+  ]
+}

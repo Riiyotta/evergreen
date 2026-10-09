@@ -1,0 +1,52 @@
+{
+  "$id": "components.block.rich-text",
+  "layer": "components",
+  "purpose": "The one shared prose container. All element typography comes from .marketing-rich-text.",
+  "geometry": {
+    "1440": 933.36,
+    "1280": 829.653,
+    "768": 642.333,
+    "390": 343.22
+  },
+  "supportedElements": [
+    "p",
+    "h2",
+    "h3",
+    "h4",
+    "ul",
+    "ol",
+    "li",
+    "blockquote",
+    "figure",
+    "figcaption",
+    "a",
+    "strong",
+    "code",
+    "br"
+  ],
+  "unsupportedElements": {
+    "list": [
+      "table",
+      "hr"
+    ],
+    "reason": "The original ships NO rules for either and neither appears on any sampled page. RichTextBlocks refuses them rather than rendering raw UA defaults."
+  },
+  "content": {
+    "heading": {
+      "maxWords": 6,
+      "copyPolicy": "measured-budget"
+    },
+    "paragraph": {
+      "maxWords": 59,
+      "copyPolicy": "measured-budget"
+    }
+  },
+  "maxWordsBasis": "recomputed over every richtext section heading and paragraph on all 102 detail routes",
+  "states": "No hover, no active, no focus, no transition, no box-shadow.",
+  "measuredFrom": "src/components/RichText.jsx:1-19",
+  "criticalRules": [
+    "The container's own font-size is the ROOT em (10.6667px @1280), NOT the paragraph size. `figure`/`figcaption` therefore resolve 1em to ~10.67px and the caption is genuinely tiny. That is correct; do not fix it.",
+    "`.marketing-rich-text h2` is line-height 1.2. The standalone display h2 (components/block.content-heading) is 1.48. Both are 48px at 1280. THEY ARE TWO SEPARATE ROLES AND MUST NOT BE UNIFIED.",
+    "Nothing in this component may set a font-size."
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "$id": "primitives.image.leaf-art",
+  "layer": "primitives",
+  "purpose": "One absolutely-positioned decorative leaf in a leaf layer.",
+  "geometry": "position absolute; width/height from LEAF_ART; z-index from the coordinate row (default 1); --leaf-rotate custom property; transform = translateX/Y (em for drift, % of own box for scroll) then rotate",
+  "states": {
+    "hover": null,
+    "active": null,
+    "focus": null,
+    "disabled": null,
+    "transition": null,
+    "boxShadow": "none",
+    "note": "No interactive state exists. A generator must not add one."
+  },
+  "measuredFrom": "src/lib/leaves.js:90-131",
+  "classNames": {
+    "marketing-drift-leaf": "has a `from` offset — whileInView drift",
+    "marketing-scroll-leaf": "has a `track` range — scroll-spring driven",
+    "marketing-responsive-leaf": "has a phone-specific top, switched by a CSS custom property at <=479px",
+    "(no class)": "QUOTE_LEAVES and the /our-purpose wreath — STATIC, initial === animate"
+  },
+  "assetRole": "brand.leaf-art",
+  "accessibility": "always alt='' aria-hidden='true', inside a pointer-events-none span"
+}

@@ -1,0 +1,22 @@
+{
+  "$id": "primitives.pill.avatar-frame",
+  "layer": "primitives",
+  "purpose": "Floating avatar pill beside the homepage h1.",
+  "tokens": {
+    "surface": "surface.accent",
+    "border": "border.default",
+    "radius": "radius.pillStat"
+  },
+  "geometry": "absolute, h-[5.75094em] w-[11.2528em], items-end; becomes static at <=767px",
+  "states": {
+    "hover": null,
+    "active": null,
+    "focus": null,
+    "disabled": null,
+    "transition": null,
+    "boxShadow": "none",
+    "note": "No interactive state exists. A generator must not add one."
+  },
+  "measuredFrom": "src/components/Hero.jsx:128-151",
+  "assetRole": "person.likeness"
+}

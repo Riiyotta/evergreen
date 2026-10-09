@@ -1,0 +1,24 @@
+{
+  "$id": "components.row.stat-pills",
+  "layer": "components",
+  "purpose": "The 4-statistic leaf-pill row.",
+  "composes": [
+    "primitives/pill.stat"
+  ],
+  "geometry": "two `w-1/2 justify-around` halves; block gets mt-[6.5em]; measured block height 137.59px @1280",
+  "count": {
+    "exact": 4
+  },
+  "content": {
+    "caption": {
+      "maxWords": 8,
+      "copyPolicy": "verbatim-locked"
+    }
+  },
+  "maxWordsBasis": "counted from the real STATS array (longest: 'lower turnover rates in teams with regular feedback')",
+  "states": "No hover, no active, no focus, no transition, no box-shadow.",
+  "measuredFrom": "src/components/StatRow.jsx:51-68",
+  "externalLinks": "The 4 footnote <sup> links are off-domain (hubspot / apollotechnical) and render with NO href.",
+  "duplicationNote": "The same markup also exists inline in Hero.jsx blocks 8. Both are load-bearing; the source was not refactored.",
+  "complianceNote": "These are real third-party research statistics. A generator must never invent a statistic or change a figure."
+}

@@ -1,0 +1,17 @@
+{
+  "$id": "components.block.content-heading",
+  "layer": "components",
+  "purpose": "The shared centred display-h2 heading block that separates content groups.",
+  "geometry": "frame w-[70.3em] (749.86px); h2 4.5em / 1.48 / 600 serif centred; 71.03px for one line, 142.06 for two",
+  "typeRole": "display.h2",
+  "content": {
+    "heading": {
+      "maxWords": 8,
+      "copyPolicy": "verbatim-locked"
+    }
+  },
+  "maxWordsBasis": "longest real heading across the four per-collection sequences and the comparison template",
+  "states": "No hover, no active, no focus, no transition, no box-shadow.",
+  "measuredFrom": "src/components/ContentHeading.jsx:1-25",
+  "criticalRule": "line-height 1.48. DIFFERENT ROLE from .marketing-rich-text h2 (1.2). Do not unify."
+}

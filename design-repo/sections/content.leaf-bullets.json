@@ -1,0 +1,57 @@
+{
+  "$id": "sections.content.leaf-bullets",
+  "layer": "sections",
+  "motionFieldSet": [
+    "pattern",
+    "trigger",
+    "durationMs",
+    "easing",
+    "delayMs",
+    "staggerMs",
+    "leafSet",
+    "leafCount",
+    "scrollProgressRange",
+    "reducedMotionFallback",
+    "implementationStatus"
+  ],
+  "motionIsClosed": true,
+  "category": "content",
+  "purpose": "A leaf-marked unordered list.",
+  "composes": [
+    "components/block.leaf-bullets"
+  ],
+  "content": {
+    "items": {
+      "minItems": 3,
+      "maxItems": 5,
+      "maxItemsBasis": "T-COMPARISON uses 5 strengths and 4 shortfalls; the detail sequences use 3-5"
+    },
+    "item": {
+      "maxWords": 21,
+      "copyPolicy": "measured-budget"
+    },
+    "additionalProperties": false
+  },
+  "constraints": {
+    "maxPerPage": 2,
+    "variantKeyed": true
+  },
+  "motion": {
+    "pattern": "none",
+    "trigger": "none",
+    "delayMs": 0,
+    "staggerMs": 0,
+    "reducedMotionFallback": "none-required-static",
+    "implementationStatus": "static-by-design",
+    "note": "Nothing in this section animates."
+  },
+  "responsive": {
+    "all": "no structural change"
+  },
+  "measuredFrom": "src/components/blocks/LeafBulletList.jsx:1-25",
+  "implementedBy": "src/components/blocks/LeafBulletList.jsx",
+  "motionClosureScope": "CLOSED for PageSpec emission: a generated node's `motion` object may contain ONLY the fields in motionFieldSet, enforced by schema/pagespec.schema.json (additionalProperties:false) and the MOTION_OBJECT_IS_CLOSED rule. The keys in motionDocumentationFields below are contract-level documentation carried by THIS file for human and retrieval use; they are NOT settable on a PageSpec node.",
+  "motionDocumentationFields": [
+    "note"
+  ]
+}

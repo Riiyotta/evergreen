@@ -1,0 +1,372 @@
+{
+  "$id": "assets.asset-roles",
+  "version": "1.0.0",
+  "status": "design-review-pending",
+  "description": "The CLOSED assetRole enum. Every media-bearing field in every section contract references one of these ids and nothing else. There is no generic 'image' or 'src' role: a bare string field would let a generator invent arbitrary asset semantics.",
+  "sourceIsRealCompany": true,
+  "sourceNotice": "The source of this design-repo is https://www.evergreen.so/ — a REAL, LIVE marketing site belonging to a real company, carrying real third-party trademarks, real named individuals' photographs and real attributed testimonials. This package exists to document that site's design system for internal generation work. IT MUST NOT BE PUBLISHED, DEPLOYED OR HOSTED ANYWHERE. Nothing in it grants any licence to any third-party mark, photograph or editorial content.",
+  "generationPolicyEnum": [
+    "may-generate-new",
+    "must-reuse-exact",
+    "must-not-fabricate",
+    "must-not-reproduce-real-entity",
+    "must-not-redistribute"
+  ],
+  "generationPolicyMeanings": {
+    "may-generate-new": "a generator may create a new asset for this slot",
+    "must-reuse-exact": "a generator may only reference an enumerated existing file, byte-for-byte",
+    "must-not-fabricate": "a generator may reference an enumerated file but must never synthesise a replacement",
+    "must-not-reproduce-real-entity": "a generator must never reproduce, redraw, synthesise or imply the real entity (company mark, person's face, review platform). The slot is left empty and flagged for a human.",
+    "must-not-redistribute": "the file is licence-constrained; it is not a content slot and must not be re-shipped as content"
+  },
+  "complianceCriticalRoles": [
+    "brand.logo",
+    "person.likeness",
+    "product.badge",
+    "product.screenshot",
+    "third-party.platform-logo",
+    "third-party.review-mark",
+    "third-party.trademark"
+  ],
+  "pinnedPolicyValues": {
+    "third-party.trademark": "must-not-reproduce-real-entity",
+    "third-party.platform-logo": "must-not-reproduce-real-entity",
+    "third-party.review-mark": "must-not-reproduce-real-entity",
+    "person.likeness": "must-not-reproduce-real-entity",
+    "brand.logo": "must-reuse-exact",
+    "product.screenshot": "must-reuse-exact",
+    "product.badge": "must-reuse-exact"
+  },
+  "pinnedPolicyRationale": "MASTER-GUIDE §3.23 item 2: checking that a role's generationPolicy is one of the five closed enum values is NECESSARY BUT NOT SUFFICIENT. A compliance-critical role could be silently flipped to a different-but-still-valid value (e.g. person.likeness moved from must-not-reproduce-real-entity to must-reuse-exact) and a membership check would say nothing. extraction/verify_all.py therefore asserts each role above is pinned to its exact value, and schema/tests/adversarial_test.py proves it with a mutation to a different-but-valid enum value.",
+  "globalGenerationProhibitions": [
+    "NEVER fabricate or reproduce a real company's logo.",
+    "NEVER fabricate or reproduce a real person's face.",
+    "NEVER fabricate a testimonial, a quote, a name, a job title or an employer.",
+    "NEVER fabricate a product screenshot or alter a factual badge figure.",
+    "NEVER fabricate a review rating, star count or review-platform mark.",
+    "NEVER invent a statistic, a tree count, a user count or a price.",
+    "When a slot would need any of the above, leave it empty and flag it."
+  ],
+  "totalFiles": 133,
+  "unreferencedFiles": [
+    "carolina-blog-author-ba7f9b.webp"
+  ],
+  "unreferencedNote": "132 of the 133 files under public/assets/ are referenced from src/ or index.html. carolina-blog-author-ba7f9b.webp is the single orphan: a real person's likeness that no component renders. It is kept in the person.likeness role (not deleted, not reassigned) so its compliance constraints travel with it.",
+  "measuredFrom": "ASSET_MANIFEST.md:1-88",
+  "roles": {
+    "brand.logo": {
+      "label": "Evergreen's own wordmark",
+      "generationPolicy": "must-reuse-exact",
+      "complianceCritical": true,
+      "licensing": "Evergreen's own trademark. Reuse only in a slot that is genuinely Evergreen's own branding. NEVER redraw, recolour, restyle or re-letter it, and never generate a look-alike.",
+      "allowedSlots": [
+        "chrome.nav logo slot",
+        "chrome.footer logo slot"
+      ],
+      "fileCount": 1,
+      "files": [
+        "evergreen-logosvg-216cd4.svg"
+      ]
+    },
+    "brand.leaf-art": {
+      "label": "Evergreen's decorative leaf / heart SVGs",
+      "generationPolicy": "must-reuse-exact",
+      "complianceCritical": false,
+      "licensing": "Evergreen's own artwork. Pick from the enumerated files only. The coordinate tables in src/lib/leaves.js are the authority for placement; a generator may choose which leaf set a section uses but may not invent a coordinate.",
+      "allowedSlots": [
+        "divider.leaf-band",
+        "every CARD_LEAVES / HERO_LEAVES / QUOTE_LEAVES layer"
+      ],
+      "fileCount": 6,
+      "files": [
+        "ever-regular-leafsvg-1b92f2.svg",
+        "ever-small-leafsvg-e988d6.svg",
+        "green-heartsvg-200bb6.svg",
+        "leaf-smaller-reflectsvg-c42957.svg",
+        "leaf-smallersvg-6114e8.svg",
+        "leaf-spikesvg-7a4672.svg"
+      ]
+    },
+    "brand.icon": {
+      "label": "Evergreen's own UI / SDG / feature icons",
+      "generationPolicy": "must-reuse-exact",
+      "complianceCritical": false,
+      "licensing": "Evergreen's own artwork. Reuse the exact file; never generate a replacement.",
+      "allowedSlots": [
+        "proof.sdg-goals",
+        "conversion.reassurance-cta",
+        "pricing.single-plan",
+        "chrome.footer socials"
+      ],
+      "fileCount": 13,
+      "files": [
+        "checked-a91d37.svg",
+        "company-1ddd00.svg",
+        "icon-emailsvg-1a80b8.svg",
+        "icon-environmentsvg-89f589.svg",
+        "icon-linkedinsvg-777cac.svg",
+        "icon-povertysvg-375091.svg",
+        "icon-supportsvg-bc4096.svg",
+        "icon-timesvg-4c8791.svg",
+        "icon-treesvg-fb7494.svg",
+        "icon-twittersvg-6d6f46.svg",
+        "icon-usersvg-f5e0ab.svg",
+        "icon-youthsvg-db3447.svg",
+        "ticksvg-589d98.svg"
+      ]
+    },
+    "product.screenshot": {
+      "label": "Real screenshots of Evergreen's live product UI",
+      "generationPolicy": "must-reuse-exact",
+      "complianceCritical": true,
+      "licensing": "COMPLIANCE-CRITICAL. These depict a real company's real proprietary product interface. Generated output MUST NOT fabricate, re-render, mock up, extend or 'refresh' a product screenshot, and MUST NOT place one in a slot that implies a feature the product does not have.",
+      "allowedSlots": [
+        "feature.seeds",
+        "feature.report-csr",
+        "feature.split-visual",
+        "hero.home"
+      ],
+      "fileCount": 7,
+      "files": [
+        "a-price-1png-5e6ffc.webp",
+        "a-price-2png-1bdf4a.webp",
+        "evergreen-recognition-demo-view-185a06.webp",
+        "screen-report-split-2svg-008209.svg",
+        "sn-2png-f6c14a.webp",
+        "sn-3png-556d34.webp",
+        "sn-4apng-19e16a.webp"
+      ]
+    },
+    "product.badge": {
+      "label": "Evergreen's '20,000 trees planted' achievement badge",
+      "generationPolicy": "must-reuse-exact",
+      "complianceCritical": true,
+      "licensing": "COMPLIANCE-CRITICAL. Carries a real, specific factual claim about a real company. Generated output MUST NOT alter the figure or fabricate a different badge.",
+      "allowedSlots": [
+        "feature.report-csr row 2"
+      ],
+      "fileCount": 1,
+      "files": [
+        "ever-badgepng-6b8d93.webp"
+      ]
+    },
+    "third-party.trademark": {
+      "label": "Real third-party company logos (customers and partners)",
+      "generationPolicy": "must-not-reproduce-real-entity",
+      "complianceCritical": true,
+      "licensing": "COMPLIANCE-CRITICAL. Real registered trademarks of real companies: Harvard University Employees Credit Union, Nitro Games, Earnest Ice Cream, Octopus Energy, Hifyre, Fraktio, CoverWallet, Wunderdog, ACM, Kent & White, Worklete, 50Pros, Product Hunt, The People People Group. They appear here ONLY because this design-repo documents an existing real site. Generated output MUST NOT reproduce, redraw or fabricate any real company's logo, and MUST NOT imply a customer or partner relationship that does not exist. If a new page needs a customer-logo slot, leave it empty and flag it for a human who can confirm the permission.",
+      "allowedSlots": [
+        "proof.testimonial-wall",
+        "listing.case-study-grid",
+        "story.meta-prose",
+        "hero.partner"
+      ],
+      "fileCount": 18,
+      "files": [
+        "50pros-logo-black-e3d976.svg",
+        "coverwallet-logo-31e933.svg",
+        "logo-acmsvg-a35036.svg",
+        "logo-coverwalletsvg-be24e9.svg",
+        "logo-earnestsvg-2634ab.svg",
+        "logo-fraktiosvg-19b008.svg",
+        "logo-harvardsvg-c5efb6.svg",
+        "logo-hifyresvg-64f8d6.svg",
+        "logo-kent-and-whitepng-139c7a.webp",
+        "logo-kent-and-whitepng-e559b5.webp",
+        "logo-nitrosvg-4caa4a.svg",
+        "logo-nitrosvg-7a0f33.svg",
+        "logo-octopussvg-a91e19.svg",
+        "logo-wunderdogsvg-62f3d4.svg",
+        "logo-wunderdogsvg-a66a50.svg",
+        "product-hunt-logo-copy-f0147c.webp",
+        "tppg-dark-logo-a4eebe.webp",
+        "workletesvg-eb3abc.svg"
+      ],
+      "neverDedupe": "logo-wunderdogsvg-a66a50.svg and logo-wunderdogsvg-62f3d4.svg are DIFFERENT ARTWORK, as are logo-nitrosvg-4caa4a.svg and logo-nitrosvg-7a0f33.svg. The -a66a50 / -4caa4a pair is the case-study teaser variant; the -62f3d4 / -7a0f33 pair is the testimonial / logo-strip variant. NEVER dedupe them to one file. CLONE_SPEC_CONTENT_B §12.6 names the wrong wunderdog variant for the teaser; the correct one is -a66a50."
+    },
+    "third-party.platform-logo": {
+      "label": "Integration platform marks (Slack, Microsoft Teams, Mattermost, Webex)",
+      "generationPolicy": "must-not-reproduce-real-entity",
+      "complianceCritical": true,
+      "licensing": "COMPLIANCE-CRITICAL. Real third-party trademarks used as integration marks. Generated output MUST NOT fabricate a platform logo and MUST NOT claim an integration that does not exist. Mattermost appears on T-PARTNER with the label 'Coming soon' and no link — that qualifier is part of the content, not decoration.",
+      "allowedSlots": [
+        "conversion.reassurance-cta platform row",
+        "hero.home",
+        "hero.partner",
+        "chrome.trial-modal"
+      ],
+      "fileCount": 4,
+      "files": [
+        "mattermost-svg-file-ae25d1.svg",
+        "slacksvg-1b4e41.svg",
+        "teamssvg-b74fd1.svg",
+        "webexpng-52e71f.webp"
+      ]
+    },
+    "third-party.review-mark": {
+      "label": "G2 logo and G2 review stars",
+      "generationPolicy": "must-not-reproduce-real-entity",
+      "complianceCritical": true,
+      "licensing": "COMPLIANCE-CRITICAL. G2 is a real third-party review platform and its mark carries a real, verifiable rating claim ('4.8 / 5 on G2 Reviews'). Generated output MUST NOT fabricate a review mark, a star count or a rating figure.",
+      "allowedSlots": [
+        "proof.g2-rating",
+        "proof.testimonial-wall",
+        "pricing.single-plan"
+      ],
+      "fileCount": 2,
+      "files": [
+        "logo-g2png-c53a3f.webp",
+        "star1svg-303d31.svg"
+      ]
+    },
+    "person.likeness": {
+      "label": "Photographs of real, named individuals",
+      "generationPolicy": "must-not-reproduce-real-entity",
+      "complianceCritical": true,
+      "licensing": "COMPLIANCE-CRITICAL. These are photographs of real, identifiable people, carried alongside real attributed quotes with their real names, job titles and employers (e.g. Emilia Vesa, Andrew Wilson, Brian Schryer, Sakir Temel, Milka Tarkiainen, Milka's colleagues). Generated output MUST NOT fabricate a person's face, MUST NOT generate a synthetic portrait for a testimonial slot, MUST NOT attach a real person's photograph to a quote they did not give, and MUST NOT invent a quote, name, job title or employer. A new testimonial slot is left EMPTY and flagged for a human.",
+      "allowedSlots": [
+        "proof.testimonial-wall",
+        "hero.home avatar pills",
+        "story.hero-quote",
+        "story.meta-prose"
+      ],
+      "fileCount": 11,
+      "files": [
+        "a1png-5e2164.webp",
+        "a2png-f0a2cf.webp",
+        "carolina-blog-author-ba7f9b.webp",
+        "james-rowley-e7e9f5.webp",
+        "nitro-7ab98f.webp",
+        "t1png-cd91ac.webp",
+        "t1png-d278e8.webp",
+        "t2png-2ed757.webp",
+        "t3png-c485a1.webp",
+        "t3png-ee95a1.webp",
+        "t4png-f92ff9.webp"
+      ],
+      "unreferenced": [
+        "carolina-blog-author-ba7f9b.webp"
+      ]
+    },
+    "editorial.hero-image": {
+      "label": "Blog / case-study editorial hero imagery",
+      "generationPolicy": "must-not-fabricate",
+      "complianceCritical": false,
+      "licensing": "Licensed or commissioned editorial imagery belonging to the real company. Reuse an enumerated file in its own article's slot. A generator MUST NOT fabricate an image for an article it is inventing, and MUST NOT move an image to an article it does not illustrate.",
+      "allowedSlots": [
+        "listing.blog-rows",
+        "content.rich-text figures"
+      ],
+      "fileCount": 60,
+      "files": [
+        "5f8200e571a3e459effdeeea-evergreen-guide-to-employee-recogni-3449dc.webp",
+        "5f820239e8bfd034298ffee3-evergreen-what-is-carbon-neutrality-e9f572.webp",
+        "5f8205eab8fd53d60769c94c-evergreen-guide-to-better-company-c-111446.webp",
+        "5f8206cd96c87060e354c330-evergreen-how-to-manage-remote-team-c76507.webp",
+        "5fa129b25e89979ec330054a-fraktio-gratitude-culture-88a55a.webp",
+        "602a7f3635d51a60bf058cda-evergreen-virtual-employee-apprecia-e57e48.webp",
+        "603429d37fb4e377c1531e03-why-is-employee-recognition-so-impo-bb6138.webp",
+        "60400af600d01e2b15b060f1-evergreen-customer-success-story-wo-397b3d.webp",
+        "6040ebfbc5bbf0b356485b68-evergreen-customer-success-story-wu-a91174.webp",
+        "6040ec8c481409f3c3271af3-wunderdog-uses-evergreen-6e1e7c.webp",
+        "6046042168e4a67c594c519f-why-is-employee-recognition-so-impo-24a963.webp",
+        "604635cc5238b1400d42ff05-evergreen-customer-success-story-ke-b7b307.webp",
+        "607031e359ab5e4aff9988fa-evergreen-5-simple-ways-to-lead-by--5d7991.webp",
+        "6093fee595fb1027740e32ce-evergreen-customer-success-story-ni-b56302.webp",
+        "609404d86be6b801dd061886-nitro-games-uses-evergreen-d4e489.webp",
+        "6140682be54a3672f1cac3aa-why-employee-recognition-program-is-51ef12.webp",
+        "614d9ad1eba882d71260bdcd-15-excellent-ideas-to-increase-moti-e4d2e3.webp",
+        "617a5ad96fbc2dc4316a0ab0-evergreen-product-update-q3-2021-79fe0d.webp",
+        "appreciation-day-67c901.webp",
+        "beta-evergreen-so-reporting-1-c89f9b.webp",
+        "carbon-neutrality-ade6df.webp",
+        "dei-69738b.webp",
+        "diversity-equity-inclusion-81e0bf.webp",
+        "employee-experience-2-bdc29a.webp",
+        "employee-experience-office-d43bbd.webp",
+        "employee-motivation-importance-in-the-workplace-evergreen-31e7dc.webp",
+        "employee-recognition-5c8c5b.webp",
+        "employee-recognition-fails-e9b555.webp",
+        "employee-recognition-programs-1345f0.webp",
+        "employee-retention-1-fa463f.webp",
+        "employee-retention-8cedcf.webp",
+        "employer-brand-2ebc35.webp",
+        "evergreen-product-update-h2-2022-009d0a.webp",
+        "how-to-create-a-employee-recognition-program-5b22de.webp",
+        "ideas-employee-recognition-ca3a7d.webp",
+        "image-1-507462.webp",
+        "image-8-584426.webp",
+        "kopio-kopio-carbon-neutrality-e51f93.webp",
+        "kopio-product-update-aad3c9.webp",
+        "kopio-teamwork-culture-3a2a24.webp",
+        "layoff-0ad72b.webp",
+        "motivate-employees-eed2dc.webp",
+        "motivation-quiet-quitting-6189fe.webp",
+        "peer-to-peer-recognition-1-499dcd.webp",
+        "snowball-effect-84a4d6.webp",
+        "sustainability-9f7647.webp",
+        "teambuilding-6a611f.webp",
+        "teamwork-culture-1-5d7b4f.webp",
+        "thank-you-e78cec.webp",
+        "untitled-10-270217.webp",
+        "untitled-11-31bf54.webp",
+        "untitled-12-9a1cea.webp",
+        "untitled-13-e602ab.webp",
+        "untitled-14-6fa94b.webp",
+        "untitled-17-5c79b1.webp",
+        "untitled-18-01dcc1.webp",
+        "untitled-3aae37.webp",
+        "untitled-9-f552f7.webp",
+        "virtual-recognition-program-2-cf0a14.webp",
+        "well-being-employee-da53fe.webp"
+      ]
+    },
+    "editorial.stock-photo": {
+      "label": "Stock / Unsplash-derived photography and the /esg hero photograph",
+      "generationPolicy": "must-not-fabricate",
+      "complianceCritical": false,
+      "licensing": "Third-party stock photography whose licence terms are NOT captured in this package. Reuse only the enumerated files, in the slots they already occupy. Do not re-licence, do not redistribute separately and do not fabricate a replacement.",
+      "allowedSlots": [
+        "hero.esg-environmental",
+        "content.rich-text figures"
+      ],
+      "fileCount": 7,
+      "files": [
+        "5feb49aeab0dffb8605b169e-1-gizi2g6lo7ov-fjuxb3qww-61b002.webp",
+        "606d728872f4e20d945e9b63-1-duocqqfo3sxj46gsy3-znq-9c7717.webp",
+        "img-6223-7511ba.webp",
+        "jeshoots-com-2vd8lihdnw-unsplash-afa87c.webp",
+        "luis-villasmil-4v8umzx8fya-unsplash-ad2c74.webp",
+        "photo-1552664688-cf412ec27db2-eeea02.webp",
+        "samsung-uk-uzp2t-kkmdm-unsplash-b161a2.webp"
+      ]
+    },
+    "typeface.webfont": {
+      "label": "Self-hosted webfont files",
+      "generationPolicy": "must-not-redistribute",
+      "complianceCritical": false,
+      "licensing": "rubik-latin.woff2 (Rubik, SIL OFL 1.1) and gloock-latin.woff2 (Gloock, SIL OFL 1.1) are both open-licensed and redistributable under OFL terms with the licence carried along. The ORIGINAL site's display face, ivypresto-headline, is Adobe Typekit and kit-bound to evergreen.so: it is NOT redistributable and is NOT in this package. Gloock + size-adjust 92.44% is the documented substitution. Do not add a Typekit kit to this package.",
+      "allowedSlots": [
+        "global @font-face only — never a content slot"
+      ],
+      "fileCount": 2,
+      "files": [
+        "gloock-latin.woff2",
+        "rubik-latin.woff2"
+      ]
+    },
+    "site.favicon": {
+      "label": "Site favicon",
+      "generationPolicy": "must-reuse-exact",
+      "complianceCritical": false,
+      "licensing": "Evergreen's own mark. Same rules as brand.logo.",
+      "allowedSlots": [
+        "index.html <link rel=icon> only — never a content slot"
+      ],
+      "fileCount": 1,
+      "files": [
+        "icon.png"
+      ]
+    }
+  }
+}

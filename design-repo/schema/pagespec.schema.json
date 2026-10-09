@@ -1,0 +1,4735 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://evergreen-clone.local/design-repo/schema/pagespec.schema.json",
+  "title": "Evergreen clone PageSpec",
+  "description": "The machine contract for a generated page. Closed template enum, closed section enum, closed per-section content, closed motion object, closed assetRole enum, additionalProperties:false throughout. Structural rules JSON Schema cannot express (node sequence vs declared template, rhythm rules, per-instance maxWords) are enforced by schema/semantic_validate.py \u2014 BOTH must pass.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "pageSpecVersion",
+    "route",
+    "template",
+    "nodes"
+  ],
+  "properties": {
+    "pageSpecVersion": {
+      "const": "1.0.0"
+    },
+    "route": {
+      "type": "string",
+      "pattern": "^/"
+    },
+    "template": {
+      "enum": [
+        "T-ALTERNATIVES-INDEX",
+        "T-ARTICLE",
+        "T-BLOG-INDEX",
+        "T-CASE-STUDY-INDEX",
+        "T-COLLECTION-INDEX",
+        "T-COMPARISON",
+        "T-CONTACT",
+        "T-DETAIL-FOR",
+        "T-DETAIL-GLOSSARY",
+        "T-DETAIL-MESSAGES",
+        "T-DETAIL-VALUES",
+        "T-EBOOK",
+        "T-ESG",
+        "T-HOME",
+        "T-LEGAL",
+        "T-PARTNER",
+        "T-PILLAR",
+        "T-PRICING",
+        "T-PURPOSE",
+        "T-REFERRAL",
+        "T-SCHEDULER",
+        "T-STORY"
+      ],
+      "description": "Closed enum of the 22 real page shapes. semantic_validate.py cross-references this against templates/templates.json's real node list for the declared template."
+    },
+    "title": {
+      "type": "string"
+    },
+    "evidenceLevel": {
+      "enum": [
+        "measured",
+        "measured-sampled",
+        "inferred"
+      ]
+    },
+    "nodes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "oneOf": [
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "section",
+              "required",
+              "repeatable",
+              "motion"
+            ],
+            "properties": {
+              "section": {
+                "const": "chrome.announcement-banner"
+              },
+              "required": {
+                "type": "boolean"
+              },
+              "repeatable": {
+                "type": "boolean"
+              },
+              "variant": {
+                "type": "string"
+              },
+              "note": {
+                "type": "string"
+              },
+              "content": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "message": {},
+                  "linkLabel": {}
+                },
+                "description": "Closed to this section's real content fields. Per-field maxWords budgets live in sections/chrome.announcement-banner.json and are enforced per instance by schema/semantic_validate.py, which JSON Schema cannot express."
+              },
+              "motion": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "pattern",
+                  "reducedMotionFallback"
+                ],
+                "properties": {
+                  "pattern": {
+                    "const": "none"
+                  },
+                  "trigger": {},
+                  "durationMs": {},
+                  "easing": {},
+                  "delayMs": {
+                    "const": 0
+                  },
+                  "staggerMs": {
+                    "const": 0
+                  },
+                  "leafSet": {},
+                  "leafCount": {},
+                  "scrollProgressRange": {},
+                  "reducedMotionFallback": {
+                    "const": "none-required-static"
+                  },
+                  "implementationStatus": {}
+                },
+                "description": "CLOSED to the 11 fields in this section's motionFieldSet. Contract-level documentation keys (motionDocumentationFields) are NOT settable here."
+              },
+              "assetRefs": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "assetRole"
+                  ],
+                  "properties": {
+                    "assetRole": {
+                      "enum": [
+                        "brand.icon",
+                        "brand.leaf-art",
+                        "brand.logo",
+                        "editorial.hero-image",
+                        "editorial.stock-photo",
+                        "person.likeness",
+                        "product.badge",
+                        "product.screenshot",
+                        "site.favicon",
+                        "third-party.platform-logo",
+                        "third-party.review-mark",
+                        "third-party.trademark",
+                        "typeface.webfont"
+                      ]
+                    },
+                    "src": {
+                      "type": "string"
+                    },
+                    "alt": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "section",
+              "required",
+              "repeatable",
+              "motion"
+            ],
+            "properties": {
+              "section": {
+                "const": "chrome.footer"
+              },
+              "required": {
+                "type": "boolean"
+              },
+              "repeatable": {
+                "type": "boolean"
+              },
+              "variant": {
+                "type": "string"
+              },
+              "note": {
+                "type": "string"
+              },
+              "content": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "columns": {},
+                  "socials": {},
+                  "legalLine": {}
+                },
+                "description": "Closed to this section's real content fields. Per-field maxWords budgets live in sections/chrome.footer.json and are enforced per instance by schema/semantic_validate.py, which JSON Schema cannot express."
+              },
+              "motion": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "pattern",
+                  "reducedMotionFallback"
+                ],
+                "properties": {
+                  "pattern": {
+                    "const": "none"
+                  },
+                  "trigger": {},
+                  "durationMs": {},
+                  "easing": {},
+                  "delayMs": {
+                    "const": 0
+                  },
+                  "staggerMs": {
+                    "const": 0
+                  },
+                  "leafSet": {},
+                  "leafCount": {},
+                  "scrollProgressRange": {},
+                  "reducedMotionFallback": {
+                    "const": "none-required-static"
+                  },
+                  "implementationStatus": {}
+                },
+                "description": "CLOSED to the 11 fields in this section's motionFieldSet. Contract-level documentation keys (motionDocumentationFields) are NOT settable here."
+              },
+              "assetRefs": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "assetRole"
+                  ],
+                  "properties": {
+                    "assetRole": {
+                      "enum": [
+                        "brand.icon",
+                        "brand.leaf-art",
+                        "brand.logo",
+                        "editorial.hero-image",
+                        "editorial.stock-photo",
+                        "person.likeness",
+                        "product.badge",
+                        "product.screenshot",
+                        "site.favicon",
+                        "third-party.platform-logo",
+                        "third-party.review-mark",
+                        "third-party.trademark",
+                        "typeface.webfont"
+                      ]
+                    },
+                    "src": {
+                      "type": "string"
+                    },
+                    "alt": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "section",
+              "required",
+              "repeatable",
+              "motion"
+            ],
+            "properties": {
+              "section": {
+                "const": "chrome.nav"
+              },
+              "required": {
+                "type": "boolean"
+              },
+              "repeatable": {
+                "type": "boolean"
+              },
+              "variant": {
+                "type": "string"
+              },
+              "note": {
+                "type": "string"
+              },
+              "content": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "desktopLinks": {},
+                  "overlayLinks": {}
+                },
+                "description": "Closed to this section's real content fields. Per-field maxWords budgets live in sections/chrome.nav.json and are enforced per instance by schema/semantic_validate.py, which JSON Schema cannot express."
+              },
+              "motion": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "pattern",
+                  "reducedMotionFallback"
+                ],
+                "properties": {
+                  "pattern": {
+                    "const": "none"
+                  },
+                  "trigger": {},
+                  "durationMs": {},
+                  "easing": {},
+                  "delayMs": {
+                    "const": 0
+                  },
+                  "staggerMs": {
+                    "const": 0
+                  },
+                  "leafSet": {},
+                  "leafCount": {},
+                  "scrollProgressRange": {},
+                  "reducedMotionFallback": {
+                    "const": "none-required-static"
+                  },
+                  "implementationStatus": {}
+                },
+                "description": "CLOSED to the 11 fields in this section's motionFieldSet. Contract-level documentation keys (motionDocumentationFields) are NOT settable here."
+              },
+              "assetRefs": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "assetRole"
+                  ],
+                  "properties": {
+                    "assetRole": {
+                      "enum": [
+                        "brand.icon",
+                        "brand.leaf-art",
+                        "brand.logo",
+                        "editorial.hero-image",
+                        "editorial.stock-photo",
+                        "person.likeness",
+                        "product.badge",
+                        "product.screenshot",
+                        "site.favicon",
+                        "third-party.platform-logo",
+                        "third-party.review-mark",
+                        "third-party.trademark",
+                        "typeface.webfont"
+                      ]
+                    },
+                    "src": {
+                      "type": "string"
+                    },
+                    "alt": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "section",
+              "required",
+              "repeatable",
+              "motion"
+            ],
+            "properties": {
+              "section": {
+                "const": "chrome.trial-modal"
+              },
+              "required": {
+                "type": "boolean"
+              },
+              "repeatable": {
+                "type": "boolean"
+              },
+              "variant": {
+                "type": "string"
+              },
+              "note": {
+                "type": "string"
+              },
+              "content": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "platforms": {}
+                },
+                "description": "Closed to this section's real content fields. Per-field maxWords budgets live in sections/chrome.trial-modal.json and are enforced per instance by schema/semantic_validate.py, which JSON Schema cannot express."
+              },
+              "motion": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "pattern",
+                  "reducedMotionFallback"
+                ],
+                "properties": {
+                  "pattern": {
+                    "const": "overlay-slide"
+                  },
+                  "trigger": {},
+                  "durationMs": {},
+                  "easing": {},
+                  "delayMs": {
+                    "const": 0
+                  },
+                  "staggerMs": {
+                    "const": 0
+                  },
+                  "leafSet": {},
+                  "leafCount": {},
+                  "scrollProgressRange": {},
+                  "reducedMotionFallback": {
+                    "const": "duration collapses to 0.01ms; the panel hides at 0vh"
+                  },
+                  "implementationStatus": {}
+                },
+                "description": "CLOSED to the 11 fields in this section's motionFieldSet. Contract-level documentation keys (motionDocumentationFields) are NOT settable here."
+              },
+              "assetRefs": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "assetRole"
+                  ],
+                  "properties": {
+                    "assetRole": {
+                      "enum": [
+                        "brand.icon",
+                        "brand.leaf-art",
+                        "brand.logo",
+                        "editorial.hero-image",
+                        "editorial.stock-photo",
+                        "person.likeness",
+                        "product.badge",
+                        "product.screenshot",
+                        "site.favicon",
+                        "third-party.platform-logo",
+                        "third-party.review-mark",
+                        "third-party.trademark",
+                        "typeface.webfont"
+                      ]
+                    },
+                    "src": {
+                      "type": "string"
+                    },
+                    "alt": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "section",
+              "required",
+              "repeatable",
+              "motion"
+            ],
+            "properties": {
+              "section": {
+                "const": "content.faq"
+              },
+              "required": {
+                "type": "boolean"
+              },
+              "repeatable": {
+                "type": "boolean"
+              },
+              "variant": {
+                "type": "string"
+              },
+              "note": {
+                "type": "string"
+              },
+              "content": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "rows": {},
+                  "question": {},
+                  "answer": {}
+                },
+                "description": "Closed to this section's real content fields. Per-field maxWords budgets live in sections/content.faq.json and are enforced per instance by schema/semantic_validate.py, which JSON Schema cannot express."
+              },
+              "motion": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "pattern",
+                  "reducedMotionFallback"
+                ],
+                "properties": {
+                  "pattern": {
+                    "const": "none"
+                  },
+                  "trigger": {},
+                  "durationMs": {},
+                  "easing": {},
+                  "delayMs": {
+                    "const": 0
+                  },
+                  "staggerMs": {
+                    "const": 0
+                  },
+                  "leafSet": {},
+                  "leafCount": {},
+                  "scrollProgressRange": {},
+                  "reducedMotionFallback": {
+                    "const": "none-required-static"
+                  },
+                  "implementationStatus": {}
+                },
+                "description": "CLOSED to the 11 fields in this section's motionFieldSet. Contract-level documentation keys (motionDocumentationFields) are NOT settable here."
+              },
+              "assetRefs": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "assetRole"
+                  ],
+                  "properties": {
+                    "assetRole": {
+                      "enum": [
+                        "brand.icon",
+                        "brand.leaf-art",
+                        "brand.logo",
+                        "editorial.hero-image",
+                        "editorial.stock-photo",
+                        "person.likeness",
+                        "product.badge",
+                        "product.screenshot",
+                        "site.favicon",
+                        "third-party.platform-logo",
+                        "third-party.review-mark",
+                        "third-party.trademark",
+                        "typeface.webfont"
+                      ]
+                    },
+                    "src": {
+                      "type": "string"
+                    },
+                    "alt": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "section",
+              "required",
+              "repeatable",
+              "motion"
+            ],
+            "properties": {
+              "section": {
+                "const": "content.leaf-bullets"
+              },
+              "required": {
+                "type": "boolean"
+              },
+              "repeatable": {
+                "type": "boolean"
+              },
+              "variant": {
+                "type": "string"
+              },
+              "note": {
+                "type": "string"
+              },
+              "content": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "items": {},
+                  "item": {}
+                },
+                "description": "Closed to this section's real content fields. Per-field maxWords budgets live in sections/content.leaf-bullets.json and are enforced per instance by schema/semantic_validate.py, which JSON Schema cannot express."
+              },
+              "motion": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "pattern",
+                  "reducedMotionFallback"
+                ],
+                "properties": {
+                  "pattern": {
+                    "const": "none"
+                  },
+                  "trigger": {},
+                  "durationMs": {},
+                  "easing": {},
+                  "delayMs": {
+                    "const": 0
+                  },
+                  "staggerMs": {
+                    "const": 0
+                  },
+                  "leafSet": {},
+                  "leafCount": {},
+                  "scrollProgressRange": {},
+                  "reducedMotionFallback": {
+                    "const": "none-required-static"
+                  },
+                  "implementationStatus": {}
+                },
+                "description": "CLOSED to the 11 fields in this section's motionFieldSet. Contract-level documentation keys (motionDocumentationFields) are NOT settable here."
+              },
+              "assetRefs": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "assetRole"
+                  ],
+                  "properties": {
+                    "assetRole": {
+                      "enum": [
+                        "brand.icon",
+                        "brand.leaf-art",
+                        "brand.logo",
+                        "editorial.hero-image",
+                        "editorial.stock-photo",
+                        "person.likeness",
+                        "product.badge",
+                        "product.screenshot",
+                        "site.favicon",
+                        "third-party.platform-logo",
+                        "third-party.review-mark",
+                        "third-party.trademark",
+                        "typeface.webfont"
+                      ]
+                    },
+                    "src": {
+                      "type": "string"
+                    },
+                    "alt": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "section",
+              "required",
+              "repeatable",
+              "motion"
+            ],
+            "properties": {
+              "section": {
+                "const": "content.leaf-spec-list"
+              },
+              "required": {
+                "type": "boolean"
+              },
+              "repeatable": {
+                "type": "boolean"
+              },
+              "variant": {
+                "type": "string"
+              },
+              "note": {
+                "type": "string"
+              },
+              "content": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "rows": {},
+                  "term": {},
+                  "definition": {}
+                },
+                "description": "Closed to this section's real content fields. Per-field maxWords budgets live in sections/content.leaf-spec-list.json and are enforced per instance by schema/semantic_validate.py, which JSON Schema cannot express."
+              },
+              "motion": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "pattern",
+                  "reducedMotionFallback"
+                ],
+                "properties": {
+                  "pattern": {
+                    "const": "none"
+                  },
+                  "trigger": {},
+                  "durationMs": {},
+                  "easing": {},
+                  "delayMs": {
+                    "const": 0
+                  },
+                  "staggerMs": {
+                    "const": 0
+                  },
+                  "leafSet": {},
+                  "leafCount": {},
+                  "scrollProgressRange": {},
+                  "reducedMotionFallback": {
+                    "const": "none-required-static"
+                  },
+                  "implementationStatus": {}
+                },
+                "description": "CLOSED to the 11 fields in this section's motionFieldSet. Contract-level documentation keys (motionDocumentationFields) are NOT settable here."
+              },
+              "assetRefs": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "assetRole"
+                  ],
+                  "properties": {
+                    "assetRole": {
+                      "enum": [
+                        "brand.icon",
+                        "brand.leaf-art",
+                        "brand.logo",
+                        "editorial.hero-image",
+                        "editorial.stock-photo",
+                        "person.likeness",
+                        "product.badge",
+                        "product.screenshot",
+                        "site.favicon",
+                        "third-party.platform-logo",
+                        "third-party.review-mark",
+                        "third-party.trademark",
+                        "typeface.webfont"
+                      ]
+                    },
+                    "src": {
+                      "type": "string"
+                    },
+                    "alt": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "section",
+              "required",
+              "repeatable",
+              "motion"
+            ],
+            "properties": {
+              "section": {
+                "const": "content.message-grid"
+              },
+              "required": {
+                "type": "boolean"
+              },
+              "repeatable": {
+                "type": "boolean"
+              },
+              "variant": {
+                "type": "string"
+              },
+              "note": {
+                "type": "string"
+              },
+              "content": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "messages": {}
+                },
+                "description": "Closed to this section's real content fields. Per-field maxWords budgets live in sections/content.message-grid.json and are enforced per instance by schema/semantic_validate.py, which JSON Schema cannot express."
+              },
+              "motion": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "pattern",
+                  "reducedMotionFallback"
+                ],
+                "properties": {
+                  "pattern": {
+                    "const": "none"
+                  },
+                  "trigger": {},
+                  "durationMs": {},
+                  "easing": {},
+                  "delayMs": {
+                    "const": 0
+                  },
+                  "staggerMs": {
+                    "const": 0
+                  },
+                  "leafSet": {},
+                  "leafCount": {},
+                  "scrollProgressRange": {},
+                  "reducedMotionFallback": {
+                    "const": "none-required-static"
+                  },
+                  "implementationStatus": {}
+                },
+                "description": "CLOSED to the 11 fields in this section's motionFieldSet. Contract-level documentation keys (motionDocumentationFields) are NOT settable here."
+              },
+              "assetRefs": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "assetRole"
+                  ],
+                  "properties": {
+                    "assetRole": {
+                      "enum": [
+                        "brand.icon",
+                        "brand.leaf-art",
+                        "brand.logo",
+                        "editorial.hero-image",
+                        "editorial.stock-photo",
+                        "person.likeness",
+                        "product.badge",
+                        "product.screenshot",
+                        "site.favicon",
+                        "third-party.platform-logo",
+                        "third-party.review-mark",
+                        "third-party.trademark",
+                        "typeface.webfont"
+                      ]
+                    },
+                    "src": {
+                      "type": "string"
+                    },
+                    "alt": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "section",
+              "required",
+              "repeatable",
+              "motion"
+            ],
+            "properties": {
+              "section": {
+                "const": "content.prose-left"
+              },
+              "required": {
+                "type": "boolean"
+              },
+              "repeatable": {
+                "type": "boolean"
+              },
+              "variant": {
+                "type": "string"
+              },
+              "note": {
+                "type": "string"
+              },
+              "content": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "paragraphs": {},
+                  "paragraph": {}
+                },
+                "description": "Closed to this section's real content fields. Per-field maxWords budgets live in sections/content.prose-left.json and are enforced per instance by schema/semantic_validate.py, which JSON Schema cannot express."
+              },
+              "motion": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "pattern",
+                  "reducedMotionFallback"
+                ],
+                "properties": {
+                  "pattern": {
+                    "const": "none"
+                  },
+                  "trigger": {},
+                  "durationMs": {},
+                  "easing": {},
+                  "delayMs": {
+                    "const": 0
+                  },
+                  "staggerMs": {
+                    "const": 0
+                  },
+                  "leafSet": {},
+                  "leafCount": {},
+                  "scrollProgressRange": {},
+                  "reducedMotionFallback": {
+                    "const": "none-required-static"
+                  },
+                  "implementationStatus": {}
+                },
+                "description": "CLOSED to the 11 fields in this section's motionFieldSet. Contract-level documentation keys (motionDocumentationFields) are NOT settable here."
+              },
+              "assetRefs": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "assetRole"
+                  ],
+                  "properties": {
+                    "assetRole": {
+                      "enum": [
+                        "brand.icon",
+                        "brand.leaf-art",
+                        "brand.logo",
+                        "editorial.hero-image",
+                        "editorial.stock-photo",
+                        "person.likeness",
+                        "product.badge",
+                        "product.screenshot",
+                        "site.favicon",
+                        "third-party.platform-logo",
+                        "third-party.review-mark",
+                        "third-party.trademark",
+                        "typeface.webfont"
+                      ]
+                    },
+                    "src": {
+                      "type": "string"
+                    },
+                    "alt": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "section",
+              "required",
+              "repeatable",
+              "motion"
+            ],
+            "properties": {
+              "section": {
+                "const": "content.reading-list"
+              },
+              "required": {
+                "type": "boolean"
+              },
+              "repeatable": {
+                "type": "boolean"
+              },
+              "variant": {
+                "type": "string"
+              },
+              "note": {
+                "type": "string"
+              },
+              "content": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "groups": {},
+                  "h3": {}
+                },
+                "description": "Closed to this section's real content fields. Per-field maxWords budgets live in sections/content.reading-list.json and are enforced per instance by schema/semantic_validate.py, which JSON Schema cannot express."
+              },
+              "motion": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "pattern",
+                  "reducedMotionFallback"
+                ],
+                "properties": {
+                  "pattern": {
+                    "const": "none"
+                  },
+                  "trigger": {},
+                  "durationMs": {},
+                  "easing": {},
+                  "delayMs": {
+                    "const": 0
+                  },
+                  "staggerMs": {
+                    "const": 0
+                  },
+                  "leafSet": {},
+                  "leafCount": {},
+                  "scrollProgressRange": {},
+                  "reducedMotionFallback": {
+                    "const": "none-required-static"
+                  },
+                  "implementationStatus": {}
+                },
+                "description": "CLOSED to the 11 fields in this section's motionFieldSet. Contract-level documentation keys (motionDocumentationFields) are NOT settable here."
+              },
+              "assetRefs": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "assetRole"
+                  ],
+                  "properties": {
+                    "assetRole": {
+                      "enum": [
+                        "brand.icon",
+                        "brand.leaf-art",
+                        "brand.logo",
+                        "editorial.hero-image",
+                        "editorial.stock-photo",
+                        "person.likeness",
+                        "product.badge",
+                        "product.screenshot",
+                        "site.favicon",
+                        "third-party.platform-logo",
+                        "third-party.review-mark",
+                        "third-party.trademark",
+                        "typeface.webfont"
+                      ]
+                    },
+                    "src": {
+                      "type": "string"
+                    },
+                    "alt": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "section",
+              "required",
+              "repeatable",
+              "motion"
+            ],
+            "properties": {
+              "section": {
+                "const": "content.rich-text"
+              },
+              "required": {
+                "type": "boolean"
+              },
+              "repeatable": {
+                "type": "boolean"
+              },
+              "variant": {
+                "type": "string"
+              },
+              "note": {
+                "type": "string"
+              },
+              "content": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "shape": {},
+                  "groupedSections": {},
+                  "flatNodes": {},
+                  "heading": {},
+                  "paragraph": {}
+                },
+                "description": "Closed to this section's real content fields. Per-field maxWords budgets live in sections/content.rich-text.json and are enforced per instance by schema/semantic_validate.py, which JSON Schema cannot express."
+              },
+              "motion": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "pattern",
+                  "reducedMotionFallback"
+                ],
+                "properties": {
+                  "pattern": {
+                    "const": "none"
+                  },
+                  "trigger": {},
+                  "durationMs": {},
+                  "easing": {},
+                  "delayMs": {
+                    "const": 0
+                  },
+                  "staggerMs": {
+                    "const": 0
+                  },
+                  "leafSet": {},
+                  "leafCount": {},
+                  "scrollProgressRange": {},
+                  "reducedMotionFallback": {
+                    "const": "none-required-static"
+                  },
+                  "implementationStatus": {}
+                },
+                "description": "CLOSED to the 11 fields in this section's motionFieldSet. Contract-level documentation keys (motionDocumentationFields) are NOT settable here."
+              },
+              "assetRefs": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "assetRole"
+                  ],
+                  "properties": {
+                    "assetRole": {
+                      "enum": [
+                        "brand.icon",
+                        "brand.leaf-art",
+                        "brand.logo",
+                        "editorial.hero-image",
+                        "editorial.stock-photo",
+                        "person.likeness",
+                        "product.badge",
+                        "product.screenshot",
+                        "site.favicon",
+                        "third-party.platform-logo",
+                        "third-party.review-mark",
+                        "third-party.trademark",
+                        "typeface.webfont"
+                      ]
+                    },
+                    "src": {
+                      "type": "string"
+                    },
+                    "alt": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "section",
+              "required",
+              "repeatable",
+              "motion"
+            ],
+            "properties": {
+              "section": {
+                "const": "content.section-heading"
+              },
+              "required": {
+                "type": "boolean"
+              },
+              "repeatable": {
+                "type": "boolean"
+              },
+              "variant": {
+                "type": "string"
+              },
+              "note": {
+                "type": "string"
+              },
+              "content": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "heading": {}
+                },
+                "description": "Closed to this section's real content fields. Per-field maxWords budgets live in sections/content.section-heading.json and are enforced per instance by schema/semantic_validate.py, which JSON Schema cannot express."
+              },
+              "motion": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "pattern",
+                  "reducedMotionFallback"
+                ],
+                "properties": {
+                  "pattern": {
+                    "const": "none"
+                  },
+                  "trigger": {},
+                  "durationMs": {},
+                  "easing": {},
+                  "delayMs": {
+                    "const": 0
+                  },
+                  "staggerMs": {
+                    "const": 0
+                  },
+                  "leafSet": {},
+                  "leafCount": {},
+                  "scrollProgressRange": {},
+                  "reducedMotionFallback": {
+                    "const": "none-required-static"
+                  },
+                  "implementationStatus": {}
+                },
+                "description": "CLOSED to the 11 fields in this section's motionFieldSet. Contract-level documentation keys (motionDocumentationFields) are NOT settable here."
+              },
+              "assetRefs": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "assetRole"
+                  ],
+                  "properties": {
+                    "assetRole": {
+                      "enum": [
+                        "brand.icon",
+                        "brand.leaf-art",
+                        "brand.logo",
+                        "editorial.hero-image",
+                        "editorial.stock-photo",
+                        "person.likeness",
+                        "product.badge",
+                        "product.screenshot",
+                        "site.favicon",
+                        "third-party.platform-logo",
+                        "third-party.review-mark",
+                        "third-party.trademark",
+                        "typeface.webfont"
+                      ]
+                    },
+                    "src": {
+                      "type": "string"
+                    },
+                    "alt": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "section",
+              "required",
+              "repeatable",
+              "motion"
+            ],
+            "properties": {
+              "section": {
+                "const": "content.sources"
+              },
+              "required": {
+                "type": "boolean"
+              },
+              "repeatable": {
+                "type": "boolean"
+              },
+              "variant": {
+                "type": "string"
+              },
+              "note": {
+                "type": "string"
+              },
+              "content": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "sources": {},
+                  "label": {},
+                  "note": {}
+                },
+                "description": "Closed to this section's real content fields. Per-field maxWords budgets live in sections/content.sources.json and are enforced per instance by schema/semantic_validate.py, which JSON Schema cannot express."
+              },
+              "motion": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "pattern",
+                  "reducedMotionFallback"
+                ],
+                "properties": {
+                  "pattern": {
+                    "const": "none"
+                  },
+                  "trigger": {},
+                  "durationMs": {},
+                  "easing": {},
+                  "delayMs": {
+                    "const": 0
+                  },
+                  "staggerMs": {
+                    "const": 0
+                  },
+                  "leafSet": {},
+                  "leafCount": {},
+                  "scrollProgressRange": {},
+                  "reducedMotionFallback": {
+                    "const": "none-required-static"
+                  },
+                  "implementationStatus": {}
+                },
+                "description": "CLOSED to the 11 fields in this section's motionFieldSet. Contract-level documentation keys (motionDocumentationFields) are NOT settable here."
+              },
+              "assetRefs": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "assetRole"
+                  ],
+                  "properties": {
+                    "assetRole": {
+                      "enum": [
+                        "brand.icon",
+                        "brand.leaf-art",
+                        "brand.logo",
+                        "editorial.hero-image",
+                        "editorial.stock-photo",
+                        "person.likeness",
+                        "product.badge",
+                        "product.screenshot",
+                        "site.favicon",
+                        "third-party.platform-logo",
+                        "third-party.review-mark",
+                        "third-party.trademark",
+                        "typeface.webfont"
+                      ]
+                    },
+                    "src": {
+                      "type": "string"
+                    },
+                    "alt": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "section",
+              "required",
+              "repeatable",
+              "motion"
+            ],
+            "properties": {
+              "section": {
+                "const": "conversion.arketta-cross-promo"
+              },
+              "required": {
+                "type": "boolean"
+              },
+              "repeatable": {
+                "type": "boolean"
+              },
+              "variant": {
+                "type": "string"
+              },
+              "note": {
+                "type": "string"
+              },
+              "content": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "heading": {},
+                  "bodyLines": {},
+                  "ctaLabel": {}
+                },
+                "description": "Closed to this section's real content fields. Per-field maxWords budgets live in sections/conversion.arketta-cross-promo.json and are enforced per instance by schema/semantic_validate.py, which JSON Schema cannot express."
+              },
+              "motion": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "pattern",
+                  "reducedMotionFallback"
+                ],
+                "properties": {
+                  "pattern": {
+                    "const": "none"
+                  },
+                  "trigger": {},
+                  "durationMs": {},
+                  "easing": {},
+                  "delayMs": {
+                    "const": 0
+                  },
+                  "staggerMs": {
+                    "const": 0
+                  },
+                  "leafSet": {},
+                  "leafCount": {},
+                  "scrollProgressRange": {},
+                  "reducedMotionFallback": {
+                    "const": "none-required-static"
+                  },
+                  "implementationStatus": {}
+                },
+                "description": "CLOSED to the 11 fields in this section's motionFieldSet. Contract-level documentation keys (motionDocumentationFields) are NOT settable here."
+              },
+              "assetRefs": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "assetRole"
+                  ],
+                  "properties": {
+                    "assetRole": {
+                      "enum": [
+                        "brand.icon",
+                        "brand.leaf-art",
+                        "brand.logo",
+                        "editorial.hero-image",
+                        "editorial.stock-photo",
+                        "person.likeness",
+                        "product.badge",
+                        "product.screenshot",
+                        "site.favicon",
+                        "third-party.platform-logo",
+                        "third-party.review-mark",
+                        "third-party.trademark",
+                        "typeface.webfont"
+                      ]
+                    },
+                    "src": {
+                      "type": "string"
+                    },
+                    "alt": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "section",
+              "required",
+              "repeatable",
+              "motion"
+            ],
+            "properties": {
+              "section": {
+                "const": "conversion.lead-magnet-cta"
+              },
+              "required": {
+                "type": "boolean"
+              },
+              "repeatable": {
+                "type": "boolean"
+              },
+              "variant": {
+                "type": "string"
+              },
+              "note": {
+                "type": "string"
+              },
+              "content": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "heading": {},
+                  "paragraph": {}
+                },
+                "description": "Closed to this section's real content fields. Per-field maxWords budgets live in sections/conversion.lead-magnet-cta.json and are enforced per instance by schema/semantic_validate.py, which JSON Schema cannot express."
+              },
+              "motion": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "pattern",
+                  "reducedMotionFallback"
+                ],
+                "properties": {
+                  "pattern": {
+                    "const": "none"
+                  },
+                  "trigger": {},
+                  "durationMs": {},
+                  "easing": {},
+                  "delayMs": {
+                    "const": 0
+                  },
+                  "staggerMs": {
+                    "const": 0
+                  },
+                  "leafSet": {},
+                  "leafCount": {},
+                  "scrollProgressRange": {},
+                  "reducedMotionFallback": {
+                    "const": "none-required-static"
+                  },
+                  "implementationStatus": {}
+                },
+                "description": "CLOSED to the 11 fields in this section's motionFieldSet. Contract-level documentation keys (motionDocumentationFields) are NOT settable here."
+              },
+              "assetRefs": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "assetRole"
+                  ],
+                  "properties": {
+                    "assetRole": {
+                      "enum": [
+                        "brand.icon",
+                        "brand.leaf-art",
+                        "brand.logo",
+                        "editorial.hero-image",
+                        "editorial.stock-photo",
+                        "person.likeness",
+                        "product.badge",
+                        "product.screenshot",
+                        "site.favicon",
+                        "third-party.platform-logo",
+                        "third-party.review-mark",
+                        "third-party.trademark",
+                        "typeface.webfont"
+                      ]
+                    },
+                    "src": {
+                      "type": "string"
+                    },
+                    "alt": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "section",
+              "required",
+              "repeatable",
+              "motion"
+            ],
+            "properties": {
+              "section": {
+                "const": "conversion.reassurance-cta"
+              },
+              "required": {
+                "type": "boolean"
+              },
+              "repeatable": {
+                "type": "boolean"
+              },
+              "variant": {
+                "type": "string"
+              },
+              "note": {
+                "type": "string"
+              },
+              "content": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "columns": {},
+                  "heading": {},
+                  "paragraph": {},
+                  "smallPrint": {},
+                  "smallPrintSuffix": {}
+                },
+                "description": "Closed to this section's real content fields. Per-field maxWords budgets live in sections/conversion.reassurance-cta.json and are enforced per instance by schema/semantic_validate.py, which JSON Schema cannot express."
+              },
+              "motion": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "pattern",
+                  "reducedMotionFallback"
+                ],
+                "properties": {
+                  "pattern": {
+                    "const": "none"
+                  },
+                  "trigger": {},
+                  "durationMs": {},
+                  "easing": {},
+                  "delayMs": {
+                    "const": 0
+                  },
+                  "staggerMs": {
+                    "const": 0
+                  },
+                  "leafSet": {},
+                  "leafCount": {},
+                  "scrollProgressRange": {},
+                  "reducedMotionFallback": {
+                    "const": "none-required-static"
+                  },
+                  "implementationStatus": {}
+                },
+                "description": "CLOSED to the 11 fields in this section's motionFieldSet. Contract-level documentation keys (motionDocumentationFields) are NOT settable here."
+              },
+              "assetRefs": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "assetRole"
+                  ],
+                  "properties": {
+                    "assetRole": {
+                      "enum": [
+                        "brand.icon",
+                        "brand.leaf-art",
+                        "brand.logo",
+                        "editorial.hero-image",
+                        "editorial.stock-photo",
+                        "person.likeness",
+                        "product.badge",
+                        "product.screenshot",
+                        "site.favicon",
+                        "third-party.platform-logo",
+                        "third-party.review-mark",
+                        "third-party.trademark",
+                        "typeface.webfont"
+                      ]
+                    },
+                    "src": {
+                      "type": "string"
+                    },
+                    "alt": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "section",
+              "required",
+              "repeatable",
+              "motion"
+            ],
+            "properties": {
+              "section": {
+                "const": "divider.leaf-band"
+              },
+              "required": {
+                "type": "boolean"
+              },
+              "repeatable": {
+                "type": "boolean"
+              },
+              "variant": {
+                "type": "string"
+              },
+              "note": {
+                "type": "string"
+              },
+              "content": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "band": {}
+                },
+                "description": "Closed to this section's real content fields. Per-field maxWords budgets live in sections/divider.leaf-band.json and are enforced per instance by schema/semantic_validate.py, which JSON Schema cannot express."
+              },
+              "motion": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "pattern",
+                  "reducedMotionFallback"
+                ],
+                "properties": {
+                  "pattern": {
+                    "const": "leaf-drift"
+                  },
+                  "trigger": {},
+                  "durationMs": {},
+                  "easing": {},
+                  "delayMs": {
+                    "const": 0
+                  },
+                  "staggerMs": {
+                    "const": 0
+                  },
+                  "leafSet": {},
+                  "leafCount": {},
+                  "scrollProgressRange": {},
+                  "reducedMotionFallback": {
+                    "const": "leaves-held-at-rotate-only-transform"
+                  },
+                  "implementationStatus": {}
+                },
+                "description": "CLOSED to the 11 fields in this section's motionFieldSet. Contract-level documentation keys (motionDocumentationFields) are NOT settable here."
+              },
+              "assetRefs": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "assetRole"
+                  ],
+                  "properties": {
+                    "assetRole": {
+                      "enum": [
+                        "brand.icon",
+                        "brand.leaf-art",
+                        "brand.logo",
+                        "editorial.hero-image",
+                        "editorial.stock-photo",
+                        "person.likeness",
+                        "product.badge",
+                        "product.screenshot",
+                        "site.favicon",
+                        "third-party.platform-logo",
+                        "third-party.review-mark",
+                        "third-party.trademark",
+                        "typeface.webfont"
+                      ]
+                    },
+                    "src": {
+                      "type": "string"
+                    },
+                    "alt": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "section",
+              "required",
+              "repeatable",
+              "motion"
+            ],
+            "properties": {
+              "section": {
+                "const": "feature.report-csr"
+              },
+              "required": {
+                "type": "boolean"
+              },
+              "repeatable": {
+                "type": "boolean"
+              },
+              "variant": {
+                "type": "string"
+              },
+              "note": {
+                "type": "string"
+              },
+              "content": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "row1Heading": {},
+                  "row1Bullets": {},
+                  "row2Heading": {},
+                  "row2Paragraph": {}
+                },
+                "description": "Closed to this section's real content fields. Per-field maxWords budgets live in sections/feature.report-csr.json and are enforced per instance by schema/semantic_validate.py, which JSON Schema cannot express."
+              },
+              "motion": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "pattern",
+                  "reducedMotionFallback"
+                ],
+                "properties": {
+                  "pattern": {
+                    "const": "leaf-drift"
+                  },
+                  "trigger": {},
+                  "durationMs": {},
+                  "easing": {},
+                  "delayMs": {
+                    "const": 0
+                  },
+                  "staggerMs": {
+                    "const": 0
+                  },
+                  "leafSet": {},
+                  "leafCount": {},
+                  "scrollProgressRange": {},
+                  "reducedMotionFallback": {
+                    "const": "leaves-held-at-rotate-only-transform"
+                  },
+                  "implementationStatus": {}
+                },
+                "description": "CLOSED to the 11 fields in this section's motionFieldSet. Contract-level documentation keys (motionDocumentationFields) are NOT settable here."
+              },
+              "assetRefs": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "assetRole"
+                  ],
+                  "properties": {
+                    "assetRole": {
+                      "enum": [
+                        "brand.icon",
+                        "brand.leaf-art",
+                        "brand.logo",
+                        "editorial.hero-image",
+                        "editorial.stock-photo",
+                        "person.likeness",
+                        "product.badge",
+                        "product.screenshot",
+                        "site.favicon",
+                        "third-party.platform-logo",
+                        "third-party.review-mark",
+                        "third-party.trademark",
+                        "typeface.webfont"
+                      ]
+                    },
+                    "src": {
+                      "type": "string"
+                    },
+                    "alt": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "section",
+              "required",
+              "repeatable",
+              "motion"
+            ],
+            "properties": {
+              "section": {
+                "const": "feature.seeds"
+              },
+              "required": {
+                "type": "boolean"
+              },
+              "repeatable": {
+                "type": "boolean"
+              },
+              "variant": {
+                "type": "string"
+              },
+              "note": {
+                "type": "string"
+              },
+              "content": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "heading": {},
+                  "bullets": {},
+                  "statFigure": {},
+                  "statCaption": {},
+                  "valueBadge": {},
+                  "seedLine": {}
+                },
+                "description": "Closed to this section's real content fields. Per-field maxWords budgets live in sections/feature.seeds.json and are enforced per instance by schema/semantic_validate.py, which JSON Schema cannot express."
+              },
+              "motion": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "pattern",
+                  "reducedMotionFallback"
+                ],
+                "properties": {
+                  "pattern": {
+                    "const": "leaf-drift"
+                  },
+                  "trigger": {},
+                  "durationMs": {},
+                  "easing": {},
+                  "delayMs": {
+                    "const": 0
+                  },
+                  "staggerMs": {
+                    "const": 0
+                  },
+                  "leafSet": {},
+                  "leafCount": {},
+                  "scrollProgressRange": {},
+                  "reducedMotionFallback": {
+                    "const": "leaves-held-at-rotate-only-transform"
+                  },
+                  "implementationStatus": {}
+                },
+                "description": "CLOSED to the 11 fields in this section's motionFieldSet. Contract-level documentation keys (motionDocumentationFields) are NOT settable here."
+              },
+              "assetRefs": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "assetRole"
+                  ],
+                  "properties": {
+                    "assetRole": {
+                      "enum": [
+                        "brand.icon",
+                        "brand.leaf-art",
+                        "brand.logo",
+                        "editorial.hero-image",
+                        "editorial.stock-photo",
+                        "person.likeness",
+                        "product.badge",
+                        "product.screenshot",
+                        "site.favicon",
+                        "third-party.platform-logo",
+                        "third-party.review-mark",
+                        "third-party.trademark",
+                        "typeface.webfont"
+                      ]
+                    },
+                    "src": {
+                      "type": "string"
+                    },
+                    "alt": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "section",
+              "required",
+              "repeatable",
+              "motion"
+            ],
+            "properties": {
+              "section": {
+                "const": "feature.split-visual"
+              },
+              "required": {
+                "type": "boolean"
+              },
+              "repeatable": {
+                "type": "boolean"
+              },
+              "variant": {
+                "type": "string"
+              },
+              "note": {
+                "type": "string"
+              },
+              "content": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "tickLabel": {},
+                  "heading": {},
+                  "paragraph": {},
+                  "stats": {}
+                },
+                "description": "Closed to this section's real content fields. Per-field maxWords budgets live in sections/feature.split-visual.json and are enforced per instance by schema/semantic_validate.py, which JSON Schema cannot express."
+              },
+              "motion": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "pattern",
+                  "reducedMotionFallback"
+                ],
+                "properties": {
+                  "pattern": {
+                    "const": "leaf-drift"
+                  },
+                  "trigger": {},
+                  "durationMs": {},
+                  "easing": {},
+                  "delayMs": {
+                    "const": 0
+                  },
+                  "staggerMs": {
+                    "const": 0
+                  },
+                  "leafSet": {},
+                  "leafCount": {},
+                  "scrollProgressRange": {},
+                  "reducedMotionFallback": {
+                    "const": "leaves-held-at-rotate-only-transform"
+                  },
+                  "implementationStatus": {}
+                },
+                "description": "CLOSED to the 11 fields in this section's motionFieldSet. Contract-level documentation keys (motionDocumentationFields) are NOT settable here."
+              },
+              "assetRefs": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "assetRole"
+                  ],
+                  "properties": {
+                    "assetRole": {
+                      "enum": [
+                        "brand.icon",
+                        "brand.leaf-art",
+                        "brand.logo",
+                        "editorial.hero-image",
+                        "editorial.stock-photo",
+                        "person.likeness",
+                        "product.badge",
+                        "product.screenshot",
+                        "site.favicon",
+                        "third-party.platform-logo",
+                        "third-party.review-mark",
+                        "third-party.trademark",
+                        "typeface.webfont"
+                      ]
+                    },
+                    "src": {
+                      "type": "string"
+                    },
+                    "alt": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "section",
+              "required",
+              "repeatable",
+              "motion"
+            ],
+            "properties": {
+              "section": {
+                "const": "form.contact-card"
+              },
+              "required": {
+                "type": "boolean"
+              },
+              "repeatable": {
+                "type": "boolean"
+              },
+              "variant": {
+                "type": "string"
+              },
+              "note": {
+                "type": "string"
+              },
+              "content": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "introParagraph": {}
+                },
+                "description": "Closed to this section's real content fields. Per-field maxWords budgets live in sections/form.contact-card.json and are enforced per instance by schema/semantic_validate.py, which JSON Schema cannot express."
+              },
+              "motion": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "pattern",
+                  "reducedMotionFallback"
+                ],
+                "properties": {
+                  "pattern": {
+                    "const": "leaf-drift"
+                  },
+                  "trigger": {},
+                  "durationMs": {},
+                  "easing": {},
+                  "delayMs": {
+                    "const": 0
+                  },
+                  "staggerMs": {
+                    "const": 0
+                  },
+                  "leafSet": {},
+                  "leafCount": {},
+                  "scrollProgressRange": {},
+                  "reducedMotionFallback": {
+                    "const": "leaves-held-at-rotate-only-transform"
+                  },
+                  "implementationStatus": {}
+                },
+                "description": "CLOSED to the 11 fields in this section's motionFieldSet. Contract-level documentation keys (motionDocumentationFields) are NOT settable here."
+              },
+              "assetRefs": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "assetRole"
+                  ],
+                  "properties": {
+                    "assetRole": {
+                      "enum": [
+                        "brand.icon",
+                        "brand.leaf-art",
+                        "brand.logo",
+                        "editorial.hero-image",
+                        "editorial.stock-photo",
+                        "person.likeness",
+                        "product.badge",
+                        "product.screenshot",
+                        "site.favicon",
+                        "third-party.platform-logo",
+                        "third-party.review-mark",
+                        "third-party.trademark",
+                        "typeface.webfont"
+                      ]
+                    },
+                    "src": {
+                      "type": "string"
+                    },
+                    "alt": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "section",
+              "required",
+              "repeatable",
+              "motion"
+            ],
+            "properties": {
+              "section": {
+                "const": "form.lead-magnet-card"
+              },
+              "required": {
+                "type": "boolean"
+              },
+              "repeatable": {
+                "type": "boolean"
+              },
+              "variant": {
+                "type": "string"
+              },
+              "note": {
+                "type": "string"
+              },
+              "content": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {},
+                "description": "This section takes no generator-settable content."
+              },
+              "motion": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "pattern",
+                  "reducedMotionFallback"
+                ],
+                "properties": {
+                  "pattern": {
+                    "const": "leaf-drift"
+                  },
+                  "trigger": {},
+                  "durationMs": {},
+                  "easing": {},
+                  "delayMs": {
+                    "const": 0
+                  },
+                  "staggerMs": {
+                    "const": 0
+                  },
+                  "leafSet": {},
+                  "leafCount": {},
+                  "scrollProgressRange": {},
+                  "reducedMotionFallback": {
+                    "const": "leaves-held-at-rotate-only-transform"
+                  },
+                  "implementationStatus": {}
+                },
+                "description": "CLOSED to the 11 fields in this section's motionFieldSet. Contract-level documentation keys (motionDocumentationFields) are NOT settable here."
+              },
+              "assetRefs": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "assetRole"
+                  ],
+                  "properties": {
+                    "assetRole": {
+                      "enum": [
+                        "brand.icon",
+                        "brand.leaf-art",
+                        "brand.logo",
+                        "editorial.hero-image",
+                        "editorial.stock-photo",
+                        "person.likeness",
+                        "product.badge",
+                        "product.screenshot",
+                        "site.favicon",
+                        "third-party.platform-logo",
+                        "third-party.review-mark",
+                        "third-party.trademark",
+                        "typeface.webfont"
+                      ]
+                    },
+                    "src": {
+                      "type": "string"
+                    },
+                    "alt": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "section",
+              "required",
+              "repeatable",
+              "motion"
+            ],
+            "properties": {
+              "section": {
+                "const": "form.referral-card"
+              },
+              "required": {
+                "type": "boolean"
+              },
+              "repeatable": {
+                "type": "boolean"
+              },
+              "variant": {
+                "type": "string"
+              },
+              "note": {
+                "type": "string"
+              },
+              "content": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "introParagraph": {},
+                  "footnote": {}
+                },
+                "description": "Closed to this section's real content fields. Per-field maxWords budgets live in sections/form.referral-card.json and are enforced per instance by schema/semantic_validate.py, which JSON Schema cannot express."
+              },
+              "motion": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "pattern",
+                  "reducedMotionFallback"
+                ],
+                "properties": {
+                  "pattern": {
+                    "const": "leaf-drift"
+                  },
+                  "trigger": {},
+                  "durationMs": {},
+                  "easing": {},
+                  "delayMs": {
+                    "const": 0
+                  },
+                  "staggerMs": {
+                    "const": 0
+                  },
+                  "leafSet": {},
+                  "leafCount": {},
+                  "scrollProgressRange": {},
+                  "reducedMotionFallback": {
+                    "const": "leaves-held-at-rotate-only-transform"
+                  },
+                  "implementationStatus": {}
+                },
+                "description": "CLOSED to the 11 fields in this section's motionFieldSet. Contract-level documentation keys (motionDocumentationFields) are NOT settable here."
+              },
+              "assetRefs": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "assetRole"
+                  ],
+                  "properties": {
+                    "assetRole": {
+                      "enum": [
+                        "brand.icon",
+                        "brand.leaf-art",
+                        "brand.logo",
+                        "editorial.hero-image",
+                        "editorial.stock-photo",
+                        "person.likeness",
+                        "product.badge",
+                        "product.screenshot",
+                        "site.favicon",
+                        "third-party.platform-logo",
+                        "third-party.review-mark",
+                        "third-party.trademark",
+                        "typeface.webfont"
+                      ]
+                    },
+                    "src": {
+                      "type": "string"
+                    },
+                    "alt": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "section",
+              "required",
+              "repeatable",
+              "motion"
+            ],
+            "properties": {
+              "section": {
+                "const": "form.scheduler-card"
+              },
+              "required": {
+                "type": "boolean"
+              },
+              "repeatable": {
+                "type": "boolean"
+              },
+              "variant": {
+                "type": "string"
+              },
+              "note": {
+                "type": "string"
+              },
+              "content": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "introParagraph": {}
+                },
+                "description": "Closed to this section's real content fields. Per-field maxWords budgets live in sections/form.scheduler-card.json and are enforced per instance by schema/semantic_validate.py, which JSON Schema cannot express."
+              },
+              "motion": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "pattern",
+                  "reducedMotionFallback"
+                ],
+                "properties": {
+                  "pattern": {
+                    "const": "leaf-drift"
+                  },
+                  "trigger": {},
+                  "durationMs": {},
+                  "easing": {},
+                  "delayMs": {
+                    "const": 0
+                  },
+                  "staggerMs": {
+                    "const": 0
+                  },
+                  "leafSet": {},
+                  "leafCount": {},
+                  "scrollProgressRange": {},
+                  "reducedMotionFallback": {
+                    "const": "leaves-held-at-rotate-only-transform"
+                  },
+                  "implementationStatus": {}
+                },
+                "description": "CLOSED to the 11 fields in this section's motionFieldSet. Contract-level documentation keys (motionDocumentationFields) are NOT settable here."
+              },
+              "assetRefs": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "assetRole"
+                  ],
+                  "properties": {
+                    "assetRole": {
+                      "enum": [
+                        "brand.icon",
+                        "brand.leaf-art",
+                        "brand.logo",
+                        "editorial.hero-image",
+                        "editorial.stock-photo",
+                        "person.likeness",
+                        "product.badge",
+                        "product.screenshot",
+                        "site.favicon",
+                        "third-party.platform-logo",
+                        "third-party.review-mark",
+                        "third-party.trademark",
+                        "typeface.webfont"
+                      ]
+                    },
+                    "src": {
+                      "type": "string"
+                    },
+                    "alt": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "section",
+              "required",
+              "repeatable",
+              "motion"
+            ],
+            "properties": {
+              "section": {
+                "const": "hero.centred-h1"
+              },
+              "required": {
+                "type": "boolean"
+              },
+              "repeatable": {
+                "type": "boolean"
+              },
+              "variant": {
+                "type": "string"
+              },
+              "note": {
+                "type": "string"
+              },
+              "content": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "h1": {},
+                  "intro": {}
+                },
+                "description": "Closed to this section's real content fields. Per-field maxWords budgets live in sections/hero.centred-h1.json and are enforced per instance by schema/semantic_validate.py, which JSON Schema cannot express."
+              },
+              "motion": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "pattern",
+                  "reducedMotionFallback"
+                ],
+                "properties": {
+                  "pattern": {
+                    "const": "none"
+                  },
+                  "trigger": {},
+                  "durationMs": {},
+                  "easing": {},
+                  "delayMs": {
+                    "const": 0
+                  },
+                  "staggerMs": {
+                    "const": 0
+                  },
+                  "leafSet": {},
+                  "leafCount": {},
+                  "scrollProgressRange": {},
+                  "reducedMotionFallback": {
+                    "const": "none-required-static"
+                  },
+                  "implementationStatus": {}
+                },
+                "description": "CLOSED to the 11 fields in this section's motionFieldSet. Contract-level documentation keys (motionDocumentationFields) are NOT settable here."
+              },
+              "assetRefs": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "assetRole"
+                  ],
+                  "properties": {
+                    "assetRole": {
+                      "enum": [
+                        "brand.icon",
+                        "brand.leaf-art",
+                        "brand.logo",
+                        "editorial.hero-image",
+                        "editorial.stock-photo",
+                        "person.likeness",
+                        "product.badge",
+                        "product.screenshot",
+                        "site.favicon",
+                        "third-party.platform-logo",
+                        "third-party.review-mark",
+                        "third-party.trademark",
+                        "typeface.webfont"
+                      ]
+                    },
+                    "src": {
+                      "type": "string"
+                    },
+                    "alt": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "section",
+              "required",
+              "repeatable",
+              "motion"
+            ],
+            "properties": {
+              "section": {
+                "const": "hero.ebook-lede"
+              },
+              "required": {
+                "type": "boolean"
+              },
+              "repeatable": {
+                "type": "boolean"
+              },
+              "variant": {
+                "type": "string"
+              },
+              "note": {
+                "type": "string"
+              },
+              "content": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "h1": {},
+                  "ledeIntro": {},
+                  "callToAction": {},
+                  "bullets": {},
+                  "closing": {}
+                },
+                "description": "Closed to this section's real content fields. Per-field maxWords budgets live in sections/hero.ebook-lede.json and are enforced per instance by schema/semantic_validate.py, which JSON Schema cannot express."
+              },
+              "motion": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "pattern",
+                  "reducedMotionFallback"
+                ],
+                "properties": {
+                  "pattern": {
+                    "const": "none"
+                  },
+                  "trigger": {},
+                  "durationMs": {},
+                  "easing": {},
+                  "delayMs": {
+                    "const": 0
+                  },
+                  "staggerMs": {
+                    "const": 0
+                  },
+                  "leafSet": {},
+                  "leafCount": {},
+                  "scrollProgressRange": {},
+                  "reducedMotionFallback": {
+                    "const": "none-required-static"
+                  },
+                  "implementationStatus": {}
+                },
+                "description": "CLOSED to the 11 fields in this section's motionFieldSet. Contract-level documentation keys (motionDocumentationFields) are NOT settable here."
+              },
+              "assetRefs": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "assetRole"
+                  ],
+                  "properties": {
+                    "assetRole": {
+                      "enum": [
+                        "brand.icon",
+                        "brand.leaf-art",
+                        "brand.logo",
+                        "editorial.hero-image",
+                        "editorial.stock-photo",
+                        "person.likeness",
+                        "product.badge",
+                        "product.screenshot",
+                        "site.favicon",
+                        "third-party.platform-logo",
+                        "third-party.review-mark",
+                        "third-party.trademark",
+                        "typeface.webfont"
+                      ]
+                    },
+                    "src": {
+                      "type": "string"
+                    },
+                    "alt": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "section",
+              "required",
+              "repeatable",
+              "motion"
+            ],
+            "properties": {
+              "section": {
+                "const": "hero.esg-environmental"
+              },
+              "required": {
+                "type": "boolean"
+              },
+              "repeatable": {
+                "type": "boolean"
+              },
+              "variant": {
+                "type": "string"
+              },
+              "note": {
+                "type": "string"
+              },
+              "content": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "h1": {},
+                  "tickLabel": {},
+                  "displayHeading": {},
+                  "veritreeParagraph": {}
+                },
+                "description": "Closed to this section's real content fields. Per-field maxWords budgets live in sections/hero.esg-environmental.json and are enforced per instance by schema/semantic_validate.py, which JSON Schema cannot express."
+              },
+              "motion": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "pattern",
+                  "reducedMotionFallback"
+                ],
+                "properties": {
+                  "pattern": {
+                    "const": "none"
+                  },
+                  "trigger": {},
+                  "durationMs": {},
+                  "easing": {},
+                  "delayMs": {
+                    "const": 0
+                  },
+                  "staggerMs": {
+                    "const": 0
+                  },
+                  "leafSet": {},
+                  "leafCount": {},
+                  "scrollProgressRange": {},
+                  "reducedMotionFallback": {
+                    "const": "none-required-static"
+                  },
+                  "implementationStatus": {}
+                },
+                "description": "CLOSED to the 11 fields in this section's motionFieldSet. Contract-level documentation keys (motionDocumentationFields) are NOT settable here."
+              },
+              "assetRefs": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "assetRole"
+                  ],
+                  "properties": {
+                    "assetRole": {
+                      "enum": [
+                        "brand.icon",
+                        "brand.leaf-art",
+                        "brand.logo",
+                        "editorial.hero-image",
+                        "editorial.stock-photo",
+                        "person.likeness",
+                        "product.badge",
+                        "product.screenshot",
+                        "site.favicon",
+                        "third-party.platform-logo",
+                        "third-party.review-mark",
+                        "third-party.trademark",
+                        "typeface.webfont"
+                      ]
+                    },
+                    "src": {
+                      "type": "string"
+                    },
+                    "alt": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "section",
+              "required",
+              "repeatable",
+              "motion"
+            ],
+            "properties": {
+              "section": {
+                "const": "hero.home"
+              },
+              "required": {
+                "type": "boolean"
+              },
+              "repeatable": {
+                "type": "boolean"
+              },
+              "variant": {
+                "type": "string"
+              },
+              "note": {
+                "type": "string"
+              },
+              "content": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "h1": {},
+                  "lede": {},
+                  "treesHeading": {},
+                  "usersHeading": {},
+                  "displayHeading": {},
+                  "eyebrow": {}
+                },
+                "description": "Closed to this section's real content fields. Per-field maxWords budgets live in sections/hero.home.json and are enforced per instance by schema/semantic_validate.py, which JSON Schema cannot express."
+              },
+              "motion": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "pattern",
+                  "reducedMotionFallback"
+                ],
+                "properties": {
+                  "pattern": {
+                    "const": "leaf-scroll-track"
+                  },
+                  "trigger": {},
+                  "durationMs": {},
+                  "easing": {},
+                  "delayMs": {
+                    "const": 0
+                  },
+                  "staggerMs": {
+                    "const": 0
+                  },
+                  "leafSet": {},
+                  "leafCount": {},
+                  "scrollProgressRange": {},
+                  "reducedMotionFallback": {
+                    "const": "recognition lines forced to scaleX(1); hearts forced to opacity 1; leaves held at rotate-only transform"
+                  },
+                  "implementationStatus": {}
+                },
+                "description": "CLOSED to the 11 fields in this section's motionFieldSet. Contract-level documentation keys (motionDocumentationFields) are NOT settable here."
+              },
+              "assetRefs": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "assetRole"
+                  ],
+                  "properties": {
+                    "assetRole": {
+                      "enum": [
+                        "brand.icon",
+                        "brand.leaf-art",
+                        "brand.logo",
+                        "editorial.hero-image",
+                        "editorial.stock-photo",
+                        "person.likeness",
+                        "product.badge",
+                        "product.screenshot",
+                        "site.favicon",
+                        "third-party.platform-logo",
+                        "third-party.review-mark",
+                        "third-party.trademark",
+                        "typeface.webfont"
+                      ]
+                    },
+                    "src": {
+                      "type": "string"
+                    },
+                    "alt": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "section",
+              "required",
+              "repeatable",
+              "motion"
+            ],
+            "properties": {
+              "section": {
+                "const": "hero.legal-head"
+              },
+              "required": {
+                "type": "boolean"
+              },
+              "repeatable": {
+                "type": "boolean"
+              },
+              "variant": {
+                "type": "string"
+              },
+              "note": {
+                "type": "string"
+              },
+              "content": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "h1": {},
+                  "lastUpdated": {}
+                },
+                "description": "Closed to this section's real content fields. Per-field maxWords budgets live in sections/hero.legal-head.json and are enforced per instance by schema/semantic_validate.py, which JSON Schema cannot express."
+              },
+              "motion": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "pattern",
+                  "reducedMotionFallback"
+                ],
+                "properties": {
+                  "pattern": {
+                    "const": "none"
+                  },
+                  "trigger": {},
+                  "durationMs": {},
+                  "easing": {},
+                  "delayMs": {
+                    "const": 0
+                  },
+                  "staggerMs": {
+                    "const": 0
+                  },
+                  "leafSet": {},
+                  "leafCount": {},
+                  "scrollProgressRange": {},
+                  "reducedMotionFallback": {
+                    "const": "none-required-static"
+                  },
+                  "implementationStatus": {}
+                },
+                "description": "CLOSED to the 11 fields in this section's motionFieldSet. Contract-level documentation keys (motionDocumentationFields) are NOT settable here."
+              },
+              "assetRefs": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "assetRole"
+                  ],
+                  "properties": {
+                    "assetRole": {
+                      "enum": [
+                        "brand.icon",
+                        "brand.leaf-art",
+                        "brand.logo",
+                        "editorial.hero-image",
+                        "editorial.stock-photo",
+                        "person.likeness",
+                        "product.badge",
+                        "product.screenshot",
+                        "site.favicon",
+                        "third-party.platform-logo",
+                        "third-party.review-mark",
+                        "third-party.trademark",
+                        "typeface.webfont"
+                      ]
+                    },
+                    "src": {
+                      "type": "string"
+                    },
+                    "alt": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "section",
+              "required",
+              "repeatable",
+              "motion"
+            ],
+            "properties": {
+              "section": {
+                "const": "hero.page-head"
+              },
+              "required": {
+                "type": "boolean"
+              },
+              "repeatable": {
+                "type": "boolean"
+              },
+              "variant": {
+                "type": "string"
+              },
+              "note": {
+                "type": "string"
+              },
+              "content": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "badgeLabel": {},
+                  "h1": {},
+                  "lede": {}
+                },
+                "description": "Closed to this section's real content fields. Per-field maxWords budgets live in sections/hero.page-head.json and are enforced per instance by schema/semantic_validate.py, which JSON Schema cannot express."
+              },
+              "motion": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "pattern",
+                  "reducedMotionFallback"
+                ],
+                "properties": {
+                  "pattern": {
+                    "const": "none"
+                  },
+                  "trigger": {},
+                  "durationMs": {},
+                  "easing": {},
+                  "delayMs": {
+                    "const": 0
+                  },
+                  "staggerMs": {
+                    "const": 0
+                  },
+                  "leafSet": {},
+                  "leafCount": {},
+                  "scrollProgressRange": {},
+                  "reducedMotionFallback": {
+                    "const": "none-required-static"
+                  },
+                  "implementationStatus": {}
+                },
+                "description": "CLOSED to the 11 fields in this section's motionFieldSet. Contract-level documentation keys (motionDocumentationFields) are NOT settable here."
+              },
+              "assetRefs": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "assetRole"
+                  ],
+                  "properties": {
+                    "assetRole": {
+                      "enum": [
+                        "brand.icon",
+                        "brand.leaf-art",
+                        "brand.logo",
+                        "editorial.hero-image",
+                        "editorial.stock-photo",
+                        "person.likeness",
+                        "product.badge",
+                        "product.screenshot",
+                        "site.favicon",
+                        "third-party.platform-logo",
+                        "third-party.review-mark",
+                        "third-party.trademark",
+                        "typeface.webfont"
+                      ]
+                    },
+                    "src": {
+                      "type": "string"
+                    },
+                    "alt": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "section",
+              "required",
+              "repeatable",
+              "motion"
+            ],
+            "properties": {
+              "section": {
+                "const": "hero.partner"
+              },
+              "required": {
+                "type": "boolean"
+              },
+              "repeatable": {
+                "type": "boolean"
+              },
+              "variant": {
+                "type": "string"
+              },
+              "note": {
+                "type": "string"
+              },
+              "content": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "partnerLogoAlt": {},
+                  "h1": {},
+                  "ledeOfferSuffix": {},
+                  "usersHeading": {},
+                  "displayHeading": {},
+                  "eyebrow": {}
+                },
+                "description": "Closed to this section's real content fields. Per-field maxWords budgets live in sections/hero.partner.json and are enforced per instance by schema/semantic_validate.py, which JSON Schema cannot express."
+              },
+              "motion": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "pattern",
+                  "reducedMotionFallback"
+                ],
+                "properties": {
+                  "pattern": {
+                    "const": "leaf-drift"
+                  },
+                  "trigger": {},
+                  "durationMs": {},
+                  "easing": {},
+                  "delayMs": {
+                    "const": 0
+                  },
+                  "staggerMs": {
+                    "const": 0
+                  },
+                  "leafSet": {},
+                  "leafCount": {},
+                  "scrollProgressRange": {},
+                  "reducedMotionFallback": {
+                    "const": "leaves-held-at-rotate-only-transform"
+                  },
+                  "implementationStatus": {}
+                },
+                "description": "CLOSED to the 11 fields in this section's motionFieldSet. Contract-level documentation keys (motionDocumentationFields) are NOT settable here."
+              },
+              "assetRefs": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "assetRole"
+                  ],
+                  "properties": {
+                    "assetRole": {
+                      "enum": [
+                        "brand.icon",
+                        "brand.leaf-art",
+                        "brand.logo",
+                        "editorial.hero-image",
+                        "editorial.stock-photo",
+                        "person.likeness",
+                        "product.badge",
+                        "product.screenshot",
+                        "site.favicon",
+                        "third-party.platform-logo",
+                        "third-party.review-mark",
+                        "third-party.trademark",
+                        "typeface.webfont"
+                      ]
+                    },
+                    "src": {
+                      "type": "string"
+                    },
+                    "alt": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "section",
+              "required",
+              "repeatable",
+              "motion"
+            ],
+            "properties": {
+              "section": {
+                "const": "hero.purpose"
+              },
+              "required": {
+                "type": "boolean"
+              },
+              "repeatable": {
+                "type": "boolean"
+              },
+              "variant": {
+                "type": "string"
+              },
+              "note": {
+                "type": "string"
+              },
+              "content": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "h1": {},
+                  "statement": {}
+                },
+                "description": "Closed to this section's real content fields. Per-field maxWords budgets live in sections/hero.purpose.json and are enforced per instance by schema/semantic_validate.py, which JSON Schema cannot express."
+              },
+              "motion": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "pattern",
+                  "reducedMotionFallback"
+                ],
+                "properties": {
+                  "pattern": {
+                    "const": "none"
+                  },
+                  "trigger": {},
+                  "durationMs": {},
+                  "easing": {},
+                  "delayMs": {
+                    "const": 0
+                  },
+                  "staggerMs": {
+                    "const": 0
+                  },
+                  "leafSet": {},
+                  "leafCount": {},
+                  "scrollProgressRange": {},
+                  "reducedMotionFallback": {
+                    "const": "none-required-static"
+                  },
+                  "implementationStatus": {}
+                },
+                "description": "CLOSED to the 11 fields in this section's motionFieldSet. Contract-level documentation keys (motionDocumentationFields) are NOT settable here."
+              },
+              "assetRefs": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "assetRole"
+                  ],
+                  "properties": {
+                    "assetRole": {
+                      "enum": [
+                        "brand.icon",
+                        "brand.leaf-art",
+                        "brand.logo",
+                        "editorial.hero-image",
+                        "editorial.stock-photo",
+                        "person.likeness",
+                        "product.badge",
+                        "product.screenshot",
+                        "site.favicon",
+                        "third-party.platform-logo",
+                        "third-party.review-mark",
+                        "third-party.trademark",
+                        "typeface.webfont"
+                      ]
+                    },
+                    "src": {
+                      "type": "string"
+                    },
+                    "alt": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "section",
+              "required",
+              "repeatable",
+              "motion"
+            ],
+            "properties": {
+              "section": {
+                "const": "listing.blog-rows"
+              },
+              "required": {
+                "type": "boolean"
+              },
+              "repeatable": {
+                "type": "boolean"
+              },
+              "variant": {
+                "type": "string"
+              },
+              "note": {
+                "type": "string"
+              },
+              "content": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "rows": {}
+                },
+                "description": "Closed to this section's real content fields. Per-field maxWords budgets live in sections/listing.blog-rows.json and are enforced per instance by schema/semantic_validate.py, which JSON Schema cannot express."
+              },
+              "motion": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "pattern",
+                  "reducedMotionFallback"
+                ],
+                "properties": {
+                  "pattern": {
+                    "const": "none"
+                  },
+                  "trigger": {},
+                  "durationMs": {},
+                  "easing": {},
+                  "delayMs": {
+                    "const": 0
+                  },
+                  "staggerMs": {
+                    "const": 0
+                  },
+                  "leafSet": {},
+                  "leafCount": {},
+                  "scrollProgressRange": {},
+                  "reducedMotionFallback": {
+                    "const": "leaves-held-at-rotate-only-transform"
+                  },
+                  "implementationStatus": {}
+                },
+                "description": "CLOSED to the 11 fields in this section's motionFieldSet. Contract-level documentation keys (motionDocumentationFields) are NOT settable here."
+              },
+              "assetRefs": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "assetRole"
+                  ],
+                  "properties": {
+                    "assetRole": {
+                      "enum": [
+                        "brand.icon",
+                        "brand.leaf-art",
+                        "brand.logo",
+                        "editorial.hero-image",
+                        "editorial.stock-photo",
+                        "person.likeness",
+                        "product.badge",
+                        "product.screenshot",
+                        "site.favicon",
+                        "third-party.platform-logo",
+                        "third-party.review-mark",
+                        "third-party.trademark",
+                        "typeface.webfont"
+                      ]
+                    },
+                    "src": {
+                      "type": "string"
+                    },
+                    "alt": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "section",
+              "required",
+              "repeatable",
+              "motion"
+            ],
+            "properties": {
+              "section": {
+                "const": "listing.case-study-grid"
+              },
+              "required": {
+                "type": "boolean"
+              },
+              "repeatable": {
+                "type": "boolean"
+              },
+              "variant": {
+                "type": "string"
+              },
+              "note": {
+                "type": "string"
+              },
+              "content": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "cards": {}
+                },
+                "description": "Closed to this section's real content fields. Per-field maxWords budgets live in sections/listing.case-study-grid.json and are enforced per instance by schema/semantic_validate.py, which JSON Schema cannot express."
+              },
+              "motion": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "pattern",
+                  "reducedMotionFallback"
+                ],
+                "properties": {
+                  "pattern": {
+                    "const": "leaf-drift"
+                  },
+                  "trigger": {},
+                  "durationMs": {},
+                  "easing": {},
+                  "delayMs": {
+                    "const": 0
+                  },
+                  "staggerMs": {
+                    "const": 0
+                  },
+                  "leafSet": {},
+                  "leafCount": {},
+                  "scrollProgressRange": {},
+                  "reducedMotionFallback": {
+                    "const": "leaves-held-at-rotate-only-transform"
+                  },
+                  "implementationStatus": {}
+                },
+                "description": "CLOSED to the 11 fields in this section's motionFieldSet. Contract-level documentation keys (motionDocumentationFields) are NOT settable here."
+              },
+              "assetRefs": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "assetRole"
+                  ],
+                  "properties": {
+                    "assetRole": {
+                      "enum": [
+                        "brand.icon",
+                        "brand.leaf-art",
+                        "brand.logo",
+                        "editorial.hero-image",
+                        "editorial.stock-photo",
+                        "person.likeness",
+                        "product.badge",
+                        "product.screenshot",
+                        "site.favicon",
+                        "third-party.platform-logo",
+                        "third-party.review-mark",
+                        "third-party.trademark",
+                        "typeface.webfont"
+                      ]
+                    },
+                    "src": {
+                      "type": "string"
+                    },
+                    "alt": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "section",
+              "required",
+              "repeatable",
+              "motion"
+            ],
+            "properties": {
+              "section": {
+                "const": "listing.link-card-grid"
+              },
+              "required": {
+                "type": "boolean"
+              },
+              "repeatable": {
+                "type": "boolean"
+              },
+              "variant": {
+                "type": "string"
+              },
+              "note": {
+                "type": "string"
+              },
+              "content": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "items": {}
+                },
+                "description": "Closed to this section's real content fields. Per-field maxWords budgets live in sections/listing.link-card-grid.json and are enforced per instance by schema/semantic_validate.py, which JSON Schema cannot express."
+              },
+              "motion": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "pattern",
+                  "reducedMotionFallback"
+                ],
+                "properties": {
+                  "pattern": {
+                    "const": "none"
+                  },
+                  "trigger": {},
+                  "durationMs": {},
+                  "easing": {},
+                  "delayMs": {
+                    "const": 0
+                  },
+                  "staggerMs": {
+                    "const": 0
+                  },
+                  "leafSet": {},
+                  "leafCount": {},
+                  "scrollProgressRange": {},
+                  "reducedMotionFallback": {
+                    "const": "none-required-static"
+                  },
+                  "implementationStatus": {}
+                },
+                "description": "CLOSED to the 11 fields in this section's motionFieldSet. Contract-level documentation keys (motionDocumentationFields) are NOT settable here."
+              },
+              "assetRefs": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "assetRole"
+                  ],
+                  "properties": {
+                    "assetRole": {
+                      "enum": [
+                        "brand.icon",
+                        "brand.leaf-art",
+                        "brand.logo",
+                        "editorial.hero-image",
+                        "editorial.stock-photo",
+                        "person.likeness",
+                        "product.badge",
+                        "product.screenshot",
+                        "site.favicon",
+                        "third-party.platform-logo",
+                        "third-party.review-mark",
+                        "third-party.trademark",
+                        "typeface.webfont"
+                      ]
+                    },
+                    "src": {
+                      "type": "string"
+                    },
+                    "alt": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "section",
+              "required",
+              "repeatable",
+              "motion"
+            ],
+            "properties": {
+              "section": {
+                "const": "listing.more-articles"
+              },
+              "required": {
+                "type": "boolean"
+              },
+              "repeatable": {
+                "type": "boolean"
+              },
+              "variant": {
+                "type": "string"
+              },
+              "note": {
+                "type": "string"
+              },
+              "content": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "heading": {},
+                  "cards": {}
+                },
+                "description": "Closed to this section's real content fields. Per-field maxWords budgets live in sections/listing.more-articles.json and are enforced per instance by schema/semantic_validate.py, which JSON Schema cannot express."
+              },
+              "motion": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "pattern",
+                  "reducedMotionFallback"
+                ],
+                "properties": {
+                  "pattern": {
+                    "const": "leaf-drift"
+                  },
+                  "trigger": {},
+                  "durationMs": {},
+                  "easing": {},
+                  "delayMs": {
+                    "const": 0
+                  },
+                  "staggerMs": {
+                    "const": 0
+                  },
+                  "leafSet": {},
+                  "leafCount": {},
+                  "scrollProgressRange": {},
+                  "reducedMotionFallback": {
+                    "const": "leaves-held-at-rotate-only-transform"
+                  },
+                  "implementationStatus": {}
+                },
+                "description": "CLOSED to the 11 fields in this section's motionFieldSet. Contract-level documentation keys (motionDocumentationFields) are NOT settable here."
+              },
+              "assetRefs": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "assetRole"
+                  ],
+                  "properties": {
+                    "assetRole": {
+                      "enum": [
+                        "brand.icon",
+                        "brand.leaf-art",
+                        "brand.logo",
+                        "editorial.hero-image",
+                        "editorial.stock-photo",
+                        "person.likeness",
+                        "product.badge",
+                        "product.screenshot",
+                        "site.favicon",
+                        "third-party.platform-logo",
+                        "third-party.review-mark",
+                        "third-party.trademark",
+                        "typeface.webfont"
+                      ]
+                    },
+                    "src": {
+                      "type": "string"
+                    },
+                    "alt": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "section",
+              "required",
+              "repeatable",
+              "motion"
+            ],
+            "properties": {
+              "section": {
+                "const": "listing.story-teasers"
+              },
+              "required": {
+                "type": "boolean"
+              },
+              "repeatable": {
+                "type": "boolean"
+              },
+              "variant": {
+                "type": "string"
+              },
+              "note": {
+                "type": "string"
+              },
+              "content": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "cards": {}
+                },
+                "description": "Closed to this section's real content fields. Per-field maxWords budgets live in sections/listing.story-teasers.json and are enforced per instance by schema/semantic_validate.py, which JSON Schema cannot express."
+              },
+              "motion": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "pattern",
+                  "reducedMotionFallback"
+                ],
+                "properties": {
+                  "pattern": {
+                    "const": "leaf-drift"
+                  },
+                  "trigger": {},
+                  "durationMs": {},
+                  "easing": {},
+                  "delayMs": {
+                    "const": 0
+                  },
+                  "staggerMs": {
+                    "const": 0
+                  },
+                  "leafSet": {},
+                  "leafCount": {},
+                  "scrollProgressRange": {},
+                  "reducedMotionFallback": {
+                    "const": "leaves-held-at-rotate-only-transform"
+                  },
+                  "implementationStatus": {}
+                },
+                "description": "CLOSED to the 11 fields in this section's motionFieldSet. Contract-level documentation keys (motionDocumentationFields) are NOT settable here."
+              },
+              "assetRefs": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "assetRole"
+                  ],
+                  "properties": {
+                    "assetRole": {
+                      "enum": [
+                        "brand.icon",
+                        "brand.leaf-art",
+                        "brand.logo",
+                        "editorial.hero-image",
+                        "editorial.stock-photo",
+                        "person.likeness",
+                        "product.badge",
+                        "product.screenshot",
+                        "site.favicon",
+                        "third-party.platform-logo",
+                        "third-party.review-mark",
+                        "third-party.trademark",
+                        "typeface.webfont"
+                      ]
+                    },
+                    "src": {
+                      "type": "string"
+                    },
+                    "alt": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "section",
+              "required",
+              "repeatable",
+              "motion"
+            ],
+            "properties": {
+              "section": {
+                "const": "pricing.single-plan"
+              },
+              "required": {
+                "type": "boolean"
+              },
+              "repeatable": {
+                "type": "boolean"
+              },
+              "variant": {
+                "type": "string"
+              },
+              "note": {
+                "type": "string"
+              },
+              "content": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "h1": {},
+                  "subParagraph": {},
+                  "smallPrint": {},
+                  "reassuranceColumns": {}
+                },
+                "description": "Closed to this section's real content fields. Per-field maxWords budgets live in sections/pricing.single-plan.json and are enforced per instance by schema/semantic_validate.py, which JSON Schema cannot express."
+              },
+              "motion": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "pattern",
+                  "reducedMotionFallback"
+                ],
+                "properties": {
+                  "pattern": {
+                    "const": "leaf-drift"
+                  },
+                  "trigger": {},
+                  "durationMs": {},
+                  "easing": {},
+                  "delayMs": {
+                    "const": 0
+                  },
+                  "staggerMs": {
+                    "const": 0
+                  },
+                  "leafSet": {},
+                  "leafCount": {},
+                  "scrollProgressRange": {},
+                  "reducedMotionFallback": {
+                    "const": "leaves-held-at-rotate-only-transform"
+                  },
+                  "implementationStatus": {}
+                },
+                "description": "CLOSED to the 11 fields in this section's motionFieldSet. Contract-level documentation keys (motionDocumentationFields) are NOT settable here."
+              },
+              "assetRefs": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "assetRole"
+                  ],
+                  "properties": {
+                    "assetRole": {
+                      "enum": [
+                        "brand.icon",
+                        "brand.leaf-art",
+                        "brand.logo",
+                        "editorial.hero-image",
+                        "editorial.stock-photo",
+                        "person.likeness",
+                        "product.badge",
+                        "product.screenshot",
+                        "site.favicon",
+                        "third-party.platform-logo",
+                        "third-party.review-mark",
+                        "third-party.trademark",
+                        "typeface.webfont"
+                      ]
+                    },
+                    "src": {
+                      "type": "string"
+                    },
+                    "alt": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "section",
+              "required",
+              "repeatable",
+              "motion"
+            ],
+            "properties": {
+              "section": {
+                "const": "proof.g2-rating"
+              },
+              "required": {
+                "type": "boolean"
+              },
+              "repeatable": {
+                "type": "boolean"
+              },
+              "variant": {
+                "type": "string"
+              },
+              "note": {
+                "type": "string"
+              },
+              "content": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "caption": {}
+                },
+                "description": "Closed to this section's real content fields. Per-field maxWords budgets live in sections/proof.g2-rating.json and are enforced per instance by schema/semantic_validate.py, which JSON Schema cannot express."
+              },
+              "motion": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "pattern",
+                  "reducedMotionFallback"
+                ],
+                "properties": {
+                  "pattern": {
+                    "const": "none"
+                  },
+                  "trigger": {},
+                  "durationMs": {},
+                  "easing": {},
+                  "delayMs": {
+                    "const": 0
+                  },
+                  "staggerMs": {
+                    "const": 0
+                  },
+                  "leafSet": {},
+                  "leafCount": {},
+                  "scrollProgressRange": {},
+                  "reducedMotionFallback": {
+                    "const": "none-required-static"
+                  },
+                  "implementationStatus": {}
+                },
+                "description": "CLOSED to the 11 fields in this section's motionFieldSet. Contract-level documentation keys (motionDocumentationFields) are NOT settable here."
+              },
+              "assetRefs": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "assetRole"
+                  ],
+                  "properties": {
+                    "assetRole": {
+                      "enum": [
+                        "brand.icon",
+                        "brand.leaf-art",
+                        "brand.logo",
+                        "editorial.hero-image",
+                        "editorial.stock-photo",
+                        "person.likeness",
+                        "product.badge",
+                        "product.screenshot",
+                        "site.favicon",
+                        "third-party.platform-logo",
+                        "third-party.review-mark",
+                        "third-party.trademark",
+                        "typeface.webfont"
+                      ]
+                    },
+                    "src": {
+                      "type": "string"
+                    },
+                    "alt": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "section",
+              "required",
+              "repeatable",
+              "motion"
+            ],
+            "properties": {
+              "section": {
+                "const": "proof.goals-band"
+              },
+              "required": {
+                "type": "boolean"
+              },
+              "repeatable": {
+                "type": "boolean"
+              },
+              "variant": {
+                "type": "string"
+              },
+              "note": {
+                "type": "string"
+              },
+              "content": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "heading": {},
+                  "goals": {}
+                },
+                "description": "Closed to this section's real content fields. Per-field maxWords budgets live in sections/proof.goals-band.json and are enforced per instance by schema/semantic_validate.py, which JSON Schema cannot express."
+              },
+              "motion": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "pattern",
+                  "reducedMotionFallback"
+                ],
+                "properties": {
+                  "pattern": {
+                    "const": "none"
+                  },
+                  "trigger": {},
+                  "durationMs": {},
+                  "easing": {},
+                  "delayMs": {
+                    "const": 0
+                  },
+                  "staggerMs": {
+                    "const": 0
+                  },
+                  "leafSet": {},
+                  "leafCount": {},
+                  "scrollProgressRange": {},
+                  "reducedMotionFallback": {
+                    "const": "none-required-static"
+                  },
+                  "implementationStatus": {}
+                },
+                "description": "CLOSED to the 11 fields in this section's motionFieldSet. Contract-level documentation keys (motionDocumentationFields) are NOT settable here."
+              },
+              "assetRefs": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "assetRole"
+                  ],
+                  "properties": {
+                    "assetRole": {
+                      "enum": [
+                        "brand.icon",
+                        "brand.leaf-art",
+                        "brand.logo",
+                        "editorial.hero-image",
+                        "editorial.stock-photo",
+                        "person.likeness",
+                        "product.badge",
+                        "product.screenshot",
+                        "site.favicon",
+                        "third-party.platform-logo",
+                        "third-party.review-mark",
+                        "third-party.trademark",
+                        "typeface.webfont"
+                      ]
+                    },
+                    "src": {
+                      "type": "string"
+                    },
+                    "alt": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "section",
+              "required",
+              "repeatable",
+              "motion"
+            ],
+            "properties": {
+              "section": {
+                "const": "proof.sdg-goals"
+              },
+              "required": {
+                "type": "boolean"
+              },
+              "repeatable": {
+                "type": "boolean"
+              },
+              "variant": {
+                "type": "string"
+              },
+              "note": {
+                "type": "string"
+              },
+              "content": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "heading": {},
+                  "intro": {},
+                  "goals": {}
+                },
+                "description": "Closed to this section's real content fields. Per-field maxWords budgets live in sections/proof.sdg-goals.json and are enforced per instance by schema/semantic_validate.py, which JSON Schema cannot express."
+              },
+              "motion": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "pattern",
+                  "reducedMotionFallback"
+                ],
+                "properties": {
+                  "pattern": {
+                    "const": "none"
+                  },
+                  "trigger": {},
+                  "durationMs": {},
+                  "easing": {},
+                  "delayMs": {
+                    "const": 0
+                  },
+                  "staggerMs": {
+                    "const": 0
+                  },
+                  "leafSet": {},
+                  "leafCount": {},
+                  "scrollProgressRange": {},
+                  "reducedMotionFallback": {
+                    "const": "none-required-static"
+                  },
+                  "implementationStatus": {}
+                },
+                "description": "CLOSED to the 11 fields in this section's motionFieldSet. Contract-level documentation keys (motionDocumentationFields) are NOT settable here."
+              },
+              "assetRefs": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "assetRole"
+                  ],
+                  "properties": {
+                    "assetRole": {
+                      "enum": [
+                        "brand.icon",
+                        "brand.leaf-art",
+                        "brand.logo",
+                        "editorial.hero-image",
+                        "editorial.stock-photo",
+                        "person.likeness",
+                        "product.badge",
+                        "product.screenshot",
+                        "site.favicon",
+                        "third-party.platform-logo",
+                        "third-party.review-mark",
+                        "third-party.trademark",
+                        "typeface.webfont"
+                      ]
+                    },
+                    "src": {
+                      "type": "string"
+                    },
+                    "alt": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "section",
+              "required",
+              "repeatable",
+              "motion"
+            ],
+            "properties": {
+              "section": {
+                "const": "proof.stat-pills"
+              },
+              "required": {
+                "type": "boolean"
+              },
+              "repeatable": {
+                "type": "boolean"
+              },
+              "variant": {
+                "type": "string"
+              },
+              "note": {
+                "type": "string"
+              },
+              "content": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "stats": {}
+                },
+                "description": "Closed to this section's real content fields. Per-field maxWords budgets live in sections/proof.stat-pills.json and are enforced per instance by schema/semantic_validate.py, which JSON Schema cannot express."
+              },
+              "motion": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "pattern",
+                  "reducedMotionFallback"
+                ],
+                "properties": {
+                  "pattern": {
+                    "const": "none"
+                  },
+                  "trigger": {},
+                  "durationMs": {},
+                  "easing": {},
+                  "delayMs": {
+                    "const": 0
+                  },
+                  "staggerMs": {
+                    "const": 0
+                  },
+                  "leafSet": {},
+                  "leafCount": {},
+                  "scrollProgressRange": {},
+                  "reducedMotionFallback": {
+                    "const": "none-required-static"
+                  },
+                  "implementationStatus": {}
+                },
+                "description": "CLOSED to the 11 fields in this section's motionFieldSet. Contract-level documentation keys (motionDocumentationFields) are NOT settable here."
+              },
+              "assetRefs": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "assetRole"
+                  ],
+                  "properties": {
+                    "assetRole": {
+                      "enum": [
+                        "brand.icon",
+                        "brand.leaf-art",
+                        "brand.logo",
+                        "editorial.hero-image",
+                        "editorial.stock-photo",
+                        "person.likeness",
+                        "product.badge",
+                        "product.screenshot",
+                        "site.favicon",
+                        "third-party.platform-logo",
+                        "third-party.review-mark",
+                        "third-party.trademark",
+                        "typeface.webfont"
+                      ]
+                    },
+                    "src": {
+                      "type": "string"
+                    },
+                    "alt": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "section",
+              "required",
+              "repeatable",
+              "motion"
+            ],
+            "properties": {
+              "section": {
+                "const": "proof.testimonial-wall"
+              },
+              "required": {
+                "type": "boolean"
+              },
+              "repeatable": {
+                "type": "boolean"
+              },
+              "variant": {
+                "type": "string"
+              },
+              "note": {
+                "type": "string"
+              },
+              "content": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "testimonials": {},
+                  "logos": {}
+                },
+                "description": "Closed to this section's real content fields. Per-field maxWords budgets live in sections/proof.testimonial-wall.json and are enforced per instance by schema/semantic_validate.py, which JSON Schema cannot express."
+              },
+              "motion": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "pattern",
+                  "reducedMotionFallback"
+                ],
+                "properties": {
+                  "pattern": {
+                    "const": "none"
+                  },
+                  "trigger": {},
+                  "durationMs": {},
+                  "easing": {},
+                  "delayMs": {
+                    "const": 0
+                  },
+                  "staggerMs": {
+                    "const": 0
+                  },
+                  "leafSet": {},
+                  "leafCount": {},
+                  "scrollProgressRange": {},
+                  "reducedMotionFallback": {
+                    "const": "none-required-static"
+                  },
+                  "implementationStatus": {}
+                },
+                "description": "CLOSED to the 11 fields in this section's motionFieldSet. Contract-level documentation keys (motionDocumentationFields) are NOT settable here."
+              },
+              "assetRefs": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "assetRole"
+                  ],
+                  "properties": {
+                    "assetRole": {
+                      "enum": [
+                        "brand.icon",
+                        "brand.leaf-art",
+                        "brand.logo",
+                        "editorial.hero-image",
+                        "editorial.stock-photo",
+                        "person.likeness",
+                        "product.badge",
+                        "product.screenshot",
+                        "site.favicon",
+                        "third-party.platform-logo",
+                        "third-party.review-mark",
+                        "third-party.trademark",
+                        "typeface.webfont"
+                      ]
+                    },
+                    "src": {
+                      "type": "string"
+                    },
+                    "alt": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "section",
+              "required",
+              "repeatable",
+              "motion"
+            ],
+            "properties": {
+              "section": {
+                "const": "referral.earnings-tiers"
+              },
+              "required": {
+                "type": "boolean"
+              },
+              "repeatable": {
+                "type": "boolean"
+              },
+              "variant": {
+                "type": "string"
+              },
+              "note": {
+                "type": "string"
+              },
+              "content": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "heading": {},
+                  "tiers": {}
+                },
+                "description": "Closed to this section's real content fields. Per-field maxWords budgets live in sections/referral.earnings-tiers.json and are enforced per instance by schema/semantic_validate.py, which JSON Schema cannot express."
+              },
+              "motion": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "pattern",
+                  "reducedMotionFallback"
+                ],
+                "properties": {
+                  "pattern": {
+                    "const": "none"
+                  },
+                  "trigger": {},
+                  "durationMs": {},
+                  "easing": {},
+                  "delayMs": {
+                    "const": 0
+                  },
+                  "staggerMs": {
+                    "const": 0
+                  },
+                  "leafSet": {},
+                  "leafCount": {},
+                  "scrollProgressRange": {},
+                  "reducedMotionFallback": {
+                    "const": "none-required-static"
+                  },
+                  "implementationStatus": {}
+                },
+                "description": "CLOSED to the 11 fields in this section's motionFieldSet. Contract-level documentation keys (motionDocumentationFields) are NOT settable here."
+              },
+              "assetRefs": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "assetRole"
+                  ],
+                  "properties": {
+                    "assetRole": {
+                      "enum": [
+                        "brand.icon",
+                        "brand.leaf-art",
+                        "brand.logo",
+                        "editorial.hero-image",
+                        "editorial.stock-photo",
+                        "person.likeness",
+                        "product.badge",
+                        "product.screenshot",
+                        "site.favicon",
+                        "third-party.platform-logo",
+                        "third-party.review-mark",
+                        "third-party.trademark",
+                        "typeface.webfont"
+                      ]
+                    },
+                    "src": {
+                      "type": "string"
+                    },
+                    "alt": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "section",
+              "required",
+              "repeatable",
+              "motion"
+            ],
+            "properties": {
+              "section": {
+                "const": "story.hero-quote"
+              },
+              "required": {
+                "type": "boolean"
+              },
+              "repeatable": {
+                "type": "boolean"
+              },
+              "variant": {
+                "type": "string"
+              },
+              "note": {
+                "type": "string"
+              },
+              "content": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "quote": {},
+                  "authorName": {},
+                  "authorRole": {}
+                },
+                "description": "Closed to this section's real content fields. Per-field maxWords budgets live in sections/story.hero-quote.json and are enforced per instance by schema/semantic_validate.py, which JSON Schema cannot express."
+              },
+              "motion": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "pattern",
+                  "reducedMotionFallback"
+                ],
+                "properties": {
+                  "pattern": {
+                    "const": "none"
+                  },
+                  "trigger": {},
+                  "durationMs": {},
+                  "easing": {},
+                  "delayMs": {
+                    "const": 0
+                  },
+                  "staggerMs": {
+                    "const": 0
+                  },
+                  "leafSet": {},
+                  "leafCount": {},
+                  "scrollProgressRange": {},
+                  "reducedMotionFallback": {
+                    "const": "none-required-static"
+                  },
+                  "implementationStatus": {}
+                },
+                "description": "CLOSED to the 11 fields in this section's motionFieldSet. Contract-level documentation keys (motionDocumentationFields) are NOT settable here."
+              },
+              "assetRefs": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "assetRole"
+                  ],
+                  "properties": {
+                    "assetRole": {
+                      "enum": [
+                        "brand.icon",
+                        "brand.leaf-art",
+                        "brand.logo",
+                        "editorial.hero-image",
+                        "editorial.stock-photo",
+                        "person.likeness",
+                        "product.badge",
+                        "product.screenshot",
+                        "site.favicon",
+                        "third-party.platform-logo",
+                        "third-party.review-mark",
+                        "third-party.trademark",
+                        "typeface.webfont"
+                      ]
+                    },
+                    "src": {
+                      "type": "string"
+                    },
+                    "alt": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "section",
+              "required",
+              "repeatable",
+              "motion"
+            ],
+            "properties": {
+              "section": {
+                "const": "story.meta-prose"
+              },
+              "required": {
+                "type": "boolean"
+              },
+              "repeatable": {
+                "type": "boolean"
+              },
+              "variant": {
+                "type": "string"
+              },
+              "note": {
+                "type": "string"
+              },
+              "content": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {},
+                "description": "This section takes no generator-settable content."
+              },
+              "motion": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "pattern",
+                  "reducedMotionFallback"
+                ],
+                "properties": {
+                  "pattern": {
+                    "const": "leaf-drift"
+                  },
+                  "trigger": {},
+                  "durationMs": {},
+                  "easing": {},
+                  "delayMs": {
+                    "const": 0
+                  },
+                  "staggerMs": {
+                    "const": 0
+                  },
+                  "leafSet": {},
+                  "leafCount": {},
+                  "scrollProgressRange": {},
+                  "reducedMotionFallback": {
+                    "const": "leaves-held-at-rotate-only-transform"
+                  },
+                  "implementationStatus": {}
+                },
+                "description": "CLOSED to the 11 fields in this section's motionFieldSet. Contract-level documentation keys (motionDocumentationFields) are NOT settable here."
+              },
+              "assetRefs": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "assetRole"
+                  ],
+                  "properties": {
+                    "assetRole": {
+                      "enum": [
+                        "brand.icon",
+                        "brand.leaf-art",
+                        "brand.logo",
+                        "editorial.hero-image",
+                        "editorial.stock-photo",
+                        "person.likeness",
+                        "product.badge",
+                        "product.screenshot",
+                        "site.favicon",
+                        "third-party.platform-logo",
+                        "third-party.review-mark",
+                        "third-party.trademark",
+                        "typeface.webfont"
+                      ]
+                    },
+                    "src": {
+                      "type": "string"
+                    },
+                    "alt": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "description": "Ordered page-level nodes, top to bottom."
+    }
+  },
+  "$comment": "No per-instance style or token-override field exists by design \u2014 styling is owned by the section and component contracts, not by a generated instance. See tokens/llm/token-policy.json.overrides, which records this as an explicit gap rather than inventing a field just to have something to validate."
+}

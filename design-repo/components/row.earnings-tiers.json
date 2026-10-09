@@ -1,0 +1,19 @@
+{
+  "$id": "components.row.earnings-tiers",
+  "layer": "components",
+  "purpose": "The /referral earnings-tier pill row.",
+  "composes": [
+    "primitives/pill.stat"
+  ],
+  "geometry": "columns w-[25em], justify-around across 1152px",
+  "count": {
+    "exact": 4
+  },
+  "states": "No hover, no active, no focus, no transition, no box-shadow.",
+  "measuredFrom": "src/components/EarningsTiers.jsx:1-41",
+  "responsive": {
+    "<=767px": "becomes a 2-column CSS grid (grid-cols-2, gap-x-0 gap-y-[3em], items-start), columns narrow to w-[16em]",
+    "note": "A NEW responsive mode — the homepage stat row uses two w-1/2 flex halves instead."
+  },
+  "quirk": "The dollar sign comes AFTER the number in all four figures. That is the original."
+}

@@ -1,0 +1,21 @@
+{
+  "$id": "components.block.g2-rating",
+  "layer": "components",
+  "purpose": "G2 logo + 5 stars + the rating caption.",
+  "composes": [
+    "primitives/star.rating"
+  ],
+  "geometry": "my-[4.2em] mb-0 wrapper; inner mt-[7em] flex-col items-center",
+  "content": {
+    "caption": {
+      "value": "4.8 / 5 on G2 Reviews",
+      "copyPolicy": "verbatim-locked",
+      "maxWords": 6
+    }
+  },
+  "states": "No hover, no active, no focus, no transition, no box-shadow.",
+  "measuredFrom": "src/components/G2Block.jsx:5-35",
+  "assetRole": "third-party.review-mark",
+  "esgVariant": "The /esg SOCIAL stats column renders the same visual with alt 'G2 review logo', EAGER images and NO mt-[7em] wrapper. A separate inline instance, not this component.",
+  "knownArtefact": "On T-STORY the caption is partly painted over by the next section's z-[200] divider band. Correct; do not fix."
+}

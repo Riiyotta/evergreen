@@ -1,0 +1,63 @@
+{
+  "$id": "tokens.component",
+  "layer": "20-component",
+  "description": "Component-scoped values that are NOT semantic and must not be promoted. Each is the approved application for exactly one component.",
+  "tokens": {
+    "arketta.radius.panel": {
+      "value": "8px",
+      "scope": "components/panel.arketta-cta"
+    },
+    "arketta.radius.button": {
+      "value": "4px",
+      "scope": "components/panel.arketta-cta"
+    },
+    "arketta.padding": {
+      "value": "140px 100px; 40px 20px at <=479px",
+      "scope": "components/panel.arketta-cta"
+    },
+    "form.placeholder": {
+      "value": "#999999",
+      "scope": "primitives/input.text"
+    },
+    "newsletter.placeholder": {
+      "value": "black/60",
+      "scope": "components/form.newsletter"
+    },
+    "scheduler.text": {
+      "value": "#0b2f04",
+      "scope": "components/block.scheduler-placeholder"
+    },
+    "scheduler.accent": {
+      "value": "#34b11e",
+      "scope": "components/block.scheduler-placeholder"
+    },
+    "scheduler.circle": {
+      "value": "#eff8ee",
+      "scope": "components/block.scheduler-placeholder"
+    },
+    "scheduler.grey": {
+      "value": "#4d4d4d",
+      "scope": "components/block.scheduler-placeholder"
+    },
+    "scheduler.widgetHeight": {
+      "value": "630px fixed",
+      "scope": "components/card.calendly"
+    },
+    "testimonial.logoWidth.home": {
+      "value": "w-[7.96em]",
+      "scope": "components/row.testimonials"
+    },
+    "testimonial.logoWidth.pricing": {
+      "value": "w-[19.4941em]",
+      "scope": "components/row.testimonials"
+    },
+    "esg.columnGap": {
+      "value": "6.91014em",
+      "scope": "sections/feature.split-visual (esg variant)"
+    },
+    "home.columnGap": {
+      "value": "9.91014em",
+      "scope": "sections/feature.seeds, sections/feature.report-csr"
+    }
+  }
+}
