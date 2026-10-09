@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Evergreen | Give recognition and plant trees</title>
+    <link rel="canonical" href="https://www.evergreen.so/" />
+    <link rel="icon" href="/assets/icon.png" />
+
+    <!--
+      Display serif substitution (CLONE_SPEC §3.1 / ASSET_MANIFEST "Fonts"):
+      the original loads `ivypresto-headline` 600 from Adobe Typekit, which is
+      kit-bound and not redistributable. Gloock (SIL OFL) stands in behind the
+      --font-headline token in src/index.css and is SELF-HOSTED from
+      /assets/gloock-latin.woff2 — same as Rubik, no third-party font request.
+      It was selected by measuring rendered advance widths against the live
+      original; see the long measurement comment in src/index.css.
+      Swapping in a real Typekit kit id is a two-line change (add the kit <link>
+      here, drop "Gloock" from the --font-headline stack).
+    -->
+
+    <!-- Eagerly loaded + preloaded on the original (CLONE_SPEC §6) -->
+    <link rel="preload" as="font" type="font/woff2" href="/assets/rubik-latin.woff2" crossorigin />
+    <link rel="preload" as="font" type="font/woff2" href="/assets/gloock-latin.woff2" crossorigin />
+    <link rel="preload" as="image" href="/assets/evergreen-logosvg-216cd4.svg" />
+    <link rel="preload" as="image" href="/assets/ever-small-leafsvg-e988d6.svg" />
+    <link rel="preload" as="image" href="/assets/evergreen-recognition-demo-view-185a06.webp" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

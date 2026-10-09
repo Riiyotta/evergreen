@@ -1,0 +1,4138 @@
+{
+ "url": "/employee-recognition",
+ "vw": 1280,
+ "root": "10.6667px",
+ "docH": 25065,
+ "title": "Employee Recognition: The Complete Guide | Evergreen",
+ "desc": "What employee recognition is, why it works, the types, how to build a program, what to write and how to measure it. One guide, with examples for every occasion.",
+ "canonical": "https://www.evergreen.so/employee-recognition",
+ "sections": [
+  {
+   "box": [
+    44.61,
+    23400.86,
+    1280,
+    0
+   ],
+   "bg": "rgb(255, 255, 243)",
+   "cls": "relative bg-cream",
+   "inner": {
+    "box": [
+     44.61,
+     23400.86,
+     1280,
+     0
+    ],
+    "pad": "0px 64px 53.3333px",
+    "mt": "-32px",
+    "maxw": "1920px",
+    "cls": "mx-auto -mt-[3em] w-full max-w-[1920px] px-[6em] max-wf-tablet:px-[6vw] pb-[5em]"
+   }
+  },
+  {
+   "box": [
+    23413.48,
+    161.98,
+    1280,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "cls": "relative",
+   "inner": {
+    "box": [
+     23413.48,
+     159.98,
+     1279.98,
+     0
+    ],
+    "pad": "0px",
+    "mt": "-32px",
+    "maxw": "none",
+    "cls": "relative mx-auto -mt-[3em] w-[120em]"
+   }
+  },
+  {
+   "box": [
+    23543.48,
+    1010.95,
+    1280,
+    0
+   ],
+   "bg": "rgb(237, 237, 226)",
+   "cls": "relative bg-cream-dark",
+   "inner": {
+    "box": [
+     23543.48,
+     1010.95,
+     1280,
+     0
+    ],
+    "pad": "192px 64px 53.3333px",
+    "mt": "-32px",
+    "maxw": "1920px",
+    "cls": "mx-auto -mt-[3em] w-full max-w-[1920px] px-[6em] max-wf-tablet:px-[6vw] pt-[18em] pb-[5em]"
+   }
+  }
+ ],
+ "blocks": [
+  {
+   "box": [
+    44.61,
+    377.86,
+    1152.03,
+    63.98
+   ],
+   "mar": "0px",
+   "cls": "pt-[10.2em] max-wf-mini:pt-[11.8em]",
+   "t": "Employee recognition Employee recognition is telling a colleague, spec"
+  },
+  {
+   "box": [
+    467.27,
+    1101.02,
+    829.64,
+    225.17
+   ],
+   "mar": "0px 161.203px 0px 161.188px",
+   "cls": "marketing-rich-text mx-auto max-w-[77.78em] max-wf-tablet:w-auto",
+   "t": "What employee recognition is Employee recognition is the acknowledgeme"
+  },
+  {
+   "box": [
+    1637.61,
+    137.59,
+    1152.03,
+    63.98
+   ],
+   "mar": "42.6666px 0px",
+   "cls": "my-[4em]",
+   "t": "69% of employees work harder when recognised1 39% of employees don’t f"
+  },
+  {
+   "box": [
+    1820,
+    4345.27,
+    829.64,
+    225.17
+   ],
+   "mar": "0px 161.203px 0px 161.188px",
+   "cls": "marketing-rich-text mx-auto max-w-[77.78em] max-wf-tablet:w-auto",
+   "t": "Two things about these figures are worth holding on to. The first is t"
+  },
+  {
+   "box": [
+    6210.06,
+    903.61,
+    1152.03,
+    63.98
+   ],
+   "mar": "42.6666px 0px",
+   "cls": "my-[4em]",
+   "t": "Recognition messages for every occasion 35 occasions, each with exampl"
+  },
+  {
+   "box": [
+    7158.47,
+    629.84,
+    829.64,
+    225.17
+   ],
+   "mar": "0px 161.203px 0px 161.188px",
+   "cls": "marketing-rich-text mx-auto max-w-[77.78em] max-wf-tablet:w-auto",
+   "t": "For shorter formats, the posts on thank-you note templates and coworke"
+  },
+  {
+   "box": [
+    7833.11,
+    860.3,
+    1152.03,
+    63.98
+   ],
+   "mar": "42.6666px 0px",
+   "cls": "my-[4em]",
+   "t": "Company values, described as behaviour 25 values, each with the behavi"
+  },
+  {
+   "box": [
+    8738.2,
+    504.78,
+    829.64,
+    225.17
+   ],
+   "mar": "0px 161.203px 0px 161.188px",
+   "cls": "marketing-rich-text mx-auto max-w-[77.78em] max-wf-tablet:w-auto",
+   "t": "The post on building a culture of recognition covers the habits that m"
+  },
+  {
+   "box": [
+    9287.78,
+    1979.2,
+    1152.03,
+    63.98
+   ],
+   "mar": "42.6666px 0px",
+   "cls": "my-[4em]",
+   "t": "Agencies Recognition in creative, digital and PR agencies: billable ho"
+  },
+  {
+   "box": [
+    11311.78,
+    1531.92,
+    829.64,
+    225.17
+   ],
+   "mar": "0px 161.203px 0px 161.188px",
+   "cls": "marketing-rich-text mx-auto max-w-[77.78em] max-wf-tablet:w-auto",
+   "t": "For teams that have gone remote or hybrid, the posts on virtual recogn"
+  },
+  {
+   "box": [
+    12888.5,
+    309.72,
+    1152.03,
+    63.98
+   ],
+   "mar": "42.6666px 0px",
+   "cls": "my-[4em]",
+   "t": "Evergreen for Slack and Microsoft Teams Peer-to-peer recognition where"
+  },
+  {
+   "box": [
+    13243.02,
+    191.19,
+    829.64,
+    225.17
+   ],
+   "mar": "0px 161.203px 0px 161.188px",
+   "cls": "marketing-rich-text mx-auto max-w-[77.78em] max-wf-tablet:w-auto",
+   "t": "The vocabulary Recognition has picked up a vocabulary from HR, from ve"
+  },
+  {
+   "box": [
+    13479,
+    1808.03,
+    1152.03,
+    63.98
+   ],
+   "mar": "42.6666px 0px",
+   "cls": "my-[4em]",
+   "t": "Employee recognition Employee recognition is the act of acknowledging "
+  },
+  {
+   "box": [
+    15331.83,
+    316.25,
+    829.64,
+    225.17
+   ],
+   "mar": "0px 161.203px 0px 161.188px",
+   "cls": "marketing-rich-text mx-auto max-w-[77.78em] max-wf-tablet:w-auto",
+   "t": "Where to start If you have read this far and have nothing in place, do"
+  },
+  {
+   "box": [
+    15692.88,
+    71.03,
+    1152.03,
+    63.98
+   ],
+   "mar": "44.8px 0px",
+   "cls": "my-[4.2em] text-center max-wf-mini:my-[3.5em] flex justify-center max-wf-phone:flex-col",
+   "t": "Questions people ask"
+  },
+  {
+   "box": [
+    15808.7,
+    1929.92,
+    1152.03,
+    63.98
+   ],
+   "mar": "44.8px 0px",
+   "cls": "my-[4.2em] text-center max-wf-mini:my-[3.5em]",
+   "t": "What is employee recognition? Employee recognition is the act of ackno"
+  },
+  {
+   "box": [
+    17783.42,
+    71.03,
+    1152.03,
+    63.98
+   ],
+   "mar": "44.8px 0px",
+   "cls": "my-[4.2em] text-center max-wf-mini:my-[3.5em] flex justify-center max-wf-phone:flex-col",
+   "t": "Reading list"
+  },
+  {
+   "box": [
+    17899.25,
+    841.78,
+    1152.03,
+    63.98
+   ],
+   "mar": "42.6666px 0px 0px",
+   "cls": "mt-[4em]",
+   "t": "Why it matters Effects of employee recognition on retention and morale"
+  },
+  {
+   "box": [
+    18785.83,
+    447.83,
+    1152.03,
+    63.98
+   ],
+   "mar": "42.6666px 0px 0px",
+   "cls": "mt-[4em]",
+   "t": "Getting started Employee recognition 101: five things to know first Fi"
+  },
+  {
+   "box": [
+    19278.45,
+    841.78,
+    1152.03,
+    63.98
+   ],
+   "mar": "42.6666px 0px 0px",
+   "cls": "mt-[4em]",
+   "t": "Culture How employee recognition supports DEI at work How employee rec"
+  },
+  {
+   "box": [
+    20165.03,
+    841.78,
+    1152.03,
+    63.98
+   ],
+   "mar": "42.6666px 0px 0px",
+   "cls": "mt-[4em]",
+   "t": "Programs Creating an employee recognition program: step by step A step"
+  },
+  {
+   "box": [
+    21051.61,
+    789.53,
+    1152.03,
+    63.98
+   ],
+   "mar": "42.6666px 0px 0px",
+   "cls": "mt-[4em]",
+   "t": "Ideas and templates 35 creative employee recognition ideas Thirty-five"
+  },
+  {
+   "box": [
+    21885.94,
+    447.83,
+    1152.03,
+    63.98
+   ],
+   "mar": "42.6666px 0px 0px",
+   "cls": "mt-[4em]",
+   "t": "Remote and virtual Moving a recognition program from in-person to virt"
+  },
+  {
+   "box": [
+    22378.56,
+    447.83,
+    1152.03,
+    63.98
+   ],
+   "mar": "42.6666px 0px 0px",
+   "cls": "mt-[4em]",
+   "t": "Occasions Employee Appreciation Day: what it is and how to mark it Whe"
+  },
+  {
+   "box": [
+    22871.19,
+    476.16,
+    1152.03,
+    63.98
+   ],
+   "mar": "42.6666px 0px 0px",
+   "cls": "mt-[4em]",
+   "t": "Measuring and tools Employee Recognition in Slack: A Practical Setup G"
+  },
+  {
+   "box": [
+    23413.48,
+    0,
+    0,
+    0
+   ],
+   "mar": "0px",
+   "cls": "pointer-events-none",
+   "t": ""
+  },
+  {
+   "box": [
+    23413.48,
+    159.98,
+    1279.98,
+    0
+   ],
+   "mar": "0px",
+   "cls": "relative z-[200] h-[15em] bg-cream",
+   "t": ""
+  },
+  {
+   "box": [
+    23735.47,
+    182.91,
+    1152.03,
+    63.98
+   ],
+   "mar": "0px 0px 44.8px",
+   "cls": "my-[4.2em] text-center max-wf-mini:my-[3.5em] mt-0 max-wf-mini:mt-0 flex justify-center max-wf-phone:flex-col",
+   "t": "Want to access our Practical Guide of Employee Recognition?"
+  },
+  {
+   "box": [
+    23963.17,
+    222.14,
+    1152.03,
+    63.98
+   ],
+   "mar": "44.8px 0px",
+   "cls": "my-[4.2em] text-center max-wf-mini:my-[3.5em]",
+   "t": "Gain valuable insights and practical tips to foster a culture of posit"
+  },
+  {
+   "box": [
+    24230.11,
+    253.94,
+    541.63,
+    369.19
+   ],
+   "mar": "0px 305.203px 17.0667px",
+   "cls": "mx-auto mb-[1.6em] flex w-full max-w-[80ch] flex-col gap-[10px]",
+   "t": "Download"
+  }
+ ],
+ "roles": [
+  {
+   "tag": "DIV",
+   "cls": "relative z-[999999998] flex w-full justify-between px-[2.9em] py-[1.7em] max-wf-phone:px-[1.5em]",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "17.0667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "18.1333px 30.9333px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    0,
+    76.59,
+    1280,
+    0
+   ],
+   "n": 1,
+   "t": "Home ESG Pricing Customers Resources Purpose Login Schedule "
+  },
+  {
+   "tag": "A",
+   "cls": "flex w-[13.471em] items-center max-wf-tablet:w-[17em]",
+   "fs": "10.6667px",
+   "fw": "600",
+   "lh": "10.6667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "underline",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    18.13,
+    40.34,
+    143.69,
+    30.92
+   ],
+   "n": 1,
+   "t": ""
+  },
+  {
+   "tag": "IMG",
+   "cls": "h-auto w-full",
+   "fs": "10.6667px",
+   "fw": "600",
+   "lh": "10.6667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "100%",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    18.13,
+    40.34,
+    143.69,
+    30.92
+   ],
+   "n": 1,
+   "t": ""
+  },
+  {
+   "tag": "DIV",
+   "cls": "flex items-center max-wf-tablet:hidden",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "17.0667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    18.13,
+    40.34,
+    832.2,
+    416.88
+   ],
+   "n": 1,
+   "t": "Home ESG Pricing Customers Resources Purpose Login Schedule "
+  },
+  {
+   "tag": "A",
+   "cls": "mr-[2.5em] flex items-center font-normal text-black no-underline",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "10.6667px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px 26.6667px 0px 0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    22.45,
+    31.67,
+    45.61,
+    416.88
+   ],
+   "n": 7,
+   "t": "Home"
+  },
+  {
+   "tag": "SPAN",
+   "cls": "text-[1.5625em] leading-[1.9] hover:underline",
+   "fs": "16.6667px",
+   "fw": "400",
+   "lh": "31.6667px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    22.45,
+    31.67,
+    45.61,
+    416.88
+   ],
+   "n": 8,
+   "t": "Home"
+  },
+  {
+   "tag": "IMG",
+   "cls": "mr-[0.7em] w-[1.26708em]",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "10.6667px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px 7.46666px 0px 0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "100%",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    26.83,
+    22.91,
+    13.5,
+    489.14
+   ],
+   "n": 1,
+   "t": ""
+  },
+  {
+   "tag": "A",
+   "cls": "rounded-[30px] border-2 border-black px-[1.8em] py-[0.2em] font-normal text-black no-underline",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "10.6667px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "2.13333px 19.2px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "2px solid rgb(0, 0, 0)",
+   "br": "30px",
+   "maxw": "none",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    18.33,
+    39.92,
+    175.72,
+    1073.36
+   ],
+   "n": 1,
+   "t": "Schedule a demo"
+  },
+  {
+   "tag": "MAIN",
+   "cls": "relative w-full overflow-hidden",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "17.0667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    76.59,
+    24477.84,
+    1280,
+    0
+   ],
+   "n": 1,
+   "t": "Employee recognition Employee recognition is telling a colle"
+  },
+  {
+   "tag": "SECTION",
+   "cls": "relative bg-cream",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "17.0667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgb(255, 255, 243)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    44.61,
+    23400.86,
+    1280,
+    0
+   ],
+   "n": 2,
+   "t": "Employee recognition Employee recognition is telling a colle"
+  },
+  {
+   "tag": "DIV",
+   "cls": "mx-auto -mt-[3em] w-full max-w-[1920px] px-[6em] max-wf-tablet:px-[6vw] pb-[5em]",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "17.0667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "-32px 0px 0px",
+   "pad": "0px 64px 53.3333px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "1920px",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    44.61,
+    23400.86,
+    1280,
+    0
+   ],
+   "n": 1,
+   "t": "Employee recognition Employee recognition is telling a colle"
+  },
+  {
+   "tag": "DIV",
+   "cls": "pt-[10.2em] max-wf-mini:pt-[11.8em]",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "17.0667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "108.8px 0px 0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    44.61,
+    377.86,
+    1152.03,
+    63.98
+   ],
+   "n": 1,
+   "t": "Employee recognition Employee recognition is telling a colle"
+  },
+  {
+   "tag": "DIV",
+   "cls": "relative mx-auto w-[108em] max-wf-tablet:w-[80em] max-wf-phone:w-full max-wf-mini:flex max-wf-mini:w-auto max-wf-mini:flex-col max-wf-mini:items-center",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "17.0667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px 0.03125px 0px 0.015625px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    153.41,
+    269.06,
+    1151.98,
+    64
+   ],
+   "n": 1,
+   "t": "Employee recognition Employee recognition is telling a colle"
+  },
+  {
+   "tag": "H1",
+   "cls": "mx-auto max-w-[49ch] text-center max-wf-mini:text-[3.9em]",
+   "fs": "65.3333px",
+   "fw": "600",
+   "lh": "97.3466px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "ivypresto-headline",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "1981.52px",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    153.41,
+    97.33,
+    1151.98,
+    64
+   ],
+   "n": 1,
+   "t": "Employee recognition"
+  },
+  {
+   "tag": "DIV",
+   "cls": "my-[4.2em] text-center max-wf-mini:my-[3.5em]",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "17.0667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "44.8px 0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    295.53,
+    126.94,
+    1151.98,
+    64
+   ],
+   "n": 29,
+   "t": "Employee recognition is telling a colleague, specifically an"
+  },
+  {
+   "tag": "P",
+   "cls": "mx-auto max-w-[49ch] text-center",
+   "fs": "18.6667px",
+   "fw": "400",
+   "lh": "31.7333px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px 285.641px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "580.714px",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    295.53,
+    126.94,
+    580.7,
+    349.64
+   ],
+   "n": 1,
+   "t": "Employee recognition is telling a colleague, specifically an"
+  },
+  {
+   "tag": "DIV",
+   "cls": "marketing-rich-text mx-auto max-w-[77.78em] max-wf-tablet:w-auto",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "17.0667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px 161.203px 0px 161.188px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "829.653px",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    467.27,
+    1101.02,
+    829.64,
+    225.17
+   ],
+   "n": 7,
+   "t": "What employee recognition is Employee recognition is the ack"
+  },
+  {
+   "tag": "H2",
+   "cls": "",
+   "fs": "48px",
+   "fw": "600",
+   "lh": "57.6px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "ivypresto-headline",
+   "td": "none",
+   "mar": "0px 0px 38.4px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    467.27,
+    57.59,
+    829.64,
+    225.17
+   ],
+   "n": 11,
+   "t": "What employee recognition is"
+  },
+  {
+   "tag": "P",
+   "cls": "",
+   "fs": "18.6667px",
+   "fw": "400",
+   "lh": "31.7333px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px 0px 29.8667px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    563.25,
+    158.67,
+    829.64,
+    225.17
+   ],
+   "n": 53,
+   "t": "Employee recognition is the acknowledgement of a person’s ef"
+  },
+  {
+   "tag": "DIV",
+   "cls": "my-[4em]",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "17.0667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "42.6666px 0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    1637.61,
+    137.59,
+    1152.03,
+    63.98
+   ],
+   "n": 6,
+   "t": "69% of employees work harder when recognised1 39% of employe"
+  },
+  {
+   "tag": "DIV",
+   "cls": "my-[4.2em] text-center max-wf-mini:my-[3.5em] flex justify-around max-wf-phone:flex-col max-wf-phone:items-center mt-[6.5em] max-wf-mini:mt-[6.5em]",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "17.0667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "69.3333px 0px 44.8px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    1637.61,
+    137.59,
+    1152.03,
+    63.98
+   ],
+   "n": 1,
+   "t": "69% of employees work harder when recognised1 39% of employe"
+  },
+  {
+   "tag": "DIV",
+   "cls": "flex w-1/2 justify-around max-wf-phone:w-full ",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "17.0667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    1637.61,
+    137.59,
+    576.02,
+    63.98
+   ],
+   "n": 10,
+   "t": "69% of employees work harder when recognised1 39% of employe"
+  },
+  {
+   "tag": "SPAN",
+   "cls": "mb-[1.2em] flex h-[5.75094em] w-[11.2528em] items-center justify-center rounded-[46px] border-2 border-black bg-leaf",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "17.0667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px 0px 12.8px",
+   "pad": "0px",
+   "bg": "rgb(190, 237, 192)",
+   "bd": "2px solid rgb(0, 0, 0)",
+   "br": "46px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    1637.61,
+    61.33,
+    120.02,
+    147.97
+   ],
+   "n": 4,
+   "t": "69%"
+  },
+  {
+   "tag": "SPAN",
+   "cls": "text-[2.5em] leading-[1.54] font-bold text-black max-wf-phone:text-[2.4em] text-center",
+   "fs": "26.6667px",
+   "fw": "700",
+   "lh": "41.0667px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    1647.73,
+    41.06,
+    55.95,
+    180
+   ],
+   "n": 4,
+   "t": "69%"
+  },
+  {
+   "tag": "P",
+   "cls": "mx-auto max-w-[49ch] text-center",
+   "fs": "18.6667px",
+   "fw": "400",
+   "lh": "31.7333px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "580.714px",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    1711.73,
+    63.47,
+    266.66,
+    74.66
+   ],
+   "n": 4,
+   "t": "of employees work harder when recognised1"
+  },
+  {
+   "tag": "A",
+   "cls": "ml-[0.2em] no-underline",
+   "fs": "18.6667px",
+   "fw": "600",
+   "lh": "18.6667px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px 0px 0px 3.73333px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    1747.47,
+    22,
+    6.72,
+    281.02
+   ],
+   "n": 4,
+   "t": "1"
+  },
+  {
+   "tag": "SUP",
+   "cls": "",
+   "fs": "14px",
+   "fw": "600",
+   "lh": "0px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    1744.48,
+    16,
+    6.72,
+    281.02
+   ],
+   "n": 4,
+   "t": "1"
+  },
+  {
+   "tag": "A",
+   "cls": "",
+   "fs": "18.6667px",
+   "fw": "600",
+   "lh": "18.6667px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "Rubik",
+   "td": "underline",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    2107.73,
+    22,
+    421.59,
+    484.08
+   ],
+   "n": 17,
+   "t": "effects of recognition on retention and morale"
+  },
+  {
+   "tag": "H3",
+   "cls": "",
+   "fs": "26.6667px",
+   "fw": "700",
+   "lh": "41.0667px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px 0px 8px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    2386.38,
+    41.06,
+    829.64,
+    225.17
+   ],
+   "n": 10,
+   "t": "Who gives it"
+  },
+  {
+   "tag": "STRONG",
+   "cls": "",
+   "fs": "18.6667px",
+   "fw": "700",
+   "lh": "31.7333px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    2439.42,
+    22,
+    235.06,
+    225.17
+   ],
+   "n": 11,
+   "t": "Peer-to-peer recognition"
+  },
+  {
+   "tag": "UL",
+   "cls": "flex w-full flex-wrap justify-center gap-[3em]",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "17.0667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "none",
+   "box": [
+    6210.06,
+    903.61,
+    1152.03,
+    63.98
+   ],
+   "n": 14,
+   "t": "Recognition messages for every occasion 35 occasions, each w"
+  },
+  {
+   "tag": "LI",
+   "cls": "relative z-[100] w-[42em] list-none rounded-[10px] border-2 border-black bg-white p-[2.4em] max-wf-mini:max-w-full",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "17.0667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "25.6px",
+   "bg": "rgb(255, 255, 255)",
+   "bd": "2px solid rgb(0, 0, 0)",
+   "br": "10px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "none",
+   "box": [
+    6210.06,
+    281.39,
+    447.98,
+    176.02
+   ],
+   "n": 46,
+   "t": "Recognition messages for every occasion 35 occasions, each w"
+  },
+  {
+   "tag": "A",
+   "cls": "no-underline",
+   "fs": "10.6667px",
+   "fw": "600",
+   "lh": "10.6667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "none",
+   "box": [
+    6237.66,
+    226.2,
+    392.8,
+    203.61
+   ],
+   "n": 46,
+   "t": "Recognition messages for every occasion 35 occasions, each w"
+  },
+  {
+   "tag": "H3",
+   "cls": "font-headline text-[3.5em] leading-[1.4] font-semibold text-black",
+   "fs": "37.3333px",
+   "fw": "600",
+   "lh": "52.2666px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "ivypresto-headline",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "none",
+   "box": [
+    6237.66,
+    104.5,
+    392.8,
+    203.61
+   ],
+   "n": 46,
+   "t": "Recognition messages for every occasion"
+  },
+  {
+   "tag": "P",
+   "cls": "my-[1em] text-[1.5625em]",
+   "fs": "16.6667px",
+   "fw": "400",
+   "lh": "28.3333px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "16.6667px 0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "none",
+   "box": [
+    6358.81,
+    56.66,
+    392.8,
+    203.61
+   ],
+   "n": 42,
+   "t": "35 occasions, each with example messages and a note on why e"
+  },
+  {
+   "tag": "P",
+   "cls": "mt-[0.5em] text-[1.75em] font-semibold",
+   "fs": "18.6667px",
+   "fw": "600",
+   "lh": "31.7333px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "9.33333px 0px 0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "none",
+   "box": [
+    6432.13,
+    31.73,
+    392.8,
+    203.61
+   ],
+   "n": 46,
+   "t": "Browse the occasions"
+  },
+  {
+   "tag": "DL",
+   "cls": "mx-auto w-[70.3em] text-left max-wf-mini:max-w-full",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "17.0667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px 201.094px 0px 201.078px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "left",
+   "lst": "disc",
+   "box": [
+    13479,
+    1534.09,
+    749.86,
+    265.06
+   ],
+   "n": 2,
+   "t": "Employee recognition Employee recognition is the act of ackn"
+  },
+  {
+   "tag": "DIV",
+   "cls": "mb-[2.4em]",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "17.0667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px 0px 25.6px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "left",
+   "lst": "disc",
+   "box": [
+    13479,
+    130.38,
+    749.86,
+    265.06
+   ],
+   "n": 10,
+   "t": "Employee recognition Employee recognition is the act of ackn"
+  },
+  {
+   "tag": "DT",
+   "cls": "flex items-center text-[2em] leading-[1.5] font-bold text-black",
+   "fs": "21.3333px",
+   "fw": "700",
+   "lh": "32px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "left",
+   "lst": "disc",
+   "box": [
+    13479,
+    31.98,
+    749.86,
+    265.06
+   ],
+   "n": 10,
+   "t": "Employee recognition"
+  },
+  {
+   "tag": "IMG",
+   "cls": "mr-[0.45em] w-[0.8em] shrink-0",
+   "fs": "21.3333px",
+   "fw": "700",
+   "lh": "32px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px 9.6px 0px 0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "100%",
+   "ta": "left",
+   "lst": "disc",
+   "box": [
+    13480.52,
+    28.95,
+    17.06,
+    265.06
+   ],
+   "n": 10,
+   "t": ""
+  },
+  {
+   "tag": "DD",
+   "cls": "mt-[0.3em]",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "17.0667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "3.2px 0px 0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "left",
+   "lst": "disc",
+   "box": [
+    13514.17,
+    95.2,
+    749.86,
+    265.06
+   ],
+   "n": 10,
+   "t": "Employee recognition is the act of acknowledging a specific "
+  },
+  {
+   "tag": "P",
+   "cls": "text-[1.75em] leading-[1.7]",
+   "fs": "18.6667px",
+   "fw": "400",
+   "lh": "31.7333px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "left",
+   "lst": "disc",
+   "box": [
+    13514.17,
+    95.2,
+    749.86,
+    265.06
+   ],
+   "n": 19,
+   "t": "Employee recognition is the act of acknowledging a specific "
+  },
+  {
+   "tag": "DIV",
+   "cls": "w-[70.3em] max-wf-mini:mt-[3em] max-wf-mini:w-auto mx-auto mt-0 max-wf-phone:w-auto",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "17.0667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px 201.078px 0px 201.094px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    15692.88,
+    71.03,
+    749.86,
+    265.08
+   ],
+   "n": 2,
+   "t": "Questions people ask"
+  },
+  {
+   "tag": "H2",
+   "cls": "font-headline text-[4.5em] leading-[1.48] font-semibold text-black max-wf-mini:text-center max-wf-mini:text-[3.9em] text-center",
+   "fs": "48px",
+   "fw": "600",
+   "lh": "71.04px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "ivypresto-headline",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    15692.88,
+    71.03,
+    749.86,
+    265.08
+   ],
+   "n": 2,
+   "t": "Questions people ask"
+  },
+  {
+   "tag": "DIV",
+   "cls": "mb-[3em]",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "17.0667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px 0px 32px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "left",
+   "lst": "disc",
+   "box": [
+    15808.7,
+    174.39,
+    749.86,
+    265.06
+   ],
+   "n": 9,
+   "t": "What is employee recognition? Employee recognition is the ac"
+  },
+  {
+   "tag": "DT",
+   "cls": "text-[2.5em] leading-[1.54] font-bold text-black",
+   "fs": "26.6667px",
+   "fw": "700",
+   "lh": "41.0667px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "left",
+   "lst": "disc",
+   "box": [
+    15808.7,
+    41.06,
+    749.86,
+    265.06
+   ],
+   "n": 9,
+   "t": "What is employee recognition?"
+  },
+  {
+   "tag": "DD",
+   "cls": "mt-[0.6em]",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "17.0667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "6.4px 0px 0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "left",
+   "lst": "disc",
+   "box": [
+    15856.16,
+    126.94,
+    749.86,
+    265.06
+   ],
+   "n": 9,
+   "t": "Employee recognition is the act of acknowledging a person’s "
+  },
+  {
+   "tag": "DIV",
+   "cls": "mt-[4em]",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "17.0667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "42.6666px 0px 0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    17899.25,
+    841.78,
+    1152.03,
+    63.98
+   ],
+   "n": 8,
+   "t": "Why it matters Effects of employee recognition on retention "
+  },
+  {
+   "tag": "H3",
+   "cls": "text-[2.5em] leading-[1.54] font-bold text-black max-wf-phone:text-[2.4em] text-center",
+   "fs": "26.6667px",
+   "fw": "700",
+   "lh": "41.0667px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    17899.25,
+    41.06,
+    1152.03,
+    63.98
+   ],
+   "n": 8,
+   "t": "Why it matters"
+  },
+  {
+   "tag": "SECTION",
+   "cls": "relative",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "17.0667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    23413.48,
+    161.98,
+    1280,
+    0
+   ],
+   "n": 1,
+   "t": ""
+  },
+  {
+   "tag": "DIV",
+   "cls": "relative mx-auto -mt-[3em] w-[120em]",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "17.0667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "-32px 0px 0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    23413.48,
+    159.98,
+    1279.98,
+    0
+   ],
+   "n": 1,
+   "t": ""
+  },
+  {
+   "tag": "IMG",
+   "cls": "marketing-drift-leaf",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "17.0667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "100%",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    23430.15,
+    151.57,
+    129.94,
+    10.26
+   ],
+   "n": 12,
+   "t": ""
+  },
+  {
+   "tag": "DIV",
+   "cls": "relative z-[200] h-[15em] bg-cream",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "17.0667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgb(255, 255, 243)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    23413.48,
+    159.98,
+    1279.98,
+    0
+   ],
+   "n": 1,
+   "t": ""
+  },
+  {
+   "tag": "DIV",
+   "cls": "relative z-[201] h-[2px] bg-black",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "17.0667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgb(0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    23573.47,
+    2,
+    1280,
+    0
+   ],
+   "n": 1,
+   "t": ""
+  },
+  {
+   "tag": "SECTION",
+   "cls": "relative bg-cream-dark",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "17.0667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgb(237, 237, 226)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    23543.48,
+    1010.95,
+    1280,
+    0
+   ],
+   "n": 1,
+   "t": "Want to access our Practical Guide of Employee Recognition? "
+  },
+  {
+   "tag": "DIV",
+   "cls": "mx-auto -mt-[3em] w-full max-w-[1920px] px-[6em] max-wf-tablet:px-[6vw] pt-[18em] pb-[5em]",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "17.0667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "-32px 0px 0px",
+   "pad": "192px 64px 53.3333px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "1920px",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    23543.48,
+    1010.95,
+    1280,
+    0
+   ],
+   "n": 1,
+   "t": "Want to access our Practical Guide of Employee Recognition? "
+  },
+  {
+   "tag": "DIV",
+   "cls": "my-[4.2em] text-center max-wf-mini:my-[3.5em] mt-0 max-wf-mini:mt-0 flex justify-center max-wf-phone:flex-col",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "17.0667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px 0px 44.8px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    23735.47,
+    182.91,
+    1152.03,
+    63.98
+   ],
+   "n": 1,
+   "t": "Want to access our Practical Guide of Employee Recognition?"
+  },
+  {
+   "tag": "H2",
+   "cls": "font-headline text-[6.125em] leading-[1.4] font-semibold text-black max-wf-mini:text-[5.1em] text-center",
+   "fs": "65.3333px",
+   "fw": "600",
+   "lh": "91.4666px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "ivypresto-headline",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    23735.47,
+    182.91,
+    1152.03,
+    63.98
+   ],
+   "n": 1,
+   "t": "Want to access our Practical Guide of Employee Recognition?"
+  },
+  {
+   "tag": "P",
+   "cls": "mx-auto max-w-[59ch] text-center",
+   "fs": "18.6667px",
+   "fw": "400",
+   "lh": "31.7333px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px 226.406px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "699.228px",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    23963.17,
+    222.14,
+    699.22,
+    290.39
+   ],
+   "n": 1,
+   "t": "Gain valuable insights and practical tips to foster a cultur"
+  },
+  {
+   "tag": "BR",
+   "cls": "",
+   "fs": "18.6667px",
+   "fw": "400",
+   "lh": "31.7333px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    24062.38,
+    22,
+    0,
+    897.69
+   ],
+   "n": 2,
+   "t": ""
+  },
+  {
+   "tag": "STRONG",
+   "cls": "",
+   "fs": "18.6667px",
+   "fw": "700",
+   "lh": "31.7333px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    24125.84,
+    22,
+    65.13,
+    299.55
+   ],
+   "n": 2,
+   "t": "Please "
+  },
+  {
+   "tag": "DIV",
+   "cls": "mx-auto mb-[1.6em] flex w-full max-w-[80ch] flex-col gap-[10px]",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "17.0667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px 305.203px 17.0667px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "541.629px",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    24230.11,
+    253.94,
+    541.63,
+    369.19
+   ],
+   "n": 1,
+   "t": "Download"
+  },
+  {
+   "tag": "FORM",
+   "cls": "flex w-full flex-col justify-center gap-[10px]",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "17.0667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    24230.11,
+    253.94,
+    541.63,
+    369.19
+   ],
+   "n": 1,
+   "t": "Download"
+  },
+  {
+   "tag": "INPUT",
+   "cls": "absolute -left-[9999px] size-px opacity-0",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "17.0667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    24356.58,
+    1,
+    1,
+    -9999
+   ],
+   "n": 2,
+   "t": ""
+  },
+  {
+   "tag": "INPUT",
+   "cls": "h-[3em] max-w-[49ch] rounded-[7px] border-2 border-black px-[0.9em] text-[1.75em] leading-[1.7] text-black placeholder:text-black/60",
+   "fs": "18.6667px",
+   "fw": "400",
+   "lh": "31.7333px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px 16.8px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "2px solid rgb(0, 0, 0)",
+   "br": "7px",
+   "maxw": "580.714px",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    24230.11,
+    55.98,
+    541.63,
+    369.19
+   ],
+   "n": 3,
+   "t": ""
+  },
+  {
+   "tag": "BUTTON",
+   "cls": "h-[3em] rounded-[10px] bg-black px-[1.4em] text-[1.75em] leading-[1.7] font-bold text-white disabled:opacity-70",
+   "fs": "18.6667px",
+   "fw": "700",
+   "lh": "31.7333px",
+   "ls": "normal",
+   "color": "rgb(255, 255, 255)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px 26.1333px",
+   "bg": "rgb(0, 0, 0)",
+   "bd": "",
+   "br": "10px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    24428.06,
+    55.98,
+    541.63,
+    369.19
+   ],
+   "n": 1,
+   "t": "Download"
+  },
+  {
+   "tag": "DIV",
+   "cls": "mx-auto -mt-[3em] w-full max-w-[1920px] px-[6em] max-wf-tablet:px-[6vw] py-[5em]",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "17.0667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "-32px 0px 0px",
+   "pad": "53.3333px 64px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "1920px",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    24522.45,
+    542.81,
+    1280,
+    0
+   ],
+   "n": 1,
+   "t": "Sign up for our newsletter and plant a tree Plant a tree ESG"
+  },
+  {
+   "tag": "A",
+   "cls": "block w-[16.0983em]",
+   "fs": "10.6667px",
+   "fw": "600",
+   "lh": "10.6667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "underline",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    24620.58,
+    48.2,
+    171.7,
+    63.98
+   ],
+   "n": 1,
+   "t": ""
+  },
+  {
+   "tag": "IMG",
+   "cls": "h-auto w-full",
+   "fs": "10.6667px",
+   "fw": "600",
+   "lh": "10.6667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "100%",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    24620.58,
+    48.2,
+    171.7,
+    63.98
+   ],
+   "n": 4,
+   "t": ""
+  },
+  {
+   "tag": "DIV",
+   "cls": "mb-[4em] flex flex-col items-start",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "17.0667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px 0px 42.6666px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    24713.58,
+    167.42,
+    406.28,
+    63.98
+   ],
+   "n": 1,
+   "t": "Sign up for our newsletter and plant a tree Plant a tree"
+  },
+  {
+   "tag": "P",
+   "cls": "mt-[0.5em] font-semibold max-wf-mini:mt-0 max-wf-mini:ml-[1em] max-wf-mini:text-left max-wf-mini:leading-[1.6]",
+   "fs": "18.6667px",
+   "fw": "600",
+   "lh": "31.7333px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "9.33333px 0px 0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    24722.91,
+    31.73,
+    384.02,
+    63.98
+   ],
+   "n": 1,
+   "t": "Sign up for our newsletter and plant a tree"
+  },
+  {
+   "tag": "IMG",
+   "cls": "mt-[0.4em] ml-[0.7em] w-[1.26708em] max-wf-mini:mb-[0.9em] max-wf-mini:w-[2em]",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "17.0667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "4.26666px 0px 0px 7.46666px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "100%",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    24717.84,
+    36.8,
+    13.5,
+    455.45
+   ],
+   "n": 1,
+   "t": ""
+  },
+  {
+   "tag": "DIV",
+   "cls": "mt-[1em] mb-[1.6em] flex w-full flex-col",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "17.0667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "10.6667px 0px 17.0667px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    24765.3,
+    55.98,
+    406.28,
+    63.98
+   ],
+   "n": 1,
+   "t": "Plant a tree"
+  },
+  {
+   "tag": "FORM",
+   "cls": "relative flex w-full justify-center",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "17.0667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    24765.3,
+    55.98,
+    406.28,
+    63.98
+   ],
+   "n": 1,
+   "t": "Plant a tree"
+  },
+  {
+   "tag": "INPUT",
+   "cls": "h-[3em] w-full max-w-[49ch] rounded-l-[7px] border-2 border-black px-[0.9em] text-[1.75em] leading-[1.7] text-black placeholder:text-black/60",
+   "fs": "18.6667px",
+   "fw": "400",
+   "lh": "31.7333px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px 16.8px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "2px solid rgb(0, 0, 0)",
+   "br": "7px 0px 0px 7px",
+   "maxw": "580.714px",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    24765.3,
+    55.98,
+    246.59,
+    63.98
+   ],
+   "n": 1,
+   "t": ""
+  },
+  {
+   "tag": "BUTTON",
+   "cls": "h-[3em] shrink-0 rounded-r-[10px] bg-black px-[1.4em] text-[1.75em] leading-[1.7] font-bold text-white disabled:opacity-70",
+   "fs": "18.6667px",
+   "fw": "700",
+   "lh": "31.7333px",
+   "ls": "normal",
+   "color": "rgb(255, 255, 255)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px 26.1333px",
+   "bg": "rgb(0, 0, 0)",
+   "bd": "",
+   "br": "0px 10px 10px 0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    24765.3,
+    55.98,
+    159.69,
+    310.58
+   ],
+   "n": 1,
+   "t": "Plant a tree"
+  },
+  {
+   "tag": "A",
+   "cls": "mr-[1.2em] flex size-[4em] items-center justify-center rounded-full border-2 border-black bg-cream-dark",
+   "fs": "10.6667px",
+   "fw": "600",
+   "lh": "10.6667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "underline",
+   "mar": "0px 12.8px 0px 0px",
+   "pad": "0px",
+   "bg": "rgb(237, 237, 226)",
+   "bd": "2px solid rgb(0, 0, 0)",
+   "br": "3.35544e+07px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    24838.34,
+    42.66,
+    42.66,
+    63.98
+   ],
+   "n": 3,
+   "t": ""
+  },
+  {
+   "tag": "NAV",
+   "cls": "flex justify-end max-wf-mini:flex-col",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "17.0667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    24713.58,
+    237.56,
+    603.59,
+    612.42
+   ],
+   "n": 1,
+   "t": "ESG Pricing Customers Blog Schedule a demo Our purpose Help "
+  },
+  {
+   "tag": "UL",
+   "cls": "flex list-none flex-col items-start mr-[3.1em]",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "17.0667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px 33.0667px 0px 0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "none",
+   "box": [
+    24713.58,
+    237.56,
+    147.69,
+    612.42
+   ],
+   "n": 2,
+   "t": "ESG Pricing Customers Blog Schedule a demo"
+  },
+  {
+   "tag": "LI",
+   "cls": "",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "17.0667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "none",
+   "box": [
+    24713.58,
+    39.59,
+    35.36,
+    612.42
+   ],
+   "n": 15,
+   "t": "ESG"
+  },
+  {
+   "tag": "A",
+   "cls": "block mb-[1.2em] text-[1.6875em] font-medium text-black no-underline hover:underline",
+   "fs": "18px",
+   "fw": "500",
+   "lh": "18px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px 0px 21.6px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "none",
+   "box": [
+    24713.58,
+    18,
+    35.36,
+    612.42
+   ],
+   "n": 15,
+   "t": "ESG"
+  },
+  {
+   "tag": "DIV",
+   "cls": "my-[4.2em] text-center max-wf-mini:my-[3.5em] mb-0 max-wf-mini:mb-0 flex flex-row items-center justify-between max-wf-mini:flex-col-reverse max-wf-mini:items-start",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "17.0667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "44.8px 0px 0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    24995.94,
+    16,
+    1152.03,
+    63.98
+   ],
+   "n": 1,
+   "t": "© Evergreen • Made with 💚 in Helsinki, Finland Terms of ser"
+  },
+  {
+   "tag": "SPAN",
+   "cls": "text-[1.5em] leading-none max-wf-mini:mb-[1.1em]",
+   "fs": "16px",
+   "fw": "400",
+   "lh": "16px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    24995.94,
+    16,
+    349.31,
+    63.98
+   ],
+   "n": 1,
+   "t": "© Evergreen • Made with 💚 in Helsinki, Finland"
+  },
+  {
+   "tag": "SPAN",
+   "cls": "flex max-wf-mini:flex-col max-wf-mini:text-left",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "17.0667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    24995.94,
+    16,
+    243.06,
+    972.95
+   ],
+   "n": 1,
+   "t": "Terms of service Privacy policy"
+  },
+  {
+   "tag": "A",
+   "cls": "mr-[1.2em] text-[1.5em] font-normal no-underline hover:underline max-wf-mini:mb-[1.1em]",
+   "fs": "16px",
+   "fw": "400",
+   "lh": "16px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px 19.2px 0px 0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    24995.94,
+    16,
+    121.55,
+    972.95
+   ],
+   "n": 1,
+   "t": "Terms of service"
+  },
+  {
+   "tag": "A",
+   "cls": "text-[1.5em] font-normal no-underline hover:underline max-wf-mini:mb-[1.1em]",
+   "fs": "16px",
+   "fw": "400",
+   "lh": "16px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    24995.94,
+    16,
+    102.33,
+    1113.69
+   ],
+   "n": 1,
+   "t": "Privacy policy"
+  }
+ ],
+ "imgs": [
+  {
+   "src": "https://www.evergreen.so/marketing/evergreen-logosvg-216cd4.svg",
+   "alt": "Evergreen",
+   "w": 143.69,
+   "h": 40.34,
+   "nw": 216,
+   "nh": 61,
+   "fit": "fill",
+   "loading": "auto",
+   "cls": "h-auto w-full"
+  },
+  {
+   "src": "https://www.evergreen.so/marketing/ever-small-leafsvg-e988d6.svg",
+   "alt": "",
+   "w": 13.5,
+   "h": 22.91,
+   "nw": 21,
+   "nh": 36,
+   "fit": "fill",
+   "loading": "auto",
+   "cls": "mr-[0.7em] w-[1.26708em]"
+  },
+  {
+   "src": "https://www.evergreen.so/marketing/ever-small-leafsvg-e988d6.svg",
+   "alt": "",
+   "w": 17.06,
+   "h": 28.95,
+   "nw": 21,
+   "nh": 36,
+   "fit": "fill",
+   "loading": "auto",
+   "cls": "mr-[0.45em] w-[0.8em] shrink-0"
+  },
+  {
+   "src": "https://www.evergreen.so/marketing/ever-small-leafsvg-e988d6.svg",
+   "alt": "",
+   "w": 17.06,
+   "h": 28.95,
+   "nw": 21,
+   "nh": 36,
+   "fit": "fill",
+   "loading": "auto",
+   "cls": "mr-[0.45em] w-[0.8em] shrink-0"
+  },
+  {
+   "src": "https://www.evergreen.so/marketing/ever-small-leafsvg-e988d6.svg",
+   "alt": "",
+   "w": 17.06,
+   "h": 28.95,
+   "nw": 21,
+   "nh": 36,
+   "fit": "fill",
+   "loading": "auto",
+   "cls": "mr-[0.45em] w-[0.8em] shrink-0"
+  },
+  {
+   "src": "https://www.evergreen.so/marketing/ever-small-leafsvg-e988d6.svg",
+   "alt": "",
+   "w": 17.06,
+   "h": 28.95,
+   "nw": 21,
+   "nh": 36,
+   "fit": "fill",
+   "loading": "auto",
+   "cls": "mr-[0.45em] w-[0.8em] shrink-0"
+  },
+  {
+   "src": "https://www.evergreen.so/marketing/ever-small-leafsvg-e988d6.svg",
+   "alt": "",
+   "w": 17.06,
+   "h": 28.95,
+   "nw": 21,
+   "nh": 36,
+   "fit": "fill",
+   "loading": "auto",
+   "cls": "mr-[0.45em] w-[0.8em] shrink-0"
+  },
+  {
+   "src": "https://www.evergreen.so/marketing/ever-small-leafsvg-e988d6.svg",
+   "alt": "",
+   "w": 17.06,
+   "h": 28.95,
+   "nw": 21,
+   "nh": 36,
+   "fit": "fill",
+   "loading": "auto",
+   "cls": "mr-[0.45em] w-[0.8em] shrink-0"
+  },
+  {
+   "src": "https://www.evergreen.so/marketing/ever-small-leafsvg-e988d6.svg",
+   "alt": "",
+   "w": 17.06,
+   "h": 28.95,
+   "nw": 21,
+   "nh": 36,
+   "fit": "fill",
+   "loading": "auto",
+   "cls": "mr-[0.45em] w-[0.8em] shrink-0"
+  },
+  {
+   "src": "https://www.evergreen.so/marketing/ever-small-leafsvg-e988d6.svg",
+   "alt": "",
+   "w": 17.06,
+   "h": 28.95,
+   "nw": 21,
+   "nh": 36,
+   "fit": "fill",
+   "loading": "auto",
+   "cls": "mr-[0.45em] w-[0.8em] shrink-0"
+  },
+  {
+   "src": "https://www.evergreen.so/marketing/ever-small-leafsvg-e988d6.svg",
+   "alt": "",
+   "w": 17.06,
+   "h": 28.95,
+   "nw": 21,
+   "nh": 36,
+   "fit": "fill",
+   "loading": "auto",
+   "cls": "mr-[0.45em] w-[0.8em] shrink-0"
+  },
+  {
+   "src": "https://www.evergreen.so/marketing/ever-small-leafsvg-e988d6.svg",
+   "alt": "",
+   "w": 17.06,
+   "h": 28.95,
+   "nw": 21,
+   "nh": 36,
+   "fit": "fill",
+   "loading": "auto",
+   "cls": "mr-[0.45em] w-[0.8em] shrink-0"
+  },
+  {
+   "src": "https://www.evergreen.so/marketing/ever-regular-leafsvg-1b92f2.svg",
+   "alt": "",
+   "w": 129.94,
+   "h": 151.57,
+   "nw": 116,
+   "nh": 199,
+   "fit": "fill",
+   "loading": "lazy",
+   "cls": "marketing-drift-leaf"
+  },
+  {
+   "src": "https://www.evergreen.so/marketing/leaf-smallersvg-6114e8.svg",
+   "alt": "",
+   "w": 161.48,
+   "h": 179.81,
+   "nw": 86,
+   "nh": 150,
+   "fit": "fill",
+   "loading": "lazy",
+   "cls": "marketing-drift-leaf"
+  },
+  {
+   "src": "https://www.evergreen.so/marketing/ever-regular-leafsvg-1b92f2.svg",
+   "alt": "",
+   "w": 132.59,
+   "h": 151.57,
+   "nw": 116,
+   "nh": 199,
+   "fit": "fill",
+   "loading": "lazy",
+   "cls": "marketing-drift-leaf"
+  },
+  {
+   "src": "https://www.evergreen.so/marketing/leaf-spikesvg-7a4672.svg",
+   "alt": "",
+   "w": 38.75,
+   "h": 77.77,
+   "nw": 27,
+   "nh": 150,
+   "fit": "fill",
+   "loading": "lazy",
+   "cls": "marketing-drift-leaf"
+  },
+  {
+   "src": "https://www.evergreen.so/marketing/leaf-spikesvg-7a4672.svg",
+   "alt": "",
+   "w": 35.09,
+   "h": 78.43,
+   "nw": 27,
+   "nh": 150,
+   "fit": "fill",
+   "loading": "lazy",
+   "cls": "marketing-drift-leaf"
+  },
+  {
+   "src": "https://www.evergreen.so/marketing/ever-regular-leafsvg-1b92f2.svg",
+   "alt": "",
+   "w": 105.31,
+   "h": 145.72,
+   "nw": 116,
+   "nh": 199,
+   "fit": "fill",
+   "loading": "lazy",
+   "cls": "marketing-drift-leaf"
+  },
+  {
+   "src": "https://www.evergreen.so/marketing/ever-regular-leafsvg-1b92f2.svg",
+   "alt": "",
+   "w": 105.31,
+   "h": 145.72,
+   "nw": 116,
+   "nh": 199,
+   "fit": "fill",
+   "loading": "lazy",
+   "cls": "marketing-drift-leaf"
+  },
+  {
+   "src": "https://www.evergreen.so/marketing/leaf-smallersvg-6114e8.svg",
+   "alt": "",
+   "w": 157.05,
+   "h": 180.29,
+   "nw": 86,
+   "nh": 150,
+   "fit": "fill",
+   "loading": "lazy",
+   "cls": "marketing-drift-leaf"
+  },
+  {
+   "src": "https://www.evergreen.so/marketing/ever-regular-leafsvg-1b92f2.svg",
+   "alt": "",
+   "w": 129.94,
+   "h": 151.57,
+   "nw": 116,
+   "nh": 199,
+   "fit": "fill",
+   "loading": "lazy",
+   "cls": "marketing-drift-leaf"
+  },
+  {
+   "src": "https://www.evergreen.so/marketing/ever-regular-leafsvg-1b92f2.svg",
+   "alt": "",
+   "w": 82.56,
+   "h": 135.07,
+   "nw": 116,
+   "nh": 199,
+   "fit": "fill",
+   "loading": "lazy",
+   "cls": "marketing-drift-leaf"
+  },
+  {
+   "src": "https://www.evergreen.so/marketing/leaf-spikesvg-7a4672.svg",
+   "alt": "",
+   "w": 12.81,
+   "h": 78.09,
+   "nw": 27,
+   "nh": 150,
+   "fit": "fill",
+   "loading": "lazy",
+   "cls": "marketing-drift-leaf"
+  },
+  {
+   "src": "https://www.evergreen.so/marketing/ever-regular-leafsvg-1b92f2.svg",
+   "alt": "",
+   "w": 99.45,
+   "h": 143.33,
+   "nw": 116,
+   "nh": 199,
+   "fit": "fill",
+   "loading": "lazy",
+   "cls": "marketing-drift-leaf"
+  },
+  {
+   "src": "https://www.evergreen.so/marketing/evergreen-logosvg-216cd4.svg",
+   "alt": "Evergreen",
+   "w": 171.7,
+   "h": 48.2,
+   "nw": 216,
+   "nh": 61,
+   "fit": "fill",
+   "loading": "auto",
+   "cls": "h-auto w-full"
+  },
+  {
+   "src": "https://www.evergreen.so/marketing/ever-small-leafsvg-e988d6.svg",
+   "alt": "",
+   "w": 13.5,
+   "h": 36.8,
+   "nw": 21,
+   "nh": 36,
+   "fit": "fill",
+   "loading": "auto",
+   "cls": "mt-[0.4em] ml-[0.7em] w-[1.26708em] max-wf-mini:mb-[0.9em] max-wf-mini:w-[2em]"
+  },
+  {
+   "src": "https://www.evergreen.so/marketing/icon-linkedinsvg-777cac.svg",
+   "alt": "",
+   "w": 17.81,
+   "h": 17.81,
+   "nw": 27,
+   "nh": 27,
+   "fit": "fill",
+   "loading": "auto",
+   "cls": "h-[1.67015em] w-auto"
+  },
+  {
+   "src": "https://www.evergreen.so/marketing/icon-twittersvg-6d6f46.svg",
+   "alt": "",
+   "w": 20.78,
+   "h": 17.81,
+   "nw": 31,
+   "nh": 27,
+   "fit": "fill",
+   "loading": "auto",
+   "cls": "h-[1.67015em] w-auto"
+  },
+  {
+   "src": "https://www.evergreen.so/marketing/icon-emailsvg-1a80b8.svg",
+   "alt": "",
+   "w": 22.27,
+   "h": 17.81,
+   "nw": 30,
+   "nh": 24,
+   "fit": "fill",
+   "loading": "auto",
+   "cls": "h-[1.67015em] w-auto"
+  }
+ ],
+ "links": [
+  {
+   "href": "/",
+   "t": ""
+  },
+  {
+   "href": "/",
+   "t": "Home"
+  },
+  {
+   "href": "/esg",
+   "t": "ESG"
+  },
+  {
+   "href": "/pricing",
+   "t": "Pricing"
+  },
+  {
+   "href": "/case-studies",
+   "t": "Customers"
+  },
+  {
+   "href": "/employee-recognition",
+   "t": "Resources"
+  },
+  {
+   "href": "/our-purpose",
+   "t": "Purpose"
+  },
+  {
+   "href": "https://app.evergreen.so/login",
+   "t": "Login"
+  },
+  {
+   "href": "/schedule-a-demo",
+   "t": "Schedule a demo"
+  },
+  {
+   "href": "https://blog.hubspot.com/marketing/11-employee-feedback-statistics",
+   "t": "1"
+  },
+  {
+   "href": "https://blog.hubspot.com/marketing/11-employee-feedback-statistics",
+   "t": "2"
+  },
+  {
+   "href": "https://blog.hubspot.com/marketing/11-employee-feedback-statistics",
+   "t": "3"
+  },
+  {
+   "href": "https://www.apollotechnical.com/employee-recognition-statistics/",
+   "t": "4"
+  },
+  {
+   "href": "/blog/what-are-the-effects-of-the-employee-recognition",
+   "t": "effects of recognition on retention and morale"
+  },
+  {
+   "href": "/blog/why-is-employee-recognition-so-important",
+   "t": "why recognition matters"
+  },
+  {
+   "href": "/blog/creating-a-culture-of-appreciation-peer-to-peer-recognition-templates-and-examples",
+   "t": "peer-to-peer recognition"
+  },
+  {
+   "href": "/employee-recognition/glossary/monetary-recognition",
+   "t": "monetary"
+  },
+  {
+   "href": "/employee-recognition/glossary/non-monetary-recognition",
+   "t": "non-monetary recognition"
+  },
+  {
+   "href": "/blog/employee-recognition-in-slack",
+   "t": "setting up recognition in Slack"
+  },
+  {
+   "href": "/blog/how-to-create-employee-recognition-program-step-by-step-guide",
+   "t": "step-by-step guide to creating a program"
+  },
+  {
+   "href": "/blog/reasons-why-employee-recognition-programs-fail-and-how-to-ensure-its-success",
+   "t": "why recognition programs fail"
+  },
+  {
+   "href": "/blog/5-companies-with-the-best-employee-recognition-programs",
+   "t": "five companies with the best employee recognition programs"
+  },
+  {
+   "href": "/employee-recognition-messages",
+   "t": "Recognition messages for every occasion\n\n35 occasions, each with example message"
+  },
+  {
+   "href": "/employee-recognition-messages/work-anniversary",
+   "t": "Work Anniversary Messages: 14 Examples for Every Milestone\n\nRead the examples"
+  },
+  {
+   "href": "/employee-recognition-messages/going-the-extra-mile",
+   "t": "12 Messages for When Someone Went Above and Beyond\n\nRead the examples"
+  },
+  {
+   "href": "/employee-recognition-messages/promotion",
+   "t": "Promotion Congratulation Messages: 12 That Aren’t Generic\n\nRead the examples"
+  },
+  {
+   "href": "/employee-recognition-messages/thanking-the-whole-team",
+   "t": "Thank You Messages to the Whole Team: 12 Examples\n\nRead the examples"
+  },
+  {
+   "href": "/blog/10-templates-notes-to-thank-your-team-for-great-work",
+   "t": "thank-you note templates"
+  },
+  {
+   "href": "/blog/15-creative-ways-to-give-shoutout-to-coworkers",
+   "t": "coworker shoutouts"
+  },
+  {
+   "href": "/blog/35-creative-ideas-on-how-to-recognize-employees",
+   "t": "35 recognition ideas"
+  },
+  {
+   "href": "/company-values",
+   "t": "Company values, described as behaviour\n\n25 values, each with the behaviours you "
+  },
+  {
+   "href": "/company-values/ownership",
+   "t": "Ownership\n\nOwnership is carrying a problem to the point where it is solved, incl"
+  },
+  {
+   "href": "/company-values/collaboration",
+   "t": "Collaboration\n\nCollaboration is doing the extra work that makes a shared outcome"
+  },
+  {
+   "href": "/company-values/integrity",
+   "t": "Integrity\n\nIntegrity is doing the thing you said you would, and the correct thin"
+  },
+  {
+   "href": "/company-values/gratitude",
+   "t": "Gratitude\n\nGratitude is naming, specifically and in public, what somebody else d"
+  },
+  {
+   "href": "/blog/4-tips-on-how-to-give-recognition-at-work",
+   "t": "building a culture of recognition"
+  },
+  {
+   "href": "/blog/how-recognition-promotes-dei-in-the-workplace",
+   "t": "how recognition supports DEI"
+  },
+  {
+   "href": "/employee-recognition/for/agencies",
+   "t": "Agencies\n\nRecognition in creative, digital and PR agencies: billable hours, pitc"
+  },
+  {
+   "href": "/employee-recognition/for/customer-support-teams",
+   "t": "Customer support teams\n\nRecognition for support teams: what the ticket queue hid"
+  },
+  {
+   "href": "/employee-recognition/for/education",
+   "t": "Education teams\n\nRecognition for school and college staff: term time, cover less"
+  },
+  {
+   "href": "/employee-recognition/for/engineering-teams",
+   "t": "Engineering teams\n\nRecognition for software teams: why launches get thanked and "
+  },
+  {
+   "href": "/employee-recognition/for/healthcare",
+   "t": "Healthcare teams\n\nRecognition on wards and in clinics: shift handovers, patient "
+  },
+  {
+   "href": "/employee-recognition/for/manufacturing",
+   "t": "Manufacturing teams\n\nRecognition on the factory floor: three shifts, line speed,"
+  },
+  {
+   "href": "/employee-recognition/for/nonprofits",
+   "t": "Nonprofits\n\nRecognition in nonprofits: why the mission is treated as the reward,"
+  },
+  {
+   "href": "/employee-recognition/for/remote-teams",
+   "t": "Remote teams\n\nHow to recognise colleagues you never see in a room: what remote w"
+  },
+  {
+   "href": "/employee-recognition/for/retail-and-hospitality",
+   "t": "Retail and hospitality teams\n\nRecognition on the shop floor and in the restauran"
+  },
+  {
+   "href": "/employee-recognition/for/sales-teams",
+   "t": "Sales teams\n\nSales already has a leaderboard. This covers what the quota board m"
+  },
+  {
+   "href": "/employee-recognition/for/small-businesses",
+   "t": "Small businesses\n\nRecognition in a firm of ten to fifty people, where everyone k"
+  },
+  {
+   "href": "/employee-recognition/for/startups",
+   "t": "Startups\n\nRecognition at a startup: why founder attention runs out around twenty"
+  },
+  {
+   "href": "/blog/4-pandemic-proof-ideas-for-virtual-employee-appreciation",
+   "t": "virtual recognition ideas"
+  },
+  {
+   "href": "/blog/how-to-move-from-physical-to-virtual-recognition-program",
+   "t": "moving a program from in-person to virtual"
+  },
+  {
+   "href": "/blog/employee-recognition-metrics",
+   "t": "recognition metrics that do not create bad incentives"
+  },
+  {
+   "href": "/pricing",
+   "t": "Evergreen for Slack and Microsoft Teams\n\nPeer-to-peer recognition where your tea"
+  },
+  {
+   "href": "/alternatives",
+   "t": "Comparing recognition tools\n\nHow Evergreen compares with 15 other recognition pl"
+  },
+  {
+   "href": "/employee-recognition/glossary",
+   "t": "The full glossary\n\n30 terms, each defined in a sentence and explained on its own"
+  },
+  {
+   "href": "/blog/what-are-the-effects-of-the-employee-recognition",
+   "t": "Effects of employee recognition on retention and morale\n\nHow one piece of recogn"
+  },
+  {
+   "href": "/blog/why-employee-recognition-program-is-important",
+   "t": "Benefits of an employee recognition program\n\nWhat a formal recognition program a"
+  },
+  {
+   "href": "/blog/why-is-employee-recognition-so-important",
+   "t": "Why employee recognition matters: three reasons\n\nThree reasons employee recognit"
+  },
+  {
+   "href": "/blog/5-things-you-need-to-know-about-employee-recognition",
+   "t": "Employee recognition 101: five things to know first\n\nFive things to settle befor"
+  },
+  {
+   "href": "/blog/guide-to-employee-recognition",
+   "t": "How to give employee recognition: a short guide\n\nWhat employee recognition is, w"
+  },
+  {
+   "href": "/blog/how-recognition-promotes-dei-in-the-workplace",
+   "t": "How employee recognition supports DEI at work\n\nHow employee recognition supports"
+  },
+  {
+   "href": "/blog/creating-a-culture-of-appreciation-peer-to-peer-recognition-templates-and-examples",
+   "t": "What is peer-to-peer recognition? Examples and templates\n\nPeer-to-peer recogniti"
+  },
+  {
+   "href": "/blog/4-tips-on-how-to-give-recognition-at-work",
+   "t": "How to build a culture of recognition: 4 habits\n\nFour habits that turn occasiona"
+  },
+  {
+   "href": "/blog/how-can-a-culture-of-gratitude-improve-employee-experience",
+   "t": "How a culture of appreciation improves employee experience\n\nHow a culture of app"
+  },
+  {
+   "href": "/blog/how-to-create-employee-recognition-program-step-by-step-guide",
+   "t": "Creating an employee recognition program: step by step\n\nA step-by-step guide to "
+  },
+  {
+   "href": "/blog/5-companies-with-the-best-employee-recognition-programs",
+   "t": "5 companies with the best employee recognition programs\n\nFive companies with emp"
+  },
+  {
+   "href": "/blog/reasons-why-employee-recognition-programs-fail-and-how-to-ensure-its-success",
+   "t": "Why recognition programs fail (and how to fix them)\n\nThe reasons employee recogn"
+  },
+  {
+   "href": "/blog/35-creative-ideas-on-how-to-recognize-employees",
+   "t": "35 creative employee recognition ideas\n\nThirty-five employee recognition ideas, "
+  },
+  {
+   "href": "/blog/15-creative-ways-to-give-shoutout-to-coworkers",
+   "t": "15 ways to give a coworker a shoutout (with templates)\n\nFifteen ways to give a c"
+  },
+  {
+   "href": "/blog/10-templates-notes-to-thank-your-team-for-great-work",
+   "t": "10 thank-you note templates for your team\n\nTen thank-you note templates for grea"
+  },
+  {
+   "href": "/blog/how-to-move-from-physical-to-virtual-recognition-program",
+   "t": "Moving a recognition program from in-person to virtual\n\nHow to move an employee "
+  },
+  {
+   "href": "/blog/4-pandemic-proof-ideas-for-virtual-employee-appreciation",
+   "t": "8 virtual employee recognition ideas for remote teams\n\nEight ways to recognise e"
+  },
+  {
+   "href": "/blog/what-is-employee-appreciation-day-and-why-recognizing-your-employees-matters",
+   "t": "Employee Appreciation Day: what it is and how to mark it\n\nWhen Employee Apprecia"
+  },
+  {
+   "href": "/blog/how-to-show-appreciation-for-employees-after-layoffs",
+   "t": "How to show appreciation to employees after layoffs\n\nHow to show appreciation to"
+  },
+  {
+   "href": "/blog/employee-recognition-in-slack",
+   "t": "Employee Recognition in Slack: A Practical Setup Guide\n\nSet up employee recognit"
+  },
+  {
+   "href": "/blog/employee-recognition-metrics",
+   "t": "Employee Recognition Metrics That Don’t Create Bad Incentives\n\nMeasure employee "
+  },
+  {
+   "href": "/",
+   "t": ""
+  },
+  {
+   "href": "https://www.linkedin.com/company/evergreenapp/",
+   "t": ""
+  },
+  {
+   "href": "https://twitter.com/AppEvergreen",
+   "t": ""
+  },
+  {
+   "href": "mailto:teemu@evergreen.so?subject=Email%20from%20website",
+   "t": ""
+  },
+  {
+   "href": "/esg",
+   "t": "ESG"
+  },
+  {
+   "href": "/pricing",
+   "t": "Pricing"
+  },
+  {
+   "href": "/case-studies",
+   "t": "Customers"
+  },
+  {
+   "href": "/blog",
+   "t": "Blog"
+  },
+  {
+   "href": "/schedule-a-demo",
+   "t": "Schedule a demo"
+  },
+  {
+   "href": "/our-purpose",
+   "t": "Our purpose"
+  },
+  {
+   "href": "https://folksoft.notion.site/Help-Center-defd1351f1a64b6fabe5040f1c2697a5?pvs=4",
+   "t": "Help center"
+  },
+  {
+   "href": "/referral",
+   "t": "Referral Program"
+  },
+  {
+   "href": "/contact",
+   "t": "Contact us"
+  },
+  {
+   "href": "/employee-recognition",
+   "t": "Employee recognition guide"
+  },
+  {
+   "href": "/employee-recognition-messages",
+   "t": "Recognition messages"
+  },
+  {
+   "href": "/company-values",
+   "t": "Company values"
+  },
+  {
+   "href": "/employee-recognition/glossary",
+   "t": "Recognition glossary"
+  },
+  {
+   "href": "/employee-recognition/for",
+   "t": "Recognition for teams"
+  },
+  {
+   "href": "/alternatives",
+   "t": "Alternatives"
+  },
+  {
+   "href": "/terms-of-service",
+   "t": "Terms of service"
+  },
+  {
+   "href": "/privacy-policy",
+   "t": "Privacy policy"
+  }
+ ],
+ "forms": [
+  {
+   "cls": "flex w-full flex-col justify-center gap-[10px]",
+   "fields": [
+    {
+     "tag": "INPUT",
+     "type": "text",
+     "name": "website",
+     "ph": "",
+     "req": false,
+     "al": null,
+     "max": null,
+     "box": [
+      24356.58,
+      1,
+      1,
+      -9999
+     ],
+     "fs": "10.6667px",
+     "lh": "17.0667px",
+     "fw": "400",
+     "bd": "0px solid rgb(51, 51, 51)",
+     "br": "0px",
+     "pad": "0px",
+     "bg": "rgba(0, 0, 0, 0)",
+     "color": "rgb(51, 51, 51)",
+     "cls": "absolute -left-[9999px] size-px opacity-0",
+     "txt": ""
+    },
+    {
+     "tag": "INPUT",
+     "type": "hidden",
+     "name": "sourcePath",
+     "ph": "",
+     "req": false,
+     "al": null,
+     "max": null,
+     "box": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "fs": "10.6667px",
+     "lh": "17.0667px",
+     "fw": "400",
+     "bd": "0px solid rgb(51, 51, 51)",
+     "br": "0px",
+     "pad": "0px",
+     "bg": "rgba(0, 0, 0, 0)",
+     "color": "rgb(51, 51, 51)",
+     "cls": "",
+     "txt": ""
+    },
+    {
+     "tag": "INPUT",
+     "type": "text",
+     "name": "name",
+     "ph": "Name",
+     "req": true,
+     "al": "Name",
+     "max": "256",
+     "box": [
+      24230.11,
+      55.98,
+      541.63,
+      369.19
+     ],
+     "fs": "18.6667px",
+     "lh": "31.7333px",
+     "fw": "400",
+     "bd": "2px solid rgb(0, 0, 0)",
+     "br": "7px",
+     "pad": "0px 16.8px",
+     "bg": "rgba(0, 0, 0, 0)",
+     "color": "rgb(0, 0, 0)",
+     "cls": "h-[3em] max-w-[49ch] rounded-[7px] border-2 border-black px-[0.9em] text-[1.75em] leading-[1.7] text-black placeholder:text-black/60",
+     "txt": ""
+    },
+    {
+     "tag": "INPUT",
+     "type": "email",
+     "name": "email",
+     "ph": "Email",
+     "req": true,
+     "al": "Email",
+     "max": "256",
+     "box": [
+      24296.09,
+      55.98,
+      541.63,
+      369.19
+     ],
+     "fs": "18.6667px",
+     "lh": "31.7333px",
+     "fw": "400",
+     "bd": "2px solid rgb(0, 0, 0)",
+     "br": "7px",
+     "pad": "0px 16.8px",
+     "bg": "rgba(0, 0, 0, 0)",
+     "color": "rgb(0, 0, 0)",
+     "cls": "h-[3em] max-w-[49ch] rounded-[7px] border-2 border-black px-[0.9em] text-[1.75em] leading-[1.7] text-black placeholder:text-black/60",
+     "txt": ""
+    },
+    {
+     "tag": "INPUT",
+     "type": "text",
+     "name": "company",
+     "ph": "Company",
+     "req": true,
+     "al": "Company",
+     "max": "256",
+     "box": [
+      24362.08,
+      55.98,
+      541.63,
+      369.19
+     ],
+     "fs": "18.6667px",
+     "lh": "31.7333px",
+     "fw": "400",
+     "bd": "2px solid rgb(0, 0, 0)",
+     "br": "7px",
+     "pad": "0px 16.8px",
+     "bg": "rgba(0, 0, 0, 0)",
+     "color": "rgb(0, 0, 0)",
+     "cls": "h-[3em] max-w-[49ch] rounded-[7px] border-2 border-black px-[0.9em] text-[1.75em] leading-[1.7] text-black placeholder:text-black/60",
+     "txt": ""
+    },
+    {
+     "tag": "BUTTON",
+     "type": "submit",
+     "name": "",
+     "al": null,
+     "max": null,
+     "box": [
+      24428.06,
+      55.98,
+      541.63,
+      369.19
+     ],
+     "fs": "18.6667px",
+     "lh": "31.7333px",
+     "fw": "700",
+     "bd": "0px solid rgb(255, 255, 255)",
+     "br": "10px",
+     "pad": "0px 26.1333px",
+     "bg": "rgb(0, 0, 0)",
+     "color": "rgb(255, 255, 255)",
+     "cls": "h-[3em] rounded-[10px] bg-black px-[1.4em] text-[1.75em] leading-[1.7] font-bold text-white disabled:opacity-70",
+     "txt": "Download"
+    }
+   ]
+  },
+  {
+   "cls": "relative flex w-full justify-center",
+   "fields": [
+    {
+     "tag": "INPUT",
+     "type": "text",
+     "name": "website",
+     "ph": "",
+     "req": false,
+     "al": null,
+     "max": null,
+     "box": [
+      24765.3,
+      1,
+      1,
+      -9935.02
+     ],
+     "fs": "10.6667px",
+     "lh": "17.0667px",
+     "fw": "400",
+     "bd": "0px solid rgb(51, 51, 51)",
+     "br": "0px",
+     "pad": "0px",
+     "bg": "rgba(0, 0, 0, 0)",
+     "color": "rgb(51, 51, 51)",
+     "cls": "absolute -left-[9999px] size-px opacity-0",
+     "txt": ""
+    },
+    {
+     "tag": "INPUT",
+     "type": "email",
+     "name": "email",
+     "ph": "Your best email",
+     "req": true,
+     "al": "Your best email",
+     "max": "256",
+     "box": [
+      24765.3,
+      55.98,
+      246.59,
+      63.98
+     ],
+     "fs": "18.6667px",
+     "lh": "31.7333px",
+     "fw": "400",
+     "bd": "2px solid rgb(0, 0, 0)",
+     "br": "7px 0px 0px 7px",
+     "pad": "0px 16.8px",
+     "bg": "rgba(0, 0, 0, 0)",
+     "color": "rgb(0, 0, 0)",
+     "cls": "h-[3em] w-full max-w-[49ch] rounded-l-[7px] border-2 border-black px-[0.9em] text-[1.75em] leading-[1.7] text-black placeholder:text-black/60",
+     "txt": ""
+    },
+    {
+     "tag": "BUTTON",
+     "type": "submit",
+     "name": "",
+     "al": null,
+     "max": null,
+     "box": [
+      24765.3,
+      55.98,
+      159.69,
+      310.58
+     ],
+     "fs": "18.6667px",
+     "lh": "31.7333px",
+     "fw": "700",
+     "bd": "0px solid rgb(255, 255, 255)",
+     "br": "0px 10px 10px 0px",
+     "pad": "0px 26.1333px",
+     "bg": "rgb(0, 0, 0)",
+     "color": "rgb(255, 255, 255)",
+     "cls": "h-[3em] shrink-0 rounded-r-[10px] bg-black px-[1.4em] text-[1.75em] leading-[1.7] font-bold text-white disabled:opacity-70",
+     "txt": "Plant a tree"
+    }
+   ]
+  }
+ ],
+ "neg": {
+  "shadows": [],
+  "gradients": [],
+  "hovers": [
+   "SPAN hover:underline",
+   "A hover:underline"
+  ]
+ },
+ "transitions": [
+  "all"
+ ],
+ "motion": [
+  {
+   "cls": "mb-[1.2em] flex h-[5.75094em] w-[11.2528em] items-center justify-center rounded-[46px] bor",
+   "style": null,
+   "src": ""
+  },
+  {
+   "cls": "mb-[1.2em] flex h-[5.75094em] w-[11.2528em] items-center justify-center rounded-[46px] bor",
+   "style": null,
+   "src": ""
+  },
+  {
+   "cls": "mb-[1.2em] flex h-[5.75094em] w-[11.2528em] items-center justify-center rounded-[46px] bor",
+   "style": null,
+   "src": ""
+  },
+  {
+   "cls": "mb-[1.2em] flex h-[5.75094em] w-[11.2528em] items-center justify-center rounded-[46px] bor",
+   "style": null,
+   "src": ""
+  },
+  {
+   "cls": "marketing-drift-leaf",
+   "style": "position: absolute; top: 10.3em; --leaf-rotate: 151deg; left: 3.5em; width: 7.10621em; height: 12.308em; z-index: 11; transform: translateY(-7.78618em) rotate(151deg);",
+   "src": "ever-regular-leafsvg-1b92f2.svg"
+  },
+  {
+   "cls": "marketing-drift-leaf",
+   "style": "position: absolute; top: 12.7em; --leaf-rotate: 146deg; left: 17.1193em; width: 8.34021em; height: 14.7087em; z-index: 1; transform: translateY(-9.73273em) rotate(146deg);",
+   "src": "leaf-smallersvg-6114e8.svg"
+  },
+  {
+   "cls": "marketing-drift-leaf",
+   "style": "position: absolute; top: 10.3em; --leaf-rotate: -149deg; left: 31.6585em; width: 7.10621em; height: 12.308em; z-index: 11; transform: translateY(-6.22895em) rotate(-149deg);",
+   "src": "ever-regular-leafsvg-1b92f2.svg"
+  },
+  {
+   "cls": "marketing-drift-leaf",
+   "style": "position: absolute; top: 10.7em; --leaf-rotate: -20deg; left: 43.52em; width: 1.20175em; height: 7.32222em; z-index: 1; transform: translateY(-3.11447em) rotate(-20deg);",
+   "src": "leaf-spikesvg-7a4672.svg"
+  },
+  {
+   "cls": "marketing-drift-leaf",
+   "style": "position: absolute; top: 11.9em; --leaf-rotate: 17deg; left: 48.7em; width: 1.20175em; height: 7.32222em; z-index: 1; transform: translateY(-3.11447em) rotate(17deg);",
+   "src": "leaf-spikesvg-7a4672.svg"
+  },
+  {
+   "cls": "marketing-drift-leaf",
+   "style": "position: absolute; top: 7.8em; --leaf-rotate: -166deg; left: 53.9641em; width: 7.10621em; height: 12.308em; z-index: 11; transform: translateY(-4.67171em) rotate(-166deg);",
+   "src": "ever-regular-leafsvg-1b92f2.svg"
+  },
+  {
+   "cls": "marketing-drift-leaf",
+   "style": "position: absolute; top: 11.3em; --leaf-rotate: 166deg; left: 59.3641em; width: 7.10621em; height: 12.308em; z-index: 12; transform: translateY(-7.00757em) rotate(166deg);",
+   "src": "ever-regular-leafsvg-1b92f2.svg"
+  },
+  {
+   "cls": "marketing-drift-leaf",
+   "style": "position: absolute; top: 11.9em; --leaf-rotate: -149deg; left: 72.8875em; width: 8.34021em; height: 14.7087em; z-index: 1; transform: translateY(-9.73273em) rotate(-149deg);",
+   "src": "leaf-smallersvg-6114e8.svg"
+  },
+  {
+   "cls": "marketing-drift-leaf",
+   "style": "position: absolute; top: 12em; --leaf-rotate: -151deg; left: 87.0737em; width: 7.10621em; height: 12.308em; z-index: 12; transform: translateY(-7.78618em) rotate(-151deg);",
+   "src": "ever-regular-leafsvg-1b92f2.svg"
+  },
+  {
+   "cls": "marketing-drift-leaf",
+   "style": "position: absolute; top: 9.1em; --leaf-rotate: 177deg; left: 93.9737em; width: 7.10621em; height: 12.308em; z-index: 13; transform: translateY(-5.45033em) rotate(177deg);",
+   "src": "ever-regular-leafsvg-1b92f2.svg"
+  },
+  {
+   "cls": "marketing-drift-leaf",
+   "style": "position: absolute; top: 10.7em; --leaf-rotate: 0deg; left: 106.62em; width: 1.20175em; height: 7.32222em; z-index: 1; transform: translateY(-3.11447em);",
+   "src": "leaf-spikesvg-7a4672.svg"
+  },
+  {
+   "cls": "marketing-drift-leaf",
+   "style": "position: absolute; top: 11em; --leaf-rotate: -169deg; left: 110.525em; width: 7.10621em; height: 12.308em; z-index: 11; transform: translateY(-7.00757em) rotate(-169deg);",
+   "src": "ever-regular-leafsvg-1b92f2.svg"
+  }
+ ],
+ "cardRects": [
+  [
+   6210.06,
+   281.39,
+   447.98,
+   176.02
+  ],
+  [
+   6210.06,
+   281.39,
+   447.98,
+   655.98
+  ],
+  [
+   6523.44,
+   305.25,
+   447.98,
+   176.02
+  ],
+  [
+   6523.44,
+   305.25,
+   447.98,
+   655.98
+  ],
+  [
+   6860.67,
+   253,
+   447.98,
+   416
+  ],
+  [
+   7833.11,
+   281.39,
+   447.98,
+   176.02
+  ],
+  [
+   7833.11,
+   281.39,
+   447.98,
+   655.98
+  ],
+  [
+   8146.48,
+   257.47,
+   447.98,
+   176.02
+  ],
+  [
+   8146.48,
+   257.47,
+   447.98,
+   655.98
+  ],
+  [
+   8435.94,
+   257.47,
+   447.98,
+   416
+  ],
+  [
+   9287.78,
+   338.05,
+   447.98,
+   176.02
+  ],
+  [
+   9287.78,
+   338.05,
+   447.98,
+   655.98
+  ],
+  [
+   9657.81,
+   285.8,
+   447.98,
+   176.02
+  ],
+  [
+   9657.81,
+   285.8,
+   447.98,
+   655.98
+  ],
+  [
+   9975.59,
+   285.8,
+   447.98,
+   176.02
+  ],
+  [
+   9975.59,
+   285.8,
+   447.98,
+   655.98
+  ],
+  [
+   10293.38,
+   285.8,
+   447.98,
+   176.02
+  ],
+  [
+   10293.38,
+   285.8,
+   447.98,
+   655.98
+  ],
+  [
+   10611.16,
+   338.05,
+   447.98,
+   176.02
+  ],
+  [
+   10611.16,
+   338.05,
+   447.98,
+   655.98
+  ],
+  [
+   10981.19,
+   285.8,
+   447.98,
+   176.02
+  ],
+  [
+   10981.19,
+   285.8,
+   447.98,
+   655.98
+  ],
+  [
+   12888.5,
+   309.72,
+   447.98,
+   176.02
+  ],
+  [
+   12888.5,
+   309.72,
+   447.98,
+   655.98
+  ],
+  [
+   15057.89,
+   229.14,
+   447.98,
+   416
+  ],
+  [
+   17985.11,
+   361.97,
+   447.98,
+   176.02
+  ],
+  [
+   17985.11,
+   361.97,
+   447.98,
+   655.98
+  ],
+  [
+   18379.06,
+   361.97,
+   447.98,
+   416
+  ],
+  [
+   18871.69,
+   361.97,
+   447.98,
+   176.02
+  ],
+  [
+   18871.69,
+   361.97,
+   447.98,
+   655.98
+  ],
+  [
+   19364.31,
+   361.97,
+   447.98,
+   176.02
+  ],
+  [
+   19364.31,
+   361.97,
+   447.98,
+   655.98
+  ],
+  [
+   19758.27,
+   361.97,
+   447.98,
+   176.02
+  ],
+  [
+   19758.27,
+   361.97,
+   447.98,
+   655.98
+  ],
+  [
+   20250.89,
+   361.97,
+   447.98,
+   176.02
+  ],
+  [
+   20250.89,
+   361.97,
+   447.98,
+   655.98
+  ],
+  [
+   20644.84,
+   361.97,
+   447.98,
+   416
+  ],
+  [
+   21137.47,
+   361.97,
+   447.98,
+   176.02
+  ],
+  [
+   21137.47,
+   361.97,
+   447.98,
+   655.98
+  ],
+  [
+   21531.42,
+   309.72,
+   447.98,
+   416
+  ],
+  [
+   21971.8,
+   361.97,
+   447.98,
+   176.02
+  ],
+  [
+   21971.8,
+   361.97,
+   447.98,
+   655.98
+  ],
+  [
+   22464.42,
+   361.97,
+   447.98,
+   176.02
+  ],
+  [
+   22464.42,
+   361.97,
+   447.98,
+   655.98
+  ],
+  [
+   22957.05,
+   390.3,
+   447.98,
+   176.02
+  ],
+  [
+   22957.05,
+   390.3,
+   447.98,
+   655.98
+  ],
+  [
+   24713.58,
+   39.59,
+   35.36,
+   612.42
+  ],
+  [
+   24753.17,
+   39.59,
+   61.42,
+   612.42
+  ],
+  [
+   24792.77,
+   39.59,
+   95.09,
+   612.42
+  ],
+  [
+   24832.36,
+   39.59,
+   38.84,
+   612.42
+  ],
+  [
+   24871.95,
+   39.59,
+   147.69,
+   612.42
+  ],
+  [
+   24713.58,
+   39.59,
+   106.27,
+   793.17
+  ],
+  [
+   24753.17,
+   39.59,
+   100.81,
+   793.17
+  ],
+  [
+   24792.77,
+   39.59,
+   148.81,
+   793.17
+  ],
+  [
+   24832.36,
+   39.59,
+   94.92,
+   793.17
+  ],
+  [
+   24713.58,
+   39.59,
+   240.97,
+   975.05
+  ],
+  [
+   24753.17,
+   39.59,
+   195.88,
+   975.05
+  ],
+  [
+   24792.77,
+   39.59,
+   141.05,
+   975.05
+  ],
+  [
+   24832.36,
+   39.59,
+   182.55,
+   975.05
+  ],
+  [
+   24871.95,
+   39.59,
+   191.5,
+   975.05
+  ],
+  [
+   24911.55,
+   39.59,
+   106.66,
+   975.05
+  ]
+ ]
+}

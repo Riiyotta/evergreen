@@ -1,0 +1,3156 @@
+{
+ "url": "/employee-recognition/glossary",
+ "vw": 1280,
+ "root": "10.6667px",
+ "docH": 8342,
+ "title": "Employee Recognition Glossary: Every Term Defined | Evergreen",
+ "desc": "Definitions of the terms used in employee recognition, from peer-to-peer recognition and spot awards to participation rate and recognition fatigue.",
+ "canonical": "https://www.evergreen.so/employee-recognition/glossary",
+ "sections": [
+  {
+   "box": [
+    44.61,
+    6650.09,
+    1280,
+    0
+   ],
+   "bg": "rgb(255, 255, 243)",
+   "cls": "relative bg-cream",
+   "inner": {
+    "box": [
+     44.61,
+     6650.09,
+     1280,
+     0
+    ],
+    "pad": "0px 64px 53.3333px",
+    "mt": "-32px",
+    "maxw": "1920px",
+    "cls": "mx-auto -mt-[3em] w-full max-w-[1920px] px-[6em] max-wf-tablet:px-[6vw] pb-[5em]"
+   }
+  },
+  {
+   "box": [
+    6662.72,
+    161.98,
+    1280,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "cls": "relative",
+   "inner": {
+    "box": [
+     6662.72,
+     159.98,
+     1279.98,
+     0
+    ],
+    "pad": "0px",
+    "mt": "-32px",
+    "maxw": "none",
+    "cls": "relative mx-auto -mt-[3em] w-[120em]"
+   }
+  },
+  {
+   "box": [
+    6792.72,
+    1038.81,
+    1280,
+    0
+   ],
+   "bg": "rgb(237, 237, 226)",
+   "cls": "relative bg-cream-dark",
+   "inner": {
+    "box": [
+     6792.72,
+     1038.81,
+     1280,
+     0
+    ],
+    "pad": "192px 64px 53.3333px",
+    "mt": "-32px",
+    "maxw": "1920px",
+    "cls": "mx-auto -mt-[3em] w-full max-w-[1920px] px-[6em] max-wf-tablet:px-[6vw] pt-[18em] pb-[5em]"
+   }
+  }
+ ],
+ "blocks": [
+  {
+   "box": [
+    44.61,
+    435.98,
+    1152.03,
+    63.98
+   ],
+   "mar": "0px",
+   "cls": "pt-[10.2em] max-wf-mini:pt-[11.8em]",
+   "t": "Employee recognition guide Employee recognition glossary The words rec"
+  },
+  {
+   "box": [
+    525.39,
+    5529.81,
+    1152.03,
+    63.98
+   ],
+   "mar": "44.8px 0px",
+   "cls": "my-[4.2em] text-center max-wf-mini:my-[3.5em] flex justify-center max-wf-phone:flex-col",
+   "t": "Appreciation versus recognition Recognition acknowledges what somebody"
+  },
+  {
+   "box": [
+    6100,
+    142.06,
+    1152.03,
+    63.98
+   ],
+   "mar": "44.8px 0px",
+   "cls": "my-[4.2em] text-center max-wf-mini:my-[3.5em] flex justify-center max-wf-phone:flex-col",
+   "t": "Looking for the practice rather than the vocabulary?"
+  },
+  {
+   "box": [
+    6286.86,
+    309.72,
+    1152.03,
+    63.98
+   ],
+   "mar": "44.8px 0px",
+   "cls": "my-[4.2em] text-center max-wf-mini:my-[3.5em] flex justify-center max-wf-phone:flex-col",
+   "t": "Employee recognition: the complete guide What recognition is, why it w"
+  },
+  {
+   "box": [
+    6662.72,
+    0,
+    0,
+    0
+   ],
+   "mar": "0px",
+   "cls": "pointer-events-none",
+   "t": ""
+  },
+  {
+   "box": [
+    6662.72,
+    159.98,
+    1279.98,
+    0
+   ],
+   "mar": "0px",
+   "cls": "relative z-[200] h-[15em] bg-cream",
+   "t": ""
+  },
+  {
+   "box": [
+    6984.7,
+    108.73,
+    1152.03,
+    63.98
+   ],
+   "mar": "0px 0px 44.8px",
+   "cls": "my-[4.2em] text-center max-wf-mini:my-[3.5em] mt-0 max-wf-mini:mt-0 flex justify-around max-wf-mini:flex-col max-wf-mini:items-center",
+   "t": "Only pay for active users who use Evergreen Lots of support, with a he"
+  },
+  {
+   "box": [
+    7138.23,
+    261.83,
+    1152.03,
+    63.98
+   ],
+   "mar": "0px 0px 44.8px",
+   "cls": "my-[4.2em] text-center max-wf-mini:my-[3.5em] mt-0 max-wf-mini:mt-0 flex justify-center max-wf-phone:flex-col",
+   "t": "Start feeling good about work"
+  },
+  {
+   "box": [
+    7444.86,
+    63.47,
+    1152.03,
+    63.98
+   ],
+   "mar": "44.8px 0px",
+   "cls": "my-[4.2em] text-center max-wf-mini:my-[3.5em]",
+   "t": "For only $3.99 per active user a month. In the 14 day free trial we do"
+  },
+  {
+   "box": [
+    7553.13,
+    98.42,
+    1152.03,
+    63.98
+   ],
+   "mar": "44.8px 0px",
+   "cls": "my-[4.2em] text-center max-wf-mini:my-[3.5em]",
+   "t": "Start 14 Day Trial No credit card needed • No setup costs"
+  },
+  {
+   "box": [
+    7696.34,
+    37.06,
+    1152.03,
+    63.98
+   ],
+   "mar": "0px 0px 44.8px",
+   "cls": "my-[4.2em] text-center max-wf-mini:my-[3.5em] mt-0 max-wf-mini:mt-0 flex justify-center max-wf-phone:flex-col",
+   "t": "add to Slack add to Teams"
+  }
+ ],
+ "roles": [
+  {
+   "tag": "DIV",
+   "cls": "relative z-[999999998] flex w-full justify-between px-[2.9em] py-[1.7em] max-wf-phone:px-[1.5em]",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "17.0667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "18.1333px 30.9333px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    0,
+    76.59,
+    1280,
+    0
+   ],
+   "n": 1,
+   "t": "Home ESG Pricing Customers Resources Purpose Login Schedule "
+  },
+  {
+   "tag": "A",
+   "cls": "flex w-[13.471em] items-center max-wf-tablet:w-[17em]",
+   "fs": "10.6667px",
+   "fw": "600",
+   "lh": "10.6667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "underline",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    18.13,
+    40.34,
+    143.69,
+    30.92
+   ],
+   "n": 1,
+   "t": ""
+  },
+  {
+   "tag": "IMG",
+   "cls": "h-auto w-full",
+   "fs": "10.6667px",
+   "fw": "600",
+   "lh": "10.6667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "100%",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    18.13,
+    40.34,
+    143.69,
+    30.92
+   ],
+   "n": 1,
+   "t": ""
+  },
+  {
+   "tag": "DIV",
+   "cls": "flex items-center max-wf-tablet:hidden",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "17.0667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    18.13,
+    40.34,
+    832.2,
+    416.88
+   ],
+   "n": 1,
+   "t": "Home ESG Pricing Customers Resources Purpose Login Schedule "
+  },
+  {
+   "tag": "A",
+   "cls": "mr-[2.5em] flex items-center font-normal text-black no-underline",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "10.6667px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px 26.6667px 0px 0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    22.45,
+    31.67,
+    45.61,
+    416.88
+   ],
+   "n": 7,
+   "t": "Home"
+  },
+  {
+   "tag": "SPAN",
+   "cls": "text-[1.5625em] leading-[1.9] hover:underline",
+   "fs": "16.6667px",
+   "fw": "400",
+   "lh": "31.6667px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    22.45,
+    31.67,
+    45.61,
+    416.88
+   ],
+   "n": 8,
+   "t": "Home"
+  },
+  {
+   "tag": "IMG",
+   "cls": "mr-[0.7em] w-[1.26708em]",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "10.6667px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px 7.46666px 0px 0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "100%",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    26.83,
+    22.91,
+    13.5,
+    489.14
+   ],
+   "n": 1,
+   "t": ""
+  },
+  {
+   "tag": "A",
+   "cls": "rounded-[30px] border-2 border-black px-[1.8em] py-[0.2em] font-normal text-black no-underline",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "10.6667px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "2.13333px 19.2px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "2px solid rgb(0, 0, 0)",
+   "br": "30px",
+   "maxw": "none",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    18.33,
+    39.92,
+    175.72,
+    1073.36
+   ],
+   "n": 1,
+   "t": "Schedule a demo"
+  },
+  {
+   "tag": "MAIN",
+   "cls": "relative w-full overflow-hidden",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "17.0667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    76.59,
+    7754.94,
+    1280,
+    0
+   ],
+   "n": 1,
+   "t": "Employee recognition guide Employee recognition glossary The"
+  },
+  {
+   "tag": "SECTION",
+   "cls": "relative bg-cream",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "17.0667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgb(255, 255, 243)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    44.61,
+    6650.09,
+    1280,
+    0
+   ],
+   "n": 2,
+   "t": "Employee recognition guide Employee recognition glossary The"
+  },
+  {
+   "tag": "DIV",
+   "cls": "mx-auto -mt-[3em] w-full max-w-[1920px] px-[6em] max-wf-tablet:px-[6vw] pb-[5em]",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "17.0667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "-32px 0px 0px",
+   "pad": "0px 64px 53.3333px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "1920px",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    44.61,
+    6650.09,
+    1280,
+    0
+   ],
+   "n": 1,
+   "t": "Employee recognition guide Employee recognition glossary The"
+  },
+  {
+   "tag": "DIV",
+   "cls": "pt-[10.2em] max-wf-mini:pt-[11.8em]",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "17.0667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "108.8px 0px 0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    44.61,
+    435.98,
+    1152.03,
+    63.98
+   ],
+   "n": 1,
+   "t": "Employee recognition guide Employee recognition glossary The"
+  },
+  {
+   "tag": "DIV",
+   "cls": "relative mx-auto w-[108em] max-wf-tablet:w-[80em] max-wf-phone:w-full max-wf-mini:flex max-wf-mini:w-auto max-wf-mini:flex-col max-wf-mini:items-center",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "17.0667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px 0.03125px 0px 0.015625px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    153.41,
+    327.19,
+    1151.98,
+    64
+   ],
+   "n": 1,
+   "t": "Employee recognition guide Employee recognition glossary The"
+  },
+  {
+   "tag": "P",
+   "cls": "mb-[1.4em] text-center",
+   "fs": "18.6667px",
+   "fw": "400",
+   "lh": "31.7333px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px 0px 26.1333px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    153.41,
+    63.73,
+    1151.98,
+    64
+   ],
+   "n": 1,
+   "t": "Employee recognition guide"
+  },
+  {
+   "tag": "A",
+   "cls": "no-underline",
+   "fs": "18.6667px",
+   "fw": "600",
+   "lh": "18.6667px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    188.75,
+    22,
+    465.86,
+    407.06
+   ],
+   "n": 1,
+   "t": "Employee recognition guide"
+  },
+  {
+   "tag": "SPAN",
+   "cls": "inline-flex items-center rounded-full border-2 border-black bg-leaf text-center text-black px-[1.1em] py-[0.35em] text-[1.4375em] font-semibold gap-[0.5em] transition-colors hover:bg-white",
+   "fs": "26.8333px",
+   "fw": "600",
+   "lh": "26.8333px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "9.39166px 29.5167px",
+   "bg": "rgb(190, 237, 192)",
+   "bd": "2px solid rgb(0, 0, 0)",
+   "br": "3.35544e+07px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    153.41,
+    63.73,
+    465.86,
+    407.06
+   ],
+   "n": 1,
+   "t": "Employee recognition guide"
+  },
+  {
+   "tag": "IMG",
+   "cls": "w-[0.9em] shrink-0",
+   "fs": "26.8333px",
+   "fw": "600",
+   "lh": "26.8333px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "100%",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    164.8,
+    40.95,
+    24.14,
+    438.58
+   ],
+   "n": 1,
+   "t": ""
+  },
+  {
+   "tag": "H1",
+   "cls": "mx-auto max-w-[49ch] text-center max-wf-mini:text-[3.9em]",
+   "fs": "65.3333px",
+   "fw": "600",
+   "lh": "97.3466px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "ivypresto-headline",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "1981.52px",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    243.27,
+    97.33,
+    1151.98,
+    64
+   ],
+   "n": 1,
+   "t": "Employee recognition glossary"
+  },
+  {
+   "tag": "DIV",
+   "cls": "my-[4.2em] text-center max-wf-mini:my-[3.5em]",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "17.0667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "44.8px 0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    385.39,
+    95.2,
+    1151.98,
+    64
+   ],
+   "n": 8,
+   "t": "The words recognition has picked up from HR, from vendors an"
+  },
+  {
+   "tag": "P",
+   "cls": "mx-auto max-w-[49ch] text-center",
+   "fs": "18.6667px",
+   "fw": "400",
+   "lh": "31.7333px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px 285.641px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "580.714px",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    385.39,
+    95.2,
+    580.7,
+    349.64
+   ],
+   "n": 1,
+   "t": "The words recognition has picked up from HR, from vendors an"
+  },
+  {
+   "tag": "UL",
+   "cls": "flex w-full flex-wrap justify-center gap-[3em]",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "17.0667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "none",
+   "box": [
+    525.39,
+    5529.81,
+    1152.03,
+    63.98
+   ],
+   "n": 3,
+   "t": "Appreciation versus recognition Recognition acknowledges wha"
+  },
+  {
+   "tag": "LI",
+   "cls": "relative z-[100] w-[42em] list-none rounded-[10px] border-2 border-black bg-white p-[2.4em] max-wf-mini:max-w-full",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "17.0667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "25.6px",
+   "bg": "rgb(255, 255, 255)",
+   "bd": "2px solid rgb(0, 0, 0)",
+   "br": "10px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "none",
+   "box": [
+    525.39,
+    366.38,
+    447.98,
+    176.02
+   ],
+   "n": 32,
+   "t": "Appreciation versus recognition Recognition acknowledges wha"
+  },
+  {
+   "tag": "A",
+   "cls": "no-underline",
+   "fs": "10.6667px",
+   "fw": "600",
+   "lh": "10.6667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "none",
+   "box": [
+    552.98,
+    311.19,
+    392.8,
+    203.61
+   ],
+   "n": 32,
+   "t": "Appreciation versus recognition Recognition acknowledges wha"
+  },
+  {
+   "tag": "H2",
+   "cls": "font-headline text-[3.5em] leading-[1.4] font-semibold text-black",
+   "fs": "37.3333px",
+   "fw": "600",
+   "lh": "52.2666px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "ivypresto-headline",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "none",
+   "box": [
+    552.98,
+    104.5,
+    392.8,
+    203.61
+   ],
+   "n": 32,
+   "t": "Appreciation versus recognition"
+  },
+  {
+   "tag": "P",
+   "cls": "my-[1em] text-[1.5625em]",
+   "fs": "16.6667px",
+   "fw": "400",
+   "lh": "28.3333px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "16.6667px 0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "none",
+   "box": [
+    674.14,
+    141.64,
+    392.8,
+    203.61
+   ],
+   "n": 32,
+   "t": "Recognition acknowledges what somebody did; appreciation ack"
+  },
+  {
+   "tag": "P",
+   "cls": "mt-[0.5em] text-[1.75em] font-semibold",
+   "fs": "18.6667px",
+   "fw": "600",
+   "lh": "31.7333px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "9.33333px 0px 0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "none",
+   "box": [
+    832.44,
+    31.73,
+    392.8,
+    203.61
+   ],
+   "n": 32,
+   "t": "Read the definition"
+  },
+  {
+   "tag": "DIV",
+   "cls": "w-[70.3em] max-wf-mini:mt-[3em] max-wf-mini:w-auto mx-auto mt-0 max-wf-phone:w-auto",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "17.0667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px 201.078px 0px 201.094px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    6100,
+    142.06,
+    749.86,
+    265.08
+   ],
+   "n": 1,
+   "t": "Looking for the practice rather than the vocabulary?"
+  },
+  {
+   "tag": "H2",
+   "cls": "font-headline text-[4.5em] leading-[1.48] font-semibold text-black max-wf-mini:text-center max-wf-mini:text-[3.9em] text-center",
+   "fs": "48px",
+   "fw": "600",
+   "lh": "71.04px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "ivypresto-headline",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    6100,
+    142.06,
+    749.86,
+    265.08
+   ],
+   "n": 1,
+   "t": "Looking for the practice rather than the vocabulary?"
+  },
+  {
+   "tag": "SECTION",
+   "cls": "relative",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "17.0667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    6662.72,
+    161.98,
+    1280,
+    0
+   ],
+   "n": 1,
+   "t": ""
+  },
+  {
+   "tag": "DIV",
+   "cls": "relative mx-auto -mt-[3em] w-[120em]",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "17.0667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "-32px 0.015625px 0px 0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    6662.72,
+    159.98,
+    1279.98,
+    0
+   ],
+   "n": 1,
+   "t": ""
+  },
+  {
+   "tag": "IMG",
+   "cls": "marketing-drift-leaf",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "17.0667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "100%",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    6680.34,
+    151.57,
+    129.94,
+    10.26
+   ],
+   "n": 12,
+   "t": ""
+  },
+  {
+   "tag": "DIV",
+   "cls": "relative z-[200] h-[15em] bg-cream",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "17.0667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgb(255, 255, 243)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    6662.72,
+    159.98,
+    1279.98,
+    0
+   ],
+   "n": 1,
+   "t": ""
+  },
+  {
+   "tag": "DIV",
+   "cls": "relative z-[201] h-[2px] bg-black",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "17.0667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgb(0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    6822.7,
+    2,
+    1280,
+    0
+   ],
+   "n": 1,
+   "t": ""
+  },
+  {
+   "tag": "SECTION",
+   "cls": "relative bg-cream-dark",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "17.0667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgb(237, 237, 226)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    6792.72,
+    1038.81,
+    1280,
+    0
+   ],
+   "n": 1,
+   "t": "Only pay for active users who use Evergreen Lots of support,"
+  },
+  {
+   "tag": "DIV",
+   "cls": "mx-auto -mt-[3em] w-full max-w-[1920px] px-[6em] max-wf-tablet:px-[6vw] pt-[18em] pb-[5em]",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "17.0667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "-32px 0px 0px",
+   "pad": "192px 64px 53.3333px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "1920px",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    6792.72,
+    1038.81,
+    1280,
+    0
+   ],
+   "n": 1,
+   "t": "Only pay for active users who use Evergreen Lots of support,"
+  },
+  {
+   "tag": "DIV",
+   "cls": "my-[4.2em] text-center max-wf-mini:my-[3.5em] mt-0 max-wf-mini:mt-0 flex justify-around max-wf-mini:flex-col max-wf-mini:items-center",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "17.0667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px 0px 44.8px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    6984.7,
+    108.73,
+    1152.03,
+    63.98
+   ],
+   "n": 3,
+   "t": "Only pay for active users who use Evergreen Lots of support,"
+  },
+  {
+   "tag": "DIV",
+   "cls": "flex flex-col items-center w-[25em] max-wf-phone:mx-[1em] max-wf-phone:w-[16em] max-wf-mini:mb-[4.6em]",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "17.0667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    6984.7,
+    108.73,
+    266.66,
+    115.55
+   ],
+   "n": 8,
+   "t": "Only pay for active users who use Evergreen"
+  },
+  {
+   "tag": "SPAN",
+   "cls": "mb-[1em] flex h-[3.24544em] items-center justify-center",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "17.0667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px 0px 10.6667px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    6984.7,
+    34.61,
+    31.3,
+    233.22
+   ],
+   "n": 3,
+   "t": ""
+  },
+  {
+   "tag": "IMG",
+   "cls": "h-full w-auto",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "17.0667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "100%",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    6984.7,
+    34.61,
+    31.3,
+    233.22
+   ],
+   "n": 3,
+   "t": ""
+  },
+  {
+   "tag": "P",
+   "cls": "mx-auto max-w-[49ch] text-center",
+   "fs": "18.6667px",
+   "fw": "400",
+   "lh": "31.7333px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "580.714px",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    7029.97,
+    63.47,
+    266.66,
+    115.55
+   ],
+   "n": 3,
+   "t": "Only pay for active users who use Evergreen"
+  },
+  {
+   "tag": "DIV",
+   "cls": "mt-[7.4em] max-wf-phone:w-full max-wf-mini:mt-[3em] mx-auto w-[51em] max-wf-mini:w-auto",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "17.0667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "78.9333px 304.016px 0px 304.031px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    7217.16,
+    182.91,
+    543.98,
+    368.02
+   ],
+   "n": 1,
+   "t": "Start feeling good about work"
+  },
+  {
+   "tag": "H2",
+   "cls": "font-headline text-[6.125em] leading-[1.4] font-semibold text-black max-wf-mini:text-[5.1em] text-center",
+   "fs": "65.3333px",
+   "fw": "600",
+   "lh": "91.4666px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "ivypresto-headline",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    7217.16,
+    182.91,
+    543.98,
+    368.02
+   ],
+   "n": 1,
+   "t": "Start feeling good about work"
+  },
+  {
+   "tag": "P",
+   "cls": "mx-auto max-w-[49ch] text-center",
+   "fs": "18.6667px",
+   "fw": "400",
+   "lh": "31.7333px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px 285.672px 0px 285.656px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "580.714px",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    7444.86,
+    63.47,
+    580.7,
+    349.64
+   ],
+   "n": 1,
+   "t": "For only $3.99 per active user a month. In the 14 day free t"
+  },
+  {
+   "tag": "BUTTON",
+   "cls": "inline-block rounded-[40.5px] bg-black px-[2.2em] py-[1.2em]",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "17.0667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "12.8px 23.4667px",
+   "bg": "rgb(0, 0, 0)",
+   "bd": "",
+   "br": "40.5px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    7553.13,
+    56.39,
+    212.92,
+    533.53
+   ],
+   "n": 1,
+   "t": "Start 14 Day Trial"
+  },
+  {
+   "tag": "SPAN",
+   "cls": "block text-[1.875em] leading-[1.54] font-semibold text-white",
+   "fs": "20px",
+   "fw": "600",
+   "lh": "30.8px",
+   "ls": "normal",
+   "color": "rgb(255, 255, 255)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    7565.92,
+    30.8,
+    166.02,
+    556.98
+   ],
+   "n": 1,
+   "t": "Start 14 Day Trial"
+  },
+  {
+   "tag": "DIV",
+   "cls": "mt-[1.5em]",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "17.0667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "16px 0px 0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    7625.5,
+    26.05,
+    277.19,
+    501.41
+   ],
+   "n": 1,
+   "t": "No credit card needed • No setup costs"
+  },
+  {
+   "tag": "P",
+   "cls": "mx-auto max-w-[49ch] text-center text-[1.4375em]",
+   "fs": "15.3333px",
+   "fw": "400",
+   "lh": "26.0667px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "477.082px",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    7625.5,
+    26.05,
+    277.19,
+    501.41
+   ],
+   "n": 1,
+   "t": "No credit card needed • No setup costs"
+  },
+  {
+   "tag": "A",
+   "cls": "mx-[3.5em] flex items-center font-normal no-underline max-wf-mini:mb-[2.2em] max-wf-mini:text-[1.3em]",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "10.6667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px 37.3333px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    7696.34,
+    37.06,
+    138,
+    460.97
+   ],
+   "n": 2,
+   "t": "add to Slack"
+  },
+  {
+   "tag": "SPAN",
+   "cls": "mr-[1em] flex w-[3.47539em] items-center justify-center",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "10.6667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px 10.6667px 0px 0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    7696.34,
+    37.06,
+    37.06,
+    460.97
+   ],
+   "n": 2,
+   "t": ""
+  },
+  {
+   "tag": "IMG",
+   "cls": "h-auto w-full",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "10.6667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "100%",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    7696.34,
+    37.06,
+    37.06,
+    460.97
+   ],
+   "n": 2,
+   "t": ""
+  },
+  {
+   "tag": "SPAN",
+   "cls": "text-[1.4375em]",
+   "fs": "15.3333px",
+   "fw": "400",
+   "lh": "15.3333px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    7707.2,
+    15.33,
+    90.28,
+    508.69
+   ],
+   "n": 2,
+   "t": "add to Slack"
+  },
+  {
+   "tag": "STRONG",
+   "cls": "font-bold",
+   "fs": "15.3333px",
+   "fw": "700",
+   "lh": "15.3333px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    7705.2,
+    18,
+    41.59,
+    557.38
+   ],
+   "n": 2,
+   "t": "Slack"
+  },
+  {
+   "tag": "DIV",
+   "cls": "mx-auto -mt-[3em] w-full max-w-[1920px] px-[6em] max-wf-tablet:px-[6vw] py-[5em]",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "17.0667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "-32px 0px 0px",
+   "pad": "53.3333px 64px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "1920px",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    7799.55,
+    542.81,
+    1280,
+    0
+   ],
+   "n": 1,
+   "t": "Sign up for our newsletter and plant a tree Plant a tree ESG"
+  },
+  {
+   "tag": "A",
+   "cls": "block w-[16.0983em]",
+   "fs": "10.6667px",
+   "fw": "600",
+   "lh": "10.6667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "underline",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    7897.67,
+    48.2,
+    171.7,
+    63.98
+   ],
+   "n": 1,
+   "t": ""
+  },
+  {
+   "tag": "IMG",
+   "cls": "h-auto w-full",
+   "fs": "10.6667px",
+   "fw": "600",
+   "lh": "10.6667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "100%",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    7897.67,
+    48.2,
+    171.7,
+    63.98
+   ],
+   "n": 4,
+   "t": ""
+  },
+  {
+   "tag": "DIV",
+   "cls": "mb-[4em] flex flex-col items-start",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "17.0667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px 0px 42.6666px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    7990.67,
+    167.42,
+    406.28,
+    63.98
+   ],
+   "n": 1,
+   "t": "Sign up for our newsletter and plant a tree Plant a tree"
+  },
+  {
+   "tag": "P",
+   "cls": "mt-[0.5em] font-semibold max-wf-mini:mt-0 max-wf-mini:ml-[1em] max-wf-mini:text-left max-wf-mini:leading-[1.6]",
+   "fs": "18.6667px",
+   "fw": "600",
+   "lh": "31.7333px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "9.33333px 0px 0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    8000,
+    31.73,
+    384.02,
+    63.98
+   ],
+   "n": 1,
+   "t": "Sign up for our newsletter and plant a tree"
+  },
+  {
+   "tag": "IMG",
+   "cls": "mt-[0.4em] ml-[0.7em] w-[1.26708em] max-wf-mini:mb-[0.9em] max-wf-mini:w-[2em]",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "17.0667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "4.26666px 0px 0px 7.46666px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "100%",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    7994.94,
+    36.8,
+    13.5,
+    455.45
+   ],
+   "n": 1,
+   "t": ""
+  },
+  {
+   "tag": "DIV",
+   "cls": "mt-[1em] mb-[1.6em] flex w-full flex-col",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "17.0667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "10.6667px 0px 17.0667px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    8042.39,
+    55.98,
+    406.28,
+    63.98
+   ],
+   "n": 1,
+   "t": "Plant a tree"
+  },
+  {
+   "tag": "FORM",
+   "cls": "relative flex w-full justify-center",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "17.0667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    8042.39,
+    55.98,
+    406.28,
+    63.98
+   ],
+   "n": 1,
+   "t": "Plant a tree"
+  },
+  {
+   "tag": "INPUT",
+   "cls": "absolute -left-[9999px] size-px opacity-0",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "17.0667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    8042.39,
+    1,
+    1,
+    -9935.02
+   ],
+   "n": 1,
+   "t": ""
+  },
+  {
+   "tag": "INPUT",
+   "cls": "h-[3em] w-full max-w-[49ch] rounded-l-[7px] border-2 border-black px-[0.9em] text-[1.75em] leading-[1.7] text-black placeholder:text-black/60",
+   "fs": "18.6667px",
+   "fw": "400",
+   "lh": "31.7333px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px 16.8px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "2px solid rgb(0, 0, 0)",
+   "br": "7px 0px 0px 7px",
+   "maxw": "580.714px",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    8042.39,
+    55.98,
+    246.59,
+    63.98
+   ],
+   "n": 1,
+   "t": ""
+  },
+  {
+   "tag": "BUTTON",
+   "cls": "h-[3em] shrink-0 rounded-r-[10px] bg-black px-[1.4em] text-[1.75em] leading-[1.7] font-bold text-white disabled:opacity-70",
+   "fs": "18.6667px",
+   "fw": "700",
+   "lh": "31.7333px",
+   "ls": "normal",
+   "color": "rgb(255, 255, 255)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px 26.1333px",
+   "bg": "rgb(0, 0, 0)",
+   "bd": "",
+   "br": "0px 10px 10px 0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    8042.39,
+    55.98,
+    159.69,
+    310.58
+   ],
+   "n": 1,
+   "t": "Plant a tree"
+  },
+  {
+   "tag": "A",
+   "cls": "mr-[1.2em] flex size-[4em] items-center justify-center rounded-full border-2 border-black bg-cream-dark",
+   "fs": "10.6667px",
+   "fw": "600",
+   "lh": "10.6667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "underline",
+   "mar": "0px 12.8px 0px 0px",
+   "pad": "0px",
+   "bg": "rgb(237, 237, 226)",
+   "bd": "2px solid rgb(0, 0, 0)",
+   "br": "3.35544e+07px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    8115.44,
+    42.66,
+    42.66,
+    63.98
+   ],
+   "n": 3,
+   "t": ""
+  },
+  {
+   "tag": "NAV",
+   "cls": "flex justify-end max-wf-mini:flex-col",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "17.0667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    7990.67,
+    237.56,
+    603.59,
+    612.42
+   ],
+   "n": 1,
+   "t": "ESG Pricing Customers Blog Schedule a demo Our purpose Help "
+  },
+  {
+   "tag": "UL",
+   "cls": "flex list-none flex-col items-start mr-[3.1em]",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "17.0667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px 33.0667px 0px 0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "none",
+   "box": [
+    7990.67,
+    237.56,
+    147.69,
+    612.42
+   ],
+   "n": 2,
+   "t": "ESG Pricing Customers Blog Schedule a demo"
+  },
+  {
+   "tag": "LI",
+   "cls": "",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "17.0667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "none",
+   "box": [
+    7990.67,
+    39.59,
+    35.36,
+    612.42
+   ],
+   "n": 15,
+   "t": "ESG"
+  },
+  {
+   "tag": "A",
+   "cls": "block mb-[1.2em] text-[1.6875em] font-medium text-black no-underline hover:underline",
+   "fs": "18px",
+   "fw": "500",
+   "lh": "18px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px 0px 21.6px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "none",
+   "box": [
+    7990.67,
+    18,
+    35.36,
+    612.42
+   ],
+   "n": 15,
+   "t": "ESG"
+  },
+  {
+   "tag": "DIV",
+   "cls": "my-[4.2em] text-center max-wf-mini:my-[3.5em] mb-0 max-wf-mini:mb-0 flex flex-row items-center justify-between max-wf-mini:flex-col-reverse max-wf-mini:items-start",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "17.0667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "44.8px 0px 0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    8273.03,
+    16,
+    1152.03,
+    63.98
+   ],
+   "n": 1,
+   "t": "© Evergreen • Made with 💚 in Helsinki, Finland Terms of ser"
+  },
+  {
+   "tag": "SPAN",
+   "cls": "text-[1.5em] leading-none max-wf-mini:mb-[1.1em]",
+   "fs": "16px",
+   "fw": "400",
+   "lh": "16px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    8273.03,
+    16,
+    349.31,
+    63.98
+   ],
+   "n": 1,
+   "t": "© Evergreen • Made with 💚 in Helsinki, Finland"
+  },
+  {
+   "tag": "SPAN",
+   "cls": "flex max-wf-mini:flex-col max-wf-mini:text-left",
+   "fs": "10.6667px",
+   "fw": "400",
+   "lh": "17.0667px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    8273.03,
+    16,
+    243.06,
+    972.95
+   ],
+   "n": 1,
+   "t": "Terms of service Privacy policy"
+  },
+  {
+   "tag": "A",
+   "cls": "mr-[1.2em] text-[1.5em] font-normal no-underline hover:underline max-wf-mini:mb-[1.1em]",
+   "fs": "16px",
+   "fw": "400",
+   "lh": "16px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px 19.2px 0px 0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    8273.03,
+    16,
+    121.55,
+    972.95
+   ],
+   "n": 1,
+   "t": "Terms of service"
+  },
+  {
+   "tag": "A",
+   "cls": "text-[1.5em] font-normal no-underline hover:underline max-wf-mini:mb-[1.1em]",
+   "fs": "16px",
+   "fw": "400",
+   "lh": "16px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    8273.03,
+    16,
+    102.33,
+    1113.69
+   ],
+   "n": 1,
+   "t": "Privacy policy"
+  }
+ ],
+ "imgs": [
+  {
+   "src": "https://www.evergreen.so/marketing/evergreen-logosvg-216cd4.svg",
+   "alt": "Evergreen",
+   "w": 143.69,
+   "h": 40.34,
+   "nw": 216,
+   "nh": 61,
+   "fit": "fill",
+   "loading": "auto",
+   "cls": "h-auto w-full"
+  },
+  {
+   "src": "https://www.evergreen.so/marketing/ever-small-leafsvg-e988d6.svg",
+   "alt": "",
+   "w": 13.5,
+   "h": 22.91,
+   "nw": 21,
+   "nh": 36,
+   "fit": "fill",
+   "loading": "auto",
+   "cls": "mr-[0.7em] w-[1.26708em]"
+  },
+  {
+   "src": "https://www.evergreen.so/marketing/ever-small-leafsvg-e988d6.svg",
+   "alt": "",
+   "w": 24.14,
+   "h": 40.95,
+   "nw": 21,
+   "nh": 36,
+   "fit": "fill",
+   "loading": "auto",
+   "cls": "w-[0.9em] shrink-0"
+  },
+  {
+   "src": "https://www.evergreen.so/marketing/ever-regular-leafsvg-1b92f2.svg",
+   "alt": "",
+   "w": 129.94,
+   "h": 151.57,
+   "nw": 116,
+   "nh": 199,
+   "fit": "fill",
+   "loading": "lazy",
+   "cls": "marketing-drift-leaf"
+  },
+  {
+   "src": "https://www.evergreen.so/marketing/leaf-smallersvg-6114e8.svg",
+   "alt": "",
+   "w": 161.48,
+   "h": 179.81,
+   "nw": 86,
+   "nh": 150,
+   "fit": "fill",
+   "loading": "lazy",
+   "cls": "marketing-drift-leaf"
+  },
+  {
+   "src": "https://www.evergreen.so/marketing/ever-regular-leafsvg-1b92f2.svg",
+   "alt": "",
+   "w": 132.59,
+   "h": 151.57,
+   "nw": 116,
+   "nh": 199,
+   "fit": "fill",
+   "loading": "lazy",
+   "cls": "marketing-drift-leaf"
+  },
+  {
+   "src": "https://www.evergreen.so/marketing/leaf-spikesvg-7a4672.svg",
+   "alt": "",
+   "w": 38.75,
+   "h": 77.77,
+   "nw": 27,
+   "nh": 150,
+   "fit": "fill",
+   "loading": "lazy",
+   "cls": "marketing-drift-leaf"
+  },
+  {
+   "src": "https://www.evergreen.so/marketing/leaf-spikesvg-7a4672.svg",
+   "alt": "",
+   "w": 35.09,
+   "h": 78.43,
+   "nw": 27,
+   "nh": 150,
+   "fit": "fill",
+   "loading": "lazy",
+   "cls": "marketing-drift-leaf"
+  },
+  {
+   "src": "https://www.evergreen.so/marketing/ever-regular-leafsvg-1b92f2.svg",
+   "alt": "",
+   "w": 105.31,
+   "h": 145.72,
+   "nw": 116,
+   "nh": 199,
+   "fit": "fill",
+   "loading": "lazy",
+   "cls": "marketing-drift-leaf"
+  },
+  {
+   "src": "https://www.evergreen.so/marketing/ever-regular-leafsvg-1b92f2.svg",
+   "alt": "",
+   "w": 105.31,
+   "h": 145.72,
+   "nw": 116,
+   "nh": 199,
+   "fit": "fill",
+   "loading": "lazy",
+   "cls": "marketing-drift-leaf"
+  },
+  {
+   "src": "https://www.evergreen.so/marketing/leaf-smallersvg-6114e8.svg",
+   "alt": "",
+   "w": 157.05,
+   "h": 180.3,
+   "nw": 86,
+   "nh": 150,
+   "fit": "fill",
+   "loading": "lazy",
+   "cls": "marketing-drift-leaf"
+  },
+  {
+   "src": "https://www.evergreen.so/marketing/ever-regular-leafsvg-1b92f2.svg",
+   "alt": "",
+   "w": 129.94,
+   "h": 151.57,
+   "nw": 116,
+   "nh": 199,
+   "fit": "fill",
+   "loading": "lazy",
+   "cls": "marketing-drift-leaf"
+  },
+  {
+   "src": "https://www.evergreen.so/marketing/ever-regular-leafsvg-1b92f2.svg",
+   "alt": "",
+   "w": 82.56,
+   "h": 135.07,
+   "nw": 116,
+   "nh": 199,
+   "fit": "fill",
+   "loading": "lazy",
+   "cls": "marketing-drift-leaf"
+  },
+  {
+   "src": "https://www.evergreen.so/marketing/leaf-spikesvg-7a4672.svg",
+   "alt": "",
+   "w": 12.81,
+   "h": 78.09,
+   "nw": 27,
+   "nh": 150,
+   "fit": "fill",
+   "loading": "lazy",
+   "cls": "marketing-drift-leaf"
+  },
+  {
+   "src": "https://www.evergreen.so/marketing/ever-regular-leafsvg-1b92f2.svg",
+   "alt": "",
+   "w": 99.45,
+   "h": 143.33,
+   "nw": 116,
+   "nh": 199,
+   "fit": "fill",
+   "loading": "lazy",
+   "cls": "marketing-drift-leaf"
+  },
+  {
+   "src": "https://www.evergreen.so/marketing/icon-usersvg-f5e0ab.svg",
+   "alt": "",
+   "w": 31.3,
+   "h": 34.61,
+   "nw": 54,
+   "nh": 60,
+   "fit": "fill",
+   "loading": "auto",
+   "cls": "h-full w-auto"
+  },
+  {
+   "src": "https://www.evergreen.so/marketing/icon-supportsvg-bc4096.svg",
+   "alt": "",
+   "w": 31.14,
+   "h": 34.61,
+   "nw": 52,
+   "nh": 57,
+   "fit": "fill",
+   "loading": "auto",
+   "cls": "h-full w-auto"
+  },
+  {
+   "src": "https://www.evergreen.so/marketing/icon-timesvg-4c8791.svg",
+   "alt": "",
+   "w": 34.61,
+   "h": 34.61,
+   "nw": 52,
+   "nh": 52,
+   "fit": "fill",
+   "loading": "auto",
+   "cls": "h-full w-auto"
+  },
+  {
+   "src": "https://www.evergreen.so/marketing/slacksvg-1b4e41.svg",
+   "alt": "",
+   "w": 37.06,
+   "h": 37.06,
+   "nw": 56,
+   "nh": 56,
+   "fit": "fill",
+   "loading": "auto",
+   "cls": "h-auto w-full"
+  },
+  {
+   "src": "https://www.evergreen.so/marketing/teamssvg-b74fd1.svg",
+   "alt": "",
+   "w": 37.06,
+   "h": 36.16,
+   "nw": 58,
+   "nh": 57,
+   "fit": "fill",
+   "loading": "auto",
+   "cls": "h-auto w-full"
+  },
+  {
+   "src": "https://www.evergreen.so/marketing/evergreen-logosvg-216cd4.svg",
+   "alt": "Evergreen",
+   "w": 171.7,
+   "h": 48.2,
+   "nw": 216,
+   "nh": 61,
+   "fit": "fill",
+   "loading": "auto",
+   "cls": "h-auto w-full"
+  },
+  {
+   "src": "https://www.evergreen.so/marketing/ever-small-leafsvg-e988d6.svg",
+   "alt": "",
+   "w": 13.5,
+   "h": 36.8,
+   "nw": 21,
+   "nh": 36,
+   "fit": "fill",
+   "loading": "auto",
+   "cls": "mt-[0.4em] ml-[0.7em] w-[1.26708em] max-wf-mini:mb-[0.9em] max-wf-mini:w-[2em]"
+  },
+  {
+   "src": "https://www.evergreen.so/marketing/icon-linkedinsvg-777cac.svg",
+   "alt": "",
+   "w": 17.81,
+   "h": 17.81,
+   "nw": 27,
+   "nh": 27,
+   "fit": "fill",
+   "loading": "auto",
+   "cls": "h-[1.67015em] w-auto"
+  },
+  {
+   "src": "https://www.evergreen.so/marketing/icon-twittersvg-6d6f46.svg",
+   "alt": "",
+   "w": 20.78,
+   "h": 17.81,
+   "nw": 31,
+   "nh": 27,
+   "fit": "fill",
+   "loading": "auto",
+   "cls": "h-[1.67015em] w-auto"
+  },
+  {
+   "src": "https://www.evergreen.so/marketing/icon-emailsvg-1a80b8.svg",
+   "alt": "",
+   "w": 22.27,
+   "h": 17.81,
+   "nw": 30,
+   "nh": 24,
+   "fit": "fill",
+   "loading": "auto",
+   "cls": "h-[1.67015em] w-auto"
+  }
+ ],
+ "links": [
+  {
+   "href": "/",
+   "t": ""
+  },
+  {
+   "href": "/",
+   "t": "Home"
+  },
+  {
+   "href": "/esg",
+   "t": "ESG"
+  },
+  {
+   "href": "/pricing",
+   "t": "Pricing"
+  },
+  {
+   "href": "/case-studies",
+   "t": "Customers"
+  },
+  {
+   "href": "/employee-recognition",
+   "t": "Resources"
+  },
+  {
+   "href": "/our-purpose",
+   "t": "Purpose"
+  },
+  {
+   "href": "https://app.evergreen.so/login",
+   "t": "Login"
+  },
+  {
+   "href": "/schedule-a-demo",
+   "t": "Schedule a demo"
+  },
+  {
+   "href": "/employee-recognition",
+   "t": "Employee recognition guide"
+  },
+  {
+   "href": "/employee-recognition/glossary/appreciation-vs-recognition",
+   "t": "Appreciation versus recognition\n\nRecognition acknowledges what somebody did; app"
+  },
+  {
+   "href": "/employee-recognition/glossary/culture-of-recognition",
+   "t": "Culture of recognition\n\nA culture of recognition is a workplace in which noticin"
+  },
+  {
+   "href": "/employee-recognition/glossary/employee-appreciation-day",
+   "t": "Employee Appreciation Day\n\nEmployee Appreciation Day is an unofficial observance"
+  },
+  {
+   "href": "/employee-recognition/glossary/employee-of-the-month",
+   "t": "Employee of the month\n\nEmployee of the month is a recurring award in which one e"
+  },
+  {
+   "href": "/employee-recognition/glossary/employee-recognition",
+   "t": "Employee recognition\n\nEmployee recognition is the act of acknowledging a specifi"
+  },
+  {
+   "href": "/employee-recognition/glossary/formal-recognition",
+   "t": "Formal recognition\n\nFormal recognition is recognition delivered through a define"
+  },
+  {
+   "href": "/employee-recognition/glossary/informal-recognition",
+   "t": "Informal recognition\n\nInformal recognition is acknowledgement given without a pr"
+  },
+  {
+   "href": "/employee-recognition/glossary/intrinsic-vs-extrinsic-motivation",
+   "t": "Intrinsic versus extrinsic motivation\n\nIntrinsic motivation is the drive to do s"
+  },
+  {
+   "href": "/employee-recognition/glossary/kudos",
+   "t": "Kudos\n\nKudos is informal praise or credit given for a specific achievement, and "
+  },
+  {
+   "href": "/employee-recognition/glossary/monetary-recognition",
+   "t": "Monetary recognition\n\nMonetary recognition is recognition with a cash value atta"
+  },
+  {
+   "href": "/employee-recognition/glossary/non-cash-incentives",
+   "t": "Non-cash incentives\n\nNon-cash incentives are rewards for performance or contribu"
+  },
+  {
+   "href": "/employee-recognition/glossary/non-monetary-recognition",
+   "t": "Non-monetary recognition\n\nNon-monetary recognition is acknowledgement of work th"
+  },
+  {
+   "href": "/employee-recognition/glossary/participation-rate",
+   "t": "Participation rate\n\nParticipation rate is the percentage of eligible employees w"
+  },
+  {
+   "href": "/employee-recognition/glossary/peer-to-peer-recognition",
+   "t": "Peer-to-peer recognition\n\nPeer-to-peer recognition is recognition given by a col"
+  },
+  {
+   "href": "/employee-recognition/glossary/points-based-recognition",
+   "t": "Points-based recognition\n\nPoints-based recognition is a program design in which "
+  },
+  {
+   "href": "/employee-recognition/glossary/public-vs-private-recognition",
+   "t": "Public versus private recognition\n\nPublic recognition is delivered where colleag"
+  },
+  {
+   "href": "/employee-recognition/glossary/recognition-bias",
+   "t": "Recognition bias\n\nRecognition bias is the systematic tendency for recognition to"
+  },
+  {
+   "href": "/employee-recognition/glossary/recognition-budget",
+   "t": "Recognition budget\n\nA recognition budget is the amount an organisation allocates"
+  },
+  {
+   "href": "/employee-recognition/glossary/recognition-fatigue",
+   "t": "Recognition fatigue\n\nRecognition fatigue is the point at which recognition has b"
+  },
+  {
+   "href": "/employee-recognition/glossary/recognition-frequency",
+   "t": "Recognition frequency\n\nRecognition frequency is how often an individual employee"
+  },
+  {
+   "href": "/employee-recognition/glossary/recognition-platform",
+   "t": "Recognition platform\n\nA recognition platform is software that lets employees giv"
+  },
+  {
+   "href": "/employee-recognition/glossary/recognition-program",
+   "t": "Recognition program\n\nA recognition program is a deliberate, organisation-wide st"
+  },
+  {
+   "href": "/employee-recognition/glossary/recognition-reach",
+   "t": "Recognition reach\n\nRecognition reach is the percentage of employees who received"
+  },
+  {
+   "href": "/employee-recognition/glossary/service-award",
+   "t": "Service award\n\nA service award is recognition given at a fixed tenure milestone,"
+  },
+  {
+   "href": "/employee-recognition/glossary/shoutout",
+   "t": "Shoutout\n\nA shoutout is a brief public acknowledgement of a colleague, usually p"
+  },
+  {
+   "href": "/employee-recognition/glossary/social-recognition",
+   "t": "Social recognition\n\nSocial recognition is recognition delivered in a shared spac"
+  },
+  {
+   "href": "/employee-recognition/glossary/spot-award",
+   "t": "Spot award\n\nA spot award is a one-off reward, usually cash or a gift card, given"
+  },
+  {
+   "href": "/employee-recognition/glossary/top-down-recognition",
+   "t": "Top-down recognition\n\nTop-down recognition is recognition given by somebody with"
+  },
+  {
+   "href": "/employee-recognition/glossary/total-rewards",
+   "t": "Total rewards\n\nTotal rewards is the complete set of things an employer provides "
+  },
+  {
+   "href": "/employee-recognition/glossary/values-based-recognition",
+   "t": "Values-based recognition\n\nValues-based recognition is recognition that explicitl"
+  },
+  {
+   "href": "/employee-recognition",
+   "t": "Employee recognition: the complete guide\n\nWhat recognition is, why it works, the"
+  },
+  {
+   "href": "/employee-recognition-messages",
+   "t": "Recognition messages for every occasion\n\nExample messages you can send, grouped "
+  },
+  {
+   "href": "https://app.evergreen.so/api/slack/install",
+   "t": "add to Slack"
+  },
+  {
+   "href": "https://app.evergreen.so/api/teams/install",
+   "t": "add to Teams"
+  },
+  {
+   "href": "/",
+   "t": ""
+  },
+  {
+   "href": "https://www.linkedin.com/company/evergreenapp/",
+   "t": ""
+  },
+  {
+   "href": "https://twitter.com/AppEvergreen",
+   "t": ""
+  },
+  {
+   "href": "mailto:teemu@evergreen.so?subject=Email%20from%20website",
+   "t": ""
+  },
+  {
+   "href": "/esg",
+   "t": "ESG"
+  },
+  {
+   "href": "/pricing",
+   "t": "Pricing"
+  },
+  {
+   "href": "/case-studies",
+   "t": "Customers"
+  },
+  {
+   "href": "/blog",
+   "t": "Blog"
+  },
+  {
+   "href": "/schedule-a-demo",
+   "t": "Schedule a demo"
+  },
+  {
+   "href": "/our-purpose",
+   "t": "Our purpose"
+  },
+  {
+   "href": "https://folksoft.notion.site/Help-Center-defd1351f1a64b6fabe5040f1c2697a5?pvs=4",
+   "t": "Help center"
+  },
+  {
+   "href": "/referral",
+   "t": "Referral Program"
+  },
+  {
+   "href": "/contact",
+   "t": "Contact us"
+  },
+  {
+   "href": "/employee-recognition",
+   "t": "Employee recognition guide"
+  },
+  {
+   "href": "/employee-recognition-messages",
+   "t": "Recognition messages"
+  },
+  {
+   "href": "/company-values",
+   "t": "Company values"
+  },
+  {
+   "href": "/employee-recognition/glossary",
+   "t": "Recognition glossary"
+  },
+  {
+   "href": "/employee-recognition/for",
+   "t": "Recognition for teams"
+  },
+  {
+   "href": "/alternatives",
+   "t": "Alternatives"
+  },
+  {
+   "href": "/terms-of-service",
+   "t": "Terms of service"
+  },
+  {
+   "href": "/privacy-policy",
+   "t": "Privacy policy"
+  }
+ ],
+ "forms": [
+  {
+   "cls": "relative flex w-full justify-center",
+   "fields": [
+    {
+     "tag": "INPUT",
+     "type": "text",
+     "name": "website",
+     "ph": "",
+     "req": false,
+     "al": null,
+     "max": null,
+     "box": [
+      8042.39,
+      1,
+      1,
+      -9935.02
+     ],
+     "fs": "10.6667px",
+     "lh": "17.0667px",
+     "fw": "400",
+     "bd": "0px solid rgb(51, 51, 51)",
+     "br": "0px",
+     "pad": "0px",
+     "bg": "rgba(0, 0, 0, 0)",
+     "color": "rgb(51, 51, 51)",
+     "cls": "absolute -left-[9999px] size-px opacity-0",
+     "txt": ""
+    },
+    {
+     "tag": "INPUT",
+     "type": "email",
+     "name": "email",
+     "ph": "Your best email",
+     "req": true,
+     "al": "Your best email",
+     "max": "256",
+     "box": [
+      8042.39,
+      55.98,
+      246.59,
+      63.98
+     ],
+     "fs": "18.6667px",
+     "lh": "31.7333px",
+     "fw": "400",
+     "bd": "2px solid rgb(0, 0, 0)",
+     "br": "7px 0px 0px 7px",
+     "pad": "0px 16.8px",
+     "bg": "rgba(0, 0, 0, 0)",
+     "color": "rgb(0, 0, 0)",
+     "cls": "h-[3em] w-full max-w-[49ch] rounded-l-[7px] border-2 border-black px-[0.9em] text-[1.75em] leading-[1.7] text-black placeholder:text-black/60",
+     "txt": ""
+    },
+    {
+     "tag": "BUTTON",
+     "type": "submit",
+     "name": "",
+     "al": null,
+     "max": null,
+     "box": [
+      8042.39,
+      55.98,
+      159.69,
+      310.58
+     ],
+     "fs": "18.6667px",
+     "lh": "31.7333px",
+     "fw": "700",
+     "bd": "0px solid rgb(255, 255, 255)",
+     "br": "0px 10px 10px 0px",
+     "pad": "0px 26.1333px",
+     "bg": "rgb(0, 0, 0)",
+     "color": "rgb(255, 255, 255)",
+     "cls": "h-[3em] shrink-0 rounded-r-[10px] bg-black px-[1.4em] text-[1.75em] leading-[1.7] font-bold text-white disabled:opacity-70",
+     "txt": "Plant a tree"
+    }
+   ]
+  }
+ ],
+ "neg": {
+  "shadows": [],
+  "gradients": [],
+  "hovers": [
+   "SPAN hover:underline",
+   "SPAN hover:bg-white",
+   "A hover:underline"
+  ]
+ },
+ "transitions": [
+  "all",
+  "color 0.15s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), outline-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), text-decoration-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), fill 0.15s cubic-bezier(0.4, 0, 0.2, 1), stroke 0.15s cubic-bezier(0.4, 0, 0.2, 1), --tw-gradient-from 0.15s cubic-bezier(0.4, 0, 0.2, 1), --tw-gradient-via 0.15s cubic-bezier(0.4, 0, 0.2, 1), --tw-gradient-to 0.15s cubic-bezier(0.4, 0, 0.2, 1)"
+ ],
+ "motion": [
+  {
+   "cls": "inline-flex items-center rounded-full border-2 border-black bg-leaf text-center text-black",
+   "style": null,
+   "src": ""
+  },
+  {
+   "cls": "marketing-drift-leaf",
+   "style": "position: absolute; top: 10.3em; --leaf-rotate: 151deg; left: 3.5em; width: 7.10621em; height: 12.308em; z-index: 11; transform: translateY(-7.69604em) rotate(151deg);",
+   "src": "ever-regular-leafsvg-1b92f2.svg"
+  },
+  {
+   "cls": "marketing-drift-leaf",
+   "style": "position: absolute; top: 12.7em; --leaf-rotate: 146deg; left: 17.1193em; width: 8.34021em; height: 14.7087em; z-index: 1; transform: translateY(-9.62005em) rotate(146deg);",
+   "src": "leaf-smallersvg-6114e8.svg"
+  },
+  {
+   "cls": "marketing-drift-leaf",
+   "style": "position: absolute; top: 10.3em; --leaf-rotate: -149deg; left: 31.6585em; width: 7.10621em; height: 12.308em; z-index: 11; transform: translateY(-6.15683em) rotate(-149deg);",
+   "src": "ever-regular-leafsvg-1b92f2.svg"
+  },
+  {
+   "cls": "marketing-drift-leaf",
+   "style": "position: absolute; top: 10.7em; --leaf-rotate: -20deg; left: 43.52em; width: 1.20175em; height: 7.32222em; z-index: 1; transform: translateY(-3.07842em) rotate(-20deg);",
+   "src": "leaf-spikesvg-7a4672.svg"
+  },
+  {
+   "cls": "marketing-drift-leaf",
+   "style": "position: absolute; top: 11.9em; --leaf-rotate: 17deg; left: 48.7em; width: 1.20175em; height: 7.32222em; z-index: 1; transform: translateY(-3.07842em) rotate(17deg);",
+   "src": "leaf-spikesvg-7a4672.svg"
+  },
+  {
+   "cls": "marketing-drift-leaf",
+   "style": "position: absolute; top: 7.8em; --leaf-rotate: -166deg; left: 53.9641em; width: 7.10621em; height: 12.308em; z-index: 11; transform: translateY(-4.61762em) rotate(-166deg);",
+   "src": "ever-regular-leafsvg-1b92f2.svg"
+  },
+  {
+   "cls": "marketing-drift-leaf",
+   "style": "position: absolute; top: 11.3em; --leaf-rotate: 166deg; left: 59.3641em; width: 7.10621em; height: 12.308em; z-index: 12; transform: translateY(-6.92644em) rotate(166deg);",
+   "src": "ever-regular-leafsvg-1b92f2.svg"
+  },
+  {
+   "cls": "marketing-drift-leaf",
+   "style": "position: absolute; top: 11.9em; --leaf-rotate: -149deg; left: 72.8875em; width: 8.34021em; height: 14.7087em; z-index: 1; transform: translateY(-9.62005em) rotate(-149deg);",
+   "src": "leaf-smallersvg-6114e8.svg"
+  },
+  {
+   "cls": "marketing-drift-leaf",
+   "style": "position: absolute; top: 12em; --leaf-rotate: -151deg; left: 87.0737em; width: 7.10621em; height: 12.308em; z-index: 12; transform: translateY(-7.69604em) rotate(-151deg);",
+   "src": "ever-regular-leafsvg-1b92f2.svg"
+  },
+  {
+   "cls": "marketing-drift-leaf",
+   "style": "position: absolute; top: 9.1em; --leaf-rotate: 177deg; left: 93.9737em; width: 7.10621em; height: 12.308em; z-index: 13; transform: translateY(-5.38723em) rotate(177deg);",
+   "src": "ever-regular-leafsvg-1b92f2.svg"
+  },
+  {
+   "cls": "marketing-drift-leaf",
+   "style": "position: absolute; top: 10.7em; --leaf-rotate: 0deg; left: 106.62em; width: 1.20175em; height: 7.32222em; z-index: 1; transform: translateY(-3.07842em);",
+   "src": "leaf-spikesvg-7a4672.svg"
+  },
+  {
+   "cls": "marketing-drift-leaf",
+   "style": "position: absolute; top: 11em; --leaf-rotate: -169deg; left: 110.525em; width: 7.10621em; height: 12.308em; z-index: 11; transform: translateY(-6.92644em) rotate(-169deg);",
+   "src": "ever-regular-leafsvg-1b92f2.svg"
+  }
+ ],
+ "cardRects": [
+  [
+   525.39,
+   366.38,
+   447.98,
+   176.02
+  ],
+  [
+   525.39,
+   366.38,
+   447.98,
+   655.98
+  ],
+  [
+   923.75,
+   366.38,
+   447.98,
+   176.02
+  ],
+  [
+   923.75,
+   366.38,
+   447.98,
+   655.98
+  ],
+  [
+   1322.11,
+   314.13,
+   447.98,
+   176.02
+  ],
+  [
+   1322.11,
+   314.13,
+   447.98,
+   655.98
+  ],
+  [
+   1668.22,
+   394.7,
+   447.98,
+   176.02
+  ],
+  [
+   1668.22,
+   394.7,
+   447.98,
+   655.98
+  ],
+  [
+   2094.91,
+   314.13,
+   447.98,
+   176.02
+  ],
+  [
+   2094.91,
+   314.13,
+   447.98,
+   655.98
+  ],
+  [
+   2441.02,
+   366.38,
+   447.98,
+   176.02
+  ],
+  [
+   2441.02,
+   366.38,
+   447.98,
+   655.98
+  ],
+  [
+   2839.38,
+   342.45,
+   447.98,
+   176.02
+  ],
+  [
+   2839.38,
+   342.45,
+   447.98,
+   655.98
+  ],
+  [
+   3213.81,
+   366.38,
+   447.98,
+   176.02
+  ],
+  [
+   3213.81,
+   366.38,
+   447.98,
+   655.98
+  ],
+  [
+   3612.17,
+   342.45,
+   447.98,
+   176.02
+  ],
+  [
+   3612.17,
+   342.45,
+   447.98,
+   655.98
+  ],
+  [
+   3986.61,
+   314.13,
+   447.98,
+   176.02
+  ],
+  [
+   3986.61,
+   314.13,
+   447.98,
+   655.98
+  ],
+  [
+   4332.72,
+   314.13,
+   447.98,
+   176.02
+  ],
+  [
+   4332.72,
+   314.13,
+   447.98,
+   655.98
+  ],
+  [
+   4678.83,
+   314.13,
+   447.98,
+   176.02
+  ],
+  [
+   4678.83,
+   314.13,
+   447.98,
+   655.98
+  ],
+  [
+   5024.94,
+   285.8,
+   447.98,
+   176.02
+  ],
+  [
+   5024.94,
+   285.8,
+   447.98,
+   655.98
+  ],
+  [
+   5342.72,
+   314.13,
+   447.98,
+   176.02
+  ],
+  [
+   5342.72,
+   314.13,
+   447.98,
+   655.98
+  ],
+  [
+   5688.83,
+   366.38,
+   447.98,
+   176.02
+  ],
+  [
+   5688.83,
+   366.38,
+   447.98,
+   655.98
+  ],
+  [
+   6286.86,
+   309.72,
+   447.98,
+   176.02
+  ],
+  [
+   6286.86,
+   309.72,
+   447.98,
+   655.98
+  ],
+  [
+   7990.67,
+   39.59,
+   35.36,
+   612.42
+  ],
+  [
+   8030.27,
+   39.59,
+   61.42,
+   612.42
+  ],
+  [
+   8069.86,
+   39.59,
+   95.09,
+   612.42
+  ],
+  [
+   8109.45,
+   39.59,
+   38.84,
+   612.42
+  ],
+  [
+   8149.05,
+   39.59,
+   147.69,
+   612.42
+  ],
+  [
+   7990.67,
+   39.59,
+   106.27,
+   793.17
+  ],
+  [
+   8030.27,
+   39.59,
+   100.81,
+   793.17
+  ],
+  [
+   8069.86,
+   39.59,
+   148.81,
+   793.17
+  ],
+  [
+   8109.45,
+   39.59,
+   94.92,
+   793.17
+  ],
+  [
+   7990.67,
+   39.59,
+   240.97,
+   975.05
+  ],
+  [
+   8030.27,
+   39.59,
+   195.88,
+   975.05
+  ],
+  [
+   8069.86,
+   39.59,
+   141.05,
+   975.05
+  ],
+  [
+   8109.45,
+   39.59,
+   182.55,
+   975.05
+  ],
+  [
+   8149.05,
+   39.59,
+   191.5,
+   975.05
+  ],
+  [
+   8188.64,
+   39.59,
+   106.66,
+   975.05
+  ]
+ ]
+}

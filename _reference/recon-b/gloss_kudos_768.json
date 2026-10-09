@@ -1,0 +1,3379 @@
+{
+ "url": "/employee-recognition/glossary/kudos",
+ "vw": 768,
+ "root": "8.25833px",
+ "docH": 6175,
+ "title": "Kudos: Definition and Examples | Evergreen",
+ "desc": "Kudos means praise for an achievement. Where the word comes from, how it became the default name for a thank-you channel, and what a good one contains.",
+ "canonical": "https://www.evergreen.so/employee-recognition/glossary/kudos",
+ "sections": [
+  {
+   "box": [
+    52.84,
+    4832.41,
+    768,
+    0
+   ],
+   "bg": "rgb(255, 255, 243)",
+   "cls": "relative bg-cream",
+   "inner": {
+    "box": [
+     52.84,
+     4832.41,
+     768,
+     0
+    ],
+    "pad": "0px 46.08px 41.2917px",
+    "mt": "-24.775px",
+    "maxw": "1920px",
+    "cls": "mx-auto -mt-[3em] w-full max-w-[1920px] px-[6em] max-wf-tablet:px-[6vw] pb-[5em]"
+   }
+  },
+  {
+   "box": [
+    4860.48,
+    125.86,
+    768,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "cls": "relative",
+   "inner": {
+    "box": [
+     4860.48,
+     123.86,
+     990.98,
+     0
+    ],
+    "pad": "0px",
+    "mt": "-24.775px",
+    "maxw": "none",
+    "cls": "relative mx-auto -mt-[3em] w-[120em]"
+   }
+  },
+  {
+   "box": [
+    4961.58,
+    804.19,
+    768,
+    0
+   ],
+   "bg": "rgb(237, 237, 226)",
+   "cls": "relative bg-cream-dark",
+   "inner": {
+    "box": [
+     4961.58,
+     804.19,
+     768,
+     0
+    ],
+    "pad": "148.65px 46.08px 41.2917px",
+    "mt": "-24.775px",
+    "maxw": "1920px",
+    "cls": "mx-auto -mt-[3em] w-full max-w-[1920px] px-[6em] max-wf-tablet:px-[6vw] pt-[18em] pb-[5em]"
+   }
+  }
+ ],
+ "blocks": [
+  {
+   "box": [
+    52.84,
+    362.97,
+    675.84,
+    46.08
+   ],
+   "mar": "0px",
+   "cls": "pt-[10.2em] max-wf-mini:pt-[11.8em]",
+   "t": "Recognition glossary Kudos Kudos is informal praise or credit given fo"
+  },
+  {
+   "box": [
+    450.48,
+    49.13,
+    675.84,
+    46.08
+   ],
+   "mar": "34.685px 0px",
+   "cls": "my-[4.2em] text-center max-wf-mini:my-[3.5em]",
+   "t": "Kudos is a Greek word for glory that ended up as the name of a Slack c"
+  },
+  {
+   "box": [
+    534.28,
+    1074.47,
+    642.33,
+    62.83
+   ],
+   "mar": "0px 16.7656px 0px 16.75px",
+   "cls": "marketing-rich-text mx-auto max-w-[77.78em] max-wf-tablet:w-auto",
+   "t": "From glory to a channel name Kydos in ancient Greek meant glory, the k"
+  },
+  {
+   "box": [
+    1643.42,
+    54.98,
+    675.84,
+    46.08
+   ],
+   "mar": "34.685px 0px",
+   "cls": "my-[4.2em] text-center max-wf-mini:my-[3.5em] flex justify-center max-wf-phone:flex-col",
+   "t": "What it looks like"
+  },
+  {
+   "box": [
+    1733.08,
+    229.53,
+    675.84,
+    46.08
+   ],
+   "mar": "34.685px 0px",
+   "cls": "my-[4.2em] text-center max-wf-mini:my-[3.5em]",
+   "t": "In the #kudos channel: “Kudos to Amara for rewriting the deployment ru"
+  },
+  {
+   "box": [
+    1997.28,
+    54.98,
+    675.84,
+    46.08
+   ],
+   "mar": "34.685px 0px",
+   "cls": "my-[4.2em] text-center max-wf-mini:my-[3.5em] flex justify-center max-wf-phone:flex-col",
+   "t": "Questions people ask"
+  },
+  {
+   "box": [
+    2086.94,
+    380.8,
+    675.84,
+    46.08
+   ],
+   "mar": "34.685px 0px",
+   "cls": "my-[4.2em] text-center max-wf-mini:my-[3.5em]",
+   "t": "What does kudos mean? Praise or credit for an achievement. It comes fr"
+  },
+  {
+   "box": [
+    2502.41,
+    54.98,
+    675.84,
+    46.08
+   ],
+   "mar": "34.685px 0px",
+   "cls": "my-[4.2em] text-center max-wf-mini:my-[3.5em] flex justify-center max-wf-phone:flex-col",
+   "t": "Related terms"
+  },
+  {
+   "box": [
+    2592.06,
+    738.03,
+    675.84,
+    46.08
+   ],
+   "mar": "34.685px 0px",
+   "cls": "my-[4.2em] text-center max-wf-mini:my-[3.5em] flex justify-center max-wf-phone:flex-col",
+   "t": "Shoutout A shoutout is a brief public acknowledgement of a colleague, "
+  },
+  {
+   "box": [
+    3364.77,
+    54.98,
+    675.84,
+    46.08
+   ],
+   "mar": "34.685px 0px",
+   "cls": "my-[4.2em] text-center max-wf-mini:my-[3.5em] flex justify-center max-wf-phone:flex-col",
+   "t": "In practice"
+  },
+  {
+   "box": [
+    3454.42,
+    643.41,
+    675.84,
+    46.08
+   ],
+   "mar": "34.685px 0px",
+   "cls": "my-[4.2em] text-center max-wf-mini:my-[3.5em] flex justify-center max-wf-phone:flex-col",
+   "t": "Thank You Messages for Helping a Colleague: 12 Examples Read the examp"
+  },
+  {
+   "box": [
+    4132.5,
+    54.98,
+    675.84,
+    46.08
+   ],
+   "mar": "34.685px 0px",
+   "cls": "my-[4.2em] text-center max-wf-mini:my-[3.5em] flex justify-center max-wf-phone:flex-col",
+   "t": "Further reading"
+  },
+  {
+   "box": [
+    4222.16,
+    587.14,
+    675.84,
+    46.08
+   ],
+   "mar": "34.685px 0px",
+   "cls": "my-[4.2em] text-center max-wf-mini:my-[3.5em] flex justify-center max-wf-phone:flex-col",
+   "t": "15 ways to give a coworker a shoutout (with templates) Fifteen ways to"
+  },
+  {
+   "box": [
+    4860.48,
+    0,
+    0,
+    0
+   ],
+   "mar": "0px",
+   "cls": "pointer-events-none",
+   "t": ""
+  },
+  {
+   "box": [
+    4860.48,
+    123.86,
+    990.98,
+    0
+   ],
+   "mar": "0px",
+   "cls": "relative z-[200] h-[15em] bg-cream",
+   "t": ""
+  },
+  {
+   "box": [
+    5110.22,
+    84.17,
+    675.84,
+    46.08
+   ],
+   "mar": "0px 0px 34.685px",
+   "cls": "my-[4.2em] text-center max-wf-mini:my-[3.5em] mt-0 max-wf-mini:mt-0 flex justify-around max-wf-mini:flex-col max-wf-mini:items-center",
+   "t": "Only pay for active users who use Evergreen Lots of support, with a he"
+  },
+  {
+   "box": [
+    5229.06,
+    202.7,
+    675.84,
+    46.08
+   ],
+   "mar": "0px 0px 34.685px",
+   "cls": "my-[4.2em] text-center max-wf-mini:my-[3.5em] mt-0 max-wf-mini:mt-0 flex justify-center max-wf-phone:flex-col",
+   "t": "Start feeling good about work"
+  },
+  {
+   "box": [
+    5466.44,
+    49.13,
+    675.84,
+    46.08
+   ],
+   "mar": "34.685px 0px",
+   "cls": "my-[4.2em] text-center max-wf-mini:my-[3.5em]",
+   "t": "For only $3.99 per active user a month. In the 14 day free trial we do"
+  },
+  {
+   "box": [
+    5550.23,
+    76.22,
+    675.84,
+    46.08
+   ],
+   "mar": "34.685px 0px",
+   "cls": "my-[4.2em] text-center max-wf-mini:my-[3.5em]",
+   "t": "Start 14 Day Trial No credit card needed • No setup costs"
+  },
+  {
+   "box": [
+    5661.13,
+    28.69,
+    675.84,
+    46.08
+   ],
+   "mar": "0px 0px 34.685px",
+   "cls": "my-[4.2em] text-center max-wf-mini:my-[3.5em] mt-0 max-wf-mini:mt-0 flex justify-center max-wf-phone:flex-col",
+   "t": "add to Slack add to Teams"
+  }
+ ],
+ "roles": [
+  {
+   "tag": "DIV",
+   "cls": "relative z-[999999998] flex w-full justify-between px-[2.9em] py-[1.7em] max-wf-phone:px-[1.5em]",
+   "fs": "8.25833px",
+   "fw": "400",
+   "lh": "13.2133px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "14.0392px 23.9492px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    0,
+    77.61,
+    768,
+    0
+   ],
+   "n": 1,
+   "t": ""
+  },
+  {
+   "tag": "A",
+   "cls": "flex w-[13.471em] items-center max-wf-tablet:w-[17em]",
+   "fs": "8.25833px",
+   "fw": "600",
+   "lh": "8.25833px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "underline",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    14.03,
+    49.55,
+    140.39,
+    23.94
+   ],
+   "n": 1,
+   "t": ""
+  },
+  {
+   "tag": "IMG",
+   "cls": "h-auto w-full",
+   "fs": "8.25833px",
+   "fw": "600",
+   "lh": "8.25833px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "100%",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    19.09,
+    39.41,
+    140.39,
+    23.94
+   ],
+   "n": 1,
+   "t": ""
+  },
+  {
+   "tag": "BUTTON",
+   "cls": "relative z-[2147483647] hidden size-[6em] items-center justify-center max-wf-tablet:flex",
+   "fs": "8.25833px",
+   "fw": "400",
+   "lh": "13.2133px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    14.03,
+    49.55,
+    49.55,
+    694.52
+   ],
+   "n": 1,
+   "t": ""
+  },
+  {
+   "tag": "SPAN",
+   "cls": "relative block h-[1.55em] w-[4.15em]",
+   "fs": "8.25833px",
+   "fw": "400",
+   "lh": "13.2133px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    32.41,
+    12.8,
+    34.27,
+    702.16
+   ],
+   "n": 2,
+   "t": ""
+  },
+  {
+   "tag": "SPAN",
+   "cls": "absolute left-0 block h-[0.35em] w-full bg-black transition-transform duration-200 top-0",
+   "fs": "8.25833px",
+   "fw": "400",
+   "lh": "13.2133px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgb(0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    32.41,
+    2.88,
+    34.27,
+    702.16
+   ],
+   "n": 2,
+   "t": ""
+  },
+  {
+   "tag": "MAIN",
+   "cls": "relative w-full overflow-hidden",
+   "fs": "8.25833px",
+   "fw": "400",
+   "lh": "13.2133px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    77.61,
+    5688.16,
+    768,
+    0
+   ],
+   "n": 1,
+   "t": "Recognition glossary Kudos Kudos is informal praise or credi"
+  },
+  {
+   "tag": "SECTION",
+   "cls": "relative bg-cream",
+   "fs": "8.25833px",
+   "fw": "400",
+   "lh": "13.2133px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgb(255, 255, 243)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    52.84,
+    4832.41,
+    768,
+    0
+   ],
+   "n": 2,
+   "t": "Recognition glossary Kudos Kudos is informal praise or credi"
+  },
+  {
+   "tag": "DIV",
+   "cls": "mx-auto -mt-[3em] w-full max-w-[1920px] px-[6em] max-wf-tablet:px-[6vw] pb-[5em]",
+   "fs": "8.25833px",
+   "fw": "400",
+   "lh": "13.2133px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "-24.775px 0px 0px",
+   "pad": "0px 46.08px 41.2917px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "1920px",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    52.84,
+    4832.41,
+    768,
+    0
+   ],
+   "n": 1,
+   "t": "Recognition glossary Kudos Kudos is informal praise or credi"
+  },
+  {
+   "tag": "DIV",
+   "cls": "pt-[10.2em] max-wf-mini:pt-[11.8em]",
+   "fs": "8.25833px",
+   "fw": "400",
+   "lh": "13.2133px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "84.235px 0px 0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    52.84,
+    362.97,
+    675.84,
+    46.08
+   ],
+   "n": 1,
+   "t": "Recognition glossary Kudos Kudos is informal praise or credi"
+  },
+  {
+   "tag": "DIV",
+   "cls": "relative mx-auto w-[108em] max-wf-tablet:w-[80em] max-wf-phone:w-full max-wf-mini:flex max-wf-mini:w-auto max-wf-mini:flex-col max-wf-mini:items-center",
+   "fs": "8.25833px",
+   "fw": "400",
+   "lh": "13.2133px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px 7.59375px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    137.08,
+    278.73,
+    660.66,
+    53.67
+   ],
+   "n": 1,
+   "t": "Recognition glossary Kudos Kudos is informal praise or credi"
+  },
+  {
+   "tag": "P",
+   "cls": "mb-[1.4em] text-center",
+   "fs": "14.4521px",
+   "fw": "400",
+   "lh": "24.5685px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px 0px 20.2329px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    137.08,
+    50.23,
+    660.66,
+    53.67
+   ],
+   "n": 1,
+   "t": "Recognition glossary"
+  },
+  {
+   "tag": "A",
+   "cls": "no-underline",
+   "fs": "14.4521px",
+   "fw": "600",
+   "lh": "14.4521px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    164.05,
+    18,
+    293.45,
+    237.27
+   ],
+   "n": 1,
+   "t": "Recognition glossary"
+  },
+  {
+   "tag": "SPAN",
+   "cls": "inline-flex items-center rounded-full border-2 border-black bg-leaf text-center text-black px-[1.1em] py-[0.35em] text-[1.4375em] font-semibold gap-[0.5em] transition-colors hover:bg-white",
+   "fs": "20.7749px",
+   "fw": "600",
+   "lh": "20.7749px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "7.2712px 22.8523px",
+   "bg": "rgb(190, 237, 192)",
+   "bd": "2px solid rgb(0, 0, 0)",
+   "br": "3.35544e+07px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    137.08,
+    50.23,
+    293.45,
+    237.27
+   ],
+   "n": 1,
+   "t": "Recognition glossary"
+  },
+  {
+   "tag": "IMG",
+   "cls": "w-[0.9em] shrink-0",
+   "fs": "20.7749px",
+   "fw": "600",
+   "lh": "20.7749px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "100%",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    146.34,
+    31.7,
+    18.69,
+    262.11
+   ],
+   "n": 1,
+   "t": ""
+  },
+  {
+   "tag": "H1",
+   "cls": "mx-auto max-w-[49ch] text-center max-wf-mini:text-[3.9em]",
+   "fs": "50.5823px",
+   "fw": "600",
+   "lh": "75.3676px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "ivypresto-headline",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "1534.14px",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    207.53,
+    75.36,
+    660.66,
+    53.67
+   ],
+   "n": 1,
+   "t": "Kudos"
+  },
+  {
+   "tag": "DIV",
+   "cls": "my-[4.2em] text-center max-wf-mini:my-[3.5em]",
+   "fs": "8.25833px",
+   "fw": "400",
+   "lh": "13.2133px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "34.685px 0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    317.56,
+    98.25,
+    660.66,
+    53.67
+   ],
+   "n": 16,
+   "t": "Kudos is informal praise or credit given for a specific achi"
+  },
+  {
+   "tag": "P",
+   "cls": "mx-auto max-w-[49ch] text-center",
+   "fs": "14.4521px",
+   "fw": "400",
+   "lh": "24.5685px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px 105.484px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "449.696px",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    317.56,
+    98.25,
+    449.69,
+    159.16
+   ],
+   "n": 1,
+   "t": "Kudos is informal praise or credit given for a specific achi"
+  },
+  {
+   "tag": "DIV",
+   "cls": "mx-auto w-[70.3em] text-left max-wf-mini:max-w-full",
+   "fs": "8.25833px",
+   "fw": "400",
+   "lh": "13.2133px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px 47.6562px 0px 47.6406px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "left",
+   "lst": "disc",
+   "box": [
+    450.48,
+    49.13,
+    580.55,
+    93.72
+   ],
+   "n": 1,
+   "t": "Kudos is a Greek word for glory that ended up as the name of"
+  },
+  {
+   "tag": "P",
+   "cls": "",
+   "fs": "14.4521px",
+   "fw": "400",
+   "lh": "24.5685px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "left",
+   "lst": "disc",
+   "box": [
+    450.48,
+    49.13,
+    580.55,
+    93.72
+   ],
+   "n": 4,
+   "t": "Kudos is a Greek word for glory that ended up as the name of"
+  },
+  {
+   "tag": "DIV",
+   "cls": "marketing-rich-text mx-auto max-w-[77.78em] max-wf-tablet:w-auto",
+   "fs": "8.25833px",
+   "fw": "400",
+   "lh": "13.2133px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px 16.7656px 0px 16.75px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "642.333px",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    534.28,
+    1074.47,
+    642.33,
+    62.83
+   ],
+   "n": 1,
+   "t": "From glory to a channel name Kydos in ancient Greek meant gl"
+  },
+  {
+   "tag": "H2",
+   "cls": "",
+   "fs": "37.1625px",
+   "fw": "600",
+   "lh": "44.595px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "ivypresto-headline",
+   "td": "none",
+   "mar": "0px 0px 29.73px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    534.28,
+    44.58,
+    642.33,
+    62.83
+   ],
+   "n": 4,
+   "t": "From glory to a channel name"
+  },
+  {
+   "tag": "P",
+   "cls": "",
+   "fs": "14.4521px",
+   "fw": "400",
+   "lh": "24.5685px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px 0px 23.1233px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    608.58,
+    98.25,
+    642.33,
+    62.83
+   ],
+   "n": 7,
+   "t": "Kydos in ancient Greek meant glory, the kind won in battle o"
+  },
+  {
+   "tag": "A",
+   "cls": "",
+   "fs": "14.4521px",
+   "fw": "600",
+   "lh": "14.4521px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "Rubik",
+   "td": "underline",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    928.59,
+    18,
+    144.48,
+    483.39
+   ],
+   "n": 4,
+   "t": "shoutout ideas page"
+  },
+  {
+   "tag": "DIV",
+   "cls": "w-[70.3em] max-wf-mini:mt-[3em] max-wf-mini:w-auto mx-auto mt-0 max-wf-phone:w-auto",
+   "fs": "8.25833px",
+   "fw": "400",
+   "lh": "13.2133px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px 47.6406px 0px 47.6562px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    1643.42,
+    54.98,
+    580.55,
+    93.73
+   ],
+   "n": 5,
+   "t": "What it looks like"
+  },
+  {
+   "tag": "H2",
+   "cls": "font-headline text-[4.5em] leading-[1.48] font-semibold text-black max-wf-mini:text-center max-wf-mini:text-[3.9em] text-center",
+   "fs": "37.1625px",
+   "fw": "600",
+   "lh": "55.0005px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "ivypresto-headline",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    1643.42,
+    54.98,
+    580.55,
+    93.73
+   ],
+   "n": 5,
+   "t": "What it looks like"
+  },
+  {
+   "tag": "UL",
+   "cls": "mx-auto w-[70.3em] text-left max-wf-mini:max-w-full list-none",
+   "fs": "8.25833px",
+   "fw": "400",
+   "lh": "13.2133px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px 47.6562px 0px 47.6406px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "left",
+   "lst": "none",
+   "box": [
+    1733.08,
+    229.53,
+    580.55,
+    93.72
+   ],
+   "n": 1,
+   "t": "In the #kudos channel: “Kudos to Amara for rewriting the dep"
+  },
+  {
+   "tag": "LI",
+   "cls": "mb-[2em] flex items-start",
+   "fs": "8.25833px",
+   "fw": "400",
+   "lh": "13.2133px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px 0px 16.5167px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "left",
+   "lst": "none",
+   "box": [
+    1733.08,
+    73.69,
+    580.55,
+    93.72
+   ],
+   "n": 3,
+   "t": "In the #kudos channel: “Kudos to Amara for rewriting the dep"
+  },
+  {
+   "tag": "IMG",
+   "cls": "mt-[0.4em] w-[1.26708em] shrink-0",
+   "fs": "8.25833px",
+   "fw": "400",
+   "lh": "13.2133px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "3.30333px 0px 0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "100%",
+   "ta": "left",
+   "lst": "none",
+   "box": [
+    1736.38,
+    17.73,
+    10.45,
+    93.72
+   ],
+   "n": 3,
+   "t": ""
+  },
+  {
+   "tag": "P",
+   "cls": "ml-[0.7em]",
+   "fs": "14.4521px",
+   "fw": "400",
+   "lh": "24.5685px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px 0px 0px 10.1165px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "left",
+   "lst": "none",
+   "box": [
+    1733.08,
+    73.69,
+    559.98,
+    114.28
+   ],
+   "n": 3,
+   "t": "In the #kudos channel: “Kudos to Amara for rewriting the dep"
+  },
+  {
+   "tag": "DL",
+   "cls": "mx-auto w-[70.3em] text-left max-wf-mini:max-w-full",
+   "fs": "8.25833px",
+   "fw": "400",
+   "lh": "13.2133px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px 47.6562px 0px 47.6406px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "left",
+   "lst": "disc",
+   "box": [
+    2086.94,
+    380.8,
+    580.55,
+    93.72
+   ],
+   "n": 1,
+   "t": "What does kudos mean? Praise or credit for an achievement. I"
+  },
+  {
+   "tag": "DIV",
+   "cls": "mb-[3em]",
+   "fs": "8.25833px",
+   "fw": "400",
+   "lh": "13.2133px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px 0px 24.775px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "left",
+   "lst": "disc",
+   "box": [
+    2086.94,
+    110.42,
+    580.55,
+    93.72
+   ],
+   "n": 3,
+   "t": "What does kudos mean? Praise or credit for an achievement. I"
+  },
+  {
+   "tag": "DT",
+   "cls": "text-[2.5em] leading-[1.54] font-bold text-black",
+   "fs": "20.6458px",
+   "fw": "700",
+   "lh": "31.7946px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "left",
+   "lst": "disc",
+   "box": [
+    2086.94,
+    31.78,
+    580.55,
+    93.72
+   ],
+   "n": 3,
+   "t": "What does kudos mean?"
+  },
+  {
+   "tag": "DD",
+   "cls": "mt-[0.6em]",
+   "fs": "8.25833px",
+   "fw": "400",
+   "lh": "13.2133px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "4.955px 0px 0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "left",
+   "lst": "disc",
+   "box": [
+    2123.67,
+    73.69,
+    580.55,
+    93.72
+   ],
+   "n": 3,
+   "t": "Praise or credit for an achievement. It comes from the Greek"
+  },
+  {
+   "tag": "UL",
+   "cls": "flex w-full flex-wrap justify-center gap-[3em]",
+   "fs": "8.25833px",
+   "fw": "400",
+   "lh": "13.2133px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "none",
+   "box": [
+    2592.06,
+    738.03,
+    675.84,
+    46.08
+   ],
+   "n": 4,
+   "t": "Shoutout A shoutout is a brief public acknowledgement of a c"
+  },
+  {
+   "tag": "LI",
+   "cls": "relative z-[100] w-[42em] list-none rounded-[10px] border-2 border-black bg-white p-[2.4em] max-wf-mini:max-w-full",
+   "fs": "8.25833px",
+   "fw": "400",
+   "lh": "13.2133px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "19.82px",
+   "bg": "rgb(255, 255, 255)",
+   "bd": "2px solid rgb(0, 0, 0)",
+   "br": "10px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "none",
+   "box": [
+    2592.06,
+    222.19,
+    346.84,
+    210.58
+   ],
+   "n": 8,
+   "t": "Shoutout A shoutout is a brief public acknowledgement of a c"
+  },
+  {
+   "tag": "A",
+   "cls": "no-underline",
+   "fs": "8.25833px",
+   "fw": "600",
+   "lh": "8.25833px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "none",
+   "box": [
+    2613.88,
+    178.56,
+    303.22,
+    232.39
+   ],
+   "n": 8,
+   "t": "Shoutout A shoutout is a brief public acknowledgement of a c"
+  },
+  {
+   "tag": "H3",
+   "cls": "font-headline text-[3.5em] leading-[1.4] font-semibold text-black",
+   "fs": "28.9042px",
+   "fw": "600",
+   "lh": "40.4658px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "ivypresto-headline",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "none",
+   "box": [
+    2613.88,
+    40.47,
+    303.22,
+    232.39
+   ],
+   "n": 8,
+   "t": "Shoutout"
+  },
+  {
+   "tag": "P",
+   "cls": "my-[1em] text-[1.5625em]",
+   "fs": "12.9036px",
+   "fw": "400",
+   "lh": "21.9362px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "12.9036px 0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "none",
+   "box": [
+    2667.23,
+    87.75,
+    303.22,
+    232.39
+   ],
+   "n": 6,
+   "t": "A shoutout is a brief public acknowledgement of a colleague,"
+  },
+  {
+   "tag": "P",
+   "cls": "mt-[0.5em] text-[1.75em] font-semibold",
+   "fs": "14.4521px",
+   "fw": "600",
+   "lh": "24.5685px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "7.22604px 0px 0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "none",
+   "box": [
+    2767.88,
+    24.56,
+    303.22,
+    232.39
+   ],
+   "n": 8,
+   "t": "Read the definition"
+  },
+  {
+   "tag": "SECTION",
+   "cls": "relative",
+   "fs": "8.25833px",
+   "fw": "400",
+   "lh": "13.2133px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    4860.48,
+    125.86,
+    768,
+    0
+   ],
+   "n": 1,
+   "t": ""
+  },
+  {
+   "tag": "DIV",
+   "cls": "relative mx-auto -mt-[3em] w-[120em]",
+   "fs": "8.25833px",
+   "fw": "400",
+   "lh": "13.2133px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "-24.775px 0px 0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    4860.48,
+    123.86,
+    990.98,
+    0
+   ],
+   "n": 1,
+   "t": ""
+  },
+  {
+   "tag": "IMG",
+   "cls": "marketing-drift-leaf",
+   "fs": "8.25833px",
+   "fw": "400",
+   "lh": "13.2133px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "100%",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    4872.89,
+    117.34,
+    100.59,
+    7.93
+   ],
+   "n": 12,
+   "t": ""
+  },
+  {
+   "tag": "DIV",
+   "cls": "relative z-[200] h-[15em] bg-cream",
+   "fs": "8.25833px",
+   "fw": "400",
+   "lh": "13.2133px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgb(255, 255, 243)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    4860.48,
+    123.86,
+    990.98,
+    0
+   ],
+   "n": 1,
+   "t": ""
+  },
+  {
+   "tag": "DIV",
+   "cls": "relative z-[201] h-[2px] bg-black",
+   "fs": "8.25833px",
+   "fw": "400",
+   "lh": "13.2133px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgb(0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    4984.34,
+    2,
+    768,
+    0
+   ],
+   "n": 1,
+   "t": ""
+  },
+  {
+   "tag": "SECTION",
+   "cls": "relative bg-cream-dark",
+   "fs": "8.25833px",
+   "fw": "400",
+   "lh": "13.2133px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgb(237, 237, 226)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    4961.58,
+    804.19,
+    768,
+    0
+   ],
+   "n": 1,
+   "t": "Only pay for active users who use Evergreen Lots of support,"
+  },
+  {
+   "tag": "DIV",
+   "cls": "mx-auto -mt-[3em] w-full max-w-[1920px] px-[6em] max-wf-tablet:px-[6vw] pt-[18em] pb-[5em]",
+   "fs": "8.25833px",
+   "fw": "400",
+   "lh": "13.2133px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "-24.775px 0px 0px",
+   "pad": "148.65px 46.08px 41.2917px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "1920px",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    4961.58,
+    804.19,
+    768,
+    0
+   ],
+   "n": 1,
+   "t": "Only pay for active users who use Evergreen Lots of support,"
+  },
+  {
+   "tag": "DIV",
+   "cls": "my-[4.2em] text-center max-wf-mini:my-[3.5em] mt-0 max-wf-mini:mt-0 flex justify-around max-wf-mini:flex-col max-wf-mini:items-center",
+   "fs": "8.25833px",
+   "fw": "400",
+   "lh": "13.2133px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px 0px 34.685px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    5110.22,
+    84.17,
+    675.84,
+    46.08
+   ],
+   "n": 3,
+   "t": "Only pay for active users who use Evergreen Lots of support,"
+  },
+  {
+   "tag": "DIV",
+   "cls": "flex flex-col items-center w-[25em] max-wf-phone:mx-[1em] max-wf-phone:w-[16em] max-wf-mini:mb-[4.6em]",
+   "fs": "8.25833px",
+   "fw": "400",
+   "lh": "13.2133px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    5110.22,
+    84.17,
+    206.45,
+    49.98
+   ],
+   "n": 8,
+   "t": "Only pay for active users who use Evergreen"
+  },
+  {
+   "tag": "SPAN",
+   "cls": "mb-[1em] flex h-[3.24544em] items-center justify-center",
+   "fs": "8.25833px",
+   "fw": "400",
+   "lh": "13.2133px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px 0px 8.25833px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    5110.22,
+    26.8,
+    24.23,
+    141.09
+   ],
+   "n": 3,
+   "t": ""
+  },
+  {
+   "tag": "IMG",
+   "cls": "h-full w-auto",
+   "fs": "8.25833px",
+   "fw": "400",
+   "lh": "13.2133px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "100%",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    5110.22,
+    26.8,
+    24.23,
+    141.09
+   ],
+   "n": 3,
+   "t": ""
+  },
+  {
+   "tag": "P",
+   "cls": "mx-auto max-w-[49ch] text-center",
+   "fs": "14.4521px",
+   "fw": "400",
+   "lh": "24.5685px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "449.696px",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    5145.27,
+    49.13,
+    206.45,
+    49.98
+   ],
+   "n": 3,
+   "t": "Only pay for active users who use Evergreen"
+  },
+  {
+   "tag": "DIV",
+   "cls": "mt-[7.4em] max-wf-phone:w-full max-wf-mini:mt-[3em] mx-auto w-[51em] max-wf-mini:w-auto",
+   "fs": "8.25833px",
+   "fw": "400",
+   "lh": "13.2133px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "61.1116px 127.328px 0px 127.344px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    5290.17,
+    141.59,
+    421.17,
+    173.42
+   ],
+   "n": 1,
+   "t": "Start feeling good about work"
+  },
+  {
+   "tag": "H2",
+   "cls": "font-headline text-[6.125em] leading-[1.4] font-semibold text-black max-wf-mini:text-[5.1em] text-center",
+   "fs": "50.5823px",
+   "fw": "600",
+   "lh": "70.8152px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "ivypresto-headline",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    5290.17,
+    141.59,
+    421.17,
+    173.42
+   ],
+   "n": 1,
+   "t": "Start feeling good about work"
+  },
+  {
+   "tag": "P",
+   "cls": "mx-auto max-w-[49ch] text-center",
+   "fs": "14.4521px",
+   "fw": "400",
+   "lh": "24.5685px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px 113.078px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "449.696px",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    5466.44,
+    49.13,
+    449.69,
+    159.16
+   ],
+   "n": 1,
+   "t": "For only $3.99 per active user a month. In the 14 day free t"
+  },
+  {
+   "tag": "BUTTON",
+   "cls": "inline-block rounded-[40.5px] bg-black px-[2.2em] py-[1.2em]",
+   "fs": "8.25833px",
+   "fw": "400",
+   "lh": "13.2133px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "9.91px 18.1683px",
+   "bg": "rgb(0, 0, 0)",
+   "bd": "",
+   "br": "40.5px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    5550.23,
+    43.66,
+    164.88,
+    301.56
+   ],
+   "n": 1,
+   "t": "Start 14 Day Trial"
+  },
+  {
+   "tag": "SPAN",
+   "cls": "block text-[1.875em] leading-[1.54] font-semibold text-white",
+   "fs": "15.4844px",
+   "fw": "600",
+   "lh": "23.8459px",
+   "ls": "normal",
+   "color": "rgb(255, 255, 255)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    5560.14,
+    23.84,
+    128.56,
+    319.72
+   ],
+   "n": 1,
+   "t": "Start 14 Day Trial"
+  },
+  {
+   "tag": "DIV",
+   "cls": "mt-[1.5em]",
+   "fs": "8.25833px",
+   "fw": "400",
+   "lh": "13.2133px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "12.3875px 0px 0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    5606.27,
+    20.19,
+    214.63,
+    276.69
+   ],
+   "n": 1,
+   "t": "No credit card needed • No setup costs"
+  },
+  {
+   "tag": "P",
+   "cls": "mx-auto max-w-[49ch] text-center text-[1.4375em]",
+   "fs": "11.8714px",
+   "fw": "400",
+   "lh": "20.1813px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "369.404px",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    5606.27,
+    20.19,
+    214.63,
+    276.69
+   ],
+   "n": 1,
+   "t": "No credit card needed • No setup costs"
+  },
+  {
+   "tag": "A",
+   "cls": "mx-[3.5em] flex items-center font-normal no-underline max-wf-mini:mb-[2.2em] max-wf-mini:text-[1.3em]",
+   "fs": "8.25833px",
+   "fw": "400",
+   "lh": "8.25833px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px 28.9042px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    5661.13,
+    28.69,
+    106.84,
+    245.41
+   ],
+   "n": 2,
+   "t": "add to Slack"
+  },
+  {
+   "tag": "SPAN",
+   "cls": "mr-[1em] flex w-[3.47539em] items-center justify-center",
+   "fs": "8.25833px",
+   "fw": "400",
+   "lh": "8.25833px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px 8.25833px 0px 0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    5661.13,
+    28.69,
+    28.69,
+    245.41
+   ],
+   "n": 2,
+   "t": ""
+  },
+  {
+   "tag": "IMG",
+   "cls": "h-auto w-full",
+   "fs": "8.25833px",
+   "fw": "400",
+   "lh": "8.25833px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "100%",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    5661.13,
+    28.69,
+    28.69,
+    245.41
+   ],
+   "n": 2,
+   "t": ""
+  },
+  {
+   "tag": "SPAN",
+   "cls": "text-[1.4375em]",
+   "fs": "11.8714px",
+   "fw": "400",
+   "lh": "11.8714px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    5669.53,
+    11.88,
+    69.91,
+    282.34
+   ],
+   "n": 2,
+   "t": "add to Slack"
+  },
+  {
+   "tag": "STRONG",
+   "cls": "font-bold",
+   "fs": "11.8714px",
+   "fw": "700",
+   "lh": "11.8714px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    5667.53,
+    14,
+    32.2,
+    320.05
+   ],
+   "n": 2,
+   "t": "Slack"
+  },
+  {
+   "tag": "DIV",
+   "cls": "mx-auto -mt-[3em] w-full max-w-[1920px] px-[6em] max-wf-tablet:px-[6vw] py-[5em]",
+   "fs": "8.25833px",
+   "fw": "400",
+   "lh": "13.2133px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "-24.775px 0px 0px",
+   "pad": "41.2917px 46.08px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "1920px",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    5741,
+    434.16,
+    768,
+    0
+   ],
+   "n": 1,
+   "t": "Sign up for our newsletter and plant a tree Plant a tree ESG"
+  },
+  {
+   "tag": "A",
+   "cls": "block w-[16.0983em]",
+   "fs": "8.25833px",
+   "fw": "600",
+   "lh": "8.25833px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "underline",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    5816.95,
+    37.31,
+    132.94,
+    46.08
+   ],
+   "n": 1,
+   "t": ""
+  },
+  {
+   "tag": "IMG",
+   "cls": "h-auto w-full",
+   "fs": "8.25833px",
+   "fw": "600",
+   "lh": "8.25833px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "100%",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    5816.95,
+    37.31,
+    132.94,
+    46.08
+   ],
+   "n": 4,
+   "t": ""
+  },
+  {
+   "tag": "DIV",
+   "cls": "mb-[4em] flex flex-col items-start",
+   "fs": "8.25833px",
+   "fw": "400",
+   "lh": "13.2133px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px 0px 33.0333px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    5888.94,
+    154.17,
+    274.48,
+    46.08
+   ],
+   "n": 1,
+   "t": "Sign up for our newsletter and plant a tree Plant a tree"
+  },
+  {
+   "tag": "P",
+   "cls": "mt-[0.5em] font-semibold max-wf-mini:mt-0 max-wf-mini:ml-[1em] max-wf-mini:text-left max-wf-mini:leading-[1.6]",
+   "fs": "14.4521px",
+   "fw": "600",
+   "lh": "24.5685px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "7.22604px 0px 0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    5896.16,
+    49.13,
+    258.27,
+    46.08
+   ],
+   "n": 1,
+   "t": "Sign up for our newsletter and plant a tree"
+  },
+  {
+   "tag": "IMG",
+   "cls": "mt-[0.4em] ml-[0.7em] w-[1.26708em] max-wf-mini:mb-[0.9em] max-wf-mini:w-[2em]",
+   "fs": "8.25833px",
+   "fw": "400",
+   "lh": "13.2133px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "3.30333px 0px 0px 5.78083px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "100%",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    5892.23,
+    53.05,
+    10.45,
+    310.11
+   ],
+   "n": 1,
+   "t": ""
+  },
+  {
+   "tag": "DIV",
+   "cls": "mt-[1em] mb-[1.6em] flex w-full flex-col",
+   "fs": "8.25833px",
+   "fw": "400",
+   "lh": "13.2133px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "8.25833px 0px 13.2133px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    5953.53,
+    43.34,
+    274.48,
+    46.08
+   ],
+   "n": 1,
+   "t": "Plant a tree"
+  },
+  {
+   "tag": "FORM",
+   "cls": "relative flex w-full justify-center",
+   "fs": "8.25833px",
+   "fw": "400",
+   "lh": "13.2133px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    5953.53,
+    43.34,
+    274.48,
+    46.08
+   ],
+   "n": 1,
+   "t": "Plant a tree"
+  },
+  {
+   "tag": "INPUT",
+   "cls": "absolute -left-[9999px] size-px opacity-0",
+   "fs": "8.25833px",
+   "fw": "400",
+   "lh": "13.2133px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    5953.53,
+    1,
+    1,
+    -9952.92
+   ],
+   "n": 1,
+   "t": ""
+  },
+  {
+   "tag": "INPUT",
+   "cls": "h-[3em] w-full max-w-[49ch] rounded-l-[7px] border-2 border-black px-[0.9em] text-[1.75em] leading-[1.7] text-black placeholder:text-black/60",
+   "fs": "14.4521px",
+   "fw": "400",
+   "lh": "24.5685px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px 13.0069px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "2px solid rgb(0, 0, 0)",
+   "br": "7px 0px 0px 7px",
+   "maxw": "449.696px",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    5953.53,
+    43.34,
+    150.84,
+    46.08
+   ],
+   "n": 1,
+   "t": ""
+  },
+  {
+   "tag": "BUTTON",
+   "cls": "h-[3em] shrink-0 rounded-r-[10px] bg-black px-[1.4em] text-[1.75em] leading-[1.7] font-bold text-white disabled:opacity-70",
+   "fs": "14.4521px",
+   "fw": "700",
+   "lh": "24.5685px",
+   "ls": "normal",
+   "color": "rgb(255, 255, 255)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px 20.2329px",
+   "bg": "rgb(0, 0, 0)",
+   "bd": "",
+   "br": "0px 10px 10px 0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    5953.53,
+    43.34,
+    123.64,
+    196.92
+   ],
+   "n": 1,
+   "t": "Plant a tree"
+  },
+  {
+   "tag": "A",
+   "cls": "mr-[1.2em] flex size-[4em] items-center justify-center rounded-full border-2 border-black bg-cream-dark",
+   "fs": "8.25833px",
+   "fw": "600",
+   "lh": "8.25833px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "underline",
+   "mar": "0px 9.91px 0px 0px",
+   "pad": "0px",
+   "bg": "rgb(237, 237, 226)",
+   "bd": "2px solid rgb(0, 0, 0)",
+   "br": "3.35544e+07px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    6010.08,
+    33.03,
+    33.03,
+    46.08
+   ],
+   "n": 3,
+   "t": ""
+  },
+  {
+   "tag": "NAV",
+   "cls": "flex justify-end max-wf-mini:flex-col",
+   "fs": "8.25833px",
+   "fw": "400",
+   "lh": "13.2133px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    5888.94,
+    197.88,
+    401.36,
+    320.56
+   ],
+   "n": 1,
+   "t": "ESG Pricing Customers Blog Schedule a demo Our purpose Help "
+  },
+  {
+   "tag": "UL",
+   "cls": "flex list-none flex-col items-start mr-[3.1em]",
+   "fs": "8.25833px",
+   "fw": "400",
+   "lh": "13.2133px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px 25.6008px 0px 0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "none",
+   "box": [
+    5888.94,
+    197.88,
+    96.22,
+    320.56
+   ],
+   "n": 2,
+   "t": "ESG Pricing Customers Blog Schedule a demo"
+  },
+  {
+   "tag": "LI",
+   "cls": "",
+   "fs": "8.25833px",
+   "fw": "400",
+   "lh": "13.2133px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "none",
+   "box": [
+    5888.94,
+    30.66,
+    27.38,
+    320.56
+   ],
+   "n": 15,
+   "t": "ESG"
+  },
+  {
+   "tag": "A",
+   "cls": "block mb-[1.2em] text-[1.6875em] font-medium text-black no-underline hover:underline",
+   "fs": "13.9359px",
+   "fw": "500",
+   "lh": "13.9359px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px 0px 16.7231px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "none",
+   "box": [
+    5888.94,
+    13.94,
+    27.38,
+    320.56
+   ],
+   "n": 15,
+   "t": "ESG"
+  },
+  {
+   "tag": "DIV",
+   "cls": "my-[4.2em] text-center max-wf-mini:my-[3.5em] mb-0 max-wf-mini:mb-0 flex flex-row items-center justify-between max-wf-mini:flex-col-reverse max-wf-mini:items-start",
+   "fs": "8.25833px",
+   "fw": "400",
+   "lh": "13.2133px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "34.685px 0px 0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    6121.48,
+    12.39,
+    675.84,
+    46.08
+   ],
+   "n": 1,
+   "t": "© Evergreen • Made with 💚 in Helsinki, Finland Terms of ser"
+  },
+  {
+   "tag": "SPAN",
+   "cls": "text-[1.5em] leading-none max-wf-mini:mb-[1.1em]",
+   "fs": "12.3875px",
+   "fw": "400",
+   "lh": "12.3875px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    6121.48,
+    12.39,
+    269.97,
+    46.08
+   ],
+   "n": 1,
+   "t": "© Evergreen • Made with 💚 in Helsinki, Finland"
+  },
+  {
+   "tag": "A",
+   "cls": "mr-[1.2em] text-[1.5em] font-normal no-underline hover:underline max-wf-mini:mb-[1.1em]",
+   "fs": "12.3875px",
+   "fw": "400",
+   "lh": "12.3875px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px 14.865px 0px 0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    6121.48,
+    12.39,
+    94.11,
+    533.72
+   ],
+   "n": 1,
+   "t": "Terms of service"
+  },
+  {
+   "tag": "A",
+   "cls": "text-[1.5em] font-normal no-underline hover:underline max-wf-mini:mb-[1.1em]",
+   "fs": "12.3875px",
+   "fw": "400",
+   "lh": "12.3875px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    6121.48,
+    12.39,
+    79.23,
+    642.69
+   ],
+   "n": 1,
+   "t": "Privacy policy"
+  }
+ ],
+ "imgs": [
+  {
+   "src": "https://www.evergreen.so/marketing/evergreen-logosvg-216cd4.svg",
+   "alt": "Evergreen",
+   "w": 140.39,
+   "h": 39.41,
+   "nw": 216,
+   "nh": 61,
+   "fit": "fill",
+   "loading": "auto",
+   "cls": "h-auto w-full"
+  },
+  {
+   "src": "https://www.evergreen.so/marketing/ever-small-leafsvg-e988d6.svg",
+   "alt": "",
+   "w": 0,
+   "h": 0,
+   "nw": 21,
+   "nh": 36,
+   "fit": "fill",
+   "loading": "auto",
+   "cls": "mr-[0.7em] w-[1.26708em]"
+  },
+  {
+   "src": "https://www.evergreen.so/marketing/ever-small-leafsvg-e988d6.svg",
+   "alt": "",
+   "w": 18.69,
+   "h": 31.7,
+   "nw": 21,
+   "nh": 36,
+   "fit": "fill",
+   "loading": "auto",
+   "cls": "w-[0.9em] shrink-0"
+  },
+  {
+   "src": "https://www.evergreen.so/marketing/ever-small-leafsvg-e988d6.svg",
+   "alt": "",
+   "w": 10.45,
+   "h": 17.73,
+   "nw": 21,
+   "nh": 36,
+   "fit": "fill",
+   "loading": "auto",
+   "cls": "mt-[0.4em] w-[1.26708em] shrink-0"
+  },
+  {
+   "src": "https://www.evergreen.so/marketing/ever-small-leafsvg-e988d6.svg",
+   "alt": "",
+   "w": 10.45,
+   "h": 17.73,
+   "nw": 21,
+   "nh": 36,
+   "fit": "fill",
+   "loading": "auto",
+   "cls": "mt-[0.4em] w-[1.26708em] shrink-0"
+  },
+  {
+   "src": "https://www.evergreen.so/marketing/ever-small-leafsvg-e988d6.svg",
+   "alt": "",
+   "w": 10.45,
+   "h": 17.73,
+   "nw": 21,
+   "nh": 36,
+   "fit": "fill",
+   "loading": "auto",
+   "cls": "mt-[0.4em] w-[1.26708em] shrink-0"
+  },
+  {
+   "src": "https://www.evergreen.so/marketing/ever-regular-leafsvg-1b92f2.svg",
+   "alt": "",
+   "w": 100.59,
+   "h": 117.34,
+   "nw": 116,
+   "nh": 199,
+   "fit": "fill",
+   "loading": "lazy",
+   "cls": "marketing-drift-leaf"
+  },
+  {
+   "src": "https://www.evergreen.so/marketing/leaf-smallersvg-6114e8.svg",
+   "alt": "",
+   "w": 125.02,
+   "h": 139.22,
+   "nw": 86,
+   "nh": 150,
+   "fit": "fill",
+   "loading": "lazy",
+   "cls": "marketing-drift-leaf"
+  },
+  {
+   "src": "https://www.evergreen.so/marketing/ever-regular-leafsvg-1b92f2.svg",
+   "alt": "",
+   "w": 102.64,
+   "h": 117.34,
+   "nw": 116,
+   "nh": 199,
+   "fit": "fill",
+   "loading": "lazy",
+   "cls": "marketing-drift-leaf"
+  },
+  {
+   "src": "https://www.evergreen.so/marketing/leaf-spikesvg-7a4672.svg",
+   "alt": "",
+   "w": 30.01,
+   "h": 60.22,
+   "nw": 27,
+   "nh": 150,
+   "fit": "fill",
+   "loading": "lazy",
+   "cls": "marketing-drift-leaf"
+  },
+  {
+   "src": "https://www.evergreen.so/marketing/leaf-spikesvg-7a4672.svg",
+   "alt": "",
+   "w": 27.17,
+   "h": 60.73,
+   "nw": 27,
+   "nh": 150,
+   "fit": "fill",
+   "loading": "lazy",
+   "cls": "marketing-drift-leaf"
+  },
+  {
+   "src": "https://www.evergreen.so/marketing/ever-regular-leafsvg-1b92f2.svg",
+   "alt": "",
+   "w": 81.52,
+   "h": 112.82,
+   "nw": 116,
+   "nh": 199,
+   "fit": "fill",
+   "loading": "lazy",
+   "cls": "marketing-drift-leaf"
+  },
+  {
+   "src": "https://www.evergreen.so/marketing/ever-regular-leafsvg-1b92f2.svg",
+   "alt": "",
+   "w": 81.52,
+   "h": 112.82,
+   "nw": 116,
+   "nh": 199,
+   "fit": "fill",
+   "loading": "lazy",
+   "cls": "marketing-drift-leaf"
+  },
+  {
+   "src": "https://www.evergreen.so/marketing/leaf-smallersvg-6114e8.svg",
+   "alt": "",
+   "w": 121.6,
+   "h": 139.59,
+   "nw": 86,
+   "nh": 150,
+   "fit": "fill",
+   "loading": "lazy",
+   "cls": "marketing-drift-leaf"
+  },
+  {
+   "src": "https://www.evergreen.so/marketing/ever-regular-leafsvg-1b92f2.svg",
+   "alt": "",
+   "w": 100.59,
+   "h": 117.34,
+   "nw": 116,
+   "nh": 199,
+   "fit": "fill",
+   "loading": "lazy",
+   "cls": "marketing-drift-leaf"
+  },
+  {
+   "src": "https://www.evergreen.so/marketing/ever-regular-leafsvg-1b92f2.svg",
+   "alt": "",
+   "w": 63.91,
+   "h": 104.57,
+   "nw": 116,
+   "nh": 199,
+   "fit": "fill",
+   "loading": "lazy",
+   "cls": "marketing-drift-leaf"
+  },
+  {
+   "src": "https://www.evergreen.so/marketing/leaf-spikesvg-7a4672.svg",
+   "alt": "",
+   "w": 9.92,
+   "h": 60.47,
+   "nw": 27,
+   "nh": 150,
+   "fit": "fill",
+   "loading": "lazy",
+   "cls": "marketing-drift-leaf"
+  },
+  {
+   "src": "https://www.evergreen.so/marketing/ever-regular-leafsvg-1b92f2.svg",
+   "alt": "",
+   "w": 76.99,
+   "h": 110.97,
+   "nw": 116,
+   "nh": 199,
+   "fit": "fill",
+   "loading": "lazy",
+   "cls": "marketing-drift-leaf"
+  },
+  {
+   "src": "https://www.evergreen.so/marketing/icon-usersvg-f5e0ab.svg",
+   "alt": "",
+   "w": 24.23,
+   "h": 26.8,
+   "nw": 54,
+   "nh": 60,
+   "fit": "fill",
+   "loading": "auto",
+   "cls": "h-full w-auto"
+  },
+  {
+   "src": "https://www.evergreen.so/marketing/icon-supportsvg-bc4096.svg",
+   "alt": "",
+   "w": 24.11,
+   "h": 26.8,
+   "nw": 52,
+   "nh": 57,
+   "fit": "fill",
+   "loading": "auto",
+   "cls": "h-full w-auto"
+  },
+  {
+   "src": "https://www.evergreen.so/marketing/icon-timesvg-4c8791.svg",
+   "alt": "",
+   "w": 26.8,
+   "h": 26.8,
+   "nw": 52,
+   "nh": 52,
+   "fit": "fill",
+   "loading": "auto",
+   "cls": "h-full w-auto"
+  },
+  {
+   "src": "https://www.evergreen.so/marketing/slacksvg-1b4e41.svg",
+   "alt": "",
+   "w": 28.69,
+   "h": 28.69,
+   "nw": 56,
+   "nh": 56,
+   "fit": "fill",
+   "loading": "auto",
+   "cls": "h-auto w-full"
+  },
+  {
+   "src": "https://www.evergreen.so/marketing/teamssvg-b74fd1.svg",
+   "alt": "",
+   "w": 28.69,
+   "h": 27.98,
+   "nw": 58,
+   "nh": 57,
+   "fit": "fill",
+   "loading": "auto",
+   "cls": "h-auto w-full"
+  },
+  {
+   "src": "https://www.evergreen.so/marketing/evergreen-logosvg-216cd4.svg",
+   "alt": "Evergreen",
+   "w": 132.94,
+   "h": 37.31,
+   "nw": 216,
+   "nh": 61,
+   "fit": "fill",
+   "loading": "auto",
+   "cls": "h-auto w-full"
+  },
+  {
+   "src": "https://www.evergreen.so/marketing/ever-small-leafsvg-e988d6.svg",
+   "alt": "",
+   "w": 10.45,
+   "h": 53.05,
+   "nw": 21,
+   "nh": 36,
+   "fit": "fill",
+   "loading": "auto",
+   "cls": "mt-[0.4em] ml-[0.7em] w-[1.26708em] max-wf-mini:mb-[0.9em] max-wf-mini:w-[2em]"
+  },
+  {
+   "src": "https://www.evergreen.so/marketing/icon-linkedinsvg-777cac.svg",
+   "alt": "",
+   "w": 13.78,
+   "h": 13.78,
+   "nw": 27,
+   "nh": 27,
+   "fit": "fill",
+   "loading": "auto",
+   "cls": "h-[1.67015em] w-auto"
+  },
+  {
+   "src": "https://www.evergreen.so/marketing/icon-twittersvg-6d6f46.svg",
+   "alt": "",
+   "w": 16.08,
+   "h": 13.78,
+   "nw": 31,
+   "nh": 27,
+   "fit": "fill",
+   "loading": "auto",
+   "cls": "h-[1.67015em] w-auto"
+  },
+  {
+   "src": "https://www.evergreen.so/marketing/icon-emailsvg-1a80b8.svg",
+   "alt": "",
+   "w": 17.22,
+   "h": 13.78,
+   "nw": 30,
+   "nh": 24,
+   "fit": "fill",
+   "loading": "auto",
+   "cls": "h-[1.67015em] w-auto"
+  }
+ ],
+ "links": [
+  {
+   "href": "/",
+   "t": ""
+  },
+  {
+   "href": "/",
+   "t": "Home"
+  },
+  {
+   "href": "/esg",
+   "t": "ESG"
+  },
+  {
+   "href": "/pricing",
+   "t": "Pricing"
+  },
+  {
+   "href": "/case-studies",
+   "t": "Customers"
+  },
+  {
+   "href": "/employee-recognition",
+   "t": "Resources"
+  },
+  {
+   "href": "/our-purpose",
+   "t": "Purpose"
+  },
+  {
+   "href": "https://app.evergreen.so/login",
+   "t": "Login"
+  },
+  {
+   "href": "/schedule-a-demo",
+   "t": "Schedule a demo"
+  },
+  {
+   "href": "/employee-recognition/glossary",
+   "t": "Recognition glossary"
+  },
+  {
+   "href": "/blog/15-creative-ways-to-give-shoutout-to-coworkers",
+   "t": "shoutout ideas page"
+  },
+  {
+   "href": "/employee-recognition/glossary/shoutout",
+   "t": "shoutouts"
+  },
+  {
+   "href": "/employee-recognition/glossary/informal-recognition",
+   "t": "informal"
+  },
+  {
+   "href": "/employee-recognition/glossary/peer-to-peer-recognition",
+   "t": "peer-to-peer"
+  },
+  {
+   "href": "/employee-recognition/glossary/shoutout",
+   "t": "Shoutout\n\nA shoutout is a brief public acknowledgement of a colleague, usually p"
+  },
+  {
+   "href": "/employee-recognition/glossary/informal-recognition",
+   "t": "Informal recognition\n\nInformal recognition is acknowledgement given without a pr"
+  },
+  {
+   "href": "/employee-recognition/glossary/peer-to-peer-recognition",
+   "t": "Peer-to-peer recognition\n\nPeer-to-peer recognition is recognition given by a col"
+  },
+  {
+   "href": "/employee-recognition-messages/helping-a-colleague",
+   "t": "Thank You Messages for Helping a Colleague: 12 Examples\n\nRead the examples"
+  },
+  {
+   "href": "/employee-recognition-messages/improving-a-process",
+   "t": "Recognising Process Improvements: 10 Messages\n\nRead the examples"
+  },
+  {
+   "href": "/company-values/generosity",
+   "t": "Generosity\n\nGenerosity is spending your own time on somebody else’s problem with"
+  },
+  {
+   "href": "/blog/15-creative-ways-to-give-shoutout-to-coworkers",
+   "t": "15 ways to give a coworker a shoutout (with templates)\n\nFifteen ways to give a c"
+  },
+  {
+   "href": "/blog/employee-recognition-in-slack",
+   "t": "Employee Recognition in Slack: A Practical Setup Guide\n\nSet up employee recognit"
+  },
+  {
+   "href": "https://app.evergreen.so/api/slack/install",
+   "t": "add to Slack"
+  },
+  {
+   "href": "https://app.evergreen.so/api/teams/install",
+   "t": "add to Teams"
+  },
+  {
+   "href": "/",
+   "t": ""
+  },
+  {
+   "href": "https://www.linkedin.com/company/evergreenapp/",
+   "t": ""
+  },
+  {
+   "href": "https://twitter.com/AppEvergreen",
+   "t": ""
+  },
+  {
+   "href": "mailto:teemu@evergreen.so?subject=Email%20from%20website",
+   "t": ""
+  },
+  {
+   "href": "/esg",
+   "t": "ESG"
+  },
+  {
+   "href": "/pricing",
+   "t": "Pricing"
+  },
+  {
+   "href": "/case-studies",
+   "t": "Customers"
+  },
+  {
+   "href": "/blog",
+   "t": "Blog"
+  },
+  {
+   "href": "/schedule-a-demo",
+   "t": "Schedule a demo"
+  },
+  {
+   "href": "/our-purpose",
+   "t": "Our purpose"
+  },
+  {
+   "href": "https://folksoft.notion.site/Help-Center-defd1351f1a64b6fabe5040f1c2697a5?pvs=4",
+   "t": "Help center"
+  },
+  {
+   "href": "/referral",
+   "t": "Referral Program"
+  },
+  {
+   "href": "/contact",
+   "t": "Contact us"
+  },
+  {
+   "href": "/employee-recognition",
+   "t": "Employee recognition guide"
+  },
+  {
+   "href": "/employee-recognition-messages",
+   "t": "Recognition messages"
+  },
+  {
+   "href": "/company-values",
+   "t": "Company values"
+  },
+  {
+   "href": "/employee-recognition/glossary",
+   "t": "Recognition glossary"
+  },
+  {
+   "href": "/employee-recognition/for",
+   "t": "Recognition for teams"
+  },
+  {
+   "href": "/alternatives",
+   "t": "Alternatives"
+  },
+  {
+   "href": "/terms-of-service",
+   "t": "Terms of service"
+  },
+  {
+   "href": "/privacy-policy",
+   "t": "Privacy policy"
+  }
+ ],
+ "forms": [
+  {
+   "cls": "relative flex w-full justify-center",
+   "fields": [
+    {
+     "tag": "INPUT",
+     "type": "text",
+     "name": "website",
+     "ph": "",
+     "req": false,
+     "al": null,
+     "max": null,
+     "box": [
+      5953.53,
+      1,
+      1,
+      -9952.92
+     ],
+     "fs": "8.25833px",
+     "lh": "13.2133px",
+     "fw": "400",
+     "bd": "0px solid rgb(51, 51, 51)",
+     "br": "0px",
+     "pad": "0px",
+     "bg": "rgba(0, 0, 0, 0)",
+     "color": "rgb(51, 51, 51)",
+     "cls": "absolute -left-[9999px] size-px opacity-0",
+     "txt": ""
+    },
+    {
+     "tag": "INPUT",
+     "type": "email",
+     "name": "email",
+     "ph": "Your best email",
+     "req": true,
+     "al": "Your best email",
+     "max": "256",
+     "box": [
+      5953.53,
+      43.34,
+      150.84,
+      46.08
+     ],
+     "fs": "14.4521px",
+     "lh": "24.5685px",
+     "fw": "400",
+     "bd": "2px solid rgb(0, 0, 0)",
+     "br": "7px 0px 0px 7px",
+     "pad": "0px 13.0069px",
+     "bg": "rgba(0, 0, 0, 0)",
+     "color": "rgb(0, 0, 0)",
+     "cls": "h-[3em] w-full max-w-[49ch] rounded-l-[7px] border-2 border-black px-[0.9em] text-[1.75em] leading-[1.7] text-black placeholder:text-black/60",
+     "txt": ""
+    },
+    {
+     "tag": "BUTTON",
+     "type": "submit",
+     "name": "",
+     "al": null,
+     "max": null,
+     "box": [
+      5953.53,
+      43.34,
+      123.64,
+      196.92
+     ],
+     "fs": "14.4521px",
+     "lh": "24.5685px",
+     "fw": "700",
+     "bd": "0px solid rgb(255, 255, 255)",
+     "br": "0px 10px 10px 0px",
+     "pad": "0px 20.2329px",
+     "bg": "rgb(0, 0, 0)",
+     "color": "rgb(255, 255, 255)",
+     "cls": "h-[3em] shrink-0 rounded-r-[10px] bg-black px-[1.4em] text-[1.75em] leading-[1.7] font-bold text-white disabled:opacity-70",
+     "txt": "Plant a tree"
+    }
+   ]
+  }
+ ],
+ "neg": {
+  "shadows": [],
+  "gradients": [],
+  "hovers": [
+   "SPAN hover:underline",
+   "SPAN hover:bg-white",
+   "A hover:underline"
+  ]
+ },
+ "transitions": [
+  "all",
+  "color 0.15s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), outline-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), text-decoration-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), fill 0.15s cubic-bezier(0.4, 0, 0.2, 1), stroke 0.15s cubic-bezier(0.4, 0, 0.2, 1), --tw-gradient-from 0.15s cubic-bezier(0.4, 0, 0.2, 1), --tw-gradient-via 0.15s cubic-bezier(0.4, 0, 0.2, 1), --tw-gradient-to 0.15s cubic-bezier(0.4, 0, 0.2, 1)"
+ ],
+ "motion": [
+  {
+   "cls": "inline-flex items-center rounded-full border-2 border-black bg-leaf text-center text-black",
+   "style": null,
+   "src": ""
+  },
+  {
+   "cls": "marketing-drift-leaf",
+   "style": "position: absolute; top: 10.3em; --leaf-rotate: 151deg; left: 3.5em; width: 7.10621em; height: 12.308em; z-index: 11; transform: translateY(-7.84564em) rotate(151deg);",
+   "src": "ever-regular-leafsvg-1b92f2.svg"
+  },
+  {
+   "cls": "marketing-drift-leaf",
+   "style": "position: absolute; top: 12.7em; --leaf-rotate: 146deg; left: 17.1193em; width: 8.34021em; height: 14.7087em; z-index: 1; transform: translateY(-9.80705em) rotate(146deg);",
+   "src": "leaf-smallersvg-6114e8.svg"
+  },
+  {
+   "cls": "marketing-drift-leaf",
+   "style": "position: absolute; top: 10.3em; --leaf-rotate: -149deg; left: 31.6585em; width: 7.10621em; height: 12.308em; z-index: 11; transform: translateY(-6.27651em) rotate(-149deg);",
+   "src": "ever-regular-leafsvg-1b92f2.svg"
+  },
+  {
+   "cls": "marketing-drift-leaf",
+   "style": "position: absolute; top: 10.7em; --leaf-rotate: -20deg; left: 43.52em; width: 1.20175em; height: 7.32222em; z-index: 1; transform: translateY(-3.13825em) rotate(-20deg);",
+   "src": "leaf-spikesvg-7a4672.svg"
+  },
+  {
+   "cls": "marketing-drift-leaf",
+   "style": "position: absolute; top: 11.9em; --leaf-rotate: 17deg; left: 48.7em; width: 1.20175em; height: 7.32222em; z-index: 1; transform: translateY(-3.13825em) rotate(17deg);",
+   "src": "leaf-spikesvg-7a4672.svg"
+  },
+  {
+   "cls": "marketing-drift-leaf",
+   "style": "position: absolute; top: 7.8em; --leaf-rotate: -166deg; left: 53.9641em; width: 7.10621em; height: 12.308em; z-index: 11; transform: translateY(-4.70738em) rotate(-166deg);",
+   "src": "ever-regular-leafsvg-1b92f2.svg"
+  },
+  {
+   "cls": "marketing-drift-leaf",
+   "style": "position: absolute; top: 11.3em; --leaf-rotate: 166deg; left: 59.3641em; width: 7.10621em; height: 12.308em; z-index: 12; transform: translateY(-7.06107em) rotate(166deg);",
+   "src": "ever-regular-leafsvg-1b92f2.svg"
+  },
+  {
+   "cls": "marketing-drift-leaf",
+   "style": "position: absolute; top: 11.9em; --leaf-rotate: -149deg; left: 72.8875em; width: 8.34021em; height: 14.7087em; z-index: 1; transform: translateY(-9.80705em) rotate(-149deg);",
+   "src": "leaf-smallersvg-6114e8.svg"
+  },
+  {
+   "cls": "marketing-drift-leaf",
+   "style": "position: absolute; top: 12em; --leaf-rotate: -151deg; left: 87.0737em; width: 7.10621em; height: 12.308em; z-index: 12; transform: translateY(-7.84564em) rotate(-151deg);",
+   "src": "ever-regular-leafsvg-1b92f2.svg"
+  },
+  {
+   "cls": "marketing-drift-leaf",
+   "style": "position:absolute;top:9.1em;--leaf-rotate:177deg;left:93.9737em;width:7.10621em;height:12.308em;z-index:13;transform:translateY(-7em) rotate(177deg)",
+   "src": "ever-regular-leafsvg-1b92f2.svg"
+  },
+  {
+   "cls": "marketing-drift-leaf",
+   "style": "position:absolute;top:10.7em;--leaf-rotate:0deg;left:106.62em;width:1.20175em;height:7.32222em;z-index:1;transform:translateY(-4em)",
+   "src": "leaf-spikesvg-7a4672.svg"
+  },
+  {
+   "cls": "marketing-drift-leaf",
+   "style": "position:absolute;top:11em;--leaf-rotate:-169deg;left:110.525em;width:7.10621em;height:12.308em;z-index:11;transform:translateY(-9em) rotate(-169deg)",
+   "src": "ever-regular-leafsvg-1b92f2.svg"
+  }
+ ],
+ "cardRects": [
+  [
+   1733.08,
+   73.69,
+   580.55,
+   93.72
+  ],
+  [
+   1823.28,
+   49.13,
+   580.55,
+   93.72
+  ],
+  [
+   1888.92,
+   73.69,
+   580.55,
+   93.72
+  ],
+  [
+   2592.06,
+   222.19,
+   346.84,
+   210.58
+  ],
+  [
+   2839.02,
+   244.13,
+   346.84,
+   210.58
+  ],
+  [
+   3107.91,
+   222.19,
+   346.84,
+   210.58
+  ],
+  [
+   3454.42,
+   196.81,
+   346.84,
+   210.58
+  ],
+  [
+   3676,
+   196.81,
+   346.84,
+   210.58
+  ],
+  [
+   3897.58,
+   200.25,
+   346.84,
+   210.58
+  ],
+  [
+   4222.16,
+   281.19,
+   346.84,
+   210.58
+  ],
+  [
+   4528.11,
+   281.19,
+   346.84,
+   210.58
+  ],
+  [
+   5888.94,
+   30.66,
+   27.38,
+   320.56
+  ],
+  [
+   5919.59,
+   30.66,
+   47.56,
+   320.56
+  ],
+  [
+   5950.25,
+   30.66,
+   73.64,
+   320.56
+  ],
+  [
+   5980.91,
+   30.66,
+   30.08,
+   320.56
+  ],
+  [
+   6011.56,
+   44.59,
+   96.22,
+   320.56
+  ],
+  [
+   5888.94,
+   30.66,
+   82.28,
+   442.38
+  ],
+  [
+   5919.59,
+   30.66,
+   78.06,
+   442.38
+  ],
+  [
+   5950.25,
+   44.59,
+   96.95,
+   442.38
+  ],
+  [
+   5994.84,
+   30.66,
+   73.5,
+   442.38
+  ],
+  [
+   5888.94,
+   44.59,
+   157,
+   564.92
+  ],
+  [
+   5933.53,
+   30.66,
+   151.67,
+   564.92
+  ],
+  [
+   5964.19,
+   30.66,
+   109.22,
+   564.92
+  ],
+  [
+   5994.84,
+   30.66,
+   141.36,
+   564.92
+  ],
+  [
+   6025.5,
+   30.66,
+   148.28,
+   564.92
+  ],
+  [
+   6056.16,
+   30.66,
+   82.59,
+   564.92
+  ]
+ ]
+}

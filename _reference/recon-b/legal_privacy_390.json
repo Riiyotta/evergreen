@@ -1,0 +1,1893 @@
+{
+ "url": "/privacy-policy",
+ "vw": 390,
+ "root": "8.25833px",
+ "docH": 9742,
+ "title": "Evergreen | Privacy Policy",
+ "desc": "At Evergreen, we value your privacy as much as we value the environment. Learn more about our commitment to protecting your personal information while using our platform.",
+ "canonical": "https://www.evergreen.so/privacy-policy",
+ "sections": [
+  {
+   "box": [
+    52.84,
+    8799.42,
+    390,
+    0
+   ],
+   "bg": "rgb(255, 255, 243)",
+   "cls": "relative bg-cream",
+   "inner": {
+    "box": [
+     52.84,
+     8799.42,
+     390,
+     0
+    ],
+    "pad": "0px 23.4px 41.2917px",
+    "mt": "-24.775px",
+    "maxw": "1920px",
+    "cls": "mx-auto -mt-[3em] w-full max-w-[1920px] px-[6em] max-wf-tablet:px-[6vw] pb-[5em]"
+   }
+  }
+ ],
+ "blocks": [
+  {
+   "box": [
+    52.84,
+    219.5,
+    343.22,
+    23.39
+   ],
+   "mar": "0px",
+   "cls": "pt-[10.2em] max-wf-mini:pt-[11.8em]",
+   "t": "Privacy Policy Last updated: 28th July 2022"
+  },
+  {
+   "box": [
+    332.2,
+    8455.67,
+    343.22,
+    23.39
+   ],
+   "mar": "59.8729px 0px 0px",
+   "cls": "mt-[5em] max-wf-mini:mt-[7.25em]",
+   "t": "Your privacy is important to us. It is Evergreen’s (“Stonks Oy” or “St"
+  }
+ ],
+ "roles": [
+  {
+   "tag": "DIV",
+   "cls": "relative z-[999999998] flex w-full justify-between px-[2.9em] py-[1.7em] max-wf-phone:px-[1.5em]",
+   "fs": "8.25833px",
+   "fw": "400",
+   "lh": "13.2133px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "14.0392px 12.3875px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    0,
+    77.61,
+    390,
+    0
+   ],
+   "n": 1,
+   "t": ""
+  },
+  {
+   "tag": "A",
+   "cls": "flex w-[13.471em] items-center max-wf-tablet:w-[17em]",
+   "fs": "8.25833px",
+   "fw": "600",
+   "lh": "8.25833px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "underline",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    14.03,
+    49.55,
+    140.39,
+    12.38
+   ],
+   "n": 1,
+   "t": ""
+  },
+  {
+   "tag": "IMG",
+   "cls": "h-auto w-full",
+   "fs": "8.25833px",
+   "fw": "600",
+   "lh": "8.25833px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "100%",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    19.09,
+    39.41,
+    140.39,
+    12.38
+   ],
+   "n": 1,
+   "t": ""
+  },
+  {
+   "tag": "BUTTON",
+   "cls": "relative z-[2147483647] hidden size-[6em] items-center justify-center max-wf-tablet:flex",
+   "fs": "8.25833px",
+   "fw": "400",
+   "lh": "13.2133px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    14.03,
+    49.55,
+    49.55,
+    328.08
+   ],
+   "n": 1,
+   "t": ""
+  },
+  {
+   "tag": "SPAN",
+   "cls": "relative block h-[1.55em] w-[4.15em]",
+   "fs": "8.25833px",
+   "fw": "400",
+   "lh": "13.2133px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    32.41,
+    12.8,
+    34.27,
+    335.72
+   ],
+   "n": 1,
+   "t": ""
+  },
+  {
+   "tag": "SPAN",
+   "cls": "absolute left-0 block h-[0.35em] w-full bg-black transition-transform duration-200 top-0",
+   "fs": "8.25833px",
+   "fw": "400",
+   "lh": "13.2133px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgb(0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    32.41,
+    2.88,
+    34.27,
+    335.72
+   ],
+   "n": 2,
+   "t": ""
+  },
+  {
+   "tag": "MAIN",
+   "cls": "relative w-full overflow-hidden",
+   "fs": "8.25833px",
+   "fw": "400",
+   "lh": "13.2133px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    77.61,
+    8774.66,
+    390,
+    0
+   ],
+   "n": 1,
+   "t": "Privacy Policy Last updated: 28th July 2022 Your privacy is "
+  },
+  {
+   "tag": "SECTION",
+   "cls": "relative bg-cream",
+   "fs": "8.25833px",
+   "fw": "400",
+   "lh": "13.2133px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgb(255, 255, 243)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    52.84,
+    8799.42,
+    390,
+    0
+   ],
+   "n": 2,
+   "t": "Privacy Policy Last updated: 28th July 2022 Your privacy is "
+  },
+  {
+   "tag": "DIV",
+   "cls": "mx-auto -mt-[3em] w-full max-w-[1920px] px-[6em] max-wf-tablet:px-[6vw] pb-[5em]",
+   "fs": "8.25833px",
+   "fw": "400",
+   "lh": "13.2133px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "-24.775px 0px 0px",
+   "pad": "0px 23.4px 41.2917px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "1920px",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    52.84,
+    8799.42,
+    390,
+    0
+   ],
+   "n": 1,
+   "t": "Privacy Policy Last updated: 28th July 2022 Your privacy is "
+  },
+  {
+   "tag": "DIV",
+   "cls": "pt-[10.2em] max-wf-mini:pt-[11.8em]",
+   "fs": "8.25833px",
+   "fw": "400",
+   "lh": "13.2133px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "97.4483px 0px 0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    52.84,
+    219.5,
+    343.22,
+    23.39
+   ],
+   "n": 1,
+   "t": "Privacy Policy Last updated: 28th July 2022"
+  },
+  {
+   "tag": "DIV",
+   "cls": "relative mx-auto w-[108em] max-wf-tablet:w-[80em] max-wf-phone:w-full max-wf-mini:flex max-wf-mini:w-auto max-wf-mini:flex-col max-wf-mini:items-center",
+   "fs": "8.25833px",
+   "fw": "400",
+   "lh": "13.2133px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    150.28,
+    122.06,
+    343.22,
+    23.39
+   ],
+   "n": 1,
+   "t": "Privacy Policy Last updated: 28th July 2022"
+  },
+  {
+   "tag": "H1",
+   "cls": "mx-auto max-w-[49ch] text-center max-wf-mini:text-[3.9em]",
+   "fs": "32.2075px",
+   "fw": "600",
+   "lh": "47.9892px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "ivypresto-headline",
+   "td": "none",
+   "mar": "0px 78.1406px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "976.658px",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    150.28,
+    47.97,
+    186.92,
+    101.53
+   ],
+   "n": 1,
+   "t": "Privacy Policy"
+  },
+  {
+   "tag": "DIV",
+   "cls": "my-[3em]",
+   "fs": "8.25833px",
+   "fw": "400",
+   "lh": "13.2133px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "24.775px 0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    223.02,
+    24.56,
+    285.47,
+    52.27
+   ],
+   "n": 1,
+   "t": "Last updated: 28th July 2022"
+  },
+  {
+   "tag": "P",
+   "cls": "mx-[3em] max-w-[49ch] text-center",
+   "fs": "14.4521px",
+   "fw": "400",
+   "lh": "24.5685px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px 43.3562px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "449.696px",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    223.02,
+    24.56,
+    198.78,
+    95.61
+   ],
+   "n": 1,
+   "t": "Last updated: 28th July 2022"
+  },
+  {
+   "tag": "DIV",
+   "cls": "mt-[5em] max-wf-mini:mt-[7.25em]",
+   "fs": "8.25833px",
+   "fw": "400",
+   "lh": "13.2133px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "59.8729px 0px 0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    332.2,
+    8455.67,
+    343.22,
+    23.39
+   ],
+   "n": 1,
+   "t": "Your privacy is important to us. It is Evergreen’s (“Stonks "
+  },
+  {
+   "tag": "DIV",
+   "cls": "marketing-rich-text mx-auto max-w-[77.78em] max-wf-tablet:w-auto",
+   "fs": "8.25833px",
+   "fw": "400",
+   "lh": "13.2133px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "642.333px",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    332.2,
+    8455.67,
+    343.22,
+    23.39
+   ],
+   "n": 1,
+   "t": "Your privacy is important to us. It is Evergreen’s (“Stonks "
+  },
+  {
+   "tag": "P",
+   "cls": "",
+   "fs": "14.4521px",
+   "fw": "400",
+   "lh": "24.5685px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px 0px 23.1233px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    332.2,
+    122.81,
+    343.22,
+    23.39
+   ],
+   "n": 47,
+   "t": "Your privacy is important to us. It is Evergreen’s (“Stonks "
+  },
+  {
+   "tag": "A",
+   "cls": "",
+   "fs": "14.4521px",
+   "fw": "600",
+   "lh": "14.4521px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "Rubik",
+   "td": "underline",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    408.89,
+    18,
+    93.61,
+    219.89
+   ],
+   "n": 6,
+   "t": "Evergreen.so"
+  },
+  {
+   "tag": "STRONG",
+   "cls": "",
+   "fs": "14.4521px",
+   "fw": "700",
+   "lh": "24.5685px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    1428.89,
+    18,
+    0,
+    23.39
+   ],
+   "n": 1,
+   "t": "‍"
+  },
+  {
+   "tag": "H2",
+   "cls": "",
+   "fs": "37.1625px",
+   "fw": "600",
+   "lh": "44.595px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "ivypresto-headline",
+   "td": "none",
+   "mar": "0px 0px 29.73px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    1473.56,
+    89.16,
+    343.22,
+    23.39
+   ],
+   "n": 2,
+   "t": "Data Privacy Statement"
+  },
+  {
+   "tag": "H3",
+   "cls": "",
+   "fs": "20.6458px",
+   "fw": "700",
+   "lh": "31.7946px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px 0px 6.19375px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    1787.48,
+    63.56,
+    343.22,
+    23.39
+   ],
+   "n": 18,
+   "t": "What personal data does Stonks process?"
+  },
+  {
+   "tag": "STRONG",
+   "cls": "",
+   "fs": "20.6458px",
+   "fw": "700",
+   "lh": "31.7946px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    2270.95,
+    24,
+    336.13,
+    23.39
+   ],
+   "n": 1,
+   "t": "How is personal data processed?"
+  },
+  {
+   "tag": "BR",
+   "cls": "",
+   "fs": "14.4521px",
+   "fw": "400",
+   "lh": "24.5685px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    2614.17,
+    18,
+    0,
+    161.13
+   ],
+   "n": 5,
+   "t": ""
+  },
+  {
+   "tag": "UL",
+   "cls": "",
+   "fs": "14.4521px",
+   "fw": "400",
+   "lh": "24.5685px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px 0px 10px",
+   "pad": "0px 0px 0px 40px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    3313.08,
+    122.81,
+    343.22,
+    23.39
+   ],
+   "n": 2,
+   "t": "Basic contact information (name, company name and email addr"
+  },
+  {
+   "tag": "LI",
+   "cls": "",
+   "fs": "14.4521px",
+   "fw": "400",
+   "lh": "24.5685px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    3313.08,
+    49.13,
+    303.22,
+    63.39
+   ],
+   "n": 8,
+   "t": "Basic contact information (name, company name and email addr"
+  },
+  {
+   "tag": "STRONG",
+   "cls": "",
+   "fs": "14.4521px",
+   "fw": "700",
+   "lh": "24.5685px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    3808,
+    18,
+    68.58,
+    63.39
+   ],
+   "n": 5,
+   "t": "MongoDB"
+  },
+  {
+   "tag": "EM",
+   "cls": "",
+   "fs": "14.4521px",
+   "fw": "400",
+   "lh": "24.5685px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    7299.03,
+    18,
+    136.31,
+    23.39
+   ],
+   "n": 4,
+   "t": "Analytical purposes:"
+  },
+  {
+   "tag": "DIV",
+   "cls": "mx-auto -mt-[3em] w-full max-w-[1920px] px-[6em] max-wf-tablet:px-[6vw] py-[5em]",
+   "fs": "8.25833px",
+   "fw": "400",
+   "lh": "13.2133px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "-24.775px 0px 0px",
+   "pad": "41.2917px 23.4px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "1920px",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    8827.5,
+    914.03,
+    390,
+    0
+   ],
+   "n": 1,
+   "t": "Sign up for our newsletter and plant a tree Plant a tree ESG"
+  },
+  {
+   "tag": "DIV",
+   "cls": "my-[4.2em] text-center max-wf-mini:my-[3.5em] flex justify-between",
+   "fs": "8.25833px",
+   "fw": "400",
+   "lh": "13.2133px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "28.9042px 0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    8897.67,
+    37.31,
+    343.22,
+    23.39
+   ],
+   "n": 2,
+   "t": ""
+  },
+  {
+   "tag": "A",
+   "cls": "block w-[16.0983em]",
+   "fs": "8.25833px",
+   "fw": "600",
+   "lh": "8.25833px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "underline",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    8897.67,
+    37.31,
+    132.94,
+    23.39
+   ],
+   "n": 1,
+   "t": ""
+  },
+  {
+   "tag": "IMG",
+   "cls": "h-auto w-full",
+   "fs": "8.25833px",
+   "fw": "600",
+   "lh": "8.25833px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "100%",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    8897.67,
+    37.31,
+    132.94,
+    23.39
+   ],
+   "n": 4,
+   "t": ""
+  },
+  {
+   "tag": "DIV",
+   "cls": "flex flex-col items-start",
+   "fs": "8.25833px",
+   "fw": "400",
+   "lh": "13.2133px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    8963.88,
+    169.59,
+    343.22,
+    23.39
+   ],
+   "n": 3,
+   "t": "Sign up for our newsletter and plant a tree Plant a tree"
+  },
+  {
+   "tag": "DIV",
+   "cls": "mb-[4em] flex flex-col items-start",
+   "fs": "8.25833px",
+   "fw": "400",
+   "lh": "13.2133px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px 0px 33.0333px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    8963.88,
+    136.56,
+    334.09,
+    23.39
+   ],
+   "n": 1,
+   "t": "Sign up for our newsletter and plant a tree Plant a tree"
+  },
+  {
+   "tag": "P",
+   "cls": "mt-[0.5em] font-semibold max-wf-mini:mt-0 max-wf-mini:ml-[1em] max-wf-mini:text-left max-wf-mini:leading-[1.6]",
+   "fs": "14.4521px",
+   "fw": "600",
+   "lh": "23.1233px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px 0px 0px 14.4521px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "left",
+   "lst": "disc",
+   "box": [
+    8971.67,
+    23.13,
+    297.38,
+    60.11
+   ],
+   "n": 1,
+   "t": "Sign up for our newsletter and plant a tree"
+  },
+  {
+   "tag": "IMG",
+   "cls": "mt-[0.4em] ml-[0.7em] w-[1.26708em] max-wf-mini:mb-[0.9em] max-wf-mini:w-[2em]",
+   "fs": "8.25833px",
+   "fw": "400",
+   "lh": "13.2133px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "3.30333px 0px 7.4325px 5.78083px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "100%",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    8967.17,
+    28.02,
+    16.52,
+    29.16
+   ],
+   "n": 1,
+   "t": ""
+  },
+  {
+   "tag": "DIV",
+   "cls": "mt-[1em] mb-[1.6em] flex w-full flex-col",
+   "fs": "8.25833px",
+   "fw": "400",
+   "lh": "13.2133px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "8.25833px 0px 13.2133px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    9010.86,
+    43.34,
+    334.09,
+    23.39
+   ],
+   "n": 1,
+   "t": "Plant a tree"
+  },
+  {
+   "tag": "FORM",
+   "cls": "relative flex w-full justify-center",
+   "fs": "8.25833px",
+   "fw": "400",
+   "lh": "13.2133px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    9010.86,
+    43.34,
+    334.09,
+    23.39
+   ],
+   "n": 1,
+   "t": "Plant a tree"
+  },
+  {
+   "tag": "INPUT",
+   "cls": "absolute -left-[9999px] size-px opacity-0",
+   "fs": "8.25833px",
+   "fw": "400",
+   "lh": "13.2133px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    9010.86,
+    1,
+    1,
+    -9975.61
+   ],
+   "n": 1,
+   "t": ""
+  },
+  {
+   "tag": "INPUT",
+   "cls": "h-[3em] w-full max-w-[49ch] rounded-l-[7px] border-2 border-black px-[0.9em] text-[1.75em] leading-[1.7] text-black placeholder:text-black/60",
+   "fs": "14.4521px",
+   "fw": "400",
+   "lh": "24.5685px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px 13.0069px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "2px solid rgb(0, 0, 0)",
+   "br": "7px 0px 0px 7px",
+   "maxw": "449.696px",
+   "ta": "start",
+   "lst": "disc",
+   "box": [
+    9010.86,
+    43.34,
+    210.45,
+    23.39
+   ],
+   "n": 1,
+   "t": ""
+  },
+  {
+   "tag": "BUTTON",
+   "cls": "h-[3em] shrink-0 rounded-r-[10px] bg-black px-[1.4em] text-[1.75em] leading-[1.7] font-bold text-white disabled:opacity-70",
+   "fs": "14.4521px",
+   "fw": "700",
+   "lh": "24.5685px",
+   "ls": "normal",
+   "color": "rgb(255, 255, 255)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px 20.2329px",
+   "bg": "rgb(0, 0, 0)",
+   "bd": "",
+   "br": "0px 10px 10px 0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    9010.86,
+    43.34,
+    123.64,
+    233.84
+   ],
+   "n": 1,
+   "t": "Plant a tree"
+  },
+  {
+   "tag": "A",
+   "cls": "mr-[1.2em] flex size-[4em] items-center justify-center rounded-full border-2 border-black bg-cream-dark",
+   "fs": "8.25833px",
+   "fw": "600",
+   "lh": "8.25833px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "underline",
+   "mar": "0px 9.91px 0px 0px",
+   "pad": "0px",
+   "bg": "rgb(237, 237, 226)",
+   "bd": "2px solid rgb(0, 0, 0)",
+   "br": "3.35544e+07px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    9067.41,
+    33.03,
+    33.03,
+    23.39
+   ],
+   "n": 3,
+   "t": ""
+  },
+  {
+   "tag": "NAV",
+   "cls": "flex justify-end max-wf-mini:flex-col",
+   "fs": "8.25833px",
+   "fw": "400",
+   "lh": "13.2133px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    9133.47,
+    459.84,
+    343.22,
+    23.39
+   ],
+   "n": 1,
+   "t": "ESG Pricing Customers Blog Schedule a demo Our purpose Help "
+  },
+  {
+   "tag": "UL",
+   "cls": "flex list-none flex-col items-start mr-[3.1em]",
+   "fs": "8.25833px",
+   "fw": "400",
+   "lh": "13.2133px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px 25.6008px 0px 0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "none",
+   "box": [
+    9133.47,
+    153.28,
+    317.63,
+    23.39
+   ],
+   "n": 2,
+   "t": "ESG Pricing Customers Blog Schedule a demo"
+  },
+  {
+   "tag": "LI",
+   "cls": "",
+   "fs": "8.25833px",
+   "fw": "400",
+   "lh": "13.2133px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "none",
+   "box": [
+    9133.47,
+    30.66,
+    27.38,
+    23.39
+   ],
+   "n": 15,
+   "t": "ESG"
+  },
+  {
+   "tag": "A",
+   "cls": "block mb-[1.2em] text-[1.6875em] font-medium text-black no-underline hover:underline",
+   "fs": "13.9359px",
+   "fw": "500",
+   "lh": "13.9359px",
+   "ls": "normal",
+   "color": "rgb(0, 0, 0)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px 0px 16.7231px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "none",
+   "box": [
+    9133.47,
+    13.94,
+    27.38,
+    23.39
+   ],
+   "n": 15,
+   "t": "ESG"
+  },
+  {
+   "tag": "UL",
+   "cls": "flex list-none flex-col items-start ",
+   "fs": "8.25833px",
+   "fw": "400",
+   "lh": "13.2133px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "none",
+   "box": [
+    9409.38,
+    183.94,
+    343.22,
+    23.39
+   ],
+   "n": 1,
+   "t": "Employee recognition guide Recognition messages Company valu"
+  },
+  {
+   "tag": "DIV",
+   "cls": "my-[4.2em] text-center max-wf-mini:my-[3.5em] mb-0 max-wf-mini:mb-0 flex flex-row items-center justify-between max-wf-mini:flex-col-reverse max-wf-mini:items-start",
+   "fs": "8.25833px",
+   "fw": "400",
+   "lh": "13.2133px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "28.9042px 0px 0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    9622.2,
+    78.05,
+    343.22,
+    23.39
+   ],
+   "n": 1,
+   "t": "© Evergreen • Made with 💚 in Helsinki, Finland Terms of ser"
+  },
+  {
+   "tag": "SPAN",
+   "cls": "text-[1.5em] leading-none max-wf-mini:mb-[1.1em]",
+   "fs": "12.3875px",
+   "fw": "400",
+   "lh": "12.3875px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px 0px 13.6262px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "center",
+   "lst": "disc",
+   "box": [
+    9674.23,
+    12.39,
+    269.97,
+    23.39
+   ],
+   "n": 1,
+   "t": "© Evergreen • Made with 💚 in Helsinki, Finland"
+  },
+  {
+   "tag": "SPAN",
+   "cls": "flex max-wf-mini:flex-col max-wf-mini:text-left",
+   "fs": "8.25833px",
+   "fw": "400",
+   "lh": "13.2133px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "left",
+   "lst": "disc",
+   "box": [
+    9622.2,
+    52.03,
+    108.97,
+    23.39
+   ],
+   "n": 1,
+   "t": "Terms of service Privacy policy"
+  },
+  {
+   "tag": "A",
+   "cls": "mr-[1.2em] text-[1.5em] font-normal no-underline hover:underline max-wf-mini:mb-[1.1em]",
+   "fs": "12.3875px",
+   "fw": "400",
+   "lh": "12.3875px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px 14.865px 13.6262px 0px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "left",
+   "lst": "disc",
+   "box": [
+    9622.2,
+    12.39,
+    94.11,
+    23.39
+   ],
+   "n": 1,
+   "t": "Terms of service"
+  },
+  {
+   "tag": "A",
+   "cls": "text-[1.5em] font-normal no-underline hover:underline max-wf-mini:mb-[1.1em]",
+   "fs": "12.3875px",
+   "fw": "400",
+   "lh": "12.3875px",
+   "ls": "normal",
+   "color": "rgb(51, 51, 51)",
+   "ff": "Rubik",
+   "td": "none",
+   "mar": "0px 0px 13.6262px",
+   "pad": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bd": "",
+   "br": "0px",
+   "maxw": "none",
+   "ta": "left",
+   "lst": "disc",
+   "box": [
+    9648.22,
+    12.39,
+    108.97,
+    23.39
+   ],
+   "n": 1,
+   "t": "Privacy policy"
+  }
+ ],
+ "imgs": [
+  {
+   "src": "https://www.evergreen.so/marketing/evergreen-logosvg-216cd4.svg",
+   "alt": "Evergreen",
+   "w": 140.39,
+   "h": 39.41,
+   "nw": 216,
+   "nh": 61,
+   "fit": "fill",
+   "loading": "auto",
+   "cls": "h-auto w-full"
+  },
+  {
+   "src": "https://www.evergreen.so/marketing/ever-small-leafsvg-e988d6.svg",
+   "alt": "",
+   "w": 0,
+   "h": 0,
+   "nw": 21,
+   "nh": 36,
+   "fit": "fill",
+   "loading": "auto",
+   "cls": "mr-[0.7em] w-[1.26708em]"
+  },
+  {
+   "src": "https://www.evergreen.so/marketing/evergreen-logosvg-216cd4.svg",
+   "alt": "Evergreen",
+   "w": 132.94,
+   "h": 37.31,
+   "nw": 216,
+   "nh": 61,
+   "fit": "fill",
+   "loading": "auto",
+   "cls": "h-auto w-full"
+  },
+  {
+   "src": "https://www.evergreen.so/marketing/ever-small-leafsvg-e988d6.svg",
+   "alt": "",
+   "w": 16.52,
+   "h": 28.02,
+   "nw": 21,
+   "nh": 36,
+   "fit": "fill",
+   "loading": "auto",
+   "cls": "mt-[0.4em] ml-[0.7em] w-[1.26708em] max-wf-mini:mb-[0.9em] max-wf-mini:w-[2em]"
+  },
+  {
+   "src": "https://www.evergreen.so/marketing/icon-linkedinsvg-777cac.svg",
+   "alt": "",
+   "w": 13.78,
+   "h": 13.78,
+   "nw": 27,
+   "nh": 27,
+   "fit": "fill",
+   "loading": "auto",
+   "cls": "h-[1.67015em] w-auto"
+  },
+  {
+   "src": "https://www.evergreen.so/marketing/icon-twittersvg-6d6f46.svg",
+   "alt": "",
+   "w": 16.08,
+   "h": 13.78,
+   "nw": 31,
+   "nh": 27,
+   "fit": "fill",
+   "loading": "auto",
+   "cls": "h-[1.67015em] w-auto"
+  },
+  {
+   "src": "https://www.evergreen.so/marketing/icon-emailsvg-1a80b8.svg",
+   "alt": "",
+   "w": 17.22,
+   "h": 13.78,
+   "nw": 30,
+   "nh": 24,
+   "fit": "fill",
+   "loading": "auto",
+   "cls": "h-[1.67015em] w-auto"
+  }
+ ],
+ "links": [
+  {
+   "href": "/",
+   "t": ""
+  },
+  {
+   "href": "/",
+   "t": "Home"
+  },
+  {
+   "href": "/esg",
+   "t": "ESG"
+  },
+  {
+   "href": "/pricing",
+   "t": "Pricing"
+  },
+  {
+   "href": "/case-studies",
+   "t": "Customers"
+  },
+  {
+   "href": "/employee-recognition",
+   "t": "Resources"
+  },
+  {
+   "href": "/our-purpose",
+   "t": "Purpose"
+  },
+  {
+   "href": "https://app.evergreen.so/login",
+   "t": "Login"
+  },
+  {
+   "href": "/schedule-a-demo",
+   "t": "Schedule a demo"
+  },
+  {
+   "href": "/",
+   "t": "Evergreen.so"
+  },
+  {
+   "href": "mailto:aleksi@evergreen.so",
+   "t": "aleksi@evergreen.so"
+  },
+  {
+   "href": "mailto:aleksi@joinevergreenapp.com",
+   "t": "aleksi@joinevergreenapp.com"
+  },
+  {
+   "href": "mailto:aleksi@evergreen.so",
+   "t": "aleksi@evergreen.so"
+  },
+  {
+   "href": "mailto:tietosuoja@om.fi",
+   "t": "tietosuoja@om.fi"
+  },
+  {
+   "href": "http://www.allaboutcookies.org",
+   "t": "www.allaboutcookies.org"
+  },
+  {
+   "href": "/",
+   "t": ""
+  },
+  {
+   "href": "https://www.linkedin.com/company/evergreenapp/",
+   "t": ""
+  },
+  {
+   "href": "https://twitter.com/AppEvergreen",
+   "t": ""
+  },
+  {
+   "href": "mailto:teemu@evergreen.so?subject=Email%20from%20website",
+   "t": ""
+  },
+  {
+   "href": "/esg",
+   "t": "ESG"
+  },
+  {
+   "href": "/pricing",
+   "t": "Pricing"
+  },
+  {
+   "href": "/case-studies",
+   "t": "Customers"
+  },
+  {
+   "href": "/blog",
+   "t": "Blog"
+  },
+  {
+   "href": "/schedule-a-demo",
+   "t": "Schedule a demo"
+  },
+  {
+   "href": "/our-purpose",
+   "t": "Our purpose"
+  },
+  {
+   "href": "https://folksoft.notion.site/Help-Center-defd1351f1a64b6fabe5040f1c2697a5?pvs=4",
+   "t": "Help center"
+  },
+  {
+   "href": "/referral",
+   "t": "Referral Program"
+  },
+  {
+   "href": "/contact",
+   "t": "Contact us"
+  },
+  {
+   "href": "/employee-recognition",
+   "t": "Employee recognition guide"
+  },
+  {
+   "href": "/employee-recognition-messages",
+   "t": "Recognition messages"
+  },
+  {
+   "href": "/company-values",
+   "t": "Company values"
+  },
+  {
+   "href": "/employee-recognition/glossary",
+   "t": "Recognition glossary"
+  },
+  {
+   "href": "/employee-recognition/for",
+   "t": "Recognition for teams"
+  },
+  {
+   "href": "/alternatives",
+   "t": "Alternatives"
+  },
+  {
+   "href": "/terms-of-service",
+   "t": "Terms of service"
+  },
+  {
+   "href": "/privacy-policy",
+   "t": "Privacy policy"
+  }
+ ],
+ "forms": [
+  {
+   "cls": "relative flex w-full justify-center",
+   "fields": [
+    {
+     "tag": "INPUT",
+     "type": "text",
+     "name": "website",
+     "ph": "",
+     "req": false,
+     "al": null,
+     "max": null,
+     "box": [
+      9010.86,
+      1,
+      1,
+      -9975.61
+     ],
+     "fs": "8.25833px",
+     "lh": "13.2133px",
+     "fw": "400",
+     "bd": "0px solid rgb(51, 51, 51)",
+     "br": "0px",
+     "pad": "0px",
+     "bg": "rgba(0, 0, 0, 0)",
+     "color": "rgb(51, 51, 51)",
+     "cls": "absolute -left-[9999px] size-px opacity-0",
+     "txt": ""
+    },
+    {
+     "tag": "INPUT",
+     "type": "email",
+     "name": "email",
+     "ph": "Your best email",
+     "req": true,
+     "al": "Your best email",
+     "max": "256",
+     "box": [
+      9010.86,
+      43.34,
+      210.45,
+      23.39
+     ],
+     "fs": "14.4521px",
+     "lh": "24.5685px",
+     "fw": "400",
+     "bd": "2px solid rgb(0, 0, 0)",
+     "br": "7px 0px 0px 7px",
+     "pad": "0px 13.0069px",
+     "bg": "rgba(0, 0, 0, 0)",
+     "color": "rgb(0, 0, 0)",
+     "cls": "h-[3em] w-full max-w-[49ch] rounded-l-[7px] border-2 border-black px-[0.9em] text-[1.75em] leading-[1.7] text-black placeholder:text-black/60",
+     "txt": ""
+    },
+    {
+     "tag": "BUTTON",
+     "type": "submit",
+     "name": "",
+     "al": null,
+     "max": null,
+     "box": [
+      9010.86,
+      43.34,
+      123.64,
+      233.84
+     ],
+     "fs": "14.4521px",
+     "lh": "24.5685px",
+     "fw": "700",
+     "bd": "0px solid rgb(255, 255, 255)",
+     "br": "0px 10px 10px 0px",
+     "pad": "0px 20.2329px",
+     "bg": "rgb(0, 0, 0)",
+     "color": "rgb(255, 255, 255)",
+     "cls": "h-[3em] shrink-0 rounded-r-[10px] bg-black px-[1.4em] text-[1.75em] leading-[1.7] font-bold text-white disabled:opacity-70",
+     "txt": "Plant a tree"
+    }
+   ]
+  }
+ ],
+ "neg": {
+  "shadows": [],
+  "gradients": [],
+  "hovers": [
+   "SPAN hover:underline",
+   "A hover:underline"
+  ]
+ },
+ "transitions": [
+  "all"
+ ],
+ "motion": [],
+ "cardRects": [
+  [
+   3313.08,
+   49.13,
+   303.22,
+   63.39
+  ],
+  [
+   3362.2,
+   24.56,
+   303.22,
+   63.39
+  ],
+  [
+   3386.77,
+   49.13,
+   303.22,
+   63.39
+  ],
+  [
+   3805,
+   49.13,
+   303.22,
+   63.39
+  ],
+  [
+   3854.13,
+   49.13,
+   303.22,
+   63.39
+  ],
+  [
+   3903.25,
+   122.81,
+   303.22,
+   63.39
+  ],
+  [
+   4026.06,
+   49.13,
+   303.22,
+   63.39
+  ],
+  [
+   4075.19,
+   49.13,
+   303.22,
+   63.39
+  ],
+  [
+   9133.47,
+   30.66,
+   27.38,
+   23.39
+  ],
+  [
+   9164.13,
+   30.66,
+   47.56,
+   23.39
+  ],
+  [
+   9194.78,
+   30.66,
+   73.64,
+   23.39
+  ],
+  [
+   9225.44,
+   30.66,
+   30.08,
+   23.39
+  ],
+  [
+   9256.09,
+   30.66,
+   114.36,
+   23.39
+  ],
+  [
+   9286.75,
+   30.66,
+   82.28,
+   23.39
+  ],
+  [
+   9317.41,
+   30.66,
+   78.06,
+   23.39
+  ],
+  [
+   9348.06,
+   30.66,
+   115.23,
+   23.39
+  ],
+  [
+   9378.72,
+   30.66,
+   73.5,
+   23.39
+  ],
+  [
+   9409.38,
+   30.66,
+   186.59,
+   23.39
+  ],
+  [
+   9440.03,
+   30.66,
+   151.67,
+   23.39
+  ],
+  [
+   9470.69,
+   30.66,
+   109.22,
+   23.39
+  ],
+  [
+   9501.34,
+   30.66,
+   141.36,
+   23.39
+  ],
+  [
+   9532,
+   30.66,
+   148.28,
+   23.39
+  ],
+  [
+   9562.66,
+   30.66,
+   82.59,
+   23.39
+  ]
+ ]
+}

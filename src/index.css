@@ -1,0 +1,432 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================================
+   FONTS — CLONE_SPEC §3.1
+   ========================================================================= */
+
+/* Rubik, self-hosted (the original self-hosts via next/font; latin subset only,
+   which is the one file the live page actually fetches). Weights 400/500/600/700
+   all map to this single variable-ish latin subset file, exactly as the original
+   does. font-display: swap matches the original. */
+@font-face {
+  font-family: 'Rubik';
+  src: url('/assets/rubik-latin.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
+    U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* Metric-override fallback face — transcribed VERBATIM from the original
+   (CLONE_SPEC §3.1). Keeps fallback metrics identical to Rubik so there is no
+   layout shift while the webfont loads. */
+@font-face {
+  font-family: 'Rubik Fallback';
+  src: local('Arial');
+  ascent-override: 89.06%;
+  descent-override: 23.81%;
+  line-gap-override: 0%;
+  size-adjust: 104.98%;
+}
+
+/* ---------------------------------------------------------------------------
+   DISPLAY SERIF — SUBSTITUTION (documented reinterpretation)
+   The original uses `ivypresto-headline` 600 from Adobe Typekit. That face is
+   kit-bound to evergreen.so and is NOT redistributable, so it cannot be
+   self-hosted here.
+
+   SUBSTITUTE: **Gloock** (SIL OFL, self-hosted from /assets/gloock-latin.woff2),
+   chosen by measurement, not by eye. 50+ open serifs were measured against the
+   live original by rendering the six real display strings at 600/100px and
+   comparing advance widths to ivypresto-headline's:
+
+     ivypresto-headline 600 @100px targets (canvas measureText, live site):
+       "Recognise good work in your team while doing good for the planet"  2789.2
+       "Publicly recognise your peers with seeds they can plant into trees" 2725.9
+       "Report on employee engagement, and your company's Carbon offset"    2879.9
+       "Fulfill your CSR and net zero commitments"                          1816.3
+       "Start feeling good about work"                                      1249.5
+       "Plant trees to recognise your peers, ... environmental purpose."    4094.4
+       cap-height 72.8  x-height 52.4
+
+   Per-candidate required uniform scale (target/candidate), and the SPREAD of
+   that ratio across the six strings (spread = how proportional the face is to
+   ivypresto; low spread means one scale factor fixes every string at once):
+
+     Gloock              scale 0.9244  spread 0.0081   <-- chosen
+     Playfair Display 600 scale 0.9232 spread 0.0121   (incumbent)
+     Lustria             scale 0.9013  spread 0.0118
+     Suranna             scale 1.1204  spread 0.0154
+     Prata               scale 0.8775  spread 0.0101
+     Bodoni Moda 600     scale 0.8812  spread 0.0223
+     Lora 600            scale 0.8897  spread 0.0199
+     Noto Serif Disp 600 scale 0.8604  spread 0.0230
+     Source Serif 4 600  scale 0.8763  spread 0.0242
+     Crimson Pro 600     scale 1.0209  spread 0.0116
+     DM Serif Display    scale 0.9569  spread 0.0393
+     Libre Caslon Disp   scale 1.1310  spread 0.1113
+
+   Gloock wins on BOTH axes that matter:
+     - lowest advance-width spread of any stylistically plausible candidate
+       (0.81%), so a single `size-adjust` reproduces every wrap point;
+     - after that size-adjust its cap-height lands at 70.8px vs ivypresto's
+       72.8px (-2.7%) and x-height 48.4 vs 52.4 (-7.6%), where scaled Playfair
+       would have been -10.2% / -9.0% — i.e. visibly smaller than the original.
+     - it is the same genre: a tightly-fitted, heavy, high-contrast Didone
+       display serif, which is what the original's h1 actually renders as.
+
+   THE ONE GLOBAL METRIC CORRECTION: `size-adjust: 92.44%` on the face below.
+   Measured effect on the real headings at 1280px:
+     ReportCsrSection h2  284.1px / 4 lines  ->  213.1px / 3 lines  (target 213.09)
+     SeedsSection h2      wrapped "...seeds they / can plant"
+                          ->  "...seeds they can / plant into trees" (original wrap)
+   Rendered advance widths now match ivypresto to within ~0.8%.
+
+   TRADE-OFF, stated plainly: because the correction is applied as `size-adjust`
+   rather than as the real font, glyphs are drawn at 92.44% of the nominal
+   font-size. Line-height is a multiple of font-size and is unaffected, so all
+   section geometry is correct, but the display text is optically ~2.7% shorter
+   in cap-height than the original. Tracking is NOT altered (no letter-spacing
+   hack) - `letter-spacing: normal` is preserved everywhere, as on the original.
+
+   Dropping in a real Typekit kit later is a two-line change: add the kit <link>
+   in index.html and remove "Gloock" from --font-headline below.
+   --------------------------------------------------------------------------- */
+
+@font-face {
+  font-family: 'Gloock';
+  src: url('/assets/gloock-latin.woff2') format('woff2');
+  font-style: normal;
+  /* Gloock ships a single 400 master. Declaring the face AS 600 is deliberate:
+     the headings ask for 600, and without this the browser would apply
+     synthetic emboldening, which widens every glyph and would destroy the
+     advance-width match measured above. */
+  font-weight: 600;
+  font-display: swap;
+  /* see measurement note above - the single global metric correction */
+  size-adjust: 92.44%;
+  /* VERTICAL metric match. ivypresto-headline reports fontBoundingBox
+     ascent 109% / descent 30% / line-gap 0% (measured on the live original);
+     raw Gloock reports 90% / 21%. Without this, an inline <span> inside the h1
+     computed 73px tall against the original's 91px, and the baseline sat at a
+     different offset inside the (correctly sized) line box.
+     Chrome applies `size-adjust` ON TOP of these overrides (verified: declaring
+     109% with size-adjust 92.44% yields an effective 101%), so the declared
+     values are pre-divided by 0.9244:
+       109 / 0.9244 = 117.9    30 / 0.9244 = 32.45
+     These affect vertical metrics only - advance widths and therefore every
+     wrap point measured above are unchanged. */
+  ascent-override: 117.9%;
+  descent-override: 32.45%;
+  line-gap-override: 0%;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+    U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+:root {
+  /* verbatim computed stack from the original's :root */
+  --font-sans: 'Rubik', 'Rubik Fallback', ui-sans-serif, system-ui, sans-serif;
+  /* original: "ivypresto-headline", ui-serif, Georgia, serif */
+  --font-headline: 'Gloock', 'ivypresto-headline', ui-serif, Georgia, serif;
+}
+
+body {
+  /* The original's ONLY body rule is `body{color:var(--color-text)}` (verified in
+     the saved compiled CSS and by computed style on the live page, where
+     body background-color is rgba(0,0,0,0)). No background-color here: the page
+     surface is painted by `.marketing-root.bg-cream`, which spans the full
+     document. Setting a cream body background was measured as a deviation from
+     the original (it changes the over-scroll/canvas colour) and was removed. */
+  color: #474747;
+  font-family: var(--font-sans);
+}
+
+/* ----------------------------------------------------------------------------
+   TAILWIND v4 PREFLIGHT GAPS (v3 -> v4 translation, same class of fix as the
+   `@layer base` + `:where()` wrapping above). Both were caught by diffing
+   computed styles against the live original:
+
+   1. Default border colour. v4 preflight uses `currentColor`; v3 uses #e5e7eb.
+      Measured on the original: every zero-width border computed
+      `0px solid rgb(51, 51, 51)` (= .marketing-root's #333 currentColor);
+      the clone computed `0px solid rgb(229, 231, 235)`.
+   2. Form-control background. v4 preflight resets text inputs to transparent;
+      v3 only does so for buttons. Measured: the footer newsletter <input>
+      computed `rgba(0, 0, 0, 0)` on the original and `rgb(255, 255, 255)` on
+      the clone - a visible white fill over the cream-dark footer.
+   -------------------------------------------------------------------------- */
+@layer base {
+  *,
+  ::before,
+  ::after {
+    border-color: currentColor;
+  }
+  input,
+  select,
+  textarea {
+    background-color: transparent;
+  }
+}
+
+html {
+  /* The original declares no smooth scroll. Keep it native. (§7) */
+  scroll-behavior: auto;
+}
+
+/* ============================================================================
+   THE FONT-SIZE ENGINE + .marketing-root base layer
+   CLONE_SPEC §3.2 / §4.1.
+   The font-size rule is the single most important rule on the page: every length
+   is `em` off it. Fluid 0.833333vw between 992px and 1919px, clamped to 16px at
+   >=1920px, frozen at 8.25833px at <=991px.
+   Verified in-browser against the spec's measured table:
+     1920 -> 16px | 1440 -> 12px | 1280 -> 10.6667px | 768 -> 8.25833px | 390 -> 8.25833px
+
+   v4 -> v3 TRANSLATION (important): the original is Tailwind v4, where these rules
+   live in a real `@layer base` and therefore always lose to the utilities layer
+   regardless of specificity. Tailwind v3 emits no native cascade layers, so a
+   selector like `.marketing-root p` (0,1,1) would beat `.font-semibold` (0,1,0)
+   and utilities on headings/paragraphs/links would silently stop working.
+   Two changes reproduce v4's behaviour exactly:
+     1. the rules are wrapped in `@layer base` so they sort before the utilities;
+     2. the element part of each selector is wrapped in `:where(...)`, dropping the
+        specificity to 0,1,0 so a later utility of equal specificity wins.
+   The matched elements and declared values are otherwise verbatim.
+   ========================================================================= */
+
+@layer base {
+  .marketing-root {
+    color: #333;
+    -webkit-font-smoothing: auto;
+    -moz-osx-font-smoothing: auto;
+    font-size: 0.833333vw;
+    line-height: 1.6;
+  }
+  @media (min-width: 1920px) {
+    .marketing-root {
+      font-size: 16px;
+    }
+  }
+  @media (max-width: 991px) {
+    .marketing-root {
+      font-size: 8.25833px;
+    }
+  }
+
+  /* ---- base element layer inside .marketing-root (§3.2) ---- */
+  .marketing-root :where(h1, h2, h3, h4) {
+    margin: 0;
+    font-weight: 700;
+    line-height: 1.4;
+  }
+  .marketing-root :where(h1) {
+    color: #000;
+    font-family: var(--font-headline);
+    font-size: 6.125em;
+    font-weight: 600;
+    line-height: 1.49;
+  }
+  .marketing-root :where(h2) {
+    font-size: 2.5em;
+  }
+  .marketing-root :where(h3) {
+    font-size: 2.19em;
+  }
+  .marketing-root :where(h4) {
+    font-size: 1.88em;
+  }
+  .marketing-root :where(p) {
+    color: #000;
+    margin: 0;
+    font-size: 1.75em;
+    font-weight: 400;
+    line-height: 1.7;
+  }
+  .marketing-root :where(a) {
+    color: inherit;
+    font-family: var(--font-sans);
+    font-weight: 600;
+    line-height: 1;
+    text-decoration: underline;
+  }
+  .marketing-root :where(b, strong) {
+    font-weight: 700;
+  }
+}
+
+/* The only hover effect on the page (§7.4) is `hover:underline` on nav/footer
+   links: instant, no transition. The @media (hover:hover) gate the original uses
+   is produced by `future.hoverOnlyWhenSupported` in tailwind.config.js, so the
+   `hover:underline` utility compiles inside @media (hover: hover) just like the
+   original. Nothing extra is needed here. */
+
+/* ============================================================================
+   LEAF / OVERLAY MOTION HOOKS — CLONE_SPEC §7
+   Class names are the original's. The actual animation is driven by
+   framer-motion in the components; these rules supply the SSR/initial state and
+   the responsive top-coordinate switch.
+   ========================================================================= */
+
+/* §7.2 — leaves that carry a phone-specific `top` */
+.marketing-responsive-leaf {
+  top: var(--leaf-top);
+}
+@media (max-width: 479px) {
+  .marketing-responsive-leaf {
+    top: var(--leaf-phone-top);
+  }
+}
+
+/* §7.3 initial states, matching the shipped HTML's inline styles */
+.marketing-recognition-line {
+  transform: scaleX(0);
+}
+.marketing-hero-heart {
+  opacity: 0;
+}
+
+/* ============================================================================
+   REDUCED MOTION — CLONE_SPEC §7, verbatim
+   ========================================================================= */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  :before,
+  :after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+  .marketing-recognition-line {
+    transform: scaleX(1) !important;
+  }
+  .marketing-hero-heart {
+    opacity: 1 !important;
+  }
+  .marketing-scroll-leaf,
+  .marketing-drift-leaf {
+    transform: rotate(var(--leaf-rotate)) !important;
+  }
+}
+
+/* NOTE: the original stylesheet also ships sd-fadeIn, sd-blurIn, sd-slideUp,
+   sd-markerIn, enter, leave, exit, fade, pulse and bounce keyframes, but §7.7
+   confirms none are applied to any homepage element — intentionally omitted. */
+
+/* =========================================================================
+   .marketing-rich-text — the shared prose container
+   CLONE_SPEC_CONTENT_B §2 / §2.1. Transcribed from the original's own
+   compiled stylesheet, then verified against computed styles.
+   Used by T-LEGAL, T-DETAIL, T-PILLAR and T-STORY.
+
+   Declared as plain CSS (not @layer base) so these class-scoped rules win
+   over the `.marketing-root :where(el)` base rules by specificity.
+
+   Container font-size = root em (10.6667px @1280) — NOT the paragraph size.
+   `figure` and `figcaption` resolve their `1em` against the container, which
+   is why the caption is genuinely tiny. That is correct; do not "fix" it.
+
+   Two distinct 48px serif roles exist: this h2 is line-height 1.2, while the
+   standalone display h2 (CLONE_SPEC §3.3) is 1.48. Do not unify them.
+   ========================================================================= */
+.marketing-rich-text {
+  text-align: start;
+}
+.marketing-rich-text p {
+  margin-bottom: 1.6em;
+}
+.marketing-rich-text h2 {
+  color: #000;
+  font-family: var(--font-headline);
+  margin-bottom: 0.8em;
+  font-size: 4.5em;
+  font-weight: 600;
+  line-height: 1.2;
+}
+.marketing-rich-text h2.rich-text-h1 {
+  margin-bottom: 0.2em;
+  font-size: 6.125em;
+  line-height: 1.49;
+}
+.marketing-rich-text h3 {
+  color: #000;
+  margin-bottom: 0.3em;
+  font-size: 2.5em;
+  font-weight: 700;
+  line-height: 1.54;
+}
+.marketing-rich-text h4 {
+  margin-bottom: 0.4em;
+  font-size: 1.88em;
+}
+.marketing-rich-text :is(ul, ol) {
+  margin-bottom: 10px; /* fixed px in the original, not em */
+  padding-left: 40px; /* fixed px in the original, not em */
+  font-size: 1.75em;
+  line-height: 1.7;
+  overflow: hidden;
+}
+.marketing-rich-text ul {
+  list-style: outside;
+}
+.marketing-rich-text ol {
+  list-style: decimal;
+}
+.marketing-rich-text :is(ul, ol) p {
+  font-size: 1em;
+}
+.marketing-rich-text li {
+  margin-bottom: 0;
+}
+.marketing-rich-text img {
+  max-width: 100%;
+  height: auto;
+}
+.marketing-rich-text blockquote {
+  background: #c3f2c5;
+  border: 2px solid #000;
+  border-radius: 10px;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  padding: 1em 2em 1em 1.7em;
+  font-size: 2.3125em;
+  font-weight: 500;
+  line-height: 1.7;
+}
+.marketing-rich-text blockquote p {
+  font-size: 1em;
+  line-height: inherit;
+  font-weight: inherit;
+  margin: 0;
+}
+.marketing-rich-text figure {
+  max-width: 60%;
+  margin: 0 auto 10px;
+}
+.marketing-rich-text figcaption {
+  text-align: center;
+  margin-top: 5px;
+  font-size: 1em;
+  line-height: 1.6;
+}
+.marketing-rich-text .video-embed {
+  max-width: none;
+  height: 0;
+  margin-bottom: 1.6em;
+  position: relative;
+}
+.marketing-rich-text .video-embed iframe {
+  border: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+}
+/* NOTE: the original ships NO rules for hr, table/th/td or code/pre, and none
+   of those elements appear on any sampled page. Deliberately not styled —
+   inventing a table style would guarantee a mismatch. */
