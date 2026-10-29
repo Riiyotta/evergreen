@@ -1,12 +1,12 @@
 {
   "$id": "registry.manifest",
   "repositoryId": "evergreen-clone-design-repo",
-  "repositoryVersion": "1.0.0",
-  "pageSpecVersion": "1.0.0",
-  "allowlistVersion": "1.0.0",
+  "repositoryVersion": "2.0.0",
+  "pageSpecVersion": "2.0.0",
+  "allowlistVersion": "2.0.0",
   "status": "design-review-pending",
   "productionApproved": false,
-  "versionFieldNote": "allowlistVersion is MACHINE-CHECKED: extraction/verify_all.py fails the run if it drifts from tokens/llm/component-allowlist.json, token-policy.json or token-catalog.json. repositoryVersion and pageSpecVersion are DOCUMENTATION-ONLY, hand-maintained markers \u2014 nothing checks them automatically. Do not read them as an enforcement guarantee.",
+  "versionFieldNote": "allowlistVersion is MACHINE-CHECKED: extraction/verify_all.py fails the run if it drifts from tokens/llm/component-allowlist.json, token-policy.json or token-catalog.json. pageSpecVersion is pinned by schema/pagespec.schema.json (`const`) and every example must match it. repositoryVersion is a DOCUMENTATION-ONLY, hand-maintained marker.",
   "sourceProject": {
     "describes": "A pixel-accurate React 18 + Vite 5 + Tailwind CSS v3 replica of https://www.evergreen.so/",
     "frameworks": {
@@ -17,29 +17,105 @@
       "framer-motion": "12.43.0"
     },
     "frameworkVersionNote": "Read from the sibling project package.json at build time. A design-repo is a SNAPSHOT: if the app is later upgraded, nothing here re-checks itself against that drift. Re-diff these against the real package.json before trusting them.",
-    "pathNote": "Deliberately no filesystem path recorded \u2014 a path would not resolve in a standalone copy."
+    "pathNote": "Deliberately no filesystem path recorded — a path would not resolve in a standalone copy."
   },
   "sourceIsRealCompany": true,
-  "sourceNotice": "The source of this design-repo is https://www.evergreen.so/ \u2014 a REAL, LIVE marketing site belonging to a real company, carrying real third-party trademarks, real named individuals' photographs and real attributed testimonials. This package exists to document that site's design system for internal generation work. IT MUST NOT BE PUBLISHED, DEPLOYED OR HOSTED ANYWHERE. Nothing in it grants any licence to any third-party mark, photograph or editorial content.",
+  "sourceNotice": "The source of this design-repo is https://www.evergreen.so/ — a REAL, LIVE marketing site belonging to a real company, carrying real third-party trademarks, real named individuals' photographs and real attributed testimonials. This package exists to document that site's design system for internal generation work. IT MUST NOT BE PUBLISHED, DEPLOYED OR HOSTED ANYWHERE. Nothing in it grants any licence to any third-party mark, photograph or editorial content.",
   "defaultTheme": "light",
   "schemaValidatedThemes": [
     "light"
   ],
+  "category": "saas",
+  "designPolicy": {
+    "ref": "policy/design-policy.json",
+    "policyId": "n0-saas-design-constraints-common",
+    "policyVersion": "0.1.0",
+    "commonIrVersion": "0.5",
+    "enforcementMode": "hard-and-soft",
+    "contentHash": "sha256:02d4f93bcd7696a1f7b26f33a42a7cbbc7959fb59496e761ff167e8f4aab247f"
+  },
+  "generationPolicy": {
+    "modes": [
+      "clone",
+      "generation"
+    ],
+    "modeField": "PageSpec `mode` (required, closed enum)",
+    "mustReuseExactValidIn": "clone",
+    "roleAvailability": {
+      "brand.logo": "clone-only",
+      "brand.leaf-art": "clone-only",
+      "brand.icon": "clone-only",
+      "product.screenshot": "clone-only",
+      "product.badge": "clone-only",
+      "third-party.trademark": "blocked-for-generation",
+      "third-party.platform-logo": "blocked-for-generation",
+      "third-party.review-mark": "blocked-for-generation",
+      "person.likeness": "blocked-for-generation",
+      "editorial.hero-image": "clone-only",
+      "editorial.stock-photo": "blocked-for-generation",
+      "typeface.webfont": "generation-safe",
+      "site.favicon": "clone-only",
+      "placeholder.brand-mark": "generation-safe",
+      "operator.supplied-asset": "generation-safe",
+      "generated.illustration": "generation-safe",
+      "generated.icon": "generation-safe",
+      "placeholder.screenshot": "generation-safe",
+      "placeholder.badge": "generation-safe",
+      "placeholder.person-avatar": "generation-safe",
+      "placeholder.company-logo": "generation-safe",
+      "placeholder.url": "generation-safe",
+      "generated.copy": "generation-safe"
+    },
+    "generationModeForbidden": [
+      "the Evergreen logo / wordmark and favicon",
+      "Evergreen-specific icons and brand artwork (leaf and heart SVGs)",
+      "real product screenshots",
+      "real badges, certifications and review-platform marks",
+      "other proprietary Evergreen assets (editorial imagery) and unlicensed third-party stock",
+      "the Evergreen / Arketta brand names and domains",
+      "real Evergreen copy, claims and statistics",
+      "real URLs (only .example / .invalid)",
+      "real people and their photographs",
+      "real customers and partners and their logos",
+      "third-party embeds (scheduler, font kits)"
+    ],
+    "generationModeReplacements": [
+      "placeholder assets",
+      "generated illustrations and icons",
+      "user / operator-supplied assets"
+    ],
+    "rules": [
+      "GENERATION_MODE_BRAND",
+      "GENERATION_MODE_ASSET",
+      "GENERATION_MODE_PERSON",
+      "GENERATION_MODE_CUSTOMER",
+      "GENERATION_MODE_SCREENSHOT",
+      "GENERATION_MODE_BADGE",
+      "GENERATION_MODE_COPY",
+      "GENERATION_MODE_CLAIM",
+      "GENERATION_MODE_URL",
+      "GENERATION_MODE_EMBED",
+      "GENERATION_MODE_MUST_REUSE_EXACT"
+    ],
+    "patterns": "extraction/generation-patterns.json",
+    "consistencyCheck": "extraction/verify_all.py policy-docs: this block, README.md's generation-policy block and assets/asset-roles.json must agree."
+  },
   "counts": {
     "primitives": 25,
     "components": 39,
-    "sections": 46,
+    "sections": 47,
     "templates": 22,
     "routes": 195,
-    "graphRules": 28,
-    "assetRoles": 13
+    "graphRules": 47,
+    "assetRoles": 23,
+    "templateFamilies": 8
   },
   "countsNote": "Recomputed from the files on disk by extraction/verify_all.py, which fails if any number here drifts. Never hand-bump these.",
-  "motionImplementationStatus": "SPECIFIED, NOT YET ANIMATED \u2014 see tokens/00-foundation/motion.json",
+  "motionImplementationStatus": "SPECIFIED, NOT YET ANIMATED — see tokens/00-foundation/motion.json",
   "deadRoutes": {
     "note": "TWO <Route> patterns in src/App.jsx render PagePending and map to ZERO real routes. They MUST NOT be recreated and no template exists for them.",
     "patterns": {
-      "/employee-recognition/:slug": "CLONE_SPEC_CONTENT_B \u00a70 VERIFIED that this does not exist as a collection on the real site. The hub's only children are `/for` and `/glossary`, which are themselves index templates. Building a template for it would invent a page shape the original does not have.",
+      "/employee-recognition/:slug": "CLONE_SPEC_CONTENT_B §0 VERIFIED that this does not exist as a collection on the real site. The hub's only children are `/for` and `/glossary`, which are themselves index templates. Building a template for it would invent a page shape the original does not have.",
       "*": "the router wildcard"
     },
     "measuredFrom": "src/App.jsx:66-68",
@@ -55,7 +131,6 @@
     "adversarialTests": "schema/tests/adversarial_test.py",
     "verifyAll": "extraction/verify_all.py",
     "measuredValues": "extraction/measured-values.json",
-    "driftProof": "scripts/prove_drift.sh",
     "templates": "templates/templates.json",
     "routeMap": "templates/route-map.json",
     "compatibilityGraph": "compatibility/graph.json",
@@ -66,13 +141,29 @@
     "semanticTokens": "tokens/10-semantic/semantic.json",
     "layoutTokens": "tokens/30-layout/layout.json",
     "motionTokens": "tokens/00-foundation/motion.json",
-    "lightTheme": "tokens/themes/light.json"
+    "lightTheme": "tokens/themes/light.json",
+    "driftProof": "extraction/prove_drift.py",
+    "sectionContractSchema": "schema/section-contract.schema.json",
+    "examplesDir": "schema/examples",
+    "cloneControlExample": "schema/examples/clone-home.pagespec.json",
+    "generationPatterns": "extraction/generation-patterns.json",
+    "generationPatternsBuilder": "extraction/build_generation_patterns.py",
+    "sectionProvenanceBuilder": "extraction/build_section_provenance.py",
+    "tokenCatalogBuilder": "extraction/build_token_catalog.py",
+    "wrapperGate": "extraction/wrapper_gate.py",
+    "wrapperGateWhitelist": "extraction/wrapper-gate-whitelist.json",
+    "sectionMeasurement": "extraction/measure_sections.mjs",
+    "sectionDomMap": "extraction/section-dom-map.json",
+    "designPolicy": "policy/design-policy.json",
+    "policyHash": "extraction/policy_hash.py"
   },
   "entryPointsNote": "Every entry point resolves INSIDE design-repo/. Build-time evidence that lives in the sibling project (CLONE_SPEC*.md, src/, _reference/) is cited in extraction/measured-values.json instead, which degrades to a warning when no sibling tree is present. An entry point is a promise about this package's own contents.",
   "verification": {
-    "schemaValidation": "python3 -c \"from jsonschema import Draft7Validator; ...\" \u2014 see README",
+    "schemaValidation": "python3 -c \"from jsonschema import Draft7Validator; ...\" — see README",
     "adversarialSuite": "python3 schema/tests/adversarial_test.py",
     "repoChecks": "python3 extraction/verify_all.py",
-    "driftProof": "bash scripts/prove_drift.sh"
+    "driftProof": "python3 extraction/prove_drift.py --scratch <empty dir>",
+    "wrapperGate": "python3 extraction/wrapper_gate.py",
+    "remeasure": "NODE_PATH=\"$(npm root -g)\" node extraction/measure_sections.mjs --base http://localhost:<port>"
   }
 }

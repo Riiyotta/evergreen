@@ -57,5 +57,20 @@
   "motionClosureScope": "CLOSED for PageSpec emission: a generated node's `motion` object may contain ONLY the fields in motionFieldSet, enforced by schema/pagespec.schema.json (additionalProperties:false) and the MOTION_OBJECT_IS_CLOSED rule. The keys in motionDocumentationFields below are contract-level documentation carried by THIS file for human and retrieval use; they are NOT settable on a PageSpec node.",
   "motionDocumentationFields": [
     "note"
+  ],
+  "source": {
+    "id": "src:G2Block:div@7",
+    "tag": "div",
+    "file": "src/components/G2Block.jsx",
+    "lines": "7-35"
+  },
+  "semantic": {
+    "id": "proof.g2-rating",
+    "category": "PROOF"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": [
+    "operator.supplied-asset",
+    "placeholder.badge"
   ]
 }

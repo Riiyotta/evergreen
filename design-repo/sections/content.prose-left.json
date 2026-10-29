@@ -53,5 +53,17 @@
   "motionClosureScope": "CLOSED for PageSpec emission: a generated node's `motion` object may contain ONLY the fields in motionFieldSet, enforced by schema/pagespec.schema.json (additionalProperties:false) and the MOTION_OBJECT_IS_CLOSED rule. The keys in motionDocumentationFields below are contract-level documentation carried by THIS file for human and retrieval use; they are NOT settable on a PageSpec node.",
   "motionDocumentationFields": [
     "note"
-  ]
+  ],
+  "source": {
+    "id": "src:blocks:div@52",
+    "tag": "div",
+    "file": "src/templates/blocks.jsx",
+    "lines": "52-64"
+  },
+  "semantic": {
+    "id": "content.prose-left",
+    "category": "CONTENT"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": []
 }

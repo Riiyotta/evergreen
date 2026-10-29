@@ -26,8 +26,8 @@
         "grouped",
         "flat"
       ],
-      "grouped": "an ordered list of {heading, paragraphs[]} \u2014 T-DETAIL-*, T-COMPARISON, T-ARTICLE",
-      "flat": "a flat ordered node list (p / h2 / h3 / ul / ol / blockquote / figure / pExternal) \u2014 T-LEGAL, T-STORY, T-PILLAR"
+      "grouped": "an ordered list of {heading, paragraphs[]} — T-DETAIL-*, T-COMPARISON, T-ARTICLE",
+      "flat": "a flat ordered node list (p / h2 / h3 / ul / ol / blockquote / figure / pExternal) — T-LEGAL, T-STORY, T-PILLAR"
     },
     "groupedSections": {
       "minItems": 1,
@@ -53,7 +53,8 @@
   "constraints": {
     "maxPerPage": 7,
     "maxPerPageBasis": "recomputed from src/data/pillar.js: T-PILLAR composes exactly 7 prose blocks between its other blocks (indices 0, 2, 4, 6, 8, 10, 12 of its 17-block array).",
-    "variantKeyed": true
+    "variantKeyed": true,
+    "maxPerPageScope": "maxPerPage 7 is the T-PILLAR prose-block count. On T-LEGAL and T-ARTICLE (2.0.0) the body is emitted as ONE NODE PER HEADING-BOUNDED CHAPTER / LEGAL PART (R6), so the count there is the document's own heading count (20 parts measured on /privacy-policy at 1440px) and maxPerPage does not apply. Advisory: not enforced by the semantic validator."
   },
   "motion": {
     "pattern": "none",
@@ -80,5 +81,17 @@
   "motionClosureScope": "CLOSED for PageSpec emission: a generated node's `motion` object may contain ONLY the fields in motionFieldSet, enforced by schema/pagespec.schema.json (additionalProperties:false) and the MOTION_OBJECT_IS_CLOSED rule. The keys in motionDocumentationFields below are contract-level documentation carried by THIS file for human and retrieval use; they are NOT settable on a PageSpec node.",
   "motionDocumentationFields": [
     "note"
-  ]
+  ],
+  "source": {
+    "id": "src:RichText:div@13",
+    "tag": "div",
+    "file": "src/components/RichText.jsx",
+    "lines": "13-17"
+  },
+  "semantic": {
+    "id": "content.rich-text",
+    "category": "CONTENT"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": []
 }

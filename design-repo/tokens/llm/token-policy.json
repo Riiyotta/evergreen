@@ -1,38 +1,49 @@
 {
   "$id": "tokens.llm.token-policy",
-  "version": "1.0.0",
-  "description": "What is machine-enforced versus what is convention a reviewer must uphold.",
+  "version": "2.0.0",
+  "description": "What is machine-enforced versus convention. Token references in a PageSpec live ONLY in a node's optional, closed `style` object (added in pageSpecVersion 2.0.0) and the root `theme`; every rule below is enforced by schema/semantic_validate.py against tokens/llm/token-catalog.json, which is itself derived from the real token files.",
   "machineEnforced": {
-    "allowlistParity": "extraction/verify_all.py \u2014 fails on a phantom entry or an orphaned contract.",
-    "allowlistVersionParity": "extraction/verify_all.py \u2014 this file, the allowlist and registry.manifest.json must agree.",
-    "citationValidity": "extraction/verify_all.py \u2014 every measuredFrom path:line range resolves inside the real file.",
-    "manifestCounts": "extraction/verify_all.py \u2014 recomputed from the files on disk, never trusted as written.",
-    "pinnedAssetRolePolicies": "extraction/verify_all.py \u2014 compliance-critical roles are pinned to a specific policy value, not merely a member of the enum.",
+    "allowlistParity": "extraction/verify_all.py — fails on a phantom entry or an orphaned contract.",
+    "allowlistVersionParity": "extraction/verify_all.py — this file, the allowlist and registry.manifest.json must agree.",
+    "citationValidity": "extraction/verify_all.py — every measuredFrom path:line range resolves inside the real file.",
+    "manifestCounts": "extraction/verify_all.py — recomputed from the files on disk, never trusted as written.",
+    "pinnedAssetRolePolicies": "extraction/verify_all.py — compliance-critical roles are pinned to a specific policy value, not merely a member of the enum.",
     "closedTemplateEnum": "schema/pagespec.schema.json",
     "closedSectionEnum": "schema/pagespec.schema.json",
-    "closedMotionObject": "schema/pagespec.schema.json \u2014 additionalProperties false on motion.",
+    "closedMotionObject": "schema/pagespec.schema.json — additionalProperties false on motion.",
     "reducedMotionFallbackRequired": "schema/pagespec.schema.json",
-    "nodesMatchDeclaredTemplate": "schema/semantic_validate.py \u2014 cross-references the declared template against its real node list.",
-    "maxWordsBudgets": "schema/semantic_validate.py \u2014 counted per instance, not just on the bundled example.",
-    "rhythmRules": "schema/semantic_validate.py, honouring each rule's severity in compatibility/graph.json."
+    "nodesMatchDeclaredTemplate": "schema/semantic_validate.py — cross-references the declared template against its real node list.",
+    "maxWordsBudgets": "schema/semantic_validate.py — counted per instance, not just on the bundled example.",
+    "rhythmRules": "schema/semantic_validate.py, honouring each rule's severity in compatibility/graph.json.",
+    "tokenCatalogInSync": "extraction/verify_all.py — rebuilds the catalog from the token files (extraction/build_token_catalog.py) and fails on any difference.",
+    "pinnedAssetAvailability": "extraction/verify_all.py and schema/semantic_validate.py — PINNED_AVAILABILITY tables in code, cross-checked against assets/asset-roles.json.",
+    "generationModeLeakage": "schema/semantic_validate.py — GENERATION_MODE_* rules against extraction/generation-patterns.json."
   },
   "conventionOnly": {
     "repositoryVersion": "Documentation-only, hand-maintained. Nothing checks it.",
-    "pageSpecVersion": "Documentation-only, hand-maintained. Nothing checks it.",
     "copyPolicy": "Advisory. `verbatim-locked` marks copy measured from the real site; no script enforces that a generator honours it.",
-    "evidenceLevel": "Advisory. Records whether a template/section was measured or inferred."
+    "evidenceLevel": "Advisory. Records whether a template/section was measured or inferred.",
+    "pageSpecVersion": "Pinned by the schema (`const`), but bumping it is a hand-maintained documentation decision."
   },
   "rawValueRestrictions": {
-    "note": "Category keys here match the real catalog keys in token-catalog.json.foundationCategories so a drift check can resolve them. Do not invent a convenient human label.",
-    "color": "No raw hex in a PageSpec. Reference a semantic token.",
-    "radius": "No raw px radius. Reference the radius scale.",
-    "spacing": "No raw px spacing. Reference the spacing scale or keep the source em value.",
-    "typography": "No raw font-size. Reference a type role.",
-    "elevation": "Nothing to set \u2014 elevation is zero site-wide.",
+    "note": "Category keys match token-catalog.json `counts` categories so a drift check can resolve them.",
+    "color": "No raw hex / rgb / hsl in a PageSpec (TOKEN_RAW_COLOR). Reference a semantic.surface / semantic.text / semantic.border token.",
+    "radius": "Reference radius.* (semantic) or radius.scale.* tokens only.",
+    "spacing": "Reference spacing.* tokens only (TOKEN_ARBITRARY_SPACING).",
+    "font": "fontFamily must be font.sans or font.headline (TOKEN_UNSUPPORTED_FONT).",
+    "type": "typeRole must be a type.* token.",
+    "elevation": "Nothing to set — zero box-shadows site-wide; z-index stops are layout-owned.",
     "motion": "Only the closed motionFieldSet, with evidence-grounded easings and durations."
   },
   "overrides": {
-    "perInstanceTokenOverrides": "NONE \u2014 and this is a real gap, recorded rather than invented.",
-    "rationale": "This PageSpec schema has no per-instance style or token-override field. Styling is owned entirely by the section and component contracts, not by a generated instance. There is therefore no PageSpec-level field to validate or mutate for token misuse, so adversarial coverage for this concern lives at the catalog/policy layer as a drift-injection test (scripts/prove_drift.sh) rather than as a PageSpec mutation. If a future schema version adds an override field, it needs its own closed enum and its own adversarial case."
+    "perInstanceTokenOverrides": "The optional closed `style` object on a PageSpec node: {surface, text, border, radius, spacing, fontFamily, typeRole}. Values are token NAMES only.",
+    "history": "1.0.0 had no override field and recorded that as a gap. 2.0.0 adds the closed `style` object so token misuse is validated at the PageSpec layer (schema/tests/adversarial_test.py covers every TOKEN_* rule) in addition to the catalog drift check."
+  },
+  "semanticTokenRules": {
+    "TOKEN_UNKNOWN": "A `style` value that is not a token name in token-catalog.json.",
+    "TOKEN_RAW_COLOR": "A raw hex / rgb() / rgba() / hsl() colour anywhere in a PageSpec (style values AND content strings).",
+    "TOKEN_ARBITRARY_SPACING": "A raw length (px / em / rem / % / vw / vh / ch) in a `style` slot instead of a spacing.* token.",
+    "TOKEN_UNSUPPORTED_FONT": "A `fontFamily` that is not one of token-catalog.json fontFamilies (font.sans, font.headline). The Typekit original face is never supported.",
+    "TOKEN_THEME_COMBINATION": "A token used in a slot of the wrong family (e.g. text.* in `surface`), or a theme-resolved slot whose token does not resolve in the declared theme, or a theme not listed in registry.manifest.json schemaValidatedThemes."
   }
 }

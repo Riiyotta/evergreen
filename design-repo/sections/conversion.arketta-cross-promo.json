@@ -55,11 +55,23 @@
   "responsive": {
     "max-wf-mini": "padding collapses from 140/100px to 40/20px"
   },
-  "bodyLineCorrection": "7 line boxes, not the 6 CLONE_SPEC_CONTENT_A \u00a75.2 describes \u2014 see components/panel.arketta-cta#bodyLineCorrection for the arithmetic.",
+  "bodyLineCorrection": "7 line boxes, not the 6 CLONE_SPEC_CONTENT_A §5.2 describes — see components/panel.arketta-cta#bodyLineCorrection for the arithmetic.",
   "measuredFrom": "src/components/ArkettaCtaPanel.jsx:1-30",
   "implementedBy": "src/components/ArkettaCtaPanel.jsx",
   "motionClosureScope": "CLOSED for PageSpec emission: a generated node's `motion` object may contain ONLY the fields in motionFieldSet, enforced by schema/pagespec.schema.json (additionalProperties:false) and the MOTION_OBJECT_IS_CLOSED rule. The keys in motionDocumentationFields below are contract-level documentation carried by THIS file for human and retrieval use; they are NOT settable on a PageSpec node.",
   "motionDocumentationFields": [
     "note"
-  ]
+  ],
+  "source": {
+    "id": "src:ArkettaCtaPanel:div@42",
+    "tag": "div",
+    "file": "src/components/ArkettaCtaPanel.jsx",
+    "lines": "42-58"
+  },
+  "semantic": {
+    "id": "conversion.arketta-cross-promo",
+    "category": "CONVERSION"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": []
 }

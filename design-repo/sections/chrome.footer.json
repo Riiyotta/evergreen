@@ -39,7 +39,7 @@
     "legalLine": {
       "maxWords": 9,
       "copyPolicy": "verbatim-locked",
-      "value": "\u00a9 Evergreen \u2022 Made with \ud83d\udc9a in Helsinki, Finland"
+      "value": "© Evergreen • Made with 💚 in Helsinki, Finland"
     },
     "additionalProperties": false
   },
@@ -63,9 +63,32 @@
   "measuredFrom": "src/components/Footer.jsx:1-40",
   "implementedBy": "src/components/Footer.jsx",
   "renderedBy": "src/layout/Layout.jsx (once, on every route; OUTSIDE <main>'s overflow clip)",
-  "correction": "Footer link spacing is 21.6px, not the 12.8px CLONE_SPEC \u00a75.13 records: the `mb-[1.2em]` resolves against the element's own text-[1.6875em] (18px @1280).",
+  "correction": "Footer link spacing is 21.6px, not the 12.8px CLONE_SPEC §5.13 records: the `mb-[1.2em]` resolves against the element's own text-[1.6875em] (18px @1280).",
   "motionClosureScope": "CLOSED for PageSpec emission: a generated node's `motion` object may contain ONLY the fields in motionFieldSet, enforced by schema/pagespec.schema.json (additionalProperties:false) and the MOTION_OBJECT_IS_CLOSED rule. The keys in motionDocumentationFields below are contract-level documentation carried by THIS file for human and retrieval use; they are NOT settable on a PageSpec node.",
   "motionDocumentationFields": [
     "note"
+  ],
+  "source": {
+    "id": "src:Footer:section@121",
+    "tag": "section",
+    "file": "src/components/Footer.jsx",
+    "lines": "121-210"
+  },
+  "semantic": {
+    "id": "chrome.footer",
+    "category": "SHELL"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": [
+    "generated.icon",
+    "generated.illustration",
+    "operator.supplied-asset",
+    "placeholder.brand-mark",
+    "placeholder.url"
+  ],
+  "assetRoles": [
+    "brand.logo",
+    "brand.icon",
+    "brand.leaf-art"
   ]
 }

@@ -27,7 +27,7 @@
     "h1-only": "T-BLOG-INDEX (no badge, no lede)",
     "h1+strong": "T-EBOOK (the h1 wraps its text in <strong>)",
     "h1+lastUpdated": "T-LEGAL (components/block.date-line is NOT used; a plain centred <p>)",
-    "h1+subtitle": "T-STORY section 1 \u2014 the h1 is the company name and the subtitle sits in a `flex items-center justify-center` block with `mx-[3em]` rather than the usual `mx-auto max-w-[49ch]` lede block"
+    "h1+subtitle": "T-STORY section 1 — the h1 is the company name and the subtitle sits in a `flex items-center justify-center` block with `mx-[3em]` rather than the usual `mx-auto max-w-[49ch]` lede block"
   },
   "content": {
     "badgeLabel": {
@@ -86,5 +86,17 @@
   "motionClosureScope": "CLOSED for PageSpec emission: a generated node's `motion` object may contain ONLY the fields in motionFieldSet, enforced by schema/pagespec.schema.json (additionalProperties:false) and the MOTION_OBJECT_IS_CLOSED rule. The keys in motionDocumentationFields below are contract-level documentation carried by THIS file for human and retrieval use; they are NOT settable on a PageSpec node.",
   "motionDocumentationFields": [
     "note"
-  ]
+  ],
+  "source": {
+    "id": "src:blocks:div@21",
+    "tag": "div",
+    "file": "src/templates/blocks.jsx",
+    "lines": "21-33"
+  },
+  "semantic": {
+    "id": "hero.page-head",
+    "category": "HERO"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": []
 }

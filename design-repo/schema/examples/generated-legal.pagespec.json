@@ -1,0 +1,239 @@
+{
+  "pageSpecVersion": "2.0.0",
+  "mode": "generation",
+  "theme": "light",
+  "route": "/privacy-policy",
+  "template": "T-LEGAL",
+  "title": "Privacy notice (placeholder)",
+  "evidenceLevel": "measured",
+  "nodes": [
+    {
+      "section": "chrome.nav",
+      "required": true,
+      "repeatable": false,
+      "content": {
+        "desktopLinks": [
+          "Home",
+          "Product",
+          "Pricing",
+          "Stories",
+          "Guides",
+          "Sign in"
+        ],
+        "overlayLinks": [
+          "Home",
+          "Product",
+          "Pricing",
+          "Stories",
+          "Guides",
+          "Book a call",
+          "Sign in"
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "delayMs": 0,
+        "staggerMs": 0,
+        "reducedMotionFallback": "none-required-static",
+        "implementationStatus": "static-by-design"
+      },
+      "assetRefs": [
+        {
+          "assetRole": "placeholder.brand-mark",
+          "src": "https://assets.fernway.example/fernway-mark.svg",
+          "alt": "Fernway"
+        }
+      ]
+    },
+    {
+      "section": "hero.legal-head",
+      "required": true,
+      "repeatable": false,
+      "content": {
+        "h1": "Privacy notice",
+        "lastUpdated": "Last updated: example date"
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "delayMs": 0,
+        "staggerMs": 0,
+        "reducedMotionFallback": "none-required-static",
+        "implementationStatus": "static-by-design"
+      }
+    },
+    {
+      "section": "content.rich-text",
+      "required": true,
+      "repeatable": true,
+      "variant": "flat",
+      "content": {
+        "shape": "flat",
+        "flatNodes": [
+          {
+            "type": "h2",
+            "text": "Who we are"
+          },
+          {
+            "type": "p",
+            "text": "Placeholder: name your own legal entity and contact address here."
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "delayMs": 0,
+        "staggerMs": 0,
+        "reducedMotionFallback": "none-required-static",
+        "implementationStatus": "static-by-design"
+      }
+    },
+    {
+      "section": "content.rich-text",
+      "required": true,
+      "repeatable": true,
+      "variant": "flat",
+      "content": {
+        "shape": "flat",
+        "flatNodes": [
+          {
+            "type": "h3",
+            "text": "What we collect"
+          },
+          {
+            "type": "p",
+            "text": "Placeholder: list the data your product actually processes."
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "delayMs": 0,
+        "staggerMs": 0,
+        "reducedMotionFallback": "none-required-static",
+        "implementationStatus": "static-by-design"
+      }
+    },
+    {
+      "section": "content.rich-text",
+      "required": true,
+      "repeatable": true,
+      "variant": "flat",
+      "content": {
+        "shape": "flat",
+        "flatNodes": [
+          {
+            "type": "h3",
+            "text": "Your rights"
+          },
+          {
+            "type": "p",
+            "text": "Placeholder: describe access, correction and deletion requests, e.g. privacy@fernway.example."
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "delayMs": 0,
+        "staggerMs": 0,
+        "reducedMotionFallback": "none-required-static",
+        "implementationStatus": "static-by-design"
+      }
+    },
+    {
+      "section": "content.rich-text",
+      "required": true,
+      "repeatable": true,
+      "variant": "flat",
+      "content": {
+        "shape": "flat",
+        "flatNodes": [
+          {
+            "type": "h3",
+            "text": "Changes"
+          },
+          {
+            "type": "p",
+            "text": "Placeholder: explain how you will announce changes to this notice."
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "delayMs": 0,
+        "staggerMs": 0,
+        "reducedMotionFallback": "none-required-static",
+        "implementationStatus": "static-by-design"
+      }
+    },
+    {
+      "section": "chrome.footer",
+      "required": true,
+      "repeatable": false,
+      "content": {
+        "columns": [
+          [
+            "Product",
+            "Pricing",
+            "Stories"
+          ],
+          [
+            "Guides",
+            "Glossary",
+            "Help centre"
+          ],
+          [
+            "Privacy",
+            "Terms",
+            "Contact"
+          ]
+        ],
+        "socials": [
+          "Newsletter"
+        ],
+        "legalLine": "© Fernway Labs (fictional company) — example only"
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "delayMs": 0,
+        "staggerMs": 0,
+        "reducedMotionFallback": "none-required-static",
+        "implementationStatus": "static-by-design"
+      },
+      "assetRefs": [
+        {
+          "assetRole": "placeholder.brand-mark",
+          "src": "https://assets.fernway.example/fernway-mark.svg",
+          "alt": "Fernway"
+        }
+      ]
+    },
+    {
+      "section": "chrome.trial-modal",
+      "required": true,
+      "repeatable": false,
+      "content": {
+        "platforms": [
+          "Chat app A",
+          "Chat app B"
+        ]
+      },
+      "motion": {
+        "pattern": "overlay-slide",
+        "trigger": "userToggle",
+        "durationMs": 1000,
+        "easing": "cubic-bezier(0.455, 0.03, 0.515, 0.955)",
+        "delayMs": 0,
+        "staggerMs": 0,
+        "reducedMotionFallback": "duration collapses to 0.01ms; the panel hides at 0vh",
+        "implementationStatus": "css-keyframe-fallback-implemented"
+      }
+    }
+  ]
+}

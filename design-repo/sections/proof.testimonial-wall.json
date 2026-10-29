@@ -33,7 +33,7 @@
     },
     "additionalProperties": false
   },
-  "geometry": "section height 1180.84 @1280; padding pt-[15em] pb-[10em] \u2014 NOT the 18em/5em of every other dark section",
+  "geometry": "section height 1180.84 @1280; padding pt-[15em] pb-[10em] — NOT the 18em/5em of every other dark section",
   "constraints": {
     "onePerPage": true,
     "allowedTemplates": [
@@ -71,5 +71,22 @@
   "motionClosureScope": "CLOSED for PageSpec emission: a generated node's `motion` object may contain ONLY the fields in motionFieldSet, enforced by schema/pagespec.schema.json (additionalProperties:false) and the MOTION_OBJECT_IS_CLOSED rule. The keys in motionDocumentationFields below are contract-level documentation carried by THIS file for human and retrieval use; they are NOT settable on a PageSpec node.",
   "motionDocumentationFields": [
     "RULE"
+  ],
+  "source": {
+    "id": "src:Pricing:section@176",
+    "tag": "section",
+    "file": "src/pages/Pricing.jsx",
+    "lines": "176-182"
+  },
+  "semantic": {
+    "id": "proof.testimonial-wall",
+    "category": "PROOF"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": [
+    "operator.supplied-asset",
+    "placeholder.badge",
+    "placeholder.company-logo",
+    "placeholder.person-avatar"
   ]
 }

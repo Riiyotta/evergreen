@@ -59,7 +59,7 @@
     "max-wf-mini": "heading drops to 5.1em; the heading wrapper is w-auto"
   },
   "chRule": "`max-w-[59ch]` is a DISTINCT container width from the 49ch used almost everywhere else. Keep it in ch.",
-  "copyPolicy": "The heading and paragraph are PLACEHOLDER copy sized to the recorded geometry. CLONE_SPEC_CONTENT_A \u00a72.7 recorded ~44 words in 2 paragraphs separated by <br><br> with the second sentence in <strong>, not the text.",
+  "copyPolicy": "The heading and paragraph are PLACEHOLDER copy sized to the recorded geometry. CLONE_SPEC_CONTENT_A §2.7 recorded ~44 words in 2 paragraphs separated by <br><br> with the second sentence in <strong>, not the text.",
   "wrapNote": "On T-PILLAR this heading wraps to 3 lines at 1280 (measured h 182.91) and is a fragile wrap under the Gloock substitute. Its wrapper is `w-auto`, NOT the shared CTA's `w-[51em]`.",
   "measuredFrom": "src/pages/BlogPost.jsx:145-176",
   "implementedBy": [
@@ -69,5 +69,17 @@
   "motionClosureScope": "CLOSED for PageSpec emission: a generated node's `motion` object may contain ONLY the fields in motionFieldSet, enforced by schema/pagespec.schema.json (additionalProperties:false) and the MOTION_OBJECT_IS_CLOSED rule. The keys in motionDocumentationFields below are contract-level documentation carried by THIS file for human and retrieval use; they are NOT settable on a PageSpec node.",
   "motionDocumentationFields": [
     "note"
-  ]
+  ],
+  "source": {
+    "id": "src:BlogPost:section@146",
+    "tag": "section",
+    "file": "src/pages/BlogPost.jsx",
+    "lines": "146-176"
+  },
+  "semantic": {
+    "id": "conversion.lead-magnet-cta",
+    "category": "CONVERSION"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": []
 }

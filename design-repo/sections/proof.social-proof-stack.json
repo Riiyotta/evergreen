@@ -1,0 +1,102 @@
+{
+  "$id": "sections.proof.social-proof-stack",
+  "layer": "sections",
+  "motionFieldSet": [
+    "pattern",
+    "trigger",
+    "durationMs",
+    "easing",
+    "delayMs",
+    "staggerMs",
+    "leafSet",
+    "leafCount",
+    "scrollProgressRange",
+    "reducedMotionFallback",
+    "implementationStatus"
+  ],
+  "motionIsClosed": true,
+  "category": "proof",
+  "purpose": "The proof stack that follows the opening hero on the homepage and the partner landing pages: a display heading, four stat pills, an eyebrow paragraph, two attributed testimonials, a customer-logo strip and the G2 rating.",
+  "composes": [
+    "components/row.stat-pills",
+    "components/card.testimonial",
+    "components/row.logo-strip",
+    "components/block.g2-rating"
+  ],
+  "content": {
+    "displayHeading": {
+      "maxWords": 14,
+      "copyPolicy": "verbatim-locked",
+      "wrapCritical": true
+    },
+    "eyebrow": {
+      "maxWords": 16,
+      "copyPolicy": "verbatim-locked"
+    },
+    "additionalProperties": false
+  },
+  "maxWordsBasis": "word-counted directly from the real strings in src/components/Hero.jsx blocks 7 and 9 (moved here unchanged from hero.home in 2.0.0)",
+  "blockCount": 6,
+  "geometry": "measured at 1440px: the part of the opening <section> from the display h2 block to the section bottom (see extraction/measured-values.json sectionHeights T-HOME / T-PARTNER)",
+  "constraints": {
+    "onePerPage": true,
+    "allowedTemplates": [
+      "T-HOME",
+      "T-PARTNER"
+    ]
+  },
+  "motion": {
+    "pattern": "none",
+    "trigger": "none",
+    "delayMs": 0,
+    "staggerMs": 0,
+    "leafSet": "QUOTE_LEAVES",
+    "leafCount": 12,
+    "reducedMotionFallback": "none-required-static",
+    "implementationStatus": "static-by-design",
+    "RULE": "All 12 HERO_LEAVES live inside the hero screenshot / scroll-track wrapper (hero.home block 4). The two testimonial cards here carry 6 STATIC QUOTE_LEAVES each: never animate them."
+  },
+  "responsive": {
+    "max-wf-tablet": "testimonial pair wraps; logo strip becomes a flex-wrap row",
+    "max-wf-phone": "stat pill halves stack (flex-col) with mt-[7em] between them",
+    "max-wf-mini": "display h2 drops to 3.9em; stat halves mt-[3em]"
+  },
+  "assetRoles": [
+    "person.likeness",
+    "third-party.trademark",
+    "third-party.review-mark",
+    "brand.leaf-art"
+  ],
+  "complianceNote": "REAL quotes from REAL named people at REAL named companies, with their REAL photographs. A generator must never invent a testimonial or a person, and must never attach an existing portrait to a new quote.",
+  "measuredFrom": "src/components/Hero.jsx:265-310",
+  "implementedBy": [
+    "src/components/Hero.jsx",
+    "src/pages/PartnerPage.jsx",
+    "src/components/Testimonials.jsx",
+    "src/components/LogoStrip.jsx",
+    "src/components/G2Block.jsx"
+  ],
+  "decomposition": "Split out of hero.home and hero.partner in 2.0.0. The clone renders hero + proof inside ONE <section> (src/pages/Home.jsx section C); measured at 1440px that wrapper is 3545px on / and 3788px on /partners/the-people-people-group, i.e. a HERO above the 3000px R6/R9 limit. Only blocks 0-6 (h1, lede, CTA, proof line, screenshot or scheduler card, platform row) are the page-opening composition; blocks 7-12 are this proof section.",
+  "motionClosureScope": "CLOSED for PageSpec emission: a generated node's `motion` object may contain ONLY the fields in motionFieldSet, enforced by schema/pagespec.schema.json (additionalProperties:false) and the MOTION_OBJECT_IS_CLOSED rule. The keys in motionDocumentationFields below are contract-level documentation carried by THIS file for human and retrieval use; they are NOT settable on a PageSpec node.",
+  "motionDocumentationFields": [
+    "RULE"
+  ],
+  "source": {
+    "id": "src:Hero:div@266",
+    "tag": "div",
+    "file": "src/components/Hero.jsx",
+    "lines": "266-310"
+  },
+  "semantic": {
+    "id": "proof.social-proof-stack",
+    "category": "PROOF"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": [
+    "generated.illustration",
+    "operator.supplied-asset",
+    "placeholder.badge",
+    "placeholder.company-logo",
+    "placeholder.person-avatar"
+  ]
+}

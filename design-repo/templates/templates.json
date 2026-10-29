@@ -1,6 +1,6 @@
 {
   "$id": "templates",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "status": "design-review-pending",
   "description": "One entry per distinct PAGE SHAPE, not per route. Every `nodes` entry is a STRUCTURED OBJECT ({section, required, repeatable, variant?}), never a bare string, so `required` and `repeatable` are machine-enforceable rather than conventions a human has to remember.",
   "nodeObjectShape": {
@@ -44,6 +44,11 @@
           "repeatable": false
         },
         {
+          "section": "proof.social-proof-stack",
+          "required": true,
+          "repeatable": false
+        },
+        {
           "section": "divider.leaf-band",
           "required": true,
           "repeatable": false,
@@ -81,7 +86,9 @@
           "repeatable": false,
           "note": "Rendered once by Layout on every route, outside the section flow."
         }
-      ]
+      ],
+      "decompositionNote": "2.0.0: the opening <section> was split into its hero (blocks 0-6) and proof.social-proof-stack (blocks 7-12) after the 1440px measurement showed a HERO above 3000px.",
+      "family": "landing"
     },
     "T-PRICING": {
       "name": "Pricing",
@@ -131,7 +138,8 @@
       "noBanner": true,
       "noFinalCta": true,
       "noHeroSection": true,
-      "note": "TWO structural facts about this template that were found by running the compatibility checks rather than by reading a spec: (1) it is HERO-LESS — sections/pricing.single-plan carries the page's own h1 inline, so there is no hero-category node, which is why compatibility/graph.json's ONE_HERO_PER_PAGE rule carries T-PRICING as a named exception; (2) it has NO final CTA — the page ends on sections/proof.testimonial-wall, exactly like T-REFERRAL. There is NO tier grid, NO monthly/annual toggle, NO FAQ and NO comparison table."
+      "note": "TWO structural facts about this template that were found by running the compatibility checks rather than by reading a spec: (1) it is HERO-LESS — sections/pricing.single-plan carries the page's own h1 inline, so there is no hero-category node, which is why compatibility/graph.json's ONE_HERO_PER_PAGE rule carries T-PRICING as a named exception; (2) it has NO final CTA — the page ends on sections/proof.testimonial-wall, exactly like T-REFERRAL. There is NO tier grid, NO monthly/annual toggle, NO FAQ and NO comparison table.",
+      "family": "pricing"
     },
     "T-ESG": {
       "name": "ESG",
@@ -214,7 +222,8 @@
         }
       ],
       "noBanner": true,
-      "note": "Carries FOUR divider bands — the most of any route — and that is what sets divider.leaf-band's maxPerPage of 4."
+      "note": "Carries FOUR divider bands — the most of any route — and that is what sets divider.leaf-band's maxPerPage of 4.",
+      "family": "landing"
     },
     "T-PURPOSE": {
       "name": "Our Purpose",
@@ -278,7 +287,8 @@
         }
       ],
       "noBanner": true,
-      "note": "hero.purpose and proof.goals-band are two consecutive sections with NO divider between them. The -mt-[3em] overlap means there is no seam."
+      "note": "hero.purpose and proof.goals-band are two consecutive sections with NO divider between them. The -mt-[3em] overlap means there is no seam.",
+      "family": "landing"
     },
     "T-CASE-STUDY-INDEX": {
       "name": "Customer success stories index",
@@ -330,7 +340,8 @@
           "note": "Rendered once by Layout on every route, outside the section flow."
         }
       ],
-      "noBanner": true
+      "noBanner": true,
+      "family": "index"
     },
     "T-CONTACT": {
       "name": "Contact",
@@ -388,7 +399,8 @@
         }
       ],
       "noBanner": true,
-      "containerNote": "Section 1 uses the ZERO-GUTTER wrapper (px-0)."
+      "containerNote": "Section 1 uses the ZERO-GUTTER wrapper (px-0).",
+      "family": "conversion-form"
     },
     "T-SCHEDULER": {
       "name": "Schedule a demo",
@@ -446,7 +458,8 @@
         }
       ],
       "noBanner": true,
-      "containerNote": "Section 1 uses the STANDARD px-[6em] wrapper, unlike /contact and /referral."
+      "containerNote": "Section 1 uses the STANDARD px-[6em] wrapper, unlike /contact and /referral.",
+      "family": "conversion-form"
     },
     "T-REFERRAL": {
       "name": "Referral programme",
@@ -505,7 +518,8 @@
       ],
       "noBanner": true,
       "noFinalCta": true,
-      "note": "There is NO 'Start feeling good about work' section and no 3-icon reassurance row here — the page ends on social proof. It is the only template that breaks that pattern. Sections A and B are two consecutive bg-cream sections flush with no divider. <main> on /referral contains ZERO <a> elements."
+      "note": "There is NO 'Start feeling good about work' section and no 3-icon reassurance row here — the page ends on social proof. It is the only template that breaks that pattern. Sections A and B are two consecutive bg-cream sections flush with no divider. <main> on /referral contains ZERO <a> elements.",
+      "family": "conversion-form"
     },
     "T-LEGAL": {
       "name": "Legal document",
@@ -537,8 +551,9 @@
         {
           "section": "content.rich-text",
           "required": true,
-          "repeatable": false,
-          "variant": "flat"
+          "repeatable": true,
+          "variant": "flat",
+          "note": "ONE NODE PER HEADING-BOUNDED (H2/H3) CHAPTER OR LEGAL PART (R6). The body is never emitted as a single whole-document node; each chapter is its own node, measured separately in extraction/measured-values.json sectionHeights."
         },
         {
           "section": "chrome.footer",
@@ -555,7 +570,9 @@
       "noBanner": true,
       "noFinalCta": true,
       "note": "ONE <section> only. NO divider band, NO final CTA, NO leaves anywhere in <main> — the only template in the content set with no decorative leaf layer and no shared CTA. NO table of contents, NO heading anchors, NO id attributes (the measured id count inside <main> is 0). The head is centred, the prose below is left-aligned; keep that contrast.",
-      "correction": "CLONE_SPEC_CONTENT_B §2.2 records 2 h2 on the privacy policy but names only one. The real body has 2 (recomputed from src/data/legalPages.js), and /terms-of-service has 9."
+      "correction": "CLONE_SPEC_CONTENT_B §2.2 records 2 h2 on the privacy policy but names only one. The real body has 2 (recomputed from src/data/legalPages.js), and /terms-of-service has 9.",
+      "decompositionNote": "2.0.0: the prose body is decomposed into one content.rich-text node per heading-bounded (H2/H3) chapter; legal pages: one per heading-bounded part.",
+      "family": "legal"
     },
     "T-EBOOK": {
       "name": "Ebook lead magnet",
@@ -614,7 +631,8 @@
         }
       ],
       "noBanner": true,
-      "containerNote": "The ONLY page in the content set that breaks the px-[6em] container contract: its wrapper is px-0, so blocks are full-bleed 1280px and rely on their own mx-auto + max-w."
+      "containerNote": "The ONLY page in the content set that breaks the px-[6em] container contract: its wrapper is px-0, so blocks are full-bleed 1280px and rely on their own mx-auto + max-w.",
+      "family": "conversion-form"
     },
     "T-BLOG-INDEX": {
       "name": "Blog index",
@@ -658,7 +676,8 @@
       ],
       "noBanner": true,
       "noFinalCta": true,
-      "note": "NO announcement banner, NO eyebrow badge, NO intro paragraph, NO divider band and NO final CTA. h1 -> rows -> footer. Its wrapper is the SECTION_WRAPPER with NO pb-[5em] — the only content template without it."
+      "note": "NO announcement banner, NO eyebrow badge, NO intro paragraph, NO divider band and NO final CTA. h1 -> rows -> footer. Its wrapper is the SECTION_WRAPPER with NO pb-[5em] — the only content template without it.",
+      "family": "index"
     },
     "T-ARTICLE": {
       "name": "Blog article",
@@ -691,8 +710,9 @@
         {
           "section": "content.rich-text",
           "required": true,
-          "repeatable": false,
-          "variant": "grouped"
+          "repeatable": true,
+          "variant": "grouped",
+          "note": "ONE NODE PER HEADING-BOUNDED (H2/H3) CHAPTER OR LEGAL PART (R6). The body is never emitted as a single whole-document node; each chapter is its own node, measured separately in extraction/measured-values.json sectionHeights."
         },
         {
           "section": "conversion.arketta-cross-promo",
@@ -749,7 +769,9 @@
         "no share row",
         "no tag list",
         "no table of contents"
-      ]
+      ],
+      "decompositionNote": "2.0.0: the prose body is decomposed into one content.rich-text node per heading-bounded (H2/H3) chapter; legal pages: one per heading-bounded part.",
+      "family": "article"
     },
     "T-ALTERNATIVES-INDEX": {
       "name": "Alternatives index",
@@ -815,7 +837,8 @@
         }
       ],
       "noBanner": true,
-      "note": "Both grids use h2 card headings (a top-level listing). The grid cards carry NO leaf layer, unlike the blog rows and the article's related cards. 15 cards in one list, alphabetical by slug."
+      "note": "Both grids use h2 card headings (a top-level listing). The grid cards carry NO leaf layer, unlike the blog rows and the article's related cards. 15 cards in one list, alphabetical by slug.",
+      "family": "index"
     },
     "T-COMPARISON": {
       "name": "Competitor comparison",
@@ -972,7 +995,8 @@
         "NO competitor logos — do not invent any",
         "no date element; the 'as read on {date}' lives inline inside the Pricing spec row"
       ],
-      "correction": "Its FAQ is FOUR rows, not the three CLONE_SPEC_CONTENT_A §5.6/§9.3 records."
+      "correction": "Its FAQ is FOUR rows, not the three CLONE_SPEC_CONTENT_A §5.6/§9.3 records.",
+      "family": "collection-detail"
     },
     "T-COLLECTION-INDEX": {
       "name": "SEO collection index",
@@ -1045,7 +1069,8 @@
         "no search",
         "no filter",
         "no pagination"
-      ]
+      ],
+      "family": "index"
     },
     "T-PILLAR": {
       "name": "Pillar hub",
@@ -1074,8 +1099,9 @@
         {
           "section": "content.rich-text",
           "required": true,
-          "repeatable": true,
-          "variant": "flat"
+          "repeatable": false,
+          "variant": "flat",
+          "note": "prose 1 (pillar.js block 0)"
         },
         {
           "section": "proof.stat-pills",
@@ -1083,26 +1109,97 @@
           "repeatable": false
         },
         {
+          "section": "content.rich-text",
+          "required": true,
+          "repeatable": false,
+          "variant": "flat",
+          "note": "prose 2"
+        },
+        {
           "section": "listing.link-card-grid",
           "required": true,
-          "repeatable": true,
-          "variant": "h3-inline"
+          "repeatable": false,
+          "variant": "h3-inline",
+          "note": "card group 1"
+        },
+        {
+          "section": "content.rich-text",
+          "required": true,
+          "repeatable": false,
+          "variant": "flat",
+          "note": "prose 3"
+        },
+        {
+          "section": "listing.link-card-grid",
+          "required": true,
+          "repeatable": false,
+          "variant": "h3-inline",
+          "note": "card group 2"
+        },
+        {
+          "section": "content.rich-text",
+          "required": true,
+          "repeatable": false,
+          "variant": "flat",
+          "note": "prose 4"
+        },
+        {
+          "section": "listing.link-card-grid",
+          "required": true,
+          "repeatable": false,
+          "variant": "h3-inline",
+          "note": "card group 3"
+        },
+        {
+          "section": "content.rich-text",
+          "required": true,
+          "repeatable": false,
+          "variant": "flat",
+          "note": "prose 5"
+        },
+        {
+          "section": "listing.link-card-grid",
+          "required": true,
+          "repeatable": false,
+          "variant": "h3-inline",
+          "note": "card group 4"
+        },
+        {
+          "section": "content.rich-text",
+          "required": true,
+          "repeatable": false,
+          "variant": "flat",
+          "note": "prose 6 — 'The vocabulary'"
         },
         {
           "section": "content.leaf-spec-list",
           "required": true,
-          "repeatable": true,
+          "repeatable": false,
           "variant": "vocabulary"
+        },
+        {
+          "section": "content.rich-text",
+          "required": true,
+          "repeatable": false,
+          "variant": "flat",
+          "note": "prose 7 — 'Where to start'"
         },
         {
           "section": "content.section-heading",
           "required": true,
-          "repeatable": true
+          "repeatable": false,
+          "note": "'Questions people ask'"
         },
         {
           "section": "content.faq",
           "required": true,
           "repeatable": false
+        },
+        {
+          "section": "content.section-heading",
+          "required": true,
+          "repeatable": false,
+          "note": "'Reading list'"
         },
         {
           "section": "content.reading-list",
@@ -1134,7 +1231,9 @@
       ],
       "noBanner": true,
       "blockOrderBasis": "The real block array is recomputed from src/data/pillar.js and is, in order: prose, stats, prose, cards, prose, cards, prose, cards, prose, cards, prose, vocabulary, prose, heading, faq, heading, readingList — 17 blocks, 7 of them prose and 4 of them card groups. The node list above marks the repeating kinds `repeatable: true` rather than enumerating all 17 positions.",
-      "note": "T-PILLAR = T-DETAIL plus three things and minus one: PLUS the 4-stat pill row, PLUS inline card groups between prose blocks (in `div.my-[4em]`, margin-block 42.667px, NOT the standard 44.8px), PLUS the 8-group reading list; MINUS the shared final CTA, which it replaces with the lead-magnet form. The longest page on the site."
+      "note": "T-PILLAR = T-DETAIL plus three things and minus one: PLUS the 4-stat pill row, PLUS inline card groups between prose blocks (in `div.my-[4em]`, margin-block 42.667px, NOT the standard 44.8px), PLUS the 8-group reading list; MINUS the shared final CTA, which it replaces with the lead-magnet form. The longest page on the site.",
+      "reconciliationNote": "2.0.0: the node list now follows the real interleaved body order rendered by src/pages/EmployeeRecognitionHub.jsx from src/data/pillar.js (7 prose blocks between a stat row, 4 card groups, a vocabulary list, two headings, a FAQ and the reading list). The 1.0.0 list grouped each section type once and marked it repeatable, so a PageSpec reproducing the real page was rejected by the node-order check.",
+      "family": "article"
     },
     "T-DETAIL-GLOSSARY": {
       "name": "Glossary term detail",
@@ -1257,7 +1356,8 @@
         "CLONE_SPEC_CONTENT_B.md §3.10 (the per-collection block sequence contract)"
       ],
       "noBanner": true,
-      "splitRationale": "T-DETAIL was NOT kept as one template. src/templates/TDetail.jsx contains FOUR DIFFERENT fixed block sequences, one per collection, in a `SEQUENCES` object — verified by reading the real composer rather than by trusting the 'one template, 102 routes' grouping. Four distinct node sequences are four distinct page shapes, so they are four templates."
+      "splitRationale": "T-DETAIL was NOT kept as one template. src/templates/TDetail.jsx contains FOUR DIFFERENT fixed block sequences, one per collection, in a `SEQUENCES` object — verified by reading the real composer rather than by trusting the 'one template, 102 routes' grouping. Four distinct node sequences are four distinct page shapes, so they are four templates.",
+      "family": "collection-detail"
     },
     "T-DETAIL-MESSAGES": {
       "name": "Recognition-messages occasion detail",
@@ -1386,7 +1486,8 @@
         "CLONE_SPEC_CONTENT_B.md §3.10 (the per-collection block sequence contract)"
       ],
       "noBanner": true,
-      "splitRationale": "T-DETAIL was NOT kept as one template. src/templates/TDetail.jsx contains FOUR DIFFERENT fixed block sequences, one per collection, in a `SEQUENCES` object — verified by reading the real composer rather than by trusting the 'one template, 102 routes' grouping. Four distinct node sequences are four distinct page shapes, so they are four templates."
+      "splitRationale": "T-DETAIL was NOT kept as one template. src/templates/TDetail.jsx contains FOUR DIFFERENT fixed block sequences, one per collection, in a `SEQUENCES` object — verified by reading the real composer rather than by trusting the 'one template, 102 routes' grouping. Four distinct node sequences are four distinct page shapes, so they are four templates.",
+      "family": "collection-detail"
     },
     "T-DETAIL-VALUES": {
       "name": "Company-value detail",
@@ -1540,7 +1641,8 @@
         "CLONE_SPEC_CONTENT_B.md §3.10 (the per-collection block sequence contract)"
       ],
       "noBanner": true,
-      "splitRationale": "T-DETAIL was NOT kept as one template. src/templates/TDetail.jsx contains FOUR DIFFERENT fixed block sequences, one per collection, in a `SEQUENCES` object — verified by reading the real composer rather than by trusting the 'one template, 102 routes' grouping. Four distinct node sequences are four distinct page shapes, so they are four templates."
+      "splitRationale": "T-DETAIL was NOT kept as one template. src/templates/TDetail.jsx contains FOUR DIFFERENT fixed block sequences, one per collection, in a `SEQUENCES` object — verified by reading the real composer rather than by trusting the 'one template, 102 routes' grouping. Four distinct node sequences are four distinct page shapes, so they are four templates.",
+      "family": "collection-detail"
     },
     "T-DETAIL-FOR": {
       "name": "Recognition-for-team detail",
@@ -1692,7 +1794,8 @@
         "CLONE_SPEC_CONTENT_B.md §3.10 (the per-collection block sequence contract)"
       ],
       "noBanner": true,
-      "splitRationale": "T-DETAIL was NOT kept as one template. src/templates/TDetail.jsx contains FOUR DIFFERENT fixed block sequences, one per collection, in a `SEQUENCES` object — verified by reading the real composer rather than by trusting the 'one template, 102 routes' grouping. Four distinct node sequences are four distinct page shapes, so they are four templates."
+      "splitRationale": "T-DETAIL was NOT kept as one template. src/templates/TDetail.jsx contains FOUR DIFFERENT fixed block sequences, one per collection, in a `SEQUENCES` object — verified by reading the real composer rather than by trusting the 'one template, 102 routes' grouping. Four distinct node sequences are four distinct page shapes, so they are four templates.",
+      "family": "collection-detail"
     },
     "T-STORY": {
       "name": "Customer success story",
@@ -1758,7 +1861,8 @@
         }
       ],
       "noBanner": true,
-      "note": "FOUR separate `<section class='relative bg-cream'>` elements, each with its own -mt-[3em] wrapper and NO pb-[5em] — unlike every other content template, which is one section with bottom padding. DO NOT MERGE THEM."
+      "note": "FOUR separate `<section class='relative bg-cream'>` elements, each with its own -mt-[3em] wrapper and NO pb-[5em] — unlike every other content template, which is one section with bottom padding. DO NOT MERGE THEM.",
+      "family": "customer-story"
     },
     "T-PARTNER": {
       "name": "Partner landing page",
@@ -1779,6 +1883,11 @@
         },
         {
           "section": "hero.partner",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "proof.social-proof-stack",
           "required": true,
           "repeatable": false
         },
@@ -1831,7 +1940,50 @@
       ],
       "noBanner": true,
       "reuseCorrection": "CLONE_SPEC_CONTENT_B §8 calls these two feature rows 'the homepage's sections E and F verbatim'. THE MEASUREMENT DISAGREES: _reference/recon-b/partner_50pros.json blocks 3-5 and 8-10 show a DIFFERENT arrangement of the same assets and copy — a centred display heading block, then a centred copy block, then a two-column `mt-[9.5em] flex items-stretch justify-center` visual row — not the homepage's heading-in-the-right-column layout. sections/feature.seeds and sections/feature.report-csr are NOT reused here; a local FeatureSection in PartnerPage.jsx implements it.",
-      "bandColourEvidenceGap": "EVIDENCE GAP, recorded rather than resolved. The FIRST divider band on this template is bg-cream-dark in the clone, but the section ABOVE it (hero.partner) is bg-cream — which contradicts the otherwise-universal 'band follows the section above' rule. The source's own justifying comment ('they follow a cream-dark section') is wrong about its own first band. The raw recon does NOT capture divider band fill (the divider <section> measures transparent and the band <div> is not in the `sections` tree), so the measurement cannot settle it either way. compatibility/graph.json therefore carries this as a NAMED, warn-severity exception rather than asserting a value."
+      "bandColourEvidenceGap": "EVIDENCE GAP, recorded rather than resolved. The FIRST divider band on this template is bg-cream-dark in the clone, but the section ABOVE it (hero.partner) is bg-cream — which contradicts the otherwise-universal 'band follows the section above' rule. The source's own justifying comment ('they follow a cream-dark section') is wrong about its own first band. The raw recon does NOT capture divider band fill (the divider <section> measures transparent and the band <div> is not in the `sections` tree), so the measurement cannot settle it either way. compatibility/graph.json therefore carries this as a NAMED, warn-severity exception rather than asserting a value.",
+      "decompositionNote": "2.0.0: the opening <section> was split into its hero (blocks 0-6) and proof.social-proof-stack (blocks 7-12) after the 1440px measurement showed a HERO above 3000px.",
+      "family": "landing"
     }
-  }
+  },
+  "templateFamilies": {
+    "landing": [
+      "T-HOME",
+      "T-PARTNER",
+      "T-ESG",
+      "T-PURPOSE"
+    ],
+    "pricing": [
+      "T-PRICING"
+    ],
+    "conversion-form": [
+      "T-CONTACT",
+      "T-SCHEDULER",
+      "T-REFERRAL",
+      "T-EBOOK"
+    ],
+    "index": [
+      "T-BLOG-INDEX",
+      "T-CASE-STUDY-INDEX",
+      "T-COLLECTION-INDEX",
+      "T-ALTERNATIVES-INDEX"
+    ],
+    "article": [
+      "T-ARTICLE",
+      "T-PILLAR"
+    ],
+    "collection-detail": [
+      "T-COMPARISON",
+      "T-DETAIL-FOR",
+      "T-DETAIL-GLOSSARY",
+      "T-DETAIL-MESSAGES",
+      "T-DETAIL-VALUES"
+    ],
+    "customer-story": [
+      "T-STORY"
+    ],
+    "legal": [
+      "T-LEGAL"
+    ]
+  },
+  "templateFamiliesNote": "Closed set of 8 page families, grouped by semantic purpose (R6). schema/examples/ carries one generation-mode example per family; extraction/verify_all.py fails if a family has none."
 }

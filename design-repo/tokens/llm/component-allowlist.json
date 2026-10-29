@@ -1,13 +1,13 @@
 {
   "$id": "tokens.llm.component-allowlist",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "status": "design-review-pending",
-  "description": "The CLOSED set a generator may instantiate, and the only properties it may set on each. Anything absent from this file is forbidden. Every entry is derived from a real contract file on disk \u2014 extraction/verify_all.py enforces 1:1 parity in both directions, so a phantom entry or an orphaned contract fails the run.",
-  "parityContract": "Every id here has a matching contract file; every contract file under primitives/, components/ and sections/ has an entry here. Proven by scripts/prove_drift.sh.",
+  "description": "The CLOSED set a generator may instantiate, and the only properties it may set on each. Anything absent from this file is forbidden. Every entry is derived from a real contract file on disk — extraction/verify_all.py enforces 1:1 parity in both directions, so a phantom entry or an orphaned contract fails the run.",
+  "parityContract": "Every id here has a matching contract file; every contract file under primitives/, components/ and sections/ has an entry here. Proven by extraction/prove_drift.py.",
   "counts": {
     "primitives": 25,
     "components": 39,
-    "sections": 46
+    "sections": 47
   },
   "pageLevelInstantiable": [
     "sections.chrome.announcement-banner",
@@ -51,6 +51,7 @@
     "sections.proof.g2-rating",
     "sections.proof.goals-band",
     "sections.proof.sdg-goals",
+    "sections.proof.social-proof-stack",
     "sections.proof.stat-pills",
     "sections.proof.testimonial-wall",
     "sections.referral.earnings-tiers",
@@ -271,7 +272,10 @@
         "repeatable",
         "variant",
         "content",
-        "motion"
+        "motion",
+        "assetRefs",
+        "style",
+        "retrievalEligible"
       ],
       "motionFieldSet": [
         "pattern",
@@ -291,7 +295,11 @@
         "T-HOME",
         "T-ARTICLE"
       ],
-      "assetRoles": []
+      "assetRoles": [],
+      "generatedAssetRoles": [],
+      "retrievalEligible": false,
+      "retrievalIneligibleReason": "A site-wide promotional announcement bar injected by Layout on / and /blog/:slug only; it is runtime chrome that is toggled per route, not page content, and must never be retrieved as a section.",
+      "semanticCategory": "SHELL"
     },
     "sections.chrome.footer": {
       "contract": "sections/chrome.footer.json",
@@ -308,7 +316,10 @@
         "repeatable",
         "variant",
         "content",
-        "motion"
+        "motion",
+        "assetRefs",
+        "style",
+        "retrievalEligible"
       ],
       "motionFieldSet": [
         "pattern",
@@ -325,7 +336,20 @@
       ],
       "motionIsClosed": true,
       "allowedTemplates": "any",
-      "assetRoles": []
+      "assetRoles": [
+        "brand.logo",
+        "brand.icon",
+        "brand.leaf-art"
+      ],
+      "generatedAssetRoles": [
+        "generated.icon",
+        "generated.illustration",
+        "operator.supplied-asset",
+        "placeholder.brand-mark",
+        "placeholder.url"
+      ],
+      "retrievalEligible": true,
+      "semanticCategory": "SHELL"
     },
     "sections.chrome.nav": {
       "contract": "sections/chrome.nav.json",
@@ -341,7 +365,10 @@
         "repeatable",
         "variant",
         "content",
-        "motion"
+        "motion",
+        "assetRefs",
+        "style",
+        "retrievalEligible"
       ],
       "motionFieldSet": [
         "pattern",
@@ -358,7 +385,16 @@
       ],
       "motionIsClosed": true,
       "allowedTemplates": "any",
-      "assetRoles": []
+      "assetRoles": [
+        "brand.logo"
+      ],
+      "generatedAssetRoles": [
+        "operator.supplied-asset",
+        "placeholder.brand-mark",
+        "placeholder.url"
+      ],
+      "retrievalEligible": true,
+      "semanticCategory": "SHELL"
     },
     "sections.chrome.trial-modal": {
       "contract": "sections/chrome.trial-modal.json",
@@ -373,7 +409,10 @@
         "repeatable",
         "variant",
         "content",
-        "motion"
+        "motion",
+        "assetRefs",
+        "style",
+        "retrievalEligible"
       ],
       "motionFieldSet": [
         "pattern",
@@ -390,7 +429,14 @@
       ],
       "motionIsClosed": true,
       "allowedTemplates": "any",
-      "assetRoles": []
+      "assetRoles": [],
+      "generatedAssetRoles": [
+        "operator.supplied-asset",
+        "placeholder.company-logo"
+      ],
+      "retrievalEligible": false,
+      "retrievalIneligibleReason": "A modal dialog (slide-over overlay) opened by every trial button and rendered by Layout outside the section flow; it is runtime UI, not page content, and must never be retrieved as a section.",
+      "semanticCategory": "SHELL"
     },
     "sections.content.faq": {
       "contract": "sections/content.faq.json",
@@ -407,7 +453,10 @@
         "repeatable",
         "variant",
         "content",
-        "motion"
+        "motion",
+        "assetRefs",
+        "style",
+        "retrievalEligible"
       ],
       "motionFieldSet": [
         "pattern",
@@ -424,7 +473,10 @@
       ],
       "motionIsClosed": true,
       "allowedTemplates": "any",
-      "assetRoles": []
+      "assetRoles": [],
+      "generatedAssetRoles": [],
+      "retrievalEligible": true,
+      "semanticCategory": "CONTENT"
     },
     "sections.content.leaf-bullets": {
       "contract": "sections/content.leaf-bullets.json",
@@ -440,7 +492,10 @@
         "repeatable",
         "variant",
         "content",
-        "motion"
+        "motion",
+        "assetRefs",
+        "style",
+        "retrievalEligible"
       ],
       "motionFieldSet": [
         "pattern",
@@ -457,7 +512,10 @@
       ],
       "motionIsClosed": true,
       "allowedTemplates": "any",
-      "assetRoles": []
+      "assetRoles": [],
+      "generatedAssetRoles": [],
+      "retrievalEligible": true,
+      "semanticCategory": "CONTENT"
     },
     "sections.content.leaf-spec-list": {
       "contract": "sections/content.leaf-spec-list.json",
@@ -474,7 +532,10 @@
         "repeatable",
         "variant",
         "content",
-        "motion"
+        "motion",
+        "assetRefs",
+        "style",
+        "retrievalEligible"
       ],
       "motionFieldSet": [
         "pattern",
@@ -491,7 +552,10 @@
       ],
       "motionIsClosed": true,
       "allowedTemplates": "any",
-      "assetRoles": []
+      "assetRoles": [],
+      "generatedAssetRoles": [],
+      "retrievalEligible": true,
+      "semanticCategory": "CONTENT"
     },
     "sections.content.message-grid": {
       "contract": "sections/content.message-grid.json",
@@ -506,7 +570,10 @@
         "repeatable",
         "variant",
         "content",
-        "motion"
+        "motion",
+        "assetRefs",
+        "style",
+        "retrievalEligible"
       ],
       "motionFieldSet": [
         "pattern",
@@ -527,7 +594,10 @@
         "T-DETAIL-VALUES",
         "T-DETAIL-FOR"
       ],
-      "assetRoles": []
+      "assetRoles": [],
+      "generatedAssetRoles": [],
+      "retrievalEligible": true,
+      "semanticCategory": "CONTENT"
     },
     "sections.content.prose-left": {
       "contract": "sections/content.prose-left.json",
@@ -543,7 +613,10 @@
         "repeatable",
         "variant",
         "content",
-        "motion"
+        "motion",
+        "assetRefs",
+        "style",
+        "retrievalEligible"
       ],
       "motionFieldSet": [
         "pattern",
@@ -560,7 +633,10 @@
       ],
       "motionIsClosed": true,
       "allowedTemplates": "any",
-      "assetRoles": []
+      "assetRoles": [],
+      "generatedAssetRoles": [],
+      "retrievalEligible": true,
+      "semanticCategory": "CONTENT"
     },
     "sections.content.reading-list": {
       "contract": "sections/content.reading-list.json",
@@ -576,7 +652,10 @@
         "repeatable",
         "variant",
         "content",
-        "motion"
+        "motion",
+        "assetRefs",
+        "style",
+        "retrievalEligible"
       ],
       "motionFieldSet": [
         "pattern",
@@ -595,7 +674,10 @@
       "allowedTemplates": [
         "T-PILLAR"
       ],
-      "assetRoles": []
+      "assetRoles": [],
+      "generatedAssetRoles": [],
+      "retrievalEligible": true,
+      "semanticCategory": "CONTENT"
     },
     "sections.content.rich-text": {
       "contract": "sections/content.rich-text.json",
@@ -614,7 +696,10 @@
         "repeatable",
         "variant",
         "content",
-        "motion"
+        "motion",
+        "assetRefs",
+        "style",
+        "retrievalEligible"
       ],
       "motionFieldSet": [
         "pattern",
@@ -631,7 +716,10 @@
       ],
       "motionIsClosed": true,
       "allowedTemplates": "any",
-      "assetRoles": []
+      "assetRoles": [],
+      "generatedAssetRoles": [],
+      "retrievalEligible": true,
+      "semanticCategory": "CONTENT"
     },
     "sections.content.section-heading": {
       "contract": "sections/content.section-heading.json",
@@ -646,7 +734,10 @@
         "repeatable",
         "variant",
         "content",
-        "motion"
+        "motion",
+        "assetRefs",
+        "style",
+        "retrievalEligible"
       ],
       "motionFieldSet": [
         "pattern",
@@ -663,7 +754,10 @@
       ],
       "motionIsClosed": true,
       "allowedTemplates": "any",
-      "assetRoles": []
+      "assetRoles": [],
+      "generatedAssetRoles": [],
+      "retrievalEligible": true,
+      "semanticCategory": "CONTENT"
     },
     "sections.content.sources": {
       "contract": "sections/content.sources.json",
@@ -680,7 +774,10 @@
         "repeatable",
         "variant",
         "content",
-        "motion"
+        "motion",
+        "assetRefs",
+        "style",
+        "retrievalEligible"
       ],
       "motionFieldSet": [
         "pattern",
@@ -699,7 +796,10 @@
       "allowedTemplates": [
         "T-COMPARISON"
       ],
-      "assetRoles": []
+      "assetRoles": [],
+      "generatedAssetRoles": [],
+      "retrievalEligible": true,
+      "semanticCategory": "CONTENT"
     },
     "sections.conversion.arketta-cross-promo": {
       "contract": "sections/conversion.arketta-cross-promo.json",
@@ -716,7 +816,10 @@
         "repeatable",
         "variant",
         "content",
-        "motion"
+        "motion",
+        "assetRefs",
+        "style",
+        "retrievalEligible"
       ],
       "motionFieldSet": [
         "pattern",
@@ -735,7 +838,10 @@
       "allowedTemplates": [
         "T-ARTICLE"
       ],
-      "assetRoles": []
+      "assetRoles": [],
+      "generatedAssetRoles": [],
+      "retrievalEligible": true,
+      "semanticCategory": "CONVERSION"
     },
     "sections.conversion.lead-magnet-cta": {
       "contract": "sections/conversion.lead-magnet-cta.json",
@@ -751,7 +857,10 @@
         "repeatable",
         "variant",
         "content",
-        "motion"
+        "motion",
+        "assetRefs",
+        "style",
+        "retrievalEligible"
       ],
       "motionFieldSet": [
         "pattern",
@@ -771,7 +880,10 @@
         "T-ARTICLE",
         "T-PILLAR"
       ],
-      "assetRoles": []
+      "assetRoles": [],
+      "generatedAssetRoles": [],
+      "retrievalEligible": true,
+      "semanticCategory": "CONVERSION"
     },
     "sections.conversion.reassurance-cta": {
       "contract": "sections/conversion.reassurance-cta.json",
@@ -790,7 +902,10 @@
         "repeatable",
         "variant",
         "content",
-        "motion"
+        "motion",
+        "assetRefs",
+        "style",
+        "retrievalEligible"
       ],
       "motionFieldSet": [
         "pattern",
@@ -810,7 +925,14 @@
       "assetRoles": [
         "brand.icon",
         "third-party.platform-logo"
-      ]
+      ],
+      "generatedAssetRoles": [
+        "generated.icon",
+        "operator.supplied-asset",
+        "placeholder.company-logo"
+      ],
+      "retrievalEligible": true,
+      "semanticCategory": "CONVERSION"
     },
     "sections.divider.leaf-band": {
       "contract": "sections/divider.leaf-band.json",
@@ -825,7 +947,10 @@
         "repeatable",
         "variant",
         "content",
-        "motion"
+        "motion",
+        "assetRefs",
+        "style",
+        "retrievalEligible"
       ],
       "motionFieldSet": [
         "pattern",
@@ -842,7 +967,13 @@
       ],
       "motionIsClosed": true,
       "allowedTemplates": "any",
-      "assetRoles": []
+      "assetRoles": [],
+      "generatedAssetRoles": [
+        "generated.illustration",
+        "operator.supplied-asset"
+      ],
+      "retrievalEligible": true,
+      "semanticCategory": "STRUCTURE"
     },
     "sections.feature.report-csr": {
       "contract": "sections/feature.report-csr.json",
@@ -860,7 +991,10 @@
         "repeatable",
         "variant",
         "content",
-        "motion"
+        "motion",
+        "assetRefs",
+        "style",
+        "retrievalEligible"
       ],
       "motionFieldSet": [
         "pattern",
@@ -883,7 +1017,15 @@
         "product.screenshot",
         "product.badge",
         "brand.leaf-art"
-      ]
+      ],
+      "generatedAssetRoles": [
+        "generated.illustration",
+        "operator.supplied-asset",
+        "placeholder.badge",
+        "placeholder.screenshot"
+      ],
+      "retrievalEligible": true,
+      "semanticCategory": "FEATURES"
     },
     "sections.feature.seeds": {
       "contract": "sections/feature.seeds.json",
@@ -903,7 +1045,10 @@
         "repeatable",
         "variant",
         "content",
-        "motion"
+        "motion",
+        "assetRefs",
+        "style",
+        "retrievalEligible"
       ],
       "motionFieldSet": [
         "pattern",
@@ -925,7 +1070,14 @@
       "assetRoles": [
         "product.screenshot",
         "brand.leaf-art"
-      ]
+      ],
+      "generatedAssetRoles": [
+        "generated.illustration",
+        "operator.supplied-asset",
+        "placeholder.screenshot"
+      ],
+      "retrievalEligible": true,
+      "semanticCategory": "FEATURES"
     },
     "sections.feature.split-visual": {
       "contract": "sections/feature.split-visual.json",
@@ -943,7 +1095,10 @@
         "repeatable",
         "variant",
         "content",
-        "motion"
+        "motion",
+        "assetRefs",
+        "style",
+        "retrievalEligible"
       ],
       "motionFieldSet": [
         "pattern",
@@ -968,7 +1123,16 @@
         "brand.icon",
         "third-party.review-mark",
         "brand.leaf-art"
-      ]
+      ],
+      "generatedAssetRoles": [
+        "generated.icon",
+        "generated.illustration",
+        "operator.supplied-asset",
+        "placeholder.badge",
+        "placeholder.screenshot"
+      ],
+      "retrievalEligible": true,
+      "semanticCategory": "FEATURES"
     },
     "sections.form.contact-card": {
       "contract": "sections/form.contact-card.json",
@@ -983,7 +1147,10 @@
         "repeatable",
         "variant",
         "content",
-        "motion"
+        "motion",
+        "assetRefs",
+        "style",
+        "retrievalEligible"
       ],
       "motionFieldSet": [
         "pattern",
@@ -1002,7 +1169,10 @@
       "allowedTemplates": [
         "T-CONTACT"
       ],
-      "assetRoles": []
+      "assetRoles": [],
+      "generatedAssetRoles": [],
+      "retrievalEligible": true,
+      "semanticCategory": "CONVERSION"
     },
     "sections.form.lead-magnet-card": {
       "contract": "sections/form.lead-magnet-card.json",
@@ -1015,7 +1185,10 @@
         "repeatable",
         "variant",
         "content",
-        "motion"
+        "motion",
+        "assetRefs",
+        "style",
+        "retrievalEligible"
       ],
       "motionFieldSet": [
         "pattern",
@@ -1034,7 +1207,10 @@
       "allowedTemplates": [
         "T-EBOOK"
       ],
-      "assetRoles": []
+      "assetRoles": [],
+      "generatedAssetRoles": [],
+      "retrievalEligible": true,
+      "semanticCategory": "CONVERSION"
     },
     "sections.form.referral-card": {
       "contract": "sections/form.referral-card.json",
@@ -1050,7 +1226,10 @@
         "repeatable",
         "variant",
         "content",
-        "motion"
+        "motion",
+        "assetRefs",
+        "style",
+        "retrievalEligible"
       ],
       "motionFieldSet": [
         "pattern",
@@ -1069,7 +1248,10 @@
       "allowedTemplates": [
         "T-REFERRAL"
       ],
-      "assetRoles": []
+      "assetRoles": [],
+      "generatedAssetRoles": [],
+      "retrievalEligible": true,
+      "semanticCategory": "CONVERSION"
     },
     "sections.form.scheduler-card": {
       "contract": "sections/form.scheduler-card.json",
@@ -1084,7 +1266,10 @@
         "repeatable",
         "variant",
         "content",
-        "motion"
+        "motion",
+        "assetRefs",
+        "style",
+        "retrievalEligible"
       ],
       "motionFieldSet": [
         "pattern",
@@ -1103,7 +1288,10 @@
       "allowedTemplates": [
         "T-SCHEDULER"
       ],
-      "assetRoles": []
+      "assetRoles": [],
+      "generatedAssetRoles": [],
+      "retrievalEligible": true,
+      "semanticCategory": "CONVERSION"
     },
     "sections.hero.centred-h1": {
       "contract": "sections/hero.centred-h1.json",
@@ -1119,7 +1307,10 @@
         "repeatable",
         "variant",
         "content",
-        "motion"
+        "motion",
+        "assetRefs",
+        "style",
+        "retrievalEligible"
       ],
       "motionFieldSet": [
         "pattern",
@@ -1141,7 +1332,10 @@
         "T-SCHEDULER",
         "T-REFERRAL"
       ],
-      "assetRoles": []
+      "assetRoles": [],
+      "generatedAssetRoles": [],
+      "retrievalEligible": true,
+      "semanticCategory": "HERO"
     },
     "sections.hero.ebook-lede": {
       "contract": "sections/hero.ebook-lede.json",
@@ -1160,7 +1354,10 @@
         "repeatable",
         "variant",
         "content",
-        "motion"
+        "motion",
+        "assetRefs",
+        "style",
+        "retrievalEligible"
       ],
       "motionFieldSet": [
         "pattern",
@@ -1179,7 +1376,10 @@
       "allowedTemplates": [
         "T-EBOOK"
       ],
-      "assetRoles": []
+      "assetRoles": [],
+      "generatedAssetRoles": [],
+      "retrievalEligible": true,
+      "semanticCategory": "HERO"
     },
     "sections.hero.esg-environmental": {
       "contract": "sections/hero.esg-environmental.json",
@@ -1197,7 +1397,10 @@
         "repeatable",
         "variant",
         "content",
-        "motion"
+        "motion",
+        "assetRefs",
+        "style",
+        "retrievalEligible"
       ],
       "motionFieldSet": [
         "pattern",
@@ -1219,15 +1422,20 @@
       "assetRoles": [
         "brand.icon",
         "editorial.stock-photo"
-      ]
+      ],
+      "generatedAssetRoles": [
+        "generated.icon",
+        "generated.illustration",
+        "operator.supplied-asset"
+      ],
+      "retrievalEligible": true,
+      "semanticCategory": "HERO"
     },
     "sections.hero.home": {
       "contract": "sections/hero.home.json",
       "nodeType": "hero.home",
       "category": "hero",
       "settableContentProps": [
-        "displayHeading",
-        "eyebrow",
         "h1",
         "lede",
         "treesHeading",
@@ -1239,7 +1447,10 @@
         "repeatable",
         "variant",
         "content",
-        "motion"
+        "motion",
+        "assetRefs",
+        "style",
+        "retrievalEligible"
       ],
       "motionFieldSet": [
         "pattern",
@@ -1261,11 +1472,18 @@
       "assetRoles": [
         "product.screenshot",
         "person.likeness",
-        "third-party.trademark",
-        "third-party.review-mark",
         "third-party.platform-logo",
         "brand.leaf-art"
-      ]
+      ],
+      "generatedAssetRoles": [
+        "generated.illustration",
+        "operator.supplied-asset",
+        "placeholder.company-logo",
+        "placeholder.person-avatar",
+        "placeholder.screenshot"
+      ],
+      "retrievalEligible": true,
+      "semanticCategory": "HERO"
     },
     "sections.hero.legal-head": {
       "contract": "sections/hero.legal-head.json",
@@ -1281,7 +1499,10 @@
         "repeatable",
         "variant",
         "content",
-        "motion"
+        "motion",
+        "assetRefs",
+        "style",
+        "retrievalEligible"
       ],
       "motionFieldSet": [
         "pattern",
@@ -1300,7 +1521,10 @@
       "allowedTemplates": [
         "T-LEGAL"
       ],
-      "assetRoles": []
+      "assetRoles": [],
+      "generatedAssetRoles": [],
+      "retrievalEligible": true,
+      "semanticCategory": "HERO"
     },
     "sections.hero.page-head": {
       "contract": "sections/hero.page-head.json",
@@ -1317,7 +1541,10 @@
         "repeatable",
         "variant",
         "content",
-        "motion"
+        "motion",
+        "assetRefs",
+        "style",
+        "retrievalEligible"
       ],
       "motionFieldSet": [
         "pattern",
@@ -1346,15 +1573,16 @@
         "T-BLOG-INDEX",
         "T-STORY"
       ],
-      "assetRoles": []
+      "assetRoles": [],
+      "generatedAssetRoles": [],
+      "retrievalEligible": true,
+      "semanticCategory": "HERO"
     },
     "sections.hero.partner": {
       "contract": "sections/hero.partner.json",
       "nodeType": "hero.partner",
       "category": "hero",
       "settableContentProps": [
-        "displayHeading",
-        "eyebrow",
         "h1",
         "ledeOfferSuffix",
         "partnerLogoAlt",
@@ -1366,7 +1594,10 @@
         "repeatable",
         "variant",
         "content",
-        "motion"
+        "motion",
+        "assetRefs",
+        "style",
+        "retrievalEligible"
       ],
       "motionFieldSet": [
         "pattern",
@@ -1388,10 +1619,17 @@
       "assetRoles": [
         "third-party.trademark",
         "person.likeness",
-        "third-party.review-mark",
         "third-party.platform-logo",
         "brand.leaf-art"
-      ]
+      ],
+      "generatedAssetRoles": [
+        "generated.illustration",
+        "operator.supplied-asset",
+        "placeholder.company-logo",
+        "placeholder.person-avatar"
+      ],
+      "retrievalEligible": true,
+      "semanticCategory": "HERO"
     },
     "sections.hero.purpose": {
       "contract": "sections/hero.purpose.json",
@@ -1407,7 +1645,10 @@
         "repeatable",
         "variant",
         "content",
-        "motion"
+        "motion",
+        "assetRefs",
+        "style",
+        "retrievalEligible"
       ],
       "motionFieldSet": [
         "pattern",
@@ -1426,7 +1667,13 @@
       "allowedTemplates": [
         "T-PURPOSE"
       ],
-      "assetRoles": []
+      "assetRoles": [],
+      "generatedAssetRoles": [
+        "generated.illustration",
+        "operator.supplied-asset"
+      ],
+      "retrievalEligible": true,
+      "semanticCategory": "HERO"
     },
     "sections.listing.blog-rows": {
       "contract": "sections/listing.blog-rows.json",
@@ -1441,7 +1688,10 @@
         "repeatable",
         "variant",
         "content",
-        "motion"
+        "motion",
+        "assetRefs",
+        "style",
+        "retrievalEligible"
       ],
       "motionFieldSet": [
         "pattern",
@@ -1460,7 +1710,13 @@
       "allowedTemplates": [
         "T-BLOG-INDEX"
       ],
-      "assetRoles": []
+      "assetRoles": [],
+      "generatedAssetRoles": [
+        "generated.illustration",
+        "operator.supplied-asset"
+      ],
+      "retrievalEligible": true,
+      "semanticCategory": "LISTING"
     },
     "sections.listing.case-study-grid": {
       "contract": "sections/listing.case-study-grid.json",
@@ -1475,7 +1731,10 @@
         "repeatable",
         "variant",
         "content",
-        "motion"
+        "motion",
+        "assetRefs",
+        "style",
+        "retrievalEligible"
       ],
       "motionFieldSet": [
         "pattern",
@@ -1494,7 +1753,13 @@
       "allowedTemplates": [
         "T-CASE-STUDY-INDEX"
       ],
-      "assetRoles": []
+      "assetRoles": [],
+      "generatedAssetRoles": [
+        "operator.supplied-asset",
+        "placeholder.company-logo"
+      ],
+      "retrievalEligible": true,
+      "semanticCategory": "LISTING"
     },
     "sections.listing.link-card-grid": {
       "contract": "sections/listing.link-card-grid.json",
@@ -1509,7 +1774,10 @@
         "repeatable",
         "variant",
         "content",
-        "motion"
+        "motion",
+        "assetRefs",
+        "style",
+        "retrievalEligible"
       ],
       "motionFieldSet": [
         "pattern",
@@ -1526,7 +1794,10 @@
       ],
       "motionIsClosed": true,
       "allowedTemplates": "any",
-      "assetRoles": []
+      "assetRoles": [],
+      "generatedAssetRoles": [],
+      "retrievalEligible": true,
+      "semanticCategory": "LISTING"
     },
     "sections.listing.more-articles": {
       "contract": "sections/listing.more-articles.json",
@@ -1542,7 +1813,10 @@
         "repeatable",
         "variant",
         "content",
-        "motion"
+        "motion",
+        "assetRefs",
+        "style",
+        "retrievalEligible"
       ],
       "motionFieldSet": [
         "pattern",
@@ -1561,7 +1835,10 @@
       "allowedTemplates": [
         "T-ARTICLE"
       ],
-      "assetRoles": []
+      "assetRoles": [],
+      "generatedAssetRoles": [],
+      "retrievalEligible": true,
+      "semanticCategory": "LISTING"
     },
     "sections.listing.story-teasers": {
       "contract": "sections/listing.story-teasers.json",
@@ -1576,7 +1853,10 @@
         "repeatable",
         "variant",
         "content",
-        "motion"
+        "motion",
+        "assetRefs",
+        "style",
+        "retrievalEligible"
       ],
       "motionFieldSet": [
         "pattern",
@@ -1595,7 +1875,13 @@
       "allowedTemplates": [
         "T-STORY"
       ],
-      "assetRoles": []
+      "assetRoles": [],
+      "generatedAssetRoles": [
+        "operator.supplied-asset",
+        "placeholder.company-logo"
+      ],
+      "retrievalEligible": true,
+      "semanticCategory": "LISTING"
     },
     "sections.pricing.single-plan": {
       "contract": "sections/pricing.single-plan.json",
@@ -1613,7 +1899,10 @@
         "repeatable",
         "variant",
         "content",
-        "motion"
+        "motion",
+        "assetRefs",
+        "style",
+        "retrievalEligible"
       ],
       "motionFieldSet": [
         "pattern",
@@ -1637,7 +1926,16 @@
         "brand.icon",
         "third-party.platform-logo",
         "brand.leaf-art"
-      ]
+      ],
+      "generatedAssetRoles": [
+        "generated.icon",
+        "generated.illustration",
+        "operator.supplied-asset",
+        "placeholder.company-logo",
+        "placeholder.screenshot"
+      ],
+      "retrievalEligible": true,
+      "semanticCategory": "PRICING"
     },
     "sections.proof.g2-rating": {
       "contract": "sections/proof.g2-rating.json",
@@ -1652,7 +1950,10 @@
         "repeatable",
         "variant",
         "content",
-        "motion"
+        "motion",
+        "assetRefs",
+        "style",
+        "retrievalEligible"
       ],
       "motionFieldSet": [
         "pattern",
@@ -1673,7 +1974,13 @@
         "T-SCHEDULER",
         "T-EBOOK"
       ],
-      "assetRoles": []
+      "assetRoles": [],
+      "generatedAssetRoles": [
+        "operator.supplied-asset",
+        "placeholder.badge"
+      ],
+      "retrievalEligible": true,
+      "semanticCategory": "PROOF"
     },
     "sections.proof.goals-band": {
       "contract": "sections/proof.goals-band.json",
@@ -1689,7 +1996,10 @@
         "repeatable",
         "variant",
         "content",
-        "motion"
+        "motion",
+        "assetRefs",
+        "style",
+        "retrievalEligible"
       ],
       "motionFieldSet": [
         "pattern",
@@ -1708,7 +2018,13 @@
       "allowedTemplates": [
         "T-PURPOSE"
       ],
-      "assetRoles": []
+      "assetRoles": [],
+      "generatedAssetRoles": [
+        "generated.icon",
+        "operator.supplied-asset"
+      ],
+      "retrievalEligible": true,
+      "semanticCategory": "PROOF"
     },
     "sections.proof.sdg-goals": {
       "contract": "sections/proof.sdg-goals.json",
@@ -1725,7 +2041,10 @@
         "repeatable",
         "variant",
         "content",
-        "motion"
+        "motion",
+        "assetRefs",
+        "style",
+        "retrievalEligible"
       ],
       "motionFieldSet": [
         "pattern",
@@ -1745,7 +2064,66 @@
         "T-ESG",
         "T-PURPOSE"
       ],
-      "assetRoles": []
+      "assetRoles": [],
+      "generatedAssetRoles": [
+        "generated.icon",
+        "operator.supplied-asset"
+      ],
+      "retrievalEligible": true,
+      "semanticCategory": "PROOF"
+    },
+    "sections.proof.social-proof-stack": {
+      "contract": "sections/proof.social-proof-stack.json",
+      "nodeType": "proof.social-proof-stack",
+      "category": "proof",
+      "settableContentProps": [
+        "displayHeading",
+        "eyebrow"
+      ],
+      "settableNodeProps": [
+        "section",
+        "required",
+        "repeatable",
+        "variant",
+        "content",
+        "motion",
+        "assetRefs",
+        "style",
+        "retrievalEligible"
+      ],
+      "motionFieldSet": [
+        "pattern",
+        "trigger",
+        "durationMs",
+        "easing",
+        "delayMs",
+        "staggerMs",
+        "leafSet",
+        "leafCount",
+        "scrollProgressRange",
+        "reducedMotionFallback",
+        "implementationStatus"
+      ],
+      "motionIsClosed": true,
+      "allowedTemplates": [
+        "T-HOME",
+        "T-PARTNER"
+      ],
+      "assetRoles": [
+        "person.likeness",
+        "third-party.trademark",
+        "third-party.review-mark",
+        "brand.leaf-art"
+      ],
+      "generatedAssetRoles": [
+        "generated.illustration",
+        "operator.supplied-asset",
+        "placeholder.badge",
+        "placeholder.company-logo",
+        "placeholder.person-avatar"
+      ],
+      "retrievalEligible": true,
+      "semanticCategory": "PROOF"
     },
     "sections.proof.stat-pills": {
       "contract": "sections/proof.stat-pills.json",
@@ -1760,7 +2138,10 @@
         "repeatable",
         "variant",
         "content",
-        "motion"
+        "motion",
+        "assetRefs",
+        "style",
+        "retrievalEligible"
       ],
       "motionFieldSet": [
         "pattern",
@@ -1779,7 +2160,10 @@
       "allowedTemplates": [
         "T-PILLAR"
       ],
-      "assetRoles": []
+      "assetRoles": [],
+      "generatedAssetRoles": [],
+      "retrievalEligible": true,
+      "semanticCategory": "PROOF"
     },
     "sections.proof.testimonial-wall": {
       "contract": "sections/proof.testimonial-wall.json",
@@ -1795,7 +2179,10 @@
         "repeatable",
         "variant",
         "content",
-        "motion"
+        "motion",
+        "assetRefs",
+        "style",
+        "retrievalEligible"
       ],
       "motionFieldSet": [
         "pattern",
@@ -1819,7 +2206,15 @@
         "person.likeness",
         "third-party.trademark",
         "third-party.review-mark"
-      ]
+      ],
+      "generatedAssetRoles": [
+        "operator.supplied-asset",
+        "placeholder.badge",
+        "placeholder.company-logo",
+        "placeholder.person-avatar"
+      ],
+      "retrievalEligible": true,
+      "semanticCategory": "PROOF"
     },
     "sections.referral.earnings-tiers": {
       "contract": "sections/referral.earnings-tiers.json",
@@ -1835,7 +2230,10 @@
         "repeatable",
         "variant",
         "content",
-        "motion"
+        "motion",
+        "assetRefs",
+        "style",
+        "retrievalEligible"
       ],
       "motionFieldSet": [
         "pattern",
@@ -1854,7 +2252,10 @@
       "allowedTemplates": [
         "T-REFERRAL"
       ],
-      "assetRoles": []
+      "assetRoles": [],
+      "generatedAssetRoles": [],
+      "retrievalEligible": true,
+      "semanticCategory": "PRICING"
     },
     "sections.story.hero-quote": {
       "contract": "sections/story.hero-quote.json",
@@ -1871,7 +2272,10 @@
         "repeatable",
         "variant",
         "content",
-        "motion"
+        "motion",
+        "assetRefs",
+        "style",
+        "retrievalEligible"
       ],
       "motionFieldSet": [
         "pattern",
@@ -1893,7 +2297,14 @@
       "assetRoles": [
         "person.likeness",
         "editorial.hero-image"
-      ]
+      ],
+      "generatedAssetRoles": [
+        "generated.illustration",
+        "operator.supplied-asset",
+        "placeholder.person-avatar"
+      ],
+      "retrievalEligible": true,
+      "semanticCategory": "EDITORIAL"
     },
     "sections.story.meta-prose": {
       "contract": "sections/story.meta-prose.json",
@@ -1906,7 +2317,10 @@
         "repeatable",
         "variant",
         "content",
-        "motion"
+        "motion",
+        "assetRefs",
+        "style",
+        "retrievalEligible"
       ],
       "motionFieldSet": [
         "pattern",
@@ -1928,16 +2342,23 @@
       "assetRoles": [
         "third-party.trademark",
         "editorial.hero-image"
-      ]
+      ],
+      "generatedAssetRoles": [
+        "generated.illustration",
+        "operator.supplied-asset",
+        "placeholder.company-logo"
+      ],
+      "retrievalEligible": true,
+      "semanticCategory": "EDITORIAL"
     }
   },
   "forbidden": [
     "Any section id not listed under `sections`.",
     "Any content property not listed in that section's `settableContentProps`.",
-    "Any motion field not in that section's `motionFieldSet` \u2014 the motion object is closed.",
+    "Any motion field not in that section's `motionFieldSet` — the motion object is closed.",
     "Any assetRole not in assets/asset-roles.json's `generationPolicyEnum` scope.",
     "Any hover, focus or active state. The site has exactly three hover utilities site-wide and no focus styling at all; inventing interactive state is a fidelity break.",
     "Any gradient or box-shadow. Both are zero site-wide.",
-    "Any per-instance colour, radius or spacing literal \u2014 see tokens/llm/token-policy.json."
+    "Any per-instance colour, radius or spacing literal — see tokens/llm/token-policy.json."
   ]
 }

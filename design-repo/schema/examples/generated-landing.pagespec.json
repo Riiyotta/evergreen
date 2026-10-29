@@ -1,0 +1,378 @@
+{
+  "pageSpecVersion": "2.0.0",
+  "mode": "generation",
+  "theme": "light",
+  "route": "/",
+  "template": "T-HOME",
+  "title": "Fernway — appreciation that fits the week",
+  "evidenceLevel": "measured",
+  "nodes": [
+    {
+      "section": "chrome.announcement-banner",
+      "required": true,
+      "repeatable": false,
+      "content": {
+        "message": "New: monthly appreciation digests for managers.",
+        "linkLabel": "Read the note"
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "delayMs": 0,
+        "staggerMs": 0,
+        "reducedMotionFallback": "none-required-static",
+        "implementationStatus": "static-by-design"
+      }
+    },
+    {
+      "section": "chrome.nav",
+      "required": true,
+      "repeatable": false,
+      "content": {
+        "desktopLinks": [
+          "Home",
+          "Product",
+          "Pricing",
+          "Stories",
+          "Guides",
+          "Sign in"
+        ],
+        "overlayLinks": [
+          "Home",
+          "Product",
+          "Pricing",
+          "Stories",
+          "Guides",
+          "Book a call",
+          "Sign in"
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "delayMs": 0,
+        "staggerMs": 0,
+        "reducedMotionFallback": "none-required-static",
+        "implementationStatus": "static-by-design"
+      },
+      "assetRefs": [
+        {
+          "assetRole": "placeholder.brand-mark",
+          "src": "https://assets.fernway.example/fernway-mark.svg",
+          "alt": "Fernway"
+        }
+      ]
+    },
+    {
+      "section": "hero.home",
+      "required": true,
+      "repeatable": false,
+      "content": {
+        "h1": "Say thank you where the work happens",
+        "lede": "Fernway is a fictional appreciation tool used here to show the layout. Teams post short notes of thanks and managers see the themes each month.",
+        "treesHeading": "Notes that stay visible",
+        "usersHeading": "Built for small teams"
+      },
+      "motion": {
+        "pattern": "leaf-scroll-track",
+        "trigger": "scrollSpring",
+        "durationMs": 1500,
+        "easing": "cubic-bezier(0.455, 0.03, 0.515, 0.955)",
+        "delayMs": 0,
+        "staggerMs": 0,
+        "leafSet": "HERO_LEAVES",
+        "leafCount": 12,
+        "scrollProgressRange": {
+          "line1": [
+            0.35,
+            0.45
+          ],
+          "heart1": 0.4,
+          "line2": [
+            0.42,
+            0.52
+          ],
+          "heart2": 0.47,
+          "note": "Leaf per-leaf ranges live in src/lib/leaves.js `track.start`/`track.end`."
+        },
+        "reducedMotionFallback": "recognition lines forced to scaleX(1); hearts forced to opacity 1; leaves held at rotate-only transform",
+        "implementationStatus": "specified-not-yet-animated"
+      },
+      "assetRefs": [
+        {
+          "assetRole": "placeholder.screenshot",
+          "src": "https://assets.fernway.example/screens/board-wireframe.svg",
+          "alt": "Greyed wireframe of a notes board"
+        },
+        {
+          "assetRole": "generated.illustration",
+          "src": "https://assets.fernway.example/hero-shapes.svg",
+          "alt": ""
+        }
+      ],
+      "style": {
+        "fontFamily": "font.headline",
+        "spacing": "spacing.heroTop"
+      }
+    },
+    {
+      "section": "proof.social-proof-stack",
+      "required": true,
+      "repeatable": false,
+      "content": {
+        "displayHeading": "Small notes add up to a culture people want to stay in",
+        "eyebrow": "Teams at fictional studios use the layout below as an example"
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "delayMs": 0,
+        "staggerMs": 0,
+        "leafSet": "QUOTE_LEAVES",
+        "leafCount": 12,
+        "reducedMotionFallback": "none-required-static",
+        "implementationStatus": "static-by-design"
+      },
+      "assetRefs": [
+        {
+          "assetRole": "placeholder.person-avatar",
+          "src": "https://assets.fernway.example/avatars/rowan.svg",
+          "alt": "Illustrated avatar of Rowan Pike, a fictional customer"
+        },
+        {
+          "assetRole": "placeholder.company-logo",
+          "src": "https://assets.fernway.example/logos/copperline.svg",
+          "alt": "Copperline Studio (fictional)"
+        },
+        {
+          "assetRole": "placeholder.badge",
+          "src": "https://assets.fernway.example/badge-placeholder.svg",
+          "alt": "Rating placeholder"
+        }
+      ]
+    },
+    {
+      "section": "divider.leaf-band",
+      "required": true,
+      "repeatable": false,
+      "variant": "bg-cream",
+      "motion": {
+        "pattern": "leaf-drift",
+        "trigger": "whileInView",
+        "durationMs": 1500,
+        "easing": "cubic-bezier(0.455, 0.03, 0.515, 0.955)",
+        "delayMs": 0,
+        "staggerMs": 0,
+        "leafSet": "DIVIDER_LEAVES",
+        "leafCount": 12,
+        "reducedMotionFallback": "leaves-held-at-rotate-only-transform",
+        "implementationStatus": "specified-not-yet-animated"
+      },
+      "assetRefs": [
+        {
+          "assetRole": "generated.illustration",
+          "src": "https://assets.fernway.example/divider-waves.svg",
+          "alt": ""
+        }
+      ]
+    },
+    {
+      "section": "feature.seeds",
+      "required": true,
+      "repeatable": false,
+      "content": {
+        "heading": "Every thank-you can carry a value tag",
+        "bullets": [
+          "Tag a note with a team value",
+          "See which values show up most",
+          "Share the board in a weekly meeting"
+        ],
+        "statFigure": "N",
+        "statCaption": "placeholder figure — replace with your own measured number",
+        "valueBadge": "Value: Care",
+        "seedLine": "Rowan sent a note"
+      },
+      "motion": {
+        "pattern": "leaf-drift",
+        "trigger": "whileInView",
+        "durationMs": 1300,
+        "easing": "cubic-bezier(0.455, 0.03, 0.515, 0.955)",
+        "delayMs": 0,
+        "staggerMs": 0,
+        "leafSet": "CARD_LEAVES",
+        "leafCount": 3,
+        "reducedMotionFallback": "leaves-held-at-rotate-only-transform",
+        "implementationStatus": "specified-not-yet-animated"
+      },
+      "assetRefs": [
+        {
+          "assetRole": "placeholder.screenshot",
+          "src": "https://assets.fernway.example/screens/notes-wireframe.svg",
+          "alt": "Wireframe of a note card"
+        }
+      ]
+    },
+    {
+      "section": "feature.report-csr",
+      "required": true,
+      "repeatable": false,
+      "content": {
+        "row1Heading": "A monthly summary for every manager",
+        "row1Bullets": [
+          "Themes from the month",
+          "Who has not been thanked lately",
+          "Exports for the people team"
+        ],
+        "row2Heading": "Your own goals, your own badge",
+        "row2Paragraph": "Show a badge you designed for a goal your company set. Fernway never shows a figure you did not supply."
+      },
+      "motion": {
+        "pattern": "leaf-drift",
+        "trigger": "whileInView",
+        "durationMs": 1300,
+        "easing": "cubic-bezier(0.455, 0.03, 0.515, 0.955)",
+        "delayMs": 0,
+        "staggerMs": 0,
+        "leafSet": "CARD_LEAVES",
+        "leafCount": 3,
+        "reducedMotionFallback": "leaves-held-at-rotate-only-transform",
+        "implementationStatus": "specified-not-yet-animated"
+      },
+      "assetRefs": [
+        {
+          "assetRole": "placeholder.screenshot",
+          "src": "https://assets.fernway.example/screens/report-wireframe.svg",
+          "alt": "Wireframe of a report"
+        },
+        {
+          "assetRole": "placeholder.badge",
+          "src": "https://assets.fernway.example/goal-badge.svg",
+          "alt": "Goal badge placeholder"
+        }
+      ]
+    },
+    {
+      "section": "divider.leaf-band",
+      "required": true,
+      "repeatable": false,
+      "variant": "bg-cream",
+      "motion": {
+        "pattern": "leaf-drift",
+        "trigger": "whileInView",
+        "durationMs": 1500,
+        "easing": "cubic-bezier(0.455, 0.03, 0.515, 0.955)",
+        "delayMs": 0,
+        "staggerMs": 0,
+        "leafSet": "DIVIDER_LEAVES",
+        "leafCount": 12,
+        "reducedMotionFallback": "leaves-held-at-rotate-only-transform",
+        "implementationStatus": "specified-not-yet-animated"
+      },
+      "assetRefs": [
+        {
+          "assetRole": "generated.illustration",
+          "src": "https://assets.fernway.example/divider-waves.svg",
+          "alt": ""
+        }
+      ]
+    },
+    {
+      "section": "conversion.reassurance-cta",
+      "required": true,
+      "repeatable": false,
+      "content": {
+        "columns": [
+          "Pay per seat that is actually used",
+          "Cancel from the settings page",
+          "Support from a real team"
+        ],
+        "heading": "Make thanks a habit",
+        "paragraph": "Fernway puts appreciation where your team already talks, and sends a small monthly summary to every manager.",
+        "smallPrint": "Free for the first month."
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "delayMs": 0,
+        "staggerMs": 0,
+        "reducedMotionFallback": "none-required-static",
+        "implementationStatus": "static-by-design"
+      },
+      "assetRefs": [
+        {
+          "assetRole": "generated.icon",
+          "src": "https://assets.fernway.example/icons/seat.svg",
+          "alt": "Seat icon"
+        }
+      ],
+      "style": {
+        "surface": "surface.alt",
+        "text": "text.primary"
+      }
+    },
+    {
+      "section": "chrome.footer",
+      "required": true,
+      "repeatable": false,
+      "content": {
+        "columns": [
+          [
+            "Product",
+            "Pricing",
+            "Stories"
+          ],
+          [
+            "Guides",
+            "Glossary",
+            "Help centre"
+          ],
+          [
+            "Privacy",
+            "Terms",
+            "Contact"
+          ]
+        ],
+        "socials": [
+          "Newsletter"
+        ],
+        "legalLine": "© Fernway Labs (fictional company) — example only"
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "delayMs": 0,
+        "staggerMs": 0,
+        "reducedMotionFallback": "none-required-static",
+        "implementationStatus": "static-by-design"
+      },
+      "assetRefs": [
+        {
+          "assetRole": "placeholder.brand-mark",
+          "src": "https://assets.fernway.example/fernway-mark.svg",
+          "alt": "Fernway"
+        }
+      ]
+    },
+    {
+      "section": "chrome.trial-modal",
+      "required": true,
+      "repeatable": false,
+      "content": {
+        "platforms": [
+          "Chat app A",
+          "Chat app B"
+        ]
+      },
+      "motion": {
+        "pattern": "overlay-slide",
+        "trigger": "userToggle",
+        "durationMs": 1000,
+        "easing": "cubic-bezier(0.455, 0.03, 0.515, 0.955)",
+        "delayMs": 0,
+        "staggerMs": 0,
+        "reducedMotionFallback": "duration collapses to 0.01ms; the panel hides at 0vh",
+        "implementationStatus": "css-keyframe-fallback-implemented"
+      }
+    }
+  ]
+}

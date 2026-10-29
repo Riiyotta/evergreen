@@ -1,0 +1,1262 @@
+{
+  "$id": "extraction.section-dom-map",
+  "version": "2.0.0",
+  "description": "How extraction/measure_sections.mjs maps the built clone's rendered DOM onto each template's in-flow nodes (every node that is not chrome.*). One representative route per template: the tallest served route that renders the template's full node set. `units` is aligned 1:1 with the template's in-flow nodes in order.",
+  "unitKinds": {
+    "main": "a whole top-level child of <main> (a <section> or a leaf-divider band)",
+    "kids": "an inclusive range of children of that section's single wrapper div",
+    "part": "hero = the opening <section> from its top to the first block containing the display h2 (h2.font-headline); proof = from there to the section bottom",
+    "chapters": "the unit is a prose container split at every H2 and H3 heading: one height per heading-bounded chapter / legal part (content before the first heading belongs to chapter 1)"
+  },
+  "slotRule": "A unit's height is the distance from its own top to the next unit's top inside the same <section> (the first unit starts at the section top, the last ends at the section bottom), so margins are attributed and the units partition the page.",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "templates": {
+    "T-ALTERNATIVES-INDEX": {
+      "route": "/alternatives",
+      "units": [
+        {
+          "main": 0,
+          "kids": [
+            0,
+            0
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            1,
+            1
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            2,
+            2
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            3,
+            3
+          ]
+        },
+        {
+          "main": 1
+        },
+        {
+          "main": 2
+        }
+      ]
+    },
+    "T-ARTICLE": {
+      "route": "/blog/35-creative-ideas-on-how-to-recognize-employees",
+      "units": [
+        {
+          "main": 0,
+          "kids": [
+            0,
+            0
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            1,
+            1
+          ],
+          "chapters": true
+        },
+        {
+          "main": 0,
+          "kids": [
+            2,
+            2
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            3,
+            3
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            4,
+            4
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            5,
+            5
+          ]
+        },
+        {
+          "main": 1
+        },
+        {
+          "main": 2
+        }
+      ]
+    },
+    "T-BLOG-INDEX": {
+      "route": "/blog",
+      "units": [
+        {
+          "main": 0,
+          "kids": [
+            0,
+            0
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    "T-CASE-STUDY-INDEX": {
+      "route": "/case-studies",
+      "units": [
+        {
+          "main": 0,
+          "kids": [
+            0,
+            1
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            2,
+            2
+          ]
+        },
+        {
+          "main": 1
+        },
+        {
+          "main": 2
+        }
+      ]
+    },
+    "T-COLLECTION-INDEX": {
+      "route": "/employee-recognition-messages",
+      "units": [
+        {
+          "main": 0,
+          "kids": [
+            0,
+            0
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            1,
+            1
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            2,
+            2
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            3,
+            3
+          ]
+        },
+        {
+          "main": 1
+        },
+        {
+          "main": 2
+        }
+      ]
+    },
+    "T-COMPARISON": {
+      "route": "/alternatives/awardco",
+      "units": [
+        {
+          "main": 0,
+          "kids": [
+            0,
+            0
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            1,
+            1
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            2,
+            2
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            3,
+            3
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            4,
+            4
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            5,
+            5
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            6,
+            6
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            7,
+            7
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            8,
+            8
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            9,
+            9
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            10,
+            10
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            11,
+            11
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            12,
+            12
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            13,
+            13
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            14,
+            14
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            15,
+            15
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            16,
+            16
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            17,
+            17
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            18,
+            18
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            19,
+            19
+          ]
+        },
+        {
+          "main": 1
+        },
+        {
+          "main": 2
+        }
+      ]
+    },
+    "T-CONTACT": {
+      "route": "/contact",
+      "units": [
+        {
+          "main": 0,
+          "kids": [
+            0,
+            0
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            1,
+            2
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            3,
+            3
+          ]
+        },
+        {
+          "main": 1
+        },
+        {
+          "main": 2
+        }
+      ]
+    },
+    "T-DETAIL-FOR": {
+      "route": "/employee-recognition/for/remote-teams",
+      "units": [
+        {
+          "main": 0,
+          "kids": [
+            0,
+            0
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            1,
+            1
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            2,
+            2
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            3,
+            3
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            4,
+            4
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            5,
+            5
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            6,
+            6
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            7,
+            7
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            8,
+            8
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            9,
+            9
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            10,
+            10
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            11,
+            11
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            12,
+            12
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            13,
+            13
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            14,
+            14
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            15,
+            15
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            16,
+            16
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            17,
+            17
+          ]
+        },
+        {
+          "main": 1
+        },
+        {
+          "main": 2
+        }
+      ]
+    },
+    "T-DETAIL-GLOSSARY": {
+      "route": "/employee-recognition/glossary/top-down-recognition",
+      "units": [
+        {
+          "main": 0,
+          "kids": [
+            0,
+            0
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            1,
+            1
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            2,
+            2
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            3,
+            3
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            4,
+            4
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            5,
+            5
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            6,
+            6
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            7,
+            7
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            8,
+            8
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            9,
+            9
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            10,
+            10
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            11,
+            11
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            12,
+            12
+          ]
+        },
+        {
+          "main": 1
+        },
+        {
+          "main": 2
+        }
+      ]
+    },
+    "T-DETAIL-MESSAGES": {
+      "route": "/employee-recognition-messages/work-anniversary",
+      "units": [
+        {
+          "main": 0,
+          "kids": [
+            0,
+            0
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            1,
+            1
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            2,
+            2
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            3,
+            3
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            4,
+            4
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            5,
+            5
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            6,
+            6
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            7,
+            7
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            8,
+            8
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            9,
+            9
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            10,
+            10
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            11,
+            11
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            12,
+            12
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            13,
+            13
+          ]
+        },
+        {
+          "main": 1
+        },
+        {
+          "main": 2
+        }
+      ]
+    },
+    "T-DETAIL-VALUES": {
+      "route": "/company-values/integrity",
+      "units": [
+        {
+          "main": 0,
+          "kids": [
+            0,
+            0
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            1,
+            1
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            2,
+            2
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            3,
+            3
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            4,
+            4
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            5,
+            5
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            6,
+            6
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            7,
+            7
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            8,
+            8
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            9,
+            9
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            10,
+            10
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            11,
+            11
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            12,
+            12
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            13,
+            13
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            14,
+            14
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            15,
+            15
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            16,
+            16
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            17,
+            17
+          ]
+        },
+        {
+          "main": 1
+        },
+        {
+          "main": 2
+        }
+      ]
+    },
+    "T-EBOOK": {
+      "route": "/ebook/practical-guide-to-employee-recognition",
+      "units": [
+        {
+          "main": 0,
+          "kids": [
+            0,
+            1
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            2,
+            2
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            3,
+            3
+          ]
+        },
+        {
+          "main": 1
+        },
+        {
+          "main": 2
+        }
+      ]
+    },
+    "T-ESG": {
+      "route": "/esg",
+      "units": [
+        {
+          "main": 0
+        },
+        {
+          "main": 1
+        },
+        {
+          "main": 2
+        },
+        {
+          "main": 3
+        },
+        {
+          "main": 4
+        },
+        {
+          "main": 5
+        },
+        {
+          "main": 6
+        },
+        {
+          "main": 7
+        },
+        {
+          "main": 8
+        }
+      ]
+    },
+    "T-HOME": {
+      "route": "/",
+      "units": [
+        {
+          "main": 0,
+          "part": "hero"
+        },
+        {
+          "main": 0,
+          "part": "proof"
+        },
+        {
+          "main": 1
+        },
+        {
+          "main": 2
+        },
+        {
+          "main": 3
+        },
+        {
+          "main": 4
+        },
+        {
+          "main": 5
+        }
+      ]
+    },
+    "T-LEGAL": {
+      "route": "/privacy-policy",
+      "units": [
+        {
+          "main": 0,
+          "kids": [
+            0,
+            0
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            1,
+            1
+          ],
+          "chapters": true
+        }
+      ]
+    },
+    "T-PARTNER": {
+      "route": "/partners/the-people-people-group",
+      "units": [
+        {
+          "main": 0,
+          "part": "hero"
+        },
+        {
+          "main": 0,
+          "part": "proof"
+        },
+        {
+          "main": 1
+        },
+        {
+          "main": 2
+        },
+        {
+          "main": 3
+        },
+        {
+          "main": 4
+        },
+        {
+          "main": 5
+        },
+        {
+          "main": 6
+        }
+      ]
+    },
+    "T-PILLAR": {
+      "route": "/employee-recognition",
+      "units": [
+        {
+          "main": 0,
+          "kids": [
+            0,
+            0
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            1,
+            1
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            2,
+            2
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            3,
+            3
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            4,
+            4
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            5,
+            5
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            6,
+            6
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            7,
+            7
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            8,
+            8
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            9,
+            9
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            10,
+            10
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            11,
+            11
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            12,
+            12
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            13,
+            13
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            14,
+            14
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            15,
+            15
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            16,
+            16
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            17,
+            17
+          ]
+        },
+        {
+          "main": 1
+        },
+        {
+          "main": 2
+        }
+      ]
+    },
+    "T-PRICING": {
+      "route": "/pricing",
+      "units": [
+        {
+          "main": 0
+        },
+        {
+          "main": 1
+        },
+        {
+          "main": 2
+        }
+      ]
+    },
+    "T-PURPOSE": {
+      "route": "/our-purpose",
+      "units": [
+        {
+          "main": 0
+        },
+        {
+          "main": 1
+        },
+        {
+          "main": 2
+        },
+        {
+          "main": 3
+        },
+        {
+          "main": 4
+        },
+        {
+          "main": 5
+        }
+      ]
+    },
+    "T-REFERRAL": {
+      "route": "/referral",
+      "units": [
+        {
+          "main": 0,
+          "kids": [
+            0,
+            0
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            1,
+            3
+          ]
+        },
+        {
+          "main": 1
+        },
+        {
+          "main": 2
+        },
+        {
+          "main": 3
+        }
+      ]
+    },
+    "T-SCHEDULER": {
+      "route": "/schedule-a-demo",
+      "units": [
+        {
+          "main": 0,
+          "kids": [
+            0,
+            0
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            1,
+            2
+          ]
+        },
+        {
+          "main": 0,
+          "kids": [
+            3,
+            3
+          ]
+        },
+        {
+          "main": 1
+        },
+        {
+          "main": 2
+        }
+      ]
+    },
+    "T-STORY": {
+      "route": "/customer-success-stories/nitro-games",
+      "units": [
+        {
+          "main": 0
+        },
+        {
+          "main": 1
+        },
+        {
+          "main": 2
+        },
+        {
+          "main": 3
+        },
+        {
+          "main": 4
+        },
+        {
+          "main": 5
+        }
+      ]
+    }
+  }
+}

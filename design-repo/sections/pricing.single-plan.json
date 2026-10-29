@@ -84,5 +84,23 @@
   "complianceNote": "$3.99 per active user per month is a real published price. Never alter it.",
   "measuredFrom": "src/pages/Pricing.jsx:102-169",
   "implementedBy": "src/pages/Pricing.jsx",
-  "motionClosureScope": "CLOSED for PageSpec emission: a generated node's `motion` object may contain ONLY the fields in motionFieldSet, enforced by schema/pagespec.schema.json (additionalProperties:false) and the MOTION_OBJECT_IS_CLOSED rule. The keys in motionDocumentationFields below are contract-level documentation carried by THIS file for human and retrieval use; they are NOT settable on a PageSpec node."
+  "motionClosureScope": "CLOSED for PageSpec emission: a generated node's `motion` object may contain ONLY the fields in motionFieldSet, enforced by schema/pagespec.schema.json (additionalProperties:false) and the MOTION_OBJECT_IS_CLOSED rule. The keys in motionDocumentationFields below are contract-level documentation carried by THIS file for human and retrieval use; they are NOT settable on a PageSpec node.",
+  "source": {
+    "id": "src:Pricing:section@103",
+    "tag": "section",
+    "file": "src/pages/Pricing.jsx",
+    "lines": "103-169"
+  },
+  "semantic": {
+    "id": "pricing.single-plan",
+    "category": "PRICING"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": [
+    "generated.icon",
+    "generated.illustration",
+    "operator.supplied-asset",
+    "placeholder.company-logo",
+    "placeholder.screenshot"
+  ]
 }

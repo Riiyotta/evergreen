@@ -33,7 +33,7 @@
     "additionalProperties": false
   },
   "maxWordsBasis": "word-counted from the real GOALS_2027 array",
-  "geometry": "section y 520.34 h 484.81; NO section padding \u2014 the heading div owns pt-[11.5322em] (123.01px); 3-up row mt-[8em] justify-around with w-[30%] columns",
+  "geometry": "section y 520.34 h 484.81; NO section padding — the heading div owns pt-[11.5322em] (123.01px); 3-up row mt-[8em] justify-around with w-[30%] columns",
   "constraints": {
     "onePerPage": true,
     "allowedTemplates": [
@@ -53,12 +53,27 @@
     "max-wf-phone": "columns stack and centre"
   },
   "assetRole": "brand.icon",
-  "surfaceNote": "The ONLY full-bleed bg-leaf (#beedc0) section anywhere in the clone. `bg-leaf` is on BOTH the <section> and the inner heading <div> \u2014 keep both: the inner fill is what paints the heading band where the wrapper's -mt-[3em] overlaps the hero above.",
+  "surfaceNote": "The ONLY full-bleed bg-leaf (#beedc0) section anywhere in the clone. `bg-leaf` is on BOTH the <section> and the inner heading <div> — keep both: the inner fill is what paints the heading band where the wrapper's -mt-[3em] overlaps the hero above.",
   "complianceNote": "These are real, dated public commitments by a real company. Never alter a figure.",
   "measuredFrom": "src/pages/OurPurpose.jsx:114-145",
   "implementedBy": "src/pages/OurPurpose.jsx",
   "motionClosureScope": "CLOSED for PageSpec emission: a generated node's `motion` object may contain ONLY the fields in motionFieldSet, enforced by schema/pagespec.schema.json (additionalProperties:false) and the MOTION_OBJECT_IS_CLOSED rule. The keys in motionDocumentationFields below are contract-level documentation carried by THIS file for human and retrieval use; they are NOT settable on a PageSpec node.",
   "motionDocumentationFields": [
     "note"
+  ],
+  "source": {
+    "id": "src:OurPurpose:section@118",
+    "tag": "section",
+    "file": "src/pages/OurPurpose.jsx",
+    "lines": "118-145"
+  },
+  "semantic": {
+    "id": "proof.goals-band",
+    "category": "PROOF"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": [
+    "generated.icon",
+    "operator.supplied-asset"
   ]
 }

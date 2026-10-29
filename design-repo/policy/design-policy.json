@@ -1,0 +1,73 @@
+{
+  "policyId": "n0-saas-design-constraints-common",
+  "policyVersion": "0.1.0",
+  "commonIrVersion": "0.5",
+  "title": "Binding record: Evergreen clone design-repo -> N0 common SaaS design constraints",
+  "binding": "bound",
+  "classification": {
+    "productCategory": "saas",
+    "productDomain": "employee-recognition-and-engagement",
+    "marketModel": "B2B SaaS, per-active-user subscription with a free trial",
+    "isSaaS": true,
+    "surfaces": [
+      "marketing-site"
+    ],
+    "audiences": [
+      "people-and-culture-leads",
+      "team-managers",
+      "company-leadership"
+    ]
+  },
+  "classificationEvidence": [
+    {
+      "claim": "per-seat subscription pricing",
+      "evidence": "src/components/PriceCard.jsx:33 ('per active user per month'); src/components/CtaSection.jsx:108 ('$3.99 per active user a month')"
+    },
+    {
+      "claim": "free trial of a software product",
+      "evidence": "src/components/CtaSection.jsx:108 ('14 day free trial')"
+    },
+    {
+      "claim": "B2B sales motion: pricing, demo booking and competitor comparison pages",
+      "evidence": "src/App.jsx:35 (/pricing), src/App.jsx:40 (/schedule-a-demo), src/App.jsx:48 (/alternatives)"
+    },
+    {
+      "claim": "product is software used inside workplace chat tools",
+      "evidence": "src/components/Hero.jsx:157 ('peer-to-peer recognition software'); src/components/Hero.jsx:243 and :259 ('add to Slack' / 'add to Teams')"
+    },
+    {
+      "claim": "logged-in application behind the marketing site",
+      "evidence": "src/components/Nav.jsx:20 ('Login' nav item)"
+    },
+    {
+      "claim": "B2B audience",
+      "evidence": "src/components/Hero.jsx:76 (testimonial from a 'Head Of People & Culture')"
+    }
+  ],
+  "classificationDecision": "SaaS: a B2B employee-recognition product sold per active user with a trial, demo booking, integrations and a login. It is not a consumer app or a marketplace, so the common SaaS policy applies.",
+  "notBoundTo": {},
+  "generationRules": [
+    "PageSpecs declare mode: clone | generation. Generation mode must contain no real Evergreen brand, logo, icons / brand artwork, product screenshots, badges / certifications, proprietary assets, copy, claims, URLs, people or customers (GENERATION_MODE_* rules).",
+    "Pages are composed only from the 22 templates and 47 section contracts; pricing, demo and comparison pages follow their measured templates.",
+    "Only generation-safe asset roles in generation mode (placeholder assets, generated illustrations / icons, operator-supplied assets); availability is pinned in code.",
+    "Token references use tokens/llm/token-catalog.json names only; no raw colours, arbitrary spacing or unsupported fonts.",
+    "Runtime UI (trial modal, announcement banner) is never retrieved as a section."
+  ],
+  "enforcementMode": "hard-and-soft",
+  "enforcedBy": [
+    "schema/pagespec.schema.json",
+    "schema/semantic_validate.py",
+    "schema/section-contract.schema.json",
+    "assets/asset-roles.json",
+    "compatibility/graph.json",
+    "extraction/generation-patterns.json",
+    "tokens/llm/token-catalog.json",
+    "tokens/llm/token-policy.json"
+  ],
+  "contentHashNote": "registry.manifest.json designPolicy.contentHash is sha256 over the enforcedBy files in the order listed (each as '<path>\\n' + bytes + '\\n'). extraction/verify_all.py recomputes it and fails on a mismatch; extraction/policy_hash.py --write updates it after an intended change.",
+  "approval": {
+    "policyDecision": "defined-pending-architecture-review",
+    "architectureDecisionRecorded": false,
+    "note": "The SaaS classification and binding are an agent's evidence-based decision; no human architecture owner has ratified it. The common policy's own content is not vendored here."
+  }
+}

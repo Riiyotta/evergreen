@@ -42,7 +42,7 @@
     "additionalProperties": false
   },
   "maxWordsBasis": "word-counted from the real strings in src/pages/Esg.jsx",
-  "geometry": "section y 44.61 h 1254.55 @1280; ONE flex column, not the usual block series; wrapper carries NO py \u2014 the column's pt-[10.2em] is the only top padding",
+  "geometry": "section y 44.61 h 1254.55 @1280; ONE flex column, not the usual block series; wrapper carries NO py — the column's pt-[10.2em] is the only top padding",
   "constraints": {
     "onePerPage": true,
     "mustBeFirst": true,
@@ -63,17 +63,33 @@
     "max-wf-tablet": "two-column rows stack; the 108em hero frame narrows to 80em",
     "max-wf-phone": "flex rows become flex-col and centre; the hero frame becomes w-full",
     "max-wf-mini": "block margins drop from 4.2em to 3.5em; display headings drop a step; hero top padding rises to 11.8em",
-    "note": "The hero photo is `w-[800px] max-w-full mt-[40px]` \u2014 LITERAL PX. It is the only fixed-px sized element on this page and does NOT scale with the em engine. Do not normalise it to em."
+    "note": "The hero photo is `w-[800px] max-w-full mt-[40px]` — LITERAL PX. It is the only fixed-px sized element on this page and does NOT scale with the em engine. Do not normalise it to em."
   },
   "assetRoles": [
     "brand.icon",
     "editorial.stock-photo"
   ],
-  "wrapWarning": "TIGHTEST WRAP ON THE WHOLE SITE: the h1 is 2 lines with a longest line of 1114.6 of 1152px \u2014 3.2% headroom. A third line would shift every downstream y by ~97px.",
+  "wrapWarning": "TIGHTEST WRAP ON THE WHOLE SITE: the h1 is 2 lines with a longest line of 1114.6 of 1152px — 3.2% headroom. A third line would shift every downstream y by ~97px.",
   "measuredFrom": "src/pages/Esg.jsx:69-124",
   "implementedBy": "src/pages/Esg.jsx",
   "motionClosureScope": "CLOSED for PageSpec emission: a generated node's `motion` object may contain ONLY the fields in motionFieldSet, enforced by schema/pagespec.schema.json (additionalProperties:false) and the MOTION_OBJECT_IS_CLOSED rule. The keys in motionDocumentationFields below are contract-level documentation carried by THIS file for human and retrieval use; they are NOT settable on a PageSpec node.",
   "motionDocumentationFields": [
     "note"
+  ],
+  "source": {
+    "id": "src:Esg:section@73",
+    "tag": "section",
+    "file": "src/pages/Esg.jsx",
+    "lines": "73-124"
+  },
+  "semantic": {
+    "id": "hero.esg-environmental",
+    "category": "HERO"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": [
+    "generated.icon",
+    "generated.illustration",
+    "operator.supplied-asset"
   ]
 }

@@ -1,0 +1,29 @@
+{
+  "$id": "extraction.wrapper-gate-whitelist",
+  "version": "2.0.0",
+  "description": "Reviewed exceptions to the R9 wrapper gate (extraction/wrapper_gate.py). Every entry is an AGENT attestation made during the 2.0.0 revision from the 1440px measurements in extraction/measured-values.json; none has been reviewed by a human.",
+  "entries": [
+    {
+      "template": "T-ARTICLE",
+      "section": "content.rich-text",
+      "chapter": 1,
+      "rule": "SECTION_SHARE",
+      "route": "/blog/35-creative-ideas-on-how-to-recognize-employees",
+      "measuredHeightPx": 10343.1,
+      "maxHeightPx": 11000,
+      "justification": "The article body is already decomposed into one node per heading-bounded chapter, but this post's rendered body has a single H2 followed by one run of paragraphs (the clone's prose is placeholder sized to the measured block height), so there is no further real heading boundary to split on. Genuinely one prose chapter.",
+      "reviewedBy": "Claude (design-repo revision agent) — agent attestation, not a human sign-off"
+    },
+    {
+      "template": "T-COLLECTION-INDEX",
+      "section": "listing.link-card-grid",
+      "chapter": null,
+      "rule": "SECTION_SHARE",
+      "route": "/employee-recognition-messages",
+      "measuredHeightPx": 7988.9,
+      "maxHeightPx": 8500,
+      "justification": "A collection index is already decomposed as index header + card grid (R6). The grid holds one link card per collection item (35 message pages on this route); splitting it would invent boundaries the page does not have.",
+      "reviewedBy": "Claude (design-repo revision agent) — agent attestation, not a human sign-off"
+    }
+  ]
+}

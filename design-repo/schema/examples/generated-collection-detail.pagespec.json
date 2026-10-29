@@ -1,0 +1,382 @@
+{
+  "pageSpecVersion": "2.0.0",
+  "mode": "generation",
+  "theme": "light",
+  "route": "/glossary/peer-thanks",
+  "template": "T-DETAIL-GLOSSARY",
+  "title": "Peer thanks (example glossary entry)",
+  "evidenceLevel": "measured-sampled",
+  "nodes": [
+    {
+      "section": "chrome.nav",
+      "required": true,
+      "repeatable": false,
+      "content": {
+        "desktopLinks": [
+          "Home",
+          "Product",
+          "Pricing",
+          "Stories",
+          "Guides",
+          "Sign in"
+        ],
+        "overlayLinks": [
+          "Home",
+          "Product",
+          "Pricing",
+          "Stories",
+          "Guides",
+          "Book a call",
+          "Sign in"
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "delayMs": 0,
+        "staggerMs": 0,
+        "reducedMotionFallback": "none-required-static",
+        "implementationStatus": "static-by-design"
+      },
+      "assetRefs": [
+        {
+          "assetRole": "placeholder.brand-mark",
+          "src": "https://assets.fernway.example/fernway-mark.svg",
+          "alt": "Fernway"
+        }
+      ]
+    },
+    {
+      "section": "hero.page-head",
+      "required": true,
+      "repeatable": false,
+      "variant": "badge+h1+lede",
+      "content": {
+        "badgeLabel": "Glossary",
+        "h1": "Peer thanks",
+        "lede": "Thanks sent between colleagues rather than from a manager."
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "delayMs": 0,
+        "staggerMs": 0,
+        "reducedMotionFallback": "none-required-static",
+        "implementationStatus": "static-by-design"
+      }
+    },
+    {
+      "section": "content.prose-left",
+      "required": true,
+      "repeatable": false,
+      "variant": "intro",
+      "content": {
+        "paragraph": "Peer thanks is the habit of colleagues noticing each other's work directly, without waiting for a review cycle."
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "delayMs": 0,
+        "staggerMs": 0,
+        "reducedMotionFallback": "none-required-static",
+        "implementationStatus": "static-by-design"
+      }
+    },
+    {
+      "section": "content.rich-text",
+      "required": true,
+      "repeatable": false,
+      "variant": "grouped",
+      "content": {
+        "shape": "grouped",
+        "groupedSections": [
+          {
+            "heading": "How it shows up",
+            "paragraphs": [
+              "Short public notes, tagged with a value, visible to the team."
+            ]
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "delayMs": 0,
+        "staggerMs": 0,
+        "reducedMotionFallback": "none-required-static",
+        "implementationStatus": "static-by-design"
+      }
+    },
+    {
+      "section": "content.section-heading",
+      "required": true,
+      "repeatable": true,
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "delayMs": 0,
+        "staggerMs": 0,
+        "reducedMotionFallback": "none-required-static",
+        "implementationStatus": "static-by-design"
+      }
+    },
+    {
+      "section": "content.leaf-bullets",
+      "required": true,
+      "repeatable": true,
+      "variant": "examples",
+      "content": {
+        "items": [
+          "Thanks for covering the release on Friday.",
+          "Your notes made the handover painless."
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "delayMs": 0,
+        "staggerMs": 0,
+        "reducedMotionFallback": "none-required-static",
+        "implementationStatus": "static-by-design"
+      }
+    },
+    {
+      "section": "content.section-heading",
+      "required": true,
+      "repeatable": true,
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "delayMs": 0,
+        "staggerMs": 0,
+        "reducedMotionFallback": "none-required-static",
+        "implementationStatus": "static-by-design"
+      }
+    },
+    {
+      "section": "content.faq",
+      "required": true,
+      "repeatable": false,
+      "content": {
+        "rows": [
+          {
+            "question": "Should managers join in?",
+            "answer": "Yes, but the habit works best when most notes come from peers."
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "delayMs": 0,
+        "staggerMs": 0,
+        "reducedMotionFallback": "none-required-static",
+        "implementationStatus": "static-by-design"
+      }
+    },
+    {
+      "section": "content.section-heading",
+      "required": true,
+      "repeatable": true,
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "delayMs": 0,
+        "staggerMs": 0,
+        "reducedMotionFallback": "none-required-static",
+        "implementationStatus": "static-by-design"
+      }
+    },
+    {
+      "section": "listing.link-card-grid",
+      "required": true,
+      "repeatable": true,
+      "variant": "h3-related",
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "delayMs": 0,
+        "staggerMs": 0,
+        "reducedMotionFallback": "none-required-static",
+        "implementationStatus": "static-by-design"
+      }
+    },
+    {
+      "section": "content.section-heading",
+      "required": true,
+      "repeatable": true,
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "delayMs": 0,
+        "staggerMs": 0,
+        "reducedMotionFallback": "none-required-static",
+        "implementationStatus": "static-by-design"
+      }
+    },
+    {
+      "section": "listing.link-card-grid",
+      "required": true,
+      "repeatable": true,
+      "variant": "h3-related",
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "delayMs": 0,
+        "staggerMs": 0,
+        "reducedMotionFallback": "none-required-static",
+        "implementationStatus": "static-by-design"
+      }
+    },
+    {
+      "section": "content.section-heading",
+      "required": true,
+      "repeatable": true,
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "delayMs": 0,
+        "staggerMs": 0,
+        "reducedMotionFallback": "none-required-static",
+        "implementationStatus": "static-by-design"
+      }
+    },
+    {
+      "section": "listing.link-card-grid",
+      "required": true,
+      "repeatable": true,
+      "variant": "h3-related",
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "delayMs": 0,
+        "staggerMs": 0,
+        "reducedMotionFallback": "none-required-static",
+        "implementationStatus": "static-by-design"
+      }
+    },
+    {
+      "section": "divider.leaf-band",
+      "required": true,
+      "repeatable": false,
+      "variant": "bg-cream",
+      "motion": {
+        "pattern": "leaf-drift",
+        "trigger": "whileInView",
+        "durationMs": 1500,
+        "easing": "cubic-bezier(0.455, 0.03, 0.515, 0.955)",
+        "delayMs": 0,
+        "staggerMs": 0,
+        "leafSet": "DIVIDER_LEAVES",
+        "leafCount": 12,
+        "reducedMotionFallback": "leaves-held-at-rotate-only-transform",
+        "implementationStatus": "specified-not-yet-animated"
+      },
+      "assetRefs": [
+        {
+          "assetRole": "generated.illustration",
+          "src": "https://assets.fernway.example/divider-waves.svg",
+          "alt": ""
+        }
+      ]
+    },
+    {
+      "section": "conversion.reassurance-cta",
+      "required": true,
+      "repeatable": false,
+      "content": {
+        "columns": [
+          "Pay per seat that is actually used",
+          "Cancel from the settings page",
+          "Support from a real team"
+        ],
+        "heading": "Make thanks a habit",
+        "paragraph": "Fernway puts appreciation where your team already talks, and sends a small monthly summary to every manager.",
+        "smallPrint": "Free for the first month."
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "delayMs": 0,
+        "staggerMs": 0,
+        "reducedMotionFallback": "none-required-static",
+        "implementationStatus": "static-by-design"
+      },
+      "assetRefs": [
+        {
+          "assetRole": "generated.icon",
+          "src": "https://assets.fernway.example/icons/seat.svg",
+          "alt": "Seat icon"
+        }
+      ],
+      "style": {
+        "surface": "surface.alt",
+        "text": "text.primary"
+      }
+    },
+    {
+      "section": "chrome.footer",
+      "required": true,
+      "repeatable": false,
+      "content": {
+        "columns": [
+          [
+            "Product",
+            "Pricing",
+            "Stories"
+          ],
+          [
+            "Guides",
+            "Glossary",
+            "Help centre"
+          ],
+          [
+            "Privacy",
+            "Terms",
+            "Contact"
+          ]
+        ],
+        "socials": [
+          "Newsletter"
+        ],
+        "legalLine": "© Fernway Labs (fictional company) — example only"
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "delayMs": 0,
+        "staggerMs": 0,
+        "reducedMotionFallback": "none-required-static",
+        "implementationStatus": "static-by-design"
+      },
+      "assetRefs": [
+        {
+          "assetRole": "placeholder.brand-mark",
+          "src": "https://assets.fernway.example/fernway-mark.svg",
+          "alt": "Fernway"
+        }
+      ]
+    },
+    {
+      "section": "chrome.trial-modal",
+      "required": true,
+      "repeatable": false,
+      "content": {
+        "platforms": [
+          "Chat app A",
+          "Chat app B"
+        ]
+      },
+      "motion": {
+        "pattern": "overlay-slide",
+        "trigger": "userToggle",
+        "durationMs": 1000,
+        "easing": "cubic-bezier(0.455, 0.03, 0.515, 0.955)",
+        "delayMs": 0,
+        "staggerMs": 0,
+        "reducedMotionFallback": "duration collapses to 0.01ms; the panel hides at 0vh",
+        "implementationStatus": "css-keyframe-fallback-implemented"
+      }
+    }
+  ]
+}

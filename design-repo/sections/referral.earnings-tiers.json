@@ -32,7 +32,7 @@
     },
     "additionalProperties": false
   },
-  "geometry": "section y 1691 h 526.03 @1280; padding is `0 64px 53.3333px` \u2014 pb-[5em] ONLY, NO top padding; heading frame w-[70.3em] with mt-[7.4em]",
+  "geometry": "section y 1691 h 526.03 @1280; padding is `0 64px 53.3333px` — pb-[5em] ONLY, NO top padding; heading frame w-[70.3em] with mt-[7.4em]",
   "constraints": {
     "onePerPage": true,
     "allowedTemplates": [
@@ -50,10 +50,10 @@
     "note": "Nothing in this section animates."
   },
   "responsive": {
-    "max-wf-phone": "a 2-column CSS grid (grid-cols-2, gap-x-0, gap-y-[3em], items-start) with w-[16em] columns \u2014 a NEW responsive mode not used by the homepage stat row"
+    "max-wf-phone": "a 2-column CSS grid (grid-cols-2, gap-x-0, gap-y-[3em], items-start) with w-[16em] columns — a NEW responsive mode not used by the homepage stat row"
   },
   "wrapWarning": "FRAGILE WRAP: this h2 sits at exactly 2 line boxes (142.06px) inside a 749.86px frame with no slack, under the substituted serif.",
-  "headingBreakCorrection": "CLONE_SPEC_CORE_B \u00a7R-3 states the heading breaks after '\u2026amount of users'. The real render AND the reference capture both break after 'on the'. The spec is wrong.",
+  "headingBreakCorrection": "CLONE_SPEC_CORE_B §R-3 states the heading breaks after '…amount of users'. The real render AND the reference capture both break after 'on the'. The spec is wrong.",
   "measuredFrom": "src/pages/Referral.jsx:72-92",
   "implementedBy": [
     "src/pages/Referral.jsx",
@@ -62,5 +62,17 @@
   "motionClosureScope": "CLOSED for PageSpec emission: a generated node's `motion` object may contain ONLY the fields in motionFieldSet, enforced by schema/pagespec.schema.json (additionalProperties:false) and the MOTION_OBJECT_IS_CLOSED rule. The keys in motionDocumentationFields below are contract-level documentation carried by THIS file for human and retrieval use; they are NOT settable on a PageSpec node.",
   "motionDocumentationFields": [
     "note"
-  ]
+  ],
+  "source": {
+    "id": "src:Referral:section@74",
+    "tag": "section",
+    "file": "src/pages/Referral.jsx",
+    "lines": "74-92"
+  },
+  "semantic": {
+    "id": "referral.earnings-tiers",
+    "category": "PRICING"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": []
 }

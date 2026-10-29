@@ -68,10 +68,27 @@
     "product.badge",
     "brand.leaf-art"
   ],
-  "quirk": "Row 2 appends `static z-[1]` \u2014 the original overrides the row's own positioning context there because that row carries no leaves. Keep it.",
+  "quirk": "Row 2 appends `static z-[1]` — the original overrides the row's own positioning context there because that row carries no leaves. Keep it.",
   "wrapNote": "The row-1 h2 is the heading the serif substitution was validated against: 284.1px / 4 lines before `size-adjust: 92.44%`, 213.1px / 3 lines after (target 213.09).",
   "measuredFrom": "src/components/ReportCsrSection.jsx:40-127",
   "implementedBy": "src/components/ReportCsrSection.jsx",
-  "reuseNote": "NOT reused by T-PARTNER \u2014 see sections/feature.seeds#reuseNote.",
-  "motionClosureScope": "CLOSED for PageSpec emission: a generated node's `motion` object may contain ONLY the fields in motionFieldSet, enforced by schema/pagespec.schema.json (additionalProperties:false) and the MOTION_OBJECT_IS_CLOSED rule. The keys in motionDocumentationFields below are contract-level documentation carried by THIS file for human and retrieval use; they are NOT settable on a PageSpec node."
+  "reuseNote": "NOT reused by T-PARTNER — see sections/feature.seeds#reuseNote.",
+  "motionClosureScope": "CLOSED for PageSpec emission: a generated node's `motion` object may contain ONLY the fields in motionFieldSet, enforced by schema/pagespec.schema.json (additionalProperties:false) and the MOTION_OBJECT_IS_CLOSED rule. The keys in motionDocumentationFields below are contract-level documentation carried by THIS file for human and retrieval use; they are NOT settable on a PageSpec node.",
+  "source": {
+    "id": "src:ReportCsrSection:div@44",
+    "tag": "div",
+    "file": "src/components/ReportCsrSection.jsx",
+    "lines": "44-127"
+  },
+  "semantic": {
+    "id": "feature.report-csr",
+    "category": "FEATURES"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": [
+    "generated.illustration",
+    "operator.supplied-asset",
+    "placeholder.badge",
+    "placeholder.screenshot"
+  ]
 }

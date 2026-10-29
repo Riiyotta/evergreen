@@ -1,5 +1,6 @@
 {
-  "pageSpecVersion": "1.0.0",
+  "pageSpecVersion": "2.0.0",
+  "mode": "clone",
   "route": "/blog/recognition-that-travels-with-the-work",
   "template": "T-ARTICLE",
   "title": "Recognition that travels with the work",
@@ -291,7 +292,7 @@
           "X",
           "Email"
         ],
-        "legalLine": "Terms of Service \u00b7 Privacy Policy"
+        "legalLine": "Terms of Service · Privacy Policy"
       },
       "motion": {
         "pattern": "none",

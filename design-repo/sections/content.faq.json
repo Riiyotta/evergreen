@@ -36,7 +36,7 @@
     },
     "additionalProperties": false
   },
-  "rowCountCorrection": "On T-COMPARISON this is FOUR rows, not the three CLONE_SPEC_CONTENT_A \u00a75.6/\u00a79.3 records. Only four reconcile the measured 843.91px <dl>, and _reference/screenshots/alt-1280-faq-sources.png shows four questions.",
+  "rowCountCorrection": "On T-COMPARISON this is FOUR rows, not the three CLONE_SPEC_CONTENT_A §5.6/§9.3 records. Only four reconcile the measured 843.91px <dl>, and _reference/screenshots/alt-1280-faq-sources.png shows four questions.",
   "constraints": {
     "onePerPage": true
   },
@@ -64,5 +64,17 @@
   "motionClosureScope": "CLOSED for PageSpec emission: a generated node's `motion` object may contain ONLY the fields in motionFieldSet, enforced by schema/pagespec.schema.json (additionalProperties:false) and the MOTION_OBJECT_IS_CLOSED rule. The keys in motionDocumentationFields below are contract-level documentation carried by THIS file for human and retrieval use; they are NOT settable on a PageSpec node.",
   "motionDocumentationFields": [
     "note"
-  ]
+  ],
+  "source": {
+    "id": "src:FaqDl:dl@7",
+    "tag": "dl",
+    "file": "src/components/blocks/FaqDl.jsx",
+    "lines": "7-26"
+  },
+  "semantic": {
+    "id": "content.faq",
+    "category": "CONTENT"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": []
 }

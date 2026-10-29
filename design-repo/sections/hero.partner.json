@@ -19,10 +19,6 @@
   "purpose": "The homepage hero reconfigured for a named partner, with a booking card instead of a screenshot.",
   "composes": [
     "components/card.calendly",
-    "components/row.stat-pills",
-    "components/card.testimonial",
-    "components/row.logo-strip",
-    "components/block.g2-rating",
     "components/row.platform-links"
   ],
   "content": {
@@ -41,21 +37,13 @@
     "usersHeading": {
       "maxWords": 5,
       "copyPolicy": "verbatim-locked",
-      "value": "8000+ users \u2022 100,000+ recognitions"
-    },
-    "displayHeading": {
-      "maxWords": 14,
-      "copyPolicy": "verbatim-locked"
-    },
-    "eyebrow": {
-      "maxWords": 16,
-      "copyPolicy": "verbatim-locked"
+      "value": "8000+ users • 100,000+ recognitions"
     },
     "additionalProperties": false
   },
   "maxWordsBasis": "recomputed over the three real PARTNERS entries plus the shared homepage strings",
-  "blockCount": 12,
-  "geometry": "section y 44.61 h 3424.19 @1280",
+  "blockCount": 6,
+  "geometry": "partner hero blocks 1-6 only (partner logo, h1 + avatar pills, lede + offer, scheduler card, users line, platform row); measured height at 1440px is in extraction/measured-values.json sectionHeights T-PARTNER.",
   "constraints": {
     "onePerPage": true,
     "mustBeFirst": true,
@@ -67,7 +55,7 @@
     "a partner logo block ABOVE the h1",
     "components/card.calendly where the hero product screenshot is",
     "one offer sentence appended to the hero paragraph",
-    "the hero proof line reads `8000+ users \u2022 100,000+ recognitions` (the homepage says 300,000+)",
+    "the hero proof line reads `8000+ users • 100,000+ recognitions` (the homepage says 300,000+)",
     "the proof line is an h2 here, not the homepage's h3",
     "the platform row gains a THIRD item, Mattermost 'Coming soon', and uses gap-[4em] on the row instead of mx-[3.5em] on each link"
   ],
@@ -87,7 +75,7 @@
       "note": "The track element is the Calendly card wrapper."
     },
     "additionalStaticLeaves": "6 STATIC QUOTE_LEAVES per testimonial card",
-    "absent": "NO recognition-line and NO heart overlays on this template \u2014 the hero image they sit on is replaced by the booking card."
+    "absent": "NO recognition-line and NO heart overlays on this template — the hero image they sit on is replaced by the booking card."
   },
   "responsive": {
     "max-wf-tablet": "two-column rows stack; the 108em hero frame narrows to 80em",
@@ -98,7 +86,6 @@
   "assetRoles": [
     "third-party.trademark",
     "person.likeness",
-    "third-party.review-mark",
     "third-party.platform-logo",
     "brand.leaf-art"
   ],
@@ -109,5 +96,23 @@
     "absent",
     "additionalStaticLeaves",
     "composition"
+  ],
+  "decomposition": "2.0.0: the display h2, stat pills, eyebrow, testimonials, logo strip and G2 block moved to sections/proof.social-proof-stack.json. The combined wrapper measured 3788px at 1440px, above the 3000px HERO limit.",
+  "source": {
+    "id": "src:PartnerPage:div@179",
+    "tag": "div",
+    "file": "src/pages/PartnerPage.jsx",
+    "lines": "179-239"
+  },
+  "semantic": {
+    "id": "hero.partner",
+    "category": "HERO"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": [
+    "generated.illustration",
+    "operator.supplied-asset",
+    "placeholder.company-logo",
+    "placeholder.person-avatar"
   ]
 }

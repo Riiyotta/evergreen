@@ -60,5 +60,21 @@
   "motionDocumentationFields": [
     "closeDurationMs",
     "closeEasing"
+  ],
+  "source": {
+    "id": "src:TrialModal:SlideOverlay@10",
+    "tag": "SlideOverlay",
+    "file": "src/components/TrialModal.jsx",
+    "lines": "10-10"
+  },
+  "semantic": {
+    "id": "chrome.trial-modal",
+    "category": "SHELL"
+  },
+  "retrievalEligible": false,
+  "retrievalIneligibleReason": "A modal dialog (slide-over overlay) opened by every trial button and rendered by Layout outside the section flow; it is runtime UI, not page content, and must never be retrieved as a section.",
+  "generatedAssetRoles": [
+    "operator.supplied-asset",
+    "placeholder.company-logo"
   ]
 }

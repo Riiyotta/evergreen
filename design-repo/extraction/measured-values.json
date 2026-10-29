@@ -1,6 +1,6 @@
 {
   "$id": "extraction.measured-values",
-  "description": "The citation trail for this design-repo. Every token, section contract, template node sequence and motion config was measured from one of the sources below rather than inferred. These paths are relative to the PARENT project directory and deliberately do NOT appear in registry.manifest.json's entryPoints \u2014 a standalone copy of design-repo/ will not contain them, and extraction/verify_all.py downgrades citation checking to a warning in that case rather than failing.",
+  "description": "The citation trail for this design-repo. Every token, section contract, template node sequence and motion config was measured from one of the sources below rather than inferred. These paths are relative to the PARENT project directory and deliberately do NOT appear in registry.manifest.json's entryPoints — a standalone copy of design-repo/ will not contain them, and extraction/verify_all.py downgrades citation checking to a warning in that case rather than failing.",
   "gracefulDegradation": "verify_all.py checks for a sibling `src/` directory. Present: every \"path:line[-line]\" citation is resolved against the real file and an out-of-range span fails the run. Absent: the check warns and is skipped. The repo therefore verifies clean both next to its source and on its own.",
   "primarySources": {
     "appSource": {
@@ -45,7 +45,7 @@
     },
     {
       "claim": "ONE_HERO_PER_PAGE exempted T-PRICING, implying a multi-hero page.",
-      "reality": "T-PRICING has ZERO hero.* nodes \u2014 its opener is pricing.single-plan.",
+      "reality": "T-PRICING has ZERO hero.* nodes — its opener is pricing.single-plan.",
       "resolution": "exceptionBasis records that the exemption is for a hero-LESS template."
     },
     {
@@ -57,6 +57,26 @@
       "claim": "A naive repeatability check compared (section, variant) counts against 1.",
       "reality": "T-HOME, T-ESG and T-PARTNER each declare divider.leaf-band twice as two separate non-repeatable positional nodes.",
       "resolution": "The check now compares against the template's OWN declared count. As written it rejected 4 real templates while still catching a true duplicate."
+    },
+    {
+      "claim": "hero.home / hero.partner were each one HERO section.",
+      "reality": "Measured at 1440px from a fresh build, the opening wrapper is 3545px on / and 3788px on /partners/the-people-people-group — above the 3000px HERO limit; blocks 7-12 are a proof stack, not the page-opening composition.",
+      "resolution": "2.0.0: split into hero.home / hero.partner (blocks 0-6) and the new proof.social-proof-stack (blocks 7-12). Re-measured: hero.home 1626px, hero.partner 1869px (warn), proof stack 1919px."
+    },
+    {
+      "claim": "T-PILLAR's node list described the pillar page.",
+      "reality": "The real body interleaves 7 prose blocks with a stat row, 4 card groups, a vocabulary list, two headings, a FAQ and a reading list (src/data/pillar.js:144-323). The 1.0.0 list grouped each type once, and the node-order check compared against a de-duplicated list, so a faithful PageSpec was rejected.",
+      "resolution": "2.0.0: T-PILLAR lists the real 18-unit order; the order check now walks the positional template list and allows in-place repetition only at repeatable positions."
+    },
+    {
+      "claim": "Legal pages and article bodies were one content.rich-text node.",
+      "reality": "/privacy-policy's prose is 89% of its page (8326px of 9314px); /blog/35-creative-ideas-on-how-to-recognize-employees's body is 68%.",
+      "resolution": "2.0.0: content.rich-text is repeatable on T-LEGAL / T-ARTICLE, one node per heading-bounded chapter / legal part (20 parts measured on /privacy-policy). The 35-ideas post has one heading only; its single chapter is whitelisted with an agent attestation."
+    },
+    {
+      "claim": "Nav and footer carried no asset roles.",
+      "reality": "Nav.jsx renders the Evergreen logo; Footer.jsx renders the logo, social icons and a leaf.",
+      "resolution": "2.0.0: chrome.nav assetRoles [brand.logo]; chrome.footer [brand.logo, brand.icon, brand.leaf-art]."
     }
   ],
   "knownEvidenceGaps": [
@@ -65,7 +85,10 @@
     "Server-side form error strings were never observable (the originals post to server actions with no public endpoint) and are marked as stand-ins in the form contracts.",
     "The original's third-party scheduler iframe is cross-origin; its interior could not be measured. The clone ships a static placeholder matched to the measured box.",
     "The display serif is a substitution: the original uses a Typekit-bound face that cannot be self-hosted. The clone self-hosts Gloock at size-adjust 92.44%, chosen by measuring ~50 open serifs against the original's real text-advance widths. Section geometry is exact; cap-height runs ~2.7% short, and two headings sit under 2% wrap headroom.",
-    "Motion is SPECIFIED, NOT YET ANIMATED in the app. Every leaf renders in its correct pre-animation position with the right class name and the scroll-track hook is exposed, but nothing animates yet. The configs here are decoded from the original, not observed running in the clone."
+    "Motion is SPECIFIED, NOT YET ANIMATED in the app. Every leaf renders in its correct pre-animation position with the right class name and the scroll-track hook is exposed, but nothing animates yet. The configs here are decoded from the original, not observed running in the clone.",
+    "Section heights (sectionHeights) were measured at 1440px only, on ONE representative route per template (the tallest route rendering the full node set); other routes of multi-route templates were not measured.",
+    "Visual parity against the live evergreen.so was NOT measured in the 2.0.0 revision (no live capture); only the built clone was measured.",
+    "Generation-mode leakage detection is string-based (normalised substrings and hashed 5-word shingles); paraphrased or translated source copy is not detected, and the derived pattern lists have not been reviewed by a human."
   ],
   "citedExternalPaths": {
     "ASSET_MANIFEST.md": [
@@ -434,5 +457,1490 @@
       "tokens/00-foundation/motion.json",
       "tokens/00-foundation/radius.json"
     ]
+  },
+  "sectionHeights": {
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "measuredWith": "extraction/measure_sections.mjs (headless Chromium via Playwright) against `vite preview` of a fresh `vite build` of the clone; DOM mapping from extraction/section-dom-map.json",
+    "measuredOn": "2026-10-29",
+    "scope": "one representative route per template (the tallest served route that renders the full node set); heights in CSS px at a 1440px-wide viewport",
+    "templates": {
+      "T-ALTERNATIVES-INDEX": {
+        "route": "/alternatives",
+        "documentHeightPx": 6619,
+        "shell": {
+          "chrome.nav": 86.2,
+          "chrome.footer": 610.7
+        },
+        "nodes": [
+          {
+            "templateNodeIndex": 1,
+            "section": "hero.page-head",
+            "variant": "badge+h1+lede",
+            "heightPx": 540.3
+          },
+          {
+            "templateNodeIndex": 2,
+            "section": "listing.link-card-grid",
+            "variant": "h2-listing",
+            "heightPx": 3586.1
+          },
+          {
+            "templateNodeIndex": 3,
+            "section": "content.section-heading",
+            "heightPx": 130.3
+          },
+          {
+            "templateNodeIndex": 4,
+            "section": "listing.link-card-grid",
+            "variant": "h2-listing",
+            "heightPx": 458.3
+          },
+          {
+            "templateNodeIndex": 5,
+            "section": "divider.leaf-band",
+            "variant": "bg-cream",
+            "heightPx": 182
+          },
+          {
+            "templateNodeIndex": 6,
+            "section": "conversion.reassurance-cta",
+            "heightPx": 1168.6
+          }
+        ]
+      },
+      "T-ARTICLE": {
+        "route": "/blog/35-creative-ideas-on-how-to-recognize-employees",
+        "documentHeightPx": 15109,
+        "shell": {
+          "chrome.announcement-banner": 55.7,
+          "chrome.nav": 86.2,
+          "chrome.footer": 610.7
+        },
+        "nodes": [
+          {
+            "templateNodeIndex": 2,
+            "section": "hero.page-head",
+            "variant": "badge+h1+date",
+            "heightPx": 471.6
+          },
+          {
+            "templateNodeIndex": 3,
+            "section": "content.rich-text",
+            "variant": "grouped",
+            "chapter": 1,
+            "chapterHeading": "The list",
+            "heightPx": 10343.1
+          },
+          {
+            "templateNodeIndex": 4,
+            "section": "conversion.arketta-cross-promo",
+            "heightPx": 644.1
+          },
+          {
+            "templateNodeIndex": 5,
+            "section": "content.section-heading",
+            "variant": "guide-cluster",
+            "heightPx": 210.2
+          },
+          {
+            "templateNodeIndex": 6,
+            "section": "listing.link-card-grid",
+            "variant": "guide-cluster-h3",
+            "heightPx": 904.9
+          },
+          {
+            "templateNodeIndex": 7,
+            "section": "listing.more-articles",
+            "heightPx": 682
+          },
+          {
+            "templateNodeIndex": 8,
+            "section": "divider.leaf-band",
+            "variant": "bg-cream",
+            "heightPx": 182
+          },
+          {
+            "templateNodeIndex": 9,
+            "section": "conversion.lead-magnet-cta",
+            "heightPx": 1062.1
+          }
+        ]
+      },
+      "T-BLOG-INDEX": {
+        "route": "/blog",
+        "documentHeightPx": 32710,
+        "shell": {
+          "chrome.nav": 86.2,
+          "chrome.footer": 610.7
+        },
+        "nodes": [
+          {
+            "templateNodeIndex": 1,
+            "section": "hero.page-head",
+            "variant": "h1-only",
+            "heightPx": 282.3
+          },
+          {
+            "templateNodeIndex": 2,
+            "section": "listing.blog-rows",
+            "heightPx": 31752.3
+          }
+        ]
+      },
+      "T-CASE-STUDY-INDEX": {
+        "route": "/case-studies",
+        "documentHeightPx": 3626,
+        "shell": {
+          "chrome.nav": 86.2,
+          "chrome.footer": 610.7
+        },
+        "nodes": [
+          {
+            "templateNodeIndex": 1,
+            "section": "hero.centred-h1",
+            "heightPx": 368.4
+          },
+          {
+            "templateNodeIndex": 2,
+            "section": "listing.case-study-grid",
+            "heightPx": 1304.2
+          },
+          {
+            "templateNodeIndex": 3,
+            "section": "divider.leaf-band",
+            "variant": "bg-cream",
+            "heightPx": 182
+          },
+          {
+            "templateNodeIndex": 4,
+            "section": "conversion.reassurance-cta",
+            "heightPx": 1168.6
+          }
+        ]
+      },
+      "T-COLLECTION-INDEX": {
+        "route": "/employee-recognition-messages",
+        "documentHeightPx": 11042,
+        "shell": {
+          "chrome.nav": 86.2,
+          "chrome.footer": 610.7
+        },
+        "nodes": [
+          {
+            "templateNodeIndex": 1,
+            "section": "hero.page-head",
+            "variant": "badge+h1+lede",
+            "heightPx": 540.3
+          },
+          {
+            "templateNodeIndex": 2,
+            "section": "listing.link-card-grid",
+            "variant": "h2-listing",
+            "heightPx": 7988.9
+          },
+          {
+            "templateNodeIndex": 3,
+            "section": "content.section-heading",
+            "heightPx": 210.2
+          },
+          {
+            "templateNodeIndex": 4,
+            "section": "listing.link-card-grid",
+            "variant": "h2-listing",
+            "heightPx": 399.5
+          },
+          {
+            "templateNodeIndex": 5,
+            "section": "divider.leaf-band",
+            "variant": "bg-cream",
+            "heightPx": 182
+          },
+          {
+            "templateNodeIndex": 6,
+            "section": "conversion.reassurance-cta",
+            "heightPx": 1168.6
+          }
+        ]
+      },
+      "T-COMPARISON": {
+        "route": "/alternatives/awardco",
+        "documentHeightPx": 10538,
+        "shell": {
+          "chrome.nav": 86.2,
+          "chrome.footer": 610.7
+        },
+        "nodes": [
+          {
+            "templateNodeIndex": 1,
+            "section": "hero.page-head",
+            "variant": "badge+h1+lede",
+            "heightPx": 649.8
+          },
+          {
+            "templateNodeIndex": 2,
+            "section": "content.section-heading",
+            "heightPx": 130.3
+          },
+          {
+            "templateNodeIndex": 3,
+            "section": "content.leaf-spec-list",
+            "variant": "at-a-glance",
+            "heightPx": 512.3
+          },
+          {
+            "templateNodeIndex": 4,
+            "section": "content.rich-text",
+            "variant": "grouped",
+            "heightPx": 2145
+          },
+          {
+            "templateNodeIndex": 5,
+            "section": "content.section-heading",
+            "heightPx": 130.3
+          },
+          {
+            "templateNodeIndex": 6,
+            "section": "content.leaf-bullets",
+            "variant": "strengths",
+            "heightPx": 538.9
+          },
+          {
+            "templateNodeIndex": 7,
+            "section": "content.section-heading",
+            "heightPx": 130.3
+          },
+          {
+            "templateNodeIndex": 8,
+            "section": "content.leaf-bullets",
+            "variant": "shortfalls",
+            "heightPx": 407.8
+          },
+          {
+            "templateNodeIndex": 9,
+            "section": "content.section-heading",
+            "heightPx": 130.3
+          },
+          {
+            "templateNodeIndex": 10,
+            "section": "content.leaf-spec-list",
+            "variant": "differs",
+            "heightPx": 652
+          },
+          {
+            "templateNodeIndex": 11,
+            "section": "content.section-heading",
+            "heightPx": 130.3
+          },
+          {
+            "templateNodeIndex": 12,
+            "section": "content.prose-left",
+            "variant": "verdict",
+            "heightPx": 264.5
+          },
+          {
+            "templateNodeIndex": 13,
+            "section": "content.section-heading",
+            "heightPx": 130.3
+          },
+          {
+            "templateNodeIndex": 14,
+            "section": "content.faq",
+            "heightPx": 1014.2
+          },
+          {
+            "templateNodeIndex": 15,
+            "section": "content.section-heading",
+            "heightPx": 130.3
+          },
+          {
+            "templateNodeIndex": 16,
+            "section": "content.sources",
+            "heightPx": 222.7
+          },
+          {
+            "templateNodeIndex": 17,
+            "section": "content.section-heading",
+            "heightPx": 130.3
+          },
+          {
+            "templateNodeIndex": 18,
+            "section": "listing.link-card-grid",
+            "variant": "h3-related",
+            "heightPx": 398.4
+          },
+          {
+            "templateNodeIndex": 19,
+            "section": "content.section-heading",
+            "heightPx": 130.3
+          },
+          {
+            "templateNodeIndex": 20,
+            "section": "listing.link-card-grid",
+            "variant": "h3-related",
+            "heightPx": 655.9
+          },
+          {
+            "templateNodeIndex": 21,
+            "section": "divider.leaf-band",
+            "variant": "bg-cream",
+            "heightPx": 182
+          },
+          {
+            "templateNodeIndex": 22,
+            "section": "conversion.reassurance-cta",
+            "heightPx": 1168.6
+          }
+        ]
+      },
+      "T-CONTACT": {
+        "route": "/contact",
+        "documentHeightPx": 3441,
+        "shell": {
+          "chrome.nav": 86.2,
+          "chrome.footer": 610.7
+        },
+        "nodes": [
+          {
+            "templateNodeIndex": 1,
+            "section": "hero.centred-h1",
+            "heightPx": 282.3
+          },
+          {
+            "templateNodeIndex": 2,
+            "section": "form.contact-card",
+            "heightPx": 1049.1
+          },
+          {
+            "templateNodeIndex": 3,
+            "section": "proof.g2-rating",
+            "heightPx": 206
+          },
+          {
+            "templateNodeIndex": 4,
+            "section": "divider.leaf-band",
+            "variant": "bg-cream",
+            "heightPx": 182
+          },
+          {
+            "templateNodeIndex": 5,
+            "section": "conversion.reassurance-cta",
+            "heightPx": 1168.6
+          }
+        ]
+      },
+      "T-DETAIL-FOR": {
+        "route": "/employee-recognition/for/remote-teams",
+        "documentHeightPx": 12601,
+        "shell": {
+          "chrome.nav": 86.2,
+          "chrome.footer": 610.7
+        },
+        "nodes": [
+          {
+            "templateNodeIndex": 1,
+            "section": "hero.page-head",
+            "variant": "badge+h1+lede",
+            "heightPx": 649.8
+          },
+          {
+            "templateNodeIndex": 2,
+            "section": "content.rich-text",
+            "variant": "grouped",
+            "heightPx": 1959.3
+          },
+          {
+            "templateNodeIndex": 3,
+            "section": "content.section-heading",
+            "heightPx": 130.3
+          },
+          {
+            "templateNodeIndex": 4,
+            "section": "content.leaf-spec-list",
+            "variant": "obstacles",
+            "heightPx": 687.7
+          },
+          {
+            "templateNodeIndex": 5,
+            "section": "content.section-heading",
+            "heightPx": 130.3
+          },
+          {
+            "templateNodeIndex": 6,
+            "section": "content.leaf-bullets",
+            "variant": "what-works",
+            "heightPx": 574.6
+          },
+          {
+            "templateNodeIndex": 7,
+            "section": "content.section-heading",
+            "heightPx": 130.3
+          },
+          {
+            "templateNodeIndex": 8,
+            "section": "content.message-grid",
+            "heightPx": 1276.8
+          },
+          {
+            "templateNodeIndex": 9,
+            "section": "content.section-heading",
+            "heightPx": 130.3
+          },
+          {
+            "templateNodeIndex": 10,
+            "section": "content.leaf-spec-list",
+            "variant": "programme",
+            "heightPx": 756.1
+          },
+          {
+            "templateNodeIndex": 11,
+            "section": "content.section-heading",
+            "heightPx": 130.3
+          },
+          {
+            "templateNodeIndex": 12,
+            "section": "content.faq",
+            "heightPx": 907.2
+          },
+          {
+            "templateNodeIndex": 13,
+            "section": "content.section-heading",
+            "heightPx": 210.2
+          },
+          {
+            "templateNodeIndex": 14,
+            "section": "listing.link-card-grid",
+            "variant": "h3-related",
+            "heightPx": 1016.7
+          },
+          {
+            "templateNodeIndex": 15,
+            "section": "content.section-heading",
+            "heightPx": 130.3
+          },
+          {
+            "templateNodeIndex": 16,
+            "section": "listing.link-card-grid",
+            "variant": "h3-related",
+            "heightPx": 899.9
+          },
+          {
+            "templateNodeIndex": 17,
+            "section": "content.section-heading",
+            "heightPx": 130.3
+          },
+          {
+            "templateNodeIndex": 18,
+            "section": "listing.link-card-grid",
+            "variant": "h3-related",
+            "heightPx": 847.3
+          },
+          {
+            "templateNodeIndex": 19,
+            "section": "divider.leaf-band",
+            "variant": "bg-cream",
+            "heightPx": 182
+          },
+          {
+            "templateNodeIndex": 20,
+            "section": "conversion.reassurance-cta",
+            "heightPx": 1168.6
+          }
+        ]
+      },
+      "T-DETAIL-GLOSSARY": {
+        "route": "/employee-recognition/glossary/top-down-recognition",
+        "documentHeightPx": 7966,
+        "shell": {
+          "chrome.nav": 86.2,
+          "chrome.footer": 610.7
+        },
+        "nodes": [
+          {
+            "templateNodeIndex": 1,
+            "section": "hero.page-head",
+            "variant": "badge+h1+lede",
+            "heightPx": 576
+          },
+          {
+            "templateNodeIndex": 2,
+            "section": "content.prose-left",
+            "variant": "intro",
+            "heightPx": 121.8
+          },
+          {
+            "templateNodeIndex": 3,
+            "section": "content.rich-text",
+            "variant": "grouped",
+            "heightPx": 1607.6
+          },
+          {
+            "templateNodeIndex": 4,
+            "section": "content.section-heading",
+            "heightPx": 130.3
+          },
+          {
+            "templateNodeIndex": 5,
+            "section": "content.leaf-bullets",
+            "variant": "examples",
+            "heightPx": 383.9
+          },
+          {
+            "templateNodeIndex": 6,
+            "section": "content.section-heading",
+            "heightPx": 130.3
+          },
+          {
+            "templateNodeIndex": 7,
+            "section": "content.faq",
+            "heightPx": 603.7
+          },
+          {
+            "templateNodeIndex": 8,
+            "section": "content.section-heading",
+            "heightPx": 130.3
+          },
+          {
+            "templateNodeIndex": 9,
+            "section": "listing.link-card-grid",
+            "variant": "h3-related",
+            "heightPx": 909.8
+          },
+          {
+            "templateNodeIndex": 10,
+            "section": "content.section-heading",
+            "heightPx": 130.3
+          },
+          {
+            "templateNodeIndex": 11,
+            "section": "listing.link-card-grid",
+            "variant": "h3-related",
+            "heightPx": 691.6
+          },
+          {
+            "templateNodeIndex": 12,
+            "section": "content.section-heading",
+            "heightPx": 130.3
+          },
+          {
+            "templateNodeIndex": 13,
+            "section": "listing.link-card-grid",
+            "variant": "h3-related",
+            "heightPx": 517.1
+          },
+          {
+            "templateNodeIndex": 14,
+            "section": "divider.leaf-band",
+            "variant": "bg-cream",
+            "heightPx": 182
+          },
+          {
+            "templateNodeIndex": 15,
+            "section": "conversion.reassurance-cta",
+            "heightPx": 1168.6
+          }
+        ]
+      },
+      "T-DETAIL-MESSAGES": {
+        "route": "/employee-recognition-messages/work-anniversary",
+        "documentHeightPx": 9363,
+        "shell": {
+          "chrome.nav": 86.2,
+          "chrome.footer": 610.7
+        },
+        "nodes": [
+          {
+            "templateNodeIndex": 1,
+            "section": "hero.page-head",
+            "variant": "badge+h1+lede",
+            "heightPx": 649.8
+          },
+          {
+            "templateNodeIndex": 2,
+            "section": "content.rich-text",
+            "variant": "grouped",
+            "heightPx": 652.6
+          },
+          {
+            "templateNodeIndex": 3,
+            "section": "content.section-heading",
+            "heightPx": 130.3
+          },
+          {
+            "templateNodeIndex": 4,
+            "section": "content.message-grid",
+            "heightPx": 2377
+          },
+          {
+            "templateNodeIndex": 5,
+            "section": "content.section-heading",
+            "heightPx": 130.3
+          },
+          {
+            "templateNodeIndex": 6,
+            "section": "content.leaf-bullets",
+            "variant": "what-lands",
+            "heightPx": 431.8
+          },
+          {
+            "templateNodeIndex": 7,
+            "section": "content.section-heading",
+            "heightPx": 130.3
+          },
+          {
+            "templateNodeIndex": 8,
+            "section": "content.faq",
+            "heightPx": 1049.9
+          },
+          {
+            "templateNodeIndex": 9,
+            "section": "content.section-heading",
+            "heightPx": 130.3
+          },
+          {
+            "templateNodeIndex": 10,
+            "section": "listing.link-card-grid",
+            "variant": "h3-related",
+            "heightPx": 339.6
+          },
+          {
+            "templateNodeIndex": 11,
+            "section": "content.section-heading",
+            "heightPx": 130.3
+          },
+          {
+            "templateNodeIndex": 12,
+            "section": "listing.link-card-grid",
+            "variant": "h3-related",
+            "heightPx": 462.1
+          },
+          {
+            "templateNodeIndex": 13,
+            "section": "content.section-heading",
+            "heightPx": 130.3
+          },
+          {
+            "templateNodeIndex": 14,
+            "section": "listing.link-card-grid",
+            "variant": "h3-related",
+            "heightPx": 714.7
+          },
+          {
+            "templateNodeIndex": 15,
+            "section": "divider.leaf-band",
+            "variant": "bg-cream",
+            "heightPx": 182
+          },
+          {
+            "templateNodeIndex": 16,
+            "section": "conversion.reassurance-cta",
+            "heightPx": 1168.6
+          }
+        ]
+      },
+      "T-DETAIL-VALUES": {
+        "route": "/company-values/integrity",
+        "documentHeightPx": 8762,
+        "shell": {
+          "chrome.nav": 86.2,
+          "chrome.footer": 610.7
+        },
+        "nodes": [
+          {
+            "templateNodeIndex": 1,
+            "section": "hero.page-head",
+            "variant": "badge+h1+lede",
+            "heightPx": 540.3
+          },
+          {
+            "templateNodeIndex": 2,
+            "section": "content.rich-text",
+            "variant": "grouped",
+            "heightPx": 652.6
+          },
+          {
+            "templateNodeIndex": 3,
+            "section": "content.section-heading",
+            "heightPx": 130.3
+          },
+          {
+            "templateNodeIndex": 4,
+            "section": "content.leaf-spec-list",
+            "variant": "signals",
+            "heightPx": 437.9
+          },
+          {
+            "templateNodeIndex": 5,
+            "section": "content.section-heading",
+            "heightPx": 130.3
+          },
+          {
+            "templateNodeIndex": 6,
+            "section": "content.message-grid",
+            "heightPx": 939
+          },
+          {
+            "templateNodeIndex": 7,
+            "section": "content.section-heading",
+            "variant": "absence",
+            "heightPx": 130.3
+          },
+          {
+            "templateNodeIndex": 8,
+            "section": "content.prose-left",
+            "variant": "absence",
+            "heightPx": 157.5
+          },
+          {
+            "templateNodeIndex": 9,
+            "section": "content.section-heading",
+            "heightPx": 130.3
+          },
+          {
+            "templateNodeIndex": 10,
+            "section": "content.leaf-bullets",
+            "variant": "recognise-well",
+            "heightPx": 312.5
+          },
+          {
+            "templateNodeIndex": 11,
+            "section": "content.section-heading",
+            "heightPx": 130.3
+          },
+          {
+            "templateNodeIndex": 12,
+            "section": "content.faq",
+            "heightPx": 764.4
+          },
+          {
+            "templateNodeIndex": 13,
+            "section": "content.section-heading",
+            "heightPx": 130.3
+          },
+          {
+            "templateNodeIndex": 14,
+            "section": "listing.link-card-grid",
+            "variant": "h3-related",
+            "heightPx": 713.5
+          },
+          {
+            "templateNodeIndex": 15,
+            "section": "content.section-heading",
+            "heightPx": 130.3
+          },
+          {
+            "templateNodeIndex": 16,
+            "section": "listing.link-card-grid",
+            "variant": "h3-related",
+            "heightPx": 819.1
+          },
+          {
+            "templateNodeIndex": 17,
+            "section": "content.section-heading",
+            "heightPx": 130.3
+          },
+          {
+            "templateNodeIndex": 18,
+            "section": "listing.link-card-grid",
+            "variant": "h3-related",
+            "heightPx": 479.5
+          },
+          {
+            "templateNodeIndex": 19,
+            "section": "divider.leaf-band",
+            "variant": "bg-cream",
+            "heightPx": 182
+          },
+          {
+            "templateNodeIndex": 20,
+            "section": "conversion.reassurance-cta",
+            "heightPx": 1168.6
+          }
+        ]
+      },
+      "T-EBOOK": {
+        "route": "/ebook/practical-guide-to-employee-recognition",
+        "documentHeightPx": 3761,
+        "shell": {
+          "chrome.nav": 86.2,
+          "chrome.footer": 610.7
+        },
+        "nodes": [
+          {
+            "templateNodeIndex": 1,
+            "section": "hero.ebook-lede",
+            "heightPx": 1084.5
+          },
+          {
+            "templateNodeIndex": 2,
+            "section": "form.lead-magnet-card",
+            "heightPx": 566.9
+          },
+          {
+            "templateNodeIndex": 3,
+            "section": "proof.g2-rating",
+            "heightPx": 206
+          },
+          {
+            "templateNodeIndex": 4,
+            "section": "divider.leaf-band",
+            "variant": "bg-cream",
+            "heightPx": 182
+          },
+          {
+            "templateNodeIndex": 5,
+            "section": "conversion.reassurance-cta",
+            "heightPx": 1168.6
+          }
+        ]
+      },
+      "T-ESG": {
+        "route": "/esg",
+        "documentHeightPx": 7848,
+        "shell": {
+          "chrome.nav": 86.2,
+          "chrome.footer": 610.7
+        },
+        "nodes": [
+          {
+            "templateNodeIndex": 1,
+            "section": "hero.esg-environmental",
+            "heightPx": 1339.2
+          },
+          {
+            "templateNodeIndex": 2,
+            "section": "divider.leaf-band",
+            "variant": "bg-cream",
+            "heightPx": 182
+          },
+          {
+            "templateNodeIndex": 3,
+            "section": "feature.split-visual",
+            "variant": "esg-social",
+            "heightPx": 1575.9
+          },
+          {
+            "templateNodeIndex": 4,
+            "section": "divider.leaf-band",
+            "variant": "bg-cream-dark",
+            "heightPx": 182
+          },
+          {
+            "templateNodeIndex": 5,
+            "section": "feature.split-visual",
+            "variant": "esg-governance",
+            "heightPx": 1476.5
+          },
+          {
+            "templateNodeIndex": 6,
+            "section": "divider.leaf-band",
+            "variant": "bg-cream",
+            "heightPx": 182
+          },
+          {
+            "templateNodeIndex": 7,
+            "section": "proof.sdg-goals",
+            "heightPx": 1223
+          },
+          {
+            "templateNodeIndex": 8,
+            "section": "divider.leaf-band",
+            "variant": "bg-cream-dark",
+            "heightPx": 182
+          },
+          {
+            "templateNodeIndex": 9,
+            "section": "conversion.reassurance-cta",
+            "heightPx": 1168.6
+          }
+        ]
+      },
+      "T-HOME": {
+        "route": "/",
+        "documentHeightPx": 8067,
+        "shell": {
+          "chrome.announcement-banner": 55.7,
+          "chrome.nav": 86.2,
+          "chrome.footer": 610.7
+        },
+        "nodes": [
+          {
+            "templateNodeIndex": 2,
+            "section": "hero.home",
+            "heightPx": 1626.1
+          },
+          {
+            "templateNodeIndex": 3,
+            "section": "proof.social-proof-stack",
+            "heightPx": 1918.6
+          },
+          {
+            "templateNodeIndex": 4,
+            "section": "divider.leaf-band",
+            "variant": "bg-cream",
+            "heightPx": 182
+          },
+          {
+            "templateNodeIndex": 5,
+            "section": "feature.seeds",
+            "heightPx": 1265.1
+          },
+          {
+            "templateNodeIndex": 6,
+            "section": "feature.report-csr",
+            "heightPx": 1224.4
+          },
+          {
+            "templateNodeIndex": 7,
+            "section": "divider.leaf-band",
+            "variant": "bg-cream",
+            "heightPx": 182
+          },
+          {
+            "templateNodeIndex": 8,
+            "section": "conversion.reassurance-cta",
+            "heightPx": 1168.6
+          }
+        ]
+      },
+      "T-LEGAL": {
+        "route": "/privacy-policy",
+        "documentHeightPx": 9314,
+        "shell": {
+          "chrome.nav": 86.2,
+          "chrome.footer": 610.7
+        },
+        "nodes": [
+          {
+            "templateNodeIndex": 1,
+            "section": "hero.legal-head",
+            "heightPx": 363.5
+          },
+          {
+            "templateNodeIndex": 2,
+            "section": "content.rich-text",
+            "variant": "flat",
+            "chapter": 1,
+            "chapterHeading": "Overview",
+            "heightPx": 1092.6
+          },
+          {
+            "templateNodeIndex": 2,
+            "section": "content.rich-text",
+            "variant": "flat",
+            "chapter": 2,
+            "chapterHeading": "How is personal data processed?",
+            "heightPx": 108
+          },
+          {
+            "templateNodeIndex": 2,
+            "section": "content.rich-text",
+            "variant": "flat",
+            "chapter": 3,
+            "chapterHeading": "Data controller",
+            "heightPx": 336.5
+          },
+          {
+            "templateNodeIndex": 2,
+            "section": "content.rich-text",
+            "variant": "flat",
+            "chapter": 4,
+            "chapterHeading": "Purposes of processing",
+            "heightPx": 477.1
+          },
+          {
+            "templateNodeIndex": 2,
+            "section": "content.rich-text",
+            "variant": "flat",
+            "chapter": 5,
+            "chapterHeading": "Legal basis for processing",
+            "heightPx": 336.5
+          },
+          {
+            "templateNodeIndex": 2,
+            "section": "content.rich-text",
+            "variant": "flat",
+            "chapter": 6,
+            "chapterHeading": "Categories of personal data",
+            "heightPx": 665.6
+          },
+          {
+            "templateNodeIndex": 2,
+            "section": "content.rich-text",
+            "variant": "flat",
+            "chapter": 7,
+            "chapterHeading": "Sources of the data",
+            "heightPx": 336.5
+          },
+          {
+            "templateNodeIndex": 2,
+            "section": "content.rich-text",
+            "variant": "flat",
+            "chapter": 8,
+            "chapterHeading": "Recipients of the data",
+            "heightPx": 336.5
+          },
+          {
+            "templateNodeIndex": 2,
+            "section": "content.rich-text",
+            "variant": "flat",
+            "chapter": 9,
+            "chapterHeading": "Transfers outside the EU or EEA",
+            "heightPx": 477.1
+          },
+          {
+            "templateNodeIndex": 2,
+            "section": "content.rich-text",
+            "variant": "flat",
+            "chapter": 10,
+            "chapterHeading": "Retention periods",
+            "heightPx": 336.5
+          },
+          {
+            "templateNodeIndex": 2,
+            "section": "content.rich-text",
+            "variant": "flat",
+            "chapter": 11,
+            "chapterHeading": "Security measures",
+            "heightPx": 336.5
+          },
+          {
+            "templateNodeIndex": 2,
+            "section": "content.rich-text",
+            "variant": "flat",
+            "chapter": 12,
+            "chapterHeading": "Cookies and similar technologies",
+            "heightPx": 594.2
+          },
+          {
+            "templateNodeIndex": 2,
+            "section": "content.rich-text",
+            "variant": "flat",
+            "chapter": 13,
+            "chapterHeading": "Right of access",
+            "heightPx": 336.5
+          },
+          {
+            "templateNodeIndex": 2,
+            "section": "content.rich-text",
+            "variant": "flat",
+            "chapter": 14,
+            "chapterHeading": "Right to rectification",
+            "heightPx": 477.1
+          },
+          {
+            "templateNodeIndex": 2,
+            "section": "content.rich-text",
+            "variant": "flat",
+            "chapter": 15,
+            "chapterHeading": "Right to erasure",
+            "heightPx": 336.5
+          },
+          {
+            "templateNodeIndex": 2,
+            "section": "content.rich-text",
+            "variant": "flat",
+            "chapter": 16,
+            "chapterHeading": "Right to restrict processing",
+            "heightPx": 336.5
+          },
+          {
+            "templateNodeIndex": 2,
+            "section": "content.rich-text",
+            "variant": "flat",
+            "chapter": 17,
+            "chapterHeading": "Right to object",
+            "heightPx": 336.5
+          },
+          {
+            "templateNodeIndex": 2,
+            "section": "content.rich-text",
+            "variant": "flat",
+            "chapter": 18,
+            "chapterHeading": "Lodging a complaint",
+            "heightPx": 336.5
+          },
+          {
+            "templateNodeIndex": 2,
+            "section": "content.rich-text",
+            "variant": "flat",
+            "chapter": 19,
+            "chapterHeading": "Changes to this policy",
+            "heightPx": 336.5
+          },
+          {
+            "templateNodeIndex": 2,
+            "section": "content.rich-text",
+            "variant": "flat",
+            "chapter": 20,
+            "chapterHeading": "Contact",
+            "heightPx": 396.5
+          }
+        ]
+      },
+      "T-PARTNER": {
+        "route": "/partners/the-people-people-group",
+        "documentHeightPx": 8786,
+        "shell": {
+          "chrome.nav": 86.2,
+          "chrome.footer": 610.7
+        },
+        "nodes": [
+          {
+            "templateNodeIndex": 1,
+            "section": "hero.partner",
+            "heightPx": 1869.3
+          },
+          {
+            "templateNodeIndex": 2,
+            "section": "proof.social-proof-stack",
+            "heightPx": 1918.6
+          },
+          {
+            "templateNodeIndex": 3,
+            "section": "divider.leaf-band",
+            "variant": "bg-cream-dark",
+            "heightPx": 182
+          },
+          {
+            "templateNodeIndex": 4,
+            "section": "feature.split-visual",
+            "variant": "partner-a",
+            "heightPx": 1472.3
+          },
+          {
+            "templateNodeIndex": 5,
+            "section": "divider.leaf-band",
+            "variant": "bg-cream-dark",
+            "heightPx": 182
+          },
+          {
+            "templateNodeIndex": 6,
+            "section": "feature.split-visual",
+            "variant": "partner-b",
+            "heightPx": 1372.9
+          },
+          {
+            "templateNodeIndex": 7,
+            "section": "divider.leaf-band",
+            "variant": "bg-cream",
+            "heightPx": 182
+          },
+          {
+            "templateNodeIndex": 8,
+            "section": "conversion.reassurance-cta",
+            "heightPx": 1197.9
+          }
+        ]
+      },
+      "T-PILLAR": {
+        "route": "/employee-recognition",
+        "documentHeightPx": 28031,
+        "shell": {
+          "chrome.nav": 86.2,
+          "chrome.footer": 610.7
+        },
+        "nodes": [
+          {
+            "templateNodeIndex": 1,
+            "section": "hero.page-head",
+            "variant": "h1+lede",
+            "heightPx": 475.4
+          },
+          {
+            "templateNodeIndex": 2,
+            "section": "content.rich-text",
+            "variant": "flat",
+            "heightPx": 1319.6
+          },
+          {
+            "templateNodeIndex": 3,
+            "section": "proof.stat-pills",
+            "heightPx": 205.2
+          },
+          {
+            "templateNodeIndex": 4,
+            "section": "content.rich-text",
+            "variant": "flat",
+            "heightPx": 4949.9
+          },
+          {
+            "templateNodeIndex": 5,
+            "section": "listing.link-card-grid",
+            "variant": "h3-inline",
+            "heightPx": 1239.7
+          },
+          {
+            "templateNodeIndex": 6,
+            "section": "content.rich-text",
+            "variant": "flat",
+            "heightPx": 759.7
+          },
+          {
+            "templateNodeIndex": 7,
+            "section": "listing.link-card-grid",
+            "variant": "h3-inline",
+            "heightPx": 1014.4
+          },
+          {
+            "templateNodeIndex": 8,
+            "section": "content.rich-text",
+            "variant": "flat",
+            "heightPx": 635.2
+          },
+          {
+            "templateNodeIndex": 9,
+            "section": "listing.link-card-grid",
+            "variant": "h3-inline",
+            "heightPx": 2176.2
+          },
+          {
+            "templateNodeIndex": 10,
+            "section": "content.rich-text",
+            "variant": "flat",
+            "heightPx": 1736.4
+          },
+          {
+            "templateNodeIndex": 11,
+            "section": "listing.link-card-grid",
+            "variant": "h3-inline",
+            "heightPx": 400.9
+          },
+          {
+            "templateNodeIndex": 12,
+            "section": "content.rich-text",
+            "variant": "flat",
+            "heightPx": 265.4
+          },
+          {
+            "templateNodeIndex": 13,
+            "section": "content.leaf-spec-list",
+            "variant": "vocabulary",
+            "heightPx": 2142.6
+          },
+          {
+            "templateNodeIndex": 14,
+            "section": "content.rich-text",
+            "variant": "flat",
+            "heightPx": 406.1
+          },
+          {
+            "templateNodeIndex": 15,
+            "section": "content.section-heading",
+            "heightPx": 130.3
+          },
+          {
+            "templateNodeIndex": 16,
+            "section": "content.faq",
+            "heightPx": 2174.8
+          },
+          {
+            "templateNodeIndex": 17,
+            "section": "content.section-heading",
+            "heightPx": 130.3
+          },
+          {
+            "templateNodeIndex": 18,
+            "section": "content.reading-list",
+            "heightPx": 6000.9
+          },
+          {
+            "templateNodeIndex": 19,
+            "section": "divider.leaf-band",
+            "variant": "bg-cream",
+            "heightPx": 182
+          },
+          {
+            "templateNodeIndex": 20,
+            "section": "conversion.lead-magnet-cta",
+            "heightPx": 1133.5
+          }
+        ]
+      },
+      "T-PRICING": {
+        "route": "/pricing",
+        "documentHeightPx": 3503,
+        "shell": {
+          "chrome.nav": 86.2,
+          "chrome.footer": 610.7
+        },
+        "nodes": [
+          {
+            "templateNodeIndex": 1,
+            "section": "pricing.single-plan",
+            "heightPx": 1440.3
+          },
+          {
+            "templateNodeIndex": 2,
+            "section": "divider.leaf-band",
+            "variant": "bg-cream",
+            "heightPx": 182
+          },
+          {
+            "templateNodeIndex": 3,
+            "section": "proof.testimonial-wall",
+            "heightPx": 1328
+          }
+        ]
+      },
+      "T-PURPOSE": {
+        "route": "/our-purpose",
+        "documentHeightPx": 4317,
+        "shell": {
+          "chrome.nav": 86.2,
+          "chrome.footer": 610.7
+        },
+        "nodes": [
+          {
+            "templateNodeIndex": 1,
+            "section": "hero.purpose",
+            "heightPx": 571.1
+          },
+          {
+            "templateNodeIndex": 2,
+            "section": "proof.goals-band",
+            "heightPx": 545.4
+          },
+          {
+            "templateNodeIndex": 3,
+            "section": "divider.leaf-band",
+            "variant": "bg-leaf",
+            "heightPx": 182
+          },
+          {
+            "templateNodeIndex": 4,
+            "section": "proof.sdg-goals",
+            "heightPx": 1223
+          },
+          {
+            "templateNodeIndex": 5,
+            "section": "divider.leaf-band",
+            "variant": "bg-cream-dark",
+            "heightPx": 182
+          },
+          {
+            "templateNodeIndex": 6,
+            "section": "conversion.reassurance-cta",
+            "heightPx": 1168.6
+          }
+        ]
+      },
+      "T-REFERRAL": {
+        "route": "/referral",
+        "documentHeightPx": 4502,
+        "shell": {
+          "chrome.nav": 86.2,
+          "chrome.footer": 610.7
+        },
+        "nodes": [
+          {
+            "templateNodeIndex": 1,
+            "section": "hero.centred-h1",
+            "heightPx": 282.3
+          },
+          {
+            "templateNodeIndex": 2,
+            "section": "form.referral-card",
+            "heightPx": 1550.8
+          },
+          {
+            "templateNodeIndex": 3,
+            "section": "referral.earnings-tiers",
+            "heightPx": 591.7
+          },
+          {
+            "templateNodeIndex": 4,
+            "section": "divider.leaf-band",
+            "variant": "bg-cream",
+            "heightPx": 182
+          },
+          {
+            "templateNodeIndex": 5,
+            "section": "proof.testimonial-wall",
+            "heightPx": 1328
+          }
+        ]
+      },
+      "T-SCHEDULER": {
+        "route": "/schedule-a-demo",
+        "documentHeightPx": 3442,
+        "shell": {
+          "chrome.nav": 86.2,
+          "chrome.footer": 610.7
+        },
+        "nodes": [
+          {
+            "templateNodeIndex": 1,
+            "section": "hero.centred-h1",
+            "heightPx": 282.3
+          },
+          {
+            "templateNodeIndex": 2,
+            "section": "form.scheduler-card",
+            "heightPx": 1050.3
+          },
+          {
+            "templateNodeIndex": 3,
+            "section": "proof.g2-rating",
+            "heightPx": 206
+          },
+          {
+            "templateNodeIndex": 4,
+            "section": "divider.leaf-band",
+            "variant": "bg-cream",
+            "heightPx": 182
+          },
+          {
+            "templateNodeIndex": 5,
+            "section": "conversion.reassurance-cta",
+            "heightPx": 1168.6
+          }
+        ]
+      },
+      "T-STORY": {
+        "route": "/customer-success-stories/nitro-games",
+        "documentHeightPx": 7055,
+        "shell": {
+          "chrome.nav": 86.2,
+          "chrome.footer": 610.7
+        },
+        "nodes": [
+          {
+            "templateNodeIndex": 1,
+            "section": "hero.page-head",
+            "variant": "h1+subtitle",
+            "heightPx": 318
+          },
+          {
+            "templateNodeIndex": 2,
+            "section": "story.hero-quote",
+            "heightPx": 513.7
+          },
+          {
+            "templateNodeIndex": 3,
+            "section": "story.meta-prose",
+            "heightPx": 3394.4
+          },
+          {
+            "templateNodeIndex": 4,
+            "section": "listing.story-teasers",
+            "heightPx": 716.3
+          },
+          {
+            "templateNodeIndex": 5,
+            "section": "divider.leaf-band",
+            "variant": "bg-cream",
+            "heightPx": 182
+          },
+          {
+            "templateNodeIndex": 6,
+            "section": "conversion.reassurance-cta",
+            "heightPx": 1168.6
+          }
+        ]
+      }
+    }
   }
 }

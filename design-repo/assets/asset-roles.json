@@ -1,6 +1,6 @@
 {
   "$id": "assets.asset-roles",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "status": "design-review-pending",
   "description": "The CLOSED assetRole enum. Every media-bearing field in every section contract references one of these ids and nothing else. There is no generic 'image' or 'src' role: a bare string field would let a generator invent arbitrary asset semantics.",
   "sourceIsRealCompany": true,
@@ -45,7 +45,8 @@
     "NEVER fabricate a product screenshot or alter a factual badge figure.",
     "NEVER fabricate a review rating, star count or review-platform mark.",
     "NEVER invent a statistic, a tree count, a user count or a price.",
-    "When a slot would need any of the above, leave it empty and flag it."
+    "When a slot would need any of the above, leave it empty and flag it.",
+    "In generation mode, use only generation-safe roles; every clone-only or blocked role names its generationSafeSubstitutes."
   ],
   "totalFiles": 133,
   "unreferencedFiles": [
@@ -66,7 +67,13 @@
       "fileCount": 1,
       "files": [
         "evergreen-logosvg-216cd4.svg"
-      ]
+      ],
+      "availability": "clone-only",
+      "generationSafeSubstitutes": [
+        "placeholder.brand-mark",
+        "operator.supplied-asset"
+      ],
+      "generatedModeGuidance": "Generation mode: NEVER use, redraw, recolour or imitate the Evergreen wordmark. Use placeholder.brand-mark (a neutral mark for the new brand) or an operator-supplied logo the operator has rights to."
     },
     "brand.leaf-art": {
       "label": "Evergreen's decorative leaf / heart SVGs",
@@ -85,7 +92,13 @@
         "leaf-smaller-reflectsvg-c42957.svg",
         "leaf-smallersvg-6114e8.svg",
         "leaf-spikesvg-7a4672.svg"
-      ]
+      ],
+      "availability": "clone-only",
+      "generationSafeSubstitutes": [
+        "generated.illustration",
+        "operator.supplied-asset"
+      ],
+      "generatedModeGuidance": "Generation mode: the leaf / heart SVGs are Evergreen brand artwork. Generate new decorative illustration for the new brand; do not trace or recolour the leaf set."
     },
     "brand.icon": {
       "label": "Evergreen's own UI / SDG / feature icons",
@@ -113,7 +126,13 @@
         "icon-usersvg-f5e0ab.svg",
         "icon-youthsvg-db3447.svg",
         "ticksvg-589d98.svg"
-      ]
+      ],
+      "availability": "clone-only",
+      "generationSafeSubstitutes": [
+        "generated.icon",
+        "operator.supplied-asset"
+      ],
+      "generatedModeGuidance": "Generation mode: Evergreen's own icon files are not reusable. Generate a new icon set or use operator-supplied icons."
     },
     "product.screenshot": {
       "label": "Real screenshots of Evergreen's live product UI",
@@ -135,7 +154,13 @@
         "sn-2png-f6c14a.webp",
         "sn-3png-556d34.webp",
         "sn-4apng-19e16a.webp"
-      ]
+      ],
+      "availability": "clone-only",
+      "generationSafeSubstitutes": [
+        "placeholder.screenshot",
+        "operator.supplied-asset"
+      ],
+      "generatedModeGuidance": "Generation mode: NEVER reuse or mock up an Evergreen product screenshot. Use a neutral placeholder screenshot (wireframe / greyed UI with no Evergreen marks) or a screenshot of the operator's own product."
     },
     "product.badge": {
       "label": "Evergreen's '20,000 trees planted' achievement badge",
@@ -148,7 +173,12 @@
       "fileCount": 1,
       "files": [
         "ever-badgepng-6b8d93.webp"
-      ]
+      ],
+      "availability": "clone-only",
+      "generationSafeSubstitutes": [
+        "placeholder.badge"
+      ],
+      "generatedModeGuidance": "Generation mode: the '20,000 trees planted' badge is a real factual claim about a real company. Use placeholder.badge with no real figure, certification or award; never invent an achievement."
     },
     "third-party.trademark": {
       "label": "Real third-party company logos (customers and partners)",
@@ -182,7 +212,12 @@
         "tppg-dark-logo-a4eebe.webp",
         "workletesvg-eb3abc.svg"
       ],
-      "neverDedupe": "logo-wunderdogsvg-a66a50.svg and logo-wunderdogsvg-62f3d4.svg are DIFFERENT ARTWORK, as are logo-nitrosvg-4caa4a.svg and logo-nitrosvg-7a0f33.svg. The -a66a50 / -4caa4a pair is the case-study teaser variant; the -62f3d4 / -7a0f33 pair is the testimonial / logo-strip variant. NEVER dedupe them to one file. CLONE_SPEC_CONTENT_B §12.6 names the wrong wunderdog variant for the teaser; the correct one is -a66a50."
+      "neverDedupe": "logo-wunderdogsvg-a66a50.svg and logo-wunderdogsvg-62f3d4.svg are DIFFERENT ARTWORK, as are logo-nitrosvg-4caa4a.svg and logo-nitrosvg-7a0f33.svg. The -a66a50 / -4caa4a pair is the case-study teaser variant; the -62f3d4 / -7a0f33 pair is the testimonial / logo-strip variant. NEVER dedupe them to one file. CLONE_SPEC_CONTENT_B §12.6 names the wrong wunderdog variant for the teaser; the correct one is -a66a50.",
+      "availability": "blocked-for-generation",
+      "generationSafeSubstitutes": [
+        "placeholder.company-logo"
+      ],
+      "generatedModeGuidance": "Generation mode: real customer / partner logos are blocked outright. Use fictional placeholder company logos and never imply a real customer relationship."
     },
     "third-party.platform-logo": {
       "label": "Integration platform marks (Slack, Microsoft Teams, Mattermost, Webex)",
@@ -201,7 +236,13 @@
         "slacksvg-1b4e41.svg",
         "teamssvg-b74fd1.svg",
         "webexpng-52e71f.webp"
-      ]
+      ],
+      "availability": "blocked-for-generation",
+      "generationSafeSubstitutes": [
+        "placeholder.company-logo",
+        "operator.supplied-asset"
+      ],
+      "generatedModeGuidance": "Generation mode: real platform marks (Slack, Teams, Mattermost, Webex) are blocked. Use placeholder logos, or operator-supplied marks only when the operator confirms a real integration and the right to show the mark."
     },
     "third-party.review-mark": {
       "label": "G2 logo and G2 review stars",
@@ -217,7 +258,12 @@
       "files": [
         "logo-g2png-c53a3f.webp",
         "star1svg-303d31.svg"
-      ]
+      ],
+      "availability": "blocked-for-generation",
+      "generationSafeSubstitutes": [
+        "placeholder.badge"
+      ],
+      "generatedModeGuidance": "Generation mode: the G2 mark and stars are blocked; never fabricate a rating or review-platform mark. Use placeholder.badge with no rating figure."
     },
     "person.likeness": {
       "label": "Photographs of real, named individuals",
@@ -246,7 +292,12 @@
       ],
       "unreferenced": [
         "carolina-blog-author-ba7f9b.webp"
-      ]
+      ],
+      "availability": "blocked-for-generation",
+      "generationSafeSubstitutes": [
+        "placeholder.person-avatar"
+      ],
+      "generatedModeGuidance": "Generation mode: photographs of real named people are blocked. Use fictional / illustrated avatars attached only to fictional people and fictional quotes clearly authored for the new brand."
     },
     "editorial.hero-image": {
       "label": "Blog / case-study editorial hero imagery",
@@ -319,7 +370,13 @@
         "untitled-9-f552f7.webp",
         "virtual-recognition-program-2-cf0a14.webp",
         "well-being-employee-da53fe.webp"
-      ]
+      ],
+      "availability": "clone-only",
+      "generationSafeSubstitutes": [
+        "generated.illustration",
+        "operator.supplied-asset"
+      ],
+      "generatedModeGuidance": "Generation mode: Evergreen's licensed editorial imagery is not reusable. Generate new imagery or use operator-supplied imagery with rights."
     },
     "editorial.stock-photo": {
       "label": "Stock / Unsplash-derived photography and the /esg hero photograph",
@@ -339,7 +396,13 @@
         "luis-villasmil-4v8umzx8fya-unsplash-ad2c74.webp",
         "photo-1552664688-cf412ec27db2-eeea02.webp",
         "samsung-uk-uzp2t-kkmdm-unsplash-b161a2.webp"
-      ]
+      ],
+      "availability": "blocked-for-generation",
+      "generationSafeSubstitutes": [
+        "generated.illustration",
+        "operator.supplied-asset"
+      ],
+      "generatedModeGuidance": "Generation mode: third-party stock with unrecorded licence terms is blocked. Generate new imagery or use operator-supplied, licensed imagery."
     },
     "typeface.webfont": {
       "label": "Self-hosted webfont files",
@@ -353,7 +416,10 @@
       "files": [
         "gloock-latin.woff2",
         "rubik-latin.woff2"
-      ]
+      ],
+      "availability": "generation-safe",
+      "generationSafeSubstitutes": [],
+      "generatedModeGuidance": "Generation mode: Rubik and Gloock are SIL OFL 1.1 and are part of the design language; they may be used via the font tokens (never as a content slot). The Typekit face is never included."
     },
     "site.favicon": {
       "label": "Site favicon",
@@ -366,7 +432,187 @@
       "fileCount": 1,
       "files": [
         "icon.png"
-      ]
+      ],
+      "availability": "clone-only",
+      "generationSafeSubstitutes": [
+        "placeholder.brand-mark",
+        "operator.supplied-asset"
+      ],
+      "generatedModeGuidance": "Generation mode: the Evergreen favicon is a brand mark. Use the new brand's placeholder or operator-supplied mark."
+    },
+    "placeholder.brand-mark": {
+      "label": "A neutral placeholder brand mark for the NEW brand",
+      "generationPolicy": "may-generate-new",
+      "complianceCritical": false,
+      "availability": "generation-safe",
+      "generationSafeSubstitutes": [],
+      "generatedModeGuidance": "Any logo slot in generation mode (nav, footer, favicon). A simple wordmark of the fictional brand name or a geometric mark; never resembles the Evergreen wordmark or leaf.",
+      "licensing": "Generation-safe role: contains no source asset. It exists so a generation-mode page has a legal slot for every clone-only or blocked role.",
+      "allowedSlots": [
+        "generation mode only — see each section contract's generatedAssetRoles"
+      ],
+      "fileCount": 0,
+      "files": []
+    },
+    "operator.supplied-asset": {
+      "label": "An asset the operator (user) supplies and has rights to",
+      "generationPolicy": "may-generate-new",
+      "complianceCritical": false,
+      "availability": "generation-safe",
+      "generationSafeSubstitutes": [],
+      "generatedModeGuidance": "Any media slot in generation mode, when the operator provides the file and confirms the right to use it. The validator still rejects any file whose name matches a real source asset.",
+      "licensing": "Generation-safe role: contains no source asset. It exists so a generation-mode page has a legal slot for every clone-only or blocked role.",
+      "allowedSlots": [
+        "generation mode only — see each section contract's generatedAssetRoles"
+      ],
+      "fileCount": 0,
+      "files": []
+    },
+    "generated.illustration": {
+      "label": "A newly generated illustration or decorative graphic",
+      "generationPolicy": "may-generate-new",
+      "complianceCritical": false,
+      "availability": "generation-safe",
+      "generationSafeSubstitutes": [],
+      "generatedModeGuidance": "Decorative / editorial image slots in generation mode. Must be original; must not trace, recolour or imitate the Evergreen leaf art or any real editorial image.",
+      "licensing": "Generation-safe role: contains no source asset. It exists so a generation-mode page has a legal slot for every clone-only or blocked role.",
+      "allowedSlots": [
+        "generation mode only — see each section contract's generatedAssetRoles"
+      ],
+      "fileCount": 0,
+      "files": []
+    },
+    "generated.icon": {
+      "label": "A newly generated UI icon",
+      "generationPolicy": "may-generate-new",
+      "complianceCritical": false,
+      "availability": "generation-safe",
+      "generationSafeSubstitutes": [],
+      "generatedModeGuidance": "Icon slots in generation mode. Original icon set; never the Evergreen icon files.",
+      "licensing": "Generation-safe role: contains no source asset. It exists so a generation-mode page has a legal slot for every clone-only or blocked role.",
+      "allowedSlots": [
+        "generation mode only — see each section contract's generatedAssetRoles"
+      ],
+      "fileCount": 0,
+      "files": []
+    },
+    "placeholder.screenshot": {
+      "label": "A neutral placeholder product screenshot",
+      "generationPolicy": "may-generate-new",
+      "complianceCritical": false,
+      "availability": "generation-safe",
+      "generationSafeSubstitutes": [],
+      "generatedModeGuidance": "Product-visual slots in generation mode: a wireframe or greyed UI with no real product, no real data and no Evergreen marks.",
+      "licensing": "Generation-safe role: contains no source asset. It exists so a generation-mode page has a legal slot for every clone-only or blocked role.",
+      "allowedSlots": [
+        "generation mode only — see each section contract's generatedAssetRoles"
+      ],
+      "fileCount": 0,
+      "files": []
+    },
+    "placeholder.badge": {
+      "label": "A neutral badge / rating placeholder with no real figure",
+      "generationPolicy": "may-generate-new",
+      "complianceCritical": false,
+      "availability": "generation-safe",
+      "generationSafeSubstitutes": [],
+      "generatedModeGuidance": "Badge, certification and rating slots in generation mode. Carries no real certification, award, review platform, star count or figure.",
+      "licensing": "Generation-safe role: contains no source asset. It exists so a generation-mode page has a legal slot for every clone-only or blocked role.",
+      "allowedSlots": [
+        "generation mode only — see each section contract's generatedAssetRoles"
+      ],
+      "fileCount": 0,
+      "files": []
+    },
+    "placeholder.person-avatar": {
+      "label": "A fictional person's avatar (illustrated or generated)",
+      "generationPolicy": "may-generate-new",
+      "complianceCritical": false,
+      "availability": "generation-safe",
+      "generationSafeSubstitutes": [],
+      "generatedModeGuidance": "Avatar / testimonial portrait slots in generation mode, attached only to fictional people with fictional names; never a real person's likeness.",
+      "licensing": "Generation-safe role: contains no source asset. It exists so a generation-mode page has a legal slot for every clone-only or blocked role.",
+      "allowedSlots": [
+        "generation mode only — see each section contract's generatedAssetRoles"
+      ],
+      "fileCount": 0,
+      "files": []
+    },
+    "placeholder.company-logo": {
+      "label": "A fictional company logo",
+      "generationPolicy": "may-generate-new",
+      "complianceCritical": false,
+      "availability": "generation-safe",
+      "generationSafeSubstitutes": [],
+      "generatedModeGuidance": "Customer-logo / partner / integration slots in generation mode. Fictional companies only; never implies a real customer or integration.",
+      "licensing": "Generation-safe role: contains no source asset. It exists so a generation-mode page has a legal slot for every clone-only or blocked role.",
+      "allowedSlots": [
+        "generation mode only — see each section contract's generatedAssetRoles"
+      ],
+      "fileCount": 0,
+      "files": []
+    },
+    "placeholder.url": {
+      "label": "A placeholder URL on a reserved domain",
+      "generationPolicy": "may-generate-new",
+      "complianceCritical": false,
+      "availability": "generation-safe",
+      "generationSafeSubstitutes": [],
+      "generatedModeGuidance": "Every link target in generation mode. Only RFC 2606 / 6761 reserved names: *.example or *.invalid.",
+      "licensing": "Generation-safe role: contains no source asset. It exists so a generation-mode page has a legal slot for every clone-only or blocked role.",
+      "allowedSlots": [
+        "generation mode only — see each section contract's generatedAssetRoles"
+      ],
+      "fileCount": 0,
+      "files": []
+    },
+    "generated.copy": {
+      "label": "Original copy written for the new brand",
+      "generationPolicy": "may-generate-new",
+      "complianceCritical": false,
+      "availability": "generation-safe",
+      "generationSafeSubstitutes": [],
+      "generatedModeGuidance": "Every text field in generation mode. Must not reuse the source's headings, taglines, claims, statistics, testimonials or names (checked against hashed 5-word shingles of the real copy).",
+      "licensing": "Generation-safe role: contains no source asset. It exists so a generation-mode page has a legal slot for every clone-only or blocked role.",
+      "allowedSlots": [
+        "generation mode only — see each section contract's generatedAssetRoles"
+      ],
+      "fileCount": 0,
+      "files": []
     }
-  }
+  },
+  "availabilityEnum": [
+    "clone-only",
+    "generation-safe",
+    "blocked-for-generation"
+  ],
+  "availabilityMeanings": {
+    "clone-only": "An Evergreen-owned asset. Reusable in CLONE mode for fidelity; REJECTED in generation mode, where a generationSafeSubstitutes role must be used instead.",
+    "generation-safe": "Contains no source asset (or only open-licensed design-language files). Usable in both modes.",
+    "blocked-for-generation": "A third-party or real-person asset. Present in the clone only as evidence of the source; REJECTED in generation mode with no look-alike allowed."
+  },
+  "modes": {
+    "clone": "Faithful reconstruction of evergreen.so for validation and fidelity work. Real Evergreen assets (clone-only roles) may be reused exactly; must-reuse-exact applies.",
+    "generation": "A new page for a different brand built from this design language. No real Evergreen brand name, logo, icons or brand artwork, product screenshots, badges / certifications, proprietary assets, copy, claims, URLs, people or customers. Only generation-safe roles."
+  },
+  "generationPolicyScope": "generationPolicy describes how a role may be used in CLONE mode. In GENERATION mode `availability` governs: clone-only and blocked-for-generation roles are rejected by schema/semantic_validate.py (GENERATION_MODE_* rules). `must-reuse-exact` is therefore valid ONLY in clone mode — every must-reuse-exact role is clone-only, enforced by extraction/verify_all.py.",
+  "generationModeForbidden": [
+    "the Evergreen logo / wordmark and favicon",
+    "Evergreen-specific icons and brand artwork (leaf and heart SVGs)",
+    "real product screenshots",
+    "real badges, certifications and review-platform marks",
+    "other proprietary Evergreen assets (editorial imagery) and unlicensed third-party stock",
+    "the Evergreen / Arketta brand names and domains",
+    "real Evergreen copy, claims and statistics",
+    "real URLs (only .example / .invalid)",
+    "real people and their photographs",
+    "real customers and partners and their logos",
+    "third-party embeds (scheduler, font kits)"
+  ],
+  "generationModeReplacements": [
+    "placeholder assets",
+    "generated illustrations and icons",
+    "user / operator-supplied assets"
+  ],
+  "pinnedAvailabilityNote": "Availability is pinned IN CODE (PINNED_AVAILABILITY in extraction/verify_all.py and schema/semantic_validate.py), independent of this file. Editing `availability` here alone fails verify_all."
 }

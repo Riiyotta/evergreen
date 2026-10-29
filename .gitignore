@@ -9,3 +9,7 @@ design-repo.zip
 
 # Untracked at the user's request. Still present on disk.
 README.md
+
+# Python bytecode
+__pycache__/
+*.pyc

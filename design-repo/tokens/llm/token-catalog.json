@@ -1,7 +1,8 @@
 {
   "$id": "tokens.llm.token-catalog",
-  "version": "1.0.0",
-  "description": "The curated, referenceable view of the token system \u2014 not the whole system. A generator references these names and never a raw literal. Keys mirror the real token files exactly so token-policy.json's categories resolve against something real.",
+  "version": "2.0.0",
+  "description": "The COMPLETE referenceable token set, derived by extraction/build_token_catalog.py from the real token files (never hand-edited). A PageSpec references these names in its optional `style` object and never a raw literal.",
+  "generatedBy": "extraction/build_token_catalog.py",
   "resolutionOrder": [
     "00-foundation",
     "themes/<mode>",
@@ -10,63 +11,1116 @@
     "permitted local overrides (see tokens/llm/token-policy.json)",
     "responsive overrides (max-wf-* only)"
   ],
-  "semantic": [
-    "border.default",
-    "border.formControl",
-    "border.formError",
-    "motion.drift",
-    "motion.overlayClose",
-    "motion.ui",
-    "radius.card",
-    "radius.control",
-    "radius.pillFull",
-    "radius.pillPrimary",
-    "radius.pillSecondary",
-    "radius.pillStat",
-    "surface.accent",
-    "surface.alt",
-    "surface.card",
-    "surface.inverse",
-    "surface.overlay",
-    "surface.page",
-    "surface.quote",
-    "text.body",
-    "text.onInverse",
-    "text.outsideRoot",
-    "text.primary"
-  ],
-  "foundationCategories": {
-    "color": "tokens/00-foundation/color.json",
-    "typography": "tokens/00-foundation/typography.json",
-    "radius": "tokens/00-foundation/radius.json",
-    "spacing": "tokens/00-foundation/spacing.json",
-    "border": "tokens/00-foundation/border.json",
-    "breakpoint": "tokens/00-foundation/breakpoint.json",
-    "elevation": "tokens/00-foundation/elevation.json",
-    "iconSize": "tokens/00-foundation/icon-size.json",
-    "motion": "tokens/00-foundation/motion.json",
-    "interaction": "tokens/00-foundation/interaction.json"
-  },
-  "layout": "tokens/30-layout/layout.json",
   "themes": {
-    "light": "tokens/themes/light.json"
+    "light": {
+      "file": "tokens/themes/light.json",
+      "resolves": [
+        "border.default",
+        "border.formControl",
+        "border.formError",
+        "surface.accent",
+        "surface.alt",
+        "surface.card",
+        "surface.inverse",
+        "surface.overlay",
+        "surface.page",
+        "surface.quote",
+        "text.body",
+        "text.onInverse",
+        "text.outsideRoot",
+        "text.primary"
+      ]
+    }
   },
-  "motionEasings": [
-    "drift",
-    "overlay-close",
-    "ui-default"
+  "fontFamilies": [
+    "font.headline",
+    "font.sans"
   ],
-  "motionDurations": [
-    "drift-card-a",
-    "drift-card-c",
-    "drift-default",
-    "hover-colors",
-    "overlay-close",
-    "overlay-open"
+  "styleSlots": {
+    "surface": {
+      "acceptsPrefix": "surface.",
+      "themeResolved": true
+    },
+    "text": {
+      "acceptsPrefix": "text.",
+      "themeResolved": true
+    },
+    "border": {
+      "acceptsPrefix": "border.",
+      "themeResolved": true
+    },
+    "radius": {
+      "acceptsPrefix": [
+        "radius."
+      ],
+      "themeResolved": false
+    },
+    "spacing": {
+      "acceptsPrefix": "spacing.",
+      "themeResolved": false
+    },
+    "fontFamily": {
+      "acceptsPrefix": "font.",
+      "themeResolved": false
+    },
+    "typeRole": {
+      "acceptsPrefix": "type.",
+      "themeResolved": false
+    }
+  },
+  "counts": {
+    "border": 3,
+    "breakpoint": 3,
+    "color": 13,
+    "color.scoped": 5,
+    "component": 14,
+    "elevation": 11,
+    "font": 2,
+    "iconSize": 12,
+    "motion": 9,
+    "radius": 8,
+    "semantic.border": 3,
+    "semantic.motion": 3,
+    "semantic.radius": 6,
+    "semantic.surface": 7,
+    "semantic.text": 4,
+    "spacing": 26,
+    "type": 30
+  },
+  "tokenCount": 159,
+  "tokens": [
+    {
+      "name": "border.default",
+      "category": "semantic.border",
+      "value": "#000000",
+      "source": "tokens/10-semantic/semantic.json#tokens.border.default",
+      "ref": "color.black"
+    },
+    {
+      "name": "border.formControl",
+      "category": "semantic.border",
+      "value": "#000000",
+      "source": "tokens/10-semantic/semantic.json#tokens.border.formControl",
+      "ref": "color.black"
+    },
+    {
+      "name": "border.formError",
+      "category": "semantic.border",
+      "value": "#000000",
+      "source": "tokens/10-semantic/semantic.json#tokens.border.formError",
+      "ref": "color.black"
+    },
+    {
+      "name": "borderWidth.default",
+      "category": "border",
+      "value": "2px",
+      "source": "tokens/00-foundation/border.json#widths.default"
+    },
+    {
+      "name": "borderWidth.form-control",
+      "category": "border",
+      "value": "1.5px",
+      "source": "tokens/00-foundation/border.json#widths.form-control"
+    },
+    {
+      "name": "borderWidth.form-error",
+      "category": "border",
+      "value": "1px",
+      "source": "tokens/00-foundation/border.json#widths.form-error"
+    },
+    {
+      "name": "breakpoint.max-wf-mini",
+      "category": "breakpoint",
+      "value": "479.98px",
+      "source": "tokens/00-foundation/breakpoint.json#screens.max-wf-mini"
+    },
+    {
+      "name": "breakpoint.max-wf-phone",
+      "category": "breakpoint",
+      "value": "767.98px",
+      "source": "tokens/00-foundation/breakpoint.json#screens.max-wf-phone"
+    },
+    {
+      "name": "breakpoint.max-wf-tablet",
+      "category": "breakpoint",
+      "value": "991.98px",
+      "source": "tokens/00-foundation/breakpoint.json#screens.max-wf-tablet"
+    },
+    {
+      "name": "color.black",
+      "category": "color",
+      "value": "#000000",
+      "source": "tokens/00-foundation/color.json#siteWide.black"
+    },
+    {
+      "name": "color.cool-1",
+      "category": "color",
+      "value": "#f8f3f0",
+      "source": "tokens/00-foundation/color.json#siteWide.cool-1"
+    },
+    {
+      "name": "color.cool-2",
+      "category": "color",
+      "value": "#fde6da",
+      "source": "tokens/00-foundation/color.json#siteWide.cool-2"
+    },
+    {
+      "name": "color.cream",
+      "category": "color",
+      "value": "#fffff3",
+      "source": "tokens/00-foundation/color.json#siteWide.cream"
+    },
+    {
+      "name": "color.cream-dark",
+      "category": "color",
+      "value": "#edede2",
+      "source": "tokens/00-foundation/color.json#siteWide.cream-dark"
+    },
+    {
+      "name": "color.leaf",
+      "category": "color",
+      "value": "#beedc0",
+      "source": "tokens/00-foundation/color.json#siteWide.leaf"
+    },
+    {
+      "name": "color.primary-green",
+      "category": "color",
+      "value": "#02a57e",
+      "source": "tokens/00-foundation/color.json#siteWide.primary-green"
+    },
+    {
+      "name": "color.quote-leaf",
+      "category": "color",
+      "value": "#c3f2c5",
+      "source": "tokens/00-foundation/color.json#siteWide.quote-leaf"
+    },
+    {
+      "name": "color.scoped.form.placeholder-grey",
+      "category": "color.scoped",
+      "value": "#999999",
+      "source": "tokens/00-foundation/color.json#scopedExceptions.form.placeholder-grey",
+      "scope": "LabelledField only (/contact, /referral)"
+    },
+    {
+      "name": "color.scoped.scheduler.accent",
+      "category": "color.scoped",
+      "value": "#34b11e",
+      "source": "tokens/00-foundation/color.json#scopedExceptions.scheduler.accent",
+      "scope": "SchedulerPlaceholder only"
+    },
+    {
+      "name": "color.scoped.scheduler.circle",
+      "category": "color.scoped",
+      "value": "#eff8ee",
+      "source": "tokens/00-foundation/color.json#scopedExceptions.scheduler.circle",
+      "scope": "SchedulerPlaceholder only"
+    },
+    {
+      "name": "color.scoped.scheduler.grey",
+      "category": "color.scoped",
+      "value": "#4d4d4d",
+      "source": "tokens/00-foundation/color.json#scopedExceptions.scheduler.grey",
+      "scope": "SchedulerPlaceholder only (weekday header, unavailable numerals)"
+    },
+    {
+      "name": "color.scoped.scheduler.text",
+      "category": "color.scoped",
+      "value": "#0b2f04",
+      "source": "tokens/00-foundation/color.json#scopedExceptions.scheduler.text",
+      "scope": "SchedulerPlaceholder only"
+    },
+    {
+      "name": "color.text-body",
+      "category": "color",
+      "value": "#333333",
+      "source": "tokens/00-foundation/color.json#siteWide.text-body"
+    },
+    {
+      "name": "color.text-default",
+      "category": "color",
+      "value": "#474747",
+      "source": "tokens/00-foundation/color.json#siteWide.text-default"
+    },
+    {
+      "name": "color.text-muted",
+      "category": "color",
+      "value": "#505363",
+      "source": "tokens/00-foundation/color.json#siteWide.text-muted"
+    },
+    {
+      "name": "color.text-strong",
+      "category": "color",
+      "value": "#000000",
+      "source": "tokens/00-foundation/color.json#siteWide.text-strong"
+    },
+    {
+      "name": "color.white",
+      "category": "color",
+      "value": "#ffffff",
+      "source": "tokens/00-foundation/color.json#siteWide.white"
+    },
+    {
+      "name": "component.arketta.padding",
+      "category": "component",
+      "value": "140px 100px; 40px 20px at <=479px",
+      "source": "tokens/20-component/component-tokens.json#tokens.arketta.padding",
+      "scope": "components/panel.arketta-cta"
+    },
+    {
+      "name": "component.arketta.radius.button",
+      "category": "component",
+      "value": "4px",
+      "source": "tokens/20-component/component-tokens.json#tokens.arketta.radius.button",
+      "scope": "components/panel.arketta-cta"
+    },
+    {
+      "name": "component.arketta.radius.panel",
+      "category": "component",
+      "value": "8px",
+      "source": "tokens/20-component/component-tokens.json#tokens.arketta.radius.panel",
+      "scope": "components/panel.arketta-cta"
+    },
+    {
+      "name": "component.esg.columnGap",
+      "category": "component",
+      "value": "6.91014em",
+      "source": "tokens/20-component/component-tokens.json#tokens.esg.columnGap",
+      "scope": "sections/feature.split-visual (esg variant)"
+    },
+    {
+      "name": "component.form.placeholder",
+      "category": "component",
+      "value": "#999999",
+      "source": "tokens/20-component/component-tokens.json#tokens.form.placeholder",
+      "scope": "primitives/input.text"
+    },
+    {
+      "name": "component.home.columnGap",
+      "category": "component",
+      "value": "9.91014em",
+      "source": "tokens/20-component/component-tokens.json#tokens.home.columnGap",
+      "scope": "sections/feature.seeds, sections/feature.report-csr"
+    },
+    {
+      "name": "component.newsletter.placeholder",
+      "category": "component",
+      "value": "black/60",
+      "source": "tokens/20-component/component-tokens.json#tokens.newsletter.placeholder",
+      "scope": "components/form.newsletter"
+    },
+    {
+      "name": "component.scheduler.accent",
+      "category": "component",
+      "value": "#34b11e",
+      "source": "tokens/20-component/component-tokens.json#tokens.scheduler.accent",
+      "scope": "components/block.scheduler-placeholder"
+    },
+    {
+      "name": "component.scheduler.circle",
+      "category": "component",
+      "value": "#eff8ee",
+      "source": "tokens/20-component/component-tokens.json#tokens.scheduler.circle",
+      "scope": "components/block.scheduler-placeholder"
+    },
+    {
+      "name": "component.scheduler.grey",
+      "category": "component",
+      "value": "#4d4d4d",
+      "source": "tokens/20-component/component-tokens.json#tokens.scheduler.grey",
+      "scope": "components/block.scheduler-placeholder"
+    },
+    {
+      "name": "component.scheduler.text",
+      "category": "component",
+      "value": "#0b2f04",
+      "source": "tokens/20-component/component-tokens.json#tokens.scheduler.text",
+      "scope": "components/block.scheduler-placeholder"
+    },
+    {
+      "name": "component.scheduler.widgetHeight",
+      "category": "component",
+      "value": "630px fixed",
+      "source": "tokens/20-component/component-tokens.json#tokens.scheduler.widgetHeight",
+      "scope": "components/card.calendly"
+    },
+    {
+      "name": "component.testimonial.logoWidth.home",
+      "category": "component",
+      "value": "w-[7.96em]",
+      "source": "tokens/20-component/component-tokens.json#tokens.testimonial.logoWidth.home",
+      "scope": "components/row.testimonials"
+    },
+    {
+      "name": "component.testimonial.logoWidth.pricing",
+      "category": "component",
+      "value": "w-[19.4941em]",
+      "source": "tokens/20-component/component-tokens.json#tokens.testimonial.logoWidth.pricing",
+      "scope": "components/row.testimonials"
+    },
+    {
+      "name": "elevation.z.card-above-leaves",
+      "category": "elevation",
+      "value": 100,
+      "source": "tokens/00-foundation/elevation.json#zIndexStops.card-above-leaves"
+    },
+    {
+      "name": "elevation.z.divider-band",
+      "category": "elevation",
+      "value": 200,
+      "source": "tokens/00-foundation/elevation.json#zIndexStops.divider-band"
+    },
+    {
+      "name": "elevation.z.divider-rule",
+      "category": "elevation",
+      "value": 201,
+      "source": "tokens/00-foundation/elevation.json#zIndexStops.divider-rule"
+    },
+    {
+      "name": "elevation.z.hero-heart",
+      "category": "elevation",
+      "value": 202,
+      "source": "tokens/00-foundation/elevation.json#zIndexStops.hero-heart"
+    },
+    {
+      "name": "elevation.z.image-above-leaves",
+      "category": "elevation",
+      "value": 20,
+      "source": "tokens/00-foundation/elevation.json#zIndexStops.image-above-leaves"
+    },
+    {
+      "name": "elevation.z.leaf-default",
+      "category": "elevation",
+      "value": 1,
+      "source": "tokens/00-foundation/elevation.json#zIndexStops.leaf-default"
+    },
+    {
+      "name": "elevation.z.menu-button",
+      "category": "elevation",
+      "value": 2147483647,
+      "source": "tokens/00-foundation/elevation.json#zIndexStops.menu-button"
+    },
+    {
+      "name": "elevation.z.nav",
+      "category": "elevation",
+      "value": 999999998,
+      "source": "tokens/00-foundation/elevation.json#zIndexStops.nav"
+    },
+    {
+      "name": "elevation.z.overlay",
+      "category": "elevation",
+      "value": 999999,
+      "source": "tokens/00-foundation/elevation.json#zIndexStops.overlay"
+    },
+    {
+      "name": "elevation.z.recognition-line",
+      "category": "elevation",
+      "value": 201,
+      "source": "tokens/00-foundation/elevation.json#zIndexStops.recognition-line"
+    },
+    {
+      "name": "elevation.z.trial-modal",
+      "category": "elevation",
+      "value": 999999999,
+      "source": "tokens/00-foundation/elevation.json#zIndexStops.trial-modal"
+    },
+    {
+      "name": "font.headline",
+      "category": "font",
+      "value": "'Gloock', 'ivypresto-headline', ui-serif, Georgia, serif",
+      "source": "tokens/00-foundation/typography.json#families.headline"
+    },
+    {
+      "name": "font.sans",
+      "category": "font",
+      "value": "'Rubik', 'Rubik Fallback', ui-sans-serif, system-ui, sans-serif",
+      "source": "tokens/00-foundation/typography.json#families.sans"
+    },
+    {
+      "name": "iconSize.feature-icon",
+      "category": "iconSize",
+      "value": "h-[3.24544em]",
+      "source": "tokens/00-foundation/icon-size.json#sizes.feature-icon"
+    },
+    {
+      "name": "iconSize.g2-logo",
+      "category": "iconSize",
+      "value": "w-[6.03104em]",
+      "source": "tokens/00-foundation/icon-size.json#sizes.g2-logo"
+    },
+    {
+      "name": "iconSize.g2-star",
+      "category": "iconSize",
+      "value": "w-[3.03685em]",
+      "source": "tokens/00-foundation/icon-size.json#sizes.g2-star"
+    },
+    {
+      "name": "iconSize.hero-heart",
+      "category": "iconSize",
+      "value": "h-[2.31476em] w-[2.64134em]",
+      "source": "tokens/00-foundation/icon-size.json#sizes.hero-heart"
+    },
+    {
+      "name": "iconSize.leaf-art-regular",
+      "category": "iconSize",
+      "value": "7.10621em x 12.308em",
+      "source": "tokens/00-foundation/icon-size.json#sizes.leaf-art-regular"
+    },
+    {
+      "name": "iconSize.leaf-art-small",
+      "category": "iconSize",
+      "value": "8.34021em x 14.7087em",
+      "source": "tokens/00-foundation/icon-size.json#sizes.leaf-art-small"
+    },
+    {
+      "name": "iconSize.leaf-art-spike",
+      "category": "iconSize",
+      "value": "1.20175em x 7.32222em",
+      "source": "tokens/00-foundation/icon-size.json#sizes.leaf-art-spike"
+    },
+    {
+      "name": "iconSize.leaf-badge",
+      "category": "iconSize",
+      "value": "0.9em",
+      "source": "tokens/00-foundation/icon-size.json#sizes.leaf-badge"
+    },
+    {
+      "name": "iconSize.leaf-inline",
+      "category": "iconSize",
+      "value": "1.26708em",
+      "source": "tokens/00-foundation/icon-size.json#sizes.leaf-inline"
+    },
+    {
+      "name": "iconSize.platform-logo",
+      "category": "iconSize",
+      "value": "w-[3.47539em]",
+      "source": "tokens/00-foundation/icon-size.json#sizes.platform-logo"
+    },
+    {
+      "name": "iconSize.social-chip",
+      "category": "iconSize",
+      "value": "size-[4em]",
+      "source": "tokens/00-foundation/icon-size.json#sizes.social-chip"
+    },
+    {
+      "name": "iconSize.tick",
+      "category": "iconSize",
+      "value": "w-[2em]",
+      "source": "tokens/00-foundation/icon-size.json#sizes.tick"
+    },
+    {
+      "name": "motion.drift",
+      "category": "semantic.motion",
+      "value": null,
+      "source": "tokens/10-semantic/semantic.json#tokens.motion.drift",
+      "ref": "motion.easings.drift"
+    },
+    {
+      "name": "motion.duration.drift-card-a",
+      "category": "motion",
+      "value": 1300,
+      "source": "tokens/00-foundation/motion.json#durations.drift-card-a"
+    },
+    {
+      "name": "motion.duration.drift-card-c",
+      "category": "motion",
+      "value": 1000,
+      "source": "tokens/00-foundation/motion.json#durations.drift-card-c"
+    },
+    {
+      "name": "motion.duration.drift-default",
+      "category": "motion",
+      "value": 1500,
+      "source": "tokens/00-foundation/motion.json#durations.drift-default"
+    },
+    {
+      "name": "motion.duration.hover-colors",
+      "category": "motion",
+      "value": 150,
+      "source": "tokens/00-foundation/motion.json#durations.hover-colors"
+    },
+    {
+      "name": "motion.duration.overlay-close",
+      "category": "motion",
+      "value": 500,
+      "source": "tokens/00-foundation/motion.json#durations.overlay-close"
+    },
+    {
+      "name": "motion.duration.overlay-open",
+      "category": "motion",
+      "value": 1000,
+      "source": "tokens/00-foundation/motion.json#durations.overlay-open"
+    },
+    {
+      "name": "motion.easing.drift",
+      "category": "motion",
+      "value": "cubic-bezier(0.455, 0.03, 0.515, 0.955)",
+      "source": "tokens/00-foundation/motion.json#easings.drift"
+    },
+    {
+      "name": "motion.easing.overlay-close",
+      "category": "motion",
+      "value": "cubic-bezier(0.55, 0.085, 0.68, 0.53)",
+      "source": "tokens/00-foundation/motion.json#easings.overlay-close"
+    },
+    {
+      "name": "motion.easing.ui-default",
+      "category": "motion",
+      "value": "cubic-bezier(0.4, 0, 0.2, 1)",
+      "source": "tokens/00-foundation/motion.json#easings.ui-default"
+    },
+    {
+      "name": "motion.overlayClose",
+      "category": "semantic.motion",
+      "value": null,
+      "source": "tokens/10-semantic/semantic.json#tokens.motion.overlayClose",
+      "ref": "motion.easings.overlay-close"
+    },
+    {
+      "name": "motion.ui",
+      "category": "semantic.motion",
+      "value": null,
+      "source": "tokens/10-semantic/semantic.json#tokens.motion.ui",
+      "ref": "motion.easings.ui-default"
+    },
+    {
+      "name": "radius.card",
+      "category": "semantic.radius",
+      "value": null,
+      "source": "tokens/10-semantic/semantic.json#tokens.radius.card",
+      "ref": "radius.card"
+    },
+    {
+      "name": "radius.control",
+      "category": "semantic.radius",
+      "value": null,
+      "source": "tokens/10-semantic/semantic.json#tokens.radius.control",
+      "ref": "radius.input"
+    },
+    {
+      "name": "radius.pillFull",
+      "category": "semantic.radius",
+      "value": null,
+      "source": "tokens/10-semantic/semantic.json#tokens.radius.pillFull",
+      "ref": "radius.full"
+    },
+    {
+      "name": "radius.pillPrimary",
+      "category": "semantic.radius",
+      "value": null,
+      "source": "tokens/10-semantic/semantic.json#tokens.radius.pillPrimary",
+      "ref": "radius.pill-cta"
+    },
+    {
+      "name": "radius.pillSecondary",
+      "category": "semantic.radius",
+      "value": null,
+      "source": "tokens/10-semantic/semantic.json#tokens.radius.pillSecondary",
+      "ref": "radius.pill-nav"
+    },
+    {
+      "name": "radius.pillStat",
+      "category": "semantic.radius",
+      "value": null,
+      "source": "tokens/10-semantic/semantic.json#tokens.radius.pillStat",
+      "ref": "radius.pill-stat"
+    },
+    {
+      "name": "radius.scale.arketta-button",
+      "category": "radius",
+      "value": "4px",
+      "source": "tokens/00-foundation/radius.json#scale.arketta-button"
+    },
+    {
+      "name": "radius.scale.arketta-panel",
+      "category": "radius",
+      "value": "8px",
+      "source": "tokens/00-foundation/radius.json#scale.arketta-panel"
+    },
+    {
+      "name": "radius.scale.card",
+      "category": "radius",
+      "value": "10px",
+      "source": "tokens/00-foundation/radius.json#scale.card"
+    },
+    {
+      "name": "radius.scale.full",
+      "category": "radius",
+      "value": "9999px",
+      "source": "tokens/00-foundation/radius.json#scale.full"
+    },
+    {
+      "name": "radius.scale.input",
+      "category": "radius",
+      "value": "7px",
+      "source": "tokens/00-foundation/radius.json#scale.input"
+    },
+    {
+      "name": "radius.scale.pill-cta",
+      "category": "radius",
+      "value": "40.5px",
+      "source": "tokens/00-foundation/radius.json#scale.pill-cta"
+    },
+    {
+      "name": "radius.scale.pill-nav",
+      "category": "radius",
+      "value": "30px",
+      "source": "tokens/00-foundation/radius.json#scale.pill-nav"
+    },
+    {
+      "name": "radius.scale.pill-stat",
+      "category": "radius",
+      "value": "46px",
+      "source": "tokens/00-foundation/radius.json#scale.pill-stat"
+    },
+    {
+      "name": "spacing.block",
+      "category": "spacing",
+      "value": "4.2em",
+      "source": "tokens/00-foundation/spacing.json#universalBlockRule",
+      "classString": "my-[4.2em] text-center max-wf-mini:my-[3.5em]"
+    },
+    {
+      "name": "spacing.column.108em",
+      "category": "spacing",
+      "value": "108em",
+      "source": "tokens/00-foundation/spacing.json#namedColumnWidths"
+    },
+    {
+      "name": "spacing.column.120em",
+      "category": "spacing",
+      "value": "120em",
+      "source": "tokens/00-foundation/spacing.json#namedColumnWidths"
+    },
+    {
+      "name": "spacing.column.34.4013em",
+      "category": "spacing",
+      "value": "34.4013em",
+      "source": "tokens/00-foundation/spacing.json#namedColumnWidths"
+    },
+    {
+      "name": "spacing.column.39.1132em",
+      "category": "spacing",
+      "value": "39.1132em",
+      "source": "tokens/00-foundation/spacing.json#namedColumnWidths"
+    },
+    {
+      "name": "spacing.column.42em",
+      "category": "spacing",
+      "value": "42em",
+      "source": "tokens/00-foundation/spacing.json#namedColumnWidths"
+    },
+    {
+      "name": "spacing.column.50.4013em",
+      "category": "spacing",
+      "value": "50.4013em",
+      "source": "tokens/00-foundation/spacing.json#namedColumnWidths"
+    },
+    {
+      "name": "spacing.column.50em",
+      "category": "spacing",
+      "value": "50em",
+      "source": "tokens/00-foundation/spacing.json#namedColumnWidths"
+    },
+    {
+      "name": "spacing.column.70.3em",
+      "category": "spacing",
+      "value": "70.3em",
+      "source": "tokens/00-foundation/spacing.json#namedColumnWidths"
+    },
+    {
+      "name": "spacing.column.81.25em",
+      "category": "spacing",
+      "value": "81.25em",
+      "source": "tokens/00-foundation/spacing.json#namedColumnWidths"
+    },
+    {
+      "name": "spacing.column.87em",
+      "category": "spacing",
+      "value": "87em",
+      "source": "tokens/00-foundation/spacing.json#namedColumnWidths"
+    },
+    {
+      "name": "spacing.column.95.2213em",
+      "category": "spacing",
+      "value": "95.2213em",
+      "source": "tokens/00-foundation/spacing.json#namedColumnWidths"
+    },
+    {
+      "name": "spacing.column.measuredFrom",
+      "category": "spacing",
+      "value": "measuredFrom",
+      "source": "tokens/00-foundation/spacing.json#namedColumnWidths"
+    },
+    {
+      "name": "spacing.heroTop",
+      "category": "spacing",
+      "value": "10.2em",
+      "source": "tokens/00-foundation/spacing.json#heroTopPadding"
+    },
+    {
+      "name": "spacing.measure.11ch",
+      "category": "spacing",
+      "value": "11ch",
+      "source": "tokens/00-foundation/spacing.json#chUnits.values"
+    },
+    {
+      "name": "spacing.measure.40ch",
+      "category": "spacing",
+      "value": "40ch",
+      "source": "tokens/00-foundation/spacing.json#chUnits.values"
+    },
+    {
+      "name": "spacing.measure.49ch",
+      "category": "spacing",
+      "value": "49ch",
+      "source": "tokens/00-foundation/spacing.json#chUnits.values"
+    },
+    {
+      "name": "spacing.measure.59ch",
+      "category": "spacing",
+      "value": "59ch",
+      "source": "tokens/00-foundation/spacing.json#chUnits.values"
+    },
+    {
+      "name": "spacing.measure.60ch",
+      "category": "spacing",
+      "value": "60ch",
+      "source": "tokens/00-foundation/spacing.json#chUnits.values"
+    },
+    {
+      "name": "spacing.measure.80ch",
+      "category": "spacing",
+      "value": "80ch",
+      "source": "tokens/00-foundation/spacing.json#chUnits.values"
+    },
+    {
+      "name": "spacing.sectionPadding.content-page",
+      "category": "spacing",
+      "value": "0 (inner pt-[10.2em]) / 5em",
+      "source": "tokens/00-foundation/spacing.json#sectionPaddingPairs.content-page"
+    },
+    {
+      "name": "spacing.sectionPadding.home-section-f",
+      "category": "spacing",
+      "value": "8em / 0",
+      "source": "tokens/00-foundation/spacing.json#sectionPaddingPairs.home-section-f"
+    },
+    {
+      "name": "spacing.sectionPadding.referral-tiers",
+      "category": "spacing",
+      "value": "0 / 5em",
+      "source": "tokens/00-foundation/spacing.json#sectionPaddingPairs.referral-tiers"
+    },
+    {
+      "name": "spacing.sectionPadding.sdg",
+      "category": "spacing",
+      "value": "18em / 0",
+      "source": "tokens/00-foundation/spacing.json#sectionPaddingPairs.sdg"
+    },
+    {
+      "name": "spacing.sectionPadding.social-proof",
+      "category": "spacing",
+      "value": "15em / 10em",
+      "source": "tokens/00-foundation/spacing.json#sectionPaddingPairs.social-proof"
+    },
+    {
+      "name": "spacing.sectionPadding.standard-dark",
+      "category": "spacing",
+      "value": "18em / 5em",
+      "source": "tokens/00-foundation/spacing.json#sectionPaddingPairs.standard-dark"
+    },
+    {
+      "name": "surface.accent",
+      "category": "semantic.surface",
+      "value": "#beedc0",
+      "source": "tokens/10-semantic/semantic.json#tokens.surface.accent",
+      "ref": "color.leaf"
+    },
+    {
+      "name": "surface.alt",
+      "category": "semantic.surface",
+      "value": "#edede2",
+      "source": "tokens/10-semantic/semantic.json#tokens.surface.alt",
+      "ref": "color.cream-dark"
+    },
+    {
+      "name": "surface.card",
+      "category": "semantic.surface",
+      "value": "#ffffff",
+      "source": "tokens/10-semantic/semantic.json#tokens.surface.card",
+      "ref": "color.white"
+    },
+    {
+      "name": "surface.inverse",
+      "category": "semantic.surface",
+      "value": "#000000",
+      "source": "tokens/10-semantic/semantic.json#tokens.surface.inverse",
+      "ref": "color.black"
+    },
+    {
+      "name": "surface.overlay",
+      "category": "semantic.surface",
+      "value": "#ffffff",
+      "source": "tokens/10-semantic/semantic.json#tokens.surface.overlay",
+      "ref": "color.white"
+    },
+    {
+      "name": "surface.page",
+      "category": "semantic.surface",
+      "value": "#fffff3",
+      "source": "tokens/10-semantic/semantic.json#tokens.surface.page",
+      "ref": "color.cream"
+    },
+    {
+      "name": "surface.quote",
+      "category": "semantic.surface",
+      "value": "#c3f2c5",
+      "source": "tokens/10-semantic/semantic.json#tokens.surface.quote",
+      "ref": "color.quote-leaf"
+    },
+    {
+      "name": "text.body",
+      "category": "semantic.text",
+      "value": "#333333",
+      "source": "tokens/10-semantic/semantic.json#tokens.text.body",
+      "ref": "color.text-body"
+    },
+    {
+      "name": "text.onInverse",
+      "category": "semantic.text",
+      "value": "#ffffff",
+      "source": "tokens/10-semantic/semantic.json#tokens.text.onInverse",
+      "ref": "color.white"
+    },
+    {
+      "name": "text.outsideRoot",
+      "category": "semantic.text",
+      "value": "#474747",
+      "source": "tokens/10-semantic/semantic.json#tokens.text.outsideRoot",
+      "ref": "color.text-default"
+    },
+    {
+      "name": "text.primary",
+      "category": "semantic.text",
+      "value": "#000000",
+      "source": "tokens/10-semantic/semantic.json#tokens.text.primary",
+      "ref": "color.text-strong"
+    },
+    {
+      "name": "type.arketta.h2",
+      "category": "type",
+      "value": "3em",
+      "source": "tokens/00-foundation/typography.json#roles.arketta.h2",
+      "family": "headline"
+    },
+    {
+      "name": "type.badge.label",
+      "category": "type",
+      "value": "1.4375em",
+      "source": "tokens/00-foundation/typography.json#roles.badge.label",
+      "family": null
+    },
+    {
+      "name": "type.button.trial",
+      "category": "type",
+      "value": "1.875em",
+      "source": "tokens/00-foundation/typography.json#roles.button.trial",
+      "family": null
+    },
+    {
+      "name": "type.card.cta",
+      "category": "type",
+      "value": "1.75em",
+      "source": "tokens/00-foundation/typography.json#roles.card.cta",
+      "family": null
+    },
+    {
+      "name": "type.card.description",
+      "category": "type",
+      "value": "1.5625em",
+      "source": "tokens/00-foundation/typography.json#roles.card.description",
+      "family": null
+    },
+    {
+      "name": "type.card.title",
+      "category": "type",
+      "value": "3.5em",
+      "source": "tokens/00-foundation/typography.json#roles.card.title",
+      "family": "headline"
+    },
+    {
+      "name": "type.date-line",
+      "category": "type",
+      "value": "1em",
+      "source": "tokens/00-foundation/typography.json#roles.date-line",
+      "family": null
+    },
+    {
+      "name": "type.display.h1",
+      "category": "type",
+      "value": "6.125em",
+      "source": "tokens/00-foundation/typography.json#roles.display.h1",
+      "family": "headline"
+    },
+    {
+      "name": "type.display.h2",
+      "category": "type",
+      "value": "4.5em",
+      "source": "tokens/00-foundation/typography.json#roles.display.h2",
+      "family": "headline"
+    },
+    {
+      "name": "type.display.h2-large",
+      "category": "type",
+      "value": "6.125em",
+      "source": "tokens/00-foundation/typography.json#roles.display.h2-large",
+      "family": "headline"
+    },
+    {
+      "name": "type.footer.legal",
+      "category": "type",
+      "value": "1.5em",
+      "source": "tokens/00-foundation/typography.json#roles.footer.legal",
+      "family": null
+    },
+    {
+      "name": "type.footer.link",
+      "category": "type",
+      "value": "1.6875em",
+      "source": "tokens/00-foundation/typography.json#roles.footer.link",
+      "family": null
+    },
+    {
+      "name": "type.form.control",
+      "category": "type",
+      "value": "1.75em",
+      "source": "tokens/00-foundation/typography.json#roles.form.control",
+      "family": null
+    },
+    {
+      "name": "type.form.label",
+      "category": "type",
+      "value": "1.75em",
+      "source": "tokens/00-foundation/typography.json#roles.form.label",
+      "family": null
+    },
+    {
+      "name": "type.form.submit",
+      "category": "type",
+      "value": "1.75em",
+      "source": "tokens/00-foundation/typography.json#roles.form.submit",
+      "family": null
+    },
+    {
+      "name": "type.proof.eyebrow",
+      "category": "type",
+      "value": "2.5em",
+      "source": "tokens/00-foundation/typography.json#roles.proof.eyebrow",
+      "family": null
+    },
+    {
+      "name": "type.proof.heading",
+      "category": "type",
+      "value": "2.5em",
+      "source": "tokens/00-foundation/typography.json#roles.proof.heading",
+      "family": null
+    },
+    {
+      "name": "type.richtext.blockquote",
+      "category": "type",
+      "value": "2.3125em",
+      "source": "tokens/00-foundation/typography.json#roles.richtext.blockquote",
+      "family": null
+    },
+    {
+      "name": "type.richtext.figcaption",
+      "category": "type",
+      "value": "1em",
+      "source": "tokens/00-foundation/typography.json#roles.richtext.figcaption",
+      "family": null
+    },
+    {
+      "name": "type.richtext.h2",
+      "category": "type",
+      "value": "4.5em",
+      "source": "tokens/00-foundation/typography.json#roles.richtext.h2",
+      "family": "headline"
+    },
+    {
+      "name": "type.richtext.h2.rich-text-h1",
+      "category": "type",
+      "value": "6.125em",
+      "source": "tokens/00-foundation/typography.json#roles.richtext.h2.rich-text-h1",
+      "family": null
+    },
+    {
+      "name": "type.richtext.h3",
+      "category": "type",
+      "value": "2.5em",
+      "source": "tokens/00-foundation/typography.json#roles.richtext.h3",
+      "family": "sans"
+    },
+    {
+      "name": "type.richtext.h4",
+      "category": "type",
+      "value": "1.88em",
+      "source": "tokens/00-foundation/typography.json#roles.richtext.h4",
+      "family": null
+    },
+    {
+      "name": "type.richtext.list",
+      "category": "type",
+      "value": "1.75em",
+      "source": "tokens/00-foundation/typography.json#roles.richtext.list",
+      "family": null
+    },
+    {
+      "name": "type.sdg.goal-label",
+      "category": "type",
+      "value": "1.7em",
+      "source": "tokens/00-foundation/typography.json#roles.sdg.goal-label",
+      "family": null
+    },
+    {
+      "name": "type.serif-subheading",
+      "category": "type",
+      "value": "3.125em",
+      "source": "tokens/00-foundation/typography.json#roles.serif-subheading",
+      "family": "headline"
+    },
+    {
+      "name": "type.small-print",
+      "category": "type",
+      "value": "1.4375em",
+      "source": "tokens/00-foundation/typography.json#roles.small-print",
+      "family": null
+    },
+    {
+      "name": "type.testimonial.attribution",
+      "category": "type",
+      "value": "1.9375em",
+      "source": "tokens/00-foundation/typography.json#roles.testimonial.attribution",
+      "family": null
+    },
+    {
+      "name": "type.testimonial.quote",
+      "category": "type",
+      "value": "2.3em",
+      "source": "tokens/00-foundation/typography.json#roles.testimonial.quote",
+      "family": null
+    },
+    {
+      "name": "type.value-badge.label",
+      "category": "type",
+      "value": "1.625em",
+      "source": "tokens/00-foundation/typography.json#roles.value-badge.label",
+      "family": null
+    }
   ],
   "hardRules": [
     "Lengths stay in `em` wherever the source uses `em`; never convert em to px.",
-    "`ch` values stay in `ch` \u2014 49ch is 580.714px on an 18.667px paragraph but 1981.52px on a 65.333px heading, so flattening it to px breaks the layout.",
+    "`ch` values stay in `ch`.",
+    "Zero gradients, zero box-shadows: elevation is z-index only.",
     "The .marketing-root em engine (tokens/30-layout/layout.json) governs every length in the system."
   ]
 }

@@ -1,0 +1,380 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://evergreen-clone.local/design-repo/schema/section-contract.schema.json",
+  "title": "Evergreen clone section contract",
+  "description": "CLOSED shape of every file under sections/. additionalProperties:false: a new key must be added here deliberately. extraction/verify_all.py validates every contract against it.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "$id",
+    "layer",
+    "category",
+    "purpose",
+    "content",
+    "constraints",
+    "motion",
+    "motionFieldSet",
+    "motionIsClosed",
+    "responsive",
+    "measuredFrom",
+    "implementedBy",
+    "source",
+    "semantic",
+    "retrievalEligible",
+    "generatedAssetRoles"
+  ],
+  "properties": {
+    "$id": {
+      "type": "string",
+      "pattern": "^sections\\.[a-z]+\\.[a-z0-9-]+$"
+    },
+    "accessibilityException": {
+      "type": "string"
+    },
+    "assetRole": {
+      "enum": [
+        "brand.icon",
+        "brand.leaf-art",
+        "brand.logo",
+        "editorial.hero-image",
+        "editorial.stock-photo",
+        "generated.copy",
+        "generated.icon",
+        "generated.illustration",
+        "operator.supplied-asset",
+        "person.likeness",
+        "placeholder.badge",
+        "placeholder.brand-mark",
+        "placeholder.company-logo",
+        "placeholder.person-avatar",
+        "placeholder.screenshot",
+        "placeholder.url",
+        "product.badge",
+        "product.screenshot",
+        "site.favicon",
+        "third-party.platform-logo",
+        "third-party.review-mark",
+        "third-party.trademark",
+        "typeface.webfont"
+      ]
+    },
+    "assetRoles": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "brand.icon",
+          "brand.leaf-art",
+          "brand.logo",
+          "editorial.hero-image",
+          "editorial.stock-photo",
+          "generated.copy",
+          "generated.icon",
+          "generated.illustration",
+          "operator.supplied-asset",
+          "person.likeness",
+          "placeholder.badge",
+          "placeholder.brand-mark",
+          "placeholder.company-logo",
+          "placeholder.person-avatar",
+          "placeholder.screenshot",
+          "placeholder.url",
+          "product.badge",
+          "product.screenshot",
+          "site.favicon",
+          "third-party.platform-logo",
+          "third-party.review-mark",
+          "third-party.trademark",
+          "typeface.webfont"
+        ]
+      }
+    },
+    "blockCount": {
+      "type": "integer"
+    },
+    "bodyLineCorrection": {
+      "type": "string"
+    },
+    "category": {
+      "enum": [
+        "chrome",
+        "content",
+        "conversion",
+        "feature",
+        "form",
+        "hero",
+        "listing",
+        "pricing",
+        "proof",
+        "story",
+        "structure"
+      ],
+      "description": "Legacy design-family category used by the adjacency rules. NOT the AI-facing taxonomy: see semantic.category."
+    },
+    "chRule": {
+      "type": "string"
+    },
+    "columnGapNote": {
+      "type": "string"
+    },
+    "complianceNote": {
+      "type": "string"
+    },
+    "composes": {
+      "type": "array"
+    },
+    "constraints": {
+      "type": "object"
+    },
+    "container": {
+      "type": "string"
+    },
+    "containerVariants": {
+      "type": "object"
+    },
+    "content": {
+      "type": "object"
+    },
+    "contrastNote": {
+      "type": "string"
+    },
+    "copyPolicy": {
+      "type": "string"
+    },
+    "correction": {
+      "type": "string"
+    },
+    "criticalRule": {
+      "type": "string"
+    },
+    "decomposition": {
+      "type": "string"
+    },
+    "dedupeNote": {
+      "type": "string"
+    },
+    "deltasFromHome": {
+      "type": "array"
+    },
+    "evidenceGap": {
+      "type": "string"
+    },
+    "externalEmbedPolicy": {
+      "type": "string"
+    },
+    "externalLinks": {
+      "type": "string"
+    },
+    "generatedAssetRoles": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "brand.icon",
+          "brand.leaf-art",
+          "brand.logo",
+          "editorial.hero-image",
+          "editorial.stock-photo",
+          "generated.copy",
+          "generated.icon",
+          "generated.illustration",
+          "operator.supplied-asset",
+          "person.likeness",
+          "placeholder.badge",
+          "placeholder.brand-mark",
+          "placeholder.company-logo",
+          "placeholder.person-avatar",
+          "placeholder.screenshot",
+          "placeholder.url",
+          "product.badge",
+          "product.screenshot",
+          "site.favicon",
+          "third-party.platform-logo",
+          "third-party.review-mark",
+          "third-party.trademark",
+          "typeface.webfont"
+        ]
+      },
+      "description": "The generation-safe asset roles a GENERATION-mode node of this section may use."
+    },
+    "geometry": {
+      "type": "string"
+    },
+    "headingBreakCorrection": {
+      "type": "string"
+    },
+    "headingLevel": {
+      "type": "object"
+    },
+    "implementedBy": {
+      "type": [
+        "array",
+        "string"
+      ]
+    },
+    "knownArtefact": {
+      "type": "string"
+    },
+    "layer": {
+      "const": "sections"
+    },
+    "linkListDelta": {
+      "type": "string"
+    },
+    "maxWordsBasis": {
+      "type": "string"
+    },
+    "measuredFrom": {
+      "type": "string"
+    },
+    "motion": {
+      "type": "object"
+    },
+    "motionClosureScope": {
+      "type": "string"
+    },
+    "motionDocumentationFields": {
+      "type": "array"
+    },
+    "motionFieldSet": {
+      "type": "array"
+    },
+    "motionIsClosed": {
+      "const": true
+    },
+    "negatives": {
+      "type": "array"
+    },
+    "partnerDelta": {
+      "type": "string"
+    },
+    "purpose": {
+      "type": "string"
+    },
+    "quirk": {
+      "type": "string"
+    },
+    "renderedBy": {
+      "type": "string"
+    },
+    "responsive": {
+      "type": "object"
+    },
+    "retrievalEligible": {
+      "type": "boolean",
+      "description": "R8. false only for runtime / utility UI, pinned in code in schema/semantic_validate.py and extraction/verify_all.py."
+    },
+    "retrievalIneligibleReason": {
+      "type": "string",
+      "minLength": 30
+    },
+    "reuseNote": {
+      "type": "string"
+    },
+    "rowCount": {
+      "type": "integer"
+    },
+    "rowCountCorrection": {
+      "type": "string"
+    },
+    "semantic": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "category"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "category": {
+          "enum": [
+            "CONTENT",
+            "CONVERSION",
+            "EDITORIAL",
+            "FEATURES",
+            "HERO",
+            "LISTING",
+            "PRICING",
+            "PROOF",
+            "SHELL",
+            "STRUCTURE"
+          ]
+        }
+      },
+      "description": "TAXONOMY: what the AI sees. semantic.id equals the contract id (without the 'sections.' prefix); never decided by wrapper / class naming."
+    },
+    "sharedVerbatim": {
+      "type": "string"
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "tag",
+        "file",
+        "lines"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^src:"
+        },
+        "tag": {
+          "type": "string",
+          "pattern": "^[A-Za-z][\\w.]*$"
+        },
+        "file": {
+          "type": "string",
+          "pattern": "^(src/|index\\.html)"
+        },
+        "lines": {
+          "type": "string",
+          "pattern": "^\\d+-\\d+$"
+        }
+      },
+      "description": "PROVENANCE: where the rendered DOM comes from. Derived by extraction/build_section_provenance.py; verify_all re-reads the file and requires `<tag` on the first cited line."
+    },
+    "states": {
+      "type": "string"
+    },
+    "surfaceNote": {
+      "type": "string"
+    },
+    "variants": {
+      "type": "object"
+    },
+    "verbatimQuirk": {
+      "type": "string"
+    },
+    "verbatimQuirks": {
+      "type": "array"
+    },
+    "wrapNote": {
+      "type": "string"
+    },
+    "wrapWarning": {
+      "type": "string"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "retrievalEligible": {
+            "const": false
+          }
+        },
+        "required": [
+          "retrievalEligible"
+        ]
+      },
+      "then": {
+        "required": [
+          "retrievalIneligibleReason"
+        ]
+      }
+    }
+  ]
+}

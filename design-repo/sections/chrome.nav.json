@@ -67,5 +67,24 @@
     "hamburgerMotion",
     "note",
     "overlayMotion"
+  ],
+  "source": {
+    "id": "src:Nav:div@42",
+    "tag": "div",
+    "file": "src/components/Nav.jsx",
+    "lines": "42-150"
+  },
+  "semantic": {
+    "id": "chrome.nav",
+    "category": "SHELL"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": [
+    "operator.supplied-asset",
+    "placeholder.brand-mark",
+    "placeholder.url"
+  ],
+  "assetRoles": [
+    "brand.logo"
   ]
 }

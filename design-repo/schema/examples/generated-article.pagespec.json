@@ -1,0 +1,355 @@
+{
+  "pageSpecVersion": "2.0.0",
+  "mode": "generation",
+  "theme": "light",
+  "route": "/blog/keep-thanks-specific",
+  "template": "T-ARTICLE",
+  "title": "Keep thanks specific (example)",
+  "evidenceLevel": "measured-sampled",
+  "nodes": [
+    {
+      "section": "chrome.announcement-banner",
+      "required": true,
+      "repeatable": false,
+      "content": {
+        "message": "New: monthly appreciation digests for managers.",
+        "linkLabel": "Read the note"
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "delayMs": 0,
+        "staggerMs": 0,
+        "reducedMotionFallback": "none-required-static",
+        "implementationStatus": "static-by-design"
+      }
+    },
+    {
+      "section": "chrome.nav",
+      "required": true,
+      "repeatable": false,
+      "content": {
+        "desktopLinks": [
+          "Home",
+          "Product",
+          "Pricing",
+          "Stories",
+          "Guides",
+          "Sign in"
+        ],
+        "overlayLinks": [
+          "Home",
+          "Product",
+          "Pricing",
+          "Stories",
+          "Guides",
+          "Book a call",
+          "Sign in"
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "delayMs": 0,
+        "staggerMs": 0,
+        "reducedMotionFallback": "none-required-static",
+        "implementationStatus": "static-by-design"
+      },
+      "assetRefs": [
+        {
+          "assetRole": "placeholder.brand-mark",
+          "src": "https://assets.fernway.example/fernway-mark.svg",
+          "alt": "Fernway"
+        }
+      ]
+    },
+    {
+      "section": "hero.page-head",
+      "required": true,
+      "repeatable": false,
+      "variant": "badge+h1+date",
+      "content": {
+        "badgeLabel": "Journal",
+        "h1": "Keep thanks specific, short and close to the work",
+        "lede": "Published on an example date"
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "delayMs": 0,
+        "staggerMs": 0,
+        "reducedMotionFallback": "none-required-static",
+        "implementationStatus": "static-by-design"
+      }
+    },
+    {
+      "section": "content.rich-text",
+      "required": true,
+      "repeatable": true,
+      "variant": "grouped",
+      "content": {
+        "shape": "grouped",
+        "groupedSections": [
+          {
+            "heading": "Why detail matters",
+            "paragraphs": [
+              "A note that names the task tells the person what to keep doing."
+            ]
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "delayMs": 0,
+        "staggerMs": 0,
+        "reducedMotionFallback": "none-required-static",
+        "implementationStatus": "static-by-design"
+      }
+    },
+    {
+      "section": "content.rich-text",
+      "required": true,
+      "repeatable": true,
+      "variant": "grouped",
+      "content": {
+        "shape": "grouped",
+        "groupedSections": [
+          {
+            "heading": "Keep it short",
+            "paragraphs": [
+              "Two sentences are enough when they point at something real."
+            ]
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "delayMs": 0,
+        "staggerMs": 0,
+        "reducedMotionFallback": "none-required-static",
+        "implementationStatus": "static-by-design"
+      }
+    },
+    {
+      "section": "content.rich-text",
+      "required": true,
+      "repeatable": true,
+      "variant": "grouped",
+      "content": {
+        "shape": "grouped",
+        "groupedSections": [
+          {
+            "heading": "Say it soon",
+            "paragraphs": [
+              "Thanks sent the same week lands better than a quarterly summary."
+            ]
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "delayMs": 0,
+        "staggerMs": 0,
+        "reducedMotionFallback": "none-required-static",
+        "implementationStatus": "static-by-design"
+      }
+    },
+    {
+      "section": "conversion.arketta-cross-promo",
+      "required": true,
+      "repeatable": false,
+      "content": {
+        "heading": "Running more than one team tool?",
+        "bodyLines": [
+          "A fictional sister product would be promoted here.",
+          "Replace this panel or remove it."
+        ],
+        "ctaLabel": "Learn more"
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "delayMs": 0,
+        "staggerMs": 0,
+        "reducedMotionFallback": "none-required-static",
+        "implementationStatus": "static-by-design"
+      }
+    },
+    {
+      "section": "content.section-heading",
+      "required": false,
+      "repeatable": false,
+      "variant": "guide-cluster",
+      "content": {
+        "heading": "Part of the appreciation guide"
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "delayMs": 0,
+        "staggerMs": 0,
+        "reducedMotionFallback": "none-required-static",
+        "implementationStatus": "static-by-design"
+      }
+    },
+    {
+      "section": "listing.link-card-grid",
+      "required": false,
+      "repeatable": false,
+      "variant": "guide-cluster-h3",
+      "content": {
+        "items": [
+          {
+            "title": "Appreciation basics",
+            "href": "https://fernway.example/guide"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "delayMs": 0,
+        "staggerMs": 0,
+        "reducedMotionFallback": "none-required-static",
+        "implementationStatus": "static-by-design"
+      }
+    },
+    {
+      "section": "listing.more-articles",
+      "required": true,
+      "repeatable": false,
+      "content": {
+        "heading": "More from the journal",
+        "cards": [
+          {
+            "title": "Running a calm monthly review"
+          },
+          {
+            "title": "Notes for remote teams"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "leaf-drift",
+        "trigger": "whileInView",
+        "durationMs": 1300,
+        "easing": "cubic-bezier(0.455, 0.03, 0.515, 0.955)",
+        "delayMs": 0,
+        "staggerMs": 0,
+        "leafSet": "CARD_LEAVES",
+        "leafCount": 6,
+        "reducedMotionFallback": "leaves-held-at-rotate-only-transform",
+        "implementationStatus": "specified-not-yet-animated"
+      }
+    },
+    {
+      "section": "divider.leaf-band",
+      "required": true,
+      "repeatable": false,
+      "variant": "bg-cream",
+      "motion": {
+        "pattern": "leaf-drift",
+        "trigger": "whileInView",
+        "durationMs": 1500,
+        "easing": "cubic-bezier(0.455, 0.03, 0.515, 0.955)",
+        "delayMs": 0,
+        "staggerMs": 0,
+        "leafSet": "DIVIDER_LEAVES",
+        "leafCount": 12,
+        "reducedMotionFallback": "leaves-held-at-rotate-only-transform",
+        "implementationStatus": "specified-not-yet-animated"
+      },
+      "assetRefs": [
+        {
+          "assetRole": "generated.illustration",
+          "src": "https://assets.fernway.example/divider-waves.svg",
+          "alt": ""
+        }
+      ]
+    },
+    {
+      "section": "conversion.lead-magnet-cta",
+      "required": true,
+      "repeatable": false,
+      "content": {
+        "heading": "Get the short guide to team thanks",
+        "paragraph": "A twelve-page example guide you would write for your own brand, offered here as a placeholder."
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "delayMs": 0,
+        "staggerMs": 0,
+        "reducedMotionFallback": "none-required-static",
+        "implementationStatus": "static-by-design"
+      }
+    },
+    {
+      "section": "chrome.footer",
+      "required": true,
+      "repeatable": false,
+      "content": {
+        "columns": [
+          [
+            "Product",
+            "Pricing",
+            "Stories"
+          ],
+          [
+            "Guides",
+            "Glossary",
+            "Help centre"
+          ],
+          [
+            "Privacy",
+            "Terms",
+            "Contact"
+          ]
+        ],
+        "socials": [
+          "Newsletter"
+        ],
+        "legalLine": "© Fernway Labs (fictional company) — example only"
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "delayMs": 0,
+        "staggerMs": 0,
+        "reducedMotionFallback": "none-required-static",
+        "implementationStatus": "static-by-design"
+      },
+      "assetRefs": [
+        {
+          "assetRole": "placeholder.brand-mark",
+          "src": "https://assets.fernway.example/fernway-mark.svg",
+          "alt": "Fernway"
+        }
+      ]
+    },
+    {
+      "section": "chrome.trial-modal",
+      "required": true,
+      "repeatable": false,
+      "content": {
+        "platforms": [
+          "Chat app A",
+          "Chat app B"
+        ]
+      },
+      "motion": {
+        "pattern": "overlay-slide",
+        "trigger": "userToggle",
+        "durationMs": 1000,
+        "easing": "cubic-bezier(0.455, 0.03, 0.515, 0.955)",
+        "delayMs": 0,
+        "staggerMs": 0,
+        "reducedMotionFallback": "duration collapses to 0.01ms; the panel hides at 0vh",
+        "implementationStatus": "css-keyframe-fallback-implemented"
+      }
+    }
+  ]
+}

@@ -80,6 +80,22 @@
   "verbatimQuirk": "'Evergeen' in the stat caption is the ORIGINAL'S TYPO and is reproduced verbatim. DO NOT CORRECT IT.",
   "measuredFrom": "src/components/SeedsSection.jsx:27-121",
   "implementedBy": "src/components/SeedsSection.jsx",
-  "reuseNote": "NOT reused by T-PARTNER. CLONE_SPEC_CONTENT_B \u00a78 claims the partner feature sections are 'the homepage's sections E and F verbatim'; measurement shows a DIFFERENT arrangement of the same assets and copy, implemented by a local FeatureSection in PartnerPage.jsx. SeedsSection is NOT used there.",
-  "motionClosureScope": "CLOSED for PageSpec emission: a generated node's `motion` object may contain ONLY the fields in motionFieldSet, enforced by schema/pagespec.schema.json (additionalProperties:false) and the MOTION_OBJECT_IS_CLOSED rule. The keys in motionDocumentationFields below are contract-level documentation carried by THIS file for human and retrieval use; they are NOT settable on a PageSpec node."
+  "reuseNote": "NOT reused by T-PARTNER. CLONE_SPEC_CONTENT_B §8 claims the partner feature sections are 'the homepage's sections E and F verbatim'; measurement shows a DIFFERENT arrangement of the same assets and copy, implemented by a local FeatureSection in PartnerPage.jsx. SeedsSection is NOT used there.",
+  "motionClosureScope": "CLOSED for PageSpec emission: a generated node's `motion` object may contain ONLY the fields in motionFieldSet, enforced by schema/pagespec.schema.json (additionalProperties:false) and the MOTION_OBJECT_IS_CLOSED rule. The keys in motionDocumentationFields below are contract-level documentation carried by THIS file for human and retrieval use; they are NOT settable on a PageSpec node.",
+  "source": {
+    "id": "src:SeedsSection:div@30",
+    "tag": "div",
+    "file": "src/components/SeedsSection.jsx",
+    "lines": "30-121"
+  },
+  "semantic": {
+    "id": "feature.seeds",
+    "category": "FEATURES"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": [
+    "generated.illustration",
+    "operator.supplied-asset",
+    "placeholder.screenshot"
+  ]
 }

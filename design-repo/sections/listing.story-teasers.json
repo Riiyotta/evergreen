@@ -52,5 +52,20 @@
   "quirk": "`mb-[-10em]` pulls the divider band up under the cards.",
   "measuredFrom": "src/pages/CaseStudyPage.jsx:107-123",
   "implementedBy": "src/pages/CaseStudyPage.jsx",
-  "motionClosureScope": "CLOSED for PageSpec emission: a generated node's `motion` object may contain ONLY the fields in motionFieldSet, enforced by schema/pagespec.schema.json (additionalProperties:false) and the MOTION_OBJECT_IS_CLOSED rule. The keys in motionDocumentationFields below are contract-level documentation carried by THIS file for human and retrieval use; they are NOT settable on a PageSpec node."
+  "motionClosureScope": "CLOSED for PageSpec emission: a generated node's `motion` object may contain ONLY the fields in motionFieldSet, enforced by schema/pagespec.schema.json (additionalProperties:false) and the MOTION_OBJECT_IS_CLOSED rule. The keys in motionDocumentationFields below are contract-level documentation carried by THIS file for human and retrieval use; they are NOT settable on a PageSpec node.",
+  "source": {
+    "id": "src:CaseStudyPage:section@108",
+    "tag": "section",
+    "file": "src/pages/CaseStudyPage.jsx",
+    "lines": "108-123"
+  },
+  "semantic": {
+    "id": "listing.story-teasers",
+    "category": "LISTING"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": [
+    "operator.supplied-asset",
+    "placeholder.company-logo"
+  ]
 }

@@ -18,10 +18,10 @@
   "category": "feature",
   "purpose": "Generic two-column feature row: a product visual on the left, a heading plus copy or stats on the right.",
   "variants": {
-    "esg-social": "/esg section C \u2014 tick badge, 2-line h2 via an explicit <br>, 5-line paragraph, left visual with value badge + seed line, right stats column + G2",
-    "esg-governance": "/esg section E \u2014 tick badge, 1-line h2, 1-line paragraph, bare left visual, right w-[34.5em] column with justify-between",
-    "partner-a": "T-PARTNER section 3 \u2014 'Create a positive company culture\u2026'",
-    "partner-b": "T-PARTNER section 5 \u2014 'Support your business structure with clear reporting'"
+    "esg-social": "/esg section C — tick badge, 2-line h2 via an explicit <br>, 5-line paragraph, left visual with value badge + seed line, right stats column + G2",
+    "esg-governance": "/esg section E — tick badge, 1-line h2, 1-line paragraph, bare left visual, right w-[34.5em] column with justify-between",
+    "partner-a": "T-PARTNER section 3 — 'Create a positive company culture…'",
+    "partner-b": "T-PARTNER section 5 — 'Support your business structure with clear reporting'"
   },
   "content": {
     "tickLabel": {
@@ -47,7 +47,7 @@
   },
   "maxWordsBasis": "word-counted from the real strings in Esg.jsx and PartnerPage.jsx",
   "geometry": "row mt-[9.5em] items-stretch; left column w-[34.4013em]; right column ml-[6.91014em]",
-  "columnGapNote": "6.91014em (73.708px) here \u2014 NOT the homepage rows' 9.91014em. A measured difference.",
+  "columnGapNote": "6.91014em (73.708px) here — NOT the homepage rows' 9.91014em. A measured difference.",
   "constraints": {
     "maxPerPage": 2,
     "allowedTemplates": [
@@ -83,11 +83,29 @@
     "'their teams performance' (missing an apostrophe) is the ORIGINAL'S TYPO.",
     "Both are reproduced verbatim. DO NOT CORRECT THEM."
   ],
-  "wrapWarning": "The GOVERNANCE h2 has ~7.8px of wrap headroom (~1.0%). CLONE_SPEC_CORE_A \u00a75 records its longest line as 650.3px, implying ~99.6px of slack. THAT IS WRONG: the measured longest line in the substitute serif is 742.09px in the same 749.86px frame, same 2-line wrap, with the section height exact. Real headroom is ~7.8px.",
+  "wrapWarning": "The GOVERNANCE h2 has ~7.8px of wrap headroom (~1.0%). CLONE_SPEC_CORE_A §5 records its longest line as 650.3px, implying ~99.6px of slack. THAT IS WRONG: the measured longest line in the substitute serif is 742.09px in the same 749.86px frame, same 2-line wrap, with the section height exact. Real headroom is ~7.8px.",
   "measuredFrom": "src/pages/Esg.jsx:236-290",
   "implementedBy": [
     "src/pages/Esg.jsx",
     "src/pages/PartnerPage.jsx (local FeatureSection)"
   ],
-  "motionClosureScope": "CLOSED for PageSpec emission: a generated node's `motion` object may contain ONLY the fields in motionFieldSet, enforced by schema/pagespec.schema.json (additionalProperties:false) and the MOTION_OBJECT_IS_CLOSED rule. The keys in motionDocumentationFields below are contract-level documentation carried by THIS file for human and retrieval use; they are NOT settable on a PageSpec node."
+  "motionClosureScope": "CLOSED for PageSpec emission: a generated node's `motion` object may contain ONLY the fields in motionFieldSet, enforced by schema/pagespec.schema.json (additionalProperties:false) and the MOTION_OBJECT_IS_CLOSED rule. The keys in motionDocumentationFields below are contract-level documentation carried by THIS file for human and retrieval use; they are NOT settable on a PageSpec node.",
+  "source": {
+    "id": "src:Esg:section@237",
+    "tag": "section",
+    "file": "src/pages/Esg.jsx",
+    "lines": "237-290"
+  },
+  "semantic": {
+    "id": "feature.split-visual",
+    "category": "FEATURES"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": [
+    "generated.icon",
+    "generated.illustration",
+    "operator.supplied-asset",
+    "placeholder.badge",
+    "placeholder.screenshot"
+  ]
 }

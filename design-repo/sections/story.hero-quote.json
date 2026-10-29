@@ -67,5 +67,21 @@
   "motionClosureScope": "CLOSED for PageSpec emission: a generated node's `motion` object may contain ONLY the fields in motionFieldSet, enforced by schema/pagespec.schema.json (additionalProperties:false) and the MOTION_OBJECT_IS_CLOSED rule. The keys in motionDocumentationFields below are contract-level documentation carried by THIS file for human and retrieval use; they are NOT settable on a PageSpec node.",
   "motionDocumentationFields": [
     "note"
+  ],
+  "source": {
+    "id": "src:CaseStudyPage:section@54",
+    "tag": "section",
+    "file": "src/pages/CaseStudyPage.jsx",
+    "lines": "54-89"
+  },
+  "semantic": {
+    "id": "story.hero-quote",
+    "category": "EDITORIAL"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": [
+    "generated.illustration",
+    "operator.supplied-asset",
+    "placeholder.person-avatar"
   ]
 }

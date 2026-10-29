@@ -2,18 +2,32 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://evergreen-clone.local/design-repo/schema/pagespec.schema.json",
   "title": "Evergreen clone PageSpec",
-  "description": "The machine contract for a generated page. Closed template enum, closed section enum, closed per-section content, closed motion object, closed assetRole enum, additionalProperties:false throughout. Structural rules JSON Schema cannot express (node sequence vs declared template, rhythm rules, per-instance maxWords) are enforced by schema/semantic_validate.py \u2014 BOTH must pass.",
+  "description": "The machine contract for a generated page. Required closed mode (clone | generation), closed template enum, closed section enum, closed per-section content, closed motion object, closed assetRole enum, additionalProperties:false throughout. Structural rules JSON Schema cannot express (node sequence vs declared template, rhythm rules, per-instance maxWords) are enforced by schema/semantic_validate.py — BOTH must pass.",
   "type": "object",
   "additionalProperties": false,
   "required": [
     "pageSpecVersion",
+    "mode",
     "route",
     "template",
     "nodes"
   ],
   "properties": {
     "pageSpecVersion": {
-      "const": "1.0.0"
+      "const": "2.0.0"
+    },
+    "mode": {
+      "enum": [
+        "clone",
+        "generation"
+      ],
+      "description": "REQUIRED generation context. clone = faithful reconstruction of evergreen.so (real Evergreen assets and copy may be reused for fidelity). generation = a new page for a different brand: schema/semantic_validate.py rejects every real Evergreen brand name, logo, icon / brand artwork, product screenshot, badge / certification, proprietary asset, copy, claim, URL, person and customer (GENERATION_MODE_* rules), and only generation-safe asset roles are allowed."
+    },
+    "theme": {
+      "enum": [
+        "light"
+      ],
+      "description": "Optional. The theme every `style` token must resolve in (registry.manifest.json schemaValidatedThemes). Defaults to light."
     },
     "route": {
       "type": "string",
@@ -141,7 +155,17 @@
                         "brand.logo",
                         "editorial.hero-image",
                         "editorial.stock-photo",
+                        "generated.copy",
+                        "generated.icon",
+                        "generated.illustration",
+                        "operator.supplied-asset",
                         "person.likeness",
+                        "placeholder.badge",
+                        "placeholder.brand-mark",
+                        "placeholder.company-logo",
+                        "placeholder.person-avatar",
+                        "placeholder.screenshot",
+                        "placeholder.url",
                         "product.badge",
                         "product.screenshot",
                         "site.favicon",
@@ -159,6 +183,38 @@
                     }
                   }
                 }
+              },
+              "style": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "surface": {
+                    "type": "string"
+                  },
+                  "text": {
+                    "type": "string"
+                  },
+                  "border": {
+                    "type": "string"
+                  },
+                  "radius": {
+                    "type": "string"
+                  },
+                  "spacing": {
+                    "type": "string"
+                  },
+                  "fontFamily": {
+                    "type": "string"
+                  },
+                  "typeRole": {
+                    "type": "string"
+                  }
+                },
+                "description": "Optional per-node token references. Values are token NAMES from tokens/llm/token-catalog.json; schema/semantic_validate.py rejects unknown tokens, raw colours, arbitrary spacing, unsupported fonts and invalid theme/token combinations (TOKEN_* rules)."
+              },
+              "retrievalEligible": {
+                "type": "boolean",
+                "description": "Optional echo of the section contract's retrievalEligible; when present it must equal the pinned / contract value (RETRIEVAL_ELIGIBILITY_PINNED)."
               }
             }
           },
@@ -243,7 +299,17 @@
                         "brand.logo",
                         "editorial.hero-image",
                         "editorial.stock-photo",
+                        "generated.copy",
+                        "generated.icon",
+                        "generated.illustration",
+                        "operator.supplied-asset",
                         "person.likeness",
+                        "placeholder.badge",
+                        "placeholder.brand-mark",
+                        "placeholder.company-logo",
+                        "placeholder.person-avatar",
+                        "placeholder.screenshot",
+                        "placeholder.url",
                         "product.badge",
                         "product.screenshot",
                         "site.favicon",
@@ -261,6 +327,38 @@
                     }
                   }
                 }
+              },
+              "style": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "surface": {
+                    "type": "string"
+                  },
+                  "text": {
+                    "type": "string"
+                  },
+                  "border": {
+                    "type": "string"
+                  },
+                  "radius": {
+                    "type": "string"
+                  },
+                  "spacing": {
+                    "type": "string"
+                  },
+                  "fontFamily": {
+                    "type": "string"
+                  },
+                  "typeRole": {
+                    "type": "string"
+                  }
+                },
+                "description": "Optional per-node token references. Values are token NAMES from tokens/llm/token-catalog.json; schema/semantic_validate.py rejects unknown tokens, raw colours, arbitrary spacing, unsupported fonts and invalid theme/token combinations (TOKEN_* rules)."
+              },
+              "retrievalEligible": {
+                "type": "boolean",
+                "description": "Optional echo of the section contract's retrievalEligible; when present it must equal the pinned / contract value (RETRIEVAL_ELIGIBILITY_PINNED)."
               }
             }
           },
@@ -344,7 +442,17 @@
                         "brand.logo",
                         "editorial.hero-image",
                         "editorial.stock-photo",
+                        "generated.copy",
+                        "generated.icon",
+                        "generated.illustration",
+                        "operator.supplied-asset",
                         "person.likeness",
+                        "placeholder.badge",
+                        "placeholder.brand-mark",
+                        "placeholder.company-logo",
+                        "placeholder.person-avatar",
+                        "placeholder.screenshot",
+                        "placeholder.url",
                         "product.badge",
                         "product.screenshot",
                         "site.favicon",
@@ -362,6 +470,38 @@
                     }
                   }
                 }
+              },
+              "style": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "surface": {
+                    "type": "string"
+                  },
+                  "text": {
+                    "type": "string"
+                  },
+                  "border": {
+                    "type": "string"
+                  },
+                  "radius": {
+                    "type": "string"
+                  },
+                  "spacing": {
+                    "type": "string"
+                  },
+                  "fontFamily": {
+                    "type": "string"
+                  },
+                  "typeRole": {
+                    "type": "string"
+                  }
+                },
+                "description": "Optional per-node token references. Values are token NAMES from tokens/llm/token-catalog.json; schema/semantic_validate.py rejects unknown tokens, raw colours, arbitrary spacing, unsupported fonts and invalid theme/token combinations (TOKEN_* rules)."
+              },
+              "retrievalEligible": {
+                "type": "boolean",
+                "description": "Optional echo of the section contract's retrievalEligible; when present it must equal the pinned / contract value (RETRIEVAL_ELIGIBILITY_PINNED)."
               }
             }
           },
@@ -444,7 +584,17 @@
                         "brand.logo",
                         "editorial.hero-image",
                         "editorial.stock-photo",
+                        "generated.copy",
+                        "generated.icon",
+                        "generated.illustration",
+                        "operator.supplied-asset",
                         "person.likeness",
+                        "placeholder.badge",
+                        "placeholder.brand-mark",
+                        "placeholder.company-logo",
+                        "placeholder.person-avatar",
+                        "placeholder.screenshot",
+                        "placeholder.url",
                         "product.badge",
                         "product.screenshot",
                         "site.favicon",
@@ -462,6 +612,38 @@
                     }
                   }
                 }
+              },
+              "style": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "surface": {
+                    "type": "string"
+                  },
+                  "text": {
+                    "type": "string"
+                  },
+                  "border": {
+                    "type": "string"
+                  },
+                  "radius": {
+                    "type": "string"
+                  },
+                  "spacing": {
+                    "type": "string"
+                  },
+                  "fontFamily": {
+                    "type": "string"
+                  },
+                  "typeRole": {
+                    "type": "string"
+                  }
+                },
+                "description": "Optional per-node token references. Values are token NAMES from tokens/llm/token-catalog.json; schema/semantic_validate.py rejects unknown tokens, raw colours, arbitrary spacing, unsupported fonts and invalid theme/token combinations (TOKEN_* rules)."
+              },
+              "retrievalEligible": {
+                "type": "boolean",
+                "description": "Optional echo of the section contract's retrievalEligible; when present it must equal the pinned / contract value (RETRIEVAL_ELIGIBILITY_PINNED)."
               }
             }
           },
@@ -546,7 +728,17 @@
                         "brand.logo",
                         "editorial.hero-image",
                         "editorial.stock-photo",
+                        "generated.copy",
+                        "generated.icon",
+                        "generated.illustration",
+                        "operator.supplied-asset",
                         "person.likeness",
+                        "placeholder.badge",
+                        "placeholder.brand-mark",
+                        "placeholder.company-logo",
+                        "placeholder.person-avatar",
+                        "placeholder.screenshot",
+                        "placeholder.url",
                         "product.badge",
                         "product.screenshot",
                         "site.favicon",
@@ -564,6 +756,38 @@
                     }
                   }
                 }
+              },
+              "style": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "surface": {
+                    "type": "string"
+                  },
+                  "text": {
+                    "type": "string"
+                  },
+                  "border": {
+                    "type": "string"
+                  },
+                  "radius": {
+                    "type": "string"
+                  },
+                  "spacing": {
+                    "type": "string"
+                  },
+                  "fontFamily": {
+                    "type": "string"
+                  },
+                  "typeRole": {
+                    "type": "string"
+                  }
+                },
+                "description": "Optional per-node token references. Values are token NAMES from tokens/llm/token-catalog.json; schema/semantic_validate.py rejects unknown tokens, raw colours, arbitrary spacing, unsupported fonts and invalid theme/token combinations (TOKEN_* rules)."
+              },
+              "retrievalEligible": {
+                "type": "boolean",
+                "description": "Optional echo of the section contract's retrievalEligible; when present it must equal the pinned / contract value (RETRIEVAL_ELIGIBILITY_PINNED)."
               }
             }
           },
@@ -647,7 +871,17 @@
                         "brand.logo",
                         "editorial.hero-image",
                         "editorial.stock-photo",
+                        "generated.copy",
+                        "generated.icon",
+                        "generated.illustration",
+                        "operator.supplied-asset",
                         "person.likeness",
+                        "placeholder.badge",
+                        "placeholder.brand-mark",
+                        "placeholder.company-logo",
+                        "placeholder.person-avatar",
+                        "placeholder.screenshot",
+                        "placeholder.url",
                         "product.badge",
                         "product.screenshot",
                         "site.favicon",
@@ -665,6 +899,38 @@
                     }
                   }
                 }
+              },
+              "style": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "surface": {
+                    "type": "string"
+                  },
+                  "text": {
+                    "type": "string"
+                  },
+                  "border": {
+                    "type": "string"
+                  },
+                  "radius": {
+                    "type": "string"
+                  },
+                  "spacing": {
+                    "type": "string"
+                  },
+                  "fontFamily": {
+                    "type": "string"
+                  },
+                  "typeRole": {
+                    "type": "string"
+                  }
+                },
+                "description": "Optional per-node token references. Values are token NAMES from tokens/llm/token-catalog.json; schema/semantic_validate.py rejects unknown tokens, raw colours, arbitrary spacing, unsupported fonts and invalid theme/token combinations (TOKEN_* rules)."
+              },
+              "retrievalEligible": {
+                "type": "boolean",
+                "description": "Optional echo of the section contract's retrievalEligible; when present it must equal the pinned / contract value (RETRIEVAL_ELIGIBILITY_PINNED)."
               }
             }
           },
@@ -749,7 +1015,17 @@
                         "brand.logo",
                         "editorial.hero-image",
                         "editorial.stock-photo",
+                        "generated.copy",
+                        "generated.icon",
+                        "generated.illustration",
+                        "operator.supplied-asset",
                         "person.likeness",
+                        "placeholder.badge",
+                        "placeholder.brand-mark",
+                        "placeholder.company-logo",
+                        "placeholder.person-avatar",
+                        "placeholder.screenshot",
+                        "placeholder.url",
                         "product.badge",
                         "product.screenshot",
                         "site.favicon",
@@ -767,6 +1043,38 @@
                     }
                   }
                 }
+              },
+              "style": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "surface": {
+                    "type": "string"
+                  },
+                  "text": {
+                    "type": "string"
+                  },
+                  "border": {
+                    "type": "string"
+                  },
+                  "radius": {
+                    "type": "string"
+                  },
+                  "spacing": {
+                    "type": "string"
+                  },
+                  "fontFamily": {
+                    "type": "string"
+                  },
+                  "typeRole": {
+                    "type": "string"
+                  }
+                },
+                "description": "Optional per-node token references. Values are token NAMES from tokens/llm/token-catalog.json; schema/semantic_validate.py rejects unknown tokens, raw colours, arbitrary spacing, unsupported fonts and invalid theme/token combinations (TOKEN_* rules)."
+              },
+              "retrievalEligible": {
+                "type": "boolean",
+                "description": "Optional echo of the section contract's retrievalEligible; when present it must equal the pinned / contract value (RETRIEVAL_ELIGIBILITY_PINNED)."
               }
             }
           },
@@ -849,7 +1157,17 @@
                         "brand.logo",
                         "editorial.hero-image",
                         "editorial.stock-photo",
+                        "generated.copy",
+                        "generated.icon",
+                        "generated.illustration",
+                        "operator.supplied-asset",
                         "person.likeness",
+                        "placeholder.badge",
+                        "placeholder.brand-mark",
+                        "placeholder.company-logo",
+                        "placeholder.person-avatar",
+                        "placeholder.screenshot",
+                        "placeholder.url",
                         "product.badge",
                         "product.screenshot",
                         "site.favicon",
@@ -867,6 +1185,38 @@
                     }
                   }
                 }
+              },
+              "style": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "surface": {
+                    "type": "string"
+                  },
+                  "text": {
+                    "type": "string"
+                  },
+                  "border": {
+                    "type": "string"
+                  },
+                  "radius": {
+                    "type": "string"
+                  },
+                  "spacing": {
+                    "type": "string"
+                  },
+                  "fontFamily": {
+                    "type": "string"
+                  },
+                  "typeRole": {
+                    "type": "string"
+                  }
+                },
+                "description": "Optional per-node token references. Values are token NAMES from tokens/llm/token-catalog.json; schema/semantic_validate.py rejects unknown tokens, raw colours, arbitrary spacing, unsupported fonts and invalid theme/token combinations (TOKEN_* rules)."
+              },
+              "retrievalEligible": {
+                "type": "boolean",
+                "description": "Optional echo of the section contract's retrievalEligible; when present it must equal the pinned / contract value (RETRIEVAL_ELIGIBILITY_PINNED)."
               }
             }
           },
@@ -950,7 +1300,17 @@
                         "brand.logo",
                         "editorial.hero-image",
                         "editorial.stock-photo",
+                        "generated.copy",
+                        "generated.icon",
+                        "generated.illustration",
+                        "operator.supplied-asset",
                         "person.likeness",
+                        "placeholder.badge",
+                        "placeholder.brand-mark",
+                        "placeholder.company-logo",
+                        "placeholder.person-avatar",
+                        "placeholder.screenshot",
+                        "placeholder.url",
                         "product.badge",
                         "product.screenshot",
                         "site.favicon",
@@ -968,6 +1328,38 @@
                     }
                   }
                 }
+              },
+              "style": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "surface": {
+                    "type": "string"
+                  },
+                  "text": {
+                    "type": "string"
+                  },
+                  "border": {
+                    "type": "string"
+                  },
+                  "radius": {
+                    "type": "string"
+                  },
+                  "spacing": {
+                    "type": "string"
+                  },
+                  "fontFamily": {
+                    "type": "string"
+                  },
+                  "typeRole": {
+                    "type": "string"
+                  }
+                },
+                "description": "Optional per-node token references. Values are token NAMES from tokens/llm/token-catalog.json; schema/semantic_validate.py rejects unknown tokens, raw colours, arbitrary spacing, unsupported fonts and invalid theme/token combinations (TOKEN_* rules)."
+              },
+              "retrievalEligible": {
+                "type": "boolean",
+                "description": "Optional echo of the section contract's retrievalEligible; when present it must equal the pinned / contract value (RETRIEVAL_ELIGIBILITY_PINNED)."
               }
             }
           },
@@ -1051,7 +1443,17 @@
                         "brand.logo",
                         "editorial.hero-image",
                         "editorial.stock-photo",
+                        "generated.copy",
+                        "generated.icon",
+                        "generated.illustration",
+                        "operator.supplied-asset",
                         "person.likeness",
+                        "placeholder.badge",
+                        "placeholder.brand-mark",
+                        "placeholder.company-logo",
+                        "placeholder.person-avatar",
+                        "placeholder.screenshot",
+                        "placeholder.url",
                         "product.badge",
                         "product.screenshot",
                         "site.favicon",
@@ -1069,6 +1471,38 @@
                     }
                   }
                 }
+              },
+              "style": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "surface": {
+                    "type": "string"
+                  },
+                  "text": {
+                    "type": "string"
+                  },
+                  "border": {
+                    "type": "string"
+                  },
+                  "radius": {
+                    "type": "string"
+                  },
+                  "spacing": {
+                    "type": "string"
+                  },
+                  "fontFamily": {
+                    "type": "string"
+                  },
+                  "typeRole": {
+                    "type": "string"
+                  }
+                },
+                "description": "Optional per-node token references. Values are token NAMES from tokens/llm/token-catalog.json; schema/semantic_validate.py rejects unknown tokens, raw colours, arbitrary spacing, unsupported fonts and invalid theme/token combinations (TOKEN_* rules)."
+              },
+              "retrievalEligible": {
+                "type": "boolean",
+                "description": "Optional echo of the section contract's retrievalEligible; when present it must equal the pinned / contract value (RETRIEVAL_ELIGIBILITY_PINNED)."
               }
             }
           },
@@ -1155,7 +1589,17 @@
                         "brand.logo",
                         "editorial.hero-image",
                         "editorial.stock-photo",
+                        "generated.copy",
+                        "generated.icon",
+                        "generated.illustration",
+                        "operator.supplied-asset",
                         "person.likeness",
+                        "placeholder.badge",
+                        "placeholder.brand-mark",
+                        "placeholder.company-logo",
+                        "placeholder.person-avatar",
+                        "placeholder.screenshot",
+                        "placeholder.url",
                         "product.badge",
                         "product.screenshot",
                         "site.favicon",
@@ -1173,6 +1617,38 @@
                     }
                   }
                 }
+              },
+              "style": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "surface": {
+                    "type": "string"
+                  },
+                  "text": {
+                    "type": "string"
+                  },
+                  "border": {
+                    "type": "string"
+                  },
+                  "radius": {
+                    "type": "string"
+                  },
+                  "spacing": {
+                    "type": "string"
+                  },
+                  "fontFamily": {
+                    "type": "string"
+                  },
+                  "typeRole": {
+                    "type": "string"
+                  }
+                },
+                "description": "Optional per-node token references. Values are token NAMES from tokens/llm/token-catalog.json; schema/semantic_validate.py rejects unknown tokens, raw colours, arbitrary spacing, unsupported fonts and invalid theme/token combinations (TOKEN_* rules)."
+              },
+              "retrievalEligible": {
+                "type": "boolean",
+                "description": "Optional echo of the section contract's retrievalEligible; when present it must equal the pinned / contract value (RETRIEVAL_ELIGIBILITY_PINNED)."
               }
             }
           },
@@ -1255,7 +1731,17 @@
                         "brand.logo",
                         "editorial.hero-image",
                         "editorial.stock-photo",
+                        "generated.copy",
+                        "generated.icon",
+                        "generated.illustration",
+                        "operator.supplied-asset",
                         "person.likeness",
+                        "placeholder.badge",
+                        "placeholder.brand-mark",
+                        "placeholder.company-logo",
+                        "placeholder.person-avatar",
+                        "placeholder.screenshot",
+                        "placeholder.url",
                         "product.badge",
                         "product.screenshot",
                         "site.favicon",
@@ -1273,6 +1759,38 @@
                     }
                   }
                 }
+              },
+              "style": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "surface": {
+                    "type": "string"
+                  },
+                  "text": {
+                    "type": "string"
+                  },
+                  "border": {
+                    "type": "string"
+                  },
+                  "radius": {
+                    "type": "string"
+                  },
+                  "spacing": {
+                    "type": "string"
+                  },
+                  "fontFamily": {
+                    "type": "string"
+                  },
+                  "typeRole": {
+                    "type": "string"
+                  }
+                },
+                "description": "Optional per-node token references. Values are token NAMES from tokens/llm/token-catalog.json; schema/semantic_validate.py rejects unknown tokens, raw colours, arbitrary spacing, unsupported fonts and invalid theme/token combinations (TOKEN_* rules)."
+              },
+              "retrievalEligible": {
+                "type": "boolean",
+                "description": "Optional echo of the section contract's retrievalEligible; when present it must equal the pinned / contract value (RETRIEVAL_ELIGIBILITY_PINNED)."
               }
             }
           },
@@ -1357,7 +1875,17 @@
                         "brand.logo",
                         "editorial.hero-image",
                         "editorial.stock-photo",
+                        "generated.copy",
+                        "generated.icon",
+                        "generated.illustration",
+                        "operator.supplied-asset",
                         "person.likeness",
+                        "placeholder.badge",
+                        "placeholder.brand-mark",
+                        "placeholder.company-logo",
+                        "placeholder.person-avatar",
+                        "placeholder.screenshot",
+                        "placeholder.url",
                         "product.badge",
                         "product.screenshot",
                         "site.favicon",
@@ -1375,6 +1903,38 @@
                     }
                   }
                 }
+              },
+              "style": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "surface": {
+                    "type": "string"
+                  },
+                  "text": {
+                    "type": "string"
+                  },
+                  "border": {
+                    "type": "string"
+                  },
+                  "radius": {
+                    "type": "string"
+                  },
+                  "spacing": {
+                    "type": "string"
+                  },
+                  "fontFamily": {
+                    "type": "string"
+                  },
+                  "typeRole": {
+                    "type": "string"
+                  }
+                },
+                "description": "Optional per-node token references. Values are token NAMES from tokens/llm/token-catalog.json; schema/semantic_validate.py rejects unknown tokens, raw colours, arbitrary spacing, unsupported fonts and invalid theme/token combinations (TOKEN_* rules)."
+              },
+              "retrievalEligible": {
+                "type": "boolean",
+                "description": "Optional echo of the section contract's retrievalEligible; when present it must equal the pinned / contract value (RETRIEVAL_ELIGIBILITY_PINNED)."
               }
             }
           },
@@ -1459,7 +2019,17 @@
                         "brand.logo",
                         "editorial.hero-image",
                         "editorial.stock-photo",
+                        "generated.copy",
+                        "generated.icon",
+                        "generated.illustration",
+                        "operator.supplied-asset",
                         "person.likeness",
+                        "placeholder.badge",
+                        "placeholder.brand-mark",
+                        "placeholder.company-logo",
+                        "placeholder.person-avatar",
+                        "placeholder.screenshot",
+                        "placeholder.url",
                         "product.badge",
                         "product.screenshot",
                         "site.favicon",
@@ -1477,6 +2047,38 @@
                     }
                   }
                 }
+              },
+              "style": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "surface": {
+                    "type": "string"
+                  },
+                  "text": {
+                    "type": "string"
+                  },
+                  "border": {
+                    "type": "string"
+                  },
+                  "radius": {
+                    "type": "string"
+                  },
+                  "spacing": {
+                    "type": "string"
+                  },
+                  "fontFamily": {
+                    "type": "string"
+                  },
+                  "typeRole": {
+                    "type": "string"
+                  }
+                },
+                "description": "Optional per-node token references. Values are token NAMES from tokens/llm/token-catalog.json; schema/semantic_validate.py rejects unknown tokens, raw colours, arbitrary spacing, unsupported fonts and invalid theme/token combinations (TOKEN_* rules)."
+              },
+              "retrievalEligible": {
+                "type": "boolean",
+                "description": "Optional echo of the section contract's retrievalEligible; when present it must equal the pinned / contract value (RETRIEVAL_ELIGIBILITY_PINNED)."
               }
             }
           },
@@ -1560,7 +2162,17 @@
                         "brand.logo",
                         "editorial.hero-image",
                         "editorial.stock-photo",
+                        "generated.copy",
+                        "generated.icon",
+                        "generated.illustration",
+                        "operator.supplied-asset",
                         "person.likeness",
+                        "placeholder.badge",
+                        "placeholder.brand-mark",
+                        "placeholder.company-logo",
+                        "placeholder.person-avatar",
+                        "placeholder.screenshot",
+                        "placeholder.url",
                         "product.badge",
                         "product.screenshot",
                         "site.favicon",
@@ -1578,6 +2190,38 @@
                     }
                   }
                 }
+              },
+              "style": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "surface": {
+                    "type": "string"
+                  },
+                  "text": {
+                    "type": "string"
+                  },
+                  "border": {
+                    "type": "string"
+                  },
+                  "radius": {
+                    "type": "string"
+                  },
+                  "spacing": {
+                    "type": "string"
+                  },
+                  "fontFamily": {
+                    "type": "string"
+                  },
+                  "typeRole": {
+                    "type": "string"
+                  }
+                },
+                "description": "Optional per-node token references. Values are token NAMES from tokens/llm/token-catalog.json; schema/semantic_validate.py rejects unknown tokens, raw colours, arbitrary spacing, unsupported fonts and invalid theme/token combinations (TOKEN_* rules)."
+              },
+              "retrievalEligible": {
+                "type": "boolean",
+                "description": "Optional echo of the section contract's retrievalEligible; when present it must equal the pinned / contract value (RETRIEVAL_ELIGIBILITY_PINNED)."
               }
             }
           },
@@ -1664,7 +2308,17 @@
                         "brand.logo",
                         "editorial.hero-image",
                         "editorial.stock-photo",
+                        "generated.copy",
+                        "generated.icon",
+                        "generated.illustration",
+                        "operator.supplied-asset",
                         "person.likeness",
+                        "placeholder.badge",
+                        "placeholder.brand-mark",
+                        "placeholder.company-logo",
+                        "placeholder.person-avatar",
+                        "placeholder.screenshot",
+                        "placeholder.url",
                         "product.badge",
                         "product.screenshot",
                         "site.favicon",
@@ -1682,6 +2336,38 @@
                     }
                   }
                 }
+              },
+              "style": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "surface": {
+                    "type": "string"
+                  },
+                  "text": {
+                    "type": "string"
+                  },
+                  "border": {
+                    "type": "string"
+                  },
+                  "radius": {
+                    "type": "string"
+                  },
+                  "spacing": {
+                    "type": "string"
+                  },
+                  "fontFamily": {
+                    "type": "string"
+                  },
+                  "typeRole": {
+                    "type": "string"
+                  }
+                },
+                "description": "Optional per-node token references. Values are token NAMES from tokens/llm/token-catalog.json; schema/semantic_validate.py rejects unknown tokens, raw colours, arbitrary spacing, unsupported fonts and invalid theme/token combinations (TOKEN_* rules)."
+              },
+              "retrievalEligible": {
+                "type": "boolean",
+                "description": "Optional echo of the section contract's retrievalEligible; when present it must equal the pinned / contract value (RETRIEVAL_ELIGIBILITY_PINNED)."
               }
             }
           },
@@ -1764,7 +2450,17 @@
                         "brand.logo",
                         "editorial.hero-image",
                         "editorial.stock-photo",
+                        "generated.copy",
+                        "generated.icon",
+                        "generated.illustration",
+                        "operator.supplied-asset",
                         "person.likeness",
+                        "placeholder.badge",
+                        "placeholder.brand-mark",
+                        "placeholder.company-logo",
+                        "placeholder.person-avatar",
+                        "placeholder.screenshot",
+                        "placeholder.url",
                         "product.badge",
                         "product.screenshot",
                         "site.favicon",
@@ -1782,6 +2478,38 @@
                     }
                   }
                 }
+              },
+              "style": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "surface": {
+                    "type": "string"
+                  },
+                  "text": {
+                    "type": "string"
+                  },
+                  "border": {
+                    "type": "string"
+                  },
+                  "radius": {
+                    "type": "string"
+                  },
+                  "spacing": {
+                    "type": "string"
+                  },
+                  "fontFamily": {
+                    "type": "string"
+                  },
+                  "typeRole": {
+                    "type": "string"
+                  }
+                },
+                "description": "Optional per-node token references. Values are token NAMES from tokens/llm/token-catalog.json; schema/semantic_validate.py rejects unknown tokens, raw colours, arbitrary spacing, unsupported fonts and invalid theme/token combinations (TOKEN_* rules)."
+              },
+              "retrievalEligible": {
+                "type": "boolean",
+                "description": "Optional echo of the section contract's retrievalEligible; when present it must equal the pinned / contract value (RETRIEVAL_ELIGIBILITY_PINNED)."
               }
             }
           },
@@ -1867,7 +2595,17 @@
                         "brand.logo",
                         "editorial.hero-image",
                         "editorial.stock-photo",
+                        "generated.copy",
+                        "generated.icon",
+                        "generated.illustration",
+                        "operator.supplied-asset",
                         "person.likeness",
+                        "placeholder.badge",
+                        "placeholder.brand-mark",
+                        "placeholder.company-logo",
+                        "placeholder.person-avatar",
+                        "placeholder.screenshot",
+                        "placeholder.url",
                         "product.badge",
                         "product.screenshot",
                         "site.favicon",
@@ -1885,6 +2623,38 @@
                     }
                   }
                 }
+              },
+              "style": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "surface": {
+                    "type": "string"
+                  },
+                  "text": {
+                    "type": "string"
+                  },
+                  "border": {
+                    "type": "string"
+                  },
+                  "radius": {
+                    "type": "string"
+                  },
+                  "spacing": {
+                    "type": "string"
+                  },
+                  "fontFamily": {
+                    "type": "string"
+                  },
+                  "typeRole": {
+                    "type": "string"
+                  }
+                },
+                "description": "Optional per-node token references. Values are token NAMES from tokens/llm/token-catalog.json; schema/semantic_validate.py rejects unknown tokens, raw colours, arbitrary spacing, unsupported fonts and invalid theme/token combinations (TOKEN_* rules)."
+              },
+              "retrievalEligible": {
+                "type": "boolean",
+                "description": "Optional echo of the section contract's retrievalEligible; when present it must equal the pinned / contract value (RETRIEVAL_ELIGIBILITY_PINNED)."
               }
             }
           },
@@ -1972,7 +2742,17 @@
                         "brand.logo",
                         "editorial.hero-image",
                         "editorial.stock-photo",
+                        "generated.copy",
+                        "generated.icon",
+                        "generated.illustration",
+                        "operator.supplied-asset",
                         "person.likeness",
+                        "placeholder.badge",
+                        "placeholder.brand-mark",
+                        "placeholder.company-logo",
+                        "placeholder.person-avatar",
+                        "placeholder.screenshot",
+                        "placeholder.url",
                         "product.badge",
                         "product.screenshot",
                         "site.favicon",
@@ -1990,6 +2770,38 @@
                     }
                   }
                 }
+              },
+              "style": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "surface": {
+                    "type": "string"
+                  },
+                  "text": {
+                    "type": "string"
+                  },
+                  "border": {
+                    "type": "string"
+                  },
+                  "radius": {
+                    "type": "string"
+                  },
+                  "spacing": {
+                    "type": "string"
+                  },
+                  "fontFamily": {
+                    "type": "string"
+                  },
+                  "typeRole": {
+                    "type": "string"
+                  }
+                },
+                "description": "Optional per-node token references. Values are token NAMES from tokens/llm/token-catalog.json; schema/semantic_validate.py rejects unknown tokens, raw colours, arbitrary spacing, unsupported fonts and invalid theme/token combinations (TOKEN_* rules)."
+              },
+              "retrievalEligible": {
+                "type": "boolean",
+                "description": "Optional echo of the section contract's retrievalEligible; when present it must equal the pinned / contract value (RETRIEVAL_ELIGIBILITY_PINNED)."
               }
             }
           },
@@ -2075,7 +2887,17 @@
                         "brand.logo",
                         "editorial.hero-image",
                         "editorial.stock-photo",
+                        "generated.copy",
+                        "generated.icon",
+                        "generated.illustration",
+                        "operator.supplied-asset",
                         "person.likeness",
+                        "placeholder.badge",
+                        "placeholder.brand-mark",
+                        "placeholder.company-logo",
+                        "placeholder.person-avatar",
+                        "placeholder.screenshot",
+                        "placeholder.url",
                         "product.badge",
                         "product.screenshot",
                         "site.favicon",
@@ -2093,6 +2915,38 @@
                     }
                   }
                 }
+              },
+              "style": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "surface": {
+                    "type": "string"
+                  },
+                  "text": {
+                    "type": "string"
+                  },
+                  "border": {
+                    "type": "string"
+                  },
+                  "radius": {
+                    "type": "string"
+                  },
+                  "spacing": {
+                    "type": "string"
+                  },
+                  "fontFamily": {
+                    "type": "string"
+                  },
+                  "typeRole": {
+                    "type": "string"
+                  }
+                },
+                "description": "Optional per-node token references. Values are token NAMES from tokens/llm/token-catalog.json; schema/semantic_validate.py rejects unknown tokens, raw colours, arbitrary spacing, unsupported fonts and invalid theme/token combinations (TOKEN_* rules)."
+              },
+              "retrievalEligible": {
+                "type": "boolean",
+                "description": "Optional echo of the section contract's retrievalEligible; when present it must equal the pinned / contract value (RETRIEVAL_ELIGIBILITY_PINNED)."
               }
             }
           },
@@ -2175,7 +3029,17 @@
                         "brand.logo",
                         "editorial.hero-image",
                         "editorial.stock-photo",
+                        "generated.copy",
+                        "generated.icon",
+                        "generated.illustration",
+                        "operator.supplied-asset",
                         "person.likeness",
+                        "placeholder.badge",
+                        "placeholder.brand-mark",
+                        "placeholder.company-logo",
+                        "placeholder.person-avatar",
+                        "placeholder.screenshot",
+                        "placeholder.url",
                         "product.badge",
                         "product.screenshot",
                         "site.favicon",
@@ -2193,6 +3057,38 @@
                     }
                   }
                 }
+              },
+              "style": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "surface": {
+                    "type": "string"
+                  },
+                  "text": {
+                    "type": "string"
+                  },
+                  "border": {
+                    "type": "string"
+                  },
+                  "radius": {
+                    "type": "string"
+                  },
+                  "spacing": {
+                    "type": "string"
+                  },
+                  "fontFamily": {
+                    "type": "string"
+                  },
+                  "typeRole": {
+                    "type": "string"
+                  }
+                },
+                "description": "Optional per-node token references. Values are token NAMES from tokens/llm/token-catalog.json; schema/semantic_validate.py rejects unknown tokens, raw colours, arbitrary spacing, unsupported fonts and invalid theme/token combinations (TOKEN_* rules)."
+              },
+              "retrievalEligible": {
+                "type": "boolean",
+                "description": "Optional echo of the section contract's retrievalEligible; when present it must equal the pinned / contract value (RETRIEVAL_ELIGIBILITY_PINNED)."
               }
             }
           },
@@ -2273,7 +3169,17 @@
                         "brand.logo",
                         "editorial.hero-image",
                         "editorial.stock-photo",
+                        "generated.copy",
+                        "generated.icon",
+                        "generated.illustration",
+                        "operator.supplied-asset",
                         "person.likeness",
+                        "placeholder.badge",
+                        "placeholder.brand-mark",
+                        "placeholder.company-logo",
+                        "placeholder.person-avatar",
+                        "placeholder.screenshot",
+                        "placeholder.url",
                         "product.badge",
                         "product.screenshot",
                         "site.favicon",
@@ -2291,6 +3197,38 @@
                     }
                   }
                 }
+              },
+              "style": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "surface": {
+                    "type": "string"
+                  },
+                  "text": {
+                    "type": "string"
+                  },
+                  "border": {
+                    "type": "string"
+                  },
+                  "radius": {
+                    "type": "string"
+                  },
+                  "spacing": {
+                    "type": "string"
+                  },
+                  "fontFamily": {
+                    "type": "string"
+                  },
+                  "typeRole": {
+                    "type": "string"
+                  }
+                },
+                "description": "Optional per-node token references. Values are token NAMES from tokens/llm/token-catalog.json; schema/semantic_validate.py rejects unknown tokens, raw colours, arbitrary spacing, unsupported fonts and invalid theme/token combinations (TOKEN_* rules)."
+              },
+              "retrievalEligible": {
+                "type": "boolean",
+                "description": "Optional echo of the section contract's retrievalEligible; when present it must equal the pinned / contract value (RETRIEVAL_ELIGIBILITY_PINNED)."
               }
             }
           },
@@ -2374,7 +3312,17 @@
                         "brand.logo",
                         "editorial.hero-image",
                         "editorial.stock-photo",
+                        "generated.copy",
+                        "generated.icon",
+                        "generated.illustration",
+                        "operator.supplied-asset",
                         "person.likeness",
+                        "placeholder.badge",
+                        "placeholder.brand-mark",
+                        "placeholder.company-logo",
+                        "placeholder.person-avatar",
+                        "placeholder.screenshot",
+                        "placeholder.url",
                         "product.badge",
                         "product.screenshot",
                         "site.favicon",
@@ -2392,6 +3340,38 @@
                     }
                   }
                 }
+              },
+              "style": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "surface": {
+                    "type": "string"
+                  },
+                  "text": {
+                    "type": "string"
+                  },
+                  "border": {
+                    "type": "string"
+                  },
+                  "radius": {
+                    "type": "string"
+                  },
+                  "spacing": {
+                    "type": "string"
+                  },
+                  "fontFamily": {
+                    "type": "string"
+                  },
+                  "typeRole": {
+                    "type": "string"
+                  }
+                },
+                "description": "Optional per-node token references. Values are token NAMES from tokens/llm/token-catalog.json; schema/semantic_validate.py rejects unknown tokens, raw colours, arbitrary spacing, unsupported fonts and invalid theme/token combinations (TOKEN_* rules)."
+              },
+              "retrievalEligible": {
+                "type": "boolean",
+                "description": "Optional echo of the section contract's retrievalEligible; when present it must equal the pinned / contract value (RETRIEVAL_ELIGIBILITY_PINNED)."
               }
             }
           },
@@ -2474,7 +3454,17 @@
                         "brand.logo",
                         "editorial.hero-image",
                         "editorial.stock-photo",
+                        "generated.copy",
+                        "generated.icon",
+                        "generated.illustration",
+                        "operator.supplied-asset",
                         "person.likeness",
+                        "placeholder.badge",
+                        "placeholder.brand-mark",
+                        "placeholder.company-logo",
+                        "placeholder.person-avatar",
+                        "placeholder.screenshot",
+                        "placeholder.url",
                         "product.badge",
                         "product.screenshot",
                         "site.favicon",
@@ -2492,6 +3482,38 @@
                     }
                   }
                 }
+              },
+              "style": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "surface": {
+                    "type": "string"
+                  },
+                  "text": {
+                    "type": "string"
+                  },
+                  "border": {
+                    "type": "string"
+                  },
+                  "radius": {
+                    "type": "string"
+                  },
+                  "spacing": {
+                    "type": "string"
+                  },
+                  "fontFamily": {
+                    "type": "string"
+                  },
+                  "typeRole": {
+                    "type": "string"
+                  }
+                },
+                "description": "Optional per-node token references. Values are token NAMES from tokens/llm/token-catalog.json; schema/semantic_validate.py rejects unknown tokens, raw colours, arbitrary spacing, unsupported fonts and invalid theme/token combinations (TOKEN_* rules)."
+              },
+              "retrievalEligible": {
+                "type": "boolean",
+                "description": "Optional echo of the section contract's retrievalEligible; when present it must equal the pinned / contract value (RETRIEVAL_ELIGIBILITY_PINNED)."
               }
             }
           },
@@ -2575,7 +3597,17 @@
                         "brand.logo",
                         "editorial.hero-image",
                         "editorial.stock-photo",
+                        "generated.copy",
+                        "generated.icon",
+                        "generated.illustration",
+                        "operator.supplied-asset",
                         "person.likeness",
+                        "placeholder.badge",
+                        "placeholder.brand-mark",
+                        "placeholder.company-logo",
+                        "placeholder.person-avatar",
+                        "placeholder.screenshot",
+                        "placeholder.url",
                         "product.badge",
                         "product.screenshot",
                         "site.favicon",
@@ -2593,6 +3625,38 @@
                     }
                   }
                 }
+              },
+              "style": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "surface": {
+                    "type": "string"
+                  },
+                  "text": {
+                    "type": "string"
+                  },
+                  "border": {
+                    "type": "string"
+                  },
+                  "radius": {
+                    "type": "string"
+                  },
+                  "spacing": {
+                    "type": "string"
+                  },
+                  "fontFamily": {
+                    "type": "string"
+                  },
+                  "typeRole": {
+                    "type": "string"
+                  }
+                },
+                "description": "Optional per-node token references. Values are token NAMES from tokens/llm/token-catalog.json; schema/semantic_validate.py rejects unknown tokens, raw colours, arbitrary spacing, unsupported fonts and invalid theme/token combinations (TOKEN_* rules)."
+              },
+              "retrievalEligible": {
+                "type": "boolean",
+                "description": "Optional echo of the section contract's retrievalEligible; when present it must equal the pinned / contract value (RETRIEVAL_ELIGIBILITY_PINNED)."
               }
             }
           },
@@ -2679,7 +3743,17 @@
                         "brand.logo",
                         "editorial.hero-image",
                         "editorial.stock-photo",
+                        "generated.copy",
+                        "generated.icon",
+                        "generated.illustration",
+                        "operator.supplied-asset",
                         "person.likeness",
+                        "placeholder.badge",
+                        "placeholder.brand-mark",
+                        "placeholder.company-logo",
+                        "placeholder.person-avatar",
+                        "placeholder.screenshot",
+                        "placeholder.url",
                         "product.badge",
                         "product.screenshot",
                         "site.favicon",
@@ -2697,6 +3771,38 @@
                     }
                   }
                 }
+              },
+              "style": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "surface": {
+                    "type": "string"
+                  },
+                  "text": {
+                    "type": "string"
+                  },
+                  "border": {
+                    "type": "string"
+                  },
+                  "radius": {
+                    "type": "string"
+                  },
+                  "spacing": {
+                    "type": "string"
+                  },
+                  "fontFamily": {
+                    "type": "string"
+                  },
+                  "typeRole": {
+                    "type": "string"
+                  }
+                },
+                "description": "Optional per-node token references. Values are token NAMES from tokens/llm/token-catalog.json; schema/semantic_validate.py rejects unknown tokens, raw colours, arbitrary spacing, unsupported fonts and invalid theme/token combinations (TOKEN_* rules)."
+              },
+              "retrievalEligible": {
+                "type": "boolean",
+                "description": "Optional echo of the section contract's retrievalEligible; when present it must equal the pinned / contract value (RETRIEVAL_ELIGIBILITY_PINNED)."
               }
             }
           },
@@ -2782,7 +3888,17 @@
                         "brand.logo",
                         "editorial.hero-image",
                         "editorial.stock-photo",
+                        "generated.copy",
+                        "generated.icon",
+                        "generated.illustration",
+                        "operator.supplied-asset",
                         "person.likeness",
+                        "placeholder.badge",
+                        "placeholder.brand-mark",
+                        "placeholder.company-logo",
+                        "placeholder.person-avatar",
+                        "placeholder.screenshot",
+                        "placeholder.url",
                         "product.badge",
                         "product.screenshot",
                         "site.favicon",
@@ -2800,6 +3916,38 @@
                     }
                   }
                 }
+              },
+              "style": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "surface": {
+                    "type": "string"
+                  },
+                  "text": {
+                    "type": "string"
+                  },
+                  "border": {
+                    "type": "string"
+                  },
+                  "radius": {
+                    "type": "string"
+                  },
+                  "spacing": {
+                    "type": "string"
+                  },
+                  "fontFamily": {
+                    "type": "string"
+                  },
+                  "typeRole": {
+                    "type": "string"
+                  }
+                },
+                "description": "Optional per-node token references. Values are token NAMES from tokens/llm/token-catalog.json; schema/semantic_validate.py rejects unknown tokens, raw colours, arbitrary spacing, unsupported fonts and invalid theme/token combinations (TOKEN_* rules)."
+              },
+              "retrievalEligible": {
+                "type": "boolean",
+                "description": "Optional echo of the section contract's retrievalEligible; when present it must equal the pinned / contract value (RETRIEVAL_ELIGIBILITY_PINNED)."
               }
             }
           },
@@ -2835,9 +3983,7 @@
                   "h1": {},
                   "lede": {},
                   "treesHeading": {},
-                  "usersHeading": {},
-                  "displayHeading": {},
-                  "eyebrow": {}
+                  "usersHeading": {}
                 },
                 "description": "Closed to this section's real content fields. Per-field maxWords budgets live in sections/hero.home.json and are enforced per instance by schema/semantic_validate.py, which JSON Schema cannot express."
               },
@@ -2887,7 +4033,17 @@
                         "brand.logo",
                         "editorial.hero-image",
                         "editorial.stock-photo",
+                        "generated.copy",
+                        "generated.icon",
+                        "generated.illustration",
+                        "operator.supplied-asset",
                         "person.likeness",
+                        "placeholder.badge",
+                        "placeholder.brand-mark",
+                        "placeholder.company-logo",
+                        "placeholder.person-avatar",
+                        "placeholder.screenshot",
+                        "placeholder.url",
                         "product.badge",
                         "product.screenshot",
                         "site.favicon",
@@ -2905,6 +4061,38 @@
                     }
                   }
                 }
+              },
+              "style": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "surface": {
+                    "type": "string"
+                  },
+                  "text": {
+                    "type": "string"
+                  },
+                  "border": {
+                    "type": "string"
+                  },
+                  "radius": {
+                    "type": "string"
+                  },
+                  "spacing": {
+                    "type": "string"
+                  },
+                  "fontFamily": {
+                    "type": "string"
+                  },
+                  "typeRole": {
+                    "type": "string"
+                  }
+                },
+                "description": "Optional per-node token references. Values are token NAMES from tokens/llm/token-catalog.json; schema/semantic_validate.py rejects unknown tokens, raw colours, arbitrary spacing, unsupported fonts and invalid theme/token combinations (TOKEN_* rules)."
+              },
+              "retrievalEligible": {
+                "type": "boolean",
+                "description": "Optional echo of the section contract's retrievalEligible; when present it must equal the pinned / contract value (RETRIEVAL_ELIGIBILITY_PINNED)."
               }
             }
           },
@@ -2988,7 +4176,17 @@
                         "brand.logo",
                         "editorial.hero-image",
                         "editorial.stock-photo",
+                        "generated.copy",
+                        "generated.icon",
+                        "generated.illustration",
+                        "operator.supplied-asset",
                         "person.likeness",
+                        "placeholder.badge",
+                        "placeholder.brand-mark",
+                        "placeholder.company-logo",
+                        "placeholder.person-avatar",
+                        "placeholder.screenshot",
+                        "placeholder.url",
                         "product.badge",
                         "product.screenshot",
                         "site.favicon",
@@ -3006,6 +4204,38 @@
                     }
                   }
                 }
+              },
+              "style": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "surface": {
+                    "type": "string"
+                  },
+                  "text": {
+                    "type": "string"
+                  },
+                  "border": {
+                    "type": "string"
+                  },
+                  "radius": {
+                    "type": "string"
+                  },
+                  "spacing": {
+                    "type": "string"
+                  },
+                  "fontFamily": {
+                    "type": "string"
+                  },
+                  "typeRole": {
+                    "type": "string"
+                  }
+                },
+                "description": "Optional per-node token references. Values are token NAMES from tokens/llm/token-catalog.json; schema/semantic_validate.py rejects unknown tokens, raw colours, arbitrary spacing, unsupported fonts and invalid theme/token combinations (TOKEN_* rules)."
+              },
+              "retrievalEligible": {
+                "type": "boolean",
+                "description": "Optional echo of the section contract's retrievalEligible; when present it must equal the pinned / contract value (RETRIEVAL_ELIGIBILITY_PINNED)."
               }
             }
           },
@@ -3090,7 +4320,17 @@
                         "brand.logo",
                         "editorial.hero-image",
                         "editorial.stock-photo",
+                        "generated.copy",
+                        "generated.icon",
+                        "generated.illustration",
+                        "operator.supplied-asset",
                         "person.likeness",
+                        "placeholder.badge",
+                        "placeholder.brand-mark",
+                        "placeholder.company-logo",
+                        "placeholder.person-avatar",
+                        "placeholder.screenshot",
+                        "placeholder.url",
                         "product.badge",
                         "product.screenshot",
                         "site.favicon",
@@ -3108,6 +4348,38 @@
                     }
                   }
                 }
+              },
+              "style": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "surface": {
+                    "type": "string"
+                  },
+                  "text": {
+                    "type": "string"
+                  },
+                  "border": {
+                    "type": "string"
+                  },
+                  "radius": {
+                    "type": "string"
+                  },
+                  "spacing": {
+                    "type": "string"
+                  },
+                  "fontFamily": {
+                    "type": "string"
+                  },
+                  "typeRole": {
+                    "type": "string"
+                  }
+                },
+                "description": "Optional per-node token references. Values are token NAMES from tokens/llm/token-catalog.json; schema/semantic_validate.py rejects unknown tokens, raw colours, arbitrary spacing, unsupported fonts and invalid theme/token combinations (TOKEN_* rules)."
+              },
+              "retrievalEligible": {
+                "type": "boolean",
+                "description": "Optional echo of the section contract's retrievalEligible; when present it must equal the pinned / contract value (RETRIEVAL_ELIGIBILITY_PINNED)."
               }
             }
           },
@@ -3143,9 +4415,7 @@
                   "partnerLogoAlt": {},
                   "h1": {},
                   "ledeOfferSuffix": {},
-                  "usersHeading": {},
-                  "displayHeading": {},
-                  "eyebrow": {}
+                  "usersHeading": {}
                 },
                 "description": "Closed to this section's real content fields. Per-field maxWords budgets live in sections/hero.partner.json and are enforced per instance by schema/semantic_validate.py, which JSON Schema cannot express."
               },
@@ -3195,7 +4465,17 @@
                         "brand.logo",
                         "editorial.hero-image",
                         "editorial.stock-photo",
+                        "generated.copy",
+                        "generated.icon",
+                        "generated.illustration",
+                        "operator.supplied-asset",
                         "person.likeness",
+                        "placeholder.badge",
+                        "placeholder.brand-mark",
+                        "placeholder.company-logo",
+                        "placeholder.person-avatar",
+                        "placeholder.screenshot",
+                        "placeholder.url",
                         "product.badge",
                         "product.screenshot",
                         "site.favicon",
@@ -3213,6 +4493,38 @@
                     }
                   }
                 }
+              },
+              "style": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "surface": {
+                    "type": "string"
+                  },
+                  "text": {
+                    "type": "string"
+                  },
+                  "border": {
+                    "type": "string"
+                  },
+                  "radius": {
+                    "type": "string"
+                  },
+                  "spacing": {
+                    "type": "string"
+                  },
+                  "fontFamily": {
+                    "type": "string"
+                  },
+                  "typeRole": {
+                    "type": "string"
+                  }
+                },
+                "description": "Optional per-node token references. Values are token NAMES from tokens/llm/token-catalog.json; schema/semantic_validate.py rejects unknown tokens, raw colours, arbitrary spacing, unsupported fonts and invalid theme/token combinations (TOKEN_* rules)."
+              },
+              "retrievalEligible": {
+                "type": "boolean",
+                "description": "Optional echo of the section contract's retrievalEligible; when present it must equal the pinned / contract value (RETRIEVAL_ELIGIBILITY_PINNED)."
               }
             }
           },
@@ -3296,7 +4608,17 @@
                         "brand.logo",
                         "editorial.hero-image",
                         "editorial.stock-photo",
+                        "generated.copy",
+                        "generated.icon",
+                        "generated.illustration",
+                        "operator.supplied-asset",
                         "person.likeness",
+                        "placeholder.badge",
+                        "placeholder.brand-mark",
+                        "placeholder.company-logo",
+                        "placeholder.person-avatar",
+                        "placeholder.screenshot",
+                        "placeholder.url",
                         "product.badge",
                         "product.screenshot",
                         "site.favicon",
@@ -3314,6 +4636,38 @@
                     }
                   }
                 }
+              },
+              "style": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "surface": {
+                    "type": "string"
+                  },
+                  "text": {
+                    "type": "string"
+                  },
+                  "border": {
+                    "type": "string"
+                  },
+                  "radius": {
+                    "type": "string"
+                  },
+                  "spacing": {
+                    "type": "string"
+                  },
+                  "fontFamily": {
+                    "type": "string"
+                  },
+                  "typeRole": {
+                    "type": "string"
+                  }
+                },
+                "description": "Optional per-node token references. Values are token NAMES from tokens/llm/token-catalog.json; schema/semantic_validate.py rejects unknown tokens, raw colours, arbitrary spacing, unsupported fonts and invalid theme/token combinations (TOKEN_* rules)."
+              },
+              "retrievalEligible": {
+                "type": "boolean",
+                "description": "Optional echo of the section contract's retrievalEligible; when present it must equal the pinned / contract value (RETRIEVAL_ELIGIBILITY_PINNED)."
               }
             }
           },
@@ -3396,7 +4750,17 @@
                         "brand.logo",
                         "editorial.hero-image",
                         "editorial.stock-photo",
+                        "generated.copy",
+                        "generated.icon",
+                        "generated.illustration",
+                        "operator.supplied-asset",
                         "person.likeness",
+                        "placeholder.badge",
+                        "placeholder.brand-mark",
+                        "placeholder.company-logo",
+                        "placeholder.person-avatar",
+                        "placeholder.screenshot",
+                        "placeholder.url",
                         "product.badge",
                         "product.screenshot",
                         "site.favicon",
@@ -3414,6 +4778,38 @@
                     }
                   }
                 }
+              },
+              "style": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "surface": {
+                    "type": "string"
+                  },
+                  "text": {
+                    "type": "string"
+                  },
+                  "border": {
+                    "type": "string"
+                  },
+                  "radius": {
+                    "type": "string"
+                  },
+                  "spacing": {
+                    "type": "string"
+                  },
+                  "fontFamily": {
+                    "type": "string"
+                  },
+                  "typeRole": {
+                    "type": "string"
+                  }
+                },
+                "description": "Optional per-node token references. Values are token NAMES from tokens/llm/token-catalog.json; schema/semantic_validate.py rejects unknown tokens, raw colours, arbitrary spacing, unsupported fonts and invalid theme/token combinations (TOKEN_* rules)."
+              },
+              "retrievalEligible": {
+                "type": "boolean",
+                "description": "Optional echo of the section contract's retrievalEligible; when present it must equal the pinned / contract value (RETRIEVAL_ELIGIBILITY_PINNED)."
               }
             }
           },
@@ -3496,7 +4892,17 @@
                         "brand.logo",
                         "editorial.hero-image",
                         "editorial.stock-photo",
+                        "generated.copy",
+                        "generated.icon",
+                        "generated.illustration",
+                        "operator.supplied-asset",
                         "person.likeness",
+                        "placeholder.badge",
+                        "placeholder.brand-mark",
+                        "placeholder.company-logo",
+                        "placeholder.person-avatar",
+                        "placeholder.screenshot",
+                        "placeholder.url",
                         "product.badge",
                         "product.screenshot",
                         "site.favicon",
@@ -3514,6 +4920,38 @@
                     }
                   }
                 }
+              },
+              "style": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "surface": {
+                    "type": "string"
+                  },
+                  "text": {
+                    "type": "string"
+                  },
+                  "border": {
+                    "type": "string"
+                  },
+                  "radius": {
+                    "type": "string"
+                  },
+                  "spacing": {
+                    "type": "string"
+                  },
+                  "fontFamily": {
+                    "type": "string"
+                  },
+                  "typeRole": {
+                    "type": "string"
+                  }
+                },
+                "description": "Optional per-node token references. Values are token NAMES from tokens/llm/token-catalog.json; schema/semantic_validate.py rejects unknown tokens, raw colours, arbitrary spacing, unsupported fonts and invalid theme/token combinations (TOKEN_* rules)."
+              },
+              "retrievalEligible": {
+                "type": "boolean",
+                "description": "Optional echo of the section contract's retrievalEligible; when present it must equal the pinned / contract value (RETRIEVAL_ELIGIBILITY_PINNED)."
               }
             }
           },
@@ -3596,7 +5034,17 @@
                         "brand.logo",
                         "editorial.hero-image",
                         "editorial.stock-photo",
+                        "generated.copy",
+                        "generated.icon",
+                        "generated.illustration",
+                        "operator.supplied-asset",
                         "person.likeness",
+                        "placeholder.badge",
+                        "placeholder.brand-mark",
+                        "placeholder.company-logo",
+                        "placeholder.person-avatar",
+                        "placeholder.screenshot",
+                        "placeholder.url",
                         "product.badge",
                         "product.screenshot",
                         "site.favicon",
@@ -3614,6 +5062,38 @@
                     }
                   }
                 }
+              },
+              "style": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "surface": {
+                    "type": "string"
+                  },
+                  "text": {
+                    "type": "string"
+                  },
+                  "border": {
+                    "type": "string"
+                  },
+                  "radius": {
+                    "type": "string"
+                  },
+                  "spacing": {
+                    "type": "string"
+                  },
+                  "fontFamily": {
+                    "type": "string"
+                  },
+                  "typeRole": {
+                    "type": "string"
+                  }
+                },
+                "description": "Optional per-node token references. Values are token NAMES from tokens/llm/token-catalog.json; schema/semantic_validate.py rejects unknown tokens, raw colours, arbitrary spacing, unsupported fonts and invalid theme/token combinations (TOKEN_* rules)."
+              },
+              "retrievalEligible": {
+                "type": "boolean",
+                "description": "Optional echo of the section contract's retrievalEligible; when present it must equal the pinned / contract value (RETRIEVAL_ELIGIBILITY_PINNED)."
               }
             }
           },
@@ -3697,7 +5177,17 @@
                         "brand.logo",
                         "editorial.hero-image",
                         "editorial.stock-photo",
+                        "generated.copy",
+                        "generated.icon",
+                        "generated.illustration",
+                        "operator.supplied-asset",
                         "person.likeness",
+                        "placeholder.badge",
+                        "placeholder.brand-mark",
+                        "placeholder.company-logo",
+                        "placeholder.person-avatar",
+                        "placeholder.screenshot",
+                        "placeholder.url",
                         "product.badge",
                         "product.screenshot",
                         "site.favicon",
@@ -3715,6 +5205,38 @@
                     }
                   }
                 }
+              },
+              "style": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "surface": {
+                    "type": "string"
+                  },
+                  "text": {
+                    "type": "string"
+                  },
+                  "border": {
+                    "type": "string"
+                  },
+                  "radius": {
+                    "type": "string"
+                  },
+                  "spacing": {
+                    "type": "string"
+                  },
+                  "fontFamily": {
+                    "type": "string"
+                  },
+                  "typeRole": {
+                    "type": "string"
+                  }
+                },
+                "description": "Optional per-node token references. Values are token NAMES from tokens/llm/token-catalog.json; schema/semantic_validate.py rejects unknown tokens, raw colours, arbitrary spacing, unsupported fonts and invalid theme/token combinations (TOKEN_* rules)."
+              },
+              "retrievalEligible": {
+                "type": "boolean",
+                "description": "Optional echo of the section contract's retrievalEligible; when present it must equal the pinned / contract value (RETRIEVAL_ELIGIBILITY_PINNED)."
               }
             }
           },
@@ -3797,7 +5319,17 @@
                         "brand.logo",
                         "editorial.hero-image",
                         "editorial.stock-photo",
+                        "generated.copy",
+                        "generated.icon",
+                        "generated.illustration",
+                        "operator.supplied-asset",
                         "person.likeness",
+                        "placeholder.badge",
+                        "placeholder.brand-mark",
+                        "placeholder.company-logo",
+                        "placeholder.person-avatar",
+                        "placeholder.screenshot",
+                        "placeholder.url",
                         "product.badge",
                         "product.screenshot",
                         "site.favicon",
@@ -3815,6 +5347,38 @@
                     }
                   }
                 }
+              },
+              "style": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "surface": {
+                    "type": "string"
+                  },
+                  "text": {
+                    "type": "string"
+                  },
+                  "border": {
+                    "type": "string"
+                  },
+                  "radius": {
+                    "type": "string"
+                  },
+                  "spacing": {
+                    "type": "string"
+                  },
+                  "fontFamily": {
+                    "type": "string"
+                  },
+                  "typeRole": {
+                    "type": "string"
+                  }
+                },
+                "description": "Optional per-node token references. Values are token NAMES from tokens/llm/token-catalog.json; schema/semantic_validate.py rejects unknown tokens, raw colours, arbitrary spacing, unsupported fonts and invalid theme/token combinations (TOKEN_* rules)."
+              },
+              "retrievalEligible": {
+                "type": "boolean",
+                "description": "Optional echo of the section contract's retrievalEligible; when present it must equal the pinned / contract value (RETRIEVAL_ELIGIBILITY_PINNED)."
               }
             }
           },
@@ -3900,7 +5464,17 @@
                         "brand.logo",
                         "editorial.hero-image",
                         "editorial.stock-photo",
+                        "generated.copy",
+                        "generated.icon",
+                        "generated.illustration",
+                        "operator.supplied-asset",
                         "person.likeness",
+                        "placeholder.badge",
+                        "placeholder.brand-mark",
+                        "placeholder.company-logo",
+                        "placeholder.person-avatar",
+                        "placeholder.screenshot",
+                        "placeholder.url",
                         "product.badge",
                         "product.screenshot",
                         "site.favicon",
@@ -3918,6 +5492,38 @@
                     }
                   }
                 }
+              },
+              "style": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "surface": {
+                    "type": "string"
+                  },
+                  "text": {
+                    "type": "string"
+                  },
+                  "border": {
+                    "type": "string"
+                  },
+                  "radius": {
+                    "type": "string"
+                  },
+                  "spacing": {
+                    "type": "string"
+                  },
+                  "fontFamily": {
+                    "type": "string"
+                  },
+                  "typeRole": {
+                    "type": "string"
+                  }
+                },
+                "description": "Optional per-node token references. Values are token NAMES from tokens/llm/token-catalog.json; schema/semantic_validate.py rejects unknown tokens, raw colours, arbitrary spacing, unsupported fonts and invalid theme/token combinations (TOKEN_* rules)."
+              },
+              "retrievalEligible": {
+                "type": "boolean",
+                "description": "Optional echo of the section contract's retrievalEligible; when present it must equal the pinned / contract value (RETRIEVAL_ELIGIBILITY_PINNED)."
               }
             }
           },
@@ -4000,7 +5606,17 @@
                         "brand.logo",
                         "editorial.hero-image",
                         "editorial.stock-photo",
+                        "generated.copy",
+                        "generated.icon",
+                        "generated.illustration",
+                        "operator.supplied-asset",
                         "person.likeness",
+                        "placeholder.badge",
+                        "placeholder.brand-mark",
+                        "placeholder.company-logo",
+                        "placeholder.person-avatar",
+                        "placeholder.screenshot",
+                        "placeholder.url",
                         "product.badge",
                         "product.screenshot",
                         "site.favicon",
@@ -4018,6 +5634,38 @@
                     }
                   }
                 }
+              },
+              "style": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "surface": {
+                    "type": "string"
+                  },
+                  "text": {
+                    "type": "string"
+                  },
+                  "border": {
+                    "type": "string"
+                  },
+                  "radius": {
+                    "type": "string"
+                  },
+                  "spacing": {
+                    "type": "string"
+                  },
+                  "fontFamily": {
+                    "type": "string"
+                  },
+                  "typeRole": {
+                    "type": "string"
+                  }
+                },
+                "description": "Optional per-node token references. Values are token NAMES from tokens/llm/token-catalog.json; schema/semantic_validate.py rejects unknown tokens, raw colours, arbitrary spacing, unsupported fonts and invalid theme/token combinations (TOKEN_* rules)."
+              },
+              "retrievalEligible": {
+                "type": "boolean",
+                "description": "Optional echo of the section contract's retrievalEligible; when present it must equal the pinned / contract value (RETRIEVAL_ELIGIBILITY_PINNED)."
               }
             }
           },
@@ -4101,7 +5749,17 @@
                         "brand.logo",
                         "editorial.hero-image",
                         "editorial.stock-photo",
+                        "generated.copy",
+                        "generated.icon",
+                        "generated.illustration",
+                        "operator.supplied-asset",
                         "person.likeness",
+                        "placeholder.badge",
+                        "placeholder.brand-mark",
+                        "placeholder.company-logo",
+                        "placeholder.person-avatar",
+                        "placeholder.screenshot",
+                        "placeholder.url",
                         "product.badge",
                         "product.screenshot",
                         "site.favicon",
@@ -4119,6 +5777,38 @@
                     }
                   }
                 }
+              },
+              "style": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "surface": {
+                    "type": "string"
+                  },
+                  "text": {
+                    "type": "string"
+                  },
+                  "border": {
+                    "type": "string"
+                  },
+                  "radius": {
+                    "type": "string"
+                  },
+                  "spacing": {
+                    "type": "string"
+                  },
+                  "fontFamily": {
+                    "type": "string"
+                  },
+                  "typeRole": {
+                    "type": "string"
+                  }
+                },
+                "description": "Optional per-node token references. Values are token NAMES from tokens/llm/token-catalog.json; schema/semantic_validate.py rejects unknown tokens, raw colours, arbitrary spacing, unsupported fonts and invalid theme/token combinations (TOKEN_* rules)."
+              },
+              "retrievalEligible": {
+                "type": "boolean",
+                "description": "Optional echo of the section contract's retrievalEligible; when present it must equal the pinned / contract value (RETRIEVAL_ELIGIBILITY_PINNED)."
               }
             }
           },
@@ -4203,7 +5893,17 @@
                         "brand.logo",
                         "editorial.hero-image",
                         "editorial.stock-photo",
+                        "generated.copy",
+                        "generated.icon",
+                        "generated.illustration",
+                        "operator.supplied-asset",
                         "person.likeness",
+                        "placeholder.badge",
+                        "placeholder.brand-mark",
+                        "placeholder.company-logo",
+                        "placeholder.person-avatar",
+                        "placeholder.screenshot",
+                        "placeholder.url",
                         "product.badge",
                         "product.screenshot",
                         "site.favicon",
@@ -4221,6 +5921,38 @@
                     }
                   }
                 }
+              },
+              "style": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "surface": {
+                    "type": "string"
+                  },
+                  "text": {
+                    "type": "string"
+                  },
+                  "border": {
+                    "type": "string"
+                  },
+                  "radius": {
+                    "type": "string"
+                  },
+                  "spacing": {
+                    "type": "string"
+                  },
+                  "fontFamily": {
+                    "type": "string"
+                  },
+                  "typeRole": {
+                    "type": "string"
+                  }
+                },
+                "description": "Optional per-node token references. Values are token NAMES from tokens/llm/token-catalog.json; schema/semantic_validate.py rejects unknown tokens, raw colours, arbitrary spacing, unsupported fonts and invalid theme/token combinations (TOKEN_* rules)."
+              },
+              "retrievalEligible": {
+                "type": "boolean",
+                "description": "Optional echo of the section contract's retrievalEligible; when present it must equal the pinned / contract value (RETRIEVAL_ELIGIBILITY_PINNED)."
               }
             }
           },
@@ -4303,7 +6035,17 @@
                         "brand.logo",
                         "editorial.hero-image",
                         "editorial.stock-photo",
+                        "generated.copy",
+                        "generated.icon",
+                        "generated.illustration",
+                        "operator.supplied-asset",
                         "person.likeness",
+                        "placeholder.badge",
+                        "placeholder.brand-mark",
+                        "placeholder.company-logo",
+                        "placeholder.person-avatar",
+                        "placeholder.screenshot",
+                        "placeholder.url",
                         "product.badge",
                         "product.screenshot",
                         "site.favicon",
@@ -4321,6 +6063,181 @@
                     }
                   }
                 }
+              },
+              "style": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "surface": {
+                    "type": "string"
+                  },
+                  "text": {
+                    "type": "string"
+                  },
+                  "border": {
+                    "type": "string"
+                  },
+                  "radius": {
+                    "type": "string"
+                  },
+                  "spacing": {
+                    "type": "string"
+                  },
+                  "fontFamily": {
+                    "type": "string"
+                  },
+                  "typeRole": {
+                    "type": "string"
+                  }
+                },
+                "description": "Optional per-node token references. Values are token NAMES from tokens/llm/token-catalog.json; schema/semantic_validate.py rejects unknown tokens, raw colours, arbitrary spacing, unsupported fonts and invalid theme/token combinations (TOKEN_* rules)."
+              },
+              "retrievalEligible": {
+                "type": "boolean",
+                "description": "Optional echo of the section contract's retrievalEligible; when present it must equal the pinned / contract value (RETRIEVAL_ELIGIBILITY_PINNED)."
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "section",
+              "required",
+              "repeatable",
+              "motion"
+            ],
+            "properties": {
+              "section": {
+                "const": "proof.social-proof-stack"
+              },
+              "required": {
+                "type": "boolean"
+              },
+              "repeatable": {
+                "type": "boolean"
+              },
+              "variant": {
+                "type": "string"
+              },
+              "note": {
+                "type": "string"
+              },
+              "content": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "displayHeading": {},
+                  "eyebrow": {}
+                },
+                "description": "Closed to this section's real content fields. Per-field maxWords budgets live in sections/proof.social-proof-stack.json and are enforced per instance by schema/semantic_validate.py, which JSON Schema cannot express."
+              },
+              "motion": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "pattern",
+                  "reducedMotionFallback"
+                ],
+                "properties": {
+                  "pattern": {
+                    "const": "none"
+                  },
+                  "trigger": {},
+                  "durationMs": {},
+                  "easing": {},
+                  "delayMs": {
+                    "const": 0
+                  },
+                  "staggerMs": {
+                    "const": 0
+                  },
+                  "leafSet": {},
+                  "leafCount": {},
+                  "scrollProgressRange": {},
+                  "reducedMotionFallback": {
+                    "const": "none-required-static"
+                  },
+                  "implementationStatus": {}
+                },
+                "description": "CLOSED to the 11 fields in this section's motionFieldSet. Contract-level documentation keys (motionDocumentationFields) are NOT settable here."
+              },
+              "assetRefs": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "assetRole"
+                  ],
+                  "properties": {
+                    "assetRole": {
+                      "enum": [
+                        "brand.icon",
+                        "brand.leaf-art",
+                        "brand.logo",
+                        "editorial.hero-image",
+                        "editorial.stock-photo",
+                        "generated.copy",
+                        "generated.icon",
+                        "generated.illustration",
+                        "operator.supplied-asset",
+                        "person.likeness",
+                        "placeholder.badge",
+                        "placeholder.brand-mark",
+                        "placeholder.company-logo",
+                        "placeholder.person-avatar",
+                        "placeholder.screenshot",
+                        "placeholder.url",
+                        "product.badge",
+                        "product.screenshot",
+                        "site.favicon",
+                        "third-party.platform-logo",
+                        "third-party.review-mark",
+                        "third-party.trademark",
+                        "typeface.webfont"
+                      ]
+                    },
+                    "src": {
+                      "type": "string"
+                    },
+                    "alt": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "style": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "surface": {
+                    "type": "string"
+                  },
+                  "text": {
+                    "type": "string"
+                  },
+                  "border": {
+                    "type": "string"
+                  },
+                  "radius": {
+                    "type": "string"
+                  },
+                  "spacing": {
+                    "type": "string"
+                  },
+                  "fontFamily": {
+                    "type": "string"
+                  },
+                  "typeRole": {
+                    "type": "string"
+                  }
+                },
+                "description": "Optional per-node token references. Values are token NAMES from tokens/llm/token-catalog.json; schema/semantic_validate.py rejects unknown tokens, raw colours, arbitrary spacing, unsupported fonts and invalid theme/token combinations (TOKEN_* rules)."
+              },
+              "retrievalEligible": {
+                "type": "boolean",
+                "description": "Optional echo of the section contract's retrievalEligible; when present it must equal the pinned / contract value (RETRIEVAL_ELIGIBILITY_PINNED)."
               }
             }
           },
@@ -4404,7 +6321,17 @@
                         "brand.logo",
                         "editorial.hero-image",
                         "editorial.stock-photo",
+                        "generated.copy",
+                        "generated.icon",
+                        "generated.illustration",
+                        "operator.supplied-asset",
                         "person.likeness",
+                        "placeholder.badge",
+                        "placeholder.brand-mark",
+                        "placeholder.company-logo",
+                        "placeholder.person-avatar",
+                        "placeholder.screenshot",
+                        "placeholder.url",
                         "product.badge",
                         "product.screenshot",
                         "site.favicon",
@@ -4422,6 +6349,38 @@
                     }
                   }
                 }
+              },
+              "style": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "surface": {
+                    "type": "string"
+                  },
+                  "text": {
+                    "type": "string"
+                  },
+                  "border": {
+                    "type": "string"
+                  },
+                  "radius": {
+                    "type": "string"
+                  },
+                  "spacing": {
+                    "type": "string"
+                  },
+                  "fontFamily": {
+                    "type": "string"
+                  },
+                  "typeRole": {
+                    "type": "string"
+                  }
+                },
+                "description": "Optional per-node token references. Values are token NAMES from tokens/llm/token-catalog.json; schema/semantic_validate.py rejects unknown tokens, raw colours, arbitrary spacing, unsupported fonts and invalid theme/token combinations (TOKEN_* rules)."
+              },
+              "retrievalEligible": {
+                "type": "boolean",
+                "description": "Optional echo of the section contract's retrievalEligible; when present it must equal the pinned / contract value (RETRIEVAL_ELIGIBILITY_PINNED)."
               }
             }
           },
@@ -4505,7 +6464,17 @@
                         "brand.logo",
                         "editorial.hero-image",
                         "editorial.stock-photo",
+                        "generated.copy",
+                        "generated.icon",
+                        "generated.illustration",
+                        "operator.supplied-asset",
                         "person.likeness",
+                        "placeholder.badge",
+                        "placeholder.brand-mark",
+                        "placeholder.company-logo",
+                        "placeholder.person-avatar",
+                        "placeholder.screenshot",
+                        "placeholder.url",
                         "product.badge",
                         "product.screenshot",
                         "site.favicon",
@@ -4523,6 +6492,38 @@
                     }
                   }
                 }
+              },
+              "style": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "surface": {
+                    "type": "string"
+                  },
+                  "text": {
+                    "type": "string"
+                  },
+                  "border": {
+                    "type": "string"
+                  },
+                  "radius": {
+                    "type": "string"
+                  },
+                  "spacing": {
+                    "type": "string"
+                  },
+                  "fontFamily": {
+                    "type": "string"
+                  },
+                  "typeRole": {
+                    "type": "string"
+                  }
+                },
+                "description": "Optional per-node token references. Values are token NAMES from tokens/llm/token-catalog.json; schema/semantic_validate.py rejects unknown tokens, raw colours, arbitrary spacing, unsupported fonts and invalid theme/token combinations (TOKEN_* rules)."
+              },
+              "retrievalEligible": {
+                "type": "boolean",
+                "description": "Optional echo of the section contract's retrievalEligible; when present it must equal the pinned / contract value (RETRIEVAL_ELIGIBILITY_PINNED)."
               }
             }
           },
@@ -4607,7 +6608,17 @@
                         "brand.logo",
                         "editorial.hero-image",
                         "editorial.stock-photo",
+                        "generated.copy",
+                        "generated.icon",
+                        "generated.illustration",
+                        "operator.supplied-asset",
                         "person.likeness",
+                        "placeholder.badge",
+                        "placeholder.brand-mark",
+                        "placeholder.company-logo",
+                        "placeholder.person-avatar",
+                        "placeholder.screenshot",
+                        "placeholder.url",
                         "product.badge",
                         "product.screenshot",
                         "site.favicon",
@@ -4625,6 +6636,38 @@
                     }
                   }
                 }
+              },
+              "style": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "surface": {
+                    "type": "string"
+                  },
+                  "text": {
+                    "type": "string"
+                  },
+                  "border": {
+                    "type": "string"
+                  },
+                  "radius": {
+                    "type": "string"
+                  },
+                  "spacing": {
+                    "type": "string"
+                  },
+                  "fontFamily": {
+                    "type": "string"
+                  },
+                  "typeRole": {
+                    "type": "string"
+                  }
+                },
+                "description": "Optional per-node token references. Values are token NAMES from tokens/llm/token-catalog.json; schema/semantic_validate.py rejects unknown tokens, raw colours, arbitrary spacing, unsupported fonts and invalid theme/token combinations (TOKEN_* rules)."
+              },
+              "retrievalEligible": {
+                "type": "boolean",
+                "description": "Optional echo of the section contract's retrievalEligible; when present it must equal the pinned / contract value (RETRIEVAL_ELIGIBILITY_PINNED)."
               }
             }
           },
@@ -4705,7 +6748,17 @@
                         "brand.logo",
                         "editorial.hero-image",
                         "editorial.stock-photo",
+                        "generated.copy",
+                        "generated.icon",
+                        "generated.illustration",
+                        "operator.supplied-asset",
                         "person.likeness",
+                        "placeholder.badge",
+                        "placeholder.brand-mark",
+                        "placeholder.company-logo",
+                        "placeholder.person-avatar",
+                        "placeholder.screenshot",
+                        "placeholder.url",
                         "product.badge",
                         "product.screenshot",
                         "site.favicon",
@@ -4723,6 +6776,38 @@
                     }
                   }
                 }
+              },
+              "style": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "surface": {
+                    "type": "string"
+                  },
+                  "text": {
+                    "type": "string"
+                  },
+                  "border": {
+                    "type": "string"
+                  },
+                  "radius": {
+                    "type": "string"
+                  },
+                  "spacing": {
+                    "type": "string"
+                  },
+                  "fontFamily": {
+                    "type": "string"
+                  },
+                  "typeRole": {
+                    "type": "string"
+                  }
+                },
+                "description": "Optional per-node token references. Values are token NAMES from tokens/llm/token-catalog.json; schema/semantic_validate.py rejects unknown tokens, raw colours, arbitrary spacing, unsupported fonts and invalid theme/token combinations (TOKEN_* rules)."
+              },
+              "retrievalEligible": {
+                "type": "boolean",
+                "description": "Optional echo of the section contract's retrievalEligible; when present it must equal the pinned / contract value (RETRIEVAL_ELIGIBILITY_PINNED)."
               }
             }
           }
@@ -4731,5 +6816,5 @@
       "description": "Ordered page-level nodes, top to bottom."
     }
   },
-  "$comment": "No per-instance style or token-override field exists by design \u2014 styling is owned by the section and component contracts, not by a generated instance. See tokens/llm/token-policy.json.overrides, which records this as an explicit gap rather than inventing a field just to have something to validate."
+  "$comment": "No per-instance style or token-override field exists by design — styling is owned by the section and component contracts, not by a generated instance. See tokens/llm/token-policy.json.overrides, which records this as an explicit gap rather than inventing a field just to have something to validate."
 }

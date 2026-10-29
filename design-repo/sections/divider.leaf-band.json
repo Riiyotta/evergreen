@@ -55,5 +55,20 @@
   "assetRole": "brand.leaf-art",
   "measuredFrom": "src/components/LeafDivider.jsx:28-53",
   "implementedBy": "src/components/LeafDivider.jsx",
-  "motionClosureScope": "CLOSED for PageSpec emission: a generated node's `motion` object may contain ONLY the fields in motionFieldSet, enforced by schema/pagespec.schema.json (additionalProperties:false) and the MOTION_OBJECT_IS_CLOSED rule. The keys in motionDocumentationFields below are contract-level documentation carried by THIS file for human and retrieval use; they are NOT settable on a PageSpec node."
+  "motionClosureScope": "CLOSED for PageSpec emission: a generated node's `motion` object may contain ONLY the fields in motionFieldSet, enforced by schema/pagespec.schema.json (additionalProperties:false) and the MOTION_OBJECT_IS_CLOSED rule. The keys in motionDocumentationFields below are contract-level documentation carried by THIS file for human and retrieval use; they are NOT settable on a PageSpec node.",
+  "source": {
+    "id": "src:LeafDivider:section@30",
+    "tag": "section",
+    "file": "src/components/LeafDivider.jsx",
+    "lines": "30-53"
+  },
+  "semantic": {
+    "id": "divider.leaf-band",
+    "category": "STRUCTURE"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": [
+    "generated.illustration",
+    "operator.supplied-asset"
+  ]
 }

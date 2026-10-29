@@ -55,11 +55,23 @@
     "max-wf-mini": "max-w-full"
   },
   "externalLinks": "EVERY source anchor is off-domain and renders with NO href. The note's /contact link IS internal and stays live.",
-  "evidenceGap": "The pricing-read date is a SPEC GAP: CLONE_SPEC_CONTENT_A \u00a75.4 records the FORMAT ('Pricing' ends with '(as read on {D Month YYYY})') but no per-competitor date was ever captured, so one placeholder date is used for all 15 routes. Recorded, not invented away.",
+  "evidenceGap": "The pricing-read date is a SPEC GAP: CLONE_SPEC_CONTENT_A §5.4 records the FORMAT ('Pricing' ends with '(as read on {D Month YYYY})') but no per-competitor date was ever captured, so one placeholder date is used for all 15 routes. Recorded, not invented away.",
   "measuredFrom": "src/components/SourcesList.jsx:18-36",
   "implementedBy": "src/components/SourcesList.jsx",
   "motionClosureScope": "CLOSED for PageSpec emission: a generated node's `motion` object may contain ONLY the fields in motionFieldSet, enforced by schema/pagespec.schema.json (additionalProperties:false) and the MOTION_OBJECT_IS_CLOSED rule. The keys in motionDocumentationFields below are contract-level documentation carried by THIS file for human and retrieval use; they are NOT settable on a PageSpec node.",
   "motionDocumentationFields": [
     "note"
-  ]
+  ],
+  "source": {
+    "id": "src:SourcesList:div@20",
+    "tag": "div",
+    "file": "src/components/SourcesList.jsx",
+    "lines": "20-36"
+  },
+  "semantic": {
+    "id": "content.sources",
+    "category": "CONTENT"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": []
 }

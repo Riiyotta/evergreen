@@ -76,7 +76,15 @@ def route_for(tid: str) -> str:
     return _FIRST_ROUTE[tid]
 
 
-def synth(tid: str) -> dict:
+def neutral_route(tid: str) -> str:
+    """A generation-mode route: the real route's first segment, with any real
+    slug replaced. The real slugs are source copy / customer names, and the
+    generation rules (correctly) reject them."""
+    segs = [s for s in route_for(tid).split("/") if s]
+    return "/" + "/".join(segs[:1] + ["example-page"] * (len(segs) > 1)) if segs else "/"
+
+
+def synth(tid: str, mode: str = "clone") -> dict:
     """Minimal valid PageSpec for a template, built from its OWN node list."""
     t = TEMPLATES[tid]
     nodes = []
@@ -94,8 +102,9 @@ def synth(tid: str) -> dict:
         node["motion"] = {k: real[k] for k in SETTABLE_MOTION if k in real}
         nodes.append(node)
     return {
-        "pageSpecVersion": "1.0.0",
-        "route": route_for(tid),
+        "pageSpecVersion": "2.0.0",
+        "mode": mode,
+        "route": route_for(tid) if mode == "clone" else neutral_route(tid),
         "template": tid,
         "nodes": nodes,
     }
@@ -215,6 +224,155 @@ def mutate_max_words_overflow(_):
     return s
 
 
+# ── 2.0.0: generation mode, tokens, retrieval, decomposition ─────────────────
+EX_DIR = os.path.join(REPO, "schema", "examples")
+EXAMPLES = {n: json.load(open(os.path.join(EX_DIR, n))) for n in sorted(os.listdir(EX_DIR)) if n.endswith(".json")}
+GEN = EXAMPLES["generated-landing.pagespec.json"]
+CLONE_REAL = EXAMPLES["clone-home.pagespec.json"]
+
+
+def _gen():
+    return copy.deepcopy(GEN)
+
+
+def _node(spec, section):
+    return next(n for n in spec["nodes"] if n["section"] == section)
+
+
+def _set(section, field, value):
+    def f(_):
+        s = _gen(); _node(s, section).setdefault("content", {})[field] = value; return s
+    return f
+
+
+def _asset(section, role, src="https://assets.fernway.example/x.svg"):
+    def f(_):
+        s = _gen(); _node(s, section)["assetRefs"] = [{"assetRole": role, "src": src}]; return s
+    return f
+
+
+def _style(section, slot, value, theme=None):
+    def f(_):
+        s = _gen(); _node(s, section).setdefault("style", {})[slot] = value
+        if theme:
+            s["theme"] = theme
+        return s
+    return f
+
+
+def mutate_mode_missing(_):
+    s = _gen(); del s["mode"]; return s
+
+
+def mutate_mode_invalid(_):
+    s = _gen(); s["mode"] = "reference"; return s
+
+
+def mutate_clone_flipped_to_generation(_):
+    s = copy.deepcopy(CLONE_REAL); s["mode"] = "generation"; return s
+
+
+def mutate_retrieval_modal(_):
+    s = _gen(); _node(s, "chrome.trial-modal")["retrievalEligible"] = True; return s
+
+
+def mutate_retrieval_content(_):
+    s = _gen(); _node(s, "hero.home")["retrievalEligible"] = False; return s
+
+
+def mutate_duplicate_legal_head(_):
+    s = copy.deepcopy(EXAMPLES["generated-legal.pagespec.json"])
+    head = _node(s, "hero.legal-head")
+    s["nodes"].insert(s["nodes"].index(head), copy.deepcopy(head))
+    return s
+
+
+def mutate_proof_stack_on_pricing(_):
+    s = copy.deepcopy(EXAMPLES["generated-pricing.pagespec.json"])
+    real = SECTIONS["proof.social-proof-stack"]["motion"]
+    s["nodes"].insert(2, {"section": "proof.social-proof-stack", "required": True, "repeatable": False,
+                          "motion": {k: real[k] for k in SETTABLE_MOTION if k in real}})
+    return s
+
+
+OBFUSCATED_LEDE = ("Evergreen\u200b is the only peer\u2011to\u2011peer recognition software that "
+                   "lets teams recognise a job well done")
+
+GENERATION_MUTATIONS = [
+    ("generation", "brand name in copy",                     _set("hero.home", "h1", "Try Evergreen with your team")),
+    ("generation", "sister-product brand in copy",           _set("hero.home", "lede", "Built by the people behind Arketta for busy teams")),
+    ("generation", "brand domain in a link",                 _set("hero.home", "lede", "Read more at https://www.evergreen.so/pricing today")),
+    ("generation", "real e-mail domain",                     _set("hero.home", "lede", "Write to hello@evergreen.so with questions")),
+    ("generation", "non-reserved URL",                       _set("hero.home", "lede", "Docs live at https://fernway.com/docs for everyone")),
+    ("generation", "Evergreen logo role",                    _asset("chrome.nav", "brand.logo")),
+    ("generation", "logo FILE under a safe role",            _asset("chrome.nav", "placeholder.brand-mark", "/assets/evergreen-logosvg-216cd4.svg")),
+    ("generation", "favicon role",                           _asset("chrome.nav", "site.favicon")),
+    ("generation", "leaf brand artwork role",                _asset("divider.leaf-band", "brand.leaf-art")),
+    ("generation", "Evergreen icon FILE under generated.icon", _asset("conversion.reassurance-cta", "generated.icon", "/assets/icon-treesvg-fb7494.svg")),
+    ("generation", "real product screenshot role",           _asset("hero.home", "product.screenshot")),
+    ("generation", "screenshot FILE under placeholder role", _asset("hero.home", "placeholder.screenshot", "/assets/evergreen-recognition-demo-view-185a06.webp")),
+    ("generation", "real trees badge role",                  _asset("feature.report-csr", "product.badge")),
+    ("generation", "G2 review mark role",                    _asset("proof.social-proof-stack", "third-party.review-mark")),
+    ("generation", "G2 rating claim",                        _set("proof.social-proof-stack", "eyebrow", "Rated 4.8 / 5 on G2 Reviews by managers")),
+    ("generation", "trees claim with other separators",      _set("hero.home", "treesHeading", "500,000 trees planted")),
+    ("generation", "real price claim",                       _set("hero.home", "lede", "Only $3.99 for each seat every month")),
+    ("generation", "real person name",                       _set("proof.social-proof-stack", "eyebrow", "Loved by Emilia Vesa and her team")),
+    ("generation", "real person photo role",                 _asset("proof.social-proof-stack", "person.likeness")),
+    ("generation", "real customer name",                     _set("proof.social-proof-stack", "eyebrow", "Trusted by Wunderdog and friends")),
+    ("generation", "real customer logo role",                _asset("proof.social-proof-stack", "third-party.trademark")),
+    ("generation", "real platform logo role",                _asset("hero.home", "third-party.platform-logo")),
+    ("generation", "unlicensed stock photo role",            _asset("hero.home", "editorial.stock-photo")),
+    ("generation", "real copy verbatim",                     _set("proof.social-proof-stack", "displayHeading", "Plant trees to recognise your peers, while uniting your team")),
+    ("generation", "real copy obfuscated (zero-width, dashes)", _set("hero.home", "lede", OBFUSCATED_LEDE)),
+    ("generation", "real copy with curly quotes",            _set("hero.home", "lede", "\u201cof employees don\u2019t feel appreciated at work\u201d says a survey")),
+    ("generation", "scheduler embed",                        _set("hero.home", "lede", "Book via assets.calendly.com widget below")),
+    ("generation", "iframe embed markup",                    _set("hero.home", "lede", "<iframe src=x.example></iframe> embedded here")),
+    ("generation", "safe role outside generatedAssetRoles",  _asset("chrome.nav", "placeholder.screenshot")),
+    ("generation", "real content page flipped to generation", mutate_clone_flipped_to_generation),
+    ("mode",       "mode missing",                           mutate_mode_missing),
+    ("mode",       "mode outside the closed enum",           mutate_mode_invalid),
+    ("tokens",     "unknown token",                          _style("hero.home", "surface", "surface.neon")),
+    ("tokens",     "raw hex in a style slot",                _style("hero.home", "surface", "#fffff3")),
+    ("tokens",     "raw rgb() in copy",                      _set("hero.home", "lede", "Headline colour rgb(0, 0, 0) for contrast")),
+    ("tokens",     "arbitrary spacing",                      _style("hero.home", "spacing", "24px")),
+    ("tokens",     "unsupported font",                       _style("hero.home", "fontFamily", "Inter")),
+    ("tokens",     "Typekit face as a font",                 _style("hero.home", "fontFamily", "ivypresto-headline")),
+    ("tokens",     "token from the wrong family",            _style("hero.home", "surface", "text.primary")),
+    ("tokens",     "theme that does not exist",              _style("hero.home", "surface", "surface.page", theme="dark")),
+    ("retrieval",  "runtime modal flipped eligible (node)",  mutate_retrieval_modal),
+    ("retrieval",  "content section marked ineligible",      mutate_retrieval_content),
+    ("structural", "non-repeatable legal head duplicated",   mutate_duplicate_legal_head),
+    ("structural", "proof stack outside its templates",      mutate_proof_stack_on_pricing),
+]
+
+# rule each generation / token mutation must trigger BY NAME (not just "any error")
+EXPECTED_RULE = {
+    "brand name in copy": "GENERATION_MODE_BRAND", "sister-product brand in copy": "GENERATION_MODE_BRAND",
+    "brand domain in a link": "GENERATION_MODE_URL", "real e-mail domain": "GENERATION_MODE_URL",
+    "non-reserved URL": "GENERATION_MODE_URL", "Evergreen logo role": "GENERATION_MODE_BRAND",
+    "logo FILE under a safe role": "GENERATION_MODE_BRAND", "favicon role": "GENERATION_MODE_BRAND",
+    "leaf brand artwork role": "GENERATION_MODE_BRAND", "Evergreen icon FILE under generated.icon": "GENERATION_MODE_ASSET",
+    "real product screenshot role": "GENERATION_MODE_SCREENSHOT",
+    "screenshot FILE under placeholder role": "GENERATION_MODE_SCREENSHOT",
+    "real trees badge role": "GENERATION_MODE_BADGE", "G2 review mark role": "GENERATION_MODE_BADGE",
+    "G2 rating claim": "GENERATION_MODE_CLAIM", "trees claim with other separators": "GENERATION_MODE_CLAIM",
+    "real price claim": "GENERATION_MODE_CLAIM", "real person name": "GENERATION_MODE_PERSON",
+    "real person photo role": "GENERATION_MODE_PERSON", "real customer name": "GENERATION_MODE_CUSTOMER",
+    "real customer logo role": "GENERATION_MODE_CUSTOMER", "real platform logo role": "GENERATION_MODE_ASSET",
+    "unlicensed stock photo role": "GENERATION_MODE_ASSET", "real copy verbatim": "GENERATION_MODE_COPY",
+    "real copy obfuscated (zero-width, dashes)": "GENERATION_MODE_COPY",
+    "real copy with curly quotes": "GENERATION_MODE_COPY", "scheduler embed": "GENERATION_MODE_EMBED",
+    "iframe embed markup": "GENERATION_MODE_EMBED", "safe role outside generatedAssetRoles": "GENERATION_MODE_ASSET",
+    "real content page flipped to generation": "GENERATION_MODE_MUST_REUSE_EXACT",
+    "unknown token": "TOKEN_UNKNOWN", "raw hex in a style slot": "TOKEN_RAW_COLOR",
+    "raw rgb() in copy": "TOKEN_RAW_COLOR", "arbitrary spacing": "TOKEN_ARBITRARY_SPACING",
+    "unsupported font": "TOKEN_UNSUPPORTED_FONT", "Typekit face as a font": "TOKEN_UNSUPPORTED_FONT",
+    "token from the wrong family": "TOKEN_THEME_COMBINATION",
+    "runtime modal flipped eligible (node)": "RETRIEVAL_ELIGIBILITY_PINNED",
+    "content section marked ineligible": "RETRIEVAL_ELIGIBILITY_PINNED",
+}
+
+
 MUTATIONS = [
     ("schema",     "unknown template enum value",        mutate_unknown_template),
     ("schema",     "missing required root field",        mutate_missing_required_field),
@@ -232,7 +390,7 @@ MUTATIONS = [
     ("structural", "section used outside allowedTemplates", mutate_foreign_section),
     ("structural", "banner on a non-banner route",       mutate_banner_on_wrong_route),
     ("runtime",    "maxWords overflow on a real field",  mutate_max_words_overflow),
-]
+] + GENERATION_MUTATIONS
 
 
 def main() -> int:
@@ -248,23 +406,38 @@ def main() -> int:
     else:
         print("  ok    example.pagespec.json")
 
-    for tid in sorted(TEMPLATES):
-        spec = synth(tid)
+    for name, spec in EXAMPLES.items():
         errs = all_errors(spec)
         if errs:
-            failures.append(f"synthesized control for {tid}: {errs[:2]}")
-            print(f"  FAIL  {tid} -> {len(errs)} error(s)")
+            failures.append(f"{name}: {errs[:2]}")
+            print(f"  FAIL  examples/{name} -> {len(errs)} error(s)")
             for e in errs[:4]:
                 print(f"          {e}")
         else:
-            print(f"  ok    {tid}")
+            print(f"  ok    examples/{name} ({spec['mode']})")
+
+    for mode in ("clone", "generation"):
+        for tid in sorted(TEMPLATES):
+            spec = synth(tid, mode)
+            errs = all_errors(spec)
+            if errs:
+                failures.append(f"synthesized {mode} control for {tid}: {errs[:2]}")
+                print(f"  FAIL  {tid} [{mode}] -> {len(errs)} error(s)")
+                for e in errs[:4]:
+                    print(f"          {e}")
+            else:
+                print(f"  ok    {tid} [{mode}]")
 
     print(f"\nMUTATIONS (must all be REJECTED) — {len(MUTATIONS)} cases")
     for layer, name, fn in MUTATIONS:
         spec = fn(None)
         errs = all_errors(spec)
-        if errs:
-            print(f"  ok    [{layer}] {name} -> rejected ({len(errs)})")
+        want = EXPECTED_RULE.get(name)
+        if want and not any(f"[{want}]" in e for e in errs):
+            failures.append(f"mutation [{layer}] {name} rejected but not by {want}: {errs[:2]}")
+            print(f"  FAIL  [{layer}] {name} -> rejected, but NOT by {want}")
+        elif errs:
+            print(f"  ok    [{layer}] {name} -> rejected ({len(errs)})" + (f" by {want}" if want else ""))
         else:
             failures.append(f"mutation NOT rejected: [{layer}] {name}")
             print(f"  FAIL  [{layer}] {name} -> ACCEPTED (should have been rejected)")
@@ -275,7 +448,7 @@ def main() -> int:
         for f in failures:
             print(f"  - {f}")
         return 1
-    print(f"RESULT: all {len(TEMPLATES) + 1} controls pass, "
+    print(f"RESULT: all {1 + len(EXAMPLES) + 2 * len(TEMPLATES)} controls pass, "
           f"all {len(MUTATIONS)} mutations rejected")
     return 0
 

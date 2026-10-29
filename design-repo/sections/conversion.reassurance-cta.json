@@ -68,7 +68,7 @@
     "staggerMs": 0,
     "reducedMotionFallback": "none-required-static",
     "implementationStatus": "static-by-design",
-    "note": "No leaves in this section \u2014 the divider band above it owns the last leaf layer."
+    "note": "No leaves in this section — the divider band above it owns the last leaf layer."
   },
   "responsive": {
     "max-wf-mini": "the 3-up row becomes flex-col and centres; the heading drops to 5.1em; the platform links stack"
@@ -77,7 +77,7 @@
     "brand.icon",
     "third-party.platform-logo"
   ],
-  "sharedVerbatim": "CLONE_SPEC_CORE_A \u00a72.7: byte-identical in classes, text and geometry across /, /esg, /our-purpose, /case-studies, /contact, /schedule-a-demo, /ebook/:slug, /alternatives, /alternatives/:slug, the four collection indexes, all four T-DETAIL-* families, T-STORY and T-PARTNER. Verified by DOM diff over the last 103 nodes.",
+  "sharedVerbatim": "CLONE_SPEC_CORE_A §2.7: byte-identical in classes, text and geometry across /, /esg, /our-purpose, /case-studies, /contact, /schedule-a-demo, /ebook/:slug, /alternatives, /alternatives/:slug, the four collection indexes, all four T-DETAIL-* families, T-STORY and T-PARTNER. Verified by DOM diff over the last 103 nodes.",
   "partnerDelta": "T-PARTNER appends ONE extra clause to the small print (e.g. 'Contact us for your 30% 50Pros discount'). That is the ONLY difference between the partner CTA and the shared one.",
   "measuredFrom": "src/components/CtaSection.jsx:72-152",
   "implementedBy": [
@@ -87,5 +87,21 @@
   "motionClosureScope": "CLOSED for PageSpec emission: a generated node's `motion` object may contain ONLY the fields in motionFieldSet, enforced by schema/pagespec.schema.json (additionalProperties:false) and the MOTION_OBJECT_IS_CLOSED rule. The keys in motionDocumentationFields below are contract-level documentation carried by THIS file for human and retrieval use; they are NOT settable on a PageSpec node.",
   "motionDocumentationFields": [
     "note"
+  ],
+  "source": {
+    "id": "src:CtaSection:div@77",
+    "tag": "div",
+    "file": "src/components/CtaSection.jsx",
+    "lines": "77-152"
+  },
+  "semantic": {
+    "id": "conversion.reassurance-cta",
+    "category": "CONVERSION"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": [
+    "generated.icon",
+    "operator.supplied-asset",
+    "placeholder.company-logo"
   ]
 }

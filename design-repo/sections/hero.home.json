@@ -16,14 +16,10 @@
   ],
   "motionIsClosed": true,
   "category": "hero",
-  "purpose": "Convert a cold visitor: the product promise, the trial CTA, the proof stack.",
+  "purpose": "Open the homepage: the product promise, the trial CTA, the product screenshot scroll track and the install links.",
   "composes": [
     "primitives/button.trial-cta",
     "primitives/pill.avatar-frame",
-    "components/row.stat-pills",
-    "components/card.testimonial",
-    "components/row.logo-strip",
-    "components/block.g2-rating",
     "components/row.platform-links",
     "components/block.leaf-layer"
   ],
@@ -45,20 +41,11 @@
       "maxWords": 5,
       "copyPolicy": "verbatim-locked"
     },
-    "displayHeading": {
-      "maxWords": 14,
-      "copyPolicy": "verbatim-locked",
-      "wrapCritical": true
-    },
-    "eyebrow": {
-      "maxWords": 16,
-      "copyPolicy": "verbatim-locked"
-    },
     "additionalProperties": false
   },
   "maxWordsBasis": "word-counted directly from the real strings in src/components/Hero.jsx",
-  "blockCount": 13,
-  "geometry": "section height 3151px @1280; inner pt-[10.2em]; hero screenshot wrapper w-[81.25em]",
+  "blockCount": 7,
+  "geometry": "hero blocks 0-6 only (h1 + avatar pills, lede, CTA, trees line, screenshot scroll track, users line, platform row); measured height at 1440px is in extraction/measured-values.json sectionHeights T-HOME. Inner pt-[10.2em]; screenshot wrapper w-[81.25em].",
   "constraints": {
     "onePerPage": true,
     "mustBeFirst": true,
@@ -98,19 +85,17 @@
       "mass": 1
     },
     "scrollTrackElement": "the hero screenshot wrapper, exposed via a ref and data-scroll-track=\"hero\"",
-    "additionalStaticLeaves": "the 2 testimonial cards each carry 6 STATIC QUOTE_LEAVES \u2014 never animate them"
+    "additionalStaticLeaves": "the 2 testimonial cards each carry 6 STATIC QUOTE_LEAVES — never animate them"
   },
   "responsive": {
     "max-wf-tablet": "hero frame 80em; avatar pill 2 repositions; testimonial pair wraps",
     "max-wf-phone": "avatar pill 1 becomes static above the h1, pill 2 is display:none; the whole hero-overlay layer rescales via text-[0.6em] on the track wrapper",
     "max-wf-mini": "h1 drops to 3.9em; hero frame w-auto; screenshot wrapper 56em",
-    "note": "The overlay lines and hearts MUST stay children of the track wrapper \u2014 max-wf-phone:text-[0.6em] on that div is what rescales the whole layer."
+    "note": "The overlay lines and hearts MUST stay children of the track wrapper — max-wf-phone:text-[0.6em] on that div is what rescales the whole layer."
   },
   "assetRoles": [
     "product.screenshot",
     "person.likeness",
-    "third-party.trademark",
-    "third-party.review-mark",
     "third-party.platform-logo",
     "brand.leaf-art"
   ],
@@ -123,5 +108,24 @@
     "composition",
     "scrollTrackElement",
     "spring"
+  ],
+  "decomposition": "2.0.0: blocks 7-12 (display h2, stat pills, eyebrow, testimonials, logo strip, G2) moved to sections/proof.social-proof-stack.json. The combined wrapper measured 3545px at 1440px, above the 3000px HERO limit.",
+  "source": {
+    "id": "src:Hero:div@127",
+    "tag": "div",
+    "file": "src/components/Hero.jsx",
+    "lines": "127-264"
+  },
+  "semantic": {
+    "id": "hero.home",
+    "category": "HERO"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": [
+    "generated.illustration",
+    "operator.supplied-asset",
+    "placeholder.company-logo",
+    "placeholder.person-avatar",
+    "placeholder.screenshot"
   ]
 }

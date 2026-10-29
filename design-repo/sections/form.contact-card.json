@@ -54,5 +54,17 @@
   "externalLinks": "The mailto: address and the Notion help-centre link render with NO href. The /schedule-a-demo link IS internal and stays live.",
   "measuredFrom": "src/pages/Contact.jsx:25-59",
   "implementedBy": "src/pages/Contact.jsx",
-  "motionClosureScope": "CLOSED for PageSpec emission: a generated node's `motion` object may contain ONLY the fields in motionFieldSet, enforced by schema/pagespec.schema.json (additionalProperties:false) and the MOTION_OBJECT_IS_CLOSED rule. The keys in motionDocumentationFields below are contract-level documentation carried by THIS file for human and retrieval use; they are NOT settable on a PageSpec node."
+  "motionClosureScope": "CLOSED for PageSpec emission: a generated node's `motion` object may contain ONLY the fields in motionFieldSet, enforced by schema/pagespec.schema.json (additionalProperties:false) and the MOTION_OBJECT_IS_CLOSED rule. The keys in motionDocumentationFields below are contract-level documentation carried by THIS file for human and retrieval use; they are NOT settable on a PageSpec node.",
+  "source": {
+    "id": "src:Contact:section@26",
+    "tag": "section",
+    "file": "src/pages/Contact.jsx",
+    "lines": "26-59"
+  },
+  "semantic": {
+    "id": "form.contact-card",
+    "category": "CONVERSION"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": []
 }
